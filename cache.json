@@ -12,6 +12,156 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/dhirooka/articles/af80381a2cb6b0",
+          "author": "dhirooka",
+          "description": "はじめに\n深層学習モデルやその学習を実装する際には、多くの場合でPyTorchやKerasなどのフレームワークが使われます。本記事では、Googleより公開されているJaxというフレームワークを用いた深層学習プログラミングを紹介します。\nコードは以下に配置しています。\nhttps://github.com/daigo0927/jax-ddim\n\n Jaxとは\nJaxはGoogleから公開されている、自動微分を備えた数値計算ライブラリと言えます。Numpyとほぼ同じように計算処理を実装でき、またGPUやTPUによって高速に演算を実行することもできます。これによって深層学習モデルを実装し...",
+          "link": "https://zenn.dev/dhirooka/articles/af80381a2cb6b0",
+          "publishedOn": "2022-07-31T00:34:13.000Z",
+          "wordCount": 2864,
+          "title": "拡散生成モデルで学ぶJax/Flaxによる深層学習プログラミング",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--VFZWQrdC--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:dhirooka%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E6%258B%25A1%25E6%2595%25A3%25E7%2594%259F%25E6%2588%2590%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25A7%25E5%25AD%25A6%25E3%2581%25B6Jax%252FFlax%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%25B7%25B1%25E5%25B1%25A4%25E5%25AD%25A6%25E7%25BF%2592%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1BLThwX0ItTi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MwNThiNDE4NmMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--VFZWQrdC--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:dhirooka%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E6%258B%25A1%25E6%2595%25A3%25E7%2594%259F%25E6%2588%2590%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25A7%25E5%25AD%25A6%25E3%2581%25B6Jax%252FFlax%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%25B7%25B1%25E5%25B1%25A4%25E5%25AD%25A6%25E7%25BF%2592%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1BLThwX0ItTi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MwNThiNDE4NmMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/robes/articles/48cb25ee29a110",
+          "author": "osn_Lofi",
+          "description": "過学習。機械学習やディープラーニングが世の中に広まる中、この言葉の認知度が増してきたところですが、Adoが「過学習」をリリースしたことで一気に市民権を得た感じがします。\n一方で、この「過学習」の歌詞。 ざっと読んでみても、どのあたりが過学習なのか、よく分かりません。\nそこで、今回は、自然言語処理の基本的技術の一つTF-IDFを使って何が過学習なのかを突き止めたいと思います。\n\n TF-IDFとは\nざっくり言うと、その文書を特徴づける重要な単語を抽出する手法になります。\n以下のように、単語の出現頻度とレア度の積で表されます。単語の出現頻度が高く、かつ、他の文章にはあまり出てこない単語が重要...",
+          "link": "https://zenn.dev/robes/articles/48cb25ee29a110",
+          "publishedOn": "2022-07-30T22:48:41.000Z",
+          "wordCount": 949,
+          "title": "【TF-IDF】Adoの「過学習」はどのあたりが過学習なのか？",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--laum8ImL--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590TF-IDF%25E3%2580%2591Ado%25E3%2581%25AE%25E3%2580%258C%25E9%2581%258E%25E5%25AD%25A6%25E7%25BF%2592%25E3%2580%258D%25E3%2581%25AF%25E3%2581%25A9%25E3%2581%25AE%25E3%2581%2582%25E3%2581%259F%25E3%2582%258A%25E3%2581%258C%25E9%2581%258E%25E5%25AD%25A6%25E7%25BF%2592%25E3%2581%25AA%25E3%2581%25AE%25E3%2581%258B%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--laum8ImL--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590TF-IDF%25E3%2580%2591Ado%25E3%2581%25AE%25E3%2580%258C%25E9%2581%258E%25E5%25AD%25A6%25E7%25BF%2592%25E3%2580%258D%25E3%2581%25AF%25E3%2581%25A9%25E3%2581%25AE%25E3%2581%2582%25E3%2581%259F%25E3%2582%258A%25E3%2581%258C%25E9%2581%258E%25E5%25AD%25A6%25E7%25BF%2592%25E3%2581%25AA%25E3%2581%25AE%25E3%2581%258B%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/masaruxstudy/articles/55668c093d184a",
+          "author": "Masaru",
+          "description": "PythonでWebサーバーを構築する\n\n どうやって？\n\n\nPythonに付属している標準ライブラリにシンプルなWebサーバーとして機能するモジュールがあるので、これを使って構築する\n\n\nゴールはHTMLファイルをレスポンスとして返す\n以下は手順(Pythonの環境構築は済んでいるものとする)\n\n\n\nindex.htmlファイルを用意する\nPythonコマンドでWebサーバーの起動\nindex.htmlファイルを編集し、反映されるかを確認する\n\n\n 前提知識\nモジュール > パッケージ > ライブラリ\n\n\nモジュール\n\n\n.py などのファイル全てがモジュール\n\n\n\nパ...",
+          "link": "https://zenn.dev/masaruxstudy/articles/55668c093d184a",
+          "publishedOn": "2022-07-30T22:44:06.000Z",
+          "wordCount": 430,
+          "title": "Pythonの標準ライブラリを使ってWebサーバーを起動する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--wVthu-yx--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Masaru%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6Web%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2582%2592%25E8%25B5%25B7%25E5%258B%2595%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y29OUTVRTUNnQ1VTc2NjY2dmOTdqTWFzOXNtSzM4MXJGVmlwT0tsWWRNPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--wVthu-yx--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Masaru%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6Web%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2582%2592%25E8%25B5%25B7%25E5%258B%2595%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y29OUTVRTUNnQ1VTc2NjY2dmOTdqTWFzOXNtSzM4MXJGVmlwT0tsWWRNPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/robes/articles/7ee135605bdb8e",
+          "author": "osn_Lofi",
+          "description": "日本語NLPライブラリーであるGiNZAをGoogleColaboratoryで使おうとした場合、バージョンによってはエラーが出て、うまくロードできないケースがあります。\nここでは、以下のようなエラーが出た場合の解決策を記載します。\n\n GiNZAをインストールし、SpacyでLoadする\n!pip install ginza==4.0.6 ja-ginza==4.0.0 \nimport spacy\nnlp = spacy.load('ja_ginza')\n\n 出現するエラー\nCan't find model 'ja_ginza'. It doesn't seem to be a sh...",
+          "link": "https://zenn.dev/robes/articles/7ee135605bdb8e",
+          "publishedOn": "2022-07-30T21:54:13.000Z",
+          "wordCount": 203,
+          "title": "【自然言語処理】GoogleColaboratoryでGiNZAがロードできない時の解決策",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--8wTLehT9--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25E3%2580%2591GoogleColaboratory%25E3%2581%25A7GiNZA%25E3%2581%258C%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25AA%25E3%2581%2584%25E6%2599%2582%25E3%2581%25AE%25E8%25A7%25A3%25E6%25B1%25BA%25E7%25AD%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--8wTLehT9--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25E3%2580%2591GoogleColaboratory%25E3%2581%25A7GiNZA%25E3%2581%258C%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25AA%25E3%2581%2584%25E6%2599%2582%25E3%2581%25AE%25E8%25A7%25A3%25E6%25B1%25BA%25E7%25AD%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/oskgw_log/articles/slack_backup_py",
+          "author": "oskgw log",
+          "description": "Slackのフリープランの変更\n2022年9月1日より、Slackフリープランのメッセージ履歴が1万から過去90日に変更になるようです。\n\n では、現時点でバックアップは？\nフリープランでやってる人のバックアップで、各チャンネルの過去ログとファイルを\nローカルPCにバックアップするものがあるのかよく分からなかったです。\n\n 手動でバックアップ？？\nいやー、、それはキツイです。\n最後の手段かもしれませんが、あんまり人間的な仕事としては違うます。\n\n 流行りのヘビに任せるか、、\n最近流行りのヘビでお馴染み 邪神ちゃ・・・ではなく、pythonがあれば、なんとかできるかな、、、\n\n pyt...",
+          "link": "https://zenn.dev/oskgw_log/articles/slack_backup_py",
+          "publishedOn": "2022-07-30T20:49:12.000Z",
+          "wordCount": 2030,
+          "title": "Slackのフリープラン変更対策、履歴テキストとファイルをpythonでバックアップ",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--4k79yyef--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:oskgw%2520log%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:Slack%25E3%2581%25AE%25E3%2583%2595%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%2597%25E3%2583%25A9%25E3%2583%25B3%25E5%25A4%2589%25E6%259B%25B4%25E5%25AF%25BE%25E7%25AD%2596%25E3%2580%2581%25E5%25B1%25A5%25E6%25AD%25B4%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E3%2581%25A8%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592python%25E3%2581%25A7%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25A2%25E3%2583%2583%25E3%2583%2597%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKeEo1blNTTXBFdTBlYUhTbFFJWXJ6RnpJMURnVEtCUlhmdkdueGs9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--4k79yyef--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:oskgw%2520log%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:Slack%25E3%2581%25AE%25E3%2583%2595%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%2597%25E3%2583%25A9%25E3%2583%25B3%25E5%25A4%2589%25E6%259B%25B4%25E5%25AF%25BE%25E7%25AD%2596%25E3%2580%2581%25E5%25B1%25A5%25E6%25AD%25B4%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E3%2581%25A8%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592python%25E3%2581%25A7%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25A2%25E3%2583%2583%25E3%2583%2597%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKeEo1blNTTXBFdTBlYUhTbFFJWXJ6RnpJMURnVEtCUlhmdkdueGs9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/miyaji26/books/a530e44f826710",
+          "author": "miyaji_26",
+          "description": "Djangoを利用してアプリケーションを作っている際に、長く運用されているものほど適切なテーブル構造となっていないことが多々あります。\n\n本書では記事とラベルを利用した誤ったテーブル構造を例として、データの移行方法について対応方法を紹介します。",
+          "link": "https://zenn.dev/miyaji26/books/a530e44f826710",
+          "publishedOn": "2022-07-30T15:57:01.000Z",
+          "wordCount": 61,
+          "title": "Djangoにおけるテーブル内データの移行方法について",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--60jiHah4--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci9mNTMxOGRiN2FjLmpwZWc=%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg",
+            "length": "0",
+            "type": "image/jpeg"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--60jiHah4--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci9mNTMxOGRiN2FjLmpwZWc=%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg"
+        },
+        {
+          "id": "https://zenn.dev/derwind/articles/dwd-qiskit06",
+          "author": "derwind",
+          "description": "目的\n前回 に引き続き Qiskit Global Summer School 2022: Quantum Simulations で興味を持ったテーマを復習する。\n今回はハードウェアノイズのシミュレーションを題材にする。\n\n 準備\n以下を import しているとする。\nimport numpy as np\nfrom qiskit import QuantumCircuit, QuantumRegister\nfrom qiskit.providers.aer import AerSimulator\nfrom qiskit.providers.aer.noise import Noi...",
+          "link": "https://zenn.dev/derwind/articles/dwd-qiskit06",
+          "publishedOn": "2022-07-30T14:36:14.000Z",
+          "wordCount": 1600,
+          "title": "Qiskit で遊んでみる (6) — QGSS2022 より",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--vtgllmiY--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:derwind%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Qiskit%2520%25E3%2581%25A7%25E9%2581%258A%25E3%2582%2593%25E3%2581%25A7%25E3%2581%25BF%25E3%2582%258B%2520%25286%2529%2520%25E2%2580%2594%2520QGSS2022%2520%25E3%2582%2588%25E3%2582%258A%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1PM2l6cGFYRC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--vtgllmiY--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:derwind%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Qiskit%2520%25E3%2581%25A7%25E9%2581%258A%25E3%2582%2593%25E3%2581%25A7%25E3%2581%25BF%25E3%2582%258B%2520%25286%2529%2520%25E2%2580%2594%2520QGSS2022%2520%25E3%2582%2588%25E3%2582%258A%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1PM2l6cGFYRC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kwashizzz/articles/ubunt2004-setup-mlenv",
+          "author": "わっしー",
+          "description": "はじめに\nこんにちは、わっしーです。\n本記事では、Ubuntu20.04にGPUありの機械学習環境を設定する方法を紹介します。一応、AzureのVMで動作確認しました。\nよく躓く、CUDA、pythonの導入部分も記載しています。\n早速、方法を紹介します。\n\n 1. sshでサーバ接続\nssh -i ./*.cer azureuser@xx.xxx.xxx.xxx\nもし、Permissions 0644 for ‘xxx.key’ are too open.がでる場合は、\nchmod 600 xxx.key\nで権限を変更してください。\nもし、Vscodeでサーバに入りたい場合は、以下...",
+          "link": "https://zenn.dev/kwashizzz/articles/ubunt2004-setup-mlenv",
+          "publishedOn": "2022-07-30T13:56:21.000Z",
+          "wordCount": 476,
+          "title": "Ubuntu20.04に機械学習(GPU)環境を設定する方法",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--WGUhqaW3--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%258F%25E3%2581%25A3%25E3%2581%2597%25E3%2583%25BC%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Ubuntu20.04%25E3%2581%25AB%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%2528GPU%2529%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dyWFhIRkgwQUNnZDB5R0w5SkRXMFE3MWZSdHZxdDZfNzB3UVNlPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--WGUhqaW3--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%258F%25E3%2581%25A3%25E3%2581%2597%25E3%2583%25BC%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Ubuntu20.04%25E3%2581%25AB%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%2528GPU%2529%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dyWFhIRkgwQUNnZDB5R0w5SkRXMFE3MWZSdHZxdDZfNzB3UVNlPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/derwind/articles/dwd-qiskit05",
+          "author": "derwind",
+          "description": "目的\nQiskit Global Summer School 2022: Quantum Simulations に参加した。その中で興味を持った題材について忘れないうちにまとめてみたい。\n具体的には Quantum computers as universal quantum simulators: state-of-art and perspectives を参考にする形でハミルトニアン H = X \\otimes X の時間発展についてまとめる。\n\n おさらい\n次回の記事の伏線の形で、ハミルトニアン H = X の時間発展について考えてみる。これは U(t) = \\exp(-i...",
+          "link": "https://zenn.dev/derwind/articles/dwd-qiskit05",
+          "publishedOn": "2022-07-30T09:28:35.000Z",
+          "wordCount": 1644,
+          "title": "Qiskit で遊んでみる (5) — QGSS2022 より",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--3Auqy9oz--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:derwind%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Qiskit%2520%25E3%2581%25A7%25E9%2581%258A%25E3%2582%2593%25E3%2581%25A7%25E3%2581%25BF%25E3%2582%258B%2520%25285%2529%2520%25E2%2580%2594%2520QGSS2022%2520%25E3%2582%2588%25E3%2582%258A%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1PM2l6cGFYRC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--3Auqy9oz--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:derwind%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Qiskit%2520%25E3%2581%25A7%25E9%2581%258A%25E3%2582%2593%25E3%2581%25A7%25E3%2581%25BF%25E3%2582%258B%2520%25285%2529%2520%25E2%2580%2594%2520QGSS2022%2520%25E3%2582%2588%25E3%2582%258A%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1PM2l6cGFYRC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kuru_teo/articles/9a968a5d1b8512",
+          "author": "kuruteo",
+          "description": "今回はmayaのrender setup機能を用いて、シェーダ(hlsl)モデルのエラーチェックを視覚的に行うツールを作成しました。以下の動画ではポリゴンの裏面が見えてしまっていないか、ポリゴンの法線がおかしくないかを確認しています。\nhttps://youtu.be/1qnJTBh56KU\nhttps://github.com/Kuru-teo/PythonCollection/tree/master/ChangeMatByRenderSetUp\n\n 【できること】\nポリゴンの裏面が見えてしまっていないか、ポリゴンの法線がおかしくないかを確認できます。またShaderを追加してデバッグ...",
+          "link": "https://zenn.dev/kuru_teo/articles/9a968a5d1b8512",
+          "publishedOn": "2022-07-30T07:20:32.000Z",
+          "wordCount": 350,
+          "title": "【MAYA・Python】hlslを利用してモデルチェックを行うツール",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--fxP8UkK7--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kuruteo%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590MAYA%25E3%2583%25BBPython%25E3%2580%2591hlsl%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2583%2581%25E3%2582%25A7%25E3%2583%2583%25E3%2582%25AF%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2paTVRScFFDTU5JemF4LThWZGl3bHlJSFNydDBIc2xzQUE0UjdkMXc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--fxP8UkK7--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kuruteo%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590MAYA%25E3%2583%25BBPython%25E3%2580%2591hlsl%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2583%2581%25E3%2582%25A7%25E3%2583%2583%25E3%2582%25AF%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2paTVRScFFDTU5JemF4LThWZGl3bHlJSFNydDBIc2xzQUE0UjdkMXc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
           "id": "https://zenn.dev/mory22k/articles/429ce4ad3208d7",
           "author": "mory22k",
           "description": "GPML第2章前半部分を、自分なりに解釈しつつnumpyで実装します。\nimport numpy as np\nimport matplotlib.pyplot as plt\n注: この記事はもともとQiitaに投稿していたものの焼き直しです。元の記事はこちらでご確認いただけます:https://qiita.com/mory22k/items/2491f2cfce345bbd805c\n\n 単純な線形回帰モデル\nまずは、バイアスを含む単純な線形回帰モデルを実装してみます。\n\n 元の関数\nもとの関数は、入力ベクトル\\boldsymbol{x}と重みベクトル\\boldsymbol{w}\n\n\\bo...",
