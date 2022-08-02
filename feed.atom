@@ -2,10 +2,260 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-08-01T02:25:47.298Z</updated>
+    <updated>2022-08-02T02:31:21.863Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Pythonでkintone APIを使用して育児記録を可視化する（POST／GET）]]></title>
+        <id>https://zenn.dev/mnmnmmmn/articles/python_kintone_api</id>
+        <link href="https://zenn.dev/mnmnmmmn/articles/python_kintone_api"/>
+        <updated>2022-08-01T22:02:55.000Z</updated>
+        <summary type="html"><![CDATA[概要
+kintoneとはサイボウズ株式会社が提供している、ノーコードでビジネスアプリを開発できるクラウドサービスです。REST APIも用意されているので外部からのデータ授受もできます。
+https://kintone.cybozu.co.jp/
+今後仕事で使用することが多くなるので、自習用に開発用アカウントを取得して使ってみました。
+本記事ではこちらのAPIを利用して、kintoneへデータをPOST／kintoneからデータをGETするPythonスクリプトを作成します。
+
+ 使用するデータ
+せっかくなら意味のあるデータを扱ってみたいので、今年2歳になる息子の育児記録を拝借するこ...]]></summary>
+        <author>
+            <name>mnmnmmmn</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【SQLAlchemy】MariaDBに接続する]]></title>
+        <id>https://zenn.dev/ringotabetai/articles/5756ebfbd20dfc</id>
+        <link href="https://zenn.dev/ringotabetai/articles/5756ebfbd20dfc"/>
+        <updated>2022-08-01T15:39:04.000Z</updated>
+        <summary type="html"><![CDATA[必要なものインストール
+Pythonの仮想環境に入る
+pip install SQLAlchemy
+pip install mysql-connector-python
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.schema import Column
+from sqlalchemy.types import Integer, Stri...]]></summary>
+        <author>
+            <name>ringotabetai</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pywin32を利用してwindowsを操ろう]]></title>
+        <id>https://zenn.dev/timoneko/articles/c289e23dc997da</id>
+        <link href="https://zenn.dev/timoneko/articles/c289e23dc997da"/>
+        <updated>2022-08-01T15:34:31.000Z</updated>
+        <summary type="html"><![CDATA[↓　すでに入っている場合は不要
+pip install pywin32
+※windows11で下記は検証を行っております。
+
+ 1.windowsの画面にメッセージを表示
+import win32api
+
+win32api.MessageBox(None, "メッセージの表示", "タイトル")
+
+メッセージの表示
+
+ 2.「メモ帳」を自動で開く
+import win32api
+
+win32api.WinExec("C://Windows/System32/notepad.exe")
+
+
+ 2.1 メモ帳でメッセージを表示させる
+import win32api
+import win32g...]]></summary>
+        <author>
+            <name>timoneko</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】FastAPI MariaDBに接続し、テキストで出力]]></title>
+        <id>https://zenn.dev/ringotabetai/articles/600b249d7270f4</id>
+        <link href="https://zenn.dev/ringotabetai/articles/600b249d7270f4"/>
+        <updated>2022-08-01T15:29:44.000Z</updated>
+        <summary type="html"><![CDATA[Python強化期間
+Pythonの仮想環境に入る
+python3 -m venv venv
+FastAPIインストール
+pip install fastapi
+dotenvインストール
+pip install python-dotenv
+mysqlclientインストール
+pip install mysqlclient
+uvicorn インストール
+pip install uvicorn
+.env
+HOST = '127.0.0.1'
+DATABASE = 'test_db'
+USER_AA = 'root'
+PASSWORD = '0123'
+test_maria.py
+from...]]></summary>
+        <author>
+            <name>ringotabetai</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ABC262] AtCoder Beginner Contest 262（A-E 問題 Python）]]></title>
+        <id>https://zenn.dev/kiwamachan/articles/c2d3d77b6faa34</id>
+        <link href="https://zenn.dev/kiwamachan/articles/c2d3d77b6faa34"/>
+        <updated>2022-08-01T15:04:31.000Z</updated>
+        <summary type="html"><![CDATA[AtCoder Beginner Contest 262 の復習記録です。
+A問題からE問題までやります。使用言語はPythonです。
+
+ A問題
+https://atcoder.jp/contests/abc262/tasks/abc262_a
+
+ 考え方
+こういう問題は、何の数字が何に変化してほしいかを考えると分かりやすいです。
+
+
+
+元の数字(Y)
+2018
+2019
+2020
+2021
+2022
+2023
+
+
+
+
+変化後の数字（出力値）
+2018
+2022
+2022
+2022
+2022
+2026
+
+
+
+4ごとに変わりますので、4で割って整数切り捨てを行い、4をかけると上手くいきそ...]]></summary>
+        <author>
+            <name>kiwamachan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ERAlchemyでＥＲ図 自動作成]]></title>
+        <id>https://zenn.dev/ringotabetai/articles/63e400b14e65f2</id>
+        <link href="https://zenn.dev/ringotabetai/articles/63e400b14e65f2"/>
+        <updated>2022-08-01T14:53:08.000Z</updated>
+        <summary type="html"><![CDATA[環境:Ubuntu20.04
+どちらかでインストールする。
+私はbrewでしました。
+pipでするときは、Pythonの仮想環境に入ります。
+$ brew install eralchemy
+$ pip install eralchemy
+ファイル作成する
+example.er
+[users]
+*id
+name
+age
+
+[emails]
+*id
+address
+user_id
+
+users 1--* emails
+EOF
+下記を実行する
+$ eralchemy -i example.er -o example.png
+ディレクトリに _example.png_ができてる
+中身を確認する...]]></summary>
+        <author>
+            <name>ringotabetai</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CycleGANを試す]]></title>
+        <id>https://zenn.dev/ryu2021/articles/833574759b3031</id>
+        <link href="https://zenn.dev/ryu2021/articles/833574759b3031"/>
+        <updated>2022-08-01T11:56:11.000Z</updated>
+        <summary type="html"><![CDATA[概要
+Windows11でCycleGANの学習を試してみた。
+
+ 環境
+
+OS : Windows11
+GPU : NVIDIA RTX 3080Ti
+Anaconda3
+
+
+ CycleGANを試す
+
+ ダウンロード
+ソースコードをダウンロード
+git clone https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix
+cd pytorch-CycleGAN-and-pix2pix
+GitHub - junyanz/pytorch-CycleGAN-and-pix2pix: Image-to-Image Translatio...]]></summary>
+        <author>
+            <name>Ryu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[boto3] NextTokenを使って情報取得]]></title>
+        <id>https://zenn.dev/isseeeeey55/articles/52e0435b9a4340</id>
+        <link href="https://zenn.dev/isseeeeey55/articles/52e0435b9a4340"/>
+        <updated>2022-08-01T09:15:29.000Z</updated>
+        <summary type="html"><![CDATA[このページについて
+boto3で NextToken を使う場面があったので、 NextToken とは？について簡単にメモします。
+
+ 経緯
+このGlueジョブ実行履歴取得スクリプトを作成している際に、 NextToken の使い方を確認しました。
+https://zenn.dev/isseeeeey55/articles/e46c0e4cbd89bd
+boto3の get_job_runs を使用していますが、実際のジョブ実行履歴数とスクリプトで取得したジョブ実行履歴数に乖離がありました。
+そこで確認したところ、最大で取得できる結果( MaxResults )が200件までで、そ...]]></summary>
+        <author>
+            <name>Issei Matsuki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Glueジョブ実行履歴取得]]></title>
+        <id>https://zenn.dev/isseeeeey55/articles/e46c0e4cbd89bd</id>
+        <link href="https://zenn.dev/isseeeeey55/articles/e46c0e4cbd89bd"/>
+        <updated>2022-08-01T08:53:30.000Z</updated>
+        <summary type="html"><![CDATA[このページについて
+AWS Glueのコストが気になるため、ジョブごとのコストを確認したく、そのために必要な情報をcsvに出力するスクリプトをPythonで作成しました。
+
+ AWS Glue Studio
+AWS Glue Studioの Monitoring ページで、ジョブ実行状況を確認することはできます。
+ただ、いくつか制限があります。
+
+表示対象の日付指定が30日間まで
+ジョブ実行履歴の件数が1,000件まで
+
+
+https://docs.aws.amazon.com/ja_jp/glue/latest/ug/what-is-glue-studio.html
+
+ boto3...]]></summary>
+        <author>
+            <name>Issei Matsuki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[多倍長整数の実装7（XbyakライクなPython DSLによるasmコード生成）]]></title>
+        <id>https://zenn.dev/herumi/articles/bitint-07-gen-asm</id>
+        <link href="https://zenn.dev/herumi/articles/bitint-07-gen-asm"/>
+        <updated>2022-08-01T08:03:48.000Z</updated>
+        <summary type="html"><![CDATA[初めに
+前回多倍長整数の実装6（乗算後加算とintrinsicの限界）では、コンパイラのintrinsic関数の限界を紹介しました。
+仕方がないのでアセンブリ言語（以下asmと表記）で実装しなければなりません。
+今回はその作業を手助けするPythonでアセンブリコードを生成する簡単なDSLを作ったのでそれを紹介します。
+記事全体の一覧は多倍長整数の実装1（C/C++）参照。
+
+ 動機
+私はC++でアセンブリ言語(以下asm)レベルでの実行時コード生成をやりたくてXbyakを開発しています。
+これはもちろんJITコード生成がメインの機能なのですが、自分の慣れているC++の文法でasmコ...]]></summary>
+        <author>
+            <name>herumi</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Zennはじめました！こんな記事を書きます紹介]]></title>
         <id>https://zenn.dev/mihorin1729/articles/cb21e968e02863</id>
