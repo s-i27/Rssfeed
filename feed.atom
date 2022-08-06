@@ -2,10 +2,94 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-08-05T02:10:10.897Z</updated>
+    <updated>2022-08-06T02:07:06.725Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[shutil.unpack_archiveで展開されないファイル名]]></title>
+        <id>https://zenn.dev/mima_ita/articles/ff1df8c2d3e79d</id>
+        <link href="https://zenn.dev/mima_ita/articles/ff1df8c2d3e79d"/>
+        <updated>2022-08-06T01:27:28.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+pythonのshutil.unpack_archive関数はお手軽にzipを展開してくれます。
+しかしながら、展開結果が常に正しいとは限りません。
+例えば、以下のようなファイル名に「..」を含むファイルの展開がされていません。
+testzip_content
+└── hoge
+    ├── testOK.txt
+    └── testNG..txt
+
+ 原因
+これは、shutil.unpack_archive中のzipの展開処理を確認すれば簡単にわかります。
+https://github.com/python/cpython/blob/main/Lib/shutil....]]></summary>
+        <author>
+            <name>mima_ita</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python Larkでインタプリタを作る（四則演算、変数定義、if、whileまで）]]></title>
+        <id>https://zenn.dev/ookuwab/articles/9137f640a88bd8</id>
+        <link href="https://zenn.dev/ookuwab/articles/9137f640a88bd8"/>
+        <updated>2022-08-05T18:58:38.000Z</updated>
+        <summary type="html"><![CDATA[Pythonの構文解析ライブラリLarkを使って、簡単なインタプリタを作成する。
+実装は四則演算、変数定義、if、whileまで。
+引数の実装がやや面倒だったので関数定義は実装していない。
+Lark Document
+
+ install
+Larkでは、.lark拡張子の文法ファイルに文法を定義すると構文解析を自動で行なってくれる。文法ファイルはBNFの一種と言えるEBNGという記法で表記できる他、正規表現を用いることもできる。かなり簡単にparserが書ける印象。
+pip install Lark-parser --upgrade
+
+ 文法定義
+grammar.larkというファイルを作...]]></summary>
+        <author>
+            <name>ookuwab</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JAX で遊んでみる (1) — 線形回帰]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-jax-linear-regression</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-jax-linear-regression"/>
+        <updated>2022-08-05T12:50:20.000Z</updated>
+        <summary type="html"><![CDATA[目的
+JAX をインストールして少し触ってみたという記録。大体 Linear Regression with JAX に書いているのと同じような内容で、普通に線形回帰をしましたという備忘録。
+これだけだと記事がすぐに終わってしまうので、統計学による直接計算や scikit-learn の使用例も交えて水増ししてみた。
+
+ おさらい
+ディープラーニングは画像分類、画像生成、画像認識や物体検出、自然言語処理など色々ジャンルはあると思うが、基本的には何かしら入力データの空間 \mathcal{X} = \R^n から出力データの空間 \mathcal{Y} = \R^m への可微分写像 f...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[テスト]]></title>
+        <id>https://zenn.dev/chopirol/articles/8e69c4c8a3b0e7</id>
+        <link href="https://zenn.dev/chopirol/articles/8e69c4c8a3b0e7"/>
+        <updated>2022-08-05T11:31:26.000Z</updated>
+        <summary type="html"><![CDATA[てsつお]]></summary>
+        <author>
+            <name>chopirol</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS SDKとGoogle Cloud SDKにおけるページネーションの違い]]></title>
+        <id>https://zenn.dev/shimat/articles/844563d50800e8</id>
+        <link href="https://zenn.dev/shimat/articles/844563d50800e8"/>
+        <updated>2022-08-05T03:19:11.000Z</updated>
+        <summary type="html"><![CDATA[概要
+ストレージ内のファイルを列挙する等の、結果が膨大かもしれない処理では、結果を小分けにして返してくれるページネーション処理が用いられます。AWSとGoogle CloudのSDKでは、その作りが逆と言えます。まとめておきます。
+
+AWS SDKは、素朴に使うと(低級APIでは)ページネーション無し
+
+Google Cloud SDKは、既定でページネーション有り
+
+
+本記事の説明ではC#とPythonを使いました。全部は把握していないのですがおそらく、低級なAPIを使う限りは言語問わず同じ結論が言えるはずです。例題として、ストレージ (Amazon S3 / Google Clo...]]></summary>
+        <author>
+            <name>shimat</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Pythonが入ってないPCで実行ファイルを動かす  -cx_Freezeを使ってexeファイルに変換してインストーラーを作成する-]]></title>
         <id>https://zenn.dev/musashi26629/articles/c8aae7d3f6f863</id>
