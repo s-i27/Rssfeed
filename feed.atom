@@ -2,10 +2,105 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-08-07T02:18:52.391Z</updated>
+    <updated>2022-08-08T02:05:38.073Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[RDKit: 空白のmolオブジェクトを返す]]></title>
+        <id>https://zenn.dev/pejpo/articles/2f22ea1bd08a46</id>
+        <link href="https://zenn.dev/pejpo/articles/2f22ea1bd08a46"/>
+        <updated>2022-08-07T23:51:51.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+RDKitで、分子をグリッドに配置して構造描画する際、見た目を整えるために、空白を入れたくなりました。空白のmolオブジェクトを作ろうとしたのですが、どうもRDKitのバージョンによって、与えるSMILESの内容が違うようなので、まとめました。
+
+ 概要
+SMILESとして ' ' または '' を与え、Chem.MolFromSMILES()でmolオブジェクトにすると空白のmolオブジェクトが得られたが、RDKitのバージョンにより挙動が異なる。可能な範囲での検証結果を表1にまとめた。
+SMILESからmolオブジェクトへ変換する代わりに、SMILESが空白の場合にNo...]]></summary>
+        <author>
+            <name>Dr_O</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[J-Quantとペアトレと戯れる #3]]></title>
+        <id>https://zenn.dev/wannabebotter/articles/3c28db8812dc95</id>
+        <link href="https://zenn.dev/wannabebotter/articles/3c28db8812dc95"/>
+        <updated>2022-08-07T16:16:54.000Z</updated>
+        <summary type="html"><![CDATA[今回やったこと
+J-Quantとペアトレと戯れる #2 では、東証が決めた業種と言うクラスタを利用して、その中の銘柄ペアで、特に価格系列の差分に定常性がありそうなものを探していた。
+今回は、値動きが似たような銘柄群をクラスタリングで抜き出してみて、様子を見てみることにする。
+
+ やりかた
+tslearnというPythonパッケージには、時系列の波形を類似度でクラスタリングする機能があるので、それを使うだけ。
+
+クラスタ数は30
+東証プライムの銘柄から、分散が大きい上位20％を取り除いたものをクラスタ化対象とした。銘柄数は1,445銘柄となった
+Dynamic Time Warp法とユ...]]></summary>
+        <author>
+            <name>WannabeBotter</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[streamlit]表情判定アプリを作ろう（クラウドサービス使わない）]]></title>
+        <id>https://zenn.dev/littledarwin/articles/34fc64822f2e9d</id>
+        <link href="https://zenn.dev/littledarwin/articles/34fc64822f2e9d"/>
+        <updated>2022-08-07T11:57:59.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+これまで機械学習などをテーマにstreamlitを試してきましたが、もう少し肩の力を抜いたギミック的なこともしたいなと思い今回は表情判定WEBアプリを作ります。
+streamlitで表情解析となると王道となるのはクラウドサービスのAPIを用いるパターンだと思いますが、ここではpy-featと言うライブラリを用いてローカルだけで完結させますので気軽に試せるのではないかなと思います。
+
+ 参考）py-feat
+顔画像を入力すると、"anger", "disgust", "fear", "happiness", "sadness", "surprise", "neutral"とい...]]></summary>
+        <author>
+            <name>まっつん@データサイエンス</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ABC263] AtCoder Beginner Contest 263（A-E 問題 Python）]]></title>
+        <id>https://zenn.dev/kiwamachan/articles/b813124b1cc509</id>
+        <link href="https://zenn.dev/kiwamachan/articles/b813124b1cc509"/>
+        <updated>2022-08-07T09:37:44.000Z</updated>
+        <summary type="html"><![CDATA[AtCoder Beginner Contest 263 の復習記録です。
+A問題からE問題までやります。使用言語はPythonです。
+
+ A問題
+https://atcoder.jp/contests/abc263/tasks/abc263_a
+
+ 考え方
+カードの番号ごとに、枚数をカウントしておき、降順に並び替えます。
+1番目に多い枚数 =3 , 2番目に多い枚数 =2  を満たせば、フルハウスになります。
+
+ 提出コード
+num = list(map(int,input().split()))
+card = [0]*13
+for n in num:
+    card[n-1] +=...]]></summary>
+        <author>
+            <name>kiwamachan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonによるS-Learnerの実装]]></title>
+        <id>https://zenn.dev/s1ok69oo/articles/491fbaf2092cd5</id>
+        <link href="https://zenn.dev/s1ok69oo/articles/491fbaf2092cd5"/>
+        <updated>2022-08-07T05:46:09.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+S-Learnerについて、Pythonによる実装を交えてまとめました。内容について誤り等ございましたら、コメントにてご指摘いただけますと幸いです。
+
+ 機械学習を用いた因果推論
+機械学習を用いた因果推論手法は大きく分けて下記の2通りが存在します。
+
+Meta-Learner系
+Causal-Tree系
+
+今回はMeta-Learner系の手法の1つであるS-Learnerについて紹介します。
+
+ Meta-Leanrerとは
+Meta-Learnerとは、機械学習と因果推論の考え方を掛け合わせて条件付き平均処置効果(CATE: Conditional Average Tr...]]></summary>
+        <author>
+            <name>うとしん</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ModuleNotFoundError: No module named 'dotenv']]></title>
         <id>https://zenn.dev/nek0n0mimi/articles/1ae0a977c62e18</id>
