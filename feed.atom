@@ -2,10 +2,227 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-08-12T02:07:03.134Z</updated>
+    <updated>2022-08-13T01:58:51.293Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[PythonでRDBMSのNested-Loop Joinを実装して2つのCSVを外部結合して射影してみた]]></title>
+        <id>https://zenn.dev/harukaeru/articles/207812eb1fc7ef</id>
+        <link href="https://zenn.dev/harukaeru/articles/207812eb1fc7ef"/>
+        <updated>2022-08-12T14:37:51.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+
+ ベン図と結合(JOIN)
+RDBMSの結合は、よくベン図を用いて説明されますが、逆に混乱を招いておりたいへん難しいのではないかと思います（すくなくともぼくには難しかった）
+なぜならわれわれは、テーブル（表）という概念で考えるからです。
+ベン図はみたまんまテーブルではないので、テーブルから集合へどのように変化するのかイメージがつきにくいと思います。ベン図を見せられて、OUTERとかINNERとかLEFTとかRIGHTとか言われても、なんだかよくわかりません。とくにOUTERはいちばんわかりにくいと思います。
+そういうわけで、テーブルの結合を考えるにあたっては、それを実装し...]]></summary>
+        <author>
+            <name>かえる</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bloch ベクトルを眺めてみる (2)]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-bloch-vector02</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-bloch-vector02"/>
+        <updated>2022-08-12T13:52:44.000Z</updated>
+        <summary type="html"><![CDATA[目的
+前回は R_X ゲートの場合のみ計算したので、残りの R_Y, R_Z ゲートの場合を確認したい。と言っても、もう手計算はつらいので、sympy を活用する。
+
+ 準備
+以下のように計算に必要なシンボル類を定義する。
+import sympy
+
+theta = sympy.Symbol('θ', real=True)
+phi = sympy.Symbol('φ', real=True)
+lam = sympy.Symbol('λ', real=True)
+
+I = sympy.Matrix([
+    [1, 0],
+    [0, 1]
+])
+X = sympy.Matrix...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[デプロイをzappaで1年間運用した所感]]></title>
+        <id>https://zenn.dev/ytdrep/articles/27e8593fbed6f6</id>
+        <link href="https://zenn.dev/ytdrep/articles/27e8593fbed6f6"/>
+        <updated>2022-08-12T13:51:01.000Z</updated>
+        <summary type="html"><![CDATA[概要
+zappaは、wsgiアプリケーションのAWS Lambdaへのpython製CLIデプロイツールです。
+少ない記述でAPIGateway,Lambda等をデプロイでき、手軽にデプロイしたいときはAWS SAMやServerless Frameworkより便利だと感じます。
+実際に開発環境〜本番環境のデプロイをzappaで1年間ほど運用したのですが、その中で得られた所感をまとめようと思います。
+https://github.com/zappa/Zappa
+
+ 環境
+
+zappa: v0.54.1
+APIGateway,Lambda,EventBridgeイベントルールのデプロイ...]]></summary>
+        <author>
+            <name>ytdrep</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python互換の静的型付け言語「Erg」]]></title>
+        <id>https://zenn.dev/mtshiba/articles/a38c9fcd9646d4</id>
+        <link href="https://zenn.dev/mtshiba/articles/a38c9fcd9646d4"/>
+        <updated>2022-08-12T11:44:05.000Z</updated>
+        <summary type="html"><![CDATA[承前
+Ergは私が数年前から開発を始め、つい一昨日公開したばかりのプログラミング言語です。
+https://github.com/erg-lang/erg
+のはずですが、
+https://zenn.dev/qnighy/articles/bda50fe4dda4d6#wishlist
+早速、qnighyさんに捕捉していただきました。ありがとうございます。
+この記事ではそのErgがどのような言語なのかざっくりと解説していきたいと思います。なお、紹介した機能の一部は未実装です。実装途中の機能を含むコードには*を、完全に未実装の機能を含むコードには**をつけておきます。
+
+ はじめに
+Py...]]></summary>
+        <author>
+            <name>mtshiba</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Herokuへデプロイするのに、ポート番号まわりで失敗した話]]></title>
+        <id>https://zenn.dev/yutorse/articles/0f7eba0640c79c</id>
+        <link href="https://zenn.dev/yutorse/articles/0f7eba0640c79c"/>
+        <updated>2022-08-12T11:08:06.000Z</updated>
+        <summary type="html"><![CDATA[問題
+LINE Messaging API SDK for Python を利用して LINE CHAT BOT を開発し、Herokuへデプロイしたときに生じた問題。
+ボットサーバのエンドポイントとして設定したURLにPOSTリクエストを投げても反応がない。
+localhostでテストしたときは問題なく動いていたのに...
+
+ ログ
+heroku logs --tailでログを見てみると、
+2022-08-12T04:44:19.942449+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=POST...]]></summary>
+        <author>
+            <name>yutorse</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bloch ベクトルを眺めてみる]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-bloch-vector</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-bloch-vector"/>
+        <updated>2022-08-12T09:20:39.000Z</updated>
+        <summary type="html"><![CDATA[目的
+Bloch 球の上に状態ベクトルをマッピングした Bloch ベクトルという概念がある。よく見かけるのは計算基底 \ket{0}, \ket{1} や X 基底 \ket{+}, \ket{-} をマッピングしたものだが、回転ゲートを適用した場合に、Bloch ベクトルとしてはどのような影響を受けるのかを見てみたい。
+回転ゲート自体は Bloch ベクトルではなく、対応する状態ベクトル \in \mathbb{C}^2\!/\!\!\sim\ \simeq \mathbb{C}P^1 に対する演算なので、結果はそれほど自明ではない。
+
+ Bloch ベクトル
+
+\begin{a...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[NumPy] 簡単なガウス過程回帰モデルをゼロから実装する (ハイパーパラメータチューニングなしver.)]]></title>
+        <id>https://zenn.dev/mory22k/articles/1186466adfbe6f</id>
+        <link href="https://zenn.dev/mory22k/articles/1186466adfbe6f"/>
+        <updated>2022-08-12T07:30:00.000Z</updated>
+        <summary type="html"><![CDATA[簡易的なガウス過程回帰モデルをnumpyで実装してみます。
+import numpy as np
+import matplotlib.pyplot as plt
+
+ 元の関数
+
+ 元の関数を設定
+元の関数として、適当な1変数関数を設定しておきます。
+
+f(x) = 3\sin(x) + 4\cos(2x) + \frac{1}{9}\exp\!\left(\frac{1}{3}x\right)
+
+x_min = 0
+x_max = 10
+
+def func(x):
+    return 3 * np.sin(x) + 4 * np.cos(2 * x) + 1/9 * np.exp(1/...]]></summary>
+        <author>
+            <name>mory22k</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[再帰呼び出しでネストした辞書（dict）を生成する]]></title>
+        <id>https://zenn.dev/awtnb/articles/8c771d09046b9f</id>
+        <link href="https://zenn.dev/awtnb/articles/8c771d09046b9f"/>
+        <updated>2022-08-12T05:58:54.000Z</updated>
+        <summary type="html"><![CDATA[やりたいこと
+
+
+あいうえお と A という文字列から、 {'あ': {'い': {'う': {'え': {'お': 'A'}}}}} という辞書を作る
+
+整形するとこんな感じ：{
+    'あ': {
+        'い': {
+            'う': {
+                'え': {
+                    'お': 'A'
+                }
+            }
+        }
+    }
+}
+
+
+
+
+生成した辞書に対して、同様に あいういあ と B という文字列を渡すと、共通する部分を整理して {'あ':...]]></summary>
+        <author>
+            <name>AWtnb</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【第2回】Make STG with Pygame Zero]]></title>
+        <id>https://zenn.dev/onimen/articles/cc677f7897c935</id>
+        <link href="https://zenn.dev/onimen/articles/cc677f7897c935"/>
+        <updated>2022-08-12T03:33:16.000Z</updated>
+        <summary type="html"><![CDATA[!
+この記事は中学生向けです。表現はあえて簡単にしています。
+
+
+ What is a function - 関数とはなにか
+この章は難しめです。眠くなってきたら飛ばして次の章に行ってみましょう。
+数学における関数は、ある入力に対して出力を決める関係のことです。
+中学や高校では、y = x^2のことを関数と言ったりしますが、プログラミングではちょっと違うので気を付けてください。
+プログラミングでの、関数もある入力に対して出力を決定します。入力するデータのことを引数 と言います。また、出力するデータのことを返り値または戻り値と言います。（返り血じゃないよ！！）。さらに、関数が値を出力するこ...]]></summary>
+        <author>
+            <name>Onimen</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[とりあえず手順だけでも理解する Twitter ログイン認証]]></title>
+        <id>https://zenn.dev/minato_seagull/articles/116ca1b58a6f73</id>
+        <link href="https://zenn.dev/minato_seagull/articles/116ca1b58a6f73"/>
+        <updated>2022-08-12T02:11:03.000Z</updated>
+        <summary type="html"><![CDATA[コードベースでとりあえず手順だけでも Twitter の認証方式を理解したい
+本記事は Twitter アカウントによるログイン認証フローをどうにか自前のアプリケーションで実装するために調べた内容の記録です。主にこちら の記事とコードを参考にさせていただきました。
+手順だけでも、と書いているのは認証の仕組みそのものやセキュリティの担保などについては触れないからです。
+
+ Twitter の認証方式について
+https://developer.twitter.com/ja/docs/authentication/overview
+Twitter の認証方式は様々で、開発者が自分のアカウ...]]></summary>
+        <author>
+            <name>Minato_seagull</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【第1回】Make STG with Pygame Zero]]></title>
+        <id>https://zenn.dev/onimen/articles/7c934460c54367</id>
+        <link href="https://zenn.dev/onimen/articles/7c934460c54367"/>
+        <updated>2022-08-12T01:32:34.000Z</updated>
+        <summary type="html"><![CDATA[!
+この記事は中学生向けです。表現はあえて簡単にしています。
+
+
+ Let's create the new file - 新しいファイルを作成する
+Muを起動したら、左上のほうにある「＋」マークの新規と書かれたアイコンをクリックしてください。すると、新しいファイルが作成されます。しかし、この時点ではファイルが保存されていません。新規ボタンのちょっと右側にある「保存」ボタンを押してファイルを保存しましょう。
+まず、ファイルの保存場所を決めます。どこに保存しても大丈夫なのですが、フォルダを作って関連するファイルをそのフォルダの中にまとめるのが良いでしょう。なので、まずフォルダを作成しましょ...]]></summary>
+        <author>
+            <name>Onimen</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[体感ゲームを自作しよう]]></title>
         <id>https://zenn.dev/kotaproj/articles/pi_microbit_game</id>
