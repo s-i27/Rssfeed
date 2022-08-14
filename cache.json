@@ -12,6 +12,96 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/piruty/articles/2022-08-13_remove-silence-by-sox",
+          "author": "piruty",
+          "description": "音声ファイルから無音部分を削除したくて、Pythonでスクリプトを書いてみた\n環境\n\nHostマシン: M1 Macbook Air\nOS: macOS Monterey(12.5)\npython 3.10.0\n\n\nインストール\n\nsoxというツールが必要なので、brewでインストール\n\nbrew install sox\n\n\nPythonで実行するためのライブラリを入れる\n\npip install sox\n\n\n\n\n実装\n\nimport sox\n\n\ntfm = sox.Transformer()\n# silence: 無音部分を削除。デフォルトだとファイル内の無音部分をすべて削除する\n#...",
+          "link": "https://zenn.dev/piruty/articles/2022-08-13_remove-silence-by-sox",
+          "publishedOn": "2022-08-13T14:28:00.000Z",
+          "wordCount": 151,
+          "title": "SoXで無音部分を削除する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--I2hVBZkr--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:piruty%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:SoX%25E3%2581%25A7%25E7%2584%25A1%25E9%259F%25B3%25E9%2583%25A8%25E5%2588%2586%25E3%2582%2592%25E5%2589%258A%25E9%2599%25A4%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1ibGZtZlo3Xy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FlOTZjZGFiNGIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--I2hVBZkr--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:piruty%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:SoX%25E3%2581%25A7%25E7%2584%25A1%25E9%259F%25B3%25E9%2583%25A8%25E5%2588%2586%25E3%2582%2592%25E5%2589%258A%25E9%2599%25A4%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1ibGZtZlo3Xy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FlOTZjZGFiNGIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/piruty/articles/2022-08-13_youtube-dl-for-script",
+          "author": "piruty",
+          "description": "音声ファイルを集めるため、youtube-dlを使ってみようと考えた\n\n自己責任でお願いします\n\n\n環境\n\nHostマシン: M1 Macbook Air\nOS: macOS Monterey(12.5)\npython 3.10.0\n\n\nインストール\n\npip install youtube_dl\n\n\n実装\n\nimport youtube_dl\n\n\noptions = {\n  'format': 'bestaudio/best',\n  'outtmpl': './%(id)s.%(ext)s',\n  'postprocessors': [\n    {\n      'key': 'FFm...",
+          "link": "https://zenn.dev/piruty/articles/2022-08-13_youtube-dl-for-script",
+          "publishedOn": "2022-08-13T14:12:02.000Z",
+          "wordCount": 248,
+          "title": "pythonスクリプトの中でtyoutube-dlを使う",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--zGGVDBfv--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:piruty%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:python%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2597%25E3%2583%2588%25E3%2581%25AE%25E4%25B8%25AD%25E3%2581%25A7tyoutube-dl%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1ibGZtZlo3Xy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FlOTZjZGFiNGIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--zGGVDBfv--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:piruty%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:python%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2597%25E3%2583%2588%25E3%2581%25AE%25E4%25B8%25AD%25E3%2581%25A7tyoutube-dl%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1ibGZtZlo3Xy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FlOTZjZGFiNGIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/masaruxstudy/articles/6ebe32ed5490e0",
+          "author": "Masaru",
+          "description": "blackとは何か\n参考: もうPythonの細かい書き方で議論しない。blackで自動フォーマットしよう\n\npythonのコードフォーマッター\n自動的にPythonプログラムの書き方を修正してくれる\nPEP8のコード規約に準拠したフォーマッター\n制限が多く、他人数でpythonのコードを書く際に統一された書き方ができる(メリット)\n\n!\n特徴をまとめると、\nblackは自動フォーマッターというよりも制限のきついPEP8であるということのようです。\n\n\n 1. blackのinstall\n適用させたいのはVScodeです。\n拡張機能にBlack Fomatterというのがありますが、...",
+          "link": "https://zenn.dev/masaruxstudy/articles/6ebe32ed5490e0",
+          "publishedOn": "2022-08-13T08:53:28.000Z",
+          "wordCount": 389,
+          "title": "Pythonの自動フォーマッター「black」を入れようとしたら苦戦した話",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--iSk1l6o2--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Masaru%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AE%25E8%2587%25AA%25E5%258B%2595%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%259E%25E3%2583%2583%25E3%2582%25BF%25E3%2583%25BC%25E3%2580%258Cblack%25E3%2580%258D%25E3%2582%2592%25E5%2585%25A5%25E3%2582%258C%25E3%2582%2588%25E3%2581%2586%25E3%2581%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2582%2589%25E8%258B%25A6%25E6%2588%25A6%25E3%2581%2597%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y29OUTVRTUNnQ1VTc2NjY2dmOTdqTWFzOXNtSzM4MXJGVmlwT0tsWWRNPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--iSk1l6o2--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Masaru%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AE%25E8%2587%25AA%25E5%258B%2595%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%259E%25E3%2583%2583%25E3%2582%25BF%25E3%2583%25BC%25E3%2580%258Cblack%25E3%2580%258D%25E3%2582%2592%25E5%2585%25A5%25E3%2582%258C%25E3%2582%2588%25E3%2581%2586%25E3%2581%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2582%2589%25E8%258B%25A6%25E6%2588%25A6%25E3%2581%2597%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y29OUTVRTUNnQ1VTc2NjY2dmOTdqTWFzOXNtSzM4MXJGVmlwT0tsWWRNPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/zgw426/articles/2619722626bf23",
+          "author": "suo-takefumi",
+          "description": "Windows11にPyOpenGLをインストールする手順\nWindows11にPyOpenGLをインストールする手順メモです。\npip install xxxでインストールできたのですが、スクリプトを実行するとgluがうんたら(←忘れた)とエラーがでてスクリプトが実行できない現象が発生。ネットをさまよいようやくエラーの発生しない方法がわかったのでその手順を忘れる前にメモします。\n\n 参考\n手順はこちらの動画で紹介されていました。私は英語力ゼロですが自動翻訳でなんとかなりました。\nhttps://www.youtube.com/watch?v=a4NVQC_2S2U\n\n 環境\nWin...",
+          "link": "https://zenn.dev/zgw426/articles/2619722626bf23",
+          "publishedOn": "2022-08-13T08:24:13.000Z",
+          "wordCount": 658,
+          "title": "Windows11にPyOpenGLをインストールする",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--nHedFs2W--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:suo-takefumi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Windows11%25E3%2581%25ABPyOpenGL%25E3%2582%2592%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1ycHpTZF9NNi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc1M2E2OTUzMjEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--nHedFs2W--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:suo-takefumi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Windows11%25E3%2581%25ABPyOpenGL%25E3%2582%2592%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1ycHpTZF9NNi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc1M2E2OTUzMjEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/aromarious/articles/enjoy-atcoder-05",
+          "author": "aromarious",
+          "description": "この記事の内容\nソフトウェアエンジニアが中学生の子にプログラミングを教えていく様子を記録する。この記事は5回目。前回は自分の手でコードを書いて、初めての提出までの流れをこなした。今回は別の問題で同じように提出までやってみる。\n【前回の記事】 過去問(ABC086A - Product)を1題解き、初めて提出した回。\n\n\n 今回の達成目標\n今回のタスクはABC081A - Placing Marbles。このタスクを題材に、前回と同じ流れをもう一度おさらいする。\nhttps://atcoder.jp/contests/abc081/tasks/abc081_a\n\n書く、動かす、確認する...",
+          "link": "https://zenn.dev/aromarious/articles/enjoy-atcoder-05",
+          "publishedOn": "2022-08-13T06:45:28.000Z",
+          "wordCount": 808,
+          "title": "中学生にAtCoderでプログラミングを教える記録 5回目 〜 ABC081A  - Placing Marbles",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--GjEBhemV--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:aromarious%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E4%25B8%25AD%25E5%25AD%25A6%25E7%2594%259F%25E3%2581%25ABAtCoder%25E3%2581%25A7%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E3%2582%2592%25E6%2595%2599%25E3%2581%2588%25E3%2582%258B%25E8%25A8%2598%25E9%258C%25B2%25205%25E5%259B%259E%25E7%259B%25AE%2520%25E3%2580%259C%2520ABC081A%2520%2520-%2520Placing%2520Marbles%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1KT1djRllnVy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RmMTIwZjRiODEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--GjEBhemV--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:aromarious%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E4%25B8%25AD%25E5%25AD%25A6%25E7%2594%259F%25E3%2581%25ABAtCoder%25E3%2581%25A7%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E3%2582%2592%25E6%2595%2599%25E3%2581%2588%25E3%2582%258B%25E8%25A8%2598%25E9%258C%25B2%25205%25E5%259B%259E%25E7%259B%25AE%2520%25E3%2580%259C%2520ABC081A%2520%2520-%2520Placing%2520Marbles%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1KT1djRllnVy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RmMTIwZjRiODEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/taiyou/articles/7b0325591bf1f8",
+          "author": "たいよう",
+          "description": "なにこれ\nこの記事では、「実践ドメイン駆動設計」(IDDD本)の「ドメインイベント」の具体的な実装方法をまとめています。\nすでにIDDD本でドメインイベントの解説がされていますが、実務に活用できるだけの詳細な実装方法を示していなかったり、または理解できなかったり、そもそも例題で扱っているアジャイルプロジェクトがよくわからなかったりしました。そのため、本記事では、IDDD本を引用しながら分かりやすい例題でドメインイベントの実装方法を記載しました。\n質問や感想、要望、ツッコミどころなどありましたら、コメントしてもらえると嬉しいです！\n\n 対象読者\n\nドメインイベントの実装方法を知りたい...",
+          "link": "https://zenn.dev/taiyou/articles/7b0325591bf1f8",
+          "publishedOn": "2022-08-13T02:35:42.000Z",
+          "wordCount": 2138,
+          "title": "【ドメイン駆動設計】ドメインイベントの実装方法 - 1.概要編",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--egVmf84F--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%259F%25E3%2581%2584%25E3%2582%2588%25E3%2581%2586%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E3%2583%2589%25E3%2583%25A1%25E3%2582%25A4%25E3%2583%25B3%25E9%25A7%2586%25E5%258B%2595%25E8%25A8%25AD%25E8%25A8%2588%25E3%2580%2591%25E3%2583%2589%25E3%2583%25A1%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25A4%25E3%2583%2599%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25AE%25E5%25AE%259F%25E8%25A3%2585%25E6%2596%25B9%25E6%25B3%2595%2520-%25201.%25E6%25A6%2582%25E8%25A6%2581%25E7%25B7%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1PYnpSLV9DWC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JlYzk5NzgyM2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--egVmf84F--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%259F%25E3%2581%2584%25E3%2582%2588%25E3%2581%2586%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E3%2583%2589%25E3%2583%25A1%25E3%2582%25A4%25E3%2583%25B3%25E9%25A7%2586%25E5%258B%2595%25E8%25A8%25AD%25E8%25A8%2588%25E3%2580%2591%25E3%2583%2589%25E3%2583%25A1%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25A4%25E3%2583%2599%25E3%2583%25B3%25E3%2583%2588%25E3%2581%25AE%25E5%25AE%259F%25E8%25A3%2585%25E6%2596%25B9%25E6%25B3%2595%2520-%25201.%25E6%25A6%2582%25E8%25A6%2581%25E7%25B7%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1PYnpSLV9DWC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JlYzk5NzgyM2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
           "id": "https://zenn.dev/harukaeru/articles/207812eb1fc7ef",
           "author": "かえる",
           "description": "はじめに\n\n ベン図と結合(JOIN)\nRDBMSの結合は、よくベン図を用いて説明されますが、逆に混乱を招いておりたいへん難しいのではないかと思います（すくなくともぼくには難しかった）\nなぜならわれわれは、テーブル（表）という概念で考えるからです。\nベン図はみたまんまテーブルではないので、テーブルから集合へどのように変化するのかイメージがつきにくいと思います。ベン図を見せられて、OUTERとかINNERとかLEFTとかRIGHTとか言われても、なんだかよくわかりません。とくにOUTERはいちばんわかりにくいと思います。\nそういうわけで、テーブルの結合を考えるにあたっては、それを実装し...",

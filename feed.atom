@@ -2,10 +2,166 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-08-13T01:58:51.293Z</updated>
+    <updated>2022-08-14T02:22:57.093Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[SoXで無音部分を削除する]]></title>
+        <id>https://zenn.dev/piruty/articles/2022-08-13_remove-silence-by-sox</id>
+        <link href="https://zenn.dev/piruty/articles/2022-08-13_remove-silence-by-sox"/>
+        <updated>2022-08-13T14:28:00.000Z</updated>
+        <summary type="html"><![CDATA[音声ファイルから無音部分を削除したくて、Pythonでスクリプトを書いてみた
+環境
+
+Hostマシン: M1 Macbook Air
+OS: macOS Monterey(12.5)
+python 3.10.0
+
+
+インストール
+
+soxというツールが必要なので、brewでインストール
+
+brew install sox
+
+
+Pythonで実行するためのライブラリを入れる
+
+pip install sox
+
+
+
+
+実装
+
+import sox
+
+
+tfm = sox.Transformer()
+# silence: 無音部分を削除。デフォルトだとファイル内の無音部分をすべて削除する
+#...]]></summary>
+        <author>
+            <name>piruty</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonスクリプトの中でtyoutube-dlを使う]]></title>
+        <id>https://zenn.dev/piruty/articles/2022-08-13_youtube-dl-for-script</id>
+        <link href="https://zenn.dev/piruty/articles/2022-08-13_youtube-dl-for-script"/>
+        <updated>2022-08-13T14:12:02.000Z</updated>
+        <summary type="html"><![CDATA[音声ファイルを集めるため、youtube-dlを使ってみようと考えた
+
+自己責任でお願いします
+
+
+環境
+
+Hostマシン: M1 Macbook Air
+OS: macOS Monterey(12.5)
+python 3.10.0
+
+
+インストール
+
+pip install youtube_dl
+
+
+実装
+
+import youtube_dl
+
+
+options = {
+  'format': 'bestaudio/best',
+  'outtmpl': './%(id)s.%(ext)s',
+  'postprocessors': [
+    {
+      'key': 'FFm...]]></summary>
+        <author>
+            <name>piruty</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonの自動フォーマッター「black」を入れようとしたら苦戦した話]]></title>
+        <id>https://zenn.dev/masaruxstudy/articles/6ebe32ed5490e0</id>
+        <link href="https://zenn.dev/masaruxstudy/articles/6ebe32ed5490e0"/>
+        <updated>2022-08-13T08:53:28.000Z</updated>
+        <summary type="html"><![CDATA[blackとは何か
+参考: もうPythonの細かい書き方で議論しない。blackで自動フォーマットしよう
+
+pythonのコードフォーマッター
+自動的にPythonプログラムの書き方を修正してくれる
+PEP8のコード規約に準拠したフォーマッター
+制限が多く、他人数でpythonのコードを書く際に統一された書き方ができる(メリット)
+
+!
+特徴をまとめると、
+blackは自動フォーマッターというよりも制限のきついPEP8であるということのようです。
+
+
+ 1. blackのinstall
+適用させたいのはVScodeです。
+拡張機能にBlack Fomatterというのがありますが、...]]></summary>
+        <author>
+            <name>Masaru</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows11にPyOpenGLをインストールする]]></title>
+        <id>https://zenn.dev/zgw426/articles/2619722626bf23</id>
+        <link href="https://zenn.dev/zgw426/articles/2619722626bf23"/>
+        <updated>2022-08-13T08:24:13.000Z</updated>
+        <summary type="html"><![CDATA[Windows11にPyOpenGLをインストールする手順
+Windows11にPyOpenGLをインストールする手順メモです。
+pip install xxxでインストールできたのですが、スクリプトを実行するとgluがうんたら(←忘れた)とエラーがでてスクリプトが実行できない現象が発生。ネットをさまよいようやくエラーの発生しない方法がわかったのでその手順を忘れる前にメモします。
+
+ 参考
+手順はこちらの動画で紹介されていました。私は英語力ゼロですが自動翻訳でなんとかなりました。
+https://www.youtube.com/watch?v=a4NVQC_2S2U
+
+ 環境
+Win...]]></summary>
+        <author>
+            <name>suo-takefumi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中学生にAtCoderでプログラミングを教える記録 5回目 〜 ABC081A  - Placing Marbles]]></title>
+        <id>https://zenn.dev/aromarious/articles/enjoy-atcoder-05</id>
+        <link href="https://zenn.dev/aromarious/articles/enjoy-atcoder-05"/>
+        <updated>2022-08-13T06:45:28.000Z</updated>
+        <summary type="html"><![CDATA[この記事の内容
+ソフトウェアエンジニアが中学生の子にプログラミングを教えていく様子を記録する。この記事は5回目。前回は自分の手でコードを書いて、初めての提出までの流れをこなした。今回は別の問題で同じように提出までやってみる。
+【前回の記事】 過去問(ABC086A - Product)を1題解き、初めて提出した回。
+
+
+ 今回の達成目標
+今回のタスクはABC081A - Placing Marbles。このタスクを題材に、前回と同じ流れをもう一度おさらいする。
+https://atcoder.jp/contests/abc081/tasks/abc081_a
+
+書く、動かす、確認する...]]></summary>
+        <author>
+            <name>aromarious</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【ドメイン駆動設計】ドメインイベントの実装方法 - 1.概要編]]></title>
+        <id>https://zenn.dev/taiyou/articles/7b0325591bf1f8</id>
+        <link href="https://zenn.dev/taiyou/articles/7b0325591bf1f8"/>
+        <updated>2022-08-13T02:35:42.000Z</updated>
+        <summary type="html"><![CDATA[なにこれ
+この記事では、「実践ドメイン駆動設計」(IDDD本)の「ドメインイベント」の具体的な実装方法をまとめています。
+すでにIDDD本でドメインイベントの解説がされていますが、実務に活用できるだけの詳細な実装方法を示していなかったり、または理解できなかったり、そもそも例題で扱っているアジャイルプロジェクトがよくわからなかったりしました。そのため、本記事では、IDDD本を引用しながら分かりやすい例題でドメインイベントの実装方法を記載しました。
+質問や感想、要望、ツッコミどころなどありましたら、コメントしてもらえると嬉しいです！
+
+ 対象読者
+
+ドメインイベントの実装方法を知りたい...]]></summary>
+        <author>
+            <name>たいよう</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[PythonでRDBMSのNested-Loop Joinを実装して2つのCSVを外部結合して射影してみた]]></title>
         <id>https://zenn.dev/harukaeru/articles/207812eb1fc7ef</id>
