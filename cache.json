@@ -12,6 +12,66 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/taiyou/articles/7c39edffb0c3e0",
+          "author": "たいよう",
+          "description": "なにこれ\n表題の通り、PythonでSpring BootのようにDIするにはどうしたら良いか？の考えをまとめました。\n\n 理想像\n\n こんなことをしたい\n\n抽象クラスを継承した実装クラスにProfileアノテーションを付与するだけで、DIコンテナに登録されること\n\nDIしたいクラスが増えるたびに、https://github.com/alecthomas/injector みたいにConfigurationクラスを用意して、bindする記述をしなくともよい\n少なくともパッケージ側で自動登録して欲しい\n\n\n環境変数の値に応じて、DIする実装クラスを切り替えられること\n\n切り替え先クラ...",
+          "link": "https://zenn.dev/taiyou/articles/7c39edffb0c3e0",
+          "publishedOn": "2022-08-14T13:07:23.000Z",
+          "wordCount": 2108,
+          "title": "PythonでSpring Bootの@Profileみたいにアノテーション&環境変数だけで実装クラスをDIできるようにするには？",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--JeLQeYHg--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%259F%25E3%2581%2584%25E3%2582%2588%25E3%2581%2586%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:Python%25E3%2581%25A7Spring%2520Boot%25E3%2581%25AE%2540Profile%25E3%2581%25BF%25E3%2581%259F%25E3%2581%2584%25E3%2581%25AB%25E3%2582%25A2%25E3%2583%258E%25E3%2583%2586%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%2526%25E7%2592%25B0%25E5%25A2%2583%25E5%25A4%2589%25E6%2595%25B0%25E3%2581%25A0%25E3%2581%2591%25E3%2581%25A7%25E5%25AE%259F%25E8%25A3%2585%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25B9%25E3%2582%2592DI%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25E3%2581%25AB%25E3%2581%25AF%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1PYnpSLV9DWC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JlYzk5NzgyM2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--JeLQeYHg--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%259F%25E3%2581%2584%25E3%2582%2588%25E3%2581%2586%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:Python%25E3%2581%25A7Spring%2520Boot%25E3%2581%25AE%2540Profile%25E3%2581%25BF%25E3%2581%259F%25E3%2581%2584%25E3%2581%25AB%25E3%2582%25A2%25E3%2583%258E%25E3%2583%2586%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%2526%25E7%2592%25B0%25E5%25A2%2583%25E5%25A4%2589%25E6%2595%25B0%25E3%2581%25A0%25E3%2581%2591%25E3%2581%25A7%25E5%25AE%259F%25E8%25A3%2585%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25B9%25E3%2582%2592DI%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25E3%2581%25AB%25E3%2581%25AF%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1PYnpSLV9DWC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JlYzk5NzgyM2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/taro0079/articles/6124c9b33c0748",
+          "author": "taro0079",
+          "description": "初投稿です。\nArduino で温度計測し、取得した温度をブラウザにリアルタイムでプロットできるようなものを作ります。\n\n Requirements\n\nArduino\nサーミスタ (MCP9700/9700A) : 秋月電子で購入しました。\n1 \\muF のコンデンサ\nブレッドボード\n\n\n Arduino の設定\n\n サーミスタと Arduino を接続する\n\n\narduino、コンデンサ、サーミスタを図のように接続します。\nArduino を PC と接続し、Arduino IDE で次のようなプログラムを Arduino に書き込みます。\n\nconst int vOutPin = 0...",
+          "link": "https://zenn.dev/taro0079/articles/6124c9b33c0748",
+          "publishedOn": "2022-08-14T10:51:13.000Z",
+          "wordCount": 2149,
+          "title": "Arduinoで温度を計測 & chart.jsでリアルタイム表示",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--q1qRgJPw--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:taro0079%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Arduino%25E3%2581%25A7%25E6%25B8%25A9%25E5%25BA%25A6%25E3%2582%2592%25E8%25A8%2588%25E6%25B8%25AC%2520%2526%2520chart.js%25E3%2581%25A7%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%25A0%25E8%25A1%25A8%25E7%25A4%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dLR1FuR2JJU05fUVhNN0VBVUdzTFdGTkZ3Y3N1aWpYbTJORU5OUEtBPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--q1qRgJPw--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:taro0079%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Arduino%25E3%2581%25A7%25E6%25B8%25A9%25E5%25BA%25A6%25E3%2582%2592%25E8%25A8%2588%25E6%25B8%25AC%2520%2526%2520chart.js%25E3%2581%25A7%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%25A0%25E8%25A1%25A8%25E7%25A4%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dLR1FuR2JJU05fUVhNN0VBVUdzTFdGTkZ3Y3N1aWpYbTJORU5OUEtBPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/robes/articles/fd3315881f8874",
+          "author": "osn_Lofi",
+          "description": "自然言語処理モデルの王様と言われるBERTを使って、文章をベクトルに変換し可視化しましたので、それらのタスクについて示したいと思います。\n \nこれは 「BERTによる自然言語処理入門」 を参考にしたものですが、本では、livedoorのニュースコーパスが用いられていました。\n \nここでは、文章コーパスとして、女性シンガー（後述）の歌詞を使ってみたいと思います。\nhttps://www.ohmsha.co.jp/book/9784274227264/\n \n \n\n ライブラリーのインストール\nBERTが格納されているtransformersのほか、matplotlibで日本語を可視化するため...",
+          "link": "https://zenn.dev/robes/articles/fd3315881f8874",
+          "publishedOn": "2022-08-14T07:43:08.000Z",
+          "wordCount": 1485,
+          "title": "【自然言語処理】BERTを使って歌詞をベクトルに変換し可視化する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--L-hUoFQq--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25E3%2580%2591BERT%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E6%25AD%258C%25E8%25A9%259E%25E3%2582%2592%25E3%2583%2599%25E3%2582%25AF%25E3%2583%2588%25E3%2583%25AB%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2597%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--L-hUoFQq--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25E3%2580%2591BERT%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E6%25AD%258C%25E8%25A9%259E%25E3%2582%2592%25E3%2583%2599%25E3%2582%25AF%25E3%2583%2588%25E3%2583%25AB%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2597%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/noa/articles/4c27f7d8554717",
+          "author": "らっく",
+          "description": "このようなキーワードの配列から\nLIST = [\"りんご\", \"みかん\", \"ばなな\", \"めろん\"]\nキーワード2つずつの配列を作る。\nルール1 同じキーワード同士も可。\n['みかん', 'みかん']\nルール2 順番違いはまとめる。\n[ ['みかん','りんご'], ['りんご','みかん'] ] 👉 [ ['みかん','りんご'] ]\n出来上がりはこちら\nLIST = [\"りんご\", \"みかん\", \"ばなな\", \"めろん\"]\nword_group = []\nfor word1 in LIST:\n  for word2 in LIST:\n    # グループを作成\n    _group...",
+          "link": "https://zenn.dev/noa/articles/4c27f7d8554717",
+          "publishedOn": "2022-08-14T03:07:28.000Z",
+          "wordCount": 731,
+          "title": "[Python] キーワードの配列から、キーワード2つずつの配列を作る",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--9zWcpP4S--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%2589%25E3%2581%25A3%25E3%2581%258F%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%255BPython%255D%2520%25E3%2582%25AD%25E3%2583%25BC%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25AE%25E9%2585%258D%25E5%2588%2597%25E3%2581%258B%25E3%2582%2589%25E3%2580%2581%25E3%2582%25AD%25E3%2583%25BC%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%25892%25E3%2581%25A4%25E3%2581%259A%25E3%2581%25A4%25E3%2581%25AE%25E9%2585%258D%25E5%2588%2597%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1ORFVXSUxUNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc4OTRlM2I5ZGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--9zWcpP4S--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%2589%25E3%2581%25A3%25E3%2581%258F%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%255BPython%255D%2520%25E3%2582%25AD%25E3%2583%25BC%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25AE%25E9%2585%258D%25E5%2588%2597%25E3%2581%258B%25E3%2582%2589%25E3%2580%2581%25E3%2582%25AD%25E3%2583%25BC%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%25892%25E3%2581%25A4%25E3%2581%259A%25E3%2581%25A4%25E3%2581%25AE%25E9%2585%258D%25E5%2588%2597%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1ORFVXSUxUNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc4OTRlM2I5ZGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
           "id": "https://zenn.dev/piruty/articles/2022-08-13_remove-silence-by-sox",
           "author": "piruty",
           "description": "音声ファイルから無音部分を削除したくて、Pythonでスクリプトを書いてみた\n環境\n\nHostマシン: M1 Macbook Air\nOS: macOS Monterey(12.5)\npython 3.10.0\n\n\nインストール\n\nsoxというツールが必要なので、brewでインストール\n\nbrew install sox\n\n\nPythonで実行するためのライブラリを入れる\n\npip install sox\n\n\n\n\n実装\n\nimport sox\n\n\ntfm = sox.Transformer()\n# silence: 無音部分を削除。デフォルトだとファイル内の無音部分をすべて削除する\n#...",
