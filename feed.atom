@@ -2,10 +2,172 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-08-20T02:22:07.294Z</updated>
+    <updated>2022-08-21T02:20:06.751Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[poetryでprivateなリポジトリをaddする。]]></title>
+        <id>https://zenn.dev/takashiaihara/articles/cf0cf180076073</id>
+        <link href="https://zenn.dev/takashiaihara/articles/cf0cf180076073"/>
+        <updated>2022-08-21T02:15:40.000Z</updated>
+        <summary type="html"><![CDATA[予備知識
+やり方は複数ありそうだが、簡単そうなのは。。
+
+ssh経由 → 秘密鍵 or パスワード入力が必要
+https経由 → アクセストークン or ユーザー名＋パスワードが必要
+
+2.のアクセストークン利用が良さそうなので、これでいく。
+
+ 実行
+下記の形式でコマンド実行するだけ。
+poetry add git+https://${ACCESS_TOKEN}@github.com/TakashiAihara/${REPO_NAME}#main
+
+ 注意点
+
+アクセストークンが有効であること。（リポジトリ閲覧権限）
+末尾ブランチ名つけること（無いとなぜか失敗した）
+
+あと、com...]]></summary>
+        <author>
+            <name>takashiaihara</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[django Hello Worldと表示する]]></title>
+        <id>https://zenn.dev/akaneiy/articles/3808eb5c62838a</id>
+        <link href="https://zenn.dev/akaneiy/articles/3808eb5c62838a"/>
+        <updated>2022-08-20T23:56:29.000Z</updated>
+        <summary type="html"><![CDATA[備忘録です。
+
+ 環境
+anaconda3 4.12.0
+django　4.1
+
+ 作成
+プロジェクトのフォルダ内で下記コマンド実行
+python manage.py startapp アプリ名
+!
+djangoプロジェクト内には最低1つのアプリが必要
+１つ作れば大体大丈夫らしい
+
+プロジェクトを最初に作成した際に生成されたファイル郡の内、使用するのは基本的に下記二つ
+\プロジェクト名\urlse.py
+\プロジェクト名\settings.py
+また、manage.pyは全てのトリガーとなるファイルらしいです。
+アプリ追加する時にコマンドに登場しているのもこのファイルです。
+
+ sett...]]></summary>
+        <author>
+            <name>akane</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【PyTorch】TypeError: 'method' object is not iterableを解決]]></title>
+        <id>https://zenn.dev/kazuma_soon/articles/b390457e507445</id>
+        <link href="https://zenn.dev/kazuma_soon/articles/b390457e507445"/>
+        <updated>2022-08-20T16:58:12.000Z</updated>
+        <summary type="html"><![CDATA[多分PyTorchに限った問題ではないと思うのですが、
+残しておきます。
+違いは以下だけです。
+optimizer = torch.optim.SGD(params = model.parameters, lr = 0.01)
+# type(model.parameters) ->  <class 'method'>
+
+optimizer = torch.optim.SGD(params = model.parameters(), lr = 0.01)
+# type(model.parameters) ->  <class 'generator'>
+p...]]></summary>
+        <author>
+            <name>kazuma-soon</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lambda×FastAPI環境にMQからのメッセージを受信し、処理する方法]]></title>
+        <id>https://zenn.dev/taiyou/articles/380de1571437c3</id>
+        <link href="https://zenn.dev/taiyou/articles/380de1571437c3"/>
+        <updated>2022-08-20T12:43:57.000Z</updated>
+        <summary type="html"><![CDATA[概要
+以下の図のようにAPI GatewayのトリガーでLambdaが起動し、FastAPIを利用したアプリケーションが実行されるシステムがあります。この既存の構成にAmazon SQSをトリガーとして追加し、送信されたメッセージを処理する方法をまとめました。
+※Flaskでも大丈夫なはずです。
+
+
+
+現状の構成
+実現したい構成
+
+
+
+
+
+
+
+
+
+
+AWS Lambda
+Amazon SQS
+FastAPI
+
+
+ 現状
+
+ 環境
+
+FastAPI(バージョン0.78.0)を利用
+API Gateway×Lambda環境でFastAPIを動かすために、Mangum(バージョン0.15....]]></summary>
+        <author>
+            <name>たいよう</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[YOLOv7でオレンジさん判別機を作る]]></title>
+        <id>https://zenn.dev/lettucefry/articles/d8787ac13267e1</id>
+        <link href="https://zenn.dev/lettucefry/articles/d8787ac13267e1"/>
+        <updated>2022-08-20T11:28:48.000Z</updated>
+        <summary type="html"><![CDATA[やりたいこと
+オレンジさんが本物か偽物か判別したいと思ったこと一度はありますよね？
+環境はGoogle Colabを使います
+画像認識にはYOLOv7を使用します
+
+ 準備
+Google Colabは以下からgoogleにログインすれば使えます
+https://colab.research.google.com
+ファイルからノートブックを新規作成すればOKです
+今回はGoogleドライブにデータを置くようにしたので先にマウントしておきます
+Google Colabにも置けますが時間がたつと削除されるようです
+マウントはGoogle Colabからドライブのマウントボタンを押すだけです...]]></summary>
+        <author>
+            <name>LettuceFry</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPI 超実用的テンプレート(国内トップクラスの充実情報！)]]></title>
+        <id>https://zenn.dev/tk_resilie/books/bd5708c54a8a0a</id>
+        <link href="https://zenn.dev/tk_resilie/books/bd5708c54a8a0a"/>
+        <updated>2022-08-20T09:48:11.000Z</updated>
+        <summary type="html"><![CDATA[Pythonの人気バックエンドフレームワークのFastAPIを使った現場のプロジェクトにすぐに活用できる、超実用的なテンプレートの紹介です。]]></summary>
+        <author>
+            <name>米谷 昂(Python/FastAPIプロフェッショナル)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[範囲制約付き総和一定の連続値のランダムサンプリング]]></title>
+        <id>https://zenn.dev/wsuzume/articles/0c89c723df62cc</id>
+        <link href="https://zenn.dev/wsuzume/articles/0c89c723df62cc"/>
+        <updated>2022-08-20T04:39:54.000Z</updated>
+        <summary type="html"><![CDATA[問題
+x = (x _ 1, \ldots, x _ n) \in \mathbb{R} ^ nでx _ i \in [a _ i, b _ i]\,\,(i = 1, \ldots, n)という制約条件のもと、さらにS \in \mathbb{R}が与えられて
+
+\sum _ {i=1} ^ n x _ i = S
+
+を満たすランダムなベクトルxを生成せよ（条件を満たすならばどんな確率分布でもよいが、可能ならば空間に一様に分布してほしい）。
+
+
+ 考察
+\forall i, a _ i = 0, b _ i = 1で、かつS=1ならばこれはディリクレ分布からサンプリングすればよいの...]]></summary>
+        <author>
+            <name>Josh Nobus</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[pyppeteer をプロキシ環境下で使う]]></title>
         <id>https://zenn.dev/ettsu/articles/db2cb8a56f5e25</id>
