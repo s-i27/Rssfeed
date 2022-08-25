@@ -2,10 +2,167 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-08-24T02:25:37.220Z</updated>
+    <updated>2022-08-25T02:29:31.583Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[PythonでCLIツールを作ってみた]]></title>
+        <id>https://zenn.dev/u_tan/articles/dca8c4539b4e13</id>
+        <link href="https://zenn.dev/u_tan/articles/dca8c4539b4e13"/>
+        <updated>2022-08-24T13:09:06.000Z</updated>
+        <summary type="html"><![CDATA[PythonでCLIツールを作成しました。
+LT会でも発表しました。
+▼発表したLT会
+https://yumenosora.connpass.com/event/255075/
+▼スライド
+
+▼ソースコード
+https://github.com/OHMORIYUSUKE/grech
+
+ 概要
+このツールを実行させることで、YAMLで定義されたテストを実行させることができます。
+YAMLファイルにはshellが記載されており、shellの実行結果が正規表現にマッチするかどうかで正誤判定を行います。
+▼テストを実行した様子
+
+
+
+ 工夫した点
+
+ YAMLファイル
+# このチェック項目の名...]]></summary>
+        <author>
+            <name>うーたん</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CompVis/stable-diffusionの環境をApple Siliconで構築する]]></title>
+        <id>https://zenn.dev/laiso/articles/7af434269ffa1b</id>
+        <link href="https://zenn.dev/laiso/articles/7af434269ffa1b"/>
+        <updated>2022-08-24T12:06:12.000Z</updated>
+        <summary type="html"><![CDATA[Macで画像を生成したいだけだったらGoogle Colab で はじめる Stable Diffusion v1.4｜npaka｜noteのColabで実行していることをローカルに持ってきて、CUDAのかわりにCPU使ってやればできると思う。
+
+main.py
+from diffusers import StableDiffusionPipeline
+
+pipe = StableDiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4", use_auth_token=YOUR_TOKEN)
+pipe.to("cp...]]></summary>
+        <author>
+            <name>laiso</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WSL2とDocker Desktopでtensorflow-gpu 1.X系の環境構築をする]]></title>
+        <id>https://zenn.dev/uekou/articles/522e58e98014a2</id>
+        <link href="https://zenn.dev/uekou/articles/522e58e98014a2"/>
+        <updated>2022-08-24T10:00:52.000Z</updated>
+        <summary type="html"><![CDATA[普段はtensorflow 2.X系を使っているのですが、どうしてもtensorflow 1.X系を使わないといけない状況になり、Docker Desktop(WSL2バックエンド)で環境構築したのでその手順を記載します。
+
+ ①WindowsにGPUドライバをインストール
+まず、Windowsにドライバ(CUDA)のインストールを行います。
+既にCUDAをWindowsにインストール済みの方はこの手順を飛ばして頂いて構いません。
+https://www.nvidia.com/Download/index.aspx?lang=en-us
+ちなみに、NVIDIAの公式のドキュメントに記載が...]]></summary>
+        <author>
+            <name>uekou</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Poetryでsys.path.appendを回避する]]></title>
+        <id>https://zenn.dev/hpp/articles/6307447e5a037d</id>
+        <link href="https://zenn.dev/hpp/articles/6307447e5a037d"/>
+        <updated>2022-08-24T09:27:30.000Z</updated>
+        <summary type="html"><![CDATA[まとめ
+pyproject.tomlの[tool.poetry]のpackagesに以下のようにモジュールを追加しましょう。
+
+pyproject.toml
+packages = [
+    { include = "hoge" },
+    { include = "fuga" },
+]
+
+
+gist
+GitHub
+
+
+ 背景から詳しく
+Pythonのモジュールシステムは他の言語と結構な違いがあり、どのファイルからどのモジュールをimportできるのかで頭を悩ませることが多々あります。
+例えば、次のようなディレクトリ階層を持つプロジェクトについて考えてみましょう。
+.
+├── py...]]></summary>
+        <author>
+            <name>hpp</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【自然言語処理】Python初心者でも文章要約タスクが実装できた]]></title>
+        <id>https://zenn.dev/robes/articles/b97e3ac0c0b7da</id>
+        <link href="https://zenn.dev/robes/articles/b97e3ac0c0b7da"/>
+        <updated>2022-08-24T08:51:11.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+わたくし、Python歴1年の初心者ですが、このたび、苦労に苦労を重ねて、自然言語処理タスクの文章要約を実装できました。
+自然言語処理に興味のあるPython初心者のお役に立てればと、記事に残したいと思います。
+ 
+実装にあたっては、ネットの記事も手あたり次第調べましたが、最終的には、以下の本が大変参考になりました。
+ただし、バージョンの変更により、この本の通りに実装しても、2022年8月時点ではエラーになる箇所があります。出版社経由で著者の方にお聞きして一部コードを修正したほか、自分なりに工夫をして実装しました。
+https://www.borndigital.co.jp...]]></summary>
+        <author>
+            <name>osn_Lofi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Stable Diffusion を M2 Macのpipenvで動かす]]></title>
+        <id>https://zenn.dev/ryoma310/articles/63bc3d20a8746c</id>
+        <link href="https://zenn.dev/ryoma310/articles/63bc3d20a8746c"/>
+        <updated>2022-08-24T07:00:31.000Z</updated>
+        <summary type="html"><![CDATA[Stable Diffusionがオープンソースで公開されたので、色々できそうだと思って試してみました。
+とはいえ、手元にNvidiaのGPUなんて持っておらず、最近だとpytorchでApple Silicon搭載のGPUが使えるというのも耳にしていたのでそれでうまいことできないかと考えながらやっていきました。
+また、個人的にpipenvが好きなのでcondaの代わりにこれを使ってます。
+とりあえず無事コードが動くようになるまで。
+
+ 1. 環境
+
+M2のMacBook Air
+
+cpu: 8コア
+memory: 16GB
+GPU: 10コア
+
+
+pipenv
+
+
+ 2. 環境構築の前...]]></summary>
+        <author>
+            <name>ryoma310</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[例のコードじゃMacbook(M1 pro) + stable diffusion の環境構築ができなかったので、修正点メモ]]></title>
+        <id>https://zenn.dev/hellohazime/articles/543fcaf862008b</id>
+        <link href="https://zenn.dev/hellohazime/articles/543fcaf862008b"/>
+        <updated>2022-08-24T03:43:56.000Z</updated>
+        <summary type="html"><![CDATA[流行りのstable diffusionですが、M1macで動かす手順が
+https://github.com/CompVis/stable-diffusion/issues/25#issuecomment-1224040740
+これで8割くらいはあってるけど、ここに書いてある通りじゃ動かなかったので
+手順を忘れないようメモとして書いておきます。
+なお 22/8/24時点の話なんで、近いうちに治ってると思います。
+
+ 環境
+
+
+Macbook Pro(M1 pro)
+Memory 16GB
+OS X Moterey(12.3.1)
+
+
+ 必要資材のインストール
+git-lfs conda...]]></summary>
+        <author>
+            <name>hellohazime</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[DRF(django-rest-framework)のAPIViewでページネーションを使う]]></title>
         <id>https://zenn.dev/nelsia/articles/7918a01c407907</id>
@@ -3426,82 +3583,6 @@ def hoge(num):
 sudo apt install sqlitebrowser]]></summary>
         <author>
             <name>ringotabetai</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[制限ボルツマンマシンの基礎 ～概念編～]]></title>
-        <id>https://zenn.dev/kaityo256/articles/bolzmann_machine</id>
-        <link href="https://zenn.dev/kaityo256/articles/bolzmann_machine"/>
-        <updated>2022-07-26T08:29:18.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-機械学習で用いられるボルツマンマシン、特に制限ボルツマンマシン(Restricted Boltzmann Machine, RBM)は非常に面白い概念ですが、その中身の理解は他のニューラルネットワークに比べて難しく、「数式はわかったが、結局何をやっているのか」が分かりにくい印象です。以下では、なるべく平易な言葉で制限ボルツマンマシンが何をしているのか説明してみようと思います。
-
- 問題設定
-
-とある大学に通うDaveは、お昼はいつも学食の前のテラスでお弁当を食べます。そして、何の気なしに学食を眺めていると、同じクラスのAliceとBobが学食をよく利用していることに気が付き...]]></summary>
-        <author>
-            <name>ロボ太</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【交差エントロピー】ラベル表現とone-hot表現の違い]]></title>
-        <id>https://zenn.dev/kazuma_soon/articles/7e0e15fff71c48</id>
-        <link href="https://zenn.dev/kazuma_soon/articles/7e0e15fff71c48"/>
-        <updated>2022-07-26T01:32:11.000Z</updated>
-        <summary type="html"><![CDATA[結論
-# tのone-hot表現
-t = np.array([
-    [0, 0, 1, 0, 0, 0, 0, 0, 0, 0], 
-    [0, 0, 0, 0, 0, 0, 0, 0, 1, 0], 
-    [0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
-])
-
-# tのラベル表現
-t = np.argmax(t, axis=1)
-print(t)
-# -> [2, 8, 2]
-# -> t[0][2], t[1][8], t[2][2]：行番号が記載されない]]></summary>
-        <author>
-            <name>kazuma-soon</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【交差エントロピー】y[np.arange(batch_size), t] の意味]]></title>
-        <id>https://zenn.dev/kazuma_soon/articles/3d448a78cdb282</id>
-        <link href="https://zenn.dev/kazuma_soon/articles/3d448a78cdb282"/>
-        <updated>2022-07-26T01:17:43.000Z</updated>
-        <summary type="html"><![CDATA[交差エントロピーを学習しています。
-『ゼロから作るDeep Learning』の中で詰まったところがあるので、まとめておきます。
-
- 前提
-こちら の内容を理解するにあたっての話です。
-
- 疑問
-これの意味がわからん、、、
-# 出力データ
-y = np.array([
-    [0.1, 0.05, 0.6, 0.0, 0.05, 0.1, 0.0, 0.1, 0.0, 0.0], 
-    [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1], 
-    [0.1, 0.05, 0.1, 0.0, 0.05, 0.1, 0.0, 0.6,...]]></summary>
-        <author>
-            <name>kazuma-soon</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[surpriseにある全レコメンドモデルを試す]]></title>
-        <id>https://zenn.dev/yosashusaku/articles/surprise-recommend</id>
-        <link href="https://zenn.dev/yosashusaku/articles/surprise-recommend"/>
-        <updated>2022-07-25T15:00:00.000Z</updated>
-        <summary type="html"><![CDATA[surpriseとは
-surpriseとは明示的な評価データ(explicit feedback)を処理する推薦システムを構築/分析するためのPythonライブラリです。
-※暗黙の評価(implicit feedback)やコンテンツベースの推薦をサポートしていません。
-この記事では、surpriseライブラリを使って用意されている全てのレコメンドモデルを試します。この結果をもとに、どんなレコメンドモデルが優勢なのか、あるいは実運用しやすいのか理解が深まるのではないかと思います。
-
- 事前準備
-本記事の実装は、Google Colaboratory上で行います。
-まずはsurpris...]]></summary>
-        <author>
-            <name>よさ</name>
         </author>
     </entry>
 </feed>
