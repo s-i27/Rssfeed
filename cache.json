@@ -12,6 +12,21 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/mory22k/articles/e3a51a259e590e",
+          "author": "mory22k",
+          "description": "シンプルな順伝播型ニューラルネットワークをNumPyで実装し、簡単な関数を回帰してみます。ただし、この記事では\n\n隠れ層は全結合 + ReLUだけ\n誤差は誤差逆伝播法で計算する\n学習は最急降下法だけ\nミニバッチ学習は実装しない\n\nに絞って実装していきます。\nimport numpy as np\nfrom matplotlib import pyplot as plt\nfrom pprint import pprint\n\n 基本構成\n以下のようにニューラルネットワークを構成します。\n\n 入力層 / input layer\n元データXを扱いやすい形で入力します。この記事では、単に入力された値...",
+          "link": "https://zenn.dev/mory22k/articles/e3a51a259e590e",
+          "publishedOn": "2022-08-26T07:00:00.000Z",
+          "wordCount": 9240,
+          "title": "[NumPy] 簡単なニューラルネットワークをゼロから実装する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--0jDJi4by--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mory22k%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%255BNumPy%255D%2520%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25AA%25E3%2583%258B%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25A9%25E3%2583%25AB%25E3%2583%258D%25E3%2583%2583%25E3%2583%2588%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2582%2592%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3AxakYxZWZ3THdBRmRSeUliY3JTSHVOZy0zOUp0NF9CMkZQYWFkWFdVPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--0jDJi4by--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mory22k%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%255BNumPy%255D%2520%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25AA%25E3%2583%258B%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25A9%25E3%2583%25AB%25E3%2583%258D%25E3%2583%2583%25E3%2583%2588%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2582%2592%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3AxakYxZWZ3THdBRmRSeUliY3JTSHVOZy0zOUp0NF9CMkZQYWFkWFdVPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
           "id": "https://zenn.dev/kymok/articles/b976e67a874277",
           "author": "kymok",
           "description": "概要\nこの記事では，道路中心線と道路縁の線データを用い，道路中心線ごとに道幅を計算する方法について述べます．以下3つの図で，太らせた領域の端と道路縁がおおむね一致していることから，方法は単純ですがそれっぽいデータが得られていることがわかります．\n\n入力：シアン色の一点鎖線は道路中心線．黒い細線は道路縁．\n\n出力：道幅つきの道路中心線\n\n入力と出力を重ねたもの\n\n 使用するデータ\n本稿では以下のデータを用います．\n\n道路中心線：国土地理院ベクトルタイル提供実験のデータを用います．タイル番号は {z, x, y} = {16, 58211, 25803} です．\n道路縁：国土地理院の基盤...",
@@ -2275,96 +2290,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--n7UlBdMc--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ringotabetai%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E3%2580%2590Python%25E3%2580%2591MariaDB%25E9%2580%25A3%25E6%2590%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1FTVJEOXFFay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0OTg3ZGY4YzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/yosemat/articles/01c83132a0c705",
-          "author": "Yosemat",
-          "description": "AWS CDK in Typescript + Lambda in Python\n最近個人的にも世間的にもかなり来てるAWS CDKをTypescriptで実装します。CDKは型セーフで簡単にかけるスクリプト言語としてTypescriptを、Lambdaは柔軟にかけるPythonで採用します。\nLambdaはライブラリを複数のコードで使い回せるLambda Layerとあわせて実装します。\nこれによって\n\nLambda Layerにnumpyをインストール\nLambda Function AからLambda Layerのnumpyを呼び出し\nLambda Function BからLa...",
-          "link": "https://zenn.dev/yosemat/articles/01c83132a0c705",
-          "publishedOn": "2022-07-28T13:45:12.000Z",
-          "wordCount": 2176,
-          "title": "【AWS】AWS CDKで書いたLambdaをLambda LayerとあわせてAPI Gatewayにデプロイ【CDK】",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--YH_dXqcD--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Yosemat%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:%25E3%2580%2590AWS%25E3%2580%2591AWS%2520CDK%25E3%2581%25A7%25E6%259B%25B8%25E3%2581%2584%25E3%2581%259FLambda%25E3%2582%2592Lambda%2520Layer%25E3%2581%25A8%25E3%2581%2582%25E3%2582%258F%25E3%2581%259B%25E3%2581%25A6API%2520Gateway%25E3%2581%25AB%25E3%2583%2587%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25A4%25E3%2580%2590CDK%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dVaVhYRVhTU21HemprLTZCNjRhM0FpbmdGSjlmUzdGSElCck5RPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--YH_dXqcD--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Yosemat%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:%25E3%2580%2590AWS%25E3%2580%2591AWS%2520CDK%25E3%2581%25A7%25E6%259B%25B8%25E3%2581%2584%25E3%2581%259FLambda%25E3%2582%2592Lambda%2520Layer%25E3%2581%25A8%25E3%2581%2582%25E3%2582%258F%25E3%2581%259B%25E3%2581%25A6API%2520Gateway%25E3%2581%25AB%25E3%2583%2587%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25A4%25E3%2580%2590CDK%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dVaVhYRVhTU21HemprLTZCNjRhM0FpbmdGSjlmUzdGSElCck5RPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/ijiwarunahello/articles/e1d26d393a02ec",
-          "author": "ijiwarunahello",
-          "description": "はじめに\nとある日のイベントにて、会場のパネルに写っているQRコードをその場で読み取って記録していくデジタルスタンプラリーを体験してきました。\n推しのパネルはSNSに上げたい！けど、会場に来ないと見れないパネルなのでそのままアップするのには抵抗がある…\nなので手作業でQRコードを塗りつぶしていました。\n推しだけならまだしも全メンバー手作業で塗りつぶすの大変だな…と思い、QRコードを塗りつぶすプログラムを作成しました。\n\n\n ソースコード\nさくっとソースを見たい方はこちら→ ijiwarunahello/qrcode_hidden\nやってることはシンプルで、\n\n画像からQRコードを検出...",
-          "link": "https://zenn.dev/ijiwarunahello/articles/e1d26d393a02ec",
-          "publishedOn": "2022-07-28T12:55:36.000Z",
-          "wordCount": 827,
-          "title": "PythonでQRコードを塗りつぶす",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--8t-H3aQf--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ijiwarunahello%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Python%25E3%2581%25A7QR%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592%25E5%25A1%2597%25E3%2582%258A%25E3%2581%25A4%25E3%2581%25B6%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1ocWxUQUE1RS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NmMGVkNjVjZmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--8t-H3aQf--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ijiwarunahello%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Python%25E3%2581%25A7QR%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592%25E5%25A1%2597%25E3%2582%258A%25E3%2581%25A4%25E3%2581%25B6%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1ocWxUQUE1RS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NmMGVkNjVjZmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/masaruxstudy/articles/4b05694c2760d2",
-          "author": "Masaru",
-          "description": "Docker環境構築\n参考: 【M1 Pro/Max対応】M1 Mac環境構築ベストプラクティス\nこちらのDocker環境構築を参考にさせて頂きます。\n無事bashが立ち上がればOKです。\nあくまでもテスト的に行っただけなので、実際のDocker環境構築は次に書いていくものを行っていきます\n作成したディレクトリごと削除してしまっても構いません。\n\n DockerでPythonの環境構築\n参考: 【Python入門・応用】MacにPythonができる環境をつくろう｜02.Pythonの環境構築\nYOUTUBE版: 【2022最新版】M1MacにPythonの環境構築｜通常のインストール...",
-          "link": "https://zenn.dev/masaruxstudy/articles/4b05694c2760d2",
-          "publishedOn": "2022-07-28T08:16:22.000Z",
-          "wordCount": 188,
-          "title": "M1MacにDocker, Python, Django, MySQLの環境構築をする",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--wPpYeEWP--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Masaru%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:M1Mac%25E3%2581%25ABDocker%252C%2520Python%252C%2520Django%252C%2520MySQL%25E3%2581%25AE%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y29OUTVRTUNnQ1VTc2NjY2dmOTdqTWFzOXNtSzM4MXJGVmlwT0tsWWRNPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--wPpYeEWP--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Masaru%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:M1Mac%25E3%2581%25ABDocker%252C%2520Python%252C%2520Django%252C%2520MySQL%25E3%2581%25AE%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y29OUTVRTUNnQ1VTc2NjY2dmOTdqTWFzOXNtSzM4MXJGVmlwT0tsWWRNPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/hasegawasatoshi/articles/0d8b7cb9f73527",
-          "author": "Satoshi Hasegawa",
-          "description": "運用保守に携わっているシステムで、利用者の居住地の分析をしたい要件があったので、郵便番号から都道府県や住所を取得する方法について調べてみました。\n\n 郵便番号 → 住所への変換\nhttp://zipcloud.ibsnet.co.jp/doc/api のように、 Web API を提供してくれているサービスもありますが、今回は件数が多いため、ローカルで検索できるようにします。\n日本郵便のサイトから CSV 形式の郵便番号一覧を取得します。「都道府県一覧」から「全国一括」をダウンロードします。\nhttps://www.post.japanpost.jp/zipcode/dl/oogaki-...",
-          "link": "https://zenn.dev/hasegawasatoshi/articles/0d8b7cb9f73527",
-          "publishedOn": "2022-07-28T07:31:05.000Z",
-          "wordCount": 905,
-          "title": "郵便番号から住所を取得する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--ihHC6BD1--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Satoshi%2520Hasegawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E9%2583%25B5%25E4%25BE%25BF%25E7%2595%25AA%25E5%258F%25B7%25E3%2581%258B%25E3%2582%2589%25E4%25BD%258F%25E6%2589%2580%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dqazZTazNrOVFnWUh2elRDb3pSYWhsMEExd2hQYUhZN0RRc3F0cUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--ihHC6BD1--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Satoshi%2520Hasegawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E9%2583%25B5%25E4%25BE%25BF%25E7%2595%25AA%25E5%258F%25B7%25E3%2581%258B%25E3%2582%2589%25E4%25BD%258F%25E6%2589%2580%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dqazZTazNrOVFnWUh2elRDb3pSYWhsMEExd2hQYUhZN0RRc3F0cUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/kwashizzz/articles/python-logger-v2",
-          "author": "わっしー",
-          "description": "こんにちは、わっしーです。\n個人的にPythonでログを取る方法は、常に迷っています。簡単のため、余計なライブラリは使用せず、デフォルトで入っているloggingを使用したり、ファイルごとに分けたロガーを設定したいなどやりたいことはたくさんあります。この記事では、現在使用しているロギングの方法を紹介します。\n\n ファイル構成\n今回は、以下のような構成にし、src/app.py, src/module.pyにて、utils/logger.pyからログの設定を読み出して使用することを想定します。\n-src\n |- app.py\n |- module.py\n\n-utils\n |-logger....",
-          "link": "https://zenn.dev/kwashizzz/articles/python-logger-v2",
-          "publishedOn": "2022-07-28T06:35:07.000Z",
-          "wordCount": 1271,
-          "title": "Pythonのロギング:loggingを用いたロガー作成方法",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--Y_nW6V1I--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%258F%25E3%2581%25A3%25E3%2581%2597%25E3%2583%25BC%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AE%25E3%2583%25AD%25E3%2582%25AE%25E3%2583%25B3%25E3%2582%25B0%253Alogging%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E3%2583%25AD%25E3%2582%25AC%25E3%2583%25BC%25E4%25BD%259C%25E6%2588%2590%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dyWFhIRkgwQUNnZDB5R0w5SkRXMFE3MWZSdHZxdDZfNzB3UVNlPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Y_nW6V1I--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%258F%25E3%2581%25A3%25E3%2581%2597%25E3%2583%25BC%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AE%25E3%2583%25AD%25E3%2582%25AE%25E3%2583%25B3%25E3%2582%25B0%253Alogging%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E3%2583%25AD%25E3%2582%25AC%25E3%2583%25BC%25E4%25BD%259C%25E6%2588%2590%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dyWFhIRkgwQUNnZDB5R0w5SkRXMFE3MWZSdHZxdDZfNzB3UVNlPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/ringotabetai/articles/4d4e43e318fbc6",
-          "author": "ringotabetai",
-          "description": "Pythonの仮想環境 venvに入り\nPython-Fireをインストールします。\n$ pip install fire\n\nRSA のアルゴリズムを Python で実装し、実際に平文 (テキスト) を暗号化して、さらに暗号文を復号してみます。\n\nmy_rsa.py\nfrom math import gcd\n\ndef lcm(p, q):\n    return (p * q) // gcd(p, q)\n\n\ndef generate_keys(p, q):\n    N = p * q\n    L = lcm(p - 1, q - 1)\n\n    for i in range(2, L):...",
-          "link": "https://zenn.dev/ringotabetai/articles/4d4e43e318fbc6",
-          "publishedOn": "2022-07-27T15:41:53.000Z",
-          "wordCount": 1064,
-          "title": "【Python-Fire】サブコマンド作成し、暗号化したファイルの出力、復号化",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--HH487oHU--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ringotabetai%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590Python-Fire%25E3%2580%2591%25E3%2582%25B5%25E3%2583%2596%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2597%25E3%2580%2581%25E6%259A%2597%25E5%258F%25B7%25E5%258C%2596%25E3%2581%2597%25E3%2581%259F%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AE%25E5%2587%25BA%25E5%258A%259B%25E3%2580%2581%25E5%25BE%25A9%25E5%258F%25B7%25E5%258C%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1FTVJEOXFFay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0OTg3ZGY4YzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--HH487oHU--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ringotabetai%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590Python-Fire%25E3%2580%2591%25E3%2582%25B5%25E3%2583%2596%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2597%25E3%2580%2581%25E6%259A%2597%25E5%258F%25B7%25E5%258C%2596%25E3%2581%2597%25E3%2581%259F%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AE%25E5%2587%25BA%25E5%258A%259B%25E3%2580%2581%25E5%25BE%25A9%25E5%258F%25B7%25E5%258C%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1FTVJEOXFFay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0OTg3ZGY4YzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
         }
       ]
     }

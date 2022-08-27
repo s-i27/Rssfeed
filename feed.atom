@@ -2,10 +2,36 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-08-26T02:36:27.198Z</updated>
+    <updated>2022-08-27T02:29:25.850Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[NumPy] 簡単なニューラルネットワークをゼロから実装する]]></title>
+        <id>https://zenn.dev/mory22k/articles/e3a51a259e590e</id>
+        <link href="https://zenn.dev/mory22k/articles/e3a51a259e590e"/>
+        <updated>2022-08-26T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[シンプルな順伝播型ニューラルネットワークをNumPyで実装し、簡単な関数を回帰してみます。ただし、この記事では
+
+隠れ層は全結合 + ReLUだけ
+誤差は誤差逆伝播法で計算する
+学習は最急降下法だけ
+ミニバッチ学習は実装しない
+
+に絞って実装していきます。
+import numpy as np
+from matplotlib import pyplot as plt
+from pprint import pprint
+
+ 基本構成
+以下のようにニューラルネットワークを構成します。
+
+ 入力層 / input layer
+元データXを扱いやすい形で入力します。この記事では、単に入力された値...]]></summary>
+        <author>
+            <name>mory22k</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[道路中心線と道路縁から道幅をもった道路中心線データをつくる]]></title>
         <id>https://zenn.dev/kymok/articles/b976e67a874277</id>
@@ -3323,125 +3349,6 @@ https://mariadb.org/download/
 sudo apt-get install apt-transport-https curl
 sudo curl -o /etc/apt/trusted.gpg.d/mariadb_release_signing_key.asc 'https://mariadb.org/mariadb_release_signing_key.asc'
 sudo sh -c "echo 'deb https://mirrors.xtom.jp/mariadb//ubuntu focal main' >&...]]></summary>
-        <author>
-            <name>ringotabetai</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【AWS】AWS CDKで書いたLambdaをLambda LayerとあわせてAPI Gatewayにデプロイ【CDK】]]></title>
-        <id>https://zenn.dev/yosemat/articles/01c83132a0c705</id>
-        <link href="https://zenn.dev/yosemat/articles/01c83132a0c705"/>
-        <updated>2022-07-28T13:45:12.000Z</updated>
-        <summary type="html"><![CDATA[AWS CDK in Typescript + Lambda in Python
-最近個人的にも世間的にもかなり来てるAWS CDKをTypescriptで実装します。CDKは型セーフで簡単にかけるスクリプト言語としてTypescriptを、Lambdaは柔軟にかけるPythonで採用します。
-Lambdaはライブラリを複数のコードで使い回せるLambda Layerとあわせて実装します。
-これによって
-
-Lambda Layerにnumpyをインストール
-Lambda Function AからLambda Layerのnumpyを呼び出し
-Lambda Function BからLa...]]></summary>
-        <author>
-            <name>Yosemat</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonでQRコードを塗りつぶす]]></title>
-        <id>https://zenn.dev/ijiwarunahello/articles/e1d26d393a02ec</id>
-        <link href="https://zenn.dev/ijiwarunahello/articles/e1d26d393a02ec"/>
-        <updated>2022-07-28T12:55:36.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-とある日のイベントにて、会場のパネルに写っているQRコードをその場で読み取って記録していくデジタルスタンプラリーを体験してきました。
-推しのパネルはSNSに上げたい！けど、会場に来ないと見れないパネルなのでそのままアップするのには抵抗がある…
-なので手作業でQRコードを塗りつぶしていました。
-推しだけならまだしも全メンバー手作業で塗りつぶすの大変だな…と思い、QRコードを塗りつぶすプログラムを作成しました。
-
-
- ソースコード
-さくっとソースを見たい方はこちら→ ijiwarunahello/qrcode_hidden
-やってることはシンプルで、
-
-画像からQRコードを検出...]]></summary>
-        <author>
-            <name>ijiwarunahello</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[M1MacにDocker, Python, Django, MySQLの環境構築をする]]></title>
-        <id>https://zenn.dev/masaruxstudy/articles/4b05694c2760d2</id>
-        <link href="https://zenn.dev/masaruxstudy/articles/4b05694c2760d2"/>
-        <updated>2022-07-28T08:16:22.000Z</updated>
-        <summary type="html"><![CDATA[Docker環境構築
-参考: 【M1 Pro/Max対応】M1 Mac環境構築ベストプラクティス
-こちらのDocker環境構築を参考にさせて頂きます。
-無事bashが立ち上がればOKです。
-あくまでもテスト的に行っただけなので、実際のDocker環境構築は次に書いていくものを行っていきます
-作成したディレクトリごと削除してしまっても構いません。
-
- DockerでPythonの環境構築
-参考: 【Python入門・応用】MacにPythonができる環境をつくろう｜02.Pythonの環境構築
-YOUTUBE版: 【2022最新版】M1MacにPythonの環境構築｜通常のインストール...]]></summary>
-        <author>
-            <name>Masaru</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[郵便番号から住所を取得する]]></title>
-        <id>https://zenn.dev/hasegawasatoshi/articles/0d8b7cb9f73527</id>
-        <link href="https://zenn.dev/hasegawasatoshi/articles/0d8b7cb9f73527"/>
-        <updated>2022-07-28T07:31:05.000Z</updated>
-        <summary type="html"><![CDATA[運用保守に携わっているシステムで、利用者の居住地の分析をしたい要件があったので、郵便番号から都道府県や住所を取得する方法について調べてみました。
-
- 郵便番号 → 住所への変換
-http://zipcloud.ibsnet.co.jp/doc/api のように、 Web API を提供してくれているサービスもありますが、今回は件数が多いため、ローカルで検索できるようにします。
-日本郵便のサイトから CSV 形式の郵便番号一覧を取得します。「都道府県一覧」から「全国一括」をダウンロードします。
-https://www.post.japanpost.jp/zipcode/dl/oogaki-...]]></summary>
-        <author>
-            <name>Satoshi Hasegawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのロギング:loggingを用いたロガー作成方法]]></title>
-        <id>https://zenn.dev/kwashizzz/articles/python-logger-v2</id>
-        <link href="https://zenn.dev/kwashizzz/articles/python-logger-v2"/>
-        <updated>2022-07-28T06:35:07.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは、わっしーです。
-個人的にPythonでログを取る方法は、常に迷っています。簡単のため、余計なライブラリは使用せず、デフォルトで入っているloggingを使用したり、ファイルごとに分けたロガーを設定したいなどやりたいことはたくさんあります。この記事では、現在使用しているロギングの方法を紹介します。
-
- ファイル構成
-今回は、以下のような構成にし、src/app.py, src/module.pyにて、utils/logger.pyからログの設定を読み出して使用することを想定します。
--src
- |- app.py
- |- module.py
-
--utils
- |-logger....]]></summary>
-        <author>
-            <name>わっしー</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python-Fire】サブコマンド作成し、暗号化したファイルの出力、復号化]]></title>
-        <id>https://zenn.dev/ringotabetai/articles/4d4e43e318fbc6</id>
-        <link href="https://zenn.dev/ringotabetai/articles/4d4e43e318fbc6"/>
-        <updated>2022-07-27T15:41:53.000Z</updated>
-        <summary type="html"><![CDATA[Pythonの仮想環境 venvに入り
-Python-Fireをインストールします。
-$ pip install fire
-
-RSA のアルゴリズムを Python で実装し、実際に平文 (テキスト) を暗号化して、さらに暗号文を復号してみます。
-
-my_rsa.py
-from math import gcd
-
-def lcm(p, q):
-    return (p * q) // gcd(p, q)
-
-
-def generate_keys(p, q):
-    N = p * q
-    L = lcm(p - 1, q - 1)
-
-    for i in range(2, L):...]]></summary>
         <author>
             <name>ringotabetai</name>
         </author>
