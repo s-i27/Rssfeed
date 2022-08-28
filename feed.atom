@@ -2,10 +2,153 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-08-27T02:29:25.850Z</updated>
+    <updated>2022-08-28T02:36:51.870Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[ARで2つの壁を貫通する仕組みを開発しています]]></title>
+        <id>https://zenn.dev/zgw426/articles/5499803b021413</id>
+        <link href="https://zenn.dev/zgw426/articles/5499803b021413"/>
+        <updated>2022-08-28T00:06:56.000Z</updated>
+        <summary type="html"><![CDATA[ARで壁に穴をあける(デモ動画)
+何を言ってるかわからないと思いますでのデモ動作をご覧ください。
+https://youtu.be/G7gJNwqv2Cw
+デモ動画では2枚のARマーカーを縦に重ねてそれぞれの板に穴があいたようなギミックを施しています。
+
+ 環境
+
+Windows(カメラ付き)
+ラズパイ①(カメラ付き)
+ラズパイ②(カメラ付き)
+ARマーカー付きの板
+
+
+ Windows(カメラ付き)
+2つの壁を貫通するPythonスクリプトはWindows11(カメラ付き)環境で実行します。
+PS C:\> python --version
+Python 3.9.5
+
+PS ...]]></summary>
+        <author>
+            <name>suo-takefumi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Raspberry Pi OS + PyenvでPythonバージョンの切り替え]]></title>
+        <id>https://zenn.dev/technicarium/articles/00b32d390e82ec</id>
+        <link href="https://zenn.dev/technicarium/articles/00b32d390e82ec"/>
+        <updated>2022-08-27T12:49:23.000Z</updated>
+        <summary type="html"><![CDATA[OS標準でインストールされているPythonとは異なるバージョンをインストールして用途によって使い分けられるようにPyenvをインストールして切り替えるようにしました。
+
+ 環境
+$ cat /etc/os-release 
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPP...]]></summary>
+        <author>
+            <name>テク二カリウム</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Stable Diffusion をGoogle Colabで実行する際に便利なコード]]></title>
+        <id>https://zenn.dev/6uclz1/articles/d7736b06d24f1a</id>
+        <link href="https://zenn.dev/6uclz1/articles/d7736b06d24f1a"/>
+        <updated>2022-08-27T12:05:14.000Z</updated>
+        <summary type="html"><![CDATA[初めに
+Google Colaboratory で動かしていることを前提。
+自分は Colab Pro にしているので、VRAMあたりで無料版の人は実行できないものがあるかも
+その際は出力する画像数とかを減らせばいけると思います。
+出力する先をGoogle Driveにしたり、画像をいっぱい生成したりできるようにまとめてる記事が
+見当たらなかったので作成。
+
+ セットアップ
+ほぼここを参照
+https://note.com/npaka/n/ndd549d2ce556
+本家の見た方が本質の理解には繋がるかも
+https://colab.research.google.com/githu...]]></summary>
+        <author>
+            <name>6uclz1</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Stable Diffusion のプロンプトで意味の足し算・引き算をする]]></title>
+        <id>https://zenn.dev/td2sk/articles/eb772103a3a8ff</id>
+        <link href="https://zenn.dev/td2sk/articles/eb772103a3a8ff"/>
+        <updated>2022-08-27T10:04:42.000Z</updated>
+        <summary type="html"><![CDATA[TL;DR
+
+Stable Diffusion でプロンプトに重みをつけたり、意味の世界で足したり引いたりするよ
+
+例: ピラミッド - エジプト + 日本 = ?
+
+
+画風をシームレスに変換できるよ
+seed 変更だと大きく変わってしまうけど、小さい重みで補正かければ構図を維持したまま絵に微調整を加えられるよ
+
+
+ 意味の足し算・引き算
+Stable Diffusion では、内部的に以下の 2 ステップの処理を行うことでテキストを画像に変換している
+
+テキストをベクトル(数の組)に変換する
+ベクトルを画像に変換する
+
+ところで、以下の動画を見てほしい
+https://www.yo...]]></summary>
+        <author>
+            <name>td2sk</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最初の一回で終わって値を返すgenerator]]></title>
+        <id>https://zenn.dev/catminusminus/articles/3f203b274cae14</id>
+        <link href="https://zenn.dev/catminusminus/articles/3f203b274cae14"/>
+        <updated>2022-08-27T06:16:16.000Z</updated>
+        <summary type="html"><![CDATA[JSでは
+function * f() {
+  return 10;
+}
+
+const ret = f().next();
+
+console.log(ret.value);　 // output: 10
+console.log(ret.done);  // output: true
+というのができる。つまり、最初のnextで終わって（done == true）値を返す(10)。
+これをPythonでやるにはどうすればよいかというのを考えた結果、以下になった。
+def f():
+  return 10
+  yield
+
+try:
+  next(f())
+except StopIterati...]]></summary>
+        <author>
+            <name>Catminusminus</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【CVPR2022】画像異常検知 PatchCoreの実装解説]]></title>
+        <id>https://zenn.dev/kwashizzz/articles/ml-anomaly-det-patchcore</id>
+        <link href="https://zenn.dev/kwashizzz/articles/ml-anomaly-det-patchcore"/>
+        <updated>2022-08-27T04:21:37.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは、わっしーです。本記事では、CVPR2022で発表された画像異常検知手法であるPatchCoreの実装について解説します。
+まずは、実際に試した結果です。下図の上は正常画像、下は異常画像です。異常部分が赤くなっており、製品が欠損していることがわかります。
+
+PatchCoreの詳細については、外観検査向け異常検知手法に関する論文紹介の記事がわかりやすいです。
+PatchCoreの利点は、ImageNetなどのデータセットで学習された事前学習モデルの特徴マップを用いるため深層学習モデルの訓練の必要ないことです。
+手法としては、
+
+正常な画像群の特徴マップにおける局所...]]></summary>
+        <author>
+            <name>わっしー</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[NumPy] 簡単なニューラルネットワークをゼロから実装する]]></title>
         <id>https://zenn.dev/mory22k/articles/e3a51a259e590e</id>
@@ -3200,157 +3343,6 @@ popularityを重回帰分析で再計算
 こ...]]></summary>
         <author>
             <name>田中勇太</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Package] Pulp (Python) と JuMP (Julia) の記法比較アンチョコ (2022年7月版)]]></title>
-        <id>https://zenn.dev/takilog/articles/c0c52c608be465</id>
-        <link href="https://zenn.dev/takilog/articles/c0c52c608be465"/>
-        <updated>2022-07-29T13:47:20.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-タイトルの通りですが、Pythonのpulpでモデルを書くときと、JuliaのJuMPでモデルを書くときの両方があります。毎回pulpとJuMPのドキュメントを見に行くのが大変になってきたので、自分のために比較を書いておくことにしました。
-以下はこの記事を書くために使用したバージョンです。
-
-
-
-
-バージョン
-備考
-
-
-
-
-Python
-3.7.13
-Google colaboratory上
-
-
-pulp
-2.6.0
-Google colaboratory上
-
-
-Julia
-1.6.7
-macOS (Apple M1/Memory 8GBマシン上)
-
-
-JuMP
-1.1.1...]]></summary>
-        <author>
-            <name>たきろぐ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【さくらレンタルサーバー】Pythonのseleniumで定期実行する]]></title>
-        <id>https://zenn.dev/eito_blog/articles/bbc6b8510be3b2</id>
-        <link href="https://zenn.dev/eito_blog/articles/bbc6b8510be3b2"/>
-        <updated>2022-07-29T11:03:00.000Z</updated>
-        <summary type="html"><![CDATA[さくらレンタルサーバーでPythonのプログラムを定期実行することが可能です。
-本記事ではさくらレンタルサーバーにPythonプログラムをデプロイ、定期実行までの設定を行う方法を解説します。
-
- コマンドプロンプトでさくらサーバーにログイン
-下記コマンドを実行
-ssh [ユーザー名]@[IPアドレス]
-パスワードの入力が求められるのでパスワードを入力
-
- Python3.6.8をインストール
-
- Pythonのアーカイブファイルをダウンロード
-ダウンロード用のフォルダ作成
-mkdir -p ~/workspace/python3
-カレントディレクトリを変更
-cd ~/workspace...]]></summary>
-        <author>
-            <name>エイト</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[サクッとDocker+SQL+Pythonをローカルで実行する方法]]></title>
-        <id>https://zenn.dev/aokkey/articles/7bdc79e1f5d096</id>
-        <link href="https://zenn.dev/aokkey/articles/7bdc79e1f5d096"/>
-        <updated>2022-07-29T05:52:56.000Z</updated>
-        <summary type="html"><![CDATA[背景
-AWSのバックエンドをlambda + RDS構成で行おうとした時に、PythonスクリプトでSQLをいじる必要があるので、ローカルでスクリプトの検証をサクッとやりたいなと思った次第です。
-
- 前提条件
-Dockerのインストールが済んでいること。
-
- SQLの立ちあげ
-DockerでMySQLインスタンスを立ち上げてPythonからアクセスしましょう。
-作業ディレクトリをよしなに作り、Dockerfileとdocker-compose.ymlを以下のように書いてあげます。
-Dockerfile
-FROM mysql:5.7
-
-RUN apt-get update &&...]]></summary>
-        <author>
-            <name>Aokkey</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[個人的に最強のパーサジェネレータLarkについて]]></title>
-        <id>https://zenn.dev/tbsten/articles/d922514e548518</id>
-        <link href="https://zenn.dev/tbsten/articles/d922514e548518"/>
-        <updated>2022-07-28T22:30:00.000Z</updated>
-        <summary type="html"><![CDATA[パーサとは?
-文字列を一定のルールをもとに解析するプログラムのことです。
-例えば各OSのターミナルアプリは入力された文字列をシェルスクリプトというルールに基づいて解析・実行します。
-
-入力
-# 入力
-ls -l -a  
-⏬ ⏬ ⏬
-# 解析
-- コマンドは「ls」  # コマンドを解析
-- オプションは「-l」と「-a」  # オプションを解析
-⏬ ⏬ ⏬
-# 実行
-- lsはファイルの一覧を探すコマンドだからファイル一覧を表示
-- -lオプションがあるからリスト形式で表示する
-- -aオプションがあるから隠しファイルも表示する
-
-
- パーサジェネレータとは?
-パーサを作るためのプ...]]></summary>
-        <author>
-            <name>てべすてん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[機械学習で因果推論~Meta-LearnerとEconML~]]></title>
-        <id>https://zenn.dev/s1ok69oo/articles/1eeebe75842a50</id>
-        <link href="https://zenn.dev/s1ok69oo/articles/1eeebe75842a50"/>
-        <updated>2022-07-28T16:55:09.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Meta-LearnerとEconMLについて、Pythonによる実装を交えてまとめました。内容について誤り等ございましたら、コメントにてご指摘いただけますと幸いです。
-
- 機械学習を用いた因果推論
-機械学習を用いた因果推論手法は大きく分けて下記の2通りが存在します。
-
-Meta-Learner系
-Causal-Tree系
-
-この中でも今回は1つ目のMeta-Learnerについて紹介します。
-
- Meta-Leanrerとは
-Meta-Learnerとは、機械学習と因果推論の考え方を掛け合わせて条件付き平均処置効果(CATE: Conditional Average Tr...]]></summary>
-        <author>
-            <name>うとしん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】MariaDB連携]]></title>
-        <id>https://zenn.dev/ringotabetai/articles/19369244a2318c</id>
-        <link href="https://zenn.dev/ringotabetai/articles/19369244a2318c"/>
-        <updated>2022-07-28T14:53:42.000Z</updated>
-        <summary type="html"><![CDATA[mariaDBでの動作確認
-参照:
-https://mariadb.org/download/
-sudo apt-get install apt-transport-https curl
-sudo curl -o /etc/apt/trusted.gpg.d/mariadb_release_signing_key.asc 'https://mariadb.org/mariadb_release_signing_key.asc'
-sudo sh -c "echo 'deb https://mirrors.xtom.jp/mariadb//ubuntu focal main' >&...]]></summary>
-        <author>
-            <name>ringotabetai</name>
         </author>
     </entry>
 </feed>
