@@ -2,10 +2,91 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-09-01T02:26:45.409Z</updated>
+    <updated>2022-09-02T02:31:43.909Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[仮想通貨のOHLC時系列データ取得方法]]></title>
+        <id>https://zenn.dev/dmn/articles/d5351f987eed9c</id>
+        <link href="https://zenn.dev/dmn/articles/d5351f987eed9c"/>
+        <updated>2022-09-01T14:37:41.000Z</updated>
+        <summary type="html"><![CDATA[色々とローカルで作業していたものを備忘のために書き連ねていこうというモチベーションで投稿します
+半年後くらいに「あれどうやるんだっけ？」みたいになった際に振り返るための記事であり、読みにくいところあるかと思いますがご容赦ください
+
+ 利用サービス
+
+https://docs.cryptowat.ch/rest-api
+注意点
+
+rate limitがあるのでやたらめったらリクエスト飛ばすと怒られる
+
+https://docs.cryptowat.ch/rest-api/rate-limit
+
+
+
+
+
+
+ サンプルコード
+from datetime import datetime
+from...]]></summary>
+        <author>
+            <name>dmn</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[boto3をlocalstack環境でpytestする]]></title>
+        <id>https://zenn.dev/koya6565/articles/e72ce1b418308b</id>
+        <link href="https://zenn.dev/koya6565/articles/e72ce1b418308b"/>
+        <updated>2022-09-01T13:22:55.000Z</updated>
+        <summary type="html"><![CDATA[先月localstackがついにv1.0になりました。
+Announcing LocalStack 1.0 General Availability!
+上記ブログを読むとGAに伴う機能強化も色々あり、
+
+
+LocalStack Extensionsを使うとLocalStackの応答をフックして任意のコードを実行できる
+データの永続性を定義しやすくなった
+ロギング強化
+
+など、他にもLocalStack自体の開発サイクルを改善したことにも触れています。
+これから自分もLocalStackを使う機会は増えそうだな、と再認識したので今回はboto3をpytestする単純なものから。
+
+ 前提
+...]]></summary>
+        <author>
+            <name>T.S</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonでAWS開発環境を整える]]></title>
+        <id>https://zenn.dev/takaha4k/articles/c522c98df1c65b</id>
+        <link href="https://zenn.dev/takaha4k/articles/c522c98df1c65b"/>
+        <updated>2022-09-01T08:58:28.000Z</updated>
+        <summary type="html"><![CDATA[VSCodeの設定
+
+
+
+
+ pre-commitを導入する
+pre-commit公式
+インストール
+pip install pre-commit
+設定ファイル作成
+pre-commit sample-config > .pre-commit-config.yaml
+git反映
+pre-commit install
+設定を記述
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.3.0
+  hooks:
+  - id: check-added-large-files
+  - id: ch...]]></summary>
+        <author>
+            <name>takaha4k</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[gspread で Python から Google スプレッドシートを扱えるようにするまで]]></title>
         <id>https://zenn.dev/yamagishihrd/articles/2022-09_01-google-spreadsheet-with-python</id>
@@ -3369,163 +3450,6 @@ print(request.full_url) -> https://www.google.com/
 ...]]></summary>
         <author>
             <name>kazuma-soon</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Wav2Vec2による日本語音声認識を試してみる]]></title>
-        <id>https://zenn.dev/itsuki9180/articles/f0f5e409a9c808</id>
-        <link href="https://zenn.dev/itsuki9180/articles/f0f5e409a9c808"/>
-        <updated>2022-08-03T12:44:32.000Z</updated>
-        <summary type="html"><![CDATA[0. はじめに
-
- 0-1. 3行でこの記事をまとめると
-
-Transformerという言語モデルがDeep Learning界隈で猛威を奮っているよ
-音声認識にもTransformerが使われ始めているよ
-日本語×Transformerの音声認識の記事が少ないから書いてみたよ
-
-
- 0-2. 必要な前提知識や物
-
-大学初等相当の数学をベースとする深層学習の知識
-プログラミング言語Python及び深層学習フレームワークPytorchとその周辺に関する知識と開発環境
-深層学習モデルのTransformerに対する興味
-VRAMが6GB（？）以上内蔵されているNVIDIA製GPUを搭載し...]]></summary>
-        <author>
-            <name>ITSUKI</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[python スクレイピングとブラウザ操作]]></title>
-        <id>https://zenn.dev/akaneiy/articles/2caa2bb9f71c34</id>
-        <link href="https://zenn.dev/akaneiy/articles/2caa2bb9f71c34"/>
-        <updated>2022-08-03T07:14:16.000Z</updated>
-        <summary type="html"><![CDATA[外部のプラットフォームを経由したお問い合わせに自動返信するRPAを作って欲しいと要望がありました。
-RPAと言われましたが、Uipathで夜間ずっとそのサイトを監視するためにライセンスとPCを占領するのもなんかもったいないと思い、Pythonで実装することにしました。
-去年の年末くらいに作ったのでほとんど忘れていますが思い出しながらまとめたいと思います。
-主にスクレイピングについてですが、GmailAPIを使用しているのでコード内にGmail関係もだいぶ登場します。
-
- やりたいこと
-お問い合わせがあると担当者にメールが届くらしいですが、今回は直接会員向けサイトでお問い合わせの有無を確認...]]></summary>
-        <author>
-            <name>akane</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[「大相撲の決まり手って傾向あるの？」をpandasとmatplotlibで調べたよ。vol.2]]></title>
-        <id>https://zenn.dev/terrrry0404/articles/f47f6debaf44bd</id>
-        <link href="https://zenn.dev/terrrry0404/articles/f47f6debaf44bd"/>
-        <updated>2022-08-03T03:59:42.000Z</updated>
-        <summary type="html"><![CDATA[背景
-
-
-7月末からデータサイエンスの領域を学ぶことにして、先日「ちょっとやってみたこと（大相撲の決まり手分析）」をzennで書いたところ、コアな相撲ファンからフィードバックをもらいました。
-前回の記事：「大相撲の決まり手って傾向あるの？」をpandasとmatplotlibで調べたよ
-
-
-そのコアな相撲ファンからもらったフィードバックをもとに新たな仮説を立てたので今回分析した結果をメモとして残します。
-
-
-
- 前回の結論とコアな相撲ファンからのフィードバック
-
- 前回の結論
-詳しくは前回の記事を見てもらえればと思いますが、
-
-押し出しが決まり手として一番多くて、「押し出し/寄り切り...]]></summary>
-        <author>
-            <name>terrrry0404</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ReactとPythonでAPI販売サービスを作ろう]]></title>
-        <id>https://zenn.dev/sikkim/books/how_to_create_api_sales_service</id>
-        <link href="https://zenn.dev/sikkim/books/how_to_create_api_sales_service"/>
-        <updated>2022-08-03T01:15:17.000Z</updated>
-        <summary type="html"><![CDATA[API販売サービスの開発を通して実践的なReactアプリケーションの開発手順を学べる本です。
-
-フロントエンドにReact、バックエンドにPythonを用いて、認証やDB接続、クレジットカード決済機能を備えたWebアプリケーションを作り、デプロイします。
-
-本書の対象者
-・ReactやPythonで簡単なプログラムを作ったことがある方
-・AWSを使ったことのある方
-・ある程度自分で調べることができる方
-
-注意事項
-本書は技術書典13で頒布予定です。
-紙の本やPDF版がほしい方は技術書典13までお待ち下さい。
-
-以下の技術を使用しています。
-
-フロントエンド
-・React 18
-・TypeScript 4.6
-・Vite 2.9
-・Tailwind CSS 3.0
-・React Router 6.3
-
-バックエンド
-・Cognito（認証）
-・Chalice（APIフレームワーク）
-　（中身はPython、AWS Lambda、API Gateway、IAM）
-・DynamoDB（データベース）
-・Stripe（決済）]]></summary>
-        <author>
-            <name>TAKAHASHI Taro</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【FastAPI＋MySQL】alembicでマイグレーションファイルを自動生成して実行する]]></title>
-        <id>https://zenn.dev/shimi7o/articles/39a2b62fd7b1ac</id>
-        <link href="https://zenn.dev/shimi7o/articles/39a2b62fd7b1ac"/>
-        <updated>2022-08-02T16:11:58.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-alembicはSQLAlchemyの著者によって作成されたデータベースマイグレーションツールです。PythonのWebフレームワークであるFastAPIがDBのマイグレーションの仕組みを持っていないため、DBのマイグレーションをするためにalembicを使います。
-alembicはマイグレーションファイルを自分で書く方法のほかに、テーブル定義の変更を自動で読み取ってマイグレーションファイルを自動生成することができます。とても便利な機能なのですが、実際にやってみようとしたところ苦戦したので、備忘録として残しておきます。
-
- 環境
-
-MySQL 5.7
-Python 3.9....]]></summary>
-        <author>
-            <name>shimi7o</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】classmethodからプライベートのメソッドを呼び出したい]]></title>
-        <id>https://zenn.dev/someone7140/articles/fe3d2cf6c03447</id>
-        <link href="https://zenn.dev/someone7140/articles/fe3d2cf6c03447"/>
-        <updated>2022-08-02T15:46:09.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Pythonではインタンス化していないクラスから呼び出されるメソッドである、classmethodの機能があります。classmethodの詳細はPythonのクラスメソッド（@classmethod）とは？使いどころとメソッドとの違いを解説の記事を参照ください。
-今回はこのclassmethodからプライベートで設定したメソッドを呼び出す場合、どうすれば良いのかというのをメモ書きします。
-
- 対応
-classmethodでは自クラスを表すclsを引数に取ります。このclsから、プライベートメソッドを呼び出すことが出来ます。プライベートメソッドを呼び出すときは自身（cls）を引...]]></summary>
-        <author>
-            <name>なかつがわ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[機械学習で因果推論~T-Learner~]]></title>
-        <id>https://zenn.dev/s1ok69oo/articles/4a36fee0297234</id>
-        <link href="https://zenn.dev/s1ok69oo/articles/4a36fee0297234"/>
-        <updated>2022-08-02T14:53:05.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-T-Learnerについて、Pythonによる実装を交えてまとめました。内容について誤り等ございましたら、コメントにてご指摘いただけますと幸いです。
-
- 機械学習を用いた因果推論
-機械学習を用いた因果推論手法は大きく分けて下記の2通りが存在します。
-
-Meta-Learner系
-Causal-Tree系
-
-今回はMeta-Learner系の手法の1つであるT-Learnerについて紹介します。
-
- Meta-Leanrerとは
-Meta-Learnerとは、機械学習と因果推論の考え方を掛け合わせて条件付き平均処置効果(CATE: Conditional Average Tr...]]></summary>
-        <author>
-            <name>うとしん</name>
         </author>
     </entry>
 </feed>
