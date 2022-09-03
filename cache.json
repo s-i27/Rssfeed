@@ -12,6 +12,141 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/pluie/articles/20220902-pdb-analysis-by-biopython",
+          "author": "pluie",
+          "description": "はじめに\n本記事では、Bioinformaticsに用いられるPythonライブラリであるBiopythonを用いて、PDBファイルを解析する基本的な方法について記す。\n\n 対象とするPDBファイル\nPDB ID=2A0Lを対象として解析を試みる。ちなみに、このPDBを選択した理由は特にない。\n\n BiopythonによるPDBファイル解析\n\n Structure\nPDBファイルはgzip圧縮されているため、以下のように\nimport gzip\nfrom Bio.PDB import PDBParser\n    parser = PDBParser()\n    with gzip.o...",
+          "link": "https://zenn.dev/pluie/articles/20220902-pdb-analysis-by-biopython",
+          "publishedOn": "2022-09-02T16:18:32.000Z",
+          "wordCount": 1707,
+          "title": "BiopythonによるPDBファイル解析",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--5MjIqtpF--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:pluie%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Biopython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258BPDB%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E8%25A7%25A3%25E6%259E%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUl0YnZta0FhaDlYNi1TN0FjeGU0YjFmQzVqWWY4ME1MM3hnY0NBQzRRb0Q9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--5MjIqtpF--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:pluie%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Biopython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258BPDB%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E8%25A7%25A3%25E6%259E%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUl0YnZta0FhaDlYNi1TN0FjeGU0YjFmQzVqWWY4ME1MM3hnY0NBQzRRb0Q9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/catminusminus/articles/d2a72b522c9554",
+          "author": "Catminusminus",
+          "description": "成果物\nまずは成果物から紹介します。これが動きます。\nfrom typing import Protocol\n\nclass Animal:\n    def __init__(self):\n        self._sound = use(AnimalSound)\n\n    def make_sound(self):\n        self._sound.make_sound()\n\n\nclass AnimalSound(Protocol):\n    def make_sound(self):\n        ...\n\n\nclass CatSound:\n    def make_so...",
+          "link": "https://zenn.dev/catminusminus/articles/d2a72b522c9554",
+          "publishedOn": "2022-09-02T15:43:22.000Z",
+          "wordCount": 780,
+          "title": "Algebraic Effectsで実現するシンプルなDI",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--ArctxYTM--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Catminusminus%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Algebraic%2520Effects%25E3%2581%25A7%25E5%25AE%259F%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%25E3%2582%25B7%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AB%25E3%2581%25AADI%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1pRXQxOVdORy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzExNDI4ZDQ1MTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--ArctxYTM--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Catminusminus%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Algebraic%2520Effects%25E3%2581%25A7%25E5%25AE%259F%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%25E3%2582%25B7%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AB%25E3%2581%25AADI%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1pRXQxOVdORy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzExNDI4ZDQ1MTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mimoc/articles/a7ad0b020c55b3",
+          "author": "mimoc",
+          "description": "モールス信号メッセンジャーデバイス : mobus\n\n\n モールス信号を入力してメッセージを送り合う、'mobus'というデバイスを作成しました。\n\n 'mobus'で何ができるの？\n\n\nmobus同士で、インターネットを通じてメッセージのやりとりを行う事ができます。\n\n\nmobusからLINEへメッセージを送る事ができます。\n\n\nLINEにメッセージを送信する様子\n\n\n\n\nmobus同士でのメッセージのやり取りの様子\n\n\n\n\nInstagramでも動作する様子をUPしています！\n\n\nmobusの操作方法\n\n\n\n\n 作ろうと思ったきっかけ\n現代ではアマチュア無線を行なっている方以外だ...",
+          "link": "https://zenn.dev/mimoc/articles/a7ad0b020c55b3",
+          "publishedOn": "2022-09-02T15:40:22.000Z",
+          "wordCount": 236,
+          "title": "モールス信号メッセンジャーデバイス : mobus",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--D0Ks-23D--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mimoc%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2583%25A2%25E3%2583%25BC%25E3%2583%25AB%25E3%2582%25B9%25E4%25BF%25A1%25E5%258F%25B7%25E3%2583%25A1%25E3%2583%2583%25E3%2582%25BB%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%25BC%25E3%2583%2587%25E3%2583%2590%25E3%2582%25A4%25E3%2582%25B9%2520%253A%2520mobus%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1GRGM4dHB0NS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E2MGQ4MTM3MDkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--D0Ks-23D--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mimoc%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2583%25A2%25E3%2583%25BC%25E3%2583%25AB%25E3%2582%25B9%25E4%25BF%25A1%25E5%258F%25B7%25E3%2583%25A1%25E3%2583%2583%25E3%2582%25BB%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%25BC%25E3%2583%2587%25E3%2583%2590%25E3%2582%25A4%25E3%2582%25B9%2520%253A%2520mobus%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1GRGM4dHB0NS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E2MGQ4MTM3MDkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/uekou/articles/dbd52f80aec49a",
+          "author": "uekou",
+          "description": "やること\nPythonで非同期処理を行うためのモジュールであるasyncioに含まれるasyncio.Queueを利用して、簡単なキューのput/getプログラムを作成します。\n今回は非同期関数としてキューにデータを投入する役割をする関数をproducer、キューからデータを取得して処理する役割をする関数をconsumerとします。\n「とりあえずasyncio.Queueを使う」ことを目的として、producer/consumerの仕様はそれぞれ下記のようにします。\nproducer\n計15個のタスクを順番に投入する。\nconsumer\nその時点でキューに存在するタスクを取得し、fo...",
+          "link": "https://zenn.dev/uekou/articles/dbd52f80aec49a",
+          "publishedOn": "2022-09-02T15:14:58.000Z",
+          "wordCount": 1446,
+          "title": "Pythonのasyncio.Queueを使ってみる（非同期処理）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--iGKGhUS0--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:uekou%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AEasyncio.Queue%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25EF%25BC%2588%25E9%259D%259E%25E5%2590%258C%25E6%259C%259F%25E5%2587%25A6%25E7%2590%2586%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1FOEhZZElrdS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY0YjhlZGJkNTEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--iGKGhUS0--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:uekou%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AEasyncio.Queue%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25EF%25BC%2588%25E9%259D%259E%25E5%2590%258C%25E6%259C%259F%25E5%2587%25A6%25E7%2590%2586%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1FOEhZZElrdS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY0YjhlZGJkNTEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/robes/articles/95a284323eba9b",
+          "author": "osn_Lofi",
+          "description": "はじめに\nPython初心者のわたくしが偉そうなことは言えませんが、自然言語処理においては、形態素解析が命と思っています。\n \nmecab用の 優秀な辞書NEologd を使って、形態素解析のためのトークナイザー(関数) を作ったので、今後、自分が形態素解析をする際に使うためにも、記事として残しておきたいと思います。\n \n具体的には、テキストを与えたら、\n\n記号類を削除\n数字を0にする\nストップワードを除外する\nそのうえで、名詞・動詞・形容詞だけを抽出する\n\nというトークナイザー（関数） になります。\nNEologdは週に2回以上更新されるなど、新語・固有表現に強い辞書として定評があ...",
+          "link": "https://zenn.dev/robes/articles/95a284323eba9b",
+          "publishedOn": "2022-09-02T12:48:57.000Z",
+          "wordCount": 1211,
+          "title": "【自然言語処理】形態素解析のためのトークナイザー（関数）を作る",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--xIJmJ0QT--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25E3%2580%2591%25E5%25BD%25A2%25E6%2585%258B%25E7%25B4%25A0%25E8%25A7%25A3%25E6%259E%2590%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E3%2583%2588%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%258A%25E3%2582%25A4%25E3%2582%25B6%25E3%2583%25BC%25EF%25BC%2588%25E9%2596%25A2%25E6%2595%25B0%25EF%25BC%2589%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--xIJmJ0QT--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25E3%2580%2591%25E5%25BD%25A2%25E6%2585%258B%25E7%25B4%25A0%25E8%25A7%25A3%25E6%259E%2590%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E3%2583%2588%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%258A%25E3%2582%25A4%25E3%2582%25B6%25E3%2583%25BC%25EF%25BC%2588%25E9%2596%25A2%25E6%2595%25B0%25EF%25BC%2589%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/robes/articles/4ab5a7f992000d",
+          "author": "osn_Lofi",
+          "description": "0. はじめに\n上場企業が作成する有価証券報告書には、企業の経営成績がどうなっているのか？といった財務情報に加え、企業として何を課題と捉えどう取り組んでいくのか？といった非財務情報の記載があります。\n最近は、気候変動リスクや人権問題への対応など企業の社会的責任の遂行に注目が集まる中、機関投資家が企業を評価する目線も、短期的な視点である財務情報から、中長期的な視点である非財務情報にうつりつつあります。\n \nこれからの時代、財務情報（数値データ）ではなく、非財務情報（テキストデータ）の分析ニーズが高まることが予想されます。こうした点も踏まえ、まことに僭越ながら、Pythonを使って有価...",
+          "link": "https://zenn.dev/robes/articles/4ab5a7f992000d",
+          "publishedOn": "2022-09-02T10:15:52.000Z",
+          "wordCount": 1162,
+          "title": "【自然言語処理】【Python】有価証券報告書の非財務情報（テキストデータ）を取得する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--LKxUZi9r--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25E3%2580%2591%25E3%2580%2590Python%25E3%2580%2591%25E6%259C%2589%25E4%25BE%25A1%25E8%25A8%25BC%25E5%2588%25B8%25E5%25A0%25B1%25E5%2591%258A%25E6%259B%25B8%25E3%2581%25AE%25E9%259D%259E%25E8%25B2%25A1%25E5%258B%2599%25E6%2583%2585%25E5%25A0%25B1%25EF%25BC%2588%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25EF%25BC%2589%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--LKxUZi9r--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25E3%2580%2591%25E3%2580%2590Python%25E3%2580%2591%25E6%259C%2589%25E4%25BE%25A1%25E8%25A8%25BC%25E5%2588%25B8%25E5%25A0%25B1%25E5%2591%258A%25E6%259B%25B8%25E3%2581%25AE%25E9%259D%259E%25E8%25B2%25A1%25E5%258B%2599%25E6%2583%2585%25E5%25A0%25B1%25EF%25BC%2588%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25EF%25BC%2589%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/takaha4k/articles/5114cd4bd4d208",
+          "author": "takaha4k",
+          "description": "pyenvとは\nPCに異なるバージョンのPythonを容易にインストールできる。\n\n やること\npyenvをWSL2(Ubuntu22.4)に整える。\n\n pyenvをインストール\nWSLの場合\ncurl https://pyenv.run | bash\nMacの場合\nbrew update\nbrew upgrade\nbrew install pyenv\n環境変数を追記\n※Macの場合、標準がbashでなくてzshなので、vim ~/.zshrc\nvim ~/.bashrc\nexport PATH=\"$HOME/.pyenv/bin:$PATH\"\neval \"$(pyenv init...",
+          "link": "https://zenn.dev/takaha4k/articles/5114cd4bd4d208",
+          "publishedOn": "2022-09-02T08:33:30.000Z",
+          "wordCount": 272,
+          "title": "pyenvを導入してPython開発環境を整える",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--bXNPRZNB--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:takaha4k%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:pyenv%25E3%2582%2592%25E5%25B0%258E%25E5%2585%25A5%25E3%2581%2597%25E3%2581%25A6Python%25E9%2596%258B%25E7%2599%25BA%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E6%2595%25B4%25E3%2581%2588%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1RS25SRThtdy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MyMGM1MDU4ZTMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--bXNPRZNB--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:takaha4k%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:pyenv%25E3%2582%2592%25E5%25B0%258E%25E5%2585%25A5%25E3%2581%2597%25E3%2581%25A6Python%25E9%2596%258B%25E7%2599%25BA%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E6%2595%25B4%25E3%2581%2588%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1RS25SRThtdy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MyMGM1MDU4ZTMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mory22k/articles/e3222d02724251",
+          "author": "mory22k",
+          "description": "ガウス過程回帰モデルにおけるカーネルは、回帰関数の形状を決定する非常に重要な要素です。この記事では、Primitive Kernels と呼ばれるカーネルのファミリーを使って、それらを比較していきます。\nimport numpy as np\nfrom matplotlib import pyplot as plt\n\n ガウス過程回帰モデル\n次の記事で実装したモデルを改良して使用します。\nhttps://zenn.dev/mory22k/articles/1186466adfbe6f\nclass GaussianProcessRegressor:\n    def __init__(self...",
+          "link": "https://zenn.dev/mory22k/articles/e3222d02724251",
+          "publishedOn": "2022-09-02T07:06:58.000Z",
+          "wordCount": 4396,
+          "title": "[NumPy] ガウス過程回帰モデルのカーネルで遊ぶ",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--bf2Ixd1O--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mory22k%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%255BNumPy%255D%2520%25E3%2582%25AC%25E3%2582%25A6%25E3%2582%25B9%25E9%2581%258E%25E7%25A8%258B%25E5%259B%259E%25E5%25B8%25B0%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AE%25E3%2582%25AB%25E3%2583%25BC%25E3%2583%258D%25E3%2583%25AB%25E3%2581%25A7%25E9%2581%258A%25E3%2581%25B6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3AxakYxZWZ3THdBRmRSeUliY3JTSHVOZy0zOUp0NF9CMkZQYWFkWFdVPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--bf2Ixd1O--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mory22k%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%255BNumPy%255D%2520%25E3%2582%25AC%25E3%2582%25A6%25E3%2582%25B9%25E9%2581%258E%25E7%25A8%258B%25E5%259B%259E%25E5%25B8%25B0%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AE%25E3%2582%25AB%25E3%2583%25BC%25E3%2583%258D%25E3%2583%25AB%25E3%2581%25A7%25E9%2581%258A%25E3%2581%25B6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3AxakYxZWZ3THdBRmRSeUliY3JTSHVOZy0zOUp0NF9CMkZQYWFkWFdVPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/tmasuo/articles/8ea1a74cc3294d",
+          "author": "tmasuo",
+          "description": "🎈 Streamlit とは？\nPython だけ でアプリケーションを作成するためのフレームワークです。\nhttps://streamlit.io/\n従来データを扱う Web アプリを作成しようとすると、\n\nフロントの言語（HTML, JS およびライブラリ群）\nバックエンドの言語（例えば Java, データアクセスに SQL）\n\nのように様々な言語使う必要がありましたが、Python のみで実現できます。なのでアプリ作成の敷居がだいぶ低くなるのではないかと思います。\nまた Python だと Pandas をはじめとするデータをハンドリングするライブラリはもちろん、データサイエン...",
+          "link": "https://zenn.dev/tmasuo/articles/8ea1a74cc3294d",
+          "publishedOn": "2022-09-02T02:40:48.000Z",
+          "wordCount": 483,
+          "title": "#30DaysOfStreamlit をやってみた",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--pLxcaBI---/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:tmasuo%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%252330DaysOfStreamlit%2520%25E3%2582%2592%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1zNy1Ed3ZaUy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0ZjU1NzVhYjMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--pLxcaBI---/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:tmasuo%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%252330DaysOfStreamlit%2520%25E3%2582%2592%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1zNy1Ed3ZaUy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0ZjU1NzVhYjMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
           "id": "https://zenn.dev/dmn/articles/d5351f987eed9c",
           "author": "dmn",
           "description": "色々とローカルで作業していたものを備忘のために書き連ねていこうというモチベーションで投稿します\n半年後くらいに「あれどうやるんだっけ？」みたいになった際に振り返るための記事であり、読みにくいところあるかと思いますがご容赦ください\n\n 利用サービス\n\nhttps://docs.cryptowat.ch/rest-api\n注意点\n\nrate limitがあるのでやたらめったらリクエスト飛ばすと怒られる\n\nhttps://docs.cryptowat.ch/rest-api/rate-limit\n\n\n\n\n\n\n サンプルコード\nfrom datetime import datetime\nfrom...",
@@ -2305,36 +2440,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--eT9Fg2Si--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%2593%25E3%2581%2598%25E3%2581%25BE%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%2520%25E3%2581%25AE%2520DI%2520%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2586%25E3%2583%258A%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%25AE%25E7%25B4%25B9%25E4%25BB%258B%25E3%2581%25A8%25E6%25B4%25BB%25E7%2594%25A8%25E4%25BE%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1sblh3MWt5OC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M5OTQyYTk3OGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/najo/articles/117424abb5605b",
-          "author": "najo",
-          "description": "チームで仕事やプロジェクトを行っていると定例MTGを実施することがあると思います。\nその際に議事録のテンプレを作成したり、チームメンバーへ事前に議題の記載を展開するのをたまに忘れてしまうことってありませんか？\n私はよくあります。人間がうっかり忘れてしまうような定型的な業務は自動化がピッタリです。ということで、今回はPythonとNotion APIを使って議事録の作成を自動化してみました。\nソースコードはページ後半で公開しているので、 内容とか別に良いからソース見たい！！って方は後半部分をご参照ください。\n\n Notion APIの取得(事前準備)\n\nNotionのAPIを利用するために...",
-          "link": "https://zenn.dev/najo/articles/117424abb5605b",
-          "publishedOn": "2022-08-04T11:01:18.000Z",
-          "wordCount": 1892,
-          "title": "Notion APIとPythonを使ってページを作成する ～Slackへの通知を添えて～",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--jVe0jgn5--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:najo%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:Notion%2520API%25E3%2581%25A8Python%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2520%25EF%25BD%259ESlack%25E3%2581%25B8%25E3%2581%25AE%25E9%2580%259A%25E7%259F%25A5%25E3%2582%2592%25E6%25B7%25BB%25E3%2581%2588%25E3%2581%25A6%25EF%25BD%259E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1wa3V0TXprNS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzA2MGM2YjZiM2QuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--jVe0jgn5--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:najo%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:Notion%2520API%25E3%2581%25A8Python%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2520%25EF%25BD%259ESlack%25E3%2581%25B8%25E3%2581%25AE%25E9%2580%259A%25E7%259F%25A5%25E3%2582%2592%25E6%25B7%25BB%25E3%2581%2588%25E3%2581%25A6%25EF%25BD%259E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1wa3V0TXprNS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzA2MGM2YjZiM2QuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/kazuma_soon/articles/e8210b5826ed92",
-          "author": "kazuma-soon",
-          "description": "変数を書き換える的な〜？ という理解でしたが、コードを読んでいて深まりました。\n普通の関数と同じようにアクセスすると、エラーが発生する。これは知りませんでした。\nアクセスの仕方が大きく変わリます。\n\n 結論\n# @propatyのfull_urlでurlを取得\n# 実行を意味する「かっこ」が不要\nrequest = Request(url=\"https://www.google.com/\")\nprint(request.full_url) -> https://www.google.com/\n\n× print(request.full_url()) -> ERROR!!!\n\n...",
-          "link": "https://zenn.dev/kazuma_soon/articles/e8210b5826ed92",
-          "publishedOn": "2022-08-03T15:45:34.000Z",
-          "wordCount": 596,
-          "title": "【Python3】@propaty, setter, deleterはアクセスの仕方が異なる",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--yBDOjPhG--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kazuma-soon%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590Python3%25E3%2580%2591%2540propaty%252C%2520setter%252C%2520deleter%25E3%2581%25AF%25E3%2582%25A2%25E3%2582%25AF%25E3%2582%25BB%25E3%2582%25B9%25E3%2581%25AE%25E4%25BB%2595%25E6%2596%25B9%25E3%2581%258C%25E7%2595%25B0%25E3%2581%25AA%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1UVHVJOVJHeC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk0MTA4MTc3NjMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--yBDOjPhG--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kazuma-soon%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590Python3%25E3%2580%2591%2540propaty%252C%2520setter%252C%2520deleter%25E3%2581%25AF%25E3%2582%25A2%25E3%2582%25AF%25E3%2582%25BB%25E3%2582%25B9%25E3%2581%25AE%25E4%25BB%2595%25E6%2596%25B9%25E3%2581%258C%25E7%2595%25B0%25E3%2581%25AA%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1UVHVJOVJHeC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk0MTA4MTc3NjMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
         }
       ]
     }
