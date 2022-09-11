@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-09-10 datetime="2022-09-10T02:22:26.000Z">2022-09-10</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-09-10 datetime="2022-09-10T02:22:26.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-09-10 datetime="2022-09-10T15:06:54.000Z">2022-09-10</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-09-10 datetime="2022-09-10T15:06:54.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,216 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yoshida0312/articles/77c6011beb94b5"
+                        open
+                      >
+                        <summary class="article-expander__title">Intro2DL：活性化関数とその特徴 pytorchによる実装</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/77c6011beb94b5">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ngsnvKjj--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Intro2DL%25EF%25BC%259A%25E6%25B4%25BB%25E6%2580%25A7%25E5%258C%2596%25E9%2596%25A2%25E6%2595%25B0%25E3%2581%25A8%25E3%2581%259D%25E3%2581%25AE%25E7%2589%25B9%25E5%25BE%25B4%2520pytorch%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS04U0FUUkFHOS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>活性化関数
+活性化関数はNNに非線形性を付加するため、DLにおいて非常に重要な役割を担っています。
+ここでは、いくつかの活性化関数とその特徴を見ていきます。
+import os
+import json
+import math
+import japanize_matplotlib
+import numpy as np 
+import time
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set()
+
+from tqdm import tqdm
+
+import torch
+import torch.nn as nn...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;31
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kwi/articles/876a75c34984d4"
+                        open
+                      >
+                        <summary class="article-expander__title">urllib を拡張する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kwi/articles/876a75c34984d4">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--zcmfEkaa--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kwi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:urllib%2520%25E3%2582%2592%25E6%258B%25A1%25E5%25BC%25B5%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvay5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>例えば rdflib で HTTP 越しに SPARQL クエリしたいとき。一般的には公開 SPARQL エンドポイントでクエリする例がよく出ている。このように平文通信でアクセスできるなら問題ないけれども、認証がかかっていると工夫がいる。ドキュメントによると urllib を使っているから、よろしくやるように書かれている。
+あらかじめ用意されている auth パラメータで HTTP Basic 認証は対応できる。これ以上、たとえば、未認証の場合に別のサイトにリダイレクトで飛ばされて、そこで認証が終わってから戻されるといったフローの場合は下準備がいる。
+どのようにするかあまり例がなかったの...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/robes/articles/a3e1a6e80efd99"
+                        open
+                      >
+                        <summary class="article-expander__title">【自然言語処理】【Python】共起ネットワークの作り方を理解する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/robes/articles/a3e1a6e80efd99">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--OVBARYFs--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25E3%2580%2591%25E3%2580%2590Python%25E3%2580%2591%25E5%2585%25B1%25E8%25B5%25B7%25E3%2583%258D%25E3%2583%2583%25E3%2583%2588%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2581%25AE%25E4%25BD%259C%25E3%2582%258A%25E6%2596%25B9%25E3%2582%2592%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+自然言語処理をはじめたら、一度は作ってみたいのが共起ネットワークではないかと思います。
+私自身、共起ネットワークについては、書籍やネット記事を参考にしながら、これまで何度も作ってきました。
+しかしながら、文章→共起行列→共起ネットワークとなる一連の過程において、特に共起行列を作成するコードの理解が十分ではないと思い至り、今回、勉強もかねて、共起行列の作成過程を残すことにしました。
+共起ネットワークに興味を持たれている方の参考になればと思います。
+
+ 共起ネットワーク
+単語どおしのつながりを可視化してくれる手法で、文章の構造的な特徴を直感的に理解するのによく利用されます。
+文...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/johnkf/articles/bb89cdd60a175b"
+                        open
+                      >
+                        <summary class="article-expander__title">Waifu Diffusionをローカル環境で動かした手順</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/johnkf/articles/bb89cdd60a175b">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--bzCr7m65--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:John.K.Fuku%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Waifu%2520Diffusion%25E3%2582%2592%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%259F%25E6%2589%258B%25E9%25A0%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1jeDNZNnMwei0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZkOTUzZmY1ODcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Google Colabで実行するだけのほうが楽ではありますが
+ローカル環境のほうがvram多いGPU積んだのでせっかくなので使いたい人とか向けの記事。
+※Colabを使用したい方はこちらから&quot;Open in Colab&quot;でノートブックが開けますので
+ひたすらそれを実行すると良いです。
+https://huggingface.co/hakurei/waifu-diffusion
+ローカル環境
+-Ubuntu 20.04
+-RTX 3090
+1.Waifu-diffusionからリポジトリをローカル環境にクローンする。
+https://github.com/harubaru/waifu-d...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tomomaru87/articles/1ef214dee45991"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】Seleniumの環境構築までにやったこと</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tomomaru87/articles/1ef214dee45991">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--DgjL3OXB--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:tomomaru87%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590Python%25E3%2580%2591Selenium%25E3%2581%25AE%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%25BE%25E3%2581%25A7%25E3%2581%25AB%25E3%2582%2584%25E3%2581%25A3%25E3%2581%259F%25E3%2581%2593%25E3%2581%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pfTFZHNGZXdWVlN18wdVFhUE9CN1YtWnVnT3VIdHV5MzZMaVpJWldNPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>brew install pyenvを叩く。
+brew install python3を叩く
+python3 -m pip install selenium
+こっからは好きなライブラリをたくさんインストールできるお。
+jupyter notebook
+こいつを叩くと統合IDEが起動する。
+あとは楽しくコードを書こう。</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tfutada/articles/c3d172533c698c"
+                        open
+                      >
+                        <summary class="article-expander__title">言語別のファイルダウンロード方法 - Node.js Python Rust Go</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tfutada/articles/c3d172533c698c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--J38FT3JG--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:TF%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2588%25A5%25E3%2581%25AE%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2583%2580%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%2589%25E6%2596%25B9%25E6%25B3%2595%2520-%2520Node.js%2520Python%2520Rust%2520Go%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2k1QWNYclM5WEJFMTZpc0hiNnN6ODFrbWdRZ09ST3lySTJaZ2c0PXM4MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Node.js、Python、Go、Rustそれぞれでのファイル・ダウンロードの方法になります。
+
+ 前提条件
+お堅く書きますと、
+膨大な数の巨大なzipファイルを効率よく(低予算で)ダウンロードするクライアント・プログラム
+という要件になります。
+
+ 補足事項
+サーバは無限にスケールすると想定
+ペイロードの中身を開けて演算処理はしない。そのためI/Oバウンドになる。
+ファイルディスクリプタ(ソケット)は無限にある
+!
+もちろん、負荷をかけるときはご自身のサーバを使用してください。GitHubなどを使用してはダメです。
+
+
+ 基本設計指針
+
+ストリーミングを使用し、メモリの消費を少なくす...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/robes/articles/8ea32494d40f06"
+                        open
+                      >
+                        <summary class="article-expander__title">【画像生成】Python初心者でも話題のStableDiffusionを爆速で実装できた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/robes/articles/8ea32494d40f06">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--wKWsYtGH--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590%25E7%2594%25BB%25E5%2583%258F%25E7%2594%259F%25E6%2588%2590%25E3%2580%2591Python%25E5%2588%259D%25E5%25BF%2583%25E8%2580%2585%25E3%2581%25A7%25E3%2582%2582%25E8%25A9%25B1%25E9%25A1%258C%25E3%2581%25AEStableDiffusion%25E3%2582%2592%25E7%2588%2586%25E9%2580%259F%25E3%2581%25A7%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%25A7%25E3%2581%258D%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+話題の画像生成AIStableDiffusionを、GoogleColaboratoryを使って爆速で実装することができました。（正味30分程度で実装できました）
+ここでは、実装方法などについて、余計な説明なしに爆速でご紹介したいと思います。
+ 
+
+ StableDiffusionとは
+テキストから画像を生成してくれるオープンソースのAIです。
+いわゆるText to Imageというやつです。
+2022年8月に英Stability AIが、HuggingFaceで無償公開しました。
+
+
+ それでは実装方法を見ていきましょう
+
+ HuggingFaceでのアクセストークンの...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -5948,460 +6158,10 @@ https://atcoder.jp/contests/abc081/tasks/abc081_a
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-08-12 datetime="2022-08-12T14:37:51.000Z">2022-08-12</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-08-12 datetime="2022-08-12T14:37:51.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/harukaeru/articles/207812eb1fc7ef"
-                        open
-                      >
-                        <summary class="article-expander__title">PythonでRDBMSのNested-Loop Joinを実装して2つのCSVを外部結合して射影してみた</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/harukaeru/articles/207812eb1fc7ef">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--xGXCIFtB--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%258B%25E3%2581%2588%25E3%2582%258B%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:Python%25E3%2581%25A7RDBMS%25E3%2581%25AENested-Loop%2520Join%25E3%2582%2592%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2597%25E3%2581%25A62%25E3%2581%25A4%25E3%2581%25AECSV%25E3%2582%2592%25E5%25A4%2596%25E9%2583%25A8%25E7%25B5%2590%25E5%2590%2588%25E3%2581%2597%25E3%2581%25A6%25E5%25B0%2584%25E5%25BD%25B1%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pNbUd4NXlWM3BBZFlIaWpnYXhhTHJwbjBtOUlpTWFLWmE5MkxkcGc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-
- ベン図と結合(JOIN)
-RDBMSの結合は、よくベン図を用いて説明されますが、逆に混乱を招いておりたいへん難しいのではないかと思います（すくなくともぼくには難しかった）
-なぜならわれわれは、テーブル（表）という概念で考えるからです。
-ベン図はみたまんまテーブルではないので、テーブルから集合へどのように変化するのかイメージがつきにくいと思います。ベン図を見せられて、OUTERとかINNERとかLEFTとかRIGHTとか言われても、なんだかよくわかりません。とくにOUTERはいちばんわかりにくいと思います。
-そういうわけで、テーブルの結合を考えるにあたっては、それを実装し...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/derwind/articles/dwd-bloch-vector02"
-                        open
-                      >
-                        <summary class="article-expander__title">Bloch ベクトルを眺めてみる (2)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/derwind/articles/dwd-bloch-vector02">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--x8oI9652--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:derwind%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Bloch%2520%25E3%2583%2599%25E3%2582%25AF%25E3%2583%2588%25E3%2583%25AB%25E3%2582%2592%25E7%259C%25BA%25E3%2582%2581%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2520%25282%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1PM2l6cGFYRC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>目的
-前回は R_X ゲートの場合のみ計算したので、残りの R_Y, R_Z ゲートの場合を確認したい。と言っても、もう手計算はつらいので、sympy を活用する。
-
- 準備
-以下のように計算に必要なシンボル類を定義する。
-import sympy
-
-theta &#x3D; sympy.Symbol(&#x27;θ&#x27;, real&#x3D;True)
-phi &#x3D; sympy.Symbol(&#x27;φ&#x27;, real&#x3D;True)
-lam &#x3D; sympy.Symbol(&#x27;λ&#x27;, real&#x3D;True)
-
-I &#x3D; sympy.Matrix([
-    [1, 0],
-    [0, 1]
-])
-X &#x3D; sympy.Matrix...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/ytdrep/articles/27e8593fbed6f6"
-                        open
-                      >
-                        <summary class="article-expander__title">デプロイをzappaで1年間運用した所感</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ytdrep/articles/27e8593fbed6f6">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--sl1oIsoT--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ytdrep%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2583%2587%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25A4%25E3%2582%2592zappa%25E3%2581%25A71%25E5%25B9%25B4%25E9%2596%2593%25E9%2581%258B%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E6%2589%2580%25E6%2584%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1VbUJva3hVeC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdkNTBhMDY3MTQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>概要
-zappaは、wsgiアプリケーションのAWS Lambdaへのpython製CLIデプロイツールです。
-少ない記述でAPIGateway,Lambda等をデプロイでき、手軽にデプロイしたいときはAWS SAMやServerless Frameworkより便利だと感じます。
-実際に開発環境〜本番環境のデプロイをzappaで1年間ほど運用したのですが、その中で得られた所感をまとめようと思います。
-https://github.com/zappa/Zappa
-
- 環境
-
-zappa: v0.54.1
-APIGateway,Lambda,EventBridgeイベントルールのデプロイ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mtshiba/articles/a38c9fcd9646d4"
-                        open
-                      >
-                        <summary class="article-expander__title">Python互換の静的型付け言語「Erg」</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mtshiba/articles/a38c9fcd9646d4">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--fk-oUBcV--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mtshiba%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E4%25BA%2592%25E6%258F%259B%25E3%2581%25AE%25E9%259D%2599%25E7%259A%2584%25E5%259E%258B%25E4%25BB%2598%25E3%2581%2591%25E8%25A8%2580%25E8%25AA%259E%25E3%2580%258CErg%25E3%2580%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2g0WVFyaVliOXdBdEtlTUJXZjd1REJ5d2Q3UnJCYW5TSmlQYkRGPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>承前
-Ergは私が数年前から開発を始め、つい一昨日公開したばかりのプログラミング言語です。
-https://github.com/erg-lang/erg
-のはずですが、
-https://zenn.dev/qnighy/articles/bda50fe4dda4d6#wishlist
-早速、qnighyさんに捕捉していただきました。ありがとうございます。
-この記事ではそのErgがどのような言語なのかざっくりと解説していきたいと思います。なお、紹介した機能の一部は未実装です。実装途中の機能を含むコードには*を、完全に未実装の機能を含むコードには**をつけておきます。
-
- はじめに
-Py...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yutorse/articles/0f7eba0640c79c"
-                        open
-                      >
-                        <summary class="article-expander__title">Herokuへデプロイするのに、ポート番号まわりで失敗した話</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yutorse/articles/0f7eba0640c79c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--iuUvkbA6--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:yutorse%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Heroku%25E3%2581%25B8%25E3%2583%2587%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25A4%25E3%2581%2599%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25AB%25E3%2580%2581%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E7%2595%25AA%25E5%258F%25B7%25E3%2581%25BE%25E3%2582%258F%25E3%2582%258A%25E3%2581%25A7%25E5%25A4%25B1%25E6%2595%2597%25E3%2581%2597%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1IVDNaUk54ai0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U1YzVhZjg0NDQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>問題
-LINE Messaging API SDK for Python を利用して LINE CHAT BOT を開発し、Herokuへデプロイしたときに生じた問題。
-ボットサーバのエンドポイントとして設定したURLにPOSTリクエストを投げても反応がない。
-localhostでテストしたときは問題なく動いていたのに...
-
- ログ
-heroku logs --tailでログを見てみると、
-2022-08-12T04:44:19.942449+00:00 heroku[router]: at&#x3D;error code&#x3D;H10 desc&#x3D;&quot;App crashed&quot; method&#x3D;POST...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/derwind/articles/dwd-bloch-vector"
-                        open
-                      >
-                        <summary class="article-expander__title">Bloch ベクトルを眺めてみる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/derwind/articles/dwd-bloch-vector">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--F9HPx9xS--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:derwind%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Bloch%2520%25E3%2583%2599%25E3%2582%25AF%25E3%2583%2588%25E3%2583%25AB%25E3%2582%2592%25E7%259C%25BA%25E3%2582%2581%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1PM2l6cGFYRC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>目的
-Bloch 球の上に状態ベクトルをマッピングした Bloch ベクトルという概念がある。よく見かけるのは計算基底 \ket{0}, \ket{1} や X 基底 \ket{+}, \ket{-} をマッピングしたものだが、回転ゲートを適用した場合に、Bloch ベクトルとしてはどのような影響を受けるのかを見てみたい。
-回転ゲート自体は Bloch ベクトルではなく、対応する状態ベクトル \in \mathbb{C}^2\!/\!\!\sim\ \simeq \mathbb{C}P^1 に対する演算なので、結果はそれほど自明ではない。
-
- Bloch ベクトル
-
-\begin{a...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mory22k/articles/1186466adfbe6f"
-                        open
-                      >
-                        <summary class="article-expander__title">[NumPy] 簡単なガウス過程回帰モデルをゼロから実装する (ハイパーパラメータチューニングなしver.)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mory22k/articles/1186466adfbe6f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ILCDkf07--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mory22k%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%255BNumPy%255D%2520%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25AA%25E3%2582%25AC%25E3%2582%25A6%25E3%2582%25B9%25E9%2581%258E%25E7%25A8%258B%25E5%259B%259E%25E5%25B8%25B0%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2582%2592%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2599%25E3%2582%258B%2520%2528%25E3%2583%258F%25E3%2582%25A4%25E3%2583%2591%25E3%2583%25BC%25E3%2583%2591%25E3%2583%25A9%25E3%2583%25A1%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25AA%25E3%2581%2597ver.%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3AxakYxZWZ3THdBRmRSeUliY3JTSHVOZy0zOUp0NF9CMkZQYWFkWFdVPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>簡易的なガウス過程回帰モデルをnumpyで実装してみます。
-import numpy as np
-import matplotlib.pyplot as plt
-
- 元の関数
-
- 元の関数を設定
-元の関数として、適当な1変数関数を設定しておきます。
-
-f(x) &#x3D; 3\sin(x) + 4\cos(2x) + \frac{1}{9}\exp\!\left(\frac{1}{3}x\right)
-
-x_min &#x3D; 0
-x_max &#x3D; 10
-
-def func(x):
-    return 3 * np.sin(x) + 4 * np.cos(2 * x) + 1/9 * np.exp(1/...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;19
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/awtnb/articles/8c771d09046b9f"
-                        open
-                      >
-                        <summary class="article-expander__title">再帰呼び出しでネストした辞書（dict）を生成する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/awtnb/articles/8c771d09046b9f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--SEkCr7GB--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:AWtnb%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E5%2586%258D%25E5%25B8%25B0%25E5%2591%25BC%25E3%2581%25B3%25E5%2587%25BA%25E3%2581%2597%25E3%2581%25A7%25E3%2583%258D%25E3%2582%25B9%25E3%2583%2588%25E3%2581%2597%25E3%2581%259F%25E8%25BE%259E%25E6%259B%25B8%25EF%25BC%2588dict%25EF%25BC%2589%25E3%2582%2592%25E7%2594%259F%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mSU9BRWdJQi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E2MTdhZTAxZjQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>やりたいこと
-
-
-あいうえお と A という文字列から、 {&#x27;あ&#x27;: {&#x27;い&#x27;: {&#x27;う&#x27;: {&#x27;え&#x27;: {&#x27;お&#x27;: &#x27;A&#x27;}}}}} という辞書を作る
-
-整形するとこんな感じ：{
-    &#x27;あ&#x27;: {
-        &#x27;い&#x27;: {
-            &#x27;う&#x27;: {
-                &#x27;え&#x27;: {
-                    &#x27;お&#x27;: &#x27;A&#x27;
-                }
-            }
-        }
-    }
-}
-
-
-
-
-生成した辞書に対して、同様に あいういあ と B という文字列を渡すと、共通する部分を整理して {&#x27;あ&#x27;:...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/onimen/articles/cc677f7897c935"
-                        open
-                      >
-                        <summary class="article-expander__title">【第2回】Make STG with Pygame Zero</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/onimen/articles/cc677f7897c935">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--x7o3YClB--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Onimen%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E7%25AC%25AC2%25E5%259B%259E%25E3%2580%2591Make%2520STG%2520with%2520Pygame%2520Zero%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2g2YlM4YlZMX1Nrdl81X3Z6bHREYWRtTVhLZVRVcG05cG5oN01XaVE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>!
-この記事は中学生向けです。表現はあえて簡単にしています。
-
-
- What is a function - 関数とはなにか
-この章は難しめです。眠くなってきたら飛ばして次の章に行ってみましょう。
-数学における関数は、ある入力に対して出力を決める関係のことです。
-中学や高校では、y &#x3D; x^2のことを関数と言ったりしますが、プログラミングではちょっと違うので気を付けてください。
-プログラミングでの、関数もある入力に対して出力を決定します。入力するデータのことを引数 と言います。また、出力するデータのことを返り値または戻り値と言います。（返り血じゃないよ！！）。さらに、関数が値を出力するこ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/minato_seagull/articles/116ca1b58a6f73"
-                        open
-                      >
-                        <summary class="article-expander__title">とりあえず手順だけでも理解する Twitter ログイン認証</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/minato_seagull/articles/116ca1b58a6f73">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--y786KSCY--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Minato_seagull%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2581%25A8%25E3%2582%258A%25E3%2581%2582%25E3%2581%2588%25E3%2581%259A%25E6%2589%258B%25E9%25A0%2586%25E3%2581%25A0%25E3%2581%2591%25E3%2581%25A7%25E3%2582%2582%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2520Twitter%2520%25E3%2583%25AD%25E3%2582%25B0%25E3%2582%25A4%25E3%2583%25B3%25E8%25AA%258D%25E8%25A8%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS12ZXdsTENuTy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBkZTc4ZDc0NDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>コードベースでとりあえず手順だけでも Twitter の認証方式を理解したい
-本記事は Twitter アカウントによるログイン認証フローをどうにか自前のアプリケーションで実装するために調べた内容の記録です。主にこちら の記事とコードを参考にさせていただきました。
-手順だけでも、と書いているのは認証の仕組みそのものやセキュリティの担保などについては触れないからです。
-
- Twitter の認証方式について
-https://developer.twitter.com/ja/docs/authentication/overview
-Twitter の認証方式は様々で、開発者が自分のアカウ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/onimen/articles/7c934460c54367"
-                        open
-                      >
-                        <summary class="article-expander__title">【第1回】Make STG with Pygame Zero</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/onimen/articles/7c934460c54367">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--IQNwnlYT--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Onimen%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E7%25AC%25AC1%25E5%259B%259E%25E3%2580%2591Make%2520STG%2520with%2520Pygame%2520Zero%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2g2YlM4YlZMX1Nrdl81X3Z6bHREYWRtTVhLZVRVcG05cG5oN01XaVE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>!
-この記事は中学生向けです。表現はあえて簡単にしています。
-
-
- Let&#x27;s create the new file - 新しいファイルを作成する
-Muを起動したら、左上のほうにある「＋」マークの新規と書かれたアイコンをクリックしてください。すると、新しいファイルが作成されます。しかし、この時点ではファイルが保存されていません。新規ボタンのちょっと右側にある「保存」ボタンを押してファイルを保存しましょう。
-まず、ファイルの保存場所を決めます。どこに保存しても大丈夫なのですが、フォルダを作って関連するファイルをそのフォルダの中にまとめるのが良いでしょう。なので、まずフォルダを作成しましょ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-08-11 datetime="2022-08-11T22:36:25.000Z">2022-08-11</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-08-11 datetime="2022-08-11T22:36:25.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kotaproj/articles/pi_microbit_game"
-                        open
-                      >
-                        <summary class="article-expander__title">体感ゲームを自作しよう</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kotaproj/articles/pi_microbit_game">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--WSQv_73---/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kotaproj%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E4%25BD%2593%25E6%2584%259F%25E3%2582%25B2%25E3%2583%25BC%25E3%2583%25A0%25E3%2582%2592%25E8%2587%25AA%25E4%25BD%259C%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1TX1BkcXNfRi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYyNWExMWJmZDUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>💡やること
-micro:bit + ラズパイ + pyxel　を組み合わせて、体感ゲームを自作します。
-ゲームを自体は単純で、ジャンプして障害物をよけるものです。
-
- 🏁デモ
-https://twitter.com/tw_kotatu/status/1557665176648036352
-!
-説明のために、手で揺らしていますが、micro:bitをポケットにいれても大丈夫です
-
-
- つくるもの
-
-
-ゲームを開始する
-
-この時点でマイクロビットは加速度データをラズパイに定期送信
-
-
-障害物(サボテン)がプレイヤー(キャラクタ)に迫ってくる
-操作者(Actor)は、タイミングよくリアルな...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;26
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/koya6565/articles/7a10a1ee745ac0"
-                        open
-                      >
-                        <summary class="article-expander__title">CloudWatch Synthetic Canaryの検証を通してユーザビリティを学んだ</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/koya6565/articles/7a10a1ee745ac0">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--cWFpNVqh--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:T.S%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:CloudWatch%2520Synthetic%2520Canary%25E3%2581%25AE%25E6%25A4%259C%25E8%25A8%25BC%25E3%2582%2592%25E9%2580%259A%25E3%2581%2597%25E3%2581%25A6%25E3%2583%25A6%25E3%2583%25BC%25E3%2582%25B6%25E3%2583%2593%25E3%2583%25AA%25E3%2583%2586%25E3%2582%25A3%25E3%2582%2592%25E5%25AD%25A6%25E3%2582%2593%25E3%2581%25A0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS0wVW1FclVqOS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Y3YTdjZTk3ZjAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Amazon CloudWatchに統合されているSyntethic Canary、E2Eテストに相当するアプリケーション・モニタリングですが職場のシステム環境でも使い始めたら思った以上に有用だったので記事にまとめようと思い立ちました。
-＊システムに関わる情報は適宜ボカしてます
-＊今回のCanaryスクリプトはPythonランタイムです
-
- 導入編：ランタイム環境
-この時点で簡単さがないと有用さも感じられないので重要ですが、AWS Lambdaを使ったことがある人であれば違和感なく使い始めることができそうです。ざっと必要なものは次の通り。
-
-Canaryスクリプトのコード
-コード内容の実...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/3026433564">
-        <time id="build-timestamp" datetime="2022-09-10T02:38:12.570Z">2022-09-10T02:38:12.570Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/3030263160">
+        <time id="build-timestamp" datetime="2022-09-11T02:39:42.512Z">2022-09-11T02:39:42.512Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
