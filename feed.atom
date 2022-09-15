@@ -2,10 +2,183 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-09-14T02:36:29.047Z</updated>
+    <updated>2022-09-15T02:45:52.310Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[transformersのtutorialを読んでみた - part2]]></title>
+        <id>https://zenn.dev/python3654/articles/2e87e9bdb92a9a</id>
+        <link href="https://zenn.dev/python3654/articles/2e87e9bdb92a9a"/>
+        <updated>2022-09-15T01:51:34.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+最近transformersというライブラリを勉強していて、今はtutorialsを読んでいます！せっかくなので、tutorialsの内容を訳して記事にしようと思っています！今回は第二弾ということで、以下の記事を参考に書きました～ ぜひ最後まで読んでください！(google colabで実装しながら読んで頂けると良いと思います！)
+なお、以下の記事では言語、音声、画像の処理について説明していますが、本記事では言語の処理の説明のみとなります。(今後、音声、画像についても記事を書きたいと思っています。)
+https://huggingface.co/docs/transform...]]></summary>
+        <author>
+            <name>とりごん</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Google ColabでGCSを利用する]]></title>
+        <id>https://zenn.dev/dicechick373/articles/cc22c584721678</id>
+        <link href="https://zenn.dev/dicechick373/articles/cc22c584721678"/>
+        <updated>2022-09-15T00:48:19.000Z</updated>
+        <summary type="html"><![CDATA[目標
+Google ColabでGCSを利用する
+
+ やり方
+
+ GCP認証
+下記コードを実行して、GCPに接続
+from google.colab import auth
+auth.authenticate_user()
+
+ gcsfuseをインストール
+認証に成功したらgcsfuseをインストール
+!echo "deb http://packages.cloud.google.com/apt gcsfuse-`lsb_release -c -s` main" | sudo tee /etc/apt/sources.list.d/gcsfuse.list
+!curl https:/...]]></summary>
+        <author>
+            <name>dicechick373</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LighGBMでcustom objectを使う]]></title>
+        <id>https://zenn.dev/ymd/articles/b446e4b04814d3</id>
+        <link href="https://zenn.dev/ymd/articles/b446e4b04814d3"/>
+        <updated>2022-09-14T23:03:56.000Z</updated>
+        <summary type="html"><![CDATA[2022/9/15
+目的：論文で提案されている様々なlossの改善の恩恵をlighGBMでも受けれるようにする
+
+ 手順
+
+objective function (loss)を自作する
+trainのfobjに自作objective functionを渡す
+
+
+ objective functionを作る
+predsとlabels (lgb.Datasetの中に情報がある)を入力にして、gradとhessianを返せばいい。
+
+これはlightbmの最適化がニュートン法 (2次の勾配まで使う)を使っているため
+
+回帰問題のgrad(1次微分)とhessian(2次微分)は
+
+よって自作関数...]]></summary>
+        <author>
+            <name>ymd</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Gooble Colab】Stable Diffusionを動かしてみた]]></title>
+        <id>https://zenn.dev/kwashizzz/articles/ml-stable-diffusion-colab</id>
+        <link href="https://zenn.dev/kwashizzz/articles/ml-stable-diffusion-colab"/>
+        <updated>2022-09-14T17:05:45.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは、わっしーです。最近、画像生成のアプリやデモが流行っており、生成モデルに入力するプロンプトテキストが呪文と言われるようにまでなっています。私もStable Diffusionを試し、以下のようなピンク色のアニメキャラクターを生成できました。
+
+本記事では、Google Colab上でStable Diffusionを動かす方法を紹介します。
+※Google ColabのPro+(GPU:A100)を使用し、動作確認をしています。
+
+ 環境設定
+まずは、実行に必要なライブラリやStable Diffusionの重みをダウンロードします。
+# stable diffu...]]></summary>
+        <author>
+            <name>わっしー</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Raspberry PiでLチカ（完成）]]></title>
+        <id>https://zenn.dev/technicarium/articles/a8b5eb4b8c5b0e</id>
+        <link href="https://zenn.dev/technicarium/articles/a8b5eb4b8c5b0e"/>
+        <updated>2022-09-14T14:25:14.000Z</updated>
+        <summary type="html"><![CDATA[Raspberry Pi OSのSDカードへの書き込みに始まり、PyenvによるPythonバージョン管理、Pipenvによる仮想環境、開発環境としてVSCodeのインストール、ブレッドボード上でのLEDと抵抗の配置、GPIOとブレッドボードの接続用コード（オス・メス ジャンパーワイヤー）と一式揃ったのでやっとLチカにチャレンジしました。
+
+ 前提条件
+
+ OS
+>cat /etc/os-release 
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERS...]]></summary>
+        <author>
+            <name>テク二カリウム</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Diffusers】MacでStableDiffusionのImg2Imgのpython環境を整える]]></title>
+        <id>https://zenn.dev/michy/articles/064863f3703de6</id>
+        <link href="https://zenn.dev/michy/articles/064863f3703de6"/>
+        <updated>2022-09-14T13:00:14.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事ではDiffusersを使ったMacのStableDiffusionでimg2imgを実行するまでの手順を紹介します。
+
+ 対象読者
+・M1/M2シリーズのMacユーザ
+・stable-diffusionとその発展型のモデルを気軽に試せる環境がほしい人
+・stable-diffusion環境メンテと最新化に稼働を割く暇がない人
+
+ Diffusersとは？
+推論・学習に必要なツールが機械学習周りの機能一式が揃ったツールボックスです。
+モデルの切り替えや追加学習などのツールが1コマンドですべて入るので、AIイラストの環境がライトに構築可能です。
+
+ Diffusers...]]></summary>
+        <author>
+            <name>zaiwa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[estat-APIのレスポンスをGoogleBigQueryに格納する]]></title>
+        <id>https://zenn.dev/dicechick373/articles/58354a5f1f542f</id>
+        <link href="https://zenn.dev/dicechick373/articles/58354a5f1f542f"/>
+        <updated>2022-09-14T07:16:20.000Z</updated>
+        <summary type="html"><![CDATA[目標
+
+estat-APIから統計表のメタ情報を取得する
+estat-APIから統計表データを取得する
+estat-APIのレスポンスJSONを加工してpandas DataFrameに変換する
+DataFrameをGoogleBigQueryに保存する
+
+
+ 前提条件
+
+estat-APIの利用者登録済
+ESTAT_APPIDは環境変数で管理
+
+利用するライブラリは次のとおり
+import urllib.parse
+import urllib.request
+import json
+import pandas as pd
+
+ 統計表情報の取得
+社会・人口統計体系の「Ａ人口・世帯」の...]]></summary>
+        <author>
+            <name>dicechick373</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python: int/str 型変換における破壊的変更のお知らせ]]></title>
+        <id>https://zenn.dev/ykesamaru/articles/2175b317a5410e</id>
+        <link href="https://zenn.dev/ykesamaru/articles/2175b317a5410e"/>
+        <updated>2022-09-14T06:02:45.000Z</updated>
+        <summary type="html"><![CDATA[!
+一部加筆修正しました
+
+2022年9月14日17時18分
+
+
+
+ int/str型変換における破壊的変更のお知らせ
+こんにちは。東海顔認証のyKesamaruです。
+https://www.youtube.com/watch?app=desktop&v=eTucYT2LpNU
+今さっき上記YouTubeで知ったのですが、なかなかのニュースが飛び込んできました。
+2022年9月7日水曜日[1]、Pythonにおいて下位互換性を破壊するセキュリティーアップデートが緊急でリリースされました。 [2]
+すくなからずプロジェクトに変更を強いられるケースが発生するかもしれません。といって...]]></summary>
+        <author>
+            <name>yKesamaru</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[『最強の三目並べAIをゼロから作る』をやってみた]]></title>
         <id>https://zenn.dev/quiver/articles/93e91ba2f29fa9</id>
@@ -3739,130 +3912,6 @@ Oracleからダウンロードなのでアカウントが必要
 「All Operating Systems (Generic) (Architectur...]]></summary>
         <author>
             <name>O.Yazaki-213</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python3エンジニア認定基礎試験対策(Python チュートリアル 1章~14章)]]></title>
-        <id>https://zenn.dev/masaruxstudy/books/74bbdba78366c3</id>
-        <link href="https://zenn.dev/masaruxstudy/books/74bbdba78366c3"/>
-        <updated>2022-08-16T12:26:33.000Z</updated>
-        <summary type="html"><![CDATA[[オライリー Pythonチュートリアル 第4版](https://www.oreilly.co.jp/books/9784873119359/)
-
-データサイエンティストgepuroさんの
-[Python3エンジニア認定基礎試験 合格への勉強方法](https://www.youtube.com/channel/UCrBuptlVwBwToZSqwVhO-sw) の動画を参考に内容をまとめてました。]]></summary>
-        <author>
-            <name>Masaru</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonによるX-Learnerの実装]]></title>
-        <id>https://zenn.dev/s1ok69oo/articles/58580b8f4fbdf8</id>
-        <link href="https://zenn.dev/s1ok69oo/articles/58580b8f4fbdf8"/>
-        <updated>2022-08-16T09:05:58.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-X-Learnerについて、Pythonによる実装を交えてまとめました。内容について誤り等ございましたら、コメントにてご指摘いただけますと幸いです。
-
- 機械学習を用いた因果推論
-機械学習を用いた因果推論手法は大きく分けて下記の2通りが存在します。
-
-Meta-Learner系
-Causal-Tree系
-
-今回はMeta-Learner系の手法の1つであるX-Learnerについて紹介します。
-
- Meta-Leanrerとは
-Meta-Learnerとは、機械学習と因果推論の考え方を掛け合わせて条件付き平均処置効果(CATE: Conditional Average Tr...]]></summary>
-        <author>
-            <name>うとしん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[中学生にAtCoderでプログラミングを教える記録 7回目 〜 ABC081A - Placing Marbles を for文を使って解く]]></title>
-        <id>https://zenn.dev/aromarious/articles/enjoy-atcoder-07</id>
-        <link href="https://zenn.dev/aromarious/articles/enjoy-atcoder-07"/>
-        <updated>2022-08-16T08:33:25.000Z</updated>
-        <summary type="html"><![CDATA[この記事の内容
-ソフトウェアエンジニアが中学生の子にプログラミングを教えていく様子を記録する。この記事は7回目。一度提出した問題を、forを使って解いてみる。
-【前回の記事】
-
-配列（リスト）とfor文のお勉強回。for文はこんな風に書きます、というところまでやった。
-list = [0, 1, 2]
-for value in list:
-  print(value)
-
-結果
-0
-1
-2
-
-
- 今回の達成目標
-
-
-for文を使って (ABC081A - Placing Marblesをもう一度解く。
-
-
- Placing Marbles 問題概要
-ABC081A - Placing ...]]></summary>
-        <author>
-            <name>aromarious</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[中学生にAtCoderでプログラミングを教える記録 6回目 〜 Pythonのlist（配列）と for 文を教える]]></title>
-        <id>https://zenn.dev/aromarious/articles/enjoy-atcoder-06</id>
-        <link href="https://zenn.dev/aromarious/articles/enjoy-atcoder-06"/>
-        <updated>2022-08-16T08:28:03.000Z</updated>
-        <summary type="html"><![CDATA[この記事の内容
-ソフトウェアエンジニアが中学生の子にプログラミングを教えていく様子を記録する。この記事は6回目。一度提出した問題を、forを使って解いてみる。
-【前回の記事】
-
-過去問(ABC081A - Placing Marblesを解いた回。list, mapなどを使う解き方。
-
- 今回の達成目標
-
-
-Pythonの配列（list）を理解する
-配列をfor文で処理する
-
-B問題に進むにあたり、繰り返しによる全探索を知っておく必要がある。このあたりでfor文の使い方を教えたい。
-今まで、データ型や配列について明確に教えたわけではない。「こう書けばこう動く」もないまま文法を教えても...]]></summary>
-        <author>
-            <name>aromarious</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ガウス過程によって分類問題を解く]]></title>
-        <id>https://zenn.dev/thimblee/articles/ml_prml_gp-classification</id>
-        <link href="https://zenn.dev/thimblee/articles/ml_prml_gp-classification"/>
-        <updated>2022-08-16T08:27:19.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-PRML(Pattern Recognition and Machine Learning)でガウス過程回帰について学んだ内容をまとめて、実際のデータを使って学習しました。主に6章の内容です。予測分布の導出が個人的に複雑だと思ったので、Step0からStep7に分けて書きました。
-
- ガウス過程分類の予測分布を導出
-
- Step0: 問題設定
-N個の既知のデータの組((\mathbf{x}_1, t_1), ... (\mathbf{x}_N, t_N)), t_i \in \{0, 1\}があります。今、新しく\mathbf{x}_{N+1}を知った時、t_{N+1}を予...]]></summary>
-        <author>
-            <name>Thimblee</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Virtuoso RDFストアに対して、curlおよびpythonを用いてRDFファイルを登録・削除する方法]]></title>
-        <id>https://zenn.dev/nakamura196/articles/7d4ac7556e2b21</id>
-        <link href="https://zenn.dev/nakamura196/articles/7d4ac7556e2b21"/>
-        <updated>2022-08-16T08:00:43.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Virtuoso RDFストアに対して、curlおよびpythonを用いてRDFファイルを登録・削除する方法の備忘録です。
-以下を参考にしています。
-https://vos.openlinksw.com/owiki/wiki/VOS/VirtRDFInsert#HTTP PUT
-
- curl
-上記のページの通りです。まず、登録用のサンプルデータとして、myfoaf.rdfを作成します。
-<rdf:RDF xmlns:foaf="http://xmlns.com/foaf/0.1/">
-    <foaf:Person rdf:about="http://www...]]></summary>
-        <author>
-            <name>nakamura196</name>
         </author>
     </entry>
 </feed>
