@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-09-15 datetime="2022-09-15T01:51:34.000Z">2022-09-15</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-09-15 datetime="2022-09-15T01:51:34.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-09-15 datetime="2022-09-15T14:29:32.000Z">2022-09-15</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-09-15 datetime="2022-09-15T14:29:32.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,157 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yoshida0312/articles/c2d3f2af82eae8"
+                        open
+                      >
+                        <summary class="article-expander__title">Intro2DL：NNにおける重みの初期化方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/c2d3f2af82eae8">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--9r2LUx_0--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Intro2DL%25EF%25BC%259ANN%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2591%25E3%2582%258B%25E9%2587%258D%25E3%2581%25BF%25E3%2581%25AE%25E5%2588%259D%25E6%259C%259F%25E5%258C%2596%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS04U0FUUkFHOS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>初期化
+今回はNNを初期化する手法を確認します。
+NNが深くなるほど、ネットワークを通して安定的な勾配を伝播させることが重要になります。そうしないと、勾配が消滅したり爆発したりする可能性があるためです。そのため、今回は重みの初期化に関して見ていきます。
+import os
+import json
+import math
+import japanize_matplotlib
+import numpy as np 
+import time
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set()
+
+from tqdm...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;17
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kwashizzz/articles/ml-stable-diffusion-colab-fn"
+                        open
+                      >
+                        <summary class="article-expander__title">【Gooble Colab】Stable DiffusionをFine Tuningして、あくたんを生成してみた!</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kwashizzz/articles/ml-stable-diffusion-colab-fn">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s---ErfHUi4--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%258F%25E3%2581%25A3%25E3%2581%2597%25E3%2583%25BC%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E3%2580%2590Gooble%2520Colab%25E3%2580%2591Stable%2520Diffusion%25E3%2582%2592Fine%2520Tuning%25E3%2581%2597%25E3%2581%25A6%25E3%2580%2581%25E3%2581%2582%25E3%2581%258F%25E3%2581%259F%25E3%2582%2593%25E3%2582%2592%25E7%2594%259F%25E6%2588%2590%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2521%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dyWFhIRkgwQUNnZDB5R0w5SkRXMFE3MWZSdHZxdDZfNzB3UVNlPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+こんにちは、わっしーです。最近、画像生成のアプリやデモが流行って、めっちゃ試したくなりますよね。私も、実際に動かし、あくたんこと湊あくあさんの画像を用いてFineTuningしてみました。あくたんの、チャンネル登録よろしくお願いします。
+以下、生成した画像ですが、どうでしょうか！めっちゃすごくて感動です。特にお気に入りは、真ん中左の、ちょっと生意気なあくたんの画像です。
+
+画質がいいやつも置いときますね。
+
+実際には、ランダムシードを変更しつつ、何百枚も生成して、よかったものを選択しています。
+本記事では、自前で収集した画像群を用いてFineTuningする方法を紹介します...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/gansoishiyaki/articles/353d1e0daec2a9"
+                        open
+                      >
+                        <summary class="article-expander__title">BlenderでUnity用にアニメーションのみExportするスクリプト</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/gansoishiyaki/articles/353d1e0daec2a9">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--dqJ-4cl2--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25B5%25E3%2581%2587%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Blender%25E3%2581%25A7Unity%25E7%2594%25A8%25E3%2581%25AB%25E3%2582%25A2%25E3%2583%258B%25E3%2583%25A1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2581%25AE%25E3%2581%25BFExport%25E3%2581%2599%25E3%2582%258B%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2597%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3BTSjVzZ0x4TDNqbEFEcmdsY1NsSnY0bUc4UGgxRnRuelQ2Zz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>ターミナルからBlenderを実行することによって、ログも出力させる
+cd 保存したいディレクトリ
+/Applications/Blender.app/Contents/MacOS/Blender
+# bpyインポート
+import bpy
+
+FILE_NAME &#x3D; &quot;animation.fbx&quot;
+
+# FBXモデルをエクスポートする（メッシュオブジェクト指定）
+def export_animation():
+    &quot;&quot;&quot;
+    Export FBX file only animation for Unity.
+    &quot;&quot;&quot;
+
+    # FBXインポート
+    # bpy.op...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/t_zomu/articles/770eea7f4848ca"
+                        open
+                      >
+                        <summary class="article-expander__title">Pytest で requests の Retry・Timeout設定 のテストしたい</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/t_zomu/articles/770eea7f4848ca">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--jE-na0WY--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:takashno%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:Pytest%2520%25E3%2581%25A7%2520requests%2520%25E3%2581%25AE%2520Retry%25E3%2583%25BBTimeout%25E8%25A8%25AD%25E5%25AE%259A%2520%25E3%2581%25AE%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11dVJlaGRhZC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdlNWJiMmM3ODAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+HTTPクライアントとしてよく利用される requests ではリトライ・タイムアウトの設定が当然あります。通常のロジック開発においては、あまりそういうケースはないのでしょうが、たまにリトライやタイムアウトの設定をUnitTestでテストしたいと思うことがありました。
+requests 自体を requests_mock などでMock化することはよくあるかもしれませんが、それではテストが行えません。こんなことはHTTPClientを実装するとき以外発生しないのかもしれませんが、メモとして残します。
+
+ pytest-httpserver
+https://pytest-ht...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/jkoba/articles/c6b76098a7bd75"
+                        open
+                      >
+                        <summary class="article-expander__title">S3への通信を許可するネットワークACLを動的に更新する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/jkoba/articles/c6b76098a7bd75">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--S1-9Wo4i--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:jkoba%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:S3%25E3%2581%25B8%25E3%2581%25AE%25E9%2580%259A%25E4%25BF%25A1%25E3%2582%2592%25E8%25A8%25B1%25E5%258F%25AF%25E3%2581%2599%25E3%2582%258B%25E3%2583%258D%25E3%2583%2583%25E3%2583%2588%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AFACL%25E3%2582%2592%25E5%258B%2595%25E7%259A%2584%25E3%2581%25AB%25E6%259B%25B4%25E6%2596%25B0%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS04ZDlDcFhiMy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI5ZDY3ZjY5NjAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>どうしてもミニマムな通信に絞りたい時の技
+
+ 背景
+社内の古き良き審査ルールではネットワークACLに 0.0.0.0/0 のAllowがあると無条件に怒られる。
+セキュリティグループやその他諸々の手段で制御していても……
+クローズドなVPCのCodeBuildからS3にログを出力させる必要があるが、CodeBuildではS3のインターフェースVPCエンドポイントを指定する方法がない。
+ゲートウェイVPCエンドポイント経由でS3に接続させたいが、S3のIPアドレスのCIDRが時々変わる……
+
+ 実現すること
+
+社内ルールでギルティ扱いされるネットワークACLの 0.0.0.0/0 のA...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -6416,105 +6567,10 @@ pyppeteer.launch({&quot;args&quot;: [&quot;--proxy-server&#x3D;http(s)...</span>
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-08-17 datetime="2022-08-17T07:51:17.000Z">2022-08-17</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-08-17 datetime="2022-08-17T07:51:17.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/utahka/articles/ed881a568246f4"
-                        open
-                      >
-                        <summary class="article-expander__title">WSL2 上の PyTorch に GPU を認識させて深層学習環境をつくる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/utahka/articles/ed881a568246f4">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Bp2WhJS---/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:utahka%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:WSL2%2520%25E4%25B8%258A%25E3%2581%25AE%2520PyTorch%2520%25E3%2581%25AB%2520GPU%2520%25E3%2582%2592%25E8%25AA%258D%25E8%25AD%2598%25E3%2581%2595%25E3%2581%259B%25E3%2581%25A6%25E6%25B7%25B1%25E5%25B1%25A4%25E5%25AD%25A6%25E7%25BF%2592%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E3%2581%25A4%25E3%2581%258F%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y28yNHdQY190S0JrZ0JTX2pJLVNWQlZmNm0xWjlNZzgyYzFaWGRWem9rPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>本記事では、WSL2 上の PyTorch から GPU を使用できる深層学習用の環境を構築していきます。環境は下記の通りです。
-
-OS : Windows 11 Home (21H2)
-CPU : AMD Ryzen 7 3700X 8 コア
-RAM : 16 GB
-GPU : NVIDIA GeForce RTX 2080 Ti
-
-
- 作業フロー
-GPU を利用して PyTorch で記述したモデルの学習をするまでの道のりはこんな感じ。
-
-Windows に NVIDIA ドライバーをインストール
-WSL (Ubuntu) に CUDA Toolkit をインストール
-WSL (Ub...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kn64872/articles/85fb88dd8b8372"
-                        open
-                      >
-                        <summary class="article-expander__title">AlmaLinux9でMySQL connector for unixODBCをビルドする</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kn64872/articles/85fb88dd8b8372">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--penFpMD4--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:O.Yazaki-213%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:AlmaLinux9%25E3%2581%25A7MySQL%2520connector%2520for%2520unixODBC%25E3%2582%2592%25E3%2583%2593%25E3%2583%25AB%25E3%2583%2589%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1iMGpMa0ZGOS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E1ODJlZThhMmQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-AlmaLinux9でunixODBCを利用する必要が発生しました。
-しかしrpmではel8までしかなかったのでソースからビルドすることにしました。
-その際の手順となります。
-
- ソースのダウンロード
-
-mysql-connector-odbc-8.0.30-src.tar.gz
-以下のURLから取得
-
-https://dev.mysql.com/downloads/connector/odbc/
-
-Oracleからダウンロードなのでアカウントが必要
-「Source Code」を選択
-「All Operating Systems (Generic) (Architectur...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/3057445667">
-        <time id="build-timestamp" datetime="2022-09-15T02:45:52.271Z">2022-09-15T02:45:52.271Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/3065070494">
+        <time id="build-timestamp" datetime="2022-09-16T02:45:25.951Z">2022-09-16T02:45:25.951Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

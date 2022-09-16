@@ -2,10 +2,111 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-09-15T02:45:52.310Z</updated>
+    <updated>2022-09-16T02:45:25.978Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Intro2DL：NNにおける重みの初期化方法]]></title>
+        <id>https://zenn.dev/yoshida0312/articles/c2d3f2af82eae8</id>
+        <link href="https://zenn.dev/yoshida0312/articles/c2d3f2af82eae8"/>
+        <updated>2022-09-15T14:29:32.000Z</updated>
+        <summary type="html"><![CDATA[初期化
+今回はNNを初期化する手法を確認します。
+NNが深くなるほど、ネットワークを通して安定的な勾配を伝播させることが重要になります。そうしないと、勾配が消滅したり爆発したりする可能性があるためです。そのため、今回は重みの初期化に関して見ていきます。
+import os
+import json
+import math
+import japanize_matplotlib
+import numpy as np 
+import time
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set()
+
+from tqdm...]]></summary>
+        <author>
+            <name>よしだ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Gooble Colab】Stable DiffusionをFine Tuningして、あくたんを生成してみた!]]></title>
+        <id>https://zenn.dev/kwashizzz/articles/ml-stable-diffusion-colab-fn</id>
+        <link href="https://zenn.dev/kwashizzz/articles/ml-stable-diffusion-colab-fn"/>
+        <updated>2022-09-15T14:00:55.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは、わっしーです。最近、画像生成のアプリやデモが流行って、めっちゃ試したくなりますよね。私も、実際に動かし、あくたんこと湊あくあさんの画像を用いてFineTuningしてみました。あくたんの、チャンネル登録よろしくお願いします。
+以下、生成した画像ですが、どうでしょうか！めっちゃすごくて感動です。特にお気に入りは、真ん中左の、ちょっと生意気なあくたんの画像です。
+
+画質がいいやつも置いときますね。
+
+実際には、ランダムシードを変更しつつ、何百枚も生成して、よかったものを選択しています。
+本記事では、自前で収集した画像群を用いてFineTuningする方法を紹介します...]]></summary>
+        <author>
+            <name>わっしー</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[BlenderでUnity用にアニメーションのみExportするスクリプト]]></title>
+        <id>https://zenn.dev/gansoishiyaki/articles/353d1e0daec2a9</id>
+        <link href="https://zenn.dev/gansoishiyaki/articles/353d1e0daec2a9"/>
+        <updated>2022-09-15T13:41:52.000Z</updated>
+        <summary type="html"><![CDATA[ターミナルからBlenderを実行することによって、ログも出力させる
+cd 保存したいディレクトリ
+/Applications/Blender.app/Contents/MacOS/Blender
+# bpyインポート
+import bpy
+
+FILE_NAME = "animation.fbx"
+
+# FBXモデルをエクスポートする（メッシュオブジェクト指定）
+def export_animation():
+    """
+    Export FBX file only animation for Unity.
+    """
+
+    # FBXインポート
+    # bpy.op...]]></summary>
+        <author>
+            <name>ふぇ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pytest で requests の Retry・Timeout設定 のテストしたい]]></title>
+        <id>https://zenn.dev/t_zomu/articles/770eea7f4848ca</id>
+        <link href="https://zenn.dev/t_zomu/articles/770eea7f4848ca"/>
+        <updated>2022-09-15T12:21:31.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+HTTPクライアントとしてよく利用される requests ではリトライ・タイムアウトの設定が当然あります。通常のロジック開発においては、あまりそういうケースはないのでしょうが、たまにリトライやタイムアウトの設定をUnitTestでテストしたいと思うことがありました。
+requests 自体を requests_mock などでMock化することはよくあるかもしれませんが、それではテストが行えません。こんなことはHTTPClientを実装するとき以外発生しないのかもしれませんが、メモとして残します。
+
+ pytest-httpserver
+https://pytest-ht...]]></summary>
+        <author>
+            <name>takashno</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[S3への通信を許可するネットワークACLを動的に更新する]]></title>
+        <id>https://zenn.dev/jkoba/articles/c6b76098a7bd75</id>
+        <link href="https://zenn.dev/jkoba/articles/c6b76098a7bd75"/>
+        <updated>2022-09-15T09:08:34.000Z</updated>
+        <summary type="html"><![CDATA[どうしてもミニマムな通信に絞りたい時の技
+
+ 背景
+社内の古き良き審査ルールではネットワークACLに 0.0.0.0/0 のAllowがあると無条件に怒られる。
+セキュリティグループやその他諸々の手段で制御していても……
+クローズドなVPCのCodeBuildからS3にログを出力させる必要があるが、CodeBuildではS3のインターフェースVPCエンドポイントを指定する方法がない。
+ゲートウェイVPCエンドポイント経由でS3に接続させたいが、S3のIPアドレスのCIDRが時々変わる……
+
+ 実現すること
+
+社内ルールでギルティ扱いされるネットワークACLの 0.0.0.0/0 のA...]]></summary>
+        <author>
+            <name>jkoba</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[transformersのtutorialを読んでみた - part2]]></title>
         <id>https://zenn.dev/python3654/articles/2e87e9bdb92a9a</id>
@@ -3865,53 +3966,6 @@ pyppeteer.launch({"args": ["--proxy-server=http(s)...]]></summary>
 本手順書のPart Ⅰでは、「AI環境の設定手順書 ...]]></summary>
         <author>
             <name>群馬産業技術センター デジタルソリューションラボ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[WSL2 上の PyTorch に GPU を認識させて深層学習環境をつくる]]></title>
-        <id>https://zenn.dev/utahka/articles/ed881a568246f4</id>
-        <link href="https://zenn.dev/utahka/articles/ed881a568246f4"/>
-        <updated>2022-08-17T07:51:17.000Z</updated>
-        <summary type="html"><![CDATA[本記事では、WSL2 上の PyTorch から GPU を使用できる深層学習用の環境を構築していきます。環境は下記の通りです。
-
-OS : Windows 11 Home (21H2)
-CPU : AMD Ryzen 7 3700X 8 コア
-RAM : 16 GB
-GPU : NVIDIA GeForce RTX 2080 Ti
-
-
- 作業フロー
-GPU を利用して PyTorch で記述したモデルの学習をするまでの道のりはこんな感じ。
-
-Windows に NVIDIA ドライバーをインストール
-WSL (Ubuntu) に CUDA Toolkit をインストール
-WSL (Ub...]]></summary>
-        <author>
-            <name>utahka</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AlmaLinux9でMySQL connector for unixODBCをビルドする]]></title>
-        <id>https://zenn.dev/kn64872/articles/85fb88dd8b8372</id>
-        <link href="https://zenn.dev/kn64872/articles/85fb88dd8b8372"/>
-        <updated>2022-08-17T02:36:39.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-AlmaLinux9でunixODBCを利用する必要が発生しました。
-しかしrpmではel8までしかなかったのでソースからビルドすることにしました。
-その際の手順となります。
-
- ソースのダウンロード
-
-mysql-connector-odbc-8.0.30-src.tar.gz
-以下のURLから取得
-
-https://dev.mysql.com/downloads/connector/odbc/
-
-Oracleからダウンロードなのでアカウントが必要
-「Source Code」を選択
-「All Operating Systems (Generic) (Architectur...]]></summary>
-        <author>
-            <name>O.Yazaki-213</name>
         </author>
     </entry>
 </feed>
