@@ -2,10 +2,187 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-09-17T02:31:49.966Z</updated>
+    <updated>2022-09-18T02:51:47.063Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[利用サービスの残ライセンスをAPIで確認する]]></title>
+        <id>https://zenn.dev/cazziwork/articles/885e9f88ccf3fd</id>
+        <link href="https://zenn.dev/cazziwork/articles/885e9f88ccf3fd"/>
+        <updated>2022-09-17T20:42:15.000Z</updated>
+        <summary type="html"><![CDATA[この記事はある日急に「やばい、ライセンスが足りない！」「今から発注しても間に合わない！」なんてことにならないよう、APIで様々なSaaSのライセンスをチェックする方法についてまとめたものです。
+なお、コードサンプルはすべてPythonで、対象サービスは事前にライセンスを追加しないと利用できないサービスが中心となっています。
+
+ GitHub Enterprise
+GitHubはREST APIでは取得ができないため、GraphQL APIで取得する必要があります。GraphQL APIについては こちら を、ライセンス数取得用のAPIについては こちらをを参照。
+
+ リクエストサンプル
+...]]></summary>
+        <author>
+            <name>Takeshi Haraguchi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SageMaker Notebook 上で PyTorch の学習を回す]]></title>
+        <id>https://zenn.dev/kasega0/articles/dd51b63071ebea</id>
+        <link href="https://zenn.dev/kasega0/articles/dd51b63071ebea"/>
+        <updated>2022-09-17T16:55:09.000Z</updated>
+        <summary type="html"><![CDATA[いままでEC2でゴリゴリ学習させていたものをSageMaker Notebookに移植することになり、それなりに苦労したので自分用のテンプレート作成も兼ねてハマりどころをまとめます。
+
+ 今回作成した雛型
+https://github.com/kasegao/sagemaker-sample
+
+ 概要
+基本的にはこれまで学習用に作成していたプログラムの80-90%ぐらいはそのまま流用できます。綺麗に実装していれば既存プログラムにはほぼ手を入れずに移植できると思います。残りはSageMakerから既存スクリプトを呼び出すための玄関部分と、データ入出力用のS3とのやり取りスクリプトさえ用意し...]]></summary>
+        <author>
+            <name>かせがお</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Intro2DL : NNのOptimizerとその特徴]]></title>
+        <id>https://zenn.dev/yoshida0312/articles/a5dc08bb594ac1</id>
+        <link href="https://zenn.dev/yoshida0312/articles/a5dc08bb594ac1"/>
+        <updated>2022-09-17T12:41:03.000Z</updated>
+        <summary type="html"><![CDATA[最適化
+今回はNNを最適化する手法を確認します。
+NNが深くなるほど、ネットワークを通して安定的な勾配を伝播させることが重要になります。そうしないと、勾配が消滅したり爆発したりする可能性があるためです。そのため、今回は前回の重みの初期化に引き続き、最適化に関して見ていきます。
+import os
+import json
+import math
+import japanize_matplotlib
+import numpy as np 
+import time
+import copy
+
+import matplotlib.pyplot as plt
+from matplotlib im...]]></summary>
+        <author>
+            <name>よしだ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Mattermost用Bot作成(slackbot利用)]]></title>
+        <id>https://zenn.dev/kiyasu7028/articles/af72096f4555cd</id>
+        <link href="https://zenn.dev/kiyasu7028/articles/af72096f4555cd"/>
+        <updated>2022-09-17T12:12:17.000Z</updated>
+        <summary type="html"><![CDATA[Mattermostでもslackbotを使うと通知用Botを簡単に作れます。
+というわけでいきなり実践編です。
+
+ 内向きのWebhookを作成する
+Web画面から作るのはいろんなところで紹介されているので、今回はあえてコマンドで作ってみようと思います。
+参考ページ：mmctl webhook create-incoming
+必須オプションはchannel(defaultの投稿先) と user(defaultの名前) のようです。
+bitnami@debian:~/python3$ mmctl webhook create-incoming
+Error: required flag(...]]></summary>
+        <author>
+            <name>kiyasu7028</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Blender] Pythonスクリプトでカメラデバイスの固定台となる3Dモデルを作る]]></title>
+        <id>https://zenn.dev/zgw426/articles/d3cde75282511c</id>
+        <link href="https://zenn.dev/zgw426/articles/d3cde75282511c"/>
+        <updated>2022-09-17T10:51:50.000Z</updated>
+        <summary type="html"><![CDATA[カメラデバイス固定台の3Dモデルを作ります
+3DCGソフトのBlenderで、Pythonスクリプトを使い3Dオブジェクトを作成します。
+作成したオブジェクトは主に3Dプリンターで造形することを目的にしています。
+以下の動画はBlenderで3Dオブジェクトを作成し3Dプリンターで造形するまでのながれです。
+https://youtu.be/-drzycYZWME
+3Dオブジェクトの作成/移動/加工/削除の全ての制作工程をPythonスクリプトにしているので、スクリプトの再実行で同じものを作れます。スクリプトをテキストデータで保存すればgitで管理できるのも利点です。
+
+ スクリプト...]]></summary>
+        <author>
+            <name>suo-takefumi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【自然言語処理】【Python】TF-IDFを理解しよう]]></title>
+        <id>https://zenn.dev/robes/articles/241f6c3fac1486</id>
+        <link href="https://zenn.dev/robes/articles/241f6c3fac1486"/>
+        <updated>2022-09-17T10:22:44.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+古くから、自然言語処理の世界では、単語をスコアリングする手法として、TF-IDFというのがあります。
+古くからあるにもかかわらず、普通に暮らしていると馴染みのない概念だと思います。かく言う私も、Pythonで自然言語処理を学ぶまでは名前すら聞いたことがありませんでした。
+ここでは、そんなTF-IDFについて、はじめて触れる方にも分かるように概念を丁寧に説明するとともに、Pythonを使った実装方法についてご紹介していきたいと思います。
+ 
+
+ 🐱TF-IDFとは
+一言でいうと、ある文書の含まれる単語の重要度を示す指標です。文書の中で重要な単語をとらえることで、その文書の特徴...]]></summary>
+        <author>
+            <name>osn_Lofi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSVをインメモリで生成しS3にアップロードするメモ]]></title>
+        <id>https://zenn.dev/chari/articles/20220917_im-mem_csv_generation_and_upload</id>
+        <link href="https://zenn.dev/chari/articles/20220917_im-mem_csv_generation_and_upload"/>
+        <updated>2022-09-17T07:24:55.000Z</updated>
+        <summary type="html"><![CDATA[CSVをインメモリで生成しS3にアップロードするメモ
+import io 
+import csv
+import boto3
+
+s3 = boto3.client('s3')
+bucket = 'sample-bucket'
+key = 'sample.csv'
+
+buff = io.StringIO()
+writer = csv.DictWriter(f, fieldnames=['A', 'B', 'C'])
+
+# CSVに関連する処理
+writer.writeheader()
+writer.writerow({"A": "a", "B": "b", "C": "c"})
+
+# S...]]></summary>
+        <author>
+            <name>wtkmn</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[djangoのdbにアクセスするような変数をpytest.mark.parametrizeでパラメータ化することはできない]]></title>
+        <id>https://zenn.dev/yutake27/articles/d55926de49d0c8</id>
+        <link href="https://zenn.dev/yutake27/articles/d55926de49d0c8"/>
+        <updated>2022-09-17T06:01:30.000Z</updated>
+        <summary type="html"><![CDATA[これはng
+@pytest.mark.django_db
+class TestUserViewSet:
+    @pytest.mark.parametrize(
+        "user",
+        [
+            UserAFactory(),
+            UserBFactory(),
+            UserCFactory(),
+            UserDFactory(),
+        ],
+    )
+    def test_user_can_do(self, user):
+        user.do()
+代わりに...]]></summary>
+        <author>
+            <name>yutake27</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Matplotlibで描画したグラフをOpenCVでARマーカーにマッピング]]></title>
+        <id>https://zenn.dev/zgw426/articles/adf1cc41e953bd</id>
+        <link href="https://zenn.dev/zgw426/articles/adf1cc41e953bd"/>
+        <updated>2022-09-17T02:40:37.000Z</updated>
+        <summary type="html"><![CDATA[MatplotlibのグラフでAR
+Matplotlibで描画したグラフをOpenCVでARマーカーにマッピングすることができました。
+
+ デモ
+02_matplot2d_no-transparency.pyのデモ
+Matplotlibの2DグラフをARマーカーにマッピングしています。
+https://youtu.be/t4DyeLGA0gk
+
+03_matplot3d_no-transparency.pyのデモ
+Matplotlibの3DグラフをARマーカーにマッピングしています。マーカーの傾きに合わせて3Dグラフの視点を変更しています。
+https://youtu.be/vzQA...]]></summary>
+        <author>
+            <name>suo-takefumi</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Pythonで排他ロック可能な共有メモリライブラリを作った]]></title>
         <id>https://zenn.dev/quag_cactus/articles/6d09787323d1b1</id>
