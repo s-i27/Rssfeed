@@ -2,10 +2,109 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-09-18T02:51:47.063Z</updated>
+    <updated>2022-09-19T02:44:37.875Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[AWS ALBのアクセスログをPandasで集計する]]></title>
+        <id>https://zenn.dev/nmemoto/articles/analyze-alb-access-log-with-pandas</id>
+        <link href="https://zenn.dev/nmemoto/articles/analyze-alb-access-log-with-pandas"/>
+        <updated>2022-09-19T00:16:46.000Z</updated>
+        <summary type="html"><![CDATA[AWS ALBのアクセスログをPandasを使い、ALBが返したレスポンスのステータスコード別分間件数、ALBの背後にあるターゲットグループがALBに返したステータスコード別分間件数、ターゲットグループの処理時間の分間パーセンタイル値を集計するためのPythonスクリプトを作成しました。
+
+ Pythonスクリプトの説明
+この集計を行うために作成したスクリプトを分割して説明します。
+
+ ログをデータフレームに変換
+以下のスクリプトでログをデータフレームとしました。なお、集計したい複数のアクセスログは予めスクリプト内のdir_pathに格納している前提としています。
+ALBのアクセスログの...]]></summary>
+        <author>
+            <name>nmemoto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[random_statementを考えてみる]]></title>
+        <id>https://zenn.dev/mimitako/articles/random_statement</id>
+        <link href="https://zenn.dev/mimitako/articles/random_statement"/>
+        <updated>2022-09-18T23:51:13.000Z</updated>
+        <summary type="html"><![CDATA[random_statement とは
+機械学習であるデータから訓練データとテストデータへ分割する際に sikit-learn の train_test_split を利用することが多いと思います。
+ここでパラメータとして random_state というものが出てくるのですが、みんなどうやって決めているの？と疑問に思うことが多々あります。
+random_state は乱数の発生機ですが、seed 値を与えると、毎回同じ乱数を発生させるため再現性が得られます。
+ランダムですがカオスではないので、ある法則に従っていると思って良さそうです。
+ここで考えられるのが、random_state...]]></summary>
+        <author>
+            <name>mimitako</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tensorflowを使ってみた]]></title>
+        <id>https://zenn.dev/mimitako/articles/c4085419e963b5</id>
+        <link href="https://zenn.dev/mimitako/articles/c4085419e963b5"/>
+        <updated>2022-09-18T14:14:15.000Z</updated>
+        <summary type="html"><![CDATA[Tensorflow を使ってみる
+気になってはいたけど、使ったことがないんです。ということで、初めて Tensorflow を使ってみましたので記録も兼ねてここに記載します。
+
+ 使用したライブラリ
+今回使用したライブラリは以下のとおりです。
+pandas 1.2.3
+numpy 1.20.2
+tensorflow 2.10.0
+scikit-learn 1.0.2
+seaborn 0.11.2
+
+ タスクを定義
+今回は分類タスクである Iris ことあやめの分類を行います。この分類タスクは調べればすぐに出てきますので詳細は割愛します。まずは、基本的な流れを学ぶために、とりあえず走...]]></summary>
+        <author>
+            <name>mimitako</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Step FunctionsのMap Stateによる動的並列処理の簡単な実装]]></title>
+        <id>https://zenn.dev/koya6565/articles/9f05924666fbd2</id>
+        <link href="https://zenn.dev/koya6565/articles/9f05924666fbd2"/>
+        <updated>2022-09-18T14:00:28.000Z</updated>
+        <summary type="html"><![CDATA[（単なる偶然ですが）ちょうど3年前の9/18、dynamic parallelism in workflowsがStep Functionsでサポートされました。それ以前は、index参照したりChoiceやWaitでループ処理したり並列実行するためにもう一つワークフローを起動したり、Step Functions(以下、SFn)による動的な並列処理実装はまあまあ手間がかかりました。
+https://aws.amazon.com/about-aws/whats-new/2019/09/aws-step-functions-adds-support-for-dynamic-paralleli...]]></summary>
+        <author>
+            <name>T.S</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[StableDiffusionのいろんなWebUIたちをColabで使えるようにしてみた]]></title>
+        <id>https://zenn.dev/ddpn08/articles/stablediffusion-webui-colab</id>
+        <link href="https://zenn.dev/ddpn08/articles/stablediffusion-webui-colab"/>
+        <updated>2022-09-18T10:22:35.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは、だだっこぱんだです。
+自分は普段、Colab上でwebuiを立ち上げてStableDiffusionで遊んでいます。
+しかし、モデルが変えにくかったり引数をいちいち記入するのが面倒だったりしたので、使いやすいようにノートブックを作りました。この記事では、その使い方をざっくり紹介します。
+
+ 作ったもの
+StableDiffusionのいろんなwebuiを好きなモデルで簡単に実行できるColab用のノートブックをつくりました。
+
+ リポジトリ
+👇こちらで公開しています
+https://github.com/ddPn08/stable-diffusion-webui-colab
+...]]></summary>
+        <author>
+            <name>だだっこぱんだ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPIでFeatureFlagを使ってみる]]></title>
+        <id>https://zenn.dev/nishikoh/articles/f656f07bedf7eb</id>
+        <link href="https://zenn.dev/nishikoh/articles/f656f07bedf7eb"/>
+        <updated>2022-09-18T07:03:53.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+トランクベースの開発でCD(デリバリー/デプロイ)を良い感じにする方法がないか調べていたところFeatureFlagを試したくなりました。私が普段使っているWebAPIフレームワークのFastAPIでFeatureFlagを使ってみます。
+
+ fastapi-featureflags
+FastAPI用に開発されたfastapi-featureflagsを使っていきます。これを使うことでFastAPIのエンドポイントからFeatureFlagの切り替えが出来ます。FeatureFlagの数がN個ある場合、何の工夫もしなければ2のN乗個の環境を用意して検証しますが、管理用のエン...]]></summary>
+        <author>
+            <name>nishikoh</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[利用サービスの残ライセンスをAPIで確認する]]></title>
         <id>https://zenn.dev/cazziwork/articles/885e9f88ccf3fd</id>
@@ -4091,94 +4190,6 @@ optimizer = torch.optim.SGD(params = model.parameters(), lr = 0.01)
 p...]]></summary>
         <author>
             <name>kazuma-soon</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Lambda×FastAPI環境にMQからのメッセージを受信し、処理する方法]]></title>
-        <id>https://zenn.dev/taiyou/articles/380de1571437c3</id>
-        <link href="https://zenn.dev/taiyou/articles/380de1571437c3"/>
-        <updated>2022-08-20T12:43:57.000Z</updated>
-        <summary type="html"><![CDATA[概要
-以下の図のようにAPI GatewayのトリガーでLambdaが起動し、FastAPIを利用したアプリケーションが実行されるシステムがあります。この既存の構成にAmazon SQSをトリガーとして追加し、送信されたメッセージを処理する方法をまとめました。
-※Flaskでも大丈夫なはずです。
-
-
-
-現状の構成
-実現したい構成
-
-
-
-
-
-
-
-
-
-
-AWS Lambda
-Amazon SQS
-FastAPI
-
-
- 現状
-
- 環境
-
-FastAPI(バージョン0.78.0)を利用
-API Gateway×Lambda環境でFastAPIを動かすために、Mangum(バージョン0.15....]]></summary>
-        <author>
-            <name>たいよう</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[YOLOv7でオレンジさん判別機を作る]]></title>
-        <id>https://zenn.dev/lettucefry/articles/d8787ac13267e1</id>
-        <link href="https://zenn.dev/lettucefry/articles/d8787ac13267e1"/>
-        <updated>2022-08-20T11:28:48.000Z</updated>
-        <summary type="html"><![CDATA[やりたいこと
-オレンジさんが本物か偽物か判別したいと思ったこと一度はありますよね？
-環境はGoogle Colabを使います
-画像認識にはYOLOv7を使用します
-
- 準備
-Google Colabは以下からgoogleにログインすれば使えます
-https://colab.research.google.com
-ファイルからノートブックを新規作成すればOKです
-今回はGoogleドライブにデータを置くようにしたので先にマウントしておきます
-Google Colabにも置けますが時間がたつと削除されるようです
-マウントはGoogle Colabからドライブのマウントボタンを押すだけです...]]></summary>
-        <author>
-            <name>LettuceFry</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FastAPI 超実用的テンプレート(国内トップクラスの充実情報！)]]></title>
-        <id>https://zenn.dev/tk_resilie/books/bd5708c54a8a0a</id>
-        <link href="https://zenn.dev/tk_resilie/books/bd5708c54a8a0a"/>
-        <updated>2022-08-20T09:48:11.000Z</updated>
-        <summary type="html"><![CDATA[Pythonの人気バックエンドフレームワークのFastAPIを使った現場のプロジェクトにすぐに活用できる、超実用的なテンプレートの紹介です。]]></summary>
-        <author>
-            <name>米谷 昂(Python/FastAPIプロフェッショナル)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[範囲制約付き総和一定の連続値のランダムサンプリング]]></title>
-        <id>https://zenn.dev/wsuzume/articles/0c89c723df62cc</id>
-        <link href="https://zenn.dev/wsuzume/articles/0c89c723df62cc"/>
-        <updated>2022-08-20T04:39:54.000Z</updated>
-        <summary type="html"><![CDATA[問題
-x = (x _ 1, \ldots, x _ n) \in \mathbb{R} ^ nでx _ i \in [a _ i, b _ i]\,\,(i = 1, \ldots, n)という制約条件のもと、さらにS \in \mathbb{R}が与えられて
-
-\sum _ {i=1} ^ n x _ i = S
-
-を満たすランダムなベクトルxを生成せよ（条件を満たすならばどんな確率分布でもよいが、可能ならば空間に一様に分布してほしい）。
-
-
- 考察
-\forall i, a _ i = 0, b _ i = 1で、かつS=1ならばこれはディリクレ分布からサンプリングすればよいの...]]></summary>
-        <author>
-            <name>Josh Nobus</name>
         </author>
     </entry>
 </feed>
