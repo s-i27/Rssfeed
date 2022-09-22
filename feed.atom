@@ -2,10 +2,87 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-09-21T02:45:58.056Z</updated>
+    <updated>2022-09-22T02:33:15.403Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[量子最適化を使ったふるさと納税で得をするプログラム]]></title>
+        <id>https://zenn.dev/deeprecommend/articles/46dab7ae9bfb0e</id>
+        <link href="https://zenn.dev/deeprecommend/articles/46dab7ae9bfb0e"/>
+        <updated>2022-09-22T01:47:23.000Z</updated>
+        <summary type="html"><![CDATA[準備
+
+Google Colaboratory（※Jupyter NotebookでもOK）
+配布ソースコード（※一からやりたい方は不要）
+
+
+ 使用技術
+Python
+Qiskit
+
+ やったこと
+ふるさと納税上限シミュレーション × 楽天API連携 × 量子コンピューティング × 最適化問題
+「ふるさと納税 訳あり」で
+楽天APIからふるさと納税返礼品一覧を取得して
+組合せ最適化問題のひとつナップサック問題を解く量子アルゴリズム
+（QAOA:量子近似最適化アルゴリズム）で
+シミュレーションで出した控除上限額までで
+最も総重量が重くなるような返礼品の組み合わせを求めて
+とにかくふる...]]></summary>
+        <author>
+            <name>DeepRecommend</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[nnabla]特定のレイヤーの勾配計算をさせない方法]]></title>
+        <id>https://zenn.dev/nishikawajun/articles/dfefca48024cfd</id>
+        <link href="https://zenn.dev/nishikawajun/articles/dfefca48024cfd"/>
+        <updated>2022-09-22T01:31:04.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+nnablaにおいて、特定の計算からの勾配を伝搬させたくないという状況を実装した時の備忘録。
+例えば、L=w(y)\times L_1(x)としたときに、xについてはすべての勾配を伝搬させたいが、yについて、Lの計算における勾配\frac{\partial L}{\partial w}は計算したくないという状況。
+
+ 環境
+python==3.8.0
+nnabla==1.30.0
+
+ 実装
+
+ 式
+\displaystyle L = w(y) \times L_1(x)を次の形で実装してみる。
+
+L_1 = x^2 \ ... \ (1) \\
+w = 2y \ ... \...]]></summary>
+        <author>
+            <name>NishikawaJun</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Google Colaboratoryでkmol]]></title>
+        <id>https://zenn.dev/pluie/articles/20220921-kmol-getting-started</id>
+        <link href="https://zenn.dev/pluie/articles/20220921-kmol-getting-started"/>
+        <updated>2022-09-21T16:17:35.000Z</updated>
+        <summary type="html"><![CDATA[本記事でわかること
+
+Google Colaboratoryでkmolを実行する方法
+
+
+ kmolとは
+Drug discoveryおよびLife scienceのための機械学習ライブラリで、グラフベースの推論モデル、説明可能AI、差分プライバシーなどの特徴的な機能を有する。
+https://github.com/elix-tech/kmol
+
+ 前提条件
+
+
+conda環境を前提とする。公式ドキュメントではconda環境を前提としてインストール方法が記載されている、かつ_libcc_mutexがconda-forgeにしか見つからなかったのでcondaを用いる
+
+
+ Google...]]></summary>
+        <author>
+            <name>pluie</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Django-DRFでFileField(ImageField)のユニットテストどうするのか]]></title>
         <id>https://zenn.dev/yuya_morimoto/articles/a238e7861ce2ba</id>
@@ -4078,144 +4155,6 @@ OS X Moterey(12.3.1)
 git-lfs conda...]]></summary>
         <author>
             <name>hellohazime</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DRF(django-rest-framework)のAPIViewでページネーションを使う]]></title>
-        <id>https://zenn.dev/nelsia/articles/7918a01c407907</id>
-        <link href="https://zenn.dev/nelsia/articles/7918a01c407907"/>
-        <updated>2022-08-23T07:46:43.000Z</updated>
-        <summary type="html"><![CDATA[概要
-DRFのAPIViewでページネーションを使うときに思ったより苦戦したでその時のメモ。
-動くコードは以下にコミットしてあります。（ファイル名が雑なのは気にしないでください）
-https://github.com/nelsia/drf_pagination_apiview_sample
-
- 注意事項
-以下のライブラリバージョンで動作確認しています。
-Django==4.1
-djangorestframework==3.13.1
-
- djangoプロジェクトの作成
-まずは、djangoのプロジェクト作成をします。
-ここのやり方はそれぞれの環境に合わせて適宜作成してください。
-以下の...]]></summary>
-        <author>
-            <name>nelsia</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【PyTorch】データをテスト用・学習用に分割する]]></title>
-        <id>https://zenn.dev/kazuma_soon/articles/f4be358fba4767</id>
-        <link href="https://zenn.dev/kazuma_soon/articles/f4be358fba4767"/>
-        <updated>2022-08-23T00:55:44.000Z</updated>
-        <summary type="html"><![CDATA[大昔に scikit-learn を触ったとき、データの分割が引数だけで完結しました。
-PyTorchにもあると持っていたけど、ないっぽいので分割するコードを書いてみました。
-※ディープラーニングやPyTorchの初学者です。間違い・勘違いが含まれているかもしれません。
-
- データ
-データ数は89行, 13列のものです。
-# 0行目はid
-# 1行目がターゲット
-# 2行目〜は特徴量
-array([[0.000e+00, 3.000e+00, 1.236e+01, ..., 5.600e-01, 1.580e+00,
-        5.200e+02],
-       [1.000e+...]]></summary>
-        <author>
-            <name>kazuma-soon</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[話題のStable Diffusionがオープンソース化されたのでローカルで動かしてみる]]></title>
-        <id>https://zenn.dev/koyoarai_/articles/02f3ed864c6127bb2049</id>
-        <link href="https://zenn.dev/koyoarai_/articles/02f3ed864c6127bb2049"/>
-        <updated>2022-08-22T23:52:38.000Z</updated>
-        <summary type="html"><![CDATA[話題のStableDiffusionがオープンソースで8/23に公開されたので、手元のマシンで動かすまで試したいと思います🖼
-(下記に記載していますが、自分の環境だとエラーが出てしまったのでイレギュラーな対応をしています🙏)
-https://twitter.com/EMostaque/status/1561777122082824192
-StableDiffusionがどんなものかは、深津さんの記事が参考になります。
-https://twitter.com/fladdict/status/1561406014540640256
-
- 1. 環境
-Razer Blade (RTX 2070)...]]></summary>
-        <author>
-            <name>koyoarai_</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ドドスコPythonワンライナー]]></title>
-        <id>https://zenn.dev/kzm4269/articles/9493d29fdc0eb1</id>
-        <link href="https://zenn.dev/kzm4269/articles/9493d29fdc0eb1"/>
-        <updated>2022-08-22T23:03:02.000Z</updated>
-        <summary type="html"><![CDATA[元ネタ
-https://twitter.com/Sheeeeepla/status/1554028833942441984?s=20&t=CcCYp7Bzw2A24Dwj6V7vAw
-
- 回答
-112文字。
-exec("p=print;i=-1\nwhile(i:=i*2|(__import__('random').random()<.5))&8190^3822:p(['ドド','スコ'][i&1])\np('ラブ注入♡')")
-
- 補足
-
-execの中身
-p = print
-i = -1
-while (i := i * 2 | (__import__(...]]></summary>
-        <author>
-            <name>kzm4269</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonでも(Oneshot) Algebraic Effectsがしたい]]></title>
-        <id>https://zenn.dev/catminusminus/articles/a417b8ee7cf1f6</id>
-        <link href="https://zenn.dev/catminusminus/articles/a417b8ee7cf1f6"/>
-        <updated>2022-08-22T17:40:08.000Z</updated>
-        <summary type="html"><![CDATA[成果物
-ひとまずこれが動くようになりました。
-NotInteger = Effect()
-FiveInteger = Effect()
-
-
-def parse_int(s: str) -> Result[int, str]:
-    try:
-        return Ok(int(s))
-    except:
-        return Err("Could not parse int")
-
-
-def sum_lines(s: str):
-    lines = s.split()
-    sum = 0
-    for line in lines:
-        ...]]></summary>
-        <author>
-            <name>Catminusminus</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Sphinx によるドキュメント生成と docstring のスタイル]]></title>
-        <id>https://zenn.dev/utahka/articles/df9713f4ac990d</id>
-        <link href="https://zenn.dev/utahka/articles/df9713f4ac990d"/>
-        <updated>2022-08-22T15:13:18.000Z</updated>
-        <summary type="html"><![CDATA[この記事では、Python におけるドキュメンテーション用のコメントを、どのように書くかといった内容を書いていきます。
-ドキュメントの重要性をここで説明するまでもありませんが、誰かが使うコードを書くならドキュメントを充実させる必要があります。そして、この誰かには未来の自分も含まれています。
-
- docstring
-Python における docstring とは、関数やクラスの処理が開始する前に書いておくヒアドキュメントのことです。たとえば、NumPy の np.fft.fft 関数の docstring をみてみましょう。
-def fft(a, n=None, axis=-1, no...]]></summary>
-        <author>
-            <name>utahka</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Solafuneのマルチ解像度画像の車両検出コンペ - MMDetectionでやってみた]]></title>
-        <id>https://zenn.dev/kwashizzz/articles/solafune-vehicle-det-mmdet</id>
-        <link href="https://zenn.dev/kwashizzz/articles/solafune-vehicle-det-mmdet"/>
-        <updated>2022-08-22T14:59:39.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは！鷲崎(@kwashizzz)です。今回は、Solafuneという衛星データ解析コンテストプラットフォームのマルチ解像度画像の車両検出のコンペティションに挑戦してみました。本記事では、データのダウンロードから、結果の提出まで解説しています。物体検出にはMMDetectionを使用し、今回のコンペの評価指標であるOC-cost(Optimal Correction Cost)の導入方法も解説しています。
-OC-Costに関しては、日本語のこの記事がわかりやすかったです。
-なんと8月22日時点で1位(スコア:0.3090)です！提出しているのが一人なので、当たり前ですが...
-この...]]></summary>
-        <author>
-            <name>わっしー</name>
         </author>
     </entry>
 </feed>
