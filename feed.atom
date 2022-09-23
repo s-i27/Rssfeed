@@ -2,10 +2,89 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-09-22T02:33:15.403Z</updated>
+    <updated>2022-09-23T02:40:31.486Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Tensorflow x Kerasを使ってみた]]></title>
+        <id>https://zenn.dev/mimitako/articles/tfxkeras_begin</id>
+        <link href="https://zenn.dev/mimitako/articles/tfxkeras_begin"/>
+        <updated>2022-09-23T01:18:50.000Z</updated>
+        <summary type="html"><![CDATA[Tensorflow x keras を使ってみる
+こちらの記事では Tensorflow だけを利用して Iris の分類タスクを実行していました。しかし、Keras を利用する方が多く、また利用が容易であるというメリットがあります（参考）。
+そこで、せっかく Tensorflow を学ぶのなら一緒に Keras も学んでみようと思い、使ってみることにしました。(ここでは Keras の Sequential を利用するという意味です。)
+
+ Keras Sequential を利用する
+こちらの記事にあるコードを Keras 仕様へ変更します。
+https://zenn.dev/...]]></summary>
+        <author>
+            <name>mimitako</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[KaggleのTitanicをTensorflowで解いてみる]]></title>
+        <id>https://zenn.dev/mimitako/articles/kaggle_first</id>
+        <link href="https://zenn.dev/mimitako/articles/kaggle_first"/>
+        <updated>2022-09-23T01:18:49.000Z</updated>
+        <summary type="html"><![CDATA[Kaggle とは
+Kaggle は Google が主催の機械学習コンペティションで、様々な課題に対してその精度を競いあうものです。
+精度が高ければ、上位チームには懸賞金が出ます。
+そんな Kaggle も初心者向けに常時公開してあるタスクがあり、そのひとつが Titanic の生死分類タスクです。
+Titanic はあの映画にもなった大型客船のことです。ここに乗船していた人の状況（利用料金、性別、家族構成など）によって生死がどうなったかを予測していきます。
+
+ Tensorflow で分類していく
+Tensorflow はニューラルネットワークによるディープラーニングの機械学習ラ...]]></summary>
+        <author>
+            <name>mimitako</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Raspberry Pi OS(Bullseye)+カメラモジュールV1.3]]></title>
+        <id>https://zenn.dev/technicarium/articles/449294af295d5c</id>
+        <link href="https://zenn.dev/technicarium/articles/449294af295d5c"/>
+        <updated>2022-09-23T00:53:38.000Z</updated>
+        <summary type="html"><![CDATA[画質や高機能は不要だったため1000円以下で買えたカメラモジュールV1.3を使ってみました。
+https://www.raspberrypi.com/documentation/accessories/camera.html
+安易に使用できると思いきや苦戦・・・
+
+ Legacy Cameraの有効化
+sudo raspi-config
+
+3を選択
+
+1を選択
+
+はいを選択
+
+了解を選択
+
+はいを選択して再起動
+
+ 接続状況確認
+vcgencmd get_camera
+supported=1 detected=1, libcamera interfaces=0
+!
+64bitの場合はsu...]]></summary>
+        <author>
+            <name>テク二カリウム</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[XMLファイルで文字列のみを抽出して処理する方法]]></title>
+        <id>https://zenn.dev/nakamura196/articles/93f85e26a3dc42</id>
+        <link href="https://zenn.dev/nakamura196/articles/93f85e26a3dc42"/>
+        <updated>2022-09-22T11:32:23.000Z</updated>
+        <summary type="html"><![CDATA[XMLファイルで文字列のみを抽出して処理する機会がありました。
+このニーズに対して、以下のようなスクリプトにより、実現することができました。
+soup = BeautifulSoup(open(path,'r'), "xml")
+elements = soup.findChildren(text=True, recursive=True)
+ポイントは、text=Trueを与えている点で、テキストノードのみを取得することができました。
+参考になりましたら幸いです。]]></summary>
+        <author>
+            <name>nakamura196</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[量子最適化を使ったふるさと納税で得をするプログラム]]></title>
         <id>https://zenn.dev/deeprecommend/articles/46dab7ae9bfb0e</id>
@@ -3998,163 +4077,6 @@ import numpy as np
 # ランダ...]]></summary>
         <author>
             <name>mayuco</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonでCLIツールを作ってみた]]></title>
-        <id>https://zenn.dev/u_tan/articles/dca8c4539b4e13</id>
-        <link href="https://zenn.dev/u_tan/articles/dca8c4539b4e13"/>
-        <updated>2022-08-24T13:09:06.000Z</updated>
-        <summary type="html"><![CDATA[PythonでCLIツールを作成しました。
-LT会でも発表しました。
-▼発表したLT会
-https://yumenosora.connpass.com/event/255075/
-▼スライド
-
-▼ソースコード
-https://github.com/OHMORIYUSUKE/grech
-
- 概要
-このツールを実行させることで、YAMLで定義されたテストを実行させることができます。
-YAMLファイルにはshellが記載されており、shellの実行結果が正規表現にマッチするかどうかで正誤判定を行います。
-▼テストを実行した様子
-
-
-
- 工夫した点
-
- YAMLファイル
-# このチェック項目の名...]]></summary>
-        <author>
-            <name>うーたん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CompVis/stable-diffusionの環境をApple Siliconで構築する]]></title>
-        <id>https://zenn.dev/laiso/articles/7af434269ffa1b</id>
-        <link href="https://zenn.dev/laiso/articles/7af434269ffa1b"/>
-        <updated>2022-08-24T12:06:12.000Z</updated>
-        <summary type="html"><![CDATA[Macで画像を生成したいだけだったらGoogle Colab で はじめる Stable Diffusion v1.4｜npaka｜noteのColabで実行していることをローカルに持ってきて、CUDAのかわりにCPU使ってやればできると思う。
-
-main.py
-from diffusers import StableDiffusionPipeline
-
-pipe = StableDiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4", use_auth_token=YOUR_TOKEN)
-pipe.to("cp...]]></summary>
-        <author>
-            <name>laiso</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[WSL2とDocker Desktopでtensorflow-gpu 1.X系の環境構築をする]]></title>
-        <id>https://zenn.dev/uekou/articles/522e58e98014a2</id>
-        <link href="https://zenn.dev/uekou/articles/522e58e98014a2"/>
-        <updated>2022-08-24T10:00:52.000Z</updated>
-        <summary type="html"><![CDATA[普段はtensorflow 2.X系を使っているのですが、どうしてもtensorflow 1.X系を使わないといけない状況になり、Docker Desktop(WSL2バックエンド)で環境構築したのでその手順を記載します。
-
- ①WindowsにGPUドライバをインストール
-まず、Windowsにドライバ(CUDA)のインストールを行います。
-既にCUDAをWindowsにインストール済みの方はこの手順を飛ばして頂いて構いません。
-https://www.nvidia.com/Download/index.aspx?lang=en-us
-ちなみに、NVIDIAの公式のドキュメントに記載が...]]></summary>
-        <author>
-            <name>uekou</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Poetryでsys.path.appendを回避する]]></title>
-        <id>https://zenn.dev/hpp/articles/6307447e5a037d</id>
-        <link href="https://zenn.dev/hpp/articles/6307447e5a037d"/>
-        <updated>2022-08-24T09:27:30.000Z</updated>
-        <summary type="html"><![CDATA[まとめ
-pyproject.tomlの[tool.poetry]のpackagesに以下のようにモジュールを追加しましょう。
-
-pyproject.toml
-packages = [
-    { include = "hoge" },
-    { include = "fuga" },
-]
-
-
-gist
-GitHub
-
-
- 背景から詳しく
-Pythonのモジュールシステムは他の言語と結構な違いがあり、どのファイルからどのモジュールをimportできるのかで頭を悩ませることが多々あります。
-例えば、次のようなディレクトリ階層を持つプロジェクトについて考えてみましょう。
-.
-├── py...]]></summary>
-        <author>
-            <name>hpp</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【自然言語処理】Python初心者でも文章要約タスクが実装できた]]></title>
-        <id>https://zenn.dev/robes/articles/b97e3ac0c0b7da</id>
-        <link href="https://zenn.dev/robes/articles/b97e3ac0c0b7da"/>
-        <updated>2022-08-24T08:51:11.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-わたくし、Python歴1年の初心者ですが、このたび、苦労に苦労を重ねて、自然言語処理タスクの文章要約を実装できました。
-自然言語処理に興味のあるPython初心者のお役に立てればと、記事に残したいと思います。
- 
-実装にあたっては、ネットの記事も手あたり次第調べましたが、最終的には、以下の本が大変参考になりました。
-ただし、バージョンの変更により、この本の通りに実装しても、2022年8月時点ではエラーになる箇所があります。出版社経由で著者の方にお聞きして一部コードを修正したほか、自分なりに工夫をして実装しました。
-https://www.borndigital.co.jp...]]></summary>
-        <author>
-            <name>osn_Lofi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Stable Diffusion を M2 Macのpipenvで動かす]]></title>
-        <id>https://zenn.dev/ryoma310/articles/63bc3d20a8746c</id>
-        <link href="https://zenn.dev/ryoma310/articles/63bc3d20a8746c"/>
-        <updated>2022-08-24T07:00:31.000Z</updated>
-        <summary type="html"><![CDATA[Stable Diffusionがオープンソースで公開されたので、色々できそうだと思って試してみました。
-とはいえ、手元にNvidiaのGPUなんて持っておらず、最近だとpytorchでApple Silicon搭載のGPUが使えるというのも耳にしていたのでそれでうまいことできないかと考えながらやっていきました。
-また、個人的にpipenvが好きなのでcondaの代わりにこれを使ってます。
-とりあえず無事コードが動くようになるまで。
-
- 1. 環境
-
-M2のMacBook Air
-
-cpu: 8コア
-memory: 16GB
-GPU: 10コア
-
-
-pipenv
-
-
- 2. 環境構築の前...]]></summary>
-        <author>
-            <name>ryoma310</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[例のコードじゃMacbook(M1 pro) + stable diffusion の環境構築ができなかったので、修正点メモ]]></title>
-        <id>https://zenn.dev/hellohazime/articles/543fcaf862008b</id>
-        <link href="https://zenn.dev/hellohazime/articles/543fcaf862008b"/>
-        <updated>2022-08-24T03:43:56.000Z</updated>
-        <summary type="html"><![CDATA[流行りのstable diffusionですが、M1macで動かす手順が
-https://github.com/CompVis/stable-diffusion/issues/25#issuecomment-1224040740
-これで8割くらいはあってるけど、ここに書いてある通りじゃ動かなかったので
-手順を忘れないようメモとして書いておきます。
-なお 22/8/24時点の話なんで、近いうちに治ってると思います。
-
- 環境
-
-
-Macbook Pro(M1 pro)
-Memory 16GB
-OS X Moterey(12.3.1)
-
-
- 必要資材のインストール
-git-lfs conda...]]></summary>
-        <author>
-            <name>hellohazime</name>
         </author>
     </entry>
 </feed>
