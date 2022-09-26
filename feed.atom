@@ -2,10 +2,218 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-09-25T02:40:26.346Z</updated>
+    <updated>2022-09-26T02:42:10.895Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[【編集中】競プロでよく使うコードまとめ(Python3)]]></title>
+        <id>https://zenn.dev/pienthon/articles/5289bed34a8bd6</id>
+        <link href="https://zenn.dev/pienthon/articles/5289bed34a8bd6"/>
+        <updated>2022-09-25T18:41:56.000Z</updated>
+        <summary type="html"><![CDATA[入力値を受け取る
+
+ 1. N行で入力されるスペースで区切られていない文字列をリストに格納
+経路が何通りあるか計算する時のマスの情報を格納するのに使ったりします。
+3
+...
+...
+#..
+と入力された場合、
+[['.', '.', '.'],
+['.', '.', '.'],
+['#', '.', '.']]
+というリストにします。
+N = int(input())
+S = [["."] * N for _ in range(N)]
+for i in range(N):
+    S[i] = list(input())
+
+
+ 2. N行で入力されるスペースで区切られた数値をリスト...]]></summary>
+        <author>
+            <name>にゃーん(Pienthon)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenAI Whisperに音声データを全文書き起こしさせる【Google Colaboratory】]]></title>
+        <id>https://zenn.dev/ik/articles/f891d628e829ea</id>
+        <link href="https://zenn.dev/ik/articles/f891d628e829ea"/>
+        <updated>2022-09-25T16:29:08.000Z</updated>
+        <summary type="html"><![CDATA[OpenAIの「Whisper」を試してみていたのですが、Pythonで音声データを全文書き起こしする方法があまり情報がなかったため、備忘録です。
+（手軽に試せるデモだと30秒程度までしか認識してくれません）
+
+ Whisper
+「Whisper」は、OpenAIが開発した、会話音声をテキストに変換する深層学習モデルです。
+多様な音声の大規模データセットで学習され、音声翻訳や言語識別だけでなく、多言語音声認識を行うことができるマルチタスクモデルでもあります。
+（細かくは調べていないですが、音声を元にしてTransformerなどの自然言語処理技術で文章を生成する、という認識の方が近いかも...]]></summary>
+        <author>
+            <name>inakam</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[価格帯別出来高を扱う]]></title>
+        <id>https://zenn.dev/ymd/articles/9110790208f803</id>
+        <link href="https://zenn.dev/ymd/articles/9110790208f803"/>
+        <updated>2022-09-25T14:05:02.000Z</updated>
+        <summary type="html"><![CDATA[価格帯別出来高(VPR:volume price range)とは
+以下のような価格帯ごとの出来高で横バー
+
+上記の図の引用元と詳しい説明はここを参照
+
+ plotの方法
+以下をjupyter notebookで実行する
+import numpy as np
+import pandas as pd
+import holoviews as hv
+import hvplot.pandas
+from holoviews import opts
+hv.extension('bokeh')
+
+opts.defaults(opts.Curve(tools=['hover']), opts.Ove...]]></summary>
+        <author>
+            <name>ymd</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python - SQlite エラー】ValueError: parameters are of unsupported type]]></title>
+        <id>https://zenn.dev/osawa_koki/articles/348e3af043bcf0</id>
+        <link href="https://zenn.dev/osawa_koki/articles/348e3af043bcf0"/>
+        <updated>2022-09-25T12:08:13.000Z</updated>
+        <summary type="html"><![CDATA[タプル型??? 優先度変更用の括弧???
+PythonでSQLiteを操作している際に発生したエラー、、、
+以下のテーブル(pokemon)から図鑑番号が「25」の行を削除しようとしたときにお話ですね、、、
+
+
+
+number
+name
+type1
+type2
+
+
+
+
+25
+ピカチュウ
+でんき
+
+
+
+152
+チコリータ
+くさ
+
+
+
+875
+コオリッポ
+こおり
+
+
+
+884
+ジュラルドン
+はがね
+ドラゴン
+
+
+
+cursor.execute("DELETE FROM pokemon WHERE number = ?", (25))
+上のコードを実行すると以下のエラーが、、、
+Value...]]></summary>
+        <author>
+            <name>osawa-koki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[cookiecutterとcruftとcopier]]></title>
+        <id>https://zenn.dev/nishikoh/articles/8939b2c00bf916</id>
+        <link href="https://zenn.dev/nishikoh/articles/8939b2c00bf916"/>
+        <updated>2022-09-25T10:09:38.000Z</updated>
+        <summary type="html"><![CDATA[cookiecutterとcruftとcopier
+cruftとcopierについて調べてみた。理解するのに公式のドキュメントを読むのが一番良さそうだが備忘録として書いておく。
+
+ 導入
+プロジェクトを始める時にお決まりのディレクトリ構成、ライブラリ、ツール、CI設定、その他を使いまわすためにプロジェクトテンプレートを用意することがある。テンプレートが更新された際、既に作成済みのプロジェクトにコピペで更新を反映したり、更新が面倒で放置されるプロジェクトもある。そこで継続的にテンプレートの更新をプロジェクトに反映するツールを調べてみた。
+
+ cruft
+cruftはcookiecutt...]]></summary>
+        <author>
+            <name>nishikoh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[とりあえず突っ込んで見るデータ概要]]></title>
+        <id>https://zenn.dev/mimitako/articles/analyzer_of_basic</id>
+        <link href="https://zenn.dev/mimitako/articles/analyzer_of_basic"/>
+        <updated>2022-09-25T07:57:15.000Z</updated>
+        <summary type="html"><![CDATA[どんなデータなのか一括で見たい
+Kaggle しかり、他のデータ分析しかり、前処理は面倒だし同じ作業の繰り返しというのもつまらない。
+サクッと見たいときに Jupiter Notebook をカタカタするのも面倒…
+こんな気持なのはきっと私だけじゃないですよね？ということで、今のところ csv ファイルだけですが、全体を俯瞰するような Python コードを作成したので公開します。
+公開先はここです。クローンしてご利用ください。
+https://github.com/miris-mimitako/basic_analyzer
+
+ どんな入出力にしたか？
+現在（2022/09/25）は...]]></summary>
+        <author>
+            <name>mimitako</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ctypes.windll.user32.SetProcessDPIAware()]]></title>
+        <id>https://zenn.dev/as/articles/c142780724f1b4</id>
+        <link href="https://zenn.dev/as/articles/c142780724f1b4"/>
+        <updated>2022-09-25T07:41:19.000Z</updated>
+        <summary type="html"><![CDATA[try:
+   ctypes.windll.user32.SetProcessDPIAware()
+except AttributeError:
+    pass]]></summary>
+        <author>
+            <name>ForestSeo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[理解して覚えるpython ~デコレータ編~]]></title>
+        <id>https://zenn.dev/ama_c/articles/c5523044aa0868</id>
+        <link href="https://zenn.dev/ama_c/articles/c5523044aa0868"/>
+        <updated>2022-09-25T03:56:07.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+初学者がデコレータだけ学習しようとすると苦戦します．書き方を覚えたつもりでも理解をしていないのでは，毎日書かない限りほんの数日で忘れてしまいます（過去の僕がそうです）．
+本記事では，デコレータを理解するのに必要な最低限の知識と，そのユースケースを見ていくことで理解して覚えることを目的としています．
+
+ 前提知識
+まず，関数内関数とクロージャから学びます．
+
+ 関数内関数
+簡単に言うと，関数のネストです．ユースケースとしては，クラスを書くほどじゃないけど，少し読みにくい処理等を書きたいとき程度に考えています．関数の外に書けばいいじゃないかと思うかもしれませんが，外側に書くと，...]]></summary>
+        <author>
+            <name>ama-c</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[『リーダブルコード』の要点＆活用方法]]></title>
+        <id>https://zenn.dev/nameless_sn/articles/readable_code_handbook</id>
+        <link href="https://zenn.dev/nameless_sn/articles/readable_code_handbook"/>
+        <updated>2022-09-25T02:44:41.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+
+今回の記事では『リーダブルコード』の要点と、実務で活用する方法を徹底解説する。この記事を読むことで、『リーダブルコード』の重要な部分と実務での活用方法を学べるだろう。
+本記事で使うプログラムの言語はPythonを採用した。Pythonは文法がシンプルなので初心者でも学習コストが低く、プログラミングの入門としては最も相応しいからである。今回の記事の内容は良いプログラムを格上での重要な基本事項なので、どの言語でも役立つだろう。
+
+ 1部：表面上の改善
+
+ 名前に情報を詰め込む
+プログラムに使われる名前は、主に次の5つの鉄則を守る必要がある。
+
+明確な単語を選ぶ
+
+例えば、ge...]]></summary>
+        <author>
+            <name>Shota Nukumizu</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[TodoListを作りました！]]></title>
         <id>https://zenn.dev/fan_tech/articles/8e2379a2b2152a</id>
@@ -4241,121 +4449,6 @@ Python 3.9.5
 PS ...]]></summary>
         <author>
             <name>suo-takefumi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Raspberry Pi OS + PyenvでPythonバージョンの切り替え]]></title>
-        <id>https://zenn.dev/technicarium/articles/00b32d390e82ec</id>
-        <link href="https://zenn.dev/technicarium/articles/00b32d390e82ec"/>
-        <updated>2022-08-27T12:49:23.000Z</updated>
-        <summary type="html"><![CDATA[OS標準でインストールされているPythonとは異なるバージョンをインストールして用途によって使い分けられるようにPyenvをインストールして切り替えるようにしました。
-
- 環境
-$ cat /etc/os-release 
-PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
-NAME="Debian GNU/Linux"
-VERSION_ID="11"
-VERSION="11 (bullseye)"
-VERSION_CODENAME=bullseye
-ID=debian
-HOME_URL="https://www.debian.org/"
-SUPP...]]></summary>
-        <author>
-            <name>テク二カリウム</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Stable Diffusion をGoogle Colabで実行する際に便利なコード]]></title>
-        <id>https://zenn.dev/6uclz1/articles/d7736b06d24f1a</id>
-        <link href="https://zenn.dev/6uclz1/articles/d7736b06d24f1a"/>
-        <updated>2022-08-27T12:05:14.000Z</updated>
-        <summary type="html"><![CDATA[初めに
-Google Colaboratory で動かしていることを前提。
-自分は Colab Pro にしているので、VRAMあたりで無料版の人は実行できないものがあるかも
-その際は出力する画像数とかを減らせばいけると思います。
-出力する先をGoogle Driveにしたり、画像をいっぱい生成したりできるようにまとめてる記事が
-見当たらなかったので作成。
-
- セットアップ
-ほぼここを参照
-https://note.com/npaka/n/ndd549d2ce556
-本家の見た方が本質の理解には繋がるかも
-https://colab.research.google.com/githu...]]></summary>
-        <author>
-            <name>6uclz1</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Stable Diffusion のプロンプトで意味の足し算・引き算をする]]></title>
-        <id>https://zenn.dev/td2sk/articles/eb772103a3a8ff</id>
-        <link href="https://zenn.dev/td2sk/articles/eb772103a3a8ff"/>
-        <updated>2022-08-27T10:04:42.000Z</updated>
-        <summary type="html"><![CDATA[TL;DR
-
-Stable Diffusion でプロンプトに重みをつけたり、意味の世界で足したり引いたりするよ
-
-例: ピラミッド - エジプト + 日本 = ?
-
-
-画風をシームレスに変換できるよ
-seed 変更だと大きく変わってしまうけど、小さい重みで補正かければ構図を維持したまま絵に微調整を加えられるよ
-
-
- 意味の足し算・引き算
-Stable Diffusion では、内部的に以下の 2 ステップの処理を行うことでテキストを画像に変換している
-
-テキストをベクトル(数の組)に変換する
-ベクトルを画像に変換する
-
-ところで、以下の動画を見てほしい
-https://www.yo...]]></summary>
-        <author>
-            <name>td2sk</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[最初の一回で終わって値を返すgenerator]]></title>
-        <id>https://zenn.dev/catminusminus/articles/3f203b274cae14</id>
-        <link href="https://zenn.dev/catminusminus/articles/3f203b274cae14"/>
-        <updated>2022-08-27T06:16:16.000Z</updated>
-        <summary type="html"><![CDATA[JSでは
-function * f() {
-  return 10;
-}
-
-const ret = f().next();
-
-console.log(ret.value);　 // output: 10
-console.log(ret.done);  // output: true
-というのができる。つまり、最初のnextで終わって（done == true）値を返す(10)。
-これをPythonでやるにはどうすればよいかというのを考えた結果、以下になった。
-def f():
-  return 10
-  yield
-
-try:
-  next(f())
-except StopIterati...]]></summary>
-        <author>
-            <name>Catminusminus</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【CVPR2022】画像異常検知 PatchCoreの実装解説]]></title>
-        <id>https://zenn.dev/kwashizzz/articles/ml-anomaly-det-patchcore</id>
-        <link href="https://zenn.dev/kwashizzz/articles/ml-anomaly-det-patchcore"/>
-        <updated>2022-08-27T04:21:37.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-こんにちは、わっしーです。本記事では、CVPR2022で発表された画像異常検知手法であるPatchCoreの実装について解説します。
-まずは、実際に試した結果です。下図の上は正常画像、下は異常画像です。異常部分が赤くなっており、製品が欠損していることがわかります。
-
-PatchCoreの詳細については、外観検査向け異常検知手法に関する論文紹介の記事がわかりやすいです。
-PatchCoreの利点は、ImageNetなどのデータセットで学習された事前学習モデルの特徴マップを用いるため深層学習モデルの訓練の必要ないことです。
-手法としては、
-
-正常な画像群の特徴マップにおける局所...]]></summary>
-        <author>
-            <name>わっしー</name>
         </author>
     </entry>
 </feed>
