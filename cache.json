@@ -12,6 +12,156 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/ymiz/articles/4f9bc3c1238388",
+          "author": "ymiz",
+          "description": "問題\n\n複数のアプリケーションで共通のビジネスルールを利用したい\nビジネスルールを公開したくはない\n個人開発なのでチーム開発ほどのコストをかけたくない\npythonのアプリケーションである\nどうするか？\n\n\n 対応\n共通のビジネスルールを切り出す。\nそれを単一のprivate repositoryとして管理する。\nこのrepositoryをsubmoduleとして取り込む。\n取り込むことは簡単にできた。\nだが、取り込んだパッケージの作りが悪く、そのまま使うことができなかった。\n具体的には、取り込んだパッケージ内での依存解決ができない状態になった。\n共通ビジネスルールパッケージのディレ...",
+          "link": "https://zenn.dev/ymiz/articles/4f9bc3c1238388",
+          "publishedOn": "2022-10-02T00:03:14.000Z",
+          "wordCount": 303,
+          "title": "python アプリケーション開発中、 git submodule で取り込んだパッケージ内の依存解決に躓いた",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--Iq3qlGZL--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ymiz%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:python%2520%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E9%2596%258B%25E7%2599%25BA%25E4%25B8%25AD%25E3%2580%2581%2520git%2520submodule%2520%25E3%2581%25A7%25E5%258F%2596%25E3%2582%258A%25E8%25BE%25BC%25E3%2582%2593%25E3%2581%25A0%25E3%2583%2591%25E3%2583%2583%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B8%25E5%2586%2585%25E3%2581%25AE%25E4%25BE%259D%25E5%25AD%2598%25E8%25A7%25A3%25E6%25B1%25BA%25E3%2581%25AB%25E8%25BA%2593%25E3%2581%2584%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsveS5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Iq3qlGZL--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ymiz%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:python%2520%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E9%2596%258B%25E7%2599%25BA%25E4%25B8%25AD%25E3%2580%2581%2520git%2520submodule%2520%25E3%2581%25A7%25E5%258F%2596%25E3%2582%258A%25E8%25BE%25BC%25E3%2582%2593%25E3%2581%25A0%25E3%2583%2591%25E3%2583%2583%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B8%25E5%2586%2585%25E3%2581%25AE%25E4%25BE%259D%25E5%25AD%2598%25E8%25A7%25A3%25E6%25B1%25BA%25E3%2581%25AB%25E8%25BA%2593%25E3%2581%2584%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsveS5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/attakei/articles/migrate-poetry-to-flit",
+          "author": "Takei Kazuya",
+          "description": "ちょっとした経緯があって、いくつかのPythonパッケージの管理用ライブラリを Poetry [1] から Flit [2] に変えました。\nこの際の基本的な動き方を整理しておくための記事です。\n\n 前提\n以下の環境で書いています。\n» python --version\nPython 3.10.6\n» poetry --version\nPoetry version 1.1.12\n» flit --version\nFlit 3.7.1\nまた、次の2点を満たす環境であるものとします。\n\nPoetry用の pyproject.toml がある\nソース類をGitHubで管理している\n\n\n Fli...",
+          "link": "https://zenn.dev/attakei/articles/migrate-poetry-to-flit",
+          "publishedOn": "2022-10-01T16:55:24.000Z",
+          "wordCount": 960,
+          "title": "PoetryからFlitのマイグレーションノート",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--MzN75um2--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Takei%2520Kazuya%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Poetry%25E3%2581%258B%25E3%2582%2589Flit%25E3%2581%25AE%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25B0%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2583%258E%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pKSXpPS3RSeThDU0ZoaWpHeklQSWk1Mkl2ZHRwVTB5aE1tTWJhbEE9czgwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--MzN75um2--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Takei%2520Kazuya%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Poetry%25E3%2581%258B%25E3%2582%2589Flit%25E3%2581%25AE%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25B0%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2583%258E%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pKSXpPS3RSeThDU0ZoaWpHeklQSWk1Mkl2ZHRwVTB5aE1tTWJhbEE9czgwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/energy_saving/articles/d1ef09fc24f365",
+          "author": "energy_saving",
+          "description": "はじめに・経緯\n みなさん、pythonの開発環境に何を使っていますか？localのスパゲッティ環境でゴリ押し、仮想環境作る、いろいろあると思います。かくいう僕は「環境依存における差異」が非常に嫌いなので、できればDocker内で何とかしたい、みたいな思想が強かったりします(docker環境にも差異があったりする話は別で......)。\n 加えてpoetryが最近のpythonのパッケージ管理のトレンドらしく、pythonを使ったアプリケーションではpoetryが候補の一つに入ってきます。これらを両立しつつ快適なpython開発環境が何となく自分の中で固まりつつあるのでつらつら書いて...",
+          "link": "https://zenn.dev/energy_saving/articles/d1ef09fc24f365",
+          "publishedOn": "2022-10-01T14:51:04.000Z",
+          "wordCount": 907,
+          "title": "Docker+poetryの開発環境とCI",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--EsAZcL09--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:energy_saving%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Docker%252Bpoetry%25E3%2581%25AE%25E9%2596%258B%25E7%2599%25BA%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A8CI%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS01ZUlTX1czVi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM2OWZiY2Y5NzEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--EsAZcL09--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:energy_saving%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Docker%252Bpoetry%25E3%2581%25AE%25E9%2596%258B%25E7%2599%25BA%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A8CI%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS01ZUlTX1czVi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM2OWZiY2Y5NzEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/hope/articles/09b4dce7207ad8",
+          "author": "ほぺ",
+          "description": "condaコマンド集\n\n 基本\n\n\n\nコマンド\n内容\n\n\n\n\nconda update conda\nConda のアップデート\n\n\nconda create -n [name] python=[version] [library]\n仮想環境構築\n\n\nconda env list\n仮想環境一覧\n\n\nactivate [name]\n仮想環境有効化\n\n\ndeactivate [name]\n仮想環境無効化\n\n\nconda remove -n [name] --all\n仮想環境削除\n\n\n\n\n パッケージ系\n\n\n\nコマンド\n内容\n\n\n\n\nconda install [package]\nパッケージ...",
+          "link": "https://zenn.dev/hope/articles/09b4dce7207ad8",
+          "publishedOn": "2022-10-01T14:40:23.000Z",
+          "wordCount": 149,
+          "title": "【Python】condaコマンド集",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--jWrbhWua--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25BB%25E3%2581%25BA%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E3%2580%2590Python%25E3%2580%2591conda%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E9%259B%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1TaEgydHBOaS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3NzFhNDAyOTguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--jWrbhWua--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25BB%25E3%2581%25BA%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E3%2580%2590Python%25E3%2580%2591conda%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E9%259B%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1TaEgydHBOaS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3NzFhNDAyOTguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/fjnkt98/articles/488c0ed7911f51",
+          "author": "藤那花多",
+          "description": "AtCoder Beginner Contest 271 C - MangaをPythonで解きます。\n\n 問題\n問題文をAtCoderのページより引用します。\n\n\n 問題文\n高橋君は全10^9巻の漫画『すぬけ君』を読むことにしました。\n初め、高橋君は『すぬけ君』の単行本をN冊持っています。i番目の単行本はa_i巻です。\n高橋君は『すぬけ君』を読み始める前に限り次の操作を0回以上何度でも繰り返せます。\n\n現在持っている単行本が1冊以下の場合、何もしない。そうでない場合、現在持っている単行本から2冊を選んで売り、代わりに好きな巻を選んで1冊買う\n\nその後、高橋君は『すぬけ君』を1巻、2巻、...",
+          "link": "https://zenn.dev/fjnkt98/articles/488c0ed7911f51",
+          "publishedOn": "2022-10-01T14:36:32.000Z",
+          "wordCount": 787,
+          "title": "ABC271 C - Manga Python解答例",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--yfyR-fyx--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E8%2597%25A4%25E9%2582%25A3%25E8%258A%25B1%25E5%25A4%259A%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:ABC271%2520C%2520-%2520Manga%2520Python%25E8%25A7%25A3%25E7%25AD%2594%25E4%25BE%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NdEpIb2RTQS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MwMGU2ODA1N2YuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--yfyR-fyx--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E8%2597%25A4%25E9%2582%25A3%25E8%258A%25B1%25E5%25A4%259A%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:ABC271%2520C%2520-%2520Manga%2520Python%25E8%25A7%25A3%25E7%25AD%2594%25E4%25BE%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NdEpIb2RTQS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MwMGU2ODA1N2YuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/yoshida0312/articles/2da90c027050b1",
+          "author": "よしだ",
+          "description": "画像分類のアーキテクチャ\n現在でもほとんどの最先端のアーキテクチャの基礎となっている以下のCNNアーキテクチャを見ていきます。\n\nAlexNet\nVGG\nGoogleNet\nResNet\nDenseNet\n\n今回からモデルが重くなるため、GoogleColabで実行します。\n(前回まではMPSを使用していたのですが、今回のPytorch Lightningのコード内で解決できないバグがあるようですので、ColabのCuda環境で実行しています)\n以下のボタンをクリックすると、GoogleColabに勝手に移動します。\nリンクは、https://github.com/をhttps://...",
+          "link": "https://zenn.dev/yoshida0312/articles/2da90c027050b1",
+          "publishedOn": "2022-10-01T13:04:27.000Z",
+          "wordCount": 18576,
+          "title": "Intro2DL : 画像分類の代表的なアーキテクチャ",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--EyBdq-TB--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Intro2DL%2520%253A%2520%25E7%2594%25BB%25E5%2583%258F%25E5%2588%2586%25E9%25A1%259E%25E3%2581%25AE%25E4%25BB%25A3%25E8%25A1%25A8%25E7%259A%2584%25E3%2581%25AA%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2581%25E3%2583%25A3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS04U0FUUkFHOS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--EyBdq-TB--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Intro2DL%2520%253A%2520%25E7%2594%25BB%25E5%2583%258F%25E5%2588%2586%25E9%25A1%259E%25E3%2581%25AE%25E4%25BB%25A3%25E8%25A1%25A8%25E7%259A%2584%25E3%2581%25AA%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2581%25E3%2583%25A3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS04U0FUUkFHOS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mashi_z/articles/fintech-basic-plot",
+          "author": "mashi",
+          "description": "これは何？\nファイナンスのデータをダウンロードして表示するアプリケーションの制作記録です。作成するアプリケーションのイメージは以下のとおりです。\n\nこれも少し前に作成したものなので、バックテストなどの機能を盛り込みすぎてかえって使いづらくなってしまいました。\nということで、今回は機能をブラッシュアップしつつ取り組もうと考えておりますので見た目などが異なります。\n公開しながら行うことにより、作業の進みが早くなることを期待しております。ということで、少しずつ書き足しながら、かつシリーズものとして作成を行います。\n\n 現状のコード\nfinanceCall.pyを実行すると、アプリが起動しま...",
+          "link": "https://zenn.dev/mashi_z/articles/fintech-basic-plot",
+          "publishedOn": "2022-10-01T10:56:16.000Z",
+          "wordCount": 395,
+          "title": "PyQtGraphを用いたファイナンスデータの可視化（1）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--v5fjPn2P--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mashi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:PyQtGraph%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%258A%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25EF%25BC%25881%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1xcFRzUEZ0Vi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBkOGFkMmZmYmIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--v5fjPn2P--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mashi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:PyQtGraph%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%258A%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25EF%25BC%25881%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1xcFRzUEZ0Vi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBkOGFkMmZmYmIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mashi_z/articles/pyqtgraph-lissa",
+          "author": "mashi",
+          "description": "これは何？\nPyQtGraphでグラフを描く際の凡例の追加に関するメモです。\n完成イメージは、以下のとおりです。\n\n\n 環境\n当方の環境は以下のとおりです。\n\nHW\n\nMacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)\nmacOS Monterey 12.5.1（21G83）\n2.8 GHz クアッドコアIntel Core i7\n\n\nSW\n\nPython 3.10.4\nPySide6 6.3.2\npyqtgraph 0.13.1\n\n\n\n2880x1800のdot by dotにて使用しているため、他の解像度の環境ではフォントの...",
+          "link": "https://zenn.dev/mashi_z/articles/pyqtgraph-lissa",
+          "publishedOn": "2022-10-01T08:38:14.000Z",
+          "wordCount": 806,
+          "title": "PyQtGraphの凡例などのフォント設定について",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--ks9R25cZ--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mashi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:PyQtGraph%25E3%2581%25AE%25E5%2587%25A1%25E4%25BE%258B%25E3%2581%25AA%25E3%2581%25A9%25E3%2581%25AE%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25B3%25E3%2583%2588%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1xcFRzUEZ0Vi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBkOGFkMmZmYmIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--ks9R25cZ--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mashi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:PyQtGraph%25E3%2581%25AE%25E5%2587%25A1%25E4%25BE%258B%25E3%2581%25AA%25E3%2581%25A9%25E3%2581%25AE%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25B3%25E3%2583%2588%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1xcFRzUEZ0Vi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBkOGFkMmZmYmIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mizar/articles/91ca88bd57c5e0",
+          "author": "Mizar/みざー",
+          "description": "素因数分解は位数に弱い？\n今回は、仮想の量子コンピュータを使って「\\operatorname{mod}N に関する 整数 A の位数」というものを計算し、それを基に長い桁数の素因数分解をする遊びをしてみようと思います。\n「量子コンピュータでどのようにして位数を求めるのか」という話はここでは取り扱いません。\n量子コンピュータで使われる手法の参考リンク:\nhttps://qiskit.org/textbook/ja/ch-algorithms/shor.html\nhttps://ja.wikipedia.org/wiki/量子コンピュータ\nhttps://en.wikipedia.org/w...",
+          "link": "https://zenn.dev/mizar/articles/91ca88bd57c5e0",
+          "publishedOn": "2022-10-01T07:01:29.000Z",
+          "wordCount": 3788,
+          "title": "バーチャル量子コンピュータで素因数分解",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--Y1UgXHJx--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizar%252F%25E3%2581%25BF%25E3%2581%2596%25E3%2583%25BC%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E3%2583%2590%25E3%2583%25BC%25E3%2583%2581%25E3%2583%25A3%25E3%2583%25AB%25E9%2587%258F%25E5%25AD%2590%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2594%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25A7%25E7%25B4%25A0%25E5%259B%25A0%25E6%2595%25B0%25E5%2588%2586%25E8%25A7%25A3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2otaktMYk5PNDhJVndPV3VtWWxrT3YzQzdfNWxNWVBaYmRPRDJHbEE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Y1UgXHJx--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizar%252F%25E3%2581%25BF%25E3%2581%2596%25E3%2583%25BC%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E3%2583%2590%25E3%2583%25BC%25E3%2583%2581%25E3%2583%25A3%25E3%2583%25AB%25E9%2587%258F%25E5%25AD%2590%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2594%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25A7%25E7%25B4%25A0%25E5%259B%25A0%25E6%2595%25B0%25E5%2588%2586%25E8%25A7%25A3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2otaktMYk5PNDhJVndPV3VtWWxrT3YzQzdfNWxNWVBaYmRPRDJHbEE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/s1ok69oo/articles/a319078f8c6af1",
+          "author": "Shingo Uto",
+          "description": "はじめに\nDA-Learnerについて、Pythonによる実装を交えてまとめました。内容について誤り等ございましたら、コメントにてご指摘いただけますと幸いです。\n\n 機械学習を用いた因果推論\n機械学習を用いた因果推論手法は大きく分けて下記の2通りが存在します。\n\nMeta-Learner系\nCausal-Tree系\n\n今回はMeta-Learner系の手法の1つであるDA-Learnerについて紹介します。\n\n Meta-Leanrerとは\nMeta-Learnerとは、機械学習と因果推論の考え方を掛け合わせて条件付き平均処置効果(CATE: Conditional Average ...",
+          "link": "https://zenn.dev/s1ok69oo/articles/a319078f8c6af1",
+          "publishedOn": "2022-10-01T05:12:46.000Z",
+          "wordCount": 3725,
+          "title": "PythonによるDA-Learnerの実装",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--poX1c95O--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Shingo%2520Uto%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258BDA-Learner%25E3%2581%25AE%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS10TFByYUFGeC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzgzZTczMWQ5YTEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--poX1c95O--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Shingo%2520Uto%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258BDA-Learner%25E3%2581%25AE%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS10TFByYUFGeC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzgzZTczMWQ5YTEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
           "id": "https://zenn.dev/gamella/articles/e8792cac02be1b",
           "author": "tomo@Alpaca",
           "description": "マケデコで開催した株式シストレ初心者向けセミナー動画\n9/28にマケデコ(知らない人が多いですがMarket API Developer Communityの略です、興味がある方はこちらから 👉 https://discord.gg/xg6P5RXwaa )主催で、JPX総研の皆様と一緒にシステムトレード・株式データ分析の初心者向けセミナーを開催しました。\nhttps://mkdeco.connpass.com/event/259946/\n476名のご応募をいただき、341名の方に参加いただきました。発表内容ですが、\n\n株式のシステムトレード初心者の最初の一歩(評価方法を中心に)\nJ...",
@@ -2810,81 +2960,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--iGKGhUS0--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:uekou%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AEasyncio.Queue%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25EF%25BC%2588%25E9%259D%259E%25E5%2590%258C%25E6%259C%259F%25E5%2587%25A6%25E7%2590%2586%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1FOEhZZElrdS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY0YjhlZGJkNTEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/robes/articles/95a284323eba9b",
-          "author": "osn_Lofi",
-          "description": "はじめに\nPython初心者のわたくしが偉そうなことは言えませんが、自然言語処理においては、形態素解析が命と思っています。\n \nmecab用の 優秀な辞書NEologd を使って、形態素解析のためのトークナイザー(関数) を作ったので、今後、自分が形態素解析をする際に使うためにも、記事として残しておきたいと思います。\n \n具体的には、テキストを与えたら、\n\n記号類を削除\n数字を0にする\nストップワードを除外する\nそのうえで、名詞・動詞・形容詞だけを抽出する\n\nというトークナイザー（関数） になります。\nNEologdは週に2回以上更新されるなど、新語・固有表現に強い辞書として定評があ...",
-          "link": "https://zenn.dev/robes/articles/95a284323eba9b",
-          "publishedOn": "2022-09-02T12:48:57.000Z",
-          "wordCount": 1211,
-          "title": "【自然言語処理】形態素解析のためのトークナイザー（関数）を作る",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--xIJmJ0QT--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25E3%2580%2591%25E5%25BD%25A2%25E6%2585%258B%25E7%25B4%25A0%25E8%25A7%25A3%25E6%259E%2590%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E3%2583%2588%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%258A%25E3%2582%25A4%25E3%2582%25B6%25E3%2583%25BC%25EF%25BC%2588%25E9%2596%25A2%25E6%2595%25B0%25EF%25BC%2589%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--xIJmJ0QT--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25E3%2580%2591%25E5%25BD%25A2%25E6%2585%258B%25E7%25B4%25A0%25E8%25A7%25A3%25E6%259E%2590%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E3%2583%2588%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%258A%25E3%2582%25A4%25E3%2582%25B6%25E3%2583%25BC%25EF%25BC%2588%25E9%2596%25A2%25E6%2595%25B0%25EF%25BC%2589%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/robes/articles/4ab5a7f992000d",
-          "author": "osn_Lofi",
-          "description": "0. はじめに\n上場企業が作成する有価証券報告書には、企業の経営成績がどうなっているのか？といった財務情報に加え、企業として何を課題と捉えどう取り組んでいくのか？といった非財務情報の記載があります。\n最近は、気候変動リスクや人権問題への対応など企業の社会的責任の遂行に注目が集まる中、機関投資家が企業を評価する目線も、短期的な視点である財務情報から、中長期的な視点である非財務情報にうつりつつあります。\n \nこれからの時代、財務情報（数値データ）ではなく、非財務情報（テキストデータ）の分析ニーズが高まることが予想されます。こうした点も踏まえ、まことに僭越ながら、Pythonを使って有価...",
-          "link": "https://zenn.dev/robes/articles/4ab5a7f992000d",
-          "publishedOn": "2022-09-02T10:15:52.000Z",
-          "wordCount": 1162,
-          "title": "【自然言語処理】【Python】有価証券報告書の非財務情報（テキストデータ）を取得する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--LKxUZi9r--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25E3%2580%2591%25E3%2580%2590Python%25E3%2580%2591%25E6%259C%2589%25E4%25BE%25A1%25E8%25A8%25BC%25E5%2588%25B8%25E5%25A0%25B1%25E5%2591%258A%25E6%259B%25B8%25E3%2581%25AE%25E9%259D%259E%25E8%25B2%25A1%25E5%258B%2599%25E6%2583%2585%25E5%25A0%25B1%25EF%25BC%2588%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25EF%25BC%2589%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--LKxUZi9r--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25E3%2580%2591%25E3%2580%2590Python%25E3%2580%2591%25E6%259C%2589%25E4%25BE%25A1%25E8%25A8%25BC%25E5%2588%25B8%25E5%25A0%25B1%25E5%2591%258A%25E6%259B%25B8%25E3%2581%25AE%25E9%259D%259E%25E8%25B2%25A1%25E5%258B%2599%25E6%2583%2585%25E5%25A0%25B1%25EF%25BC%2588%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25EF%25BC%2589%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/takaha4k/articles/5114cd4bd4d208",
-          "author": "takaha4k",
-          "description": "pyenvとは\nPCに異なるバージョンのPythonを容易にインストールできる。\n\n やること\npyenvをWSL2(Ubuntu22.4)に整える。\n\n pyenvをインストール\nWSLの場合\ncurl https://pyenv.run | bash\nMacの場合\nbrew update\nbrew upgrade\nbrew install pyenv\n環境変数を追記\n※Macの場合、標準がbashでなくてzshなので、vim ~/.zshrc\nvim ~/.bashrc\nexport PATH=\"$HOME/.pyenv/bin:$PATH\"\neval \"$(pyenv init...",
-          "link": "https://zenn.dev/takaha4k/articles/5114cd4bd4d208",
-          "publishedOn": "2022-09-02T08:33:30.000Z",
-          "wordCount": 272,
-          "title": "pyenvを導入してPython開発環境を整える",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--bXNPRZNB--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:takaha4k%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:pyenv%25E3%2582%2592%25E5%25B0%258E%25E5%2585%25A5%25E3%2581%2597%25E3%2581%25A6Python%25E9%2596%258B%25E7%2599%25BA%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E6%2595%25B4%25E3%2581%2588%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1RS25SRThtdy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MyMGM1MDU4ZTMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--bXNPRZNB--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:takaha4k%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:pyenv%25E3%2582%2592%25E5%25B0%258E%25E5%2585%25A5%25E3%2581%2597%25E3%2581%25A6Python%25E9%2596%258B%25E7%2599%25BA%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E6%2595%25B4%25E3%2581%2588%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1RS25SRThtdy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MyMGM1MDU4ZTMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/mory22k/articles/e3222d02724251",
-          "author": "mory22k",
-          "description": "ガウス過程回帰モデルにおけるカーネルは、回帰関数の形状を決定する非常に重要な要素です。この記事では、Primitive Kernels と呼ばれるカーネルのファミリーを使って、それらを比較していきます。\nimport numpy as np\nfrom matplotlib import pyplot as plt\n\n ガウス過程回帰モデル\n次の記事で実装したモデルを改良して使用します。\nhttps://zenn.dev/mory22k/articles/1186466adfbe6f\nclass GaussianProcessRegressor:\n    def __init__(self...",
-          "link": "https://zenn.dev/mory22k/articles/e3222d02724251",
-          "publishedOn": "2022-09-02T07:06:58.000Z",
-          "wordCount": 4396,
-          "title": "[NumPy] ガウス過程回帰モデルのカーネルで遊ぶ",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--bf2Ixd1O--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mory22k%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%255BNumPy%255D%2520%25E3%2582%25AC%25E3%2582%25A6%25E3%2582%25B9%25E9%2581%258E%25E7%25A8%258B%25E5%259B%259E%25E5%25B8%25B0%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AE%25E3%2582%25AB%25E3%2583%25BC%25E3%2583%258D%25E3%2583%25AB%25E3%2581%25A7%25E9%2581%258A%25E3%2581%25B6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3AxakYxZWZ3THdBRmRSeUliY3JTSHVOZy0zOUp0NF9CMkZQYWFkWFdVPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--bf2Ixd1O--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mory22k%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%255BNumPy%255D%2520%25E3%2582%25AC%25E3%2582%25A6%25E3%2582%25B9%25E9%2581%258E%25E7%25A8%258B%25E5%259B%259E%25E5%25B8%25B0%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AE%25E3%2582%25AB%25E3%2583%25BC%25E3%2583%258D%25E3%2583%25AB%25E3%2581%25A7%25E9%2581%258A%25E3%2581%25B6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3AxakYxZWZ3THdBRmRSeUliY3JTSHVOZy0zOUp0NF9CMkZQYWFkWFdVPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/tmasuo/articles/8ea1a74cc3294d",
-          "author": "tmasuo",
-          "description": "🎈 Streamlit とは？\nPython だけ でアプリケーションを作成するためのフレームワークです。\nhttps://streamlit.io/\n従来データを扱う Web アプリを作成しようとすると、\n\nフロントの言語（HTML, JS およびライブラリ群）\nバックエンドの言語（例えば Java, データアクセスに SQL）\n\nのように様々な言語使う必要がありましたが、Python のみで実現できます。なのでアプリ作成の敷居がだいぶ低くなるのではないかと思います。\nまた Python だと Pandas をはじめとするデータをハンドリングするライブラリはもちろん、データサイエン...",
-          "link": "https://zenn.dev/tmasuo/articles/8ea1a74cc3294d",
-          "publishedOn": "2022-09-02T02:40:48.000Z",
-          "wordCount": 483,
-          "title": "#30DaysOfStreamlit をやってみた",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--pLxcaBI---/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:tmasuo%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%252330DaysOfStreamlit%2520%25E3%2582%2592%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1zNy1Ed3ZaUy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0ZjU1NzVhYjMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--pLxcaBI---/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:tmasuo%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%252330DaysOfStreamlit%2520%25E3%2582%2592%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1zNy1Ed3ZaUy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0ZjU1NzVhYjMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
         }
       ]
     }
