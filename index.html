@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-10-02 datetime="2022-10-02T00:03:14.000Z">2022-10-02</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-10-02 datetime="2022-10-02T00:03:14.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-10-02 datetime="2022-10-02T14:47:32.000Z">2022-10-02</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-10-02 datetime="2022-10-02T14:47:32.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,182 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/ruymtnw/articles/sudoku-auto-solve"
+                        open
+                      >
+                        <summary class="article-expander__title">Kivyで作る数独自動解答アプリ①</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ruymtnw/articles/sudoku-auto-solve">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--EhUC2Nlc--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ryuya-matsunawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Kivy%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258B%25E6%2595%25B0%25E7%258B%25AC%25E8%2587%25AA%25E5%258B%2595%25E8%25A7%25A3%25E7%25AD%2594%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E2%2591%25A0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1XSXp1YUYxeS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhhYzA4ZmIxNDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+今回は、PythonのオープンライブラリのKivyを使用して、数独の自動解答アプリを作っていきたいと思います。
+実装している中でKivyの記事が少なかったので、備忘録も兼ねて書いてみました。
+最終的にはiosアプリとしてリリースまで持っていきたいです。
+
+ リポジトリ作成
+数独の画面用のリポジトリを作りましょう。その後、仮想環境を作成して有効化します。
+mkdir kivy-sample
+cd kivy-sample
+python3 -m venv venv
+source venv/bin/activate
+
+ 各種インストール
+念の為pipをアップグレード
+venv/bi...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/jcc/articles/0ef23e881cacb4"
+                        open
+                      >
+                        <summary class="article-expander__title">自作PythonラッパーでGoogleグループのメンバーシップをより便利に管理する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/jcc/articles/0ef23e881cacb4">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--0qz2fdCZ--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:jc%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E8%2587%25AA%25E4%25BD%259CPython%25E3%2583%25A9%25E3%2583%2583%25E3%2583%2591%25E3%2583%25BC%25E3%2581%25A7Google%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E3%2581%25AE%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2590%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%2583%25E3%2583%2597%25E3%2582%2592%25E3%2582%2588%25E3%2582%258A%25E4%25BE%25BF%25E5%2588%25A9%25E3%2581%25AB%25E7%25AE%25A1%25E7%2590%2586%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1Qd0ZXRHU1NC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFhMGIzZjk3ZDguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Googleグループのメンバーシップを管理する方法
+Googleグループを管理するのは
+
+Workspaceのadmin SDKを利用する
+
+https://developers.google.com/admin-sdk/directory/v1/guides/manage-groups
+
+CLI gcloudを利用する
+
+https://cloud.google.com/sdk/gcloud/reference/identity/groups/memberships
+
+Cloud Identity APIを叩く
+
+https://cloud.google.com/identity/...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/robes/articles/fb99590d9ec9f2"
+                        open
+                      >
+                        <summary class="article-expander__title">【初心者でもできる】HuggingFaceにGradioで作成したアプリをデプロイする方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/robes/articles/fb99590d9ec9f2">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--pBXJ7I-Y--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590%25E5%2588%259D%25E5%25BF%2583%25E8%2580%2585%25E3%2581%25A7%25E3%2582%2582%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2580%2591HuggingFace%25E3%2581%25ABGradio%25E3%2581%25A7%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2597%25E3%2581%259F%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E3%2583%2587%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25A4%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+以前、機械学習アプリを超爆速で実装できるフレームワークgradioをご紹介しました。
+https://zenn.dev/robes/articles/fcbda5d2dc1362
+gradioはGoogleColaboratory上でも作成できて、かつ公開もできるなど、超便利なのですが、いかんせん、公開期間は72時間限定だったりして、当然、不便なところもあります。
+そんなgradioで作ったwebアプリを永続的に公開するための最適なプラットフォームとして、HuggingFaceのSpacesがあります。
+今回、いろいろ調べながら、何とかHuggingFaceSpacesへの...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/gyabi/articles/7de3142bbece8a"
+                        open
+                      >
+                        <summary class="article-expander__title">LiDARデータによる物体検出を試してみた-Part2</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/gyabi/articles/7de3142bbece8a">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--IOt5tAMs--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Kano%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:LiDAR%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E7%2589%25A9%25E4%25BD%2593%25E6%25A4%259C%25E5%2587%25BA%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F-Part2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1Mcmg0ZUUtYy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBlMmVhMWE1YWYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>今回の内容
+前回の記事でPointPilllarsの動作確認を行った。
+次のステップとしてUnity上で自作のLiDARを実装して点群データを取得できるようにしたい。
+https://zenn.dev/gyabi/articles/739131bae9a57e
+今回は実装に入る前にPointPilllarsと前回使用したKittiDataSetについて深堀し、実装する際の要件を抽出する。
+
+ PointPillars
+アルゴリズムそのものは理解しきっていない＋既に良く解説されている記事が存在するのでリンクを張っておく。
+https://aru47.hatenablog.com/ent...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/mimitako/articles/django_gen_secretkey"
+                        open
+                      >
+                        <summary class="article-expander__title">Djangoで鍵を隠すためのプチテク</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mimitako/articles/django_gen_secretkey">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--3o4DY5jI--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mimitako%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Django%25E3%2581%25A7%25E9%258D%25B5%25E3%2582%2592%25E9%259A%25A0%25E3%2581%2599%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E3%2583%2597%25E3%2583%2581%25E3%2583%2586%25E3%2582%25AF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS10N3ZoNVdBNC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M2MDJlNmJjZWYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Django で開発中に鍵を隠しておきたいけど面倒だよね？
+通常、Django などの CMS をいじるときに秘密鍵が Github などにアップされないように管理されなければなりません。こういう状況では、非同期されているファイルによる管理がよく利用されています。
+私も今まではsecrets.jsonなどを用いて管理していましたが、PULL するときに毎回コピーするのも面倒だと感じていました。
+開発中は自動生成できるようにするのが楽なんじゃない？ということで、ちょっとお試しで自動鍵生成、管理システムを Django に組み込んでみました。
+
+ まずは gitignore の設定
+せっ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yagiyuki/articles/ml_data_set_statistics"
+                        open
+                      >
+                        <summary class="article-expander__title">機械学習モデルの評価に必要なデータ数を見積もる 〜機械学習の仕事に統計を使ってみる〜</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yagiyuki/articles/ml_data_set_statistics">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--KCVw7z1h--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:yagiyuki%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AE%25E8%25A9%2595%25E4%25BE%25A1%25E3%2581%25AB%25E5%25BF%2585%25E8%25A6%2581%25E3%2581%25AA%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E6%2595%25B0%25E3%2582%2592%25E8%25A6%258B%25E7%25A9%258D%25E3%2582%2582%25E3%2582%258B%2520%25E3%2580%259C%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2581%25AE%25E4%25BB%2595%25E4%25BA%258B%25E3%2581%25AB%25E7%25B5%25B1%25E8%25A8%2588%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25E3%2580%259C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1DWVBXTUhfLS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBjNzdjOGIyNjUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>この記事では、母比率の区間推定を用いて機械学習モデルの評価に必要なデータ数を見積もる方法を書きます。
+以下の記事で、母比率の区間推定で機械学習モデルを評価する方法を書きましたがその続編です。
+https://zenn.dev/yagiyuki/articles/ml_test_statistics
+!
+本記事で記載した内容は、私的なアイディアをまとめたものになります。
+機械学習モデルの評価方法として確立したものではない点をご認識ください。
+
+
+ 機械学習モデルの評価とは?
+機械学習モデルの評価とは、「学習したデータとは別のデータでモデルの性能を評価すること」を指します。
+性能評価の指標と...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -6747,322 +6923,6 @@ Django(REST framework) + PostgreSQLのアプリケーションをElastic Beansta
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/robes/articles/0b9034cfa3b66d"
-                        open
-                      >
-                        <summary class="article-expander__title">【自然言語処理】Doc2Vecで文章ベクトルを算出し、類似文書検索をやってみた</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/robes/articles/0b9034cfa3b66d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--SkiR8x9k--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25E3%2580%2591Doc2Vec%25E3%2581%25A7%25E6%2596%2587%25E7%25AB%25A0%25E3%2583%2599%25E3%2582%25AF%25E3%2583%2588%25E3%2583%25AB%25E3%2582%2592%25E7%25AE%2597%25E5%2587%25BA%25E3%2581%2597%25E3%2580%2581%25E9%25A1%259E%25E4%25BC%25BC%25E6%2596%2587%25E6%259B%25B8%25E6%25A4%259C%25E7%25B4%25A2%25E3%2582%2592%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-以前、BERTを使って歌詞の文章ベクトルを算出し可視化する試みを行いました。BERTは優秀なんですが、入力できるトークン数が512に限られるため、長い文章のベクトル算出には向いていないんですよね。
- 
-今回は、上場企業約2,500社が有価証券報告書で書いている割と長文の文章について、Doc2Vecを使って文章ベクトルを算出し、あわせて、文章ベクトルから類似文書を検索してみました。
-個人的には、BERTよりもDoc2Vecの方が納得感のいく結果を出している気がしています。
-ここでは、文章ベクトルの算出方法・類似文書検索方法について、お伝えしていきたいと思います。
- 
-http...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kiwamachan/articles/e6e339a7532724"
-                        open
-                      >
-                        <summary class="article-expander__title">[ABC266] AtCoder Beginner Contest 266（A-F 問題 Python）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kiwamachan/articles/e6e339a7532724">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--UTFGM1uN--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kiwamachan%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%255BABC266%255D%2520AtCoder%2520Beginner%2520Contest%2520266%25EF%25BC%2588A-F%2520%25E5%2595%258F%25E9%25A1%258C%2520Python%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS03c1BISHJQRC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M3ZjZjYWE5ZjUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>AtCoder Beginner Contest 266 の復習記録です。難易度が青色レベル以下の、A問題からF問題までをやります。使用言語はPythonです。
-
- A問題
-https://atcoder.jp/contests/abc266/tasks/abc266_a
-
- 考え方
-文字列の長さと、中央の文字のインデックスを比較してみます。
-
-
-
-文字列の長さ
-中央の文字
-
-
-
-
-3
-1
-
-
-7
-3
-
-
-15
-7
-
-
-N
-N//2
-
-
-
-
- 提出コード
-S &#x3D; input()
-n &#x3D; len(S)//2
-print(S[n])
-
- B問題
-https://atcoder.jp/cont...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/takamin55/articles/8b119e13bf9f09"
-                        open
-                      >
-                        <summary class="article-expander__title">pythonコンソールで矢印（←↑など）が効かない場合の対処法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takamin55/articles/8b119e13bf9f09">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--v8hEy_kj--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:takamin55%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:python%25E3%2582%25B3%25E3%2583%25B3%25E3%2582%25BD%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%25A7%25E7%259F%25A2%25E5%258D%25B0%25EF%25BC%2588%25E2%2586%2590%25E2%2586%2591%25E3%2581%25AA%25E3%2581%25A9%25EF%25BC%2589%25E3%2581%258C%25E5%258A%25B9%25E3%2581%258B%25E3%2581%25AA%25E3%2581%2584%25E5%25A0%25B4%25E5%2590%2588%25E3%2581%25AE%25E5%25AF%25BE%25E5%2587%25A6%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS15WkduQVNQaS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VkMGVlM2MxZTMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>pythonをコンソール上で実行しているときに、カーソル移動やコマンド履歴をたどるために矢印を入力したところ、
-[[D^
-みたいな感じで（うろ覚え）カーソルが移動してくれない場合の対処法。
-以下をインストール。※なおUbuntu 20.04です。
-$ pip install gnureadline
-以下はだめでした！！
-こちらの方法だとpythonコマンド自体が動かなくなった。（Cか何かの方でエラーになる）
-$ sudo apt install libreadline-dev
-$ pip install readline
-公式の方にも非推奨だと書いてある。
-この方法を推奨する記事が多数出...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/momiji777/articles/df333c6f0f6c2d"
-                        open
-                      >
-                        <summary class="article-expander__title">オフラインでPythonライブラリをインストールする方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/momiji777/articles/df333c6f0f6c2d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--7UFjyGJ_--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:momiji777%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2582%25AA%25E3%2583%2595%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%25B3%25E3%2581%25A7Python%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2582%2592%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1ZUzZGSkJSSi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAzZjA4ODEzYWEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>会社や学校でPythonを利用する際、オフライン環境やプロキシの問題でライブラリをインストールできない状況に遭遇した方もいると思います。
-本動画では、そのような状況を回避しながらインストールする方法をご紹介します。
-https://youtu.be/w2U6B5AXI7A</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-09-02 datetime="2022-09-02T16:18:32.000Z">2022-09-02</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-09-02 datetime="2022-09-02T16:18:32.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/pluie/articles/20220902-pdb-analysis-by-biopython"
-                        open
-                      >
-                        <summary class="article-expander__title">BiopythonによるPDBファイル解析</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/pluie/articles/20220902-pdb-analysis-by-biopython">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--5MjIqtpF--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:pluie%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Biopython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258BPDB%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E8%25A7%25A3%25E6%259E%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUl0YnZta0FhaDlYNi1TN0FjeGU0YjFmQzVqWWY4ME1MM3hnY0NBQzRRb0Q9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-本記事では、Bioinformaticsに用いられるPythonライブラリであるBiopythonを用いて、PDBファイルを解析する基本的な方法について記す。
-
- 対象とするPDBファイル
-PDB ID&#x3D;2A0Lを対象として解析を試みる。ちなみに、このPDBを選択した理由は特にない。
-
- BiopythonによるPDBファイル解析
-
- Structure
-PDBファイルはgzip圧縮されているため、以下のように
-import gzip
-from Bio.PDB import PDBParser
-    parser &#x3D; PDBParser()
-    with gzip.o...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/catminusminus/articles/d2a72b522c9554"
-                        open
-                      >
-                        <summary class="article-expander__title">Algebraic Effectsで実現するシンプルなDI</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/catminusminus/articles/d2a72b522c9554">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ArctxYTM--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Catminusminus%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Algebraic%2520Effects%25E3%2581%25A7%25E5%25AE%259F%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%25E3%2582%25B7%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AB%25E3%2581%25AADI%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1pRXQxOVdORy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzExNDI4ZDQ1MTUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>成果物
-まずは成果物から紹介します。これが動きます。
-from typing import Protocol
-
-class Animal:
-    def __init__(self):
-        self._sound &#x3D; use(AnimalSound)
-
-    def make_sound(self):
-        self._sound.make_sound()
-
-
-class AnimalSound(Protocol):
-    def make_sound(self):
-        ...
-
-
-class CatSound:
-    def make_so...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mimoc/articles/a7ad0b020c55b3"
-                        open
-                      >
-                        <summary class="article-expander__title">モールス信号メッセンジャーデバイス : mobus</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mimoc/articles/a7ad0b020c55b3">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--D0Ks-23D--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mimoc%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2583%25A2%25E3%2583%25BC%25E3%2583%25AB%25E3%2582%25B9%25E4%25BF%25A1%25E5%258F%25B7%25E3%2583%25A1%25E3%2583%2583%25E3%2582%25BB%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%25BC%25E3%2583%2587%25E3%2583%2590%25E3%2582%25A4%25E3%2582%25B9%2520%253A%2520mobus%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1GRGM4dHB0NS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E2MGQ4MTM3MDkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>モールス信号メッセンジャーデバイス : mobus
-
-
- モールス信号を入力してメッセージを送り合う、&#x27;mobus&#x27;というデバイスを作成しました。
-
- &#x27;mobus&#x27;で何ができるの？
-
-
-mobus同士で、インターネットを通じてメッセージのやりとりを行う事ができます。
-
-
-mobusからLINEへメッセージを送る事ができます。
-
-
-LINEにメッセージを送信する様子
-
-
-
-
-mobus同士でのメッセージのやり取りの様子
-
-
-
-
-Instagramでも動作する様子をUPしています！
-
-
-mobusの操作方法
-
-
-
-
- 作ろうと思ったきっかけ
-現代ではアマチュア無線を行なっている方以外だ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/uekou/articles/dbd52f80aec49a"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonのasyncio.Queueを使ってみる（非同期処理）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/uekou/articles/dbd52f80aec49a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--iGKGhUS0--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:uekou%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AEasyncio.Queue%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25EF%25BC%2588%25E9%259D%259E%25E5%2590%258C%25E6%259C%259F%25E5%2587%25A6%25E7%2590%2586%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1FOEhZZElrdS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY0YjhlZGJkNTEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>やること
-Pythonで非同期処理を行うためのモジュールであるasyncioに含まれるasyncio.Queueを利用して、簡単なキューのput/getプログラムを作成します。
-今回は非同期関数としてキューにデータを投入する役割をする関数をproducer、キューからデータを取得して処理する役割をする関数をconsumerとします。
-「とりあえずasyncio.Queueを使う」ことを目的として、producer/consumerの仕様はそれぞれ下記のようにします。
-producer
-計15個のタスクを順番に投入する。
-consumer
-その時点でキューに存在するタスクを取得し、fo...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -7070,8 +6930,8 @@ consumer
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/3167060490">
-        <time id="build-timestamp" datetime="2022-10-02T02:45:30.969Z">2022-10-02T02:45:30.969Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/3171047809">
+        <time id="build-timestamp" datetime="2022-10-03T02:09:40.498Z">2022-10-03T02:09:40.498Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
