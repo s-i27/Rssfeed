@@ -2,10 +2,127 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-10-05T02:22:50.190Z</updated>
+    <updated>2022-10-06T02:18:00.923Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[【pandas】fillnaがうまくいかなかった話]]></title>
+        <id>https://zenn.dev/tsuji_u/articles/39f6bafc43857a</id>
+        <link href="https://zenn.dev/tsuji_u/articles/39f6bafc43857a"/>
+        <updated>2022-10-06T01:19:24.000Z</updated>
+        <summary type="html"><![CDATA[欠損地NaNを置換したかった
+pandasのfillnaメソッドを使えばNaN値が置換できるとのことで試してみた。
+今回は特定の列に含まれるNaNを置換したかったので次のコードを実行した。
+# これだとうまくいかない
+df.fillna({'header_name': 0.0})
+上記では実行した後にNaNが残ったままになっていた。
+原因はメソッド実行したものを代入していなかったから。
+正しくは次のようにすることで正しく置換される。
+# 置換したDFを代入しなおす
+df = df.fillna({'header_name': 0.0})]]></summary>
+        <author>
+            <name>t_u</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Zappaを利用してAWSへFlaskのアプリケーションをデプロイ。NotFoundExceptionを解決する方法]]></title>
+        <id>https://zenn.dev/kobakichi/articles/47d8d1e06c9189</id>
+        <link href="https://zenn.dev/kobakichi/articles/47d8d1e06c9189"/>
+        <updated>2022-10-05T19:53:50.000Z</updated>
+        <summary type="html"><![CDATA[参考記事
+https://forum.serverless.com/t/invalid-api-identifier-specified/8498/2
+
+ 動作環境
+zsh バージョン
+zsh 5.7.1 (x86_64-apple-darwin19.0)
+
+OS
+macOS Catalina 10.15.7 (19H15)
+Kernel Version: Darwin 19.6.0
+
+Zappa バージョン
+0.55.0
+
+Flask バージョン
+Python 3.7.3
+Flask 2.2.2
+Werkzeug 2.2.2
+
+ 内容
+Zappaというフレームワークを利用して、AW...]]></summary>
+        <author>
+            <name>kobakichi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WhipserをGPUで動かす環境をDocker Conposeでつくる]]></title>
+        <id>https://zenn.dev/yuarth/articles/dc81a0fa15748b</id>
+        <link href="https://zenn.dev/yuarth/articles/dc81a0fa15748b"/>
+        <updated>2022-10-05T17:09:00.000Z</updated>
+        <summary type="html"><![CDATA[概要
+OpenAIがオープンソースとして公開したSpeech to Textを行う深層学習モデルのWhisperをPython＋GPUで動かす環境をDocker Composeで作成するまでの手順です。
+
+ 想定環境
+Windows11
+GPU:GeForce RTX 2080 Ti
+GPUはドライバや後述するdockerfileでベースとするイメージに影響します。
+ディレクトリ構成
+.
+├── main
+│   └── recognize.py # whisperを動かすプログラム
+├── audio
+│   └── input.mp3 # 解析する音声ファイル
+├── Docke...]]></summary>
+        <author>
+            <name>yuarth</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Python] Tkinter、アプリ起動時にバックグラウンドで無限ループ処理を開始する。]]></title>
+        <id>https://zenn.dev/milkystack/articles/c7072bbdb9ca09</id>
+        <link href="https://zenn.dev/milkystack/articles/c7072bbdb9ca09"/>
+        <updated>2022-10-05T13:24:05.000Z</updated>
+        <summary type="html"><![CDATA[語彙力ないのでタイトル迷った。
+これを求めて検索から来てくれた人なら理解できるはず、、、
+threadingを使う必要はないです。
+import tkinter as tk
+
+root = tk.Tk()
+root.title("アプリ名")
+root.geometry("400x200")
+
+# ループ処理 ==========================
+def getLoop():
+	print("ループ")
+	root.after(2000, getLoop) #二秒後にgetLoop実行
+root.after(2000, getLoop) #これ！ #二秒後にgetLoop...]]></summary>
+        <author>
+            <name>milkystack</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Twitterのトレンドの起点を探るPythonのプログラム]]></title>
+        <id>https://zenn.dev/autumn_nsn/articles/22be6dc5396453</id>
+        <link href="https://zenn.dev/autumn_nsn/articles/22be6dc5396453"/>
+        <updated>2022-10-05T05:39:27.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Twitterを使っていると、時々不謹慎なトレンドのハッシュタグを見かけることがありますよね。
+「#○○の辞職を求めます」、「#○○逮捕で新年を迎えたい」みたいな・・・
+このような作為的なトレンドって誰が仕掛けているんだろう、と思ってこのようなプログラムを作ってみました。
+
+ 開発環境
+Windows10
+Visual Studio 2019 Community.
+Python: 3.9.10
+Pandas: 1.4.1
+tweepy: 4.6.0
+個別にインストールが必要なライブラリは「Pandas, tweepy」の２つです。
+また、今回のプログラムでは、事前に「Twi...]]></summary>
+        <author>
+            <name>autumn_nsn</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[アイスクリームの季節を考慮した売上予測]]></title>
         <id>https://zenn.dev/smrids/articles/0e0f458d46f048</id>
@@ -3799,172 +3916,6 @@ def main():
     now = date...]]></summary>
         <author>
             <name>kinnkinn</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Scipy の Lomb-Scargle ピリオドグラムを使う]]></title>
-        <id>https://zenn.dev/chimuichimu/articles/954fc680a6252f</id>
-        <link href="https://zenn.dev/chimuichimu/articles/954fc680a6252f"/>
-        <updated>2022-09-06T13:27:52.000Z</updated>
-        <summary type="html"><![CDATA[概要
-時系列データの周期性解析で Lomb-Scargle 法を使う場面が最近あった。
-Lomb-Scargle 法はいくつかのライブラリで提供されているようだが、今回は Scipy で提供されるモジュールを使用した。備忘録として使用法をメモしておく。
-
- Lomb-Scargle ピリオドグラムとは
-Lomb-Scargle ピリオドグラム（Lomb (1976)[1], Scargle (1982)[2]）とは、不規則にサンプリングされた時系列データから、周期性を見つけ出す統計的手法である。
-周期性の解析に用いられる手法として、高速フーリエ変換（Fast Fourier Tran...]]></summary>
-        <author>
-            <name>chimuichimu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[40代プログラミング初心者がPython＋FlaskでQiitaとZenとはてぶのトレンドまとめサイト作ってみた]]></title>
-        <id>https://zenn.dev/usagipy/articles/f53eade58f1ac3</id>
-        <link href="https://zenn.dev/usagipy/articles/f53eade58f1ac3"/>
-        <updated>2022-09-06T13:08:00.000Z</updated>
-        <summary type="html"><![CDATA[作ったサイト名：話題のテック　下がサイトです
-話題のテック
-https://wadainotech.com
-
- 40代のプログラミング初心者が8ヶ月目webサービスを作りたい
-Webサービスとかめんどくさいだろうなぁ。。。どうやってつくるのかなぁ
-よし、本を買おう！買いました
-Pythonではじめる Webサービス&スマホアプリの書きかた・作りかた
-https://amzn.to/3TiTYuj
-この本のコンセプト
-リリースしろ
-たくさん作れ
-1/3を読んだ時点でとりあえず作ろうと思いました
-この本はpythonのフレームワークのFlaskを使っています。
-Flaskってなんて読...]]></summary>
-        <author>
-            <name>usagipy</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【図解】keras でモデルにデータを入れて結果をみてみる]]></title>
-        <id>https://zenn.dev/nekoallergy/articles/keras-create-model02</id>
-        <link href="https://zenn.dev/nekoallergy/articles/keras-create-model02"/>
-        <updated>2022-09-06T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-前回は、Keras でモデルを作成し、層を追加することができました。
-↓ 前回の内容
-https://zenn.dev/nekoallergy/articles/keras-create-model01
-作成したモデルはまだ不完全ですが、既に動かせる状態です。つまり、このモデルに何かのデータを入力すると、何かしらの出力を返してくれます。
-まだ学習をしていないので出力される数値に意味はありませんが、モデルの動作やデータ形状を確認するために、順伝搬させてみましょう。
-
- 今回の目的
-
-モデルの動作や、データ形状を確認する
-モデルにデータを入れて、出力される結果を見てみる
-
-
-...]]></summary>
-        <author>
-            <name>NekoAllergy</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Macbook Air M2（mem16GB）のローカル環境でStable Diffusionを動かす（2022.9.6版）]]></title>
-        <id>https://zenn.dev/hevo2/articles/b126d593d0f754</id>
-        <link href="https://zenn.dev/hevo2/articles/b126d593d0f754"/>
-        <updated>2022-09-06T06:52:47.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-
-Qiitaに書いた以下の記事と同様のもの
-
-Macbook Air M2（mem16GB）のローカル環境でStable Diffusionを動かす（2022.9.6版）
-
-
-python3必須。minicondaを利用。学習済みモデルファイル（約4GB）は事前にダウンロードしておくこと
-1画像出力で3分30秒くらい。
-
-
- 参考ページ
-
-使うリポジトリ
-
-https://github.com/lstein/stable-diffusion
-
-
-参考としたドキュメント
-
-https://github.com/lstein/stable-diffusion/blob/main...]]></summary>
-        <author>
-            <name>hevo2</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Intro2DL : Pytorchの基礎]]></title>
-        <id>https://zenn.dev/yoshida0312/articles/1504c751190d09</id>
-        <link href="https://zenn.dev/yoshida0312/articles/1504c751190d09"/>
-        <updated>2022-09-06T06:45:33.000Z</updated>
-        <summary type="html"><![CDATA[Pytorch
-本リポジトリでは、研究用途を中心に多く使用されているPytorchの基礎をまとめようとしたのですが、UvA Deep Learning Tutorials https://github.com/phlippe/uvadlc_notebooks
-をほとんど日本語化しただけのようになってしまいました。今後は、このチュートリアルをベースに追加の関数やモデルも実装しながら拡充していこうと思います。
-import numpy as np
-バージョンの確認
-import torch
-
-print(torch.__version__)
-1.12.1
-
-seedの設定
-pytorch...]]></summary>
-        <author>
-            <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[discord.py v2.0でハイブリッドコマンド]]></title>
-        <id>https://zenn.dev/yaakiyu_s/articles/43deb462a663c7</id>
-        <link href="https://zenn.dev/yaakiyu_s/articles/43deb462a663c7"/>
-        <updated>2022-09-06T05:05:28.000Z</updated>
-        <summary type="html"><![CDATA[discord.py2.0でハイブリッドコマンドを使う。
-discordにはスラッシュコマンドと呼ばれる機能があります。botとユーザーがメッセージを使わなくてもやりとりできる機能です。
-また、discord.pyには古くから「コマンド」の概念がありました。!pingというメッセージを送信するとPong!って言われて、!helpだとI won't help you!って言われる、みたいな。
-(helpしてくれないbotは意地悪なので使いたくないですが())
-それを簡単に作るために作られたフレームワークがdiscord.ext.commandsです。
-このcommandsの機能(メッセ...]]></summary>
-        <author>
-            <name>yaakiyu_school</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Stable Diffusionのインストール手順書(GCP版)]]></title>
-        <id>https://zenn.dev/tfutada/articles/717b60a6e7961a</id>
-        <link href="https://zenn.dev/tfutada/articles/717b60a6e7961a"/>
-        <updated>2022-09-06T04:02:50.000Z</updated>
-        <summary type="html"><![CDATA[Stable Diffusionの関連ブログがあちこちに量産されていますね。実際のサービスにどう落とし込みマネタイズするか、色々なアイデアが浮かびそうです。
-この記事では機械学習をやったことのないエンジニアを想定した、GCPのGCE(ディープラーニングVM)を使用した手順書になります。
-
-Stable Diffusionとは、プロンプトと称するテキストから画像を生成するAIです。CompVis, Stability AI, LAIONの研究者、エンジニアによって開発されました。　Stability AIのEmadがTwitterで活発に情報発信しています。
-
-!
-普段からクラウド環境で開...]]></summary>
-        <author>
-            <name>TF</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Elasticsearch をとりあえず手元で動かしたい]]></title>
-        <id>https://zenn.dev/ktoyod/articles/803b9f1b2860b6</id>
-        <link href="https://zenn.dev/ktoyod/articles/803b9f1b2860b6"/>
-        <updated>2022-09-06T00:56:48.000Z</updated>
-        <summary type="html"><![CDATA[Links
-
-Install Elasticsearch with Docker | Elasticsearch Guide [8.3] | Elastic
-Python Elasticsearch 基本的な使い方まとめ - Qiita
-
-
- 概要
-Elasticsearch を触ってみた。Elasticsearch が何か、という点については他の記事に譲るとしてこの記事では、とりあえず手元で動かすことをスコープにする。
-具体的には、
-
-Docker を使って Elasticsearch を起動する
-Docker を使って Kibana を起動し、Elasticsearch の中身を...]]></summary>
-        <author>
-            <name>ktoyod</name>
         </author>
     </entry>
 </feed>
