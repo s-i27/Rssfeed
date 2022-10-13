@@ -2,10 +2,106 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-10-12T02:41:43.064Z</updated>
+    <updated>2022-10-13T02:35:15.210Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[【Python】VSCodeが型推論結果を自動で表示してくれるようになった【TypeHinting】]]></title>
+        <id>https://zenn.dev/yosemat/articles/36638f17e9ded8</id>
+        <link href="https://zenn.dev/yosemat/articles/36638f17e9ded8"/>
+        <updated>2022-10-12T14:57:09.000Z</updated>
+        <summary type="html"><![CDATA[VSCodeの型推論結果がリアルタイムに表示されるようになりました！
+まずsettings.jsonを開き、次の記述を加えます。
+{
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+}
+コードを書きます。
+def double(x: int):
+    return x * 2
+
+
+def double_float(x: int):
+    y = float(x)
+    return y * 2
+
+
+x...]]></summary>
+        <author>
+            <name>Yosemat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pyゆき「なんだろう、独自ルールでコーディングするのやめてもらっていいですか」]]></title>
+        <id>https://zenn.dev/web_tips/articles/b4f24f4c9abf0d</id>
+        <link href="https://zenn.dev/web_tips/articles/b4f24f4c9abf0d"/>
+        <updated>2022-10-12T13:46:00.000Z</updated>
+        <summary type="html"><![CDATA[「なんだろう、独自ルールでコーディングするのやめてもらっていいですか」
+本記事ではPythonでのコーディング規約(PEP8)についてまとめていきます。
+プログラミングはコードの効率性ももちろん大事ですが、改修などを考えていくと可読性もとても重要なものとなっていきます。コードを書いた日は当然のように覚えていますが、1ヶ月後、半年後、1年後はなかなか覚えていないものです。
+またそのときにクソコードやなぁと思うのも少なくないかと思います。
+そういうのをできるだけ減らすためにプログラミング言語にはコードのスタイルを一貫させるためにコーディング規約が設けられています。
+ただし、以下のような場...]]></summary>
+        <author>
+            <name>Tomoki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[chromedriver のバージョンを Chrome に同期させる]]></title>
+        <id>https://zenn.dev/bugph0bia/articles/cb1cc704808ccf</id>
+        <link href="https://zenn.dev/bugph0bia/articles/cb1cc704808ccf"/>
+        <updated>2022-10-12T13:40:57.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Selenium で GoogleChrome を操作する際、その橋渡しの役割となる chromedriver をインストールしておく必要がありますが、このとき問題になるのが、chromedriver のバージョンを操作対象の GoogleChrome のバージョンに合わせる必要があるということです（経験上、メジャーバージョンが合っていれば良いようですが）。
+通常 GoogleChrome は自動的にバージョンアップが行われますので、昨日まで動いていた Selenium が今日は動かないという事態が発生し、よく困っていました。
+
+ 先に結論
+これを解決するために、chrom...]]></summary>
+        <author>
+            <name>bugph0bia</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PDFKITがwkhtmltopdfを見つけられないことがある]]></title>
+        <id>https://zenn.dev/takamichie/articles/ab18a826affbf9</id>
+        <link href="https://zenn.dev/takamichie/articles/ab18a826affbf9"/>
+        <updated>2022-10-12T08:23:29.000Z</updated>
+        <summary type="html"><![CDATA[ここからの移植です。
+
+PDFKITがwkhtmltopdfを見つけられないことがある - Qiita
+
+Pythonのライブラリ、pdfkitを使っていると、wkhtmltopdfがインストール済みの環境にもかかわらず、「No wkhtmltopdf executable found」というエラーでPDF作成に失敗することがあります。
+答えはPDFKITの構成ファイルにあります。
+
+pdfkit\configuration.py
+        if not self.wkhtmltopdf:
+            if sys.platform == 'win32':
+      ...]]></summary>
+        <author>
+            <name>高見知英</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python 画像から文字認識(Tesseract)]]></title>
+        <id>https://zenn.dev/watakarinto/articles/c491d92da70219</id>
+        <link href="https://zenn.dev/watakarinto/articles/c491d92da70219"/>
+        <updated>2022-10-12T03:33:31.000Z</updated>
+        <summary type="html"><![CDATA[インストール
+今回は、Tesseractを使って文字認識行います。
+brewを使ってインストールするので、事前に入れておいてください。
+関連：M2 MacにHomebrewをインストール
+Tesseractを使うにあたって、ラッパー(pytesseract)を使いたいと思います。
+下記のコマンドでそれぞれインストールします。
+brew install tesseract
+pip3 install pytesseract
+
+ 日本語対応
+標準では日本語に対応していないため、必要なファイルをダウンロードします。ファイルは「jpn.traineddata」と「jpn_vert.traine...]]></summary>
+        <author>
+            <name>wataree</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【徹底解説】『良いコード/悪いコードで学ぶ設計入門』の要約と活用方法]]></title>
         <id>https://zenn.dev/nameless_sn/articles/point_mino_techbook</id>
@@ -3806,108 +3902,6 @@ https://huggingface.co/docs/transformers/v4.21.3/en/pipeline_tutorial
 pipeline()を使えば、テキスト生成、画像のセグメンテーション、音声分類など...]]></summary>
         <author>
             <name>とりごん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[知らないプログラミング言語のcodeを読む裏技?]]></title>
-        <id>https://zenn.dev/jim_soros/articles/79570a92519342</id>
-        <link href="https://zenn.dev/jim_soros/articles/79570a92519342"/>
-        <updated>2022-09-13T10:28:28.000Z</updated>
-        <summary type="html"><![CDATA[上司や友達から知らないプログラミング言語のcodeを見せられた時には
-無駄にcodeを読まずコメントアウトを見つけよう。
-そして、コメントアウトの部分を飛ばし飛ばし読み上げよう。
-すると、上司や友達はこいつ出来るやん！！ってなる。
-その後、こっそりググって詳細を調べよう。
-以上。こうして世界は回っている。
-python))
-#単数行コメントアウト
-"""複数行コメントアウト""" 
-sh))
-#単数行コメントアウト 
-<<"#__comment__複数行コメントアウト"#__comment__
-powershell))
-#単数行コメントアウト
-<#複数行コメントアウト#...]]></summary>
-        <author>
-            <name>jim_soros</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GCPを利用した基盤構築及びデータ取得作業の定期実行について]]></title>
-        <id>https://zenn.dev/kz2021/articles/a9380b23732f30</id>
-        <link href="https://zenn.dev/kz2021/articles/a9380b23732f30"/>
-        <updated>2022-09-13T06:33:53.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-これは、Web APIとGCPを利用し5日間の天気データ取得の作業を自動化した記事です。
-これらの記事を参考にしています。
-https://qiita.com/atsuken/items/23c0f0395514cafaf47d
-https://qiita.com/matsu0130/items/4849ebb3681e827274d3
-
- 必要なもの・作業の流れ
-・OpenweathermapのAPIキー
-・GCPのアカウント（要はgoogleアカウント）
-Openweathermapは、世界の天気に関する情報を取得することが出来るサービスです。
-https://open...]]></summary>
-        <author>
-            <name>kz2021</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[オブジェクト指向プログラミング四種盛り(py,java,c#,js)]]></title>
-        <id>https://zenn.dev/jim_soros/articles/0a218bcdb42912</id>
-        <link href="https://zenn.dev/jim_soros/articles/0a218bcdb42912"/>
-        <updated>2022-09-13T03:59:14.000Z</updated>
-        <summary type="html"><![CDATA[●オブジェクト指向プログラミング四種盛り。
-　味比べ。
-　言語間の違いを知ることでプログラミングを深く学ぶ。
-　クラス変数とインスタンス変数について違いが大きい。。。などなど
-1)) python,キーボード入力の文字列を繋げて出力する
-class print_text:
-    #text = "jim_soros" #class var
-
-    def __init__(self) -> None:
-        self.text = "" #instance var
-
-    def input_print_text(self) -> str:
-        n...]]></summary>
-        <author>
-            <name>jim_soros</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[KLab Server Side Camp 第 3 回 に参加してきました]]></title>
-        <id>https://zenn.dev/hiroya_w/articles/c023c54c32f8a9</id>
-        <link href="https://zenn.dev/hiroya_w/articles/c023c54c32f8a9"/>
-        <updated>2022-09-13T01:06:49.000Z</updated>
-        <summary type="html"><![CDATA[KLab Server Side Camp 第 3 回 に参加してきました
-9/1 ~ 9/7 の 5 日間、KLab Server Side Camp 第 3 回に参加してきました。
-
-KLab Server Side Camp（クラブサーバサイドキャンプ）は、サーバサイド特化型の技術系インターンです。
-本イベントの為にオリジナルで自社開発したスマホ向けゲーム（音ゲー）を題材に、そのゲームアプリの中でサーバサイドの技術がどのように使われているかを、講義形式で進めつつ実際に課題にも取り組み手を動かしてもらいながら経験を積むことができるサーバサイド特化型のインターンです。
-
-http:...]]></summary>
-        <author>
-            <name>Hiroya-W</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonで型ヒントがついた関数のモックを作る]]></title>
-        <id>https://zenn.dev/ktnyt/articles/78cc20dc57a154</id>
-        <link href="https://zenn.dev/ktnyt/articles/78cc20dc57a154"/>
-        <updated>2022-09-12T22:40:03.000Z</updated>
-        <summary type="html"><![CDATA[「テストのコードも例外なく型ヒントをつけたいなあ」
-そんな気持ちでPythonを書いていたところ、型ヒントがついている関数のモックを作れないかなという興味からやってみたところなんとなくそれっぽいものができたのでご紹介します。
-やりたいことのイメージとしては
-function_mock = FunctionMock(引数).returns(返り値)
-ret = function_mock(値) # ここでassertionが走る
-use(ret) # 指定した返り値が帰っている
-
- モック本体のコード
-from __future__ import annotations
-
-from typ...]]></summary>
-        <author>
-            <name>Mirei (Kotone) Itaya</name>
         </author>
     </entry>
 </feed>
