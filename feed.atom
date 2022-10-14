@@ -2,10 +2,353 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-10-13T02:35:15.210Z</updated>
+    <updated>2022-10-14T02:46:31.694Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Python3.8をオフライン環境へインストール]]></title>
+        <id>https://zenn.dev/toshidot59/articles/af1896b173696e</id>
+        <link href="https://zenn.dev/toshidot59/articles/af1896b173696e"/>
+        <updated>2022-10-14T02:22:53.000Z</updated>
+        <summary type="html"><![CDATA[Python3.8をオフライン環境へインストール
+
+ RHEL7 環境
+Python3.8を外部に接続出来ない環境へインストールする必要があったのでメモ
+
+ オンライン環境で準備
+まずは、外部へ繋がる環境で準備
+
+ リポジトリ確認
+subscription-manager repos --list | grep -5 rhel-server-rhscl-7-rpms
+
+ リポジトリを有効にする
+subscription-manager repos --enable rhel-server-rhscl-7-rpms
+
+ ダウンロード
+mkdir /tmp/rh-python38_rep...]]></summary>
+        <author>
+            <name>toshi.59</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux環境にPython3.8をインストール]]></title>
+        <id>https://zenn.dev/toshidot59/articles/c7259b6934c5ed</id>
+        <link href="https://zenn.dev/toshidot59/articles/c7259b6934c5ed"/>
+        <updated>2022-10-14T00:44:53.000Z</updated>
+        <summary type="html"><![CDATA[Python3.8 インストール
+
+ AL2 環境の場合
+
+ インストール
+sudo amazon-linux-extras install -y python3.8
+python バージョン確認
+python3.8 --version
+
+ alias設定
+pyhonコマンドで実行するバージョンを変更する。
+echo 'alias python=python3.8' >> ~/.bashrc
+source ~/.bashrc
+python バージョン確認
+python -V
+
+ pip
+pip バージョン確認
+pip3.8 --version
+
+ pipenv インストー...]]></summary>
+        <author>
+            <name>toshi.59</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[挫折しない0円Python勉強法]]></title>
+        <id>https://zenn.dev/pienthon/articles/b4defc6b1d4b9a</id>
+        <link href="https://zenn.dev/pienthon/articles/b4defc6b1d4b9a"/>
+        <updated>2022-10-13T17:24:06.000Z</updated>
+        <summary type="html"><![CDATA[今までPythonを勉強してきて、うまいこと行かず挫折した経験がかなりあります。
+これから勉強を始める方が効率的に勉強できるように、勉強法を簡単にまとめてみました。
+
+ 1. GoogleColabを使う
+プログラミング学習において、初心者が環境構築に時間を使うのは無意味です。
+学習はなかなか始まらないわ、インストールでエラーばっかり出て私には向いてない！むり！ って思っちゃうわで散々です。
+ある程度学習が進んで、Colabじゃできないことに直面した時にAnacondaとかインストールすれば良いと思います。
+Googleドライブに入って適当にフォルダを作り、その中にipynbファイルを作...]]></summary>
+        <author>
+            <name>にゃーん(Pienthon)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python:各桁の和]]></title>
+        <id>https://zenn.dev/pykiyotan/articles/08c1d9602c62b3</id>
+        <link href="https://zenn.dev/pykiyotan/articles/08c1d9602c62b3"/>
+        <updated>2022-10-13T12:46:00.000Z</updated>
+        <summary type="html"><![CDATA[pythonを独学で初めて2ヵ月。
+アウトプットとしてpaizaのスキルチェックとAtCorderを今月から開始。
+paizaはAがタイムオーバーor問題の意味がちんぷんかんぷんで足踏み状態。
+さらなる先に進むために基本的なアルゴリズムの勉強開始。
+業務でアルゴリズム実装の必要性をあまり感じたことないが、知らないよりは知ってたほうが色々よかろうということで。(そもそも業務プログラムで自作アルゴリズムを作成することなかったような。。)
+車輪の再発明と卑下しても、「実装できてもあえて実装しない」のと「実装さえできない」との差は天と地との差があるかも？？
+
+本日はAtCorderの
+
+にチャレ...]]></summary>
+        <author>
+            <name>pykiyotan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[なぜPyQtGraphを使うのか]]></title>
+        <id>https://zenn.dev/mashi_z/articles/why-use-pyqtgraph</id>
+        <link href="https://zenn.dev/mashi_z/articles/why-use-pyqtgraph"/>
+        <updated>2022-10-13T12:43:29.000Z</updated>
+        <summary type="html"><![CDATA[これは何？
+データを扱う際にはPythonを使用することが多く、ほとんどのケースでPyQtGraphを用いて可視化を行っています。
+matplotlibやPlotlyなど、さまざまなツールがあるのになぜPyQtGraphを使うのか考えてみました。
+
+ 結論
+まずは結論です。
+いろいろと考えた結果、トライアンドエラーが必要な用途を効率良く行うためにPyQtGraph使っているとの認識に至りました。
+私自身の使い方によるところが大きいのですが、ぐりぐりしたり、時間軸の表示領域を変更したり、いろいろな角度でデータを眺めるための操作が直感的で、動作もキビキビしていて心地よいからというのが最大...]]></summary>
+        <author>
+            <name>mashi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ivy が面白い]]></title>
+        <id>https://zenn.dev/sho7noka/articles/dfa590f88dbb11</id>
+        <link href="https://zenn.dev/sho7noka/articles/dfa590f88dbb11"/>
+        <updated>2022-10-13T09:38:49.000Z</updated>
+        <summary type="html"><![CDATA[ivyとはなにか
+https://github.com/unifyai/ivy
+機械学習の統一を目指すフレームワークです。現在、JAX, TensorFlow, PyTorch, Numpy をサポートしています。JAXはNumpy互換なので、実質的に Tensorflow&Pytorch の共通APIのフレームワーク(かなり乱暴なまとめ方)です。
+研究のペーパーでよく見るのはPytorchですが、産業ではTensorflowがよく使われるようです。
+下の表にもありますが、開発者の設計思想を読むと「書き換えの手間」が想像以上に労力を必要とする文面が多く見受けられます。
+
+余談...]]></summary>
+        <author>
+            <name>sho7noka</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PySide6にてQPlainTextEdit内のPythonコードをハイライト表示]]></title>
+        <id>https://zenn.dev/mashi_z/articles/syntax-highlighter</id>
+        <link href="https://zenn.dev/mashi_z/articles/syntax-highlighter"/>
+        <updated>2022-10-13T09:03:47.000Z</updated>
+        <summary type="html"><![CDATA[これは何？
+QPlainTextEdit内のPythonコードをハイライト表示できるようにした記録です。
+おまけとして
+
+フォントをHackGenに変更した画面の表示
+QPlainTextEdit内の編集時に、Tabキーでスペースを4つ挿入する方法
+
+を後ろの方に記述しております。
+PySide6にて、グラフ表示を行う以下のアプリを作成したところ、Pythonコードなのに表示が白一色で見づらいなと思ったので実装してみました。
+
+ということで、本記事は、テキスト領域を以下のようにハイライト表示するまでの記録です。
+
+本記事にて紹介するのは、pyqtgraphのライブラリに依存した方法に...]]></summary>
+        <author>
+            <name>mashi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Google Colaboratory で Python 3.9 を使い、 Poetry で管理する]]></title>
+        <id>https://zenn.dev/ningensei848/articles/poetry-on-google-colab</id>
+        <link href="https://zenn.dev/ningensei848/articles/poetry-on-google-colab"/>
+        <updated>2022-10-13T08:30:01.000Z</updated>
+        <summary type="html"><![CDATA[TL; DR
+以下の Gist に全部書いてあるので、こちらを見よ：
+
+
+ Background
+「AI 絵師」なるものの勃興により、手軽に実行できる python 環境の需要は高止まり状態にある。
+Google Colaboratory は、計算環境のみならずクラウドストレージ（Google Drive）との相性も抜群で、誰もが必要不可欠な存在として認識している。
+一方で、内部環境はかなり悪化しつつある； もとい、時代の変化に追随しきれていない部分がある。
+例えば python について、バージョン 3.11 が GA しようかという段でも未だカビが生えかけた 3.7 を使っている...]]></summary>
+        <author>
+            <name>kiai</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python Dependency Injector: Configuration初期化の罠]]></title>
+        <id>https://zenn.dev/shimat/articles/7c8249e2ac7706</id>
+        <link href="https://zenn.dev/shimat/articles/7c8249e2ac7706"/>
+        <updated>2022-10-13T03:03:39.000Z</updated>
+        <summary type="html"><![CDATA[Configurationプロバイダについて
+過去の記事[1] [2] でも紹介しているPythonのDIライブラリ、 Dependency Injector です。
+Configurationプロバイダにより、JSON・YAML・INI・環境変数等の設定値を読み込むことができます。
+https://python-dependency-injector.ets-labs.org/providers/configuration.html#loading-from-an-environment-variable
+以下ではJSONを例にとって進めます。読み込み方には2通りあります。
+
+Co...]]></summary>
+        <author>
+            <name>shimat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python メモ　よさそうな記事　適当]]></title>
+        <id>https://zenn.dev/issei_sub/articles/953ba01386cb80</id>
+        <link href="https://zenn.dev/issei_sub/articles/953ba01386cb80"/>
+        <updated>2022-10-13T02:56:29.000Z</updated>
+        <summary type="html"><![CDATA[https://www.haya-programming.com/entry/2018/03/31/174915
+https://qiita.com/naoya--nakamori/items/0f4e09b50a40955aae5d
+vs code 禁止な理由]]></summary>
+        <author>
+            <name>issei_sub</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[他言語に移行するまえのdjango　まとめ]]></title>
+        <id>https://zenn.dev/issei_sub/articles/781fdbe01e8d93</id>
+        <link href="https://zenn.dev/issei_sub/articles/781fdbe01e8d93"/>
+        <updated>2022-10-13T02:54:00.000Z</updated>
+        <summary type="html"><![CDATA[移行する理由
+そもそもDjangoを始めた理由がある会社の業務改善ツールを作ろうと考えていたが、
+より会社に適したネイティブアプリの作成の方が良いと考えたため
+
+ 環境構築
+1 pythonをインストール
+2 Vscodeをインストール（（ライブラリを入れておくと楽　Prettierなど
+3 仮想環境の作成（venv)　以下の通りに実行
+3 % sudo apt install python3.8-venv
+4 % python3 -m venv venv
+5  ls(venvがインストールされていることを確認
+6 % source venv/bin/activate
+7 (venv...]]></summary>
+        <author>
+            <name>issei_sub</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python Django #??  ~環境ぶっ壊れた~ 削除済み　やってはいけない]]></title>
+        <id>https://zenn.dev/issei_sub/articles/cfb0e4704c23ae</id>
+        <link href="https://zenn.dev/issei_sub/articles/cfb0e4704c23ae"/>
+        <updated>2022-10-13T02:51:56.000Z</updated>
+        <summary type="html"><![CDATA[最初に.....
+これは解決していません。
+anacondaを使うのをやめようと試行錯誤した結果です
+未来の自分が将来解決するときに便利なように残しておく
+本当は環境変数とやらを読み込めばいいらしいが
+Djangoの勉強に集中したく時間が
+ないためしばらく放置させていただく。
+
+ anacondaのせいで......
+Pythonのバージョンが変更できなくて、その原因がpythonのファイルがpyenvではなく
+anacondaの中にあることが判明。
+以下の手順に従ってanacondaを削除することに..
+https://www.drbuho.com/jp/how-to/uninst...]]></summary>
+        <author>
+            <name>issei_sub</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TemplateResponseMixin requires either a definition of 'template_name']]></title>
+        <id>https://zenn.dev/issei_sub/articles/9b17fed5b13c33</id>
+        <link href="https://zenn.dev/issei_sub/articles/9b17fed5b13c33"/>
+        <updated>2022-10-13T02:49:25.000Z</updated>
+        <summary type="html"><![CDATA[対象者
+以下のサイトをみてやってみたが改善しない人
+https://stackoverflow.com/questions/25468412/django-improperlyconfigured-at
+https://stackoverflow.com/questions/25468412/django-improperlyconfigured-at
+https://teratail.com/questions/34695
+
+ 結論
+app/viewsの
+template_nameをtemplates_nameにしていた
+つまりスペルミス
+
+ エラー内容
+ImproperlyCon...]]></summary>
+        <author>
+            <name>issei_sub</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python django #3 基本的な機能を理解する]]></title>
+        <id>https://zenn.dev/issei_sub/articles/62516c3aa8ac92</id>
+        <link href="https://zenn.dev/issei_sub/articles/62516c3aa8ac92"/>
+        <updated>2022-10-13T02:47:02.000Z</updated>
+        <summary type="html"><![CDATA[前回
+https://zenn.dev/issei_manabi/articles/6aa955b79795d7
+
+ 基本的な動作を理解しよう
+目標のwebサイト
+hello world
+簡単そう？　ではやってみましょう。
+​
+
+ urlを設定
+helloworldproject/helloworldproject/urls.py
+from django.contrib import admin
+from django.urls import path
+from .views import helloworldfunc  ーーーーーー追加
+​
+urlpatterns = [
+    ...]]></summary>
+        <author>
+            <name>issei_sub</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python Django　#2 ~ 環境構築と仕組みの理解　(path)]]></title>
+        <id>https://zenn.dev/issei_sub/articles/14f6bdc9f8963b</id>
+        <link href="https://zenn.dev/issei_sub/articles/14f6bdc9f8963b"/>
+        <updated>2022-10-13T02:41:36.000Z</updated>
+        <summary type="html"><![CDATA[前回
+https://zenn.dev/issei_sub/articles/ccbc23ae2dac87
+
+ 前提
+htmlの基礎知識
+pythonの関数や継承がなんとなくわかる
+やるきとこんき
+あらかじめファイルを作成（work_place）
+​
+
+ 環境構築
+1 pythonをインストール
+2 Vscodeをインストール（（ライブラリを入れておくと楽　Prettierなど
+3 仮想環境の作成（venv)　以下の通りに実行
+3 % sudo apt install python3.8-venv
+4 % python3 -m venv venv
+5  ls(venvがインストールさ...]]></summary>
+        <author>
+            <name>issei_sub</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python Django　#1 ~webアプリの作成]]></title>
+        <id>https://zenn.dev/issei_sub/articles/ccbc23ae2dac87</id>
+        <link href="https://zenn.dev/issei_sub/articles/ccbc23ae2dac87"/>
+        <updated>2022-10-13T02:36:12.000Z</updated>
+        <summary type="html"><![CDATA[最初に
+現在と異なる環境とは違う点も多くあります。
+2022/6/15作成
+​
+
+ 環境
+python3 pio django
+​
+
+ あったら進めるのが楽な知識
+基礎的なhtml
+pythonの関数や継承の仕組みをなんとなく理解できる
+ターミナル操作術（やっていくうちになれる）
+エラーがでてどこが悪かったか探せる能力（英語をよむ！翻訳しよう！）
+​
+
+ プロジェクトを始める
+
+#1 適当なファイルを作りそこで
+django-admin startproject helloworldproject
+
+#2
+cd helloworldproject
+python3 manage.py ...]]></summary>
+        <author>
+            <name>issei_sub</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【Python】VSCodeが型推論結果を自動で表示してくれるようになった【TypeHinting】]]></title>
         <id>https://zenn.dev/yosemat/articles/36638f17e9ded8</id>
@@ -3775,133 +4118,6 @@ predsとlabels (lgb.Datasetの中に情報がある)を入力にして、gradと
 # stable diffu...]]></summary>
         <author>
             <name>わっしー</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Raspberry PiでLチカ（完成）]]></title>
-        <id>https://zenn.dev/technicarium/articles/a8b5eb4b8c5b0e</id>
-        <link href="https://zenn.dev/technicarium/articles/a8b5eb4b8c5b0e"/>
-        <updated>2022-09-14T14:25:14.000Z</updated>
-        <summary type="html"><![CDATA[Raspberry Pi OSのSDカードへの書き込みに始まり、PyenvによるPythonバージョン管理、Pipenvによる仮想環境、開発環境としてVSCodeのインストール、ブレッドボード上でのLEDと抵抗の配置、GPIOとブレッドボードの接続用コード（オス・メス ジャンパーワイヤー）と一式揃ったのでやっとLチカにチャレンジしました。
-
- 前提条件
-
- OS
->cat /etc/os-release 
-PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
-NAME="Debian GNU/Linux"
-VERSION_ID="11"
-VERS...]]></summary>
-        <author>
-            <name>テク二カリウム</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Diffusers】MacでStableDiffusionのImg2Imgのpython環境を整える]]></title>
-        <id>https://zenn.dev/michy/articles/064863f3703de6</id>
-        <link href="https://zenn.dev/michy/articles/064863f3703de6"/>
-        <updated>2022-09-14T13:00:14.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事ではDiffusersを使ったMacのStableDiffusionでimg2imgを実行するまでの手順を紹介します。
-
- 対象読者
-・M1/M2シリーズのMacユーザ
-・stable-diffusionとその発展型のモデルを気軽に試せる環境がほしい人
-・stable-diffusion環境メンテと最新化に稼働を割く暇がない人
-
- Diffusersとは？
-推論・学習に必要なツールが機械学習周りの機能一式が揃ったツールボックスです。
-モデルの切り替えや追加学習などのツールが1コマンドですべて入るので、AIイラストの環境がライトに構築可能です。
-
- Diffusers...]]></summary>
-        <author>
-            <name>zaiwa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[estat-APIのレスポンスをGoogleBigQueryに格納する]]></title>
-        <id>https://zenn.dev/dicechick373/articles/58354a5f1f542f</id>
-        <link href="https://zenn.dev/dicechick373/articles/58354a5f1f542f"/>
-        <updated>2022-09-14T07:16:20.000Z</updated>
-        <summary type="html"><![CDATA[目標
-
-estat-APIから統計表のメタ情報を取得する
-estat-APIから統計表データを取得する
-estat-APIのレスポンスJSONを加工してpandas DataFrameに変換する
-DataFrameをGoogleBigQueryに保存する
-
-
- 前提条件
-
-estat-APIの利用者登録済
-ESTAT_APPIDは環境変数で管理
-
-利用するライブラリは次のとおり
-import urllib.parse
-import urllib.request
-import json
-import pandas as pd
-
- 統計表情報の取得
-社会・人口統計体系の「Ａ人口・世帯」の...]]></summary>
-        <author>
-            <name>dicechick373</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python: int/str 型変換における破壊的変更のお知らせ]]></title>
-        <id>https://zenn.dev/ykesamaru/articles/2175b317a5410e</id>
-        <link href="https://zenn.dev/ykesamaru/articles/2175b317a5410e"/>
-        <updated>2022-09-14T06:02:45.000Z</updated>
-        <summary type="html"><![CDATA[!
-一部加筆修正しました
-
-2022年9月14日17時18分
-
-
-
- int/str型変換における破壊的変更のお知らせ
-こんにちは。東海顔認証のyKesamaruです。
-https://www.youtube.com/watch?app=desktop&v=eTucYT2LpNU
-今さっき上記YouTubeで知ったのですが、なかなかのニュースが飛び込んできました。
-2022年9月7日水曜日[1]、Pythonにおいて下位互換性を破壊するセキュリティーアップデートが緊急でリリースされました。 [2]
-すくなからずプロジェクトに変更を強いられるケースが発生するかもしれません。といって...]]></summary>
-        <author>
-            <name>yKesamaru</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[『最強の三目並べAIをゼロから作る』をやってみた]]></title>
-        <id>https://zenn.dev/quiver/articles/93e91ba2f29fa9</id>
-        <link href="https://zenn.dev/quiver/articles/93e91ba2f29fa9"/>
-        <updated>2022-09-13T21:37:00.000Z</updated>
-        <summary type="html"><![CDATA[『ゼロから作るDeep Learning』などの著者がある斎藤康毅さんが、ゼロシリーズの最新作として、『最強の三目並べAIをゼロから作る』というYouTube動画を公開されていたので、やってみました。
-https://twitter.com/SaitohKoki/status/1564198954476089344
-最終的に作成する最強の三目並べ(Tic-Tac-Toe)AIは、次のデモページで遊べます。
-https://koki0702.github.io/tictactoe-pyscript/
-
-
- 学習の流れ
-動画は5本からなり、以下のトピックを学べます。
-
-ガイダンス(7分02秒...]]></summary>
-        <author>
-            <name>quiver</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[transformersのtutorialを読んでみた - part1]]></title>
-        <id>https://zenn.dev/python3654/articles/7afb7095d6f50f</id>
-        <link href="https://zenn.dev/python3654/articles/7afb7095d6f50f"/>
-        <updated>2022-09-13T14:41:55.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-最近transformersというライブラリを勉強していて、今はtutorialsを読んでいます！せっかくなので、tutorialsの内容を訳して記事にしようと思っています！今回は第一弾ということで、以下の記事を参考に書きました～ ぜひ最後まで読んでください！(google colabで実装しながら読んで頂けると良いと思います！)
-https://huggingface.co/docs/transformers/v4.21.3/en/pipeline_tutorial
-
- 推論用パイプライン
-pipeline()を使えば、テキスト生成、画像のセグメンテーション、音声分類など...]]></summary>
-        <author>
-            <name>とりごん</name>
         </author>
     </entry>
 </feed>
