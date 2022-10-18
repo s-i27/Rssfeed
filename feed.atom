@@ -2,10 +2,162 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-10-17T02:50:05.317Z</updated>
+    <updated>2022-10-18T02:40:27.530Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[【Python】f-stringを使いこなして、快適なprintデバッグを]]></title>
+        <id>https://zenn.dev/k41531/articles/3ce8f558ae5161</id>
+        <link href="https://zenn.dev/k41531/articles/3ce8f558ae5161"/>
+        <updated>2022-10-18T01:55:38.000Z</updated>
+        <summary type="html"><![CDATA[f-string(フォーマット済み文字列リテラル)の便利な使い方を知ったので、まとめてみました。
+おそらく一般的な使い方は、
+text = "world"
+print(f"hello {text}")
+hello world
+
+ =を使ったデバッグに便利な例
+バージョン3.8で追加された=を使うことで、変数名 = 値という形で文字列を表示できる。
+text = 'world'
+print(f"{text = }")
+text = 'world'
+計算もできます。
+print(f"{1 + 1 = }")
+1 + 1 = 2
+関数も使えます。
+print(f"{sum([1,2,3]) =...]]></summary>
+        <author>
+            <name>kaisei</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[量子カーネル SVM で遊んでみる — Qiskit]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-qsvm-qiskit</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-qsvm-qiskit"/>
+        <updated>2022-10-17T17:42:44.000Z</updated>
+        <summary type="html"><![CDATA[目的
+カーネル SVM を眺めてみる で触れたように、Quantum feature maps and kernels を思いっきり劣化させることで、ブラックボックス度を低下させ、toy-problem なデータセットを解かせることで簡単なコンテンツを目指したい。
+
+ データセット
+前回と同様に以下のデータセットを使いたい。
+
+これは前回と同様に以下で訓練セット (train_data, train_labels) とテストセット (test_data, test_labels) が準備されているとする。
+from sklearn.datasets import make_circl...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows11にPython3.10.8+CUDA11.6+cuDNN8.5+PyTorch1.12.1(GPU版:cu116)環境作成]]></title>
+        <id>https://zenn.dev/koji9412/articles/70e57cd1dd4159</id>
+        <link href="https://zenn.dev/koji9412/articles/70e57cd1dd4159"/>
+        <updated>2022-10-17T17:10:02.000Z</updated>
+        <summary type="html"><![CDATA[AnacondaとかMinicondaとか使わずpipで環境構築した。
+環境確認
+import torch
+print(torch.__version__)
+print(torch.cuda.is_available())
+print(torch.cuda.device_count())
+print(torch.version.cuda)
+結果
+$ python a.py
+1.12.1+cu116
+True
+1
+11.6
+
+$ python -V
+Python 3.10.8
+
+ 参考
+CUDA+cuDNNをインストールしPyTorchでGPUを認識させるまでの手順(Window11)
+
+...]]></summary>
+        <author>
+            <name>koji9412</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[画像にノイズを加える]]></title>
+        <id>https://zenn.dev/o_kai/articles/d51d9025d5e526</id>
+        <link href="https://zenn.dev/o_kai/articles/d51d9025d5e526"/>
+        <updated>2022-10-17T16:08:50.000Z</updated>
+        <summary type="html"><![CDATA[本投稿では、Pythonを用いて画像にノイズを加えていきます。
+
+ 加えるノイズ
+今回実装するノイズは、塩ごまノイズです。
+
+ 塩ごまノイズとは?
+塩ごまノイズは、インパルスノイズの確率pの値が0.5の時のノイズである
+
+# ライブラリ読み込み
+import cv2
+import numpy as np
+import random
+
+# ノイズ付与用のクラス
+class NoiseImage:
+    def __init__(self):
+        self.img = None
+
+    # 画像読み込み
+    def image_read(self, filename, g...]]></summary>
+        <author>
+            <name>o_kai</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DockerイメージをPythonでテストする]]></title>
+        <id>https://zenn.dev/shotaro_tsuji/articles/38d5c48ca021d5</id>
+        <link href="https://zenn.dev/shotaro_tsuji/articles/38d5c48ca021d5"/>
+        <updated>2022-10-17T12:35:44.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事ではDockerイメージをテストする方法を簡単に模索します。といってもtestinfraやory/dockettestのようなフレームワークを使うわけではなくPythonでテストコードを書いていきます。
+
+ Dockerイメージを用意する
+テスト対象のDockerイメージを作成し、テストしたい動作を考え、テストコードの実装方針を決めます。
+
+ テスト対象のイメージ
+私が作ったリポジトリhoratos/docker-imagesのcluttexイメージをテスト対象とします。cluttexイメージはtexlive/texliveをベースとしたイメージです。cluttex...]]></summary>
+        <author>
+            <name>Shotaro Tsuji</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python環境構築】Windows11 ProにPythonをインストールする]]></title>
+        <id>https://zenn.dev/tsuji_u/articles/0db56a35afcbe6</id>
+        <link href="https://zenn.dev/tsuji_u/articles/0db56a35afcbe6"/>
+        <updated>2022-10-17T09:35:36.000Z</updated>
+        <summary type="html"><![CDATA[環境
+
+Windows 11 Pro
+
+21H2
+
+
+
+
+ 参考
+
+windows-11への最新版pythonのインストール
+Windows版Pythonのインストール
+
+
+ Pythonのダウンロードとインストール
+
+ exeファイルのダウンロード
+公式サイトからexeファイルをダウンロードします。
+
+
+ インストール
+ダウンロードしたexeファイルをダブルクリックして実行するとwindowが開くので「Install Now」をクリックします。
+またこれはどちらでもよいですが、パスを通したい場合は「Add python.exe PATH」にチェックを付けます。
+私は何かと楽そうだっ...]]></summary>
+        <author>
+            <name>t_u</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Cloud Run + Cloud Build + TerraformでCI/CDビルドに対応したHTTPサーバを立てる]]></title>
         <id>https://zenn.dev/niccari/articles/41b393bc5d506a</id>
@@ -4203,106 +4355,6 @@ random_state は乱数の発生機ですが、seed 値を与えると、毎回�
 ここで考えられるのが、random_state...]]></summary>
         <author>
             <name>mimitako</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Tensorflowを使ってみた]]></title>
-        <id>https://zenn.dev/mimitako/articles/c4085419e963b5</id>
-        <link href="https://zenn.dev/mimitako/articles/c4085419e963b5"/>
-        <updated>2022-09-18T14:14:15.000Z</updated>
-        <summary type="html"><![CDATA[Tensorflow を使ってみる
-気になってはいたけど、使ったことがないんです。ということで、初めて Tensorflow を使ってみましたので記録も兼ねてここに記載します。
-
- 使用したライブラリ
-今回使用したライブラリは以下のとおりです。
-pandas 1.2.3
-numpy 1.20.2
-tensorflow 2.10.0
-scikit-learn 1.0.2
-seaborn 0.11.2
-
- タスクを定義
-今回は分類タスクである Iris ことあやめの分類を行います。この分類タスクは調べればすぐに出てきますので詳細は割愛します。まずは、基本的な流れを学ぶために、とりあえず走...]]></summary>
-        <author>
-            <name>mimitako</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Step FunctionsのMap Stateによる動的並列処理の簡単な実装]]></title>
-        <id>https://zenn.dev/koya6565/articles/9f05924666fbd2</id>
-        <link href="https://zenn.dev/koya6565/articles/9f05924666fbd2"/>
-        <updated>2022-09-18T14:00:28.000Z</updated>
-        <summary type="html"><![CDATA[（単なる偶然ですが）ちょうど3年前の9/18、dynamic parallelism in workflowsがStep Functionsでサポートされました。それ以前は、index参照したりChoiceやWaitでループ処理したり並列実行するためにもう一つワークフローを起動したり、Step Functions(以下、SFn)による動的な並列処理実装はまあまあ手間がかかりました。
-https://aws.amazon.com/about-aws/whats-new/2019/09/aws-step-functions-adds-support-for-dynamic-paralleli...]]></summary>
-        <author>
-            <name>T.S</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[StableDiffusionのいろんなWebUIたちをColabで使えるようにしてみた]]></title>
-        <id>https://zenn.dev/ddpn08/articles/stablediffusion-webui-colab</id>
-        <link href="https://zenn.dev/ddpn08/articles/stablediffusion-webui-colab"/>
-        <updated>2022-09-18T10:22:35.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは、だだっこぱんだです。
-自分は普段、Colab上でwebuiを立ち上げてStableDiffusionで遊んでいます。
-しかし、モデルが変えにくかったり引数をいちいち記入するのが面倒だったりしたので、使いやすいようにノートブックを作りました。この記事では、その使い方をざっくり紹介します。
-
- 作ったもの
-StableDiffusionのいろんなwebuiを好きなモデルで簡単に実行できるColab用のノートブックをつくりました。
-
- リポジトリ
-👇こちらで公開しています
-https://github.com/ddPn08/stable-diffusion-webui-colab
-...]]></summary>
-        <author>
-            <name>だだっこぱんだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FastAPIでFeatureFlagを使ってみる]]></title>
-        <id>https://zenn.dev/nishikoh/articles/f656f07bedf7eb</id>
-        <link href="https://zenn.dev/nishikoh/articles/f656f07bedf7eb"/>
-        <updated>2022-09-18T07:03:53.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-トランクベースの開発でCD(デリバリー/デプロイ)を良い感じにする方法がないか調べていたところFeatureFlagを試したくなりました。私が普段使っているWebAPIフレームワークのFastAPIでFeatureFlagを使ってみます。
-
- fastapi-featureflags
-FastAPI用に開発されたfastapi-featureflagsを使っていきます。これを使うことでFastAPIのエンドポイントからFeatureFlagの切り替えが出来ます。FeatureFlagの数がN個ある場合、何の工夫もしなければ2のN乗個の環境を用意して検証しますが、管理用のエン...]]></summary>
-        <author>
-            <name>nishikoh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[利用サービスの残ライセンスをAPIで確認する]]></title>
-        <id>https://zenn.dev/cazziwork/articles/885e9f88ccf3fd</id>
-        <link href="https://zenn.dev/cazziwork/articles/885e9f88ccf3fd"/>
-        <updated>2022-09-17T20:42:15.000Z</updated>
-        <summary type="html"><![CDATA[この記事はある日急に「やばい、ライセンスが足りない！」「今から発注しても間に合わない！」なんてことにならないよう、APIで様々なSaaSのライセンスをチェックする方法についてまとめたものです。
-なお、コードサンプルはすべてPythonで、対象サービスは事前にライセンスを追加しないと利用できないサービスが中心となっています。
-
- GitHub Enterprise
-GitHubはREST APIでは取得ができないため、GraphQL APIで取得する必要があります。GraphQL APIについては こちら を、ライセンス数取得用のAPIについては こちらをを参照。
-
- リクエストサンプル
-...]]></summary>
-        <author>
-            <name>Takeshi Haraguchi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SageMaker Notebook 上で PyTorch の学習を回す]]></title>
-        <id>https://zenn.dev/kasega0/articles/dd51b63071ebea</id>
-        <link href="https://zenn.dev/kasega0/articles/dd51b63071ebea"/>
-        <updated>2022-09-17T16:55:09.000Z</updated>
-        <summary type="html"><![CDATA[いままでEC2でゴリゴリ学習させていたものをSageMaker Notebookに移植することになり、それなりに苦労したので自分用のテンプレート作成も兼ねてハマりどころをまとめます。
-
- 今回作成した雛型
-https://github.com/kasegao/sagemaker-sample
-
- 概要
-基本的にはこれまで学習用に作成していたプログラムの80-90%ぐらいはそのまま流用できます。綺麗に実装していれば既存プログラムにはほぼ手を入れずに移植できると思います。残りはSageMakerから既存スクリプトを呼び出すための玄関部分と、データ入出力用のS3とのやり取りスクリプトさえ用意し...]]></summary>
-        <author>
-            <name>かせがお</name>
         </author>
     </entry>
 </feed>
