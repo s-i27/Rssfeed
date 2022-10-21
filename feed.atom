@@ -2,10 +2,132 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-10-20T02:38:30.540Z</updated>
+    <updated>2022-10-21T02:08:13.984Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[PythonでMS Outlookのmsgファイルを読む（msg_parser）]]></title>
+        <id>https://zenn.dev/kumasun/articles/5fa34c7029d1da</id>
+        <link href="https://zenn.dev/kumasun/articles/5fa34c7029d1da"/>
+        <updated>2022-10-21T00:19:10.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Outlookで受信したメールのうち、特定のメーリングリスト宛に誰からどのくらいの頻度でメールが来ているか調べて欲しいと言われた。
+調査用データとして、過去数年分のメールデータ（Outlook .msg形式）数千件が提供された。
+Outlookに取り込んでルールで振り分けを試みたが、メーリングリストに投稿したユーザーで振り分けることができないことが分かった。
+（やり方が悪いのかもしれないが…）
+msgファイルを1通ごと開いて調べるのは非現実的なので、Pythonの力を借りて自動化した。
+
+ コード
+
+ 実証実験コード
+「.msg」形式を読むためのパッケージは複数存在するが、...]]></summary>
+        <author>
+            <name>Kumasun Morino</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python + IntellijのSDK seems invalidエラー]]></title>
+        <id>https://zenn.dev/libertym/articles/84b41b0229041e</id>
+        <link href="https://zenn.dev/libertym/articles/84b41b0229041e"/>
+        <updated>2022-10-20T12:04:55.000Z</updated>
+        <summary type="html"><![CDATA[記事について
+一部単語の意味や表現が正確でない可能性がありますがご了承ください。
+基本的に自分の環境の言語は英語です。
+WindowsとIntellij ideaでPythonの環境構築がうまくできない人をターゲットにしています。
+
+ SDKが設定できない問題が発生
+Windows上でIntellij ideaからpoetryで新規プロジェクトを作成しようとするとSDKが無効(SDK seems invalid)というエラーが発生して正常に設定できませんでした。(VScodeなら問題なし？)
+
+ 原因調査
+Intellij idea上部の「help > show log in...]]></summary>
+        <author>
+            <name>Libertym</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[poetryとVSCodeで仮想環境の構築（Windows10）]]></title>
+        <id>https://zenn.dev/kanaotto/articles/a0d6e4a661fb56</id>
+        <link href="https://zenn.dev/kanaotto/articles/a0d6e4a661fb56"/>
+        <updated>2022-10-20T11:07:53.000Z</updated>
+        <summary type="html"><![CDATA[poetryとVSCodeで仮想環境の構築（Windows10）
+
+ 1. poetryとは
+PoetryはPythonのパッケージマネージャの一つです。
+次のようなことができます。
+
+パッケージ管理ファイルの生成・変更
+インストールされているパッケージのアップデート
+プロジェクトごとの仮想環境のセットアップ
+
+などなど...
+
+ 2. インストール
+
+ 基本
+
+ - Python のセットアップ
+PoetryのインストールにPythonが必要なので既に入っている前提ですが、一応。
+Python JapanのサイトからWindows版Pythonをインストール
+
+
+https://w...]]></summary>
+        <author>
+            <name>かなおっと</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pytestでテストをグループ化する]]></title>
+        <id>https://zenn.dev/ymiz/articles/c25dcddfedd7c3</id>
+        <link href="https://zenn.dev/ymiz/articles/c25dcddfedd7c3"/>
+        <updated>2022-10-20T11:02:03.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+pytestを使ってテストしている
+ある条件の場合のテストスイートをまとめたい
+
+jestでいうところの describe のようなことをしたい
+
+https://jestjs.io/ja/docs/api#describename-fn
+
+
+
+
+
+
+ 対応
+classでグループ化する。
+ドキュメントは https://docs.pytest.org/en/7.1.x/getting-started.html#group-multiple-tests-in-a-class
+class Test_指標が閾値Aを超えた場合:
+    def test_在庫を追加する(self):...]]></summary>
+        <author>
+            <name>ymiz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Google Cloud FunctionsでFizzBuzzを作成する]]></title>
+        <id>https://zenn.dev/penguincabinet/articles/d765da03bf66f5</id>
+        <link href="https://zenn.dev/penguincabinet/articles/d765da03bf66f5"/>
+        <updated>2022-10-20T05:12:52.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+近年FaaSが流行しています。
+僕も試してみたいと考えていたため、今回FizzBuzz判定APIを作ってみようと思います。
+
+ 完成品
+https://github.com/PenguinCabinet/FizzBuzz_Google_Cloud_Functions
+
+ 環境構築
+gcloud CLIを使用していますので、インストールしてください。
+https://cloud.google.com/sdk/docs/install?hl=ja
+念のため、その他のバージョン環境。
+OS:Windows 11
+言語処理系:Python 3.10.5
+
+Google Cloud ...]]></summary>
+        <author>
+            <name>PenguinCabinet</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[UE5] Control Rig をPythonから使う]]></title>
         <id>https://zenn.dev/h_kishimoto/articles/5f0a6639c0fd8d</id>
@@ -4196,32 +4318,6 @@ conda環境を前提とする。公式ドキュメントではconda環境を前�
  Google...]]></summary>
         <author>
             <name>pluie</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Django-DRFでFileField(ImageField)のユニットテストどうするのか]]></title>
-        <id>https://zenn.dev/yuya_morimoto/articles/a238e7861ce2ba</id>
-        <link href="https://zenn.dev/yuya_morimoto/articles/a238e7861ce2ba"/>
-        <updated>2022-09-20T23:00:00.000Z</updated>
-        <summary type="html"><![CDATA[始めに
-Django、DjangoRestFrameworkを使用したAPI開発後、ファイルアップロード(POST, PUT)をどのように実装するのか、以外とハマったので備忘兼共有
-※コードベースで行います
-!
-トークン認証想定です
-djangoのself.clientではなくrest_framework.testのAPIClientの方だと動くことがあるので注意
-
-
- 環境
-django==3.2.x
-djangorestframework==3.13.1
-
- ViewでParserを設定
-
-file_upload_api_view.py
-
-class FileUploadAPIV...]]></summary>
-        <author>
-            <name>yuya_morimoto</name>
         </author>
     </entry>
 </feed>
