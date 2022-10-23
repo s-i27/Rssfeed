@@ -2,10 +2,154 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-10-22T02:26:25.483Z</updated>
+    <updated>2022-10-23T02:37:31.426Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[【Python】【Linux】複数のzipファイルを解凍する方法]]></title>
+        <id>https://zenn.dev/robes/articles/ce29b02ac40226</id>
+        <link href="https://zenn.dev/robes/articles/ce29b02ac40226"/>
+        <updated>2022-10-23T01:29:58.000Z</updated>
+        <summary type="html"><![CDATA[PythonもしくはLinuxで、複数zipファイルを解凍する方法のご紹介です。
+contentディレクトリ配下に複数zipファイルがあるとします。
+解凍後にzipファイルを格納する各ディレクトリの名称は、解凍前のzipファイルの名称と同じにします。
+
+ 解凍前
+<content>
+   ├── S100OCJ8.zip 
+   ├── S100OBWX.zip
+   ├── S100O98X.zip
+   ├── S100OLCJ.zip
+
+ 解凍後
+<content>
+   ├── S100OCJ8
+   ├── S100OBWX
+   ├── S100O98...]]></summary>
+        <author>
+            <name>osn_Lofi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[EC2(Windows)のサービスをCloudWatchで監視したい]]></title>
+        <id>https://zenn.dev/zgw426/articles/baabeec88900b1</id>
+        <link href="https://zenn.dev/zgw426/articles/baabeec88900b1"/>
+        <updated>2022-10-23T00:43:20.000Z</updated>
+        <summary type="html"><![CDATA[Windowsサービスを監視したい
+EC2(Windows)のWindowsサービスをCloudWatchで監視する仕組みを作りました。
+現在のCloudWatch Agentはプロセス監視はできますが、サービス監視はできないようです。
+サービスに紐づくプロセスを監視する方法もありますが、プロセスの起動数などの仕様がわからないと適切な監視設定ができません。
+そこで、サービスの状態はPowerShellコマンドで取得し、その結果をもとにCloudWatchのカスタムメトリクスとしてCloudWatchに出力することにしました。
+
+ 構成
+構成はこのようになります。
+
+Windows S...]]></summary>
+        <author>
+            <name>suo-takefumi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ビットコインの曜日効果を調べるプログラム]]></title>
+        <id>https://zenn.dev/harukaze/articles/946e434f9c4c8e</id>
+        <link href="https://zenn.dev/harukaze/articles/946e434f9c4c8e"/>
+        <updated>2022-10-22T13:58:57.000Z</updated>
+        <summary type="html"><![CDATA[皆様は曜日効果についてご存知でしょうか？
+曜日効果とは、"特定の曜日の収益率が他の曜日よりも低く、または高くなりやすい現象のこと。"とありますが、本当に存在するのでしょうか？
+今現在も存在しているかもしれませんし、していないかもしれません。
+していなくても、これから曜日効果が発生する可能性もあります。
+そこで、この記事ではビットコインには曜日効果が存在しているか？を調査するためのプログラム（Python3）を提供します。
+実際にこちらを参考に行った取引および記事のプログラムを利用したことによるいかなる損害も作者は一切の責任を負いません。自己の責任の上で使用してください。
+プログラムの実行...]]></summary>
+        <author>
+            <name>haru01</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Google Colaboratoryのファイル入出力方法]]></title>
+        <id>https://zenn.dev/harukaze/articles/c10101b39bd3e0</id>
+        <link href="https://zenn.dev/harukaze/articles/c10101b39bd3e0"/>
+        <updated>2022-10-22T08:50:50.000Z</updated>
+        <summary type="html"><![CDATA[よくちょっとしたファイルをColaboratoryで集計してドライブに入出力したいときがあるのでメモ。Pythonを使用。
+
+ ドライブのマウント
+実行後、ドライブにアクセス許可をもとめるダイアログがでるので許可する。
+from google.colab import drive
+drive.mount('/content/drive')
+
+ CSVファイルの読み込み
+あらかじめドライブにおいておいたCSVファイルをpandasで読み込む。
+パス、ファイル名は適宜変更する。
+import pandas as pd
+
+base_path = r"/content/drive/test_fo...]]></summary>
+        <author>
+            <name>haru01</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python tkinterのWindow表示]]></title>
+        <id>https://zenn.dev/banananeko/articles/b5e099fb923262</id>
+        <link href="https://zenn.dev/banananeko/articles/b5e099fb923262"/>
+        <updated>2022-10-22T08:30:11.000Z</updated>
+        <summary type="html"><![CDATA[tkinterのimport
+ import tkinter as tk
+!
+as tk とは　tkinterを略してtkと呼ぶ　　
+ということを定義するものです。
+
+
+
+ Window表示
+Windowの名前　= tk.Tk()
+とすることでWindowを作れます。
+例
+ import tkinter as tk
+ root = tk.Tk()
+
+
+ Windowにタイトルを設定
+Window名.title(タイトル名)
+のようにするとWindowのタイトルを設定できます。。
+例
+ import tkinter as tk
+ root = tk.Tk()
+ root.title("...]]></summary>
+        <author>
+            <name>banananeko</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonでおみくじを作る]]></title>
+        <id>https://zenn.dev/banananeko/articles/573cc42382a1ea</id>
+        <link href="https://zenn.dev/banananeko/articles/573cc42382a1ea"/>
+        <updated>2022-10-22T06:03:57.000Z</updated>
+        <summary type="html"><![CDATA[プログラムの流れ
+
+おみくじ　と出力する
+3秒待つ
+ランダムな数を指定する
+if分岐でランダムな数に対するものを当てはめる
+
+
+ コードを書く
+from time import sleep
+from random import randint
+print("おみくじ")
+print("けっかは...", end=" ")
+sleep(3)
+a = randint(1, 10)
+if a == 10:
+    print("大吉")
+if a < 10 and a > 7:
+    print("中吉")
+if a < 7 and a > 1:
+    prin...]]></summary>
+        <author>
+            <name>banananeko</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[NN+MILP] ランダム多層パーセプトロンを用いた検証]]></title>
         <id>https://zenn.dev/mory22k/articles/c9b1c14c3616a3</id>
@@ -4096,166 +4240,6 @@ https://github.com/openai/whisper
 ...]]></summary>
         <author>
             <name>Kazuki Yonemoto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[絶対に負けない三目並べを作る]]></title>
-        <id>https://zenn.dev/plhr7/articles/80979f08481719</id>
-        <link href="https://zenn.dev/plhr7/articles/80979f08481719"/>
-        <updated>2022-09-23T12:46:07.000Z</updated>
-        <summary type="html"><![CDATA[三目並べはきっと誰でも遊んだことのある他愛無い遊びですが、「じゃあプログラムで三目並べの AI を作ってください」と言われると意外と悩む人もいるのではないでしょうか。今回はそんな三目並べの絶対負けない AI を作る方法について、コードをいちから書いて実装したいと思います。
-実装については三目並べが囲碁や将棋と異なり、比較的パターン数が少ないため全盤面の探索を行い、勝てる(負けない)パターンを見つけることで最良の手を打つようにします。つまり乱択アルゴリズムではなく、決定的であるということです。
-さて、三目並べですが、ゲームに対する認識の齟齬がないように条件をあらかじめ整理したいと思います。...]]></summary>
-        <author>
-            <name>PlasticHeart</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】水素原子の解の描画：球面調和関数]]></title>
-        <id>https://zenn.dev/shittoku_xxx/articles/061ad99166afcc</id>
-        <link href="https://zenn.dev/shittoku_xxx/articles/061ad99166afcc"/>
-        <updated>2022-09-23T09:30:00.000Z</updated>
-        <summary type="html"><![CDATA[球面調和関数
-!
-この記事は消化不良の箇所を一部含みますが、他の方の役に立つ部分もあると思うので公開します。分からなかったところは分からなかったと記載しています。私の理解が進んだら記事を改定するかもしれません。間違いなどを見つけた方はコメント欄やTwitterなどでご連絡頂けますと幸いです。
-
-
- 0. 概要
-この記事では、シュレディンガー方程式に従う水素原子の解を描画する、という立場に立ち、球面調和関数(Spherical harmonics function)に関する情報を整理・解説する。水素原子の解のうち、動径方向に関する部分は以前の記事を参考にされたい。なお、水素原子の解の計算...]]></summary>
-        <author>
-            <name>しっとく</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[macOSにLightGBMにインストールする（legacy-install-failureも解決）]]></title>
-        <id>https://zenn.dev/higan96/articles/4d6220e2251f5b</id>
-        <link href="https://zenn.dev/higan96/articles/4d6220e2251f5b"/>
-        <updated>2022-09-23T08:19:18.000Z</updated>
-        <summary type="html"><![CDATA[以下の環境でLightGBMのpython packageをインストールします。
-macOS Monterey 12.6
-チップ Apple M1
-Python 3.10.7 (pyenvでインストール)
-pip 22.2.2
-GithubのREADMEにYou may need to install wheel via pip install wheel first.とあるのでまずwheelのインストールをします。
-pip install wheel
-この状態でpip install lightgbmでLightGBMをインストールしようとすると以下のようなエラーが出ます。
-Faile...]]></summary>
-        <author>
-            <name>Norihiko Oba</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pipenv を導入して requirements.txt を利用したパッケージ管理をやめる]]></title>
-        <id>https://zenn.dev/k0kishima/articles/8490a552f2fac0</id>
-        <link href="https://zenn.dev/k0kishima/articles/8490a552f2fac0"/>
-        <updated>2022-09-23T04:18:16.000Z</updated>
-        <summary type="html"><![CDATA[前提
-
-作業環境は Mac (macOS Monterey 12.6 Apple M2)
-
-Homebrew が既に使えるようになっていること
-
-
-pyenvは既にインストールされていること
-
-
- requirements.txt を利用する方式の問題点
-
-
-pip install した後に反映し忘れる
-前項の反映に関して、 pip freeze > requirements.txt ってしたら dev dependencies的なパッケージ(フォーマッターやテスティングフレームワークなど開発やテスト関係のパッケージで、本体の実行に必須ではないもの)も全部吐き出される
-
-この兼...]]></summary>
-        <author>
-            <name>k0kishima</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[OpenAIのWhisperをWindows環境で試す(CUDA環境有り)]]></title>
-        <id>https://zenn.dev/en129/articles/ddfb3da6d0fd31</id>
-        <link href="https://zenn.dev/en129/articles/ddfb3da6d0fd31"/>
-        <updated>2022-09-23T03:03:50.000Z</updated>
-        <summary type="html"><![CDATA[試した環境
-Python 3.10.5
-Windows10 Pro 21H2 (19044.2006)
-CPU:Core i9-11900KF
-Mem:32GB
-GPU:RTX3060 12GB
-
- CPUで動かす
-winget install Git.git
-winget install ffmpeg
-#パス読み込みのためログアウトor再起動
-python -m pip install git+https://github.com/openai/whisper.git
-python -m  whisper --help
-これで動作すればOK
-認識テストに使う英語の音声ファイルをこち...]]></summary>
-        <author>
-            <name>en129</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Tensorflow x Kerasを使ってみた]]></title>
-        <id>https://zenn.dev/mimitako/articles/tfxkeras_begin</id>
-        <link href="https://zenn.dev/mimitako/articles/tfxkeras_begin"/>
-        <updated>2022-09-23T01:18:50.000Z</updated>
-        <summary type="html"><![CDATA[Tensorflow x keras を使ってみる
-こちらの記事では Tensorflow だけを利用して Iris の分類タスクを実行していました。しかし、Keras を利用する方が多く、また利用が容易であるというメリットがあります（参考）。
-そこで、せっかく Tensorflow を学ぶのなら一緒に Keras も学んでみようと思い、使ってみることにしました。(ここでは Keras の Sequential を利用するという意味です。)
-
- Keras Sequential を利用する
-こちらの記事にあるコードを Keras 仕様へ変更します。
-https://zenn.dev/...]]></summary>
-        <author>
-            <name>mimitako</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[KaggleのTitanicをTensorflowで解いてみる]]></title>
-        <id>https://zenn.dev/mimitako/articles/kaggle_first</id>
-        <link href="https://zenn.dev/mimitako/articles/kaggle_first"/>
-        <updated>2022-09-23T01:18:49.000Z</updated>
-        <summary type="html"><![CDATA[Kaggle とは
-Kaggle は Google が主催の機械学習コンペティションで、様々な課題に対してその精度を競いあうものです。
-精度が高ければ、上位チームには懸賞金が出ます。
-そんな Kaggle も初心者向けに常時公開してあるタスクがあり、そのひとつが Titanic の生死分類タスクです。
-Titanic はあの映画にもなった大型客船のことです。ここに乗船していた人の状況（利用料金、性別、家族構成など）によって生死がどうなったかを予測していきます。
-
- Tensorflow で分類していく
-Tensorflow はニューラルネットワークによるディープラーニングの機械学習ラ...]]></summary>
-        <author>
-            <name>mimitako</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Raspberry Pi OS(Bullseye)+カメラモジュールV1.3]]></title>
-        <id>https://zenn.dev/technicarium/articles/449294af295d5c</id>
-        <link href="https://zenn.dev/technicarium/articles/449294af295d5c"/>
-        <updated>2022-09-23T00:53:38.000Z</updated>
-        <summary type="html"><![CDATA[画質や高機能は不要だったため1000円以下で買えたカメラモジュールV1.3を使ってみました。
-https://www.raspberrypi.com/documentation/accessories/camera.html
-安易に使用できると思いきや苦戦・・・
-
- Legacy Cameraの有効化
-sudo raspi-config
-
-3を選択
-
-1を選択
-
-はいを選択
-
-了解を選択
-
-はいを選択して再起動
-
- 接続状況確認
-vcgencmd get_camera
-supported=1 detected=1, libcamera interfaces=0
-!
-64bitの場合はsu...]]></summary>
-        <author>
-            <name>テク二カリウム</name>
         </author>
     </entry>
 </feed>
