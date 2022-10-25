@@ -2,10 +2,107 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-10-24T02:50:26.546Z</updated>
+    <updated>2022-10-25T02:43:51.198Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[最近見つけたPythonの小技]]></title>
+        <id>https://zenn.dev/kazu_gor/articles/9c26774e2802b9</id>
+        <link href="https://zenn.dev/kazu_gor/articles/9c26774e2802b9"/>
+        <updated>2022-10-25T02:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Python3.8以降で使えるf-stringsの小技です。
+
+test.py
+x = 10
+print(f'{x=}')
+
+↑こうすると、こう↓
+
+CLI
+$ python test.py
+>>> x=10
+
+なかなか便利。
+
+
+test.py
+print(f'{x  =  }')
+
+↑こうしても、こう↓
+
+CLI
+$ python test.py
+>>> x  =  10
+
+便利ですねえ。]]></summary>
+        <author>
+            <name>kazu-gor</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pytestでカバレッジを計りながら開発したい]]></title>
+        <id>https://zenn.dev/ymiz/articles/ffbdcd9e26a3a3</id>
+        <link href="https://zenn.dev/ymiz/articles/ffbdcd9e26a3a3"/>
+        <updated>2022-10-24T20:49:13.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+pytestを使っている
+テストカバレッジを計りながら開発したい
+どうするか？
+
+
+ 対応
+pytest-cov を使う。
+https://pypi.org/project/pytest-cov/
+例えば、
+├─src
+│  └─domains
+│      └─foo
+└─test
+import pytest
+
+from src.domains.foo.domain import Domain as Foo
+
+
+def test_foo():
+    Foo()
+class Domain:
+    pass
+の時、
+> pytest --cov=src test
+==...]]></summary>
+        <author>
+            <name>ymiz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【SP-API】Amazon Marketplace SP-APIを利用するまでの手順]]></title>
+        <id>https://zenn.dev/eito_blog/articles/f65e9994fdebc7</id>
+        <link href="https://zenn.dev/eito_blog/articles/f65e9994fdebc7"/>
+        <updated>2022-10-24T13:26:00.000Z</updated>
+        <summary type="html"><![CDATA[案件でSP-APIを利用するために必要な設定を行う機会がありました。
+このページではその備忘録としてAmazon Marketplace SP-APIを利用するまでの手順について解説いたします。
+SP-APIを利用するために下記6つのデータを取得します。
+
+リフレッシュトークン
+クライアントID
+クライアント機密情報
+シークレットアクセスキー
+アクセスキーID
+ロールのARN
+
+
+ IAMユーザーの作成
+IAMに遷移します。
+
+ユーザー > ユーザーを追加をクリックします。
+
+任意のユーザー名（添付画像ではAmazonSPAPIUser）を入力し、アクセスキー-プログラムによるア...]]></summary>
+        <author>
+            <name>エイト</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[cmdstanpy : 単回帰]]></title>
         <id>https://zenn.dev/yoshida0312/articles/34f3d93f860266</id>
@@ -4071,197 +4168,6 @@ for i in range(N):
 （細かくは調べていないですが、音声を元にしてTransformerなどの自然言語処理技術で文章を生成する、という認識の方が近いかも...]]></summary>
         <author>
             <name>inakam</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[価格帯別出来高を扱う]]></title>
-        <id>https://zenn.dev/ymd/articles/9110790208f803</id>
-        <link href="https://zenn.dev/ymd/articles/9110790208f803"/>
-        <updated>2022-09-25T14:05:02.000Z</updated>
-        <summary type="html"><![CDATA[価格帯別出来高(VPR:volume price range)とは
-以下のような価格帯ごとの出来高で横バー
-
-上記の図の引用元と詳しい説明はここを参照
-
- plotの方法
-以下をjupyter notebookで実行する
-import numpy as np
-import pandas as pd
-import holoviews as hv
-import hvplot.pandas
-from holoviews import opts
-hv.extension('bokeh')
-
-opts.defaults(opts.Curve(tools=['hover']), opts.Ove...]]></summary>
-        <author>
-            <name>ymd</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python - SQlite エラー】ValueError: parameters are of unsupported type]]></title>
-        <id>https://zenn.dev/osawa_koki/articles/348e3af043bcf0</id>
-        <link href="https://zenn.dev/osawa_koki/articles/348e3af043bcf0"/>
-        <updated>2022-09-25T12:08:13.000Z</updated>
-        <summary type="html"><![CDATA[タプル型??? 優先度変更用の括弧???
-PythonでSQLiteを操作している際に発生したエラー、、、
-以下のテーブル(pokemon)から図鑑番号が「25」の行を削除しようとしたときにお話ですね、、、
-
-
-
-number
-name
-type1
-type2
-
-
-
-
-25
-ピカチュウ
-でんき
-
-
-
-152
-チコリータ
-くさ
-
-
-
-875
-コオリッポ
-こおり
-
-
-
-884
-ジュラルドン
-はがね
-ドラゴン
-
-
-
-cursor.execute("DELETE FROM pokemon WHERE number = ?", (25))
-上のコードを実行すると以下のエラーが、、、
-Value...]]></summary>
-        <author>
-            <name>osawa-koki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[cookiecutterとcruftとcopier]]></title>
-        <id>https://zenn.dev/nishikoh/articles/8939b2c00bf916</id>
-        <link href="https://zenn.dev/nishikoh/articles/8939b2c00bf916"/>
-        <updated>2022-09-25T10:09:38.000Z</updated>
-        <summary type="html"><![CDATA[cookiecutterとcruftとcopier
-cruftとcopierについて調べてみた。理解するのに公式のドキュメントを読むのが一番良さそうだが備忘録として書いておく。
-
- 導入
-プロジェクトを始める時にお決まりのディレクトリ構成、ライブラリ、ツール、CI設定、その他を使いまわすためにプロジェクトテンプレートを用意することがある。テンプレートが更新された際、既に作成済みのプロジェクトにコピペで更新を反映したり、更新が面倒で放置されるプロジェクトもある。そこで継続的にテンプレートの更新をプロジェクトに反映するツールを調べてみた。
-
- cruft
-cruftはcookiecutt...]]></summary>
-        <author>
-            <name>nishikoh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[とりあえず突っ込んで見るデータ概要]]></title>
-        <id>https://zenn.dev/mimitako/articles/analyzer_of_basic</id>
-        <link href="https://zenn.dev/mimitako/articles/analyzer_of_basic"/>
-        <updated>2022-09-25T07:57:15.000Z</updated>
-        <summary type="html"><![CDATA[どんなデータなのか一括で見たい
-Kaggle しかり、他のデータ分析しかり、前処理は面倒だし同じ作業の繰り返しというのもつまらない。
-サクッと見たいときに Jupiter Notebook をカタカタするのも面倒…
-こんな気持なのはきっと私だけじゃないですよね？ということで、今のところ csv ファイルだけですが、全体を俯瞰するような Python コードを作成したので公開します。
-公開先はここです。クローンしてご利用ください。
-https://github.com/miris-mimitako/basic_analyzer
-
- どんな入出力にしたか？
-現在（2022/09/25）は...]]></summary>
-        <author>
-            <name>mimitako</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ctypes.windll.user32.SetProcessDPIAware()]]></title>
-        <id>https://zenn.dev/as/articles/c142780724f1b4</id>
-        <link href="https://zenn.dev/as/articles/c142780724f1b4"/>
-        <updated>2022-09-25T07:41:19.000Z</updated>
-        <summary type="html"><![CDATA[try:
-   ctypes.windll.user32.SetProcessDPIAware()
-except AttributeError:
-    pass]]></summary>
-        <author>
-            <name>ForestSeo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[理解して覚えるpython ~デコレータ編~]]></title>
-        <id>https://zenn.dev/ama_c/articles/c5523044aa0868</id>
-        <link href="https://zenn.dev/ama_c/articles/c5523044aa0868"/>
-        <updated>2022-09-25T03:56:07.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-初学者がデコレータだけ学習しようとすると苦戦します．書き方を覚えたつもりでも理解をしていないのでは，毎日書かない限りほんの数日で忘れてしまいます（過去の僕がそうです）．
-本記事では，デコレータを理解するのに必要な最低限の知識と，そのユースケースを見ていくことで理解して覚えることを目的としています．
-
- 前提知識
-まず，関数内関数とクロージャから学びます．
-
- 関数内関数
-簡単に言うと，関数のネストです．ユースケースとしては，クラスを書くほどじゃないけど，少し読みにくい処理等を書きたいとき程度に考えています．関数の外に書けばいいじゃないかと思うかもしれませんが，外側に書くと，...]]></summary>
-        <author>
-            <name>ama-c</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[『リーダブルコード』の要点＆活用方法]]></title>
-        <id>https://zenn.dev/nameless_sn/articles/readable_code_handbook</id>
-        <link href="https://zenn.dev/nameless_sn/articles/readable_code_handbook"/>
-        <updated>2022-09-25T02:44:41.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-
-今回の記事では『リーダブルコード』の要点と、実務で活用する方法を徹底解説する。この記事を読むことで、『リーダブルコード』の重要な部分と実務での活用方法を学べるだろう。
-本記事で使うプログラムの言語はPythonを採用した。Pythonは文法がシンプルなので初心者でも学習コストが低く、プログラミングの入門としては最も相応しいからである。今回の記事の内容は良いプログラムを格上での重要な基本事項なので、どの言語でも役立つだろう。
-
- 1部：表面上の改善
-
- 名前に情報を詰め込む
-プログラムに使われる名前は、主に次の5つの鉄則を守る必要がある。
-
-明確な単語を選ぶ
-
-例えば、ge...]]></summary>
-        <author>
-            <name>Shota Nukumizu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TodoListを作りました！]]></title>
-        <id>https://zenn.dev/fan_tech/articles/8e2379a2b2152a</id>
-        <link href="https://zenn.dev/fan_tech/articles/8e2379a2b2152a"/>
-        <updated>2022-09-24T20:03:16.000Z</updated>
-        <summary type="html"><![CDATA[TODO
-GitHub - fan-tech/todo: TodoListです。
-
- はじめに
-ベースは以下のサイトを参考にしています。
-Django入門 | 初心者でも1時間でWebアプリ(Todoアプリ)を作成するコース | テックダイアリー
-実はこのままではなくて、
-DBの部分をMYSQL、色んな人のローカルで少しでも動きやすいようにDockerで環境構築できるようにしてあります。
-
-
- 動かし方　お手元での動かし方
-
- まずは、少し書き換えが必要です。
-以下の部分を削除してください。
-★config/settings.py
-import os
-import environ
-
-...]]></summary>
-        <author>
-            <name>ふぁん</name>
         </author>
     </entry>
 </feed>
