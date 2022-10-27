@@ -2,10 +2,144 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-10-26T02:21:18.123Z</updated>
+    <updated>2022-10-27T02:14:40.907Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[年賀状の宛名印刷難民の救済]]></title>
+        <id>https://zenn.dev/m_cre/articles/address-printing-on-jp-postcards</id>
+        <link href="https://zenn.dev/m_cre/articles/address-printing-on-jp-postcards"/>
+        <updated>2022-10-26T16:09:52.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+毎年年末に悩まされる年賀状、近年の傾向のとおり私も基本的には止めてしまったのですが、親戚だけには出すことにしています。
+Windowsであれば手頃な宛名印刷ソフトがいくつかあったと思うのですが、Macに乗り換えてからは定番のものがみつからず、困っていたものです。
+それであれば、自分でつくろうと考えました。
+Macだけでなく、DockerさえインストールできればWindowsでもLinuxでもラズパイでもうごくはずです。たぶん。
+
+ つかいかた
+
+ Dockerのインストール
+Dockerをインストールしたことがない場合は、公式サイトなどを参考にまずインストールしてください。...]]></summary>
+        <author>
+            <name>mcre (FUJITA Shinya)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[cmdstanpy : 重回帰]]></title>
+        <id>https://zenn.dev/yoshida0312/articles/78d996128f3335</id>
+        <link href="https://zenn.dev/yoshida0312/articles/78d996128f3335"/>
+        <updated>2022-10-26T13:05:07.000Z</updated>
+        <summary type="html"><![CDATA[import os
+import time
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from cmdstanpy import CmdStanModel
+
+ データの読み込み
+以下のデータを使用しています。
+https://github.com/MatsuuraKentaro/RStanBook/blob/master/chap05/input/data-attendance-1.txt
+df = pd.read_csv("./data-attendance-1.txt")
+pr...]]></summary>
+        <author>
+            <name>よしだ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[numpy.einsumの仕様]]></title>
+        <id>https://zenn.dev/termoshtt/articles/numpy-einsum</id>
+        <link href="https://zenn.dev/termoshtt/articles/numpy-einsum"/>
+        <updated>2022-10-26T09:18:33.000Z</updated>
+        <summary type="html"><![CDATA[rust-ndarray用の einsum! マクロを作るためにまずNumPyの実装を調べたので、その内容をまとめていく。
+
+ subscripts
+numpy.einsumの引数はのうち、Optionalで無いのは次の2つ：
+
+
+subscripts: str
+
+operands: list of array_like
+
+einsum はこの subscripts で与えられた文字列に応じて operands で与えられたテンソルに対して操作しその結果を返します。
+この記事では subscripts の仕様をまとめていきます。
+
+ Implicit mode
+subscripts には...]]></summary>
+        <author>
+            <name>termoshtt</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[tkinterのlabelウィジェットの使い方]]></title>
+        <id>https://zenn.dev/banananeko/articles/db0688fc341655</id>
+        <link href="https://zenn.dev/banananeko/articles/db0688fc341655"/>
+        <updated>2022-10-26T07:08:41.000Z</updated>
+        <summary type="html"><![CDATA[labelウィジェットとは
+名前の通りテキストを表示するためのウィジェットです。
+このウィジェットがなければGUIアプリケーションが成り立つことはまずありません
+
+ labelウィジェットの表示方法
+labelウィジェットはButtonと同じように
+表示することができます
+ラベル名　= tk.Label(表示するWindow名, text = "表示するテキスト").pack()
+ひとまずこれでlabelを表示させることはできます
+
+ labelの色の変更
+
+ 文字の色
+このラベルの色は実は変更することができます変更するためにはtk.Labelの後の
+()に
+foreground="...]]></summary>
+        <author>
+            <name>banananeko</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[lxmlで子要素の後ろ側にある文字列を取得する方法]]></title>
+        <id>https://zenn.dev/hashito/articles/e47166c4a0bfd0</id>
+        <link href="https://zenn.dev/hashito/articles/e47166c4a0bfd0"/>
+        <updated>2022-10-26T05:39:42.000Z</updated>
+        <summary type="html"><![CDATA[問題
+例えば、下記のようなHTMLがある場合で、すべての文字列を取得したい場合。
+<p>
+    これは
+    <b style="font-weight:bold;">
+        テスト
+    </b>
+    です。
+</p>
+Pythonのlxmlを利用すると下記のような手順で取得する事ができる。
+
+ これはを取得する
+lxmlで解析して、xptahという指定文でテキストを取得できる
+from lxml import etree
+
+html_data="""
+<p>
+    これは
+    <b sty...]]></summary>
+        <author>
+            <name>hashito</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[任意のCUDAバージョンのPyTorchをPoetryでインストールする]]></title>
+        <id>https://zenn.dev/yag_ays/articles/a6c84622f558ee</id>
+        <link href="https://zenn.dev/yag_ays/articles/a6c84622f558ee"/>
+        <updated>2022-10-26T04:35:14.000Z</updated>
+        <summary type="html"><![CDATA[概要
+PyTorchからGPUを利用するためには、CUDAのバージョンに合ったパッケージをインストールする必要があります。PyTorchの"Get Started"ページでは、プラットフォームやバージョン、パッケージマネージャーを選択すると、それに応じたインストールコマンドが表示される仕組みがありますが、ここにはPoetryは含まれていません。
+
+そこでこの記事では、Poetryを利用しているプロジェクトにおいて、任意のCUDAバージョンのPyTorchパッケージをインストールする方法を解説します。
+
+ 方法
+実現する方法はいくつか存在するので、それぞれ解説していきます。ここでは、例...]]></summary>
+        <author>
+            <name>yag_ays</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[DeepL + Slack + GitHub Actionsでリモセン論文取得Botの作成]]></title>
         <id>https://zenn.dev/manuriya/articles/49a02bb2a13b84</id>
@@ -4239,75 +4373,6 @@ GTC2022 で cuQuantum について簡単に学んだので少し記事にまと�
 NVIDIA cuQuantum is a...]]></summary>
         <author>
             <name>derwind</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】Manimでバブルソートのアニメーションを作ってみる]]></title>
-        <id>https://zenn.dev/k41531/articles/828e81c86560ae</id>
-        <link href="https://zenn.dev/k41531/articles/828e81c86560ae"/>
-        <updated>2022-09-27T02:51:56.000Z</updated>
-        <summary type="html"><![CDATA[Manimとは
-Manimとは、3Blue1BrownというYouTubeチャンネルの数学の解説動画を作成するために設計されたエンジンで、プログラムによって精密なアニメーション表現が可能です。
-https://www.youtube.com/watch?v=r6sGWTCMz2k
-
- 準備
-私の環境がMacなのでMac用のインストール方法です。
-Windows,Linux,Docker,Jupyter Notebooksなど、公式ドキュメントにはさまざまなパターンのインストール方法があるのでご参照ください。
-https://docs.manim.community/en/stabl...]]></summary>
-        <author>
-            <name>kaisei</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[共有メモリにNumpy配列を載せてProcessPoolExecutorに渡す]]></title>
-        <id>https://zenn.dev/kzm4269/articles/80df87e6e9001f</id>
-        <link href="https://zenn.dev/kzm4269/articles/80df87e6e9001f"/>
-        <updated>2022-09-27T00:25:54.000Z</updated>
-        <summary type="html"><![CDATA[TL;DR
-import concurrent.futures
-import multiprocessing as mp
-
-import numpy as np
-
-
-def ndarray_to_shared_memory(data):
-    """NumPy配列を共有メモリに載せる.
-    
-    Paramerters
-    -----------
-    data: numpy.ndarray
-    
-    Returns
-    -------
-    (multiprocessing.RawValue, numpy.dtype)
-        共有メモリ上のデ...]]></summary>
-        <author>
-            <name>kzm4269</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[StableDiffusionやMidjourneyでよく出てくる用語まとめ]]></title>
-        <id>https://zenn.dev/michy/articles/f5a9f073709e0e</id>
-        <link href="https://zenn.dev/michy/articles/f5a9f073709e0e"/>
-        <updated>2022-09-26T16:11:20.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事ではStableDiffusionを利用する際によく出てくる用語をまとめました。
-それぞれの用語には見出しをつけてあるので、気になる用語には目次からジャンプできます。
-
- 基本用語
-
- prompt(呪文)
-StableDiffusionに書いてほしいイラストをインプットする為のテキスト。
-主にイラストの構図、シチュエーション、画風を決めるために使用する。
-
- Negative Prompt
-StableDiffusionに書いてほしくない画像をインプットする為のテキスト。
-
- seed
-画像作成時に使用するパラメータ。同じseed値を使うと同じ画像が作成される。
-...]]></summary>
-        <author>
-            <name>zaiwa</name>
         </author>
     </entry>
 </feed>
