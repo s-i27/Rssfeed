@@ -2,10 +2,198 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-11-05T02:05:55.801Z</updated>
+    <updated>2022-11-06T02:09:39.369Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[第４回 【Python】まだ見ぬアクティビティーを求めてアソビュー ！機械学習(Doc2Vec)]]></title>
+        <id>https://zenn.dev/tokoroteen/articles/28ad4b0c2ec178</id>
+        <link href="https://zenn.dev/tokoroteen/articles/28ad4b0c2ec178"/>
+        <updated>2022-11-05T23:00:00.000Z</updated>
+        <summary type="html"><![CDATA[1. 概要
+この記事は第3回の続きです。
+https://zenn.dev/tokoroteen/articles/4d4e5dbfd8d845
+第3回ではアクティビティー予約サイト「アソビュー!」から各アクティビティー施設の口コミをスクレイピングしました。
+休日への想いをアクティビティーという形にするという目的を達成するため、今回は口コミデータを使って、アクティビティーをレコメンドしてくれるモデルを構築していきたいと思います。
+完成したものはこちら↓
+https://lifac.herokuapp.com/
+例えば「空を飛びたい」とき（検索後に海要素を足して、山要素を引くこともでき...]]></summary>
+        <author>
+            <name>Tokoroteen</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】argparse で「環境変数にあればそれを使う」を実現する方法]]></title>
+        <id>https://zenn.dev/naminodarie/articles/9a03fba5f6cdbe</id>
+        <link href="https://zenn.dev/naminodarie/articles/9a03fba5f6cdbe"/>
+        <updated>2022-11-05T18:57:04.000Z</updated>
+        <summary type="html"><![CDATA[前置き
+「コマンドライン引数か環境変数で値を受け取る」という状況があります。
+ここでは
+python main.py --foo hoge --bar piyo
+というようなコマンドを考えます。
+
+
+foo
+
+コマンドラインで値を受け取る
+コマンドラインがなく環境変数 FOO があればその値を使う
+コマンドラインがなく環境変数 FOO もなければエラーとする
+
+
+
+bar
+
+コマンドラインで値を受け取る
+コマンドラインがなく環境変数 BAR があればその値を使う
+コマンドラインがなく環境変数 BAR もなければ defaultbar とする
+
+
+
+
+ 実装
+
+ bar
+bar の方は...]]></summary>
+        <author>
+            <name>KZRNM</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[cuQuantum で遊んでみる (3) — 期待値計算]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-cuquantum03</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-cuquantum03"/>
+        <updated>2022-11-05T18:10:44.000Z</updated>
+        <summary type="html"><![CDATA[目的
+引き続き cuQuantum で遊んでみるのだが、今回は Qiskit も Cirq も使わずに直接 cuQuantum の Python ラッパを叩いてみたい。
+
+ ハミルトニアン
+期待値を計算する対象のハミルトニアンはお馴染みの Pauli Z 演算子とする。\ket{0} と \ket{1} で期待値を計算してみたい。
+
+
+ 早速計算
+expectation_pauli.py を参考にするのだが、なかなか C++ なので一部 Python っぽく書き換えて使う。
+import numpy as np
+import cupy as cp
+
+import cuquantum
+...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[flaskがインストールできたか確かめるときにハマったこと]]></title>
+        <id>https://zenn.dev/masaru21/articles/285ff4c3e0d123</id>
+        <link href="https://zenn.dev/masaru21/articles/285ff4c3e0d123"/>
+        <updated>2022-11-05T16:44:44.000Z</updated>
+        <summary type="html"><![CDATA[先日GitHubにアップロードしたPythonのプログラムで、ウェブアプリにしたいと思い、Web開発のフレームワークを探していました。
+今回は小規模なので、flaskを使ってみることにしました。
+今回は、virtualboxにインストールしたUbuntu22.04に、インストールしました。
+下記の記事で、作業を進めました。
+https://sync-g.co.jp/sjobs/python-flask-biginner/
+ですが、下記のコマンドを実行するとエラーになりました。
+>>> import Flask
+>>> Flask.__version
+こ...]]></summary>
+        <author>
+            <name>lonely_creator_m</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】関数内のローカル変数名を無理やり取得する]]></title>
+        <id>https://zenn.dev/sugac/articles/3d2cb78e765d23</id>
+        <link href="https://zenn.dev/sugac/articles/3d2cb78e765d23"/>
+        <updated>2022-11-05T12:27:56.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+どうやらpythonにおいてローカル変数の情報は関数オブジェクトが所持していないらしく、
+スマートに取得する方法は見つかりませんでした。
+自分はどうしてもローカル変数名を取得したかったので、astモジュールを使って取得を行いましたが、今回のコードだと漏れが生じる可能性もあるので完璧ではないです。
+
+ 環境
+python 3.9.12
+windows
+
+ astモジュールとは
+抽象構文木を作成するモジュールです。詳しいことは私も理解していませんが、pythonプログラムの文字列からpythonで実行できるようなデータ形式への変換を行っているっぽいです。
+https://doc...]]></summary>
+        <author>
+            <name>須賀</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[約数列挙のアルゴリズムの実装と改善]]></title>
+        <id>https://zenn.dev/def_yuisato/articles/algorithm-divisor-enumeration</id>
+        <link href="https://zenn.dev/def_yuisato/articles/algorithm-divisor-enumeration"/>
+        <updated>2022-11-05T11:11:52.000Z</updated>
+        <summary type="html"><![CDATA[約数列挙とは
+正の約数 N において、N の約数を全て求めること。
+例) 12 の約数列挙　 → 1,2,3,4,6,12
+
+ 通常の実装(O(N))
+
+ 【方針】
+
+1 以上 n 以下の整数を i として順番に見ていき、割り切れたら(n % i == 0)i は n の約数と判定する
+時間計算量は 1 から n まで全てを見ていくため O(N)になる。
+
+
+ 【実装】
+n = int(input())
+result = []
+for i in range(1, n+1):
+    if n % i == 0:
+        result.append(i)
+print(*resu...]]></summary>
+        <author>
+            <name>佐藤 優偉(Yui Sato)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[python] import 宣言を複数行またぐケース含めて grep 風出力で検索できるツールを作ってみた]]></title>
+        <id>https://zenn.dev/hassaku63/articles/75bc1b56b94528</id>
+        <link href="https://zenn.dev/hassaku63/articles/75bc1b56b94528"/>
+        <updated>2022-11-05T09:21:56.000Z</updated>
+        <summary type="html"><![CDATA[おことわり
+「はじめに」で書く用事を満たしたいなら find - xargs grep で十分です。ここで紹介するツールを使う必要は一切ないです。
+find . -name "*.py" | xargs grep -n 'import'
+ast のお勉強がてら作ってみました。
+
+ はじめに
+引き継いで以降ずっと塩漬けしてた古いプロジェクトの依存関係を更新しよう、という仕事が発生したのですが、依存関係の定義である requirements.txt が pip freeze の出力そのままリダイレクトしたような内容になっていて少々困りました。
+# 依存関係は明示的に書いてほしい...
+p...]]></summary>
+        <author>
+            <name>hassaku63</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【VSCode】おすすめの拡張機能 21選]]></title>
+        <id>https://zenn.dev/nameless_sn/articles/recommended_vscode</id>
+        <link href="https://zenn.dev/nameless_sn/articles/recommended_vscode"/>
+        <updated>2022-11-05T03:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+今回の記事では、主にバックエンド(PythonとTypeScript中心)を開発している私が使っているVSCodeの拡張機能を紹介する。
+
+ 拡張機能
+基本的にどのような言語でも対応できる拡張機能を紹介する。
+
+ Japanese Language Pack for Visual Studio Code
+
+VSCodeを日本語にできる。
+
+ REST Client
+
+VSCode上でgetやpostなどのHTTPリクエストを送信できる。GraphQLにも対応している。
+
+ GitLens — Git supercharged
+
+commit単位でファイルを比較したり、最新の...]]></summary>
+        <author>
+            <name>Shota Nukumizu</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[pytest, mock, patchについて整理したい]]></title>
         <id>https://zenn.dev/shimo_s3/articles/9f486cfee75edc</id>
@@ -4177,48 +4365,6 @@ RSA暗号は、素因数分解がとてもむずかしいこと（人類が解�
  ざっくりとし...]]></summary>
         <author>
             <name>かえる</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pytorch Points 3Dを使えるようにする（Windows 11）]]></title>
-        <id>https://zenn.dev/takiser/articles/c1d72670d0abac</id>
-        <link href="https://zenn.dev/takiser/articles/c1d72670d0abac"/>
-        <updated>2022-10-07T08:14:02.000Z</updated>
-        <summary type="html"><![CDATA[環境について
-Pytorch Points 3Dはpipでインストールできる。が、2022/10/07現在、必要なもの全てを最新の状態でインストールしていくとインストールがうまくいかない。
-今回はうまく行ったケースについて紹介していく。
-OS: Windows11
-バージョン管理: pyenv-win
-仮想環境: venv
-エディタ: vscode
-Visual Studio 2019を事前にインストールし、2022バージョンをインストールしている場合はアンインストールしておくと良い。Pythonのバージョンは3.8.0を使用する。
-pyenv,venvについて以下参照。
-https...]]></summary>
-        <author>
-            <name>takiser</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[他言語に移行する前のdjangoまとめ]]></title>
-        <id>https://zenn.dev/issei_manabi/articles/c5abea2833b558</id>
-        <link href="https://zenn.dev/issei_manabi/articles/c5abea2833b558"/>
-        <updated>2022-10-06T23:56:02.000Z</updated>
-        <summary type="html"><![CDATA[環境構築
-1 pythonをインストール
-2 Vscodeをインストール（（ライブラリを入れておくと楽　Prettierなど
-3 仮想環境の作成（venv)　以下の通りに実行
-3 % sudo apt install python3.8-venv
-4 % python3 -m venv venv
-5  ls(venvがインストールされていることを確認
-6 % source venv/bin/activate
-7 (venv)% と表示されるしくみは完成！
-
- プロジェクトを始める
-work_placeでターミナルを開く
-# work_placeファイルがある階層で
-cd work_p...]]></summary>
-        <author>
-            <name>issei</name>
         </author>
     </entry>
 </feed>
