@@ -2,10 +2,226 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-11-12T02:02:18.337Z</updated>
+    <updated>2022-11-13T02:02:24.107Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Pythonでリストの組合せを作成する]]></title>
+        <id>https://zenn.dev/mimitako/articles/python_list_combination_gen</id>
+        <link href="https://zenn.dev/mimitako/articles/python_list_combination_gen"/>
+        <updated>2022-11-12T23:47:00.000Z</updated>
+        <summary type="html"><![CDATA[Python でリストの組合せを作成する
+大した技術ではありませんが、地味に使っているので公開します。
+
+ モチベーション
+Stable Diffusion で Prompt の組合せ評価を行っているとき、いろいろ組合せがあると面倒だからなんとかならんかなぁ？と考えていました。
+調べれば itertools というライブラリで目的は達成できるのですが、ベースを Json にしていたので、辞書キー:リストの形でうまく使えるようにしたかったです。
+
+ 使い方
+コードは下記の通り簡単です。
+
+key:list の形で形成された辞書を作成します。
+各 key のリストを大きいリストでネストし...]]></summary>
+        <author>
+            <name>mimitako</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】EDINET APIから取得した有価証券報告書のテキストデータと財務データを保存【Google Colab】]]></title>
+        <id>https://zenn.dev/neomocha/articles/2bc426bf067ef1</id>
+        <link href="https://zenn.dev/neomocha/articles/2bc426bf067ef1"/>
+        <updated>2022-11-12T16:06:22.000Z</updated>
+        <summary type="html"><![CDATA[まとめると
+!
+有価証券報告書からのテキスト分析&財務分析をする準備として、EDINET APIから取得した有価証券報告書のテキストデータと財務データをGoogle Driveへ保存します🐱
+
+!
+Google Colabで動かしています。
+
+つぎの流れでやっていきます。
+
+ライブラリのインポート
+有価証券報告書のdocIDを取得
+有価証券報告書が入ったzipファイルを取得
+zipファイルを解凍
+XBRLファイルからテキストデータと財務データを取得
+取得したデータをGoogle Driveに保存
+
+作成にあたっては次の記事を参考にしました。とても役立つ内容をありがとうございま...]]></summary>
+        <author>
+            <name>mocha</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Excelにまとめて画像ファイルを挿入する方法 Python編]]></title>
+        <id>https://zenn.dev/kokopi/articles/fd4ebe665b157b</id>
+        <link href="https://zenn.dev/kokopi/articles/fd4ebe665b157b"/>
+        <updated>2022-11-12T15:57:56.000Z</updated>
+        <summary type="html"><![CDATA[解決したい問題
+通常、ExcelのSheet内に画像を取り込みたいときは、メニューの挿入から画像を選択します。
+しかし、それが何枚もとなると面倒臭いですよね？
+さらに、業務などで日常的にとなると費やす時間は計り知れません。
+今回はそんな方に向けた記事を紹介していきます。
+
+
+ 対象となる人
+プログラミングって何？なんか英語でつらつらと書くやつ？？
+そんなのさっぱりわからないしやりたくない、できない。というノンプログラマーの方に向けて丁寧に説明していきます。
+
+
+ 解決策
+Python(パイソン)というプログラム言語を使って、Excelへの画像貼り付けを自動化します。
+待て待て、さっき...]]></summary>
+        <author>
+            <name>ここぴのパパ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[画像からテキストを生成してみた]]></title>
+        <id>https://zenn.dev/mimitako/articles/img2text_trial1</id>
+        <link href="https://zenn.dev/mimitako/articles/img2text_trial1"/>
+        <updated>2022-11-12T14:34:56.000Z</updated>
+        <summary type="html"><![CDATA[画像からテキストを生成してみた
+さて、今回は画像からテキストを生成してみようと思います。画像には CC0 のものとそうでないものが混在したため、ここに貼付けせず、リンクで表記しています。
+
+ モチベーション
+この作業を行ったモチベーションは Stable Diffusion で遊ぶのは良いが、逆生成(img to prompt)はできないものかと思い実行しました。結果は散々なものです。ここには画像ありませんが、気になった方は読み進めてもらえると嬉しいです。
+
+ img2text の中身
+ほぼ Hugging Face にあったコードを利用させていただいています。Link
+修正したとこ...]]></summary>
+        <author>
+            <name>mimitako</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ベルヌーイ分布の期待値と分散, ベイズ推定]]></title>
+        <id>https://zenn.dev/shundeveloper/articles/100ba5ebfc19cb</id>
+        <link href="https://zenn.dev/shundeveloper/articles/100ba5ebfc19cb"/>
+        <updated>2022-11-12T13:00:00.000Z</updated>
+        <summary type="html"><![CDATA[確率質量関数
+確率質量関数は下記のように定義される.
+
+\begin{align*}
+Bern(x|\mu) &= \mu^x (1-x)^{(1-x)}\\
+x&=\{0,1\},\; \mu=(0,1)
+\end{align*}
+
+ただし, \mu は平均である.
+
+ 期待値・分散
+確率変数のとる値が0と1の二つで和の計算が簡単である.
+
+ 期待値
+
+\begin{align*}
+\mathbb{E}(X)
+ &= \sum_{x=0}^1 x\mu^x(1-\mu)^{(1-x)}\\
+&=
+0\cdot\mu^0 (1-\mu)^1 + 1 \...]]></summary>
+        <author>
+            <name>ShunDev</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[matplotlibの備忘録]]></title>
+        <id>https://zenn.dev/canard0328/articles/memorandum-of-matplotlib</id>
+        <link href="https://zenn.dev/canard0328/articles/memorandum-of-matplotlib"/>
+        <updated>2022-11-12T08:57:31.000Z</updated>
+        <summary type="html"><![CDATA[毎回ググってるし、必要な情報は一か所にまとまっていて欲しいという、自分のための備忘録です。
+
+ plt.plotか、ax.plotか
+import matplotlib.pyplot as plt
+した後、簡単なグラフを書くには大きく2つの方法があります。一つ目は、
+plt.plot(...)
+plt.sho()
+とする方法です。もう一つは、
+fig, ax = plt.subplots()
+ax.plot(...)
+plt.show()
+と書く方法です。
+グラフを１つ描画する場合にはどちらでもよいのですが、前者は後者の簡易的な記述方法ですので、後者の書き方で覚えておいたほうが応用が利く...]]></summary>
+        <author>
+            <name>canard0328</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【python】PDFをスクレイピングして中身をCSVへ出力する（前編）]]></title>
+        <id>https://zenn.dev/subaru_hello/articles/73253a46a76f7f</id>
+        <link href="https://zenn.dev/subaru_hello/articles/73253a46a76f7f"/>
+        <updated>2022-11-12T08:54:43.000Z</updated>
+        <summary type="html"><![CDATA[陸上競技場が個人向けに開放されている日を調べるために、毎回サイトへ訪問して、PDFリンクをクリックして、今日が空いているのか、を確認するのって億劫ですよね。
+例えばこんな感じです。
+
+そこで、サイト内に存在するPDFをスクレイピングして中身をCSVへ保存するプログラムを作ろうと考えました。
+今回は、プログラム作成における戦略と戦術をまとめていきたいと思います。
+
+ 本記事で作るプログラム
+長すぎるので二つの記事に分けたいと思います。
+本記事では、URLからHTMLを取得し、PDFファイルをスクレイピングしてローカルへ保存するまでを扱いたいと考えています。
+そして、出来上がるのは下記プログ...]]></summary>
+        <author>
+            <name>subaru-hello</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】CSVファイルへの書き出しについて【備忘録】]]></title>
+        <id>https://zenn.dev/siganai/articles/20221112_python_csv_output</id>
+        <link href="https://zenn.dev/siganai/articles/20221112_python_csv_output"/>
+        <updated>2022-11-12T08:18:48.000Z</updated>
+        <summary type="html"><![CDATA[CSVファイルにデータを書き出す方法を備忘録としてまとめる．
+使用言語はPython．
+本記事中で例示するために使用したコードとデータは，ここからダウンロード可能．
+
+ 方法１：pandas
+データフレーム（表形式）のデータをCSVに保存しやすい．
+pandasのto_csv関数を使用．
+CSVに保存されているデータをデータフレーム（表形式）で読み込むことが可能．
+引数path_or_bufにCSVファイルのパス（本記事では変数output_path）を渡す．
+
+ インストール方法
+
+terminal
+pip install pandas
+
+
+ 実際の使用例
+
+pandas_test.p...]]></summary>
+        <author>
+            <name>SiganAI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[macOS に bpy をインストールする]]></title>
+        <id>https://zenn.dev/nek0n0mimi/articles/4f461c2e3ebc45</id>
+        <link href="https://zenn.dev/nek0n0mimi/articles/4f461c2e3ebc45"/>
+        <updated>2022-11-12T06:07:55.000Z</updated>
+        <summary type="html"><![CDATA[背景
+
+ImportError: No module named bpy
+
+となったので、pip install bpyとしたら
+
+ERROR: Could not find a version that satisfies the requirement bpy
+
+と怒られた。
+
+ 実行環境
+
+macOS M1
+Python 3.9
+
+
+ インストール
+pipのアップグレード後、以下を実行する。
+pip install fake-bpy-module-2.82
+※ バージョンを指定する]]></summary>
+        <author>
+            <name>calcifer</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[AtCoderのとある問題でCode Golfに挑戦した記録 (Python3)]]></title>
         <id>https://zenn.dev/sugyan/articles/5f45e4808ffc95</id>
@@ -3955,209 +4171,6 @@ draw.ioのライブラリを作ったので、実践編として投稿するこ�
 draw.ioをプロジェクトで使うことになったのがきっかけ...]]></summary>
         <author>
             <name>capybara-alt</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[What is the sleeping time of Python]]></title>
-        <id>https://zenn.dev/joealish/articles/0747f58e40f061</id>
-        <link href="https://zenn.dev/joealish/articles/0747f58e40f061"/>
-        <updated>2022-10-14T09:41:40.000Z</updated>
-        <summary type="html"><![CDATA[Introduction:
-Hello readers, I hope you are doing well. In this piece of article, we are going to put light on the following points:
-What is the sleeping time of Python?
-sleep() function in Python.
-Let us move forward step by step.
-
- What is the sleeping time of Python?
-In Python, we can add de...]]></summary>
-        <author>
-            <name>joealish</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[JavaScript分かる人のためのPython書き換え]]></title>
-        <id>https://zenn.dev/engineerhikaru/articles/8ed2cc29d723ad</id>
-        <link href="https://zenn.dev/engineerhikaru/articles/8ed2cc29d723ad"/>
-        <updated>2022-10-14T08:44:53.000Z</updated>
-        <summary type="html"><![CDATA[拡張子
-
-
-
-言語
-拡張子
-
-
-
-
-JavaScript
-.js
-
-
-Python
-.py
-
-
-
-
- コメントアウト
-
-JavaScript
-// 1行コメント
-/*
-  複数行コメント
-*/
-
-
-Python
-# 1行コメント
-'''
-複数行コメント
-'''
-
-
- 結果出力
-
-JavaScript
-console.log("Hello World");
-
-
-Python
-print("Hello World")
-
-
- 変数と型
-
-JavaScript
-let str = "文字列";
-let i = 100;
-
-
-Python
-char = "文字列" # ※strは予約語
-i =...]]></summary>
-        <author>
-            <name>ENGINEER HIKARU</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python2.7 でpipを使えるようにする]]></title>
-        <id>https://zenn.dev/toshidot59/articles/8b98b2db4b7ebd</id>
-        <link href="https://zenn.dev/toshidot59/articles/8b98b2db4b7ebd"/>
-        <updated>2022-10-14T04:38:01.000Z</updated>
-        <summary type="html"><![CDATA[Python2.7 pipインストール
-
- RHEL7 環境
-
- インストール
-sudo curl -kL https://bootstrap.pypa.io/pip/2.7/get-pip.py | python
-
- オフライン環境にインストール
-外部に接続出来ない環境へインストールする必要がある場合
-
- オンライン環境で準備
-まずは、外部へ繋がる環境で準備
-
- パッケージダウンロード/インストール環境への転送
-wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
-
- オフライン環境側で実施
-準備したファイルを/tmpに配置
-
- インス...]]></summary>
-        <author>
-            <name>toshi.59</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[JavaとPythonで文法の違いを比較してみた]]></title>
-        <id>https://zenn.dev/yuckey1123/articles/0df8ebf4f3f342</id>
-        <link href="https://zenn.dev/yuckey1123/articles/0df8ebf4f3f342"/>
-        <updated>2022-10-14T03:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-😺「PythonのコードってJavaで例えると何になるんだろ？」
-Python学習中に私が感じたこのような疑問を晴らす為に、学習がてらJavaとPythonの文法を比較しながらチートシート風でまとめてみました。
-この記事では、それぞれの言語でよく使うであろう文法をメインでまとめています。
-また、文法だけでなく命名規則の違いについても比較してみましたので、何かのお役に立てれば嬉しいです！
-
- コーディング規約 / 命名規則
-それぞれ以下のコーディング規約をもとに比較してみました。
-
- Java
-https://future-architect.github.io/coding...]]></summary>
-        <author>
-            <name>yuckey</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python3.8をオフライン環境へインストール]]></title>
-        <id>https://zenn.dev/toshidot59/articles/af1896b173696e</id>
-        <link href="https://zenn.dev/toshidot59/articles/af1896b173696e"/>
-        <updated>2022-10-14T02:22:53.000Z</updated>
-        <summary type="html"><![CDATA[Python3.8をオフライン環境へインストール
-
- RHEL7 環境
-Python3.8を外部に接続出来ない環境へインストールする必要があったのでメモ
-
- オンライン環境で準備
-まずは、外部へ繋がる環境で準備
-
- リポジトリ確認
-subscription-manager repos --list | grep -5 rhel-server-rhscl-7-rpms
-
- リポジトリを有効にする
-subscription-manager repos --enable rhel-server-rhscl-7-rpms
-
- ダウンロード
-mkdir /tmp/rh-python38_rep...]]></summary>
-        <author>
-            <name>toshi.59</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linux環境にPython3.8をインストール]]></title>
-        <id>https://zenn.dev/toshidot59/articles/c7259b6934c5ed</id>
-        <link href="https://zenn.dev/toshidot59/articles/c7259b6934c5ed"/>
-        <updated>2022-10-14T00:44:53.000Z</updated>
-        <summary type="html"><![CDATA[Python3.8 インストール
-
- AL2 環境の場合
-
- インストール
-sudo amazon-linux-extras install -y python3.8
-python バージョン確認
-python3.8 --version
-
- alias設定
-pyhonコマンドで実行するバージョンを変更する。
-echo 'alias python=python3.8' >> ~/.bashrc
-source ~/.bashrc
-python バージョン確認
-python -V
-
- pip
-pip バージョン確認
-pip3.8 --version
-
- pipenv インストー...]]></summary>
-        <author>
-            <name>toshi.59</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[挫折しない0円Python勉強法]]></title>
-        <id>https://zenn.dev/pienthon/articles/b4defc6b1d4b9a</id>
-        <link href="https://zenn.dev/pienthon/articles/b4defc6b1d4b9a"/>
-        <updated>2022-10-13T17:24:06.000Z</updated>
-        <summary type="html"><![CDATA[今までPythonを勉強してきて、うまいこと行かず挫折した経験がかなりあります。
-これから勉強を始める方が効率的に勉強できるように、勉強法を簡単にまとめてみました。
-
- 1. GoogleColabを使う
-プログラミング学習において、初心者が環境構築に時間を使うのは無意味です。
-学習はなかなか始まらないわ、インストールでエラーばっかり出て私には向いてない！むり！ って思っちゃうわで散々です。
-ある程度学習が進んで、Colabじゃできないことに直面した時にAnacondaとかインストールすれば良いと思います。
-Googleドライブに入って適当にフォルダを作り、その中にipynbファイルを作...]]></summary>
-        <author>
-            <name>にゃーん(Pienthon)</name>
         </author>
     </entry>
 </feed>
