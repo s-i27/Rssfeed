@@ -2,10 +2,173 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-11-14T02:00:53.621Z</updated>
+    <updated>2022-11-15T01:59:13.295Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[2つの pip freeze を比較するツール作った]]></title>
+        <id>https://zenn.dev/hassaku63/articles/deb96896623639</id>
+        <link href="https://zenn.dev/hassaku63/articles/deb96896623639"/>
+        <updated>2022-11-14T16:16:07.000Z</updated>
+        <summary type="html"><![CDATA[おことわり
+この記事と背景的なものは同じです。
+https://zenn.dev/hassaku63/articles/75bc1b56b94528
+
+引き継いで以降ずっと塩漬けしてた古いプロジェクトの依存関係を更新しよう、という仕事が発生したのですが、依存関係の定義である requirements.txt が pip freeze の出力そのままリダイレクトしたような内容になっていて少々困りました。
+
+requirements をダイエットしたい、という用事が上記の記事と同じで、今回は実際にダイエットさせてみた requirements と元のファイルでそれぞれ何がどのバージョンで...]]></summary>
+        <author>
+            <name>hassaku63</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Stable Diffusion Samplerの違いを比べてみた]]></title>
+        <id>https://zenn.dev/mimitako/articles/stable_diffusion_sampler</id>
+        <link href="https://zenn.dev/mimitako/articles/stable_diffusion_sampler"/>
+        <updated>2022-11-14T13:25:05.000Z</updated>
+        <summary type="html"><![CDATA[Stable Diffusion Samplerの違いを比べてみた
+Stable diffusionにおけるSamplerってどれくらい影響がある？ぶっちゃけあまり知らずに使っていました。実際に使うといろいろ違いが出てきて面白いですね。
+今回はSampler だけを変更し、Step数、Prompt、Seed値などはすべて固定しています。なお、GPUにはGTX1660Tiを利用しています。描画な時間は目安としてご利用ください。
+
+ 呪文
+呪文は元素法典から引用しています。
+
+masterpiece, best quality, super fine illustration,maste...]]></summary>
+        <author>
+            <name>mimitako</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】グラフのx軸目盛の位置を上部に変更する方法について【備忘録】]]></title>
+        <id>https://zenn.dev/siganai/articles/20221114_python_xaxis_top</id>
+        <link href="https://zenn.dev/siganai/articles/20221114_python_xaxis_top"/>
+        <updated>2022-11-14T12:54:49.000Z</updated>
+        <summary type="html"><![CDATA[matplotlibを使用してグラフを作成する際に，通常グラフ下部に表示されるx軸の目盛りをグラフ上部に変更する方法を備忘録としてまとめる．
+使用言語はPython．
+本記事中で例示するために使用したコードとデータは，ここからダウンロード可能．
+
+ 方法
+matplotlibのAxes.xaxis.tick_top()を使用することでグラフ上部にx軸目盛を表示することが可能．
+実際のコードを以下で示す．
+
+ インストール方法
+
+terminal
+pip install matplotlib
+
+
+ 実際の使用例
+ここでは例として，y=sin(x)をグラフにする．
+xの範囲は0～3πとする．...]]></summary>
+        <author>
+            <name>SiganAI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python便利なテクニック集]]></title>
+        <id>https://zenn.dev/banananeko/articles/06ef908cd65383</id>
+        <link href="https://zenn.dev/banananeko/articles/06ef908cd65383"/>
+        <updated>2022-11-14T10:26:48.000Z</updated>
+        <summary type="html"><![CDATA[今回紹介するテクニック
+今回紹介するテクニックはこちらです
+
+as(importの時)
+sys.exit()
+_ (アンダーバー)
+input()
+
+
+ as
+asとは importの時に使える便利なコードです。これを使うことによって importするモジュール名を自分なりの呼び方にすることができます
+
+ 使い方
+import モジュール名　as 自分なりの言い方
+という感じで使えます
+
+ 例文
+ import sys as s
+ # こうすることでsysをsと呼ぶことができる
+ print('hello')
+ s.exit()
+ print('world')
+!
+s.exit()を...]]></summary>
+        <author>
+            <name>banananeko</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[レコメンドのオフライン評価でRecall@kの方がPrecision@kより用いられる理由]]></title>
+        <id>https://zenn.dev/yuya_sato/articles/f1a9aebe9a2e0d</id>
+        <link href="https://zenn.dev/yuya_sato/articles/f1a9aebe9a2e0d"/>
+        <updated>2022-11-14T10:21:39.000Z</updated>
+        <summary type="html"><![CDATA[概要
+一般にRecallとPrecisionの違いなどは記事がありますが、Recall@kとPrecision@kの違い、そしてレコメンドエンジンを評価する現場ではRecall@kが評価指標としてよく用いられる理由については解説している専門書、記事が英語、日本語とも見当たらなかったので自分なりに考えてみました。
+
+ 一般的なRecallとPrecisionの定義
+Recallの定義は、
+
+Recall := \frac{TP}  {TP + FN} \\ \quad \\
+        = \frac {正解だと思って正解だったアイテム数} {正解だと思って正解だったアイテム数 +...]]></summary>
+        <author>
+            <name>Yuya Sato / 佐藤優矢</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【TypeHint】list[SubClass]がlist[SuperClass]に受け付けられない【Python】]]></title>
+        <id>https://zenn.dev/yosemat/articles/df389eb19bb178</id>
+        <link href="https://zenn.dev/yosemat/articles/df389eb19bb178"/>
+        <updated>2022-11-14T09:55:38.000Z</updated>
+        <summary type="html"><![CDATA[SubClassのlistはSuperClassのlistには代入できない
+class SuperClass:
+    pass
+
+
+class ChildClass(SuperClass):
+    pass
+
+
+def process_children(children: list[SuperClass]):
+    pass
+
+
+def process_child(child: ChildClass):
+    pass
+
+
+child = ChildClass()
+children = [child]
+process_child(child)  # works
+process...]]></summary>
+        <author>
+            <name>Yosemat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Annictの記録したアニメ数をGitHubのプロフィールに載せるサービスを作りました]]></title>
+        <id>https://zenn.dev/penguincabinet/articles/762e7e201fd86a</id>
+        <link href="https://zenn.dev/penguincabinet/articles/762e7e201fd86a"/>
+        <updated>2022-11-14T09:52:14.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Githubプロフィール用のバッジを生成するサービスがあります。
+例えば、
+Qiitaのコントリビューション数や記事数をバッジにするサービス。
+https://qiita.com/mikkame/items/f2c60d9caf8a8e38ec50
+Zennの記事数をバッジにするサービス。
+https://github.com/nikaera/zenn-badge
+偉大な先人たちに感謝…！！
+僕のREADMEに使わせていただくと、こんな感じになります。
+
+僕も何かバッジ化するサービスを作りたい。
+
+ Annictとは
+アニメ視聴を記録し感想を投稿できるサービスです。
+htt...]]></summary>
+        <author>
+            <name>PenguinCabinet</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[有価証券報告書をベクトル化して散布図にプロット]]></title>
         <id>https://zenn.dev/jnxjez/articles/75a6d77b624a4f</id>
@@ -4048,222 +4211,6 @@ Quantum feature maps and kernels に「量子カーネル」のコンテンツ�
 名称は知らないが、文献 [PML] を含め機械学習...]]></summary>
         <author>
             <name>derwind</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[M1/M2 MacのローカルにStableDffusionのGUI環境を作る(InvokeAI編)]]></title>
-        <id>https://zenn.dev/michy/articles/08513aa6e545d9</id>
-        <link href="https://zenn.dev/michy/articles/08513aa6e545d9"/>
-        <updated>2022-10-16T12:17:52.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事ではM1/M2環境でローカルで処理できるStableDiffusionのGUI環境の構築方法を解説します。
-2022/10現在ではGUIの動作環境はautomatic1111が有名ですが、機能が複雑になり利用のハードルが日に日に上がってきています。本記事ではUIがシンプルかつ利用しやすいInvokeAIの利用方法を解説します。
-
- InvokeAIとは？
-StableDiffuisonのサポートツールです。本家よりもかなり使いやすく、GUI/CUI両方で利用が可能な便利ツールになっています。
-インストールの簡易さが非常に魅力的でautomatic1111よりもインス...]]></summary>
-        <author>
-            <name>zaiwa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[blf ファイルのダンプを取ってみた]]></title>
-        <id>https://zenn.dev/wattak777/articles/9d6f85e3ad160e</id>
-        <link href="https://zenn.dev/wattak777/articles/9d6f85e3ad160e"/>
-        <updated>2022-10-16T11:56:33.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは、わたる です。
-
- いきさつ
-ひょんなことから BLF ファイルを解析することになりまして。
-ところが手元に CANalizer も無く、さてどげんしたら…と、途方に暮れていたら、
-【完全版】pythonでblfファイルのCANデータをcsv化する【詳細解説付き】
-というページを発見。google センセイは便利ですね。
-しかし、サンプルを見るとどうやら dbc というデータベースファイルが必要らしく、かつ、指定した特定の MSG ID しか取ってこず、本来欲しかったダンプでは残念ながら無く。
-
- ええい、作っちゃえ
-…と、いうことでみんな大好き Python で作ってみまし...]]></summary>
-        <author>
-            <name>わたる</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Sphinxのカスタムロールを即席で作った]]></title>
-        <id>https://zenn.dev/attakei/articles/sphinx-custom-role-for-pypi</id>
-        <link href="https://zenn.dev/attakei/articles/sphinx-custom-role-for-pypi"/>
-        <updated>2022-10-16T11:31:13.000Z</updated>
-        <summary type="html"><![CDATA[タイトルのとおりなのですが、PyPIに登録されているパッケージへのリンクを簡単にセットするSphinxロールを書いてみました。
-ソース全体を見たい場合は、 GitHubのスライド用リポジトリので参照してください。
-
- そもそもロールって？
-Sphinx(ひいてはreStructuredText)における、ディレクティブとは別の拡張手法です。
-ディレクティブがブロックレベルでの拡張を実現するのに対して、ロールはインラインの構成要素を拡張するような役割を持ちます。
-例えば、Sphinxのプロジェクトでドキュメントへのリレーションを書きたいときは :doc:`other-doc` と記述するこ...]]></summary>
-        <author>
-            <name>Takei Kazuya</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Djangoの初期設定（Python、Djangoの超初心者向け）]]></title>
-        <id>https://zenn.dev/tarowhitey/articles/68567387234459</id>
-        <link href="https://zenn.dev/tarowhitey/articles/68567387234459"/>
-        <updated>2022-10-16T10:36:32.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは。たろーです。
-PythonのWeb開発フレームワークであるDjangoを利用する際、毎回調べながら初期設定をしてしまいまうので、メモがてら設定の手順を記しておきます。
-少しでも参考になれば幸いです。
-
- この記事の対象者
-
-Python, Django初心者
-Djangoを使ったことがあるが毎回初期設定で躓いてしまう方
-
-
- 環境
-OS : MacOS Monterey 12.6 (M1)
-Python : 3.10.5
-Django : 4.1.2 *後ほどインストール手順を記載しています
-
- Django導入手順
-ここから、Djangoの導入手順を記載します。
-
- 仮想環...]]></summary>
-        <author>
-            <name>たろー</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MacでPython環境構築(Anaconda編)]]></title>
-        <id>https://zenn.dev/eito_blog/articles/9c2c241432ad7f</id>
-        <link href="https://zenn.dev/eito_blog/articles/9c2c241432ad7f"/>
-        <updated>2022-10-16T10:06:00.000Z</updated>
-        <summary type="html"><![CDATA[WindowsからMacへの移行に伴いPythonの環境構築を行いました。
-このページではその備忘録として、M1 MacでPythonの環境構築をする手順について解説します。
-
- Anacondaインストール
-
- インストーラをダウンロード
-下記URLにアクセスします。
-https://www.anaconda.com/products/distribution
-添付画像のDownloadをクリックし、インストーラをダウンロードします。
-
-
- インストーラを起動
-ダウンロードしたインストーラを起動します。
-続けるやインストールボタン等をクリックし、インストールを完了させます。
-
-最後の...]]></summary>
-        <author>
-            <name>エイト</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hugging FaceのNLLB]]></title>
-        <id>https://zenn.dev/piment/articles/2c7a8a7d2abe1c</id>
-        <link href="https://zenn.dev/piment/articles/2c7a8a7d2abe1c"/>
-        <updated>2022-10-16T05:35:16.000Z</updated>
-        <summary type="html"><![CDATA[200以上の言語の任意の翻訳ができるFacebookのNo Language Left Behindを試してみます。
-HuggingFaceのtransformersで動かしました。
-本当は、facebookresearchのgithubのインストールを試みていましたが、Google ColabでApexのインストールでエラーになり、断念しました。
-RuntimeError: Cuda extensions are being compiled with a version of Cuda that does not match the version used to compile P...]]></summary>
-        <author>
-            <name>ぴーまん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[振幅エンコーディング（３）]]></title>
-        <id>https://zenn.dev/converghub/articles/cbdd2deb8907e2</id>
-        <link href="https://zenn.dev/converghub/articles/cbdd2deb8907e2"/>
-        <updated>2022-10-16T03:22:14.000Z</updated>
-        <summary type="html"><![CDATA[制御振幅エンコーディング
-前回は、データ木構造を用いた振幅エンコーディングについて記載しました。
-VQLS(Variational Quantum Linear Solver)でこれを用いるにあたり、制御振幅エンコーディング回路を実装する必要があります。
-VQLSについて日本語の参考になる解説記事がありますので、VQLSについてはそちらを参照ください。
-
-
- 制御ビットの指定
-例として、データ木の一番深いところで考えます。
-疑似コードのとおり、制御回転ゲート CRy および CCX 、 CCZ を適用する際のフラグとして制御ビットを利用することにしました。
-CRy について、Ry も...]]></summary>
-        <author>
-            <name>converghub</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】Youtube動画から音声ファイルを取得する]]></title>
-        <id>https://zenn.dev/robes/articles/c31dc875ae29c3</id>
-        <link href="https://zenn.dev/robes/articles/c31dc875ae29c3"/>
-        <updated>2022-10-16T03:12:30.000Z</updated>
-        <summary type="html"><![CDATA[Youtube動画から音声ファイルのみをダウンロードする方法です。
-GoogleColaboratoryで簡単に実装できます。
-
- 1. ライブラリーをインストール
-!pip install yt-dlp
-
- 2. コマンドラインで実行
-https://youtu.be/vR5GXyklvm4のところに、ダウンロードしたいYouTubeのアドレスを入力します。
-GoogleColaboratoryですと、contentディレクトリにmp3ファイルが保存されます。
-以下は首相官邸のYouTubeになります。
-!yt-dlp -x --audio-format mp3 https://you...]]></summary>
-        <author>
-            <name>osn_Lofi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hatch is a modern, extensible Python project manager]]></title>
-        <id>https://zenn.dev/mnagaa/articles/3a02ebc0431f36</id>
-        <link href="https://zenn.dev/mnagaa/articles/3a02ebc0431f36"/>
-        <updated>2022-10-16T03:05:50.000Z</updated>
-        <summary type="html"><![CDATA[Hatch
-Hatch is a modern, extensible Python project manager.
-Pythonのプロジェクトマネージャです。ドキュメントの通りにやってみる。
-
-(かわいい...)
-https://hatch.pypa.io/latest/
-!
-全て執筆時点での内容になります。変更等については、公式ドキュメントを確認してください。
-
-https://packaging.python.org/ja/latest/key_projects/#hatch
-
-Hatch は、 Python での開発者向けに依存関係の管理や環境の分離を便利に行うための統合さ...]]></summary>
-        <author>
-            <name>nagahama</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyPIでパッケージを配布するときのプラクティス]]></title>
-        <id>https://zenn.dev/k0kishima/articles/b8292314c16b5e</id>
-        <link href="https://zenn.dev/k0kishima/articles/b8292314c16b5e"/>
-        <updated>2022-10-16T02:49:55.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Python Packaging User Guide と エキスパートPythonプログラミング 改訂3版 を読みました。
-https://packaging.python.org/en/latest/
-パッケージの生成や配布には様々なプラクティスがあるように思えたので個人的に印象的だったものを抜粋してまとめました。
-中には古い情報もありそうでしたが、新しいツールを理解する下地としては使えそうだったのでそう言うものも含めて記録してます。
-
- 前提
-以下のような経験や知識があること
-
-PyPIへのパッケージ登録を行ったことがある、もしくは大まかな手順は把握している
-
-https...]]></summary>
-        <author>
-            <name>k0kishima</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【簡単かつ高精度】音声認識AIのWhisperを実装してみた]]></title>
-        <id>https://zenn.dev/robes/articles/a72b95f9f76c39</id>
-        <link href="https://zenn.dev/robes/articles/a72b95f9f76c39"/>
-        <updated>2022-10-16T02:31:44.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-画像生成AIのDALL・E2や文章生成AIのGPT-3で何かと話題のOpenAIですが、今度は、音声認識の世界でもやってくれました。
-2022年9月22日に高性能な音声認識AIのWhisperを発表したのです。日本語にも対応していたので、早速、GoogleColaboratoryで実装してみました。
-驚くほど簡単に実装でき、かつ、驚くほど精度が高くて、びっくりしました。
-ここでは、Whisperの概要について簡単に触れた上で、GoogleColaboratoryでの実装方法、精度をお示ししたいと思います。
-
- Whisperについて
-OpenAIの公式サイトから、概要をご紹...]]></summary>
-        <author>
-            <name>osn_Lofi</name>
         </author>
     </entry>
 </feed>
