@@ -12,6 +12,111 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/yui/articles/dfab1b18c3f62e",
+          "author": "yui",
+          "description": "はじめに\n私事ですが11月12日に結婚式をあげました。\n私達夫婦はよく一緒にアプリを作っているので、今回もなにか一緒に作れないかと思い、余興のクイズアプリを作ることにしました。\nついでに席札もQRコードにして、webアプリ内でメッセージも入れれるようにしました。\n\n 作ったもの\nユーザーに配布用のサイトと、披露宴会場で投影する用のサイトの２つを作りました。\n\n ユーザーに配布用のサイト\n当日はこういう↓感じの席札を用意しました。\n\nこの席札は名刺サイズで印刷して一人ひとりラミネートしたのですが、地味に大変な作業でした。\nQRコードを読み取ると、以下DEMO動画のようなサイトが現れます...",
+          "link": "https://zenn.dev/yui/articles/dfab1b18c3f62e",
+          "publishedOn": "2022-11-19T01:30:00.000Z",
+          "wordCount": 297,
+          "title": "夫婦で結婚式の余興用クイズアプリを作った話",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--CMa7GK4L--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:yui%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E5%25A4%25AB%25E5%25A9%25A6%25E3%2581%25A7%25E7%25B5%2590%25E5%25A9%259A%25E5%25BC%258F%25E3%2581%25AE%25E4%25BD%2599%25E8%2588%2588%25E7%2594%25A8%25E3%2582%25AF%25E3%2582%25A4%25E3%2582%25BA%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS0wZi1oczcwNS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVjMGIyNzFhZWUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--CMa7GK4L--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:yui%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E5%25A4%25AB%25E5%25A9%25A6%25E3%2581%25A7%25E7%25B5%2590%25E5%25A9%259A%25E5%25BC%258F%25E3%2581%25AE%25E4%25BD%2599%25E8%2588%2588%25E7%2594%25A8%25E3%2582%25AF%25E3%2582%25A4%25E3%2582%25BA%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS0wZi1oczcwNS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVjMGIyNzFhZWUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/bilzard/articles/get-timeit-result",
+          "author": "bilzard",
+          "description": "概要\nipython notebookで%timeitの測定結果を分析する際、結果をpythonの変数から参照したくなる。ドキュメント[1]によれば、-oオプションをつけると取得できる。この記事では結果の処理方法を計測例とともに説明する。\n\n TimeitResult オブジェクトの構造\nresult = %timeit -o [i ** 2 for i in range(10_000)]\nresultはTimeitResultクラスのオブジェクト[2]。ドキュメントによると、以下のような属性を持つ[3]。\n\nloops: 1回の計測における対象の処理の反復回数\nrepeat: 計測...",
+          "link": "https://zenn.dev/bilzard/articles/get-timeit-result",
+          "publishedOn": "2022-11-19T00:00:00.000Z",
+          "wordCount": 1144,
+          "title": "%timeitの測定結果を処理する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--MAEwFxQj--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:bilzard%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%2525timeit%25E3%2581%25AE%25E6%25B8%25AC%25E5%25AE%259A%25E7%25B5%2590%25E6%259E%259C%25E3%2582%2592%25E5%2587%25A6%25E7%2590%2586%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS0xVkwwTTg0Ni0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc5OTBiOThlMTIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--MAEwFxQj--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:bilzard%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%2525timeit%25E3%2581%25AE%25E6%25B8%25AC%25E5%25AE%259A%25E7%25B5%2590%25E6%259E%259C%25E3%2582%2592%25E5%2587%25A6%25E7%2590%2586%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS0xVkwwTTg0Ni0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc5OTBiOThlMTIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/siganai/articles/20221118_atcoder_practice",
+          "author": "SiganAI",
+          "description": "コンテスト名\nAtCoder Beginner Contest 276\n\n 記録\n\n 問題C\n\n提出記録\n\n所要時間\n一部RE（実行時エラー）になってしまった．\n原因は分かっていない．\n記事の最後にコードの最終版を掲載するので，有識者の意見を聞けたら嬉しい．\n\n 反省点\nググったら配列の要素外参照を疑ったほうが良いらしいけど．．．どこだ？\n\n コード（2022/11/18版）\n\npython\ndef first_input():\n    N = input()\n    return int(N)\n\ndef second_input(N):\n    P_list = []\n    p...",
+          "link": "https://zenn.dev/siganai/articles/20221118_atcoder_practice",
+          "publishedOn": "2022-11-18T14:35:52.000Z",
+          "wordCount": 636,
+          "title": "【AtCoder】練習記録【2022/11/18】",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--b3ZK35F6--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:SiganAI%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590AtCoder%25E3%2580%2591%25E7%25B7%25B4%25E7%25BF%2592%25E8%25A8%2598%25E9%258C%25B2%25E3%2580%25902022%252F11%252F18%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkMycHdUMUEzOWY2TzVOSGd4T3FHTUpqNXZNUHU4RHpwRThBQXU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--b3ZK35F6--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:SiganAI%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590AtCoder%25E3%2580%2591%25E7%25B7%25B4%25E7%25BF%2592%25E8%25A8%2598%25E9%258C%25B2%25E3%2580%25902022%252F11%252F18%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkMycHdUMUEzOWY2TzVOSGd4T3FHTUpqNXZNUHU4RHpwRThBQXU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/siganai/articles/20221114_atcoder_practice",
+          "author": "SiganAI",
+          "description": "コンテスト名\nAtCoder Beginner Contest 276\n\n 記録\n\n 問題B\n\n提出記録\n\n所要時間\n\n 反省点\n正解を求めることはできても処理時間超過になってしまった．\n（原因は関数を分割して作りすぎたことで繰り返し処理を複製していたこと）\n答えにたどり着くまでは割とスムーズにできた．",
+          "link": "https://zenn.dev/siganai/articles/20221114_atcoder_practice",
+          "publishedOn": "2022-11-18T14:35:51.000Z",
+          "wordCount": 113,
+          "title": "【AtCoder】練習記録【2022/11/14】",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--kcsgLlGF--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:SiganAI%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590AtCoder%25E3%2580%2591%25E7%25B7%25B4%25E7%25BF%2592%25E8%25A8%2598%25E9%258C%25B2%25E3%2580%25902022%252F11%252F14%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkMycHdUMUEzOWY2TzVOSGd4T3FHTUpqNXZNUHU4RHpwRThBQXU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--kcsgLlGF--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:SiganAI%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590AtCoder%25E3%2580%2591%25E7%25B7%25B4%25E7%25BF%2592%25E8%25A8%2598%25E9%258C%25B2%25E3%2580%25902022%252F11%252F14%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkMycHdUMUEzOWY2TzVOSGd4T3FHTUpqNXZNUHU4RHpwRThBQXU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/siganai/articles/20221112_atcoder_practice",
+          "author": "SiganAI",
+          "description": "コンテスト名\nAtCoder Beginner Contest 276\n\n 記録\n\n 問題A\n\n提出記録\n\n所要時間\n\n 反省点\nwhie文を使ったら無限ループになってしまった．\n（結局for文を使った）\n関数を意識的に作ることで，デバッグはやりやすかったと思う．",
+          "link": "https://zenn.dev/siganai/articles/20221112_atcoder_practice",
+          "publishedOn": "2022-11-18T14:35:51.000Z",
+          "wordCount": 113,
+          "title": "【AtCoder】練習記録【2022/11/12】",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--XHxdyIBl--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:SiganAI%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590AtCoder%25E3%2580%2591%25E7%25B7%25B4%25E7%25BF%2592%25E8%25A8%2598%25E9%258C%25B2%25E3%2580%25902022%252F11%252F12%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkMycHdUMUEzOWY2TzVOSGd4T3FHTUpqNXZNUHU4RHpwRThBQXU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--XHxdyIBl--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:SiganAI%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590AtCoder%25E3%2580%2591%25E7%25B7%25B4%25E7%25BF%2592%25E8%25A8%2598%25E9%258C%25B2%25E3%2580%25902022%252F11%252F12%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkMycHdUMUEzOWY2TzVOSGd4T3FHTUpqNXZNUHU4RHpwRThBQXU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/ringotabetai/articles/bda567558daadd",
+          "author": "a",
+          "description": "環境\nLinux ubuntu 22.04.0\n\n Pythonのバージョン確認する\npython3 -V\n\n マークダウンを保存してるディレクトリへ移動\ncd ~/Projects/XXXX/XXXXX\n\n pip install\npip install mkdocs\n\n ディレクトリ確認\nla -la\n\n mkdocs起動\nmkdocs \n\n server起動\nmkdocs serve\nhttps://localhost:8000  とか",
+          "link": "https://zenn.dev/ringotabetai/articles/bda567558daadd",
+          "publishedOn": "2022-11-18T09:34:09.000Z",
+          "wordCount": 158,
+          "title": "マークダウンをlocalhostでみたい",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--8Ia7u0_K--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:a%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2583%259E%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%2580%25E3%2582%25A6%25E3%2583%25B3%25E3%2582%2592localhost%25E3%2581%25A7%25E3%2581%25BF%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1FTVJEOXFFay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0OTg3ZGY4YzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--8Ia7u0_K--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:a%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2583%259E%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%2580%25E3%2582%25A6%25E3%2583%25B3%25E3%2582%2592localhost%25E3%2581%25A7%25E3%2581%25BF%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1FTVJEOXFFay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0OTg3ZGY4YzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/todoker/articles/2022-fastapi-pydantic-null-to-undefined",
+          "author": "株式会社トドケール",
+          "description": "はじめに\nこんにちは。@hayata-yamamotoです。\nFastAPI をベースにしたバックエンドを運用開発していくにあたり None の使用を伴う API 定義を行うと、None で指定した値が OpenAPI 定義上では Optional の扱いを受けてしまい、TypeScript 側で見ると undefined と見做されるという問題がありました。\n今回は、その OpenAPI 定義上の表記と、FastAPI の実際のレスポンスを整合させるために行った設定をご紹介します。\n\n 解決方法\nFastAPI で response_model_exclude_none を Tru...",
+          "link": "https://zenn.dev/todoker/articles/2022-fastapi-pydantic-null-to-undefined",
+          "publishedOn": "2022-11-18T05:17:32.000Z",
+          "wordCount": 1009,
+          "title": "FastAPI で None の値を null から undefined に変換する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--00P_ri03--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2583%2588%25E3%2583%2589%25E3%2582%25B1%25E3%2583%25BC%25E3%2583%25AB%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:FastAPI%2520%25E3%2581%25A7%2520None%2520%25E3%2581%25AE%25E5%2580%25A4%25E3%2582%2592%2520null%2520%25E3%2581%258B%25E3%2582%2589%2520undefined%2520%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1zSllUMXA0Uy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q5NDRlOWY2MDAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--00P_ri03--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2583%2588%25E3%2583%2589%25E3%2582%25B1%25E3%2583%25BC%25E3%2583%25AB%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:FastAPI%2520%25E3%2581%25A7%2520None%2520%25E3%2581%25AE%25E5%2580%25A4%25E3%2582%2592%2520null%2520%25E3%2581%258B%25E3%2582%2589%2520undefined%2520%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1zSllUMXA0Uy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q5NDRlOWY2MDAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
           "id": "https://zenn.dev/arkwknsk/articles/73650a926ce974",
           "author": "ARAKAWA Kensuke",
           "description": "Pythonから、動的にGlobal Shortcutを使ってオペレーターを参照する方法。OP名＋連番などのGlobal Shortcutなどを参照できるようになる。\n\n コード\ngetattr(op, opName)\ntargetOp = getattr(op, opName)\nPramaters\nopName: 取得したいOPのGlobal Shortcutの文字列\nReturns\ntargetOP: 取得されたOP\n\n サンプル\n\n\n ネットワークの解説\nネットワーク上の2つのBase OPにGlobal Shortcutでアクセスするサンプルです。\n以下のBase OPに、Glo...",
@@ -2660,111 +2765,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--5fg_HuIi--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Kumasun%2520Morino%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25A7MS%2520Outlook%25E3%2581%25AEmsg%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E8%25AA%25AD%25E3%2582%2580%25EF%25BC%2588msg_parser%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lwMUFRUjNkVVAzSExWb3pNOUk0RnBjT2VFa1JDcGV0TVFOY2hYd0E9czgwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/libertym/articles/84b41b0229041e",
-          "author": "Libertym",
-          "description": "記事について\n一部単語の意味や表現が正確でない可能性がありますがご了承ください。\n基本的に自分の環境の言語は英語です。\nWindowsとIntellij ideaでPythonの環境構築がうまくできない人をターゲットにしています。\n\n SDKが設定できない問題が発生\nWindows上でIntellij ideaからpoetryで新規プロジェクトを作成しようとするとSDKが無効(SDK seems invalid)というエラーが発生して正常に設定できませんでした。(VScodeなら問題なし？)\n\n 原因調査\nIntellij idea上部の「help > show log in...",
-          "link": "https://zenn.dev/libertym/articles/84b41b0229041e",
-          "publishedOn": "2022-10-20T12:04:55.000Z",
-          "wordCount": 165,
-          "title": "Python + IntellijのSDK seems invalidエラー",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--NSEF2Shr--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Libertym%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%2520%252B%2520Intellij%25E3%2581%25AESDK%2520seems%2520invalid%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y29aME44ZG9IOXcxSUllRmR0QVEzQ3kyZW1RdldpNlpxUWFNajR5PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--NSEF2Shr--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Libertym%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%2520%252B%2520Intellij%25E3%2581%25AESDK%2520seems%2520invalid%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y29aME44ZG9IOXcxSUllRmR0QVEzQ3kyZW1RdldpNlpxUWFNajR5PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/kanaotto/articles/a0d6e4a661fb56",
-          "author": "かなおっと",
-          "description": "poetryとVSCodeで仮想環境の構築（Windows10）\n\n 1. poetryとは\nPoetryはPythonのパッケージマネージャの一つです。\n次のようなことができます。\n\nパッケージ管理ファイルの生成・変更\nインストールされているパッケージのアップデート\nプロジェクトごとの仮想環境のセットアップ\n\nなどなど...\n\n 2. インストール\n\n 基本\n\n - Python のセットアップ\nPoetryのインストールにPythonが必要なので既に入っている前提ですが、一応。\nPython JapanのサイトからWindows版Pythonをインストール\n\n\nhttps://w...",
-          "link": "https://zenn.dev/kanaotto/articles/a0d6e4a661fb56",
-          "publishedOn": "2022-10-20T11:07:53.000Z",
-          "wordCount": 587,
-          "title": "poetryとVSCodeで仮想環境の構築（Windows10）",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--TOya1JVE--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%258B%25E3%2581%25AA%25E3%2581%258A%25E3%2581%25A3%25E3%2581%25A8%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:poetry%25E3%2581%25A8VSCode%25E3%2581%25A7%25E4%25BB%25AE%25E6%2583%25B3%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25AE%25E6%25A7%258B%25E7%25AF%2589%25EF%25BC%2588Windows10%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2k5Q1Zka1FDZy1pNGx6RnMzc2VleU5UU1dxbENmRmRaWlFvZXo0PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--TOya1JVE--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%258B%25E3%2581%25AA%25E3%2581%258A%25E3%2581%25A3%25E3%2581%25A8%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:poetry%25E3%2581%25A8VSCode%25E3%2581%25A7%25E4%25BB%25AE%25E6%2583%25B3%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25AE%25E6%25A7%258B%25E7%25AF%2589%25EF%25BC%2588Windows10%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2k5Q1Zka1FDZy1pNGx6RnMzc2VleU5UU1dxbENmRmRaWlFvZXo0PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/ymiz/articles/c25dcddfedd7c3",
-          "author": "ymiz",
-          "description": "問題\n\npytestを使ってテストしている\nある条件の場合のテストスイートをまとめたい\n\njestでいうところの describe のようなことをしたい\n\nhttps://jestjs.io/ja/docs/api#describename-fn\n\n\n\n\n\n\n 対応\nclassでグループ化する。\nドキュメントは https://docs.pytest.org/en/7.1.x/getting-started.html#group-multiple-tests-in-a-class\nclass Test_指標が閾値Aを超えた場合:\n    def test_在庫を追加する(self):...",
-          "link": "https://zenn.dev/ymiz/articles/c25dcddfedd7c3",
-          "publishedOn": "2022-10-20T11:02:03.000Z",
-          "wordCount": 218,
-          "title": "pytestでテストをグループ化する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--XTidetun--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ymiz%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:pytest%25E3%2581%25A7%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsveS5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--XTidetun--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ymiz%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:pytest%25E3%2581%25A7%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsveS5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/penguincabinet/articles/d765da03bf66f5",
-          "author": "PenguinCabinet",
-          "description": "はじめに\n近年FaaSが流行しています。\n僕も試してみたいと考えていたため、今回FizzBuzz判定APIを作ってみようと思います。\n\n 完成品\nhttps://github.com/PenguinCabinet/FizzBuzz_Google_Cloud_Functions\n\n 環境構築\ngcloud CLIを使用していますので、インストールしてください。\nhttps://cloud.google.com/sdk/docs/install?hl=ja\n念のため、その他のバージョン環境。\nOS:Windows 11\n言語処理系:Python 3.10.5\n\nGoogle Cloud ...",
-          "link": "https://zenn.dev/penguincabinet/articles/d765da03bf66f5",
-          "publishedOn": "2022-10-20T05:12:52.000Z",
-          "wordCount": 421,
-          "title": "Google Cloud FunctionsでFizzBuzzを作成する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--qmB3nO8A--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:PenguinCabinet%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Google%2520Cloud%2520Functions%25E3%2581%25A7FizzBuzz%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1XVjB5ZTJUOC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ3NzYzNDVhNTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--qmB3nO8A--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:PenguinCabinet%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Google%2520Cloud%2520Functions%25E3%2581%25A7FizzBuzz%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1XVjB5ZTJUOC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ3NzYzNDVhNTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/h_kishimoto/articles/5f0a6639c0fd8d",
-          "author": "h_kishimoto",
-          "description": "Pythonでコントロールリグを云々する時のメモです。\n\n\n アセットの取得\nプロジェクト内のアセットを取得するとき\nunreal.EditorAssetLibrary.load_asset( asset_path )\nasset_path にはいろいろな書き方があてはめられます。\nasset_path = \"/Script/ControlRigDeveloper.ControlRigBlueprint'/Game/Characters/Mannequins/Rigs/CR_Mannequin_Body.CR_Mannequin_Body'\"\nasset_path = \"/Game/Ch...",
-          "link": "https://zenn.dev/h_kishimoto/articles/5f0a6639c0fd8d",
-          "publishedOn": "2022-10-19T17:36:15.000Z",
-          "wordCount": 1336,
-          "title": "[UE5] Control Rig をPythonから使う",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--BlDBagQY--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:h_kishimoto%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%255BUE5%255D%2520Control%2520Rig%2520%25E3%2582%2592Python%25E3%2581%258B%25E3%2582%2589%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKemNZZE9FRk44LU56YWc2ekdNQTltMXNQVzItVFBjNEhoVTg1cmU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--BlDBagQY--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:h_kishimoto%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%255BUE5%255D%2520Control%2520Rig%2520%25E3%2582%2592Python%25E3%2581%258B%25E3%2582%2589%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKemNZZE9FRk44LU56YWc2ekdNQTltMXNQVzItVFBjNEhoVTg1cmU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/tasada038/articles/5d8ba66aa34b85",
-          "author": "Takumi Asada",
-          "description": "海洋ロボコンをやっている人です。\n今回は、pythonでROS2ノードをつくるときに、別のPythonファイルからクラスや関数をインポートするときの記述方法について知見をまとめておきます。\n経緯としては、pythonで書かれたROS2プログラムに、別のpythonファイルの関数を読み込む方法が記事にまとまっておらず、わからないという意見を頂いたためです。\nなお、本記事はROS2でpythonを使ったプログラムを書く必要性がある方を対象としており、C++でのプログラムで良い場合は依存関係の観点からも、C++での記述が良いと思います。\nこの記事が皆様のお力添えになれば幸いです。\n\n 別のpy...",
-          "link": "https://zenn.dev/tasada038/articles/5d8ba66aa34b85",
-          "publishedOn": "2022-10-19T16:28:31.000Z",
-          "wordCount": 756,
-          "title": "ROS2: 別のpythonファイルからインポートしてノードをつくる手順",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--SxhGkIX3--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Takumi%2520Asada%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:ROS2%253A%2520%25E5%2588%25A5%25E3%2581%25AEpython%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%258B%25E3%2582%2589%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E3%2581%2597%25E3%2581%25A6%25E3%2583%258E%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592%25E3%2581%25A4%25E3%2581%258F%25E3%2582%258B%25E6%2589%258B%25E9%25A0%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FDTlBFdS02UlRlclRjeFNkX3dsSDk4WE1LY1dHNDJ3b2ZoR1ZmUWNDdVhlPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--SxhGkIX3--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Takumi%2520Asada%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:ROS2%253A%2520%25E5%2588%25A5%25E3%2581%25AEpython%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%258B%25E3%2582%2589%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E3%2581%2597%25E3%2581%25A6%25E3%2583%258E%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592%25E3%2581%25A4%25E3%2581%258F%25E3%2582%258B%25E6%2589%258B%25E9%25A0%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FDTlBFdS02UlRlclRjeFNkX3dsSDk4WE1LY1dHNDJ3b2ZoR1ZmUWNDdVhlPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/almon/articles/2ba0aed751002b",
-          "author": "アルモン",
-          "description": "!\nこの記事はPythonとSeleniumの使い方、及び学習用に作成したものであり、自動購入や転売活動を推奨しているわけではありません。また、本プログラムの利用でどのようなトラブル(アカウントのBANや意図しない購入など)が発生したとしても筆者は一切責任を負いません。\n\n\n はじめに\nプロコンが品薄で全く買えません…😭\nこちらの入荷速報アプリによると、特にAmazonではほぼ毎日入荷されているようなのですが、通知直後であってもカートに入れることすらままならない状況が続いています。\nそこで、PythonとSleniumを使い簡単な自動購入プログラムを作ってみたいと思います。\nなお、自分は...",
-          "link": "https://zenn.dev/almon/articles/2ba0aed751002b",
-          "publishedOn": "2022-10-19T14:20:27.000Z",
-          "wordCount": 1473,
-          "title": "PythonとSeleniumでAmazon自動購入botを作る",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--jM0UuwKl--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%25A2%25E3%2583%25AB%25E3%2583%25A2%25E3%2583%25B3%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25A8Selenium%25E3%2581%25A7Amazon%25E8%2587%25AA%25E5%258B%2595%25E8%25B3%25BC%25E5%2585%25A5bot%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1WbXZLVlRxTS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NmYWM3NzMyMTQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--jM0UuwKl--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%25A2%25E3%2583%25AB%25E3%2583%25A2%25E3%2583%25B3%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25A8Selenium%25E3%2581%25A7Amazon%25E8%2587%25AA%25E5%258B%2595%25E8%25B3%25BC%25E5%2585%25A5bot%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1WbXZLVlRxTS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NmYWM3NzMyMTQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
         }
       ]
     }
