@@ -2,10 +2,169 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-11-22T02:01:17.074Z</updated>
+    <updated>2022-11-23T01:48:59.672Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[スロットルされていないかを全Lambdaに対して確認するboto3スクリプト]]></title>
+        <id>https://zenn.dev/shimo_s3/articles/1b01290de0edfb</id>
+        <link href="https://zenn.dev/shimo_s3/articles/1b01290de0edfb"/>
+        <updated>2022-11-22T23:31:29.000Z</updated>
+        <summary type="html"><![CDATA[他の検討でスロットルしてしまってLambdaが動かないことがあり、確認できるように作りました。
+
+全リージョンをec2のdescribe_regionsで受け取る
+リージョンごとに全関数をlist_functionsで取り出す
+
+一度に50までしか表示できない。NextMarkerがある場合は続きがあるので追加でlist_functionsする
+
+
+get_function_concurrencyでReservedConcurrentExecutionsがあるか調べる。設定なければNoneになっている。スロットルの場合はReservedConcurrentExecutions==0
+
+
+...]]></summary>
+        <author>
+            <name>shimo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】pyenv-win+venvで環境構築したときPyQt5でエラーが出る問題]]></title>
+        <id>https://zenn.dev/powerword/articles/c0c8441af25280</id>
+        <link href="https://zenn.dev/powerword/articles/c0c8441af25280"/>
+        <updated>2022-11-22T11:34:03.000Z</updated>
+        <summary type="html"><![CDATA[環境
+Windows10
+Python3.10.1
+pyenv + venvで仮想環境を構築し，PyQt5によるGUIアプリを実行しようとした
+
+ エラー
+<仮想環境名>/Scripts/Activate.ps1
+で仮想環境に入り，
+python main.py
+で実行しようとしたところ以下のエラーが出た．
+qt.qpa.plugin: Could not find the Qt platform plugin "windows" in ""
+This application failed to start because no Qt platform plugin co...]]></summary>
+        <author>
+            <name>Powerword</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CodilityのLessonをやってみる（1-4）]]></title>
+        <id>https://zenn.dev/paraches/articles/codility_lesson_1_4</id>
+        <link href="https://zenn.dev/paraches/articles/codility_lesson_1_4"/>
+        <updated>2022-11-22T10:18:03.000Z</updated>
+        <summary type="html"><![CDATA[CodilityのLessonをやり始めたのでメモ。
+今回は取り敢えずLesson 1〜4までのeasyで。
+
+ リポジトリ
+https://github.com/paraches/codility_lessons
+
+ Lesson 1 Iterations
+各レッスンに大枠の表題があるのだけど、微妙に理解できないものもある。
+レッスン1はイテレーション。
+
+ BinaryGap
+https://app.codility.com/programmers/lessons/1-iterations/binary_gap/
+
+ 問題
+与えられた整数Nを2進表記して1に挟まれた連続する0の数が一...]]></summary>
+        <author>
+            <name>paraches</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【教師なし学習】ガラスの成分でクラスタリングしてみよう！]]></title>
+        <id>https://zenn.dev/ryuta_kojima/articles/948481c0ff6986</id>
+        <link href="https://zenn.dev/ryuta_kojima/articles/948481c0ff6986"/>
+        <updated>2022-11-22T10:02:51.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは、コジです！本日はガラスの成分数値を使って教師なし学習のクラスタリングを行なっていこうと思います！
+クラスタリングはアルゴリズムを使って機械にグルーピングしてもらうことですね。ガラスの成分数値なんて見ても僕は違いがわからないので、機械に任せてしまおうと思います！
+今回は実装して、結果の可視化を目標にやっていきます！よろしくお願いします！
+
+ クラスタリングについて
+データのレコードにはカラム（列）がありますよね。例えば100個カラムがあったとしたら、そのレコードは100次元の点の一つです。それぞれの点の距離が近いものを一つのグループとして扱う、また点、もしくはグル...]]></summary>
+        <author>
+            <name>コジ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RaspberryPiのPython環境をPyenv+Poetryで作る]]></title>
+        <id>https://zenn.dev/tatsu24/articles/e197dfab34f428</id>
+        <link href="https://zenn.dev/tatsu24/articles/e197dfab34f428"/>
+        <updated>2022-11-22T09:30:18.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+RaspberryPiのPython環境をPyenvとPoetryで作ったのでその備忘録的な記事です。
+!
+Pyenv、Poetryそれぞれに関する細かい説明はしていません。これらの詳しいコマンドは各自調べてください🙏
+
+
+ 環境
+
+端末: Raspberry Pi　4
+
+OS: Raspberry Pi OS
+
+
+ラズパイOSは各自ググって入れましょう。
+
+ Pyenvの環境構築
+
+ Pyenvのインストール
+Githubに従ってインストールします。
+$ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+$ cd ...]]></summary>
+        <author>
+            <name>Tatsu24</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonとplotlyを使ってローソク足チャートを表示する]]></title>
+        <id>https://zenn.dev/arafipro/books/python-plotly-chart</id>
+        <link href="https://zenn.dev/arafipro/books/python-plotly-chart"/>
+        <updated>2022-11-22T06:33:49.000Z</updated>
+        <summary type="html"><![CDATA[Pythonとplotlyを使ってチャートを表示する方法を説明します。
+私は株式投資を行なっていてプログラミングを勉強するきっかけになりました。
+主に取引している米国株を題材にプログラミングの例を作成しています。
+
+また記事の更新も随時行って行きたいと思います。]]></summary>
+        <author>
+            <name>Hiroki Chiyoda</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Github ActionsのWindows環境でtempfile.NamedTemporaryFileがパーミッションエラー]]></title>
+        <id>https://zenn.dev/konboi/articles/aa1f05ba2fd2d9</id>
+        <link href="https://zenn.dev/konboi/articles/aa1f05ba2fd2d9"/>
+        <updated>2022-11-22T05:35:08.000Z</updated>
+        <summary type="html"><![CDATA[表隊の通り以下のようなテストコードを書いた際に Github Actions の Windows 環境で Permission Error になってしまう。
+with tempfile.NamedTemporaryFile() as f:
+    ...
+解決策としては削除処理を自前でしてあげると回避できる。
+tmp = tempfile.NamedTemporaryFile()
+...
+
+tmp.close()
+os.unlink(tmp.name) # os.removeでもおそらくOK
+何回かハマったのでメモしておく。]]></summary>
+        <author>
+            <name>Konboi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Apache Beam JavaからRunInterfaceでscikit-learnの処理を呼び出す]]></title>
+        <id>https://zenn.dev/kn1kn1/articles/99f49946ea0f2c</id>
+        <link href="https://zenn.dev/kn1kn1/articles/99f49946ea0f2c"/>
+        <updated>2022-11-22T04:24:37.000Z</updated>
+        <summary type="html"><![CDATA[概要
+Apache Beam JavaからPythonの処理を呼び出す例について、以前に Apache Beam Java multi-language pipelines quickstart メモ - zennで試したが、scikit-learnの処理を呼び出す例がBeamのExampleに追加されていたので試してみた。https://github.com/kn1kn1/beam-example-multi-language-sklern に最終的に動作したプロジェクトを格納した。
+
+ 手順
+基本的には、https://github.com/apache/beam/tree/ma...]]></summary>
+        <author>
+            <name>Kenichi Kanai</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Apache Beam Java multi-language pipelines quickstart メモ]]></title>
         <id>https://zenn.dev/kn1kn1/articles/4aadd3bb4eeb14</id>
@@ -3982,33 +4141,6 @@ class Domain:
 ==...]]></summary>
         <author>
             <name>ymiz</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【SP-API】Amazon Marketplace SP-APIを利用するまでの手順]]></title>
-        <id>https://zenn.dev/eito_blog/articles/f65e9994fdebc7</id>
-        <link href="https://zenn.dev/eito_blog/articles/f65e9994fdebc7"/>
-        <updated>2022-10-24T13:26:00.000Z</updated>
-        <summary type="html"><![CDATA[案件でSP-APIを利用するために必要な設定を行う機会がありました。
-このページではその備忘録としてAmazon Marketplace SP-APIを利用するまでの手順について解説いたします。
-SP-APIを利用するために下記6つのデータを取得します。
-
-リフレッシュトークン
-クライアントID
-クライアント機密情報
-シークレットアクセスキー
-アクセスキーID
-ロールのARN
-
-
- IAMユーザーの作成
-IAMに遷移します。
-
-ユーザー > ユーザーを追加をクリックします。
-
-任意のユーザー名（添付画像ではAmazonSPAPIUser）を入力し、アクセスキー-プログラムによるア...]]></summary>
-        <author>
-            <name>エイト</name>
         </author>
     </entry>
 </feed>
