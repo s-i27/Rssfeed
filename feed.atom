@@ -2,10 +2,68 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-11-24T01:51:36.962Z</updated>
+    <updated>2022-11-25T01:48:46.235Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Qiskit で遊んでみる (9) — Shor の符号]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-qiskit09</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-qiskit09"/>
+        <updated>2022-11-24T17:09:16.000Z</updated>
+        <summary type="html"><![CDATA[目的
+量子回路のエラー訂正に「Shor の符号」というものがあるらしいので、効果を体感してみたい。体感なのでつまり、数式で追いかけるのはやめて、適当に雑音の入る回路をシミュレートしてシミュレータで回して満足するところまでを実行する。
+
+ 眺める回路
+量子コンピューティング 基本アルゴリズムから量子機械学習まで か Quantum error correction で見る事ができる回路で確認する。
+最終的には以下を実装する:
+
+ちゃんと実装できれば、1 回のビット反転、1 回の位相反転、或はその両方が同時に起こるケースを検出してエラー訂正できる、らしい。
+
+ 回路を作る
+とりあえず、必...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PyTorchの公式入門を読む]]></title>
+        <id>https://zenn.dev/yunkai/articles/866cd3beec7ece</id>
+        <link href="https://zenn.dev/yunkai/articles/866cd3beec7ece"/>
+        <updated>2022-11-24T14:07:05.000Z</updated>
+        <summary type="html"><![CDATA[PyTorchの公式チュートリアルを読みました。
+データさえあれば、PyTorchを使って、簡単に機械学習ができそうです。
+以下、読みながら書いたメモです。
+
+ Quick start
+
+ Data
+torch.utils.data.DataLoaderを使えばデータをロード（前処理）できる。
+TorchText, TorchVision, TorchAudioなどが学習用のデータセットを持っていて、ダウンロードしてくれる。
+
+ Model
+torch.nnを使えばモデルを作れる。
+import torch.nn as nn
+
+class NeuralNetwork(nn.Module)...]]></summary>
+        <author>
+            <name>yunkai</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Google ColabでTesseractを動かす（日本語対応）]]></title>
+        <id>https://zenn.dev/nakamura196/articles/d61e296fa9d86c</id>
+        <link href="https://zenn.dev/nakamura196/articles/d61e296fa9d86c"/>
+        <updated>2022-11-24T09:49:43.000Z</updated>
+        <summary type="html"><![CDATA[Google ColabでTesseractを動かすノートブックを作成しました。日本語にも対応しています。参考になりましたら幸いです。
+https://colab.research.google.com/github/nakamura196/ndl_ocr/blob/main/Tesseractを試す.ipynb
+末尾に、hocrファイルをalto形式のxmlファイルに変換するフローも紹介しています。具体的には、以下のツールを使用しています。
+https://digi.bib.uni-mannheim.de/ocr-fileformat/
+参考になりましたら幸いです。]]></summary>
+        <author>
+            <name>nakamura196</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【Python】Pythonの主な組み込み関数31個について、全て例を交えて解説する]]></title>
         <id>https://zenn.dev/scytherjs/articles/99148efdb0ec73</id>
@@ -3927,169 +3985,6 @@ Macだけでなく、DockerさえインストールできればWindowsでもLinu
 Dockerをインストールしたことがない場合は、公式サイトなどを参考にまずインストールしてください。...]]></summary>
         <author>
             <name>mcre (FUJITA Shinya)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[cmdstanpy : 重回帰]]></title>
-        <id>https://zenn.dev/yoshida0312/articles/78d996128f3335</id>
-        <link href="https://zenn.dev/yoshida0312/articles/78d996128f3335"/>
-        <updated>2022-10-26T13:05:07.000Z</updated>
-        <summary type="html"><![CDATA[import os
-import time
-
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from cmdstanpy import CmdStanModel
-
- データの読み込み
-以下のデータを使用しています。
-https://github.com/MatsuuraKentaro/RStanBook/blob/master/chap05/input/data-attendance-1.txt
-df = pd.read_csv("./data-attendance-1.txt")
-pr...]]></summary>
-        <author>
-            <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[numpy.einsumの仕様]]></title>
-        <id>https://zenn.dev/termoshtt/articles/numpy-einsum</id>
-        <link href="https://zenn.dev/termoshtt/articles/numpy-einsum"/>
-        <updated>2022-10-26T09:18:33.000Z</updated>
-        <summary type="html"><![CDATA[rust-ndarray用の einsum! マクロを作るためにまずNumPyの実装を調べたので、その内容をまとめていく。
-
- subscripts
-numpy.einsumの引数はのうち、Optionalで無いのは次の2つ：
-
-
-subscripts: str
-
-operands: list of array_like
-
-einsum はこの subscripts で与えられた文字列に応じて operands で与えられたテンソルに対して操作しその結果を返します。
-この記事では subscripts の仕様をまとめていきます。
-
- Implicit mode
-subscripts には...]]></summary>
-        <author>
-            <name>termoshtt</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[tkinterのlabelウィジェットの使い方]]></title>
-        <id>https://zenn.dev/banananeko/articles/db0688fc341655</id>
-        <link href="https://zenn.dev/banananeko/articles/db0688fc341655"/>
-        <updated>2022-10-26T07:08:41.000Z</updated>
-        <summary type="html"><![CDATA[labelウィジェットとは
-名前の通りテキストを表示するためのウィジェットです。
-このウィジェットがなければGUIアプリケーションが成り立つことはまずありません
-
- labelウィジェットの表示方法
-labelウィジェットはButtonと同じように
-表示することができます
-ラベル名　= tk.Label(表示するWindow名, text = "表示するテキスト").pack()
-ひとまずこれでlabelを表示させることはできます
-
- labelの色の変更
-
- 文字の色
-このラベルの色は実は変更することができます変更するためにはtk.Labelの後の
-()に
-foreground="...]]></summary>
-        <author>
-            <name>banananeko</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[lxmlで子要素の後ろ側にある文字列を取得する方法]]></title>
-        <id>https://zenn.dev/hashito/articles/e47166c4a0bfd0</id>
-        <link href="https://zenn.dev/hashito/articles/e47166c4a0bfd0"/>
-        <updated>2022-10-26T05:39:42.000Z</updated>
-        <summary type="html"><![CDATA[問題
-例えば、下記のようなHTMLがある場合で、すべての文字列を取得したい場合。
-<p>
-    これは
-    <b style="font-weight:bold;">
-        テスト
-    </b>
-    です。
-</p>
-Pythonのlxmlを利用すると下記のような手順で取得する事ができる。
-
- これはを取得する
-lxmlで解析して、xptahという指定文でテキストを取得できる
-from lxml import etree
-
-html_data="""
-<p>
-    これは
-    <b sty...]]></summary>
-        <author>
-            <name>hashito</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[任意のCUDAバージョンのPyTorchをPoetryでインストールする]]></title>
-        <id>https://zenn.dev/yag_ays/articles/a6c84622f558ee</id>
-        <link href="https://zenn.dev/yag_ays/articles/a6c84622f558ee"/>
-        <updated>2022-10-26T04:35:14.000Z</updated>
-        <summary type="html"><![CDATA[概要
-PyTorchからGPUを利用するためには、CUDAのバージョンに合ったパッケージをインストールする必要があります。PyTorchの"Get Started"ページでは、プラットフォームやバージョン、パッケージマネージャーを選択すると、それに応じたインストールコマンドが表示される仕組みがありますが、ここにはPoetryは含まれていません。
-
-そこでこの記事では、Poetryを利用しているプロジェクトにおいて、任意のCUDAバージョンのPyTorchパッケージをインストールする方法を解説します。
-
- 方法
-実現する方法はいくつか存在するので、それぞれ解説していきます。ここでは、例...]]></summary>
-        <author>
-            <name>yag_ays</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DeepL + Slack + GitHub Actionsでリモセン論文取得Botの作成]]></title>
-        <id>https://zenn.dev/manuriya/articles/49a02bb2a13b84</id>
-        <link href="https://zenn.dev/manuriya/articles/49a02bb2a13b84"/>
-        <updated>2022-10-25T15:00:00.000Z</updated>
-        <summary type="html"><![CDATA[記事要約
-
-指定したキーワードが含まれるarXiv上の論文をSlack上に投げるbotを作成
-内容を簡単に把握するためDeepLの翻訳結果をつけた
-GitHub Actionsで指定時間にbotを起動するようにした
-
-
- 完成イメージ
-タイトルとURL、著者に加えて日英の概要を表示
-
-
- リポジトリ
-https://github.com/manuriya/arxiv-satellite
-
- 使い方
-
- 準備
-
-SlackのIncoming Webhookを使用してbotを作成、APIトークンを確認する
-
-DeepLのアカウントを作成、DeepL APIの認証キーを確認する
-
-
- Gi...]]></summary>
-        <author>
-            <name>manuriya</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[浮動小数点数計算のPython、Java、C#での実装について]]></title>
-        <id>https://zenn.dev/shui2022/articles/86452f30aed64f</id>
-        <link href="https://zenn.dev/shui2022/articles/86452f30aed64f"/>
-        <updated>2022-10-25T14:54:54.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-浮動小数点数に関わる計算の実装について、一度は悩まされた人も多いと思いますので、自分が良く使うPython、Java、C#での実装方法を備忘録代わりに執筆します。
-浮動小数点数についての教科書的な知識は、以下のリンクを参照して下さい。
-https://workteria.forward-soft.co.jp/blog/detail/10401
-AtCoderという競技プログラミングのサイトで浮動小数点数を扱っている問題があるので、今回はここで通るコードを紹介したいと思います。
-https://atcoder.jp/contests/abc169/tasks/abc169_c...]]></summary>
-        <author>
-            <name>shui2022</name>
         </author>
     </entry>
 </feed>
