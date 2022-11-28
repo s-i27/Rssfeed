@@ -2,10 +2,145 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-11-27T01:53:41.054Z</updated>
+    <updated>2022-11-28T01:46:46.560Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[コード設計]高凝集な設計を目指す]]></title>
+        <id>https://zenn.dev/ryutaro_h/articles/b028995914f085</id>
+        <link href="https://zenn.dev/ryutaro_h/articles/b028995914f085"/>
+        <updated>2022-11-28T01:28:19.000Z</updated>
+        <summary type="html"><![CDATA[初めに
+エンジニアとして働き始めてから数ヶ月経ち業務に携わる中で、コード設計について学ぶ必要性があると思い、「良いコード/悪いコードで学ぶ設計入門 ―保守しやすい 成長し続けるコードの書き方」を手に取り、学んでいます。本記事はこちらを参考に書いています。
+今回は 「凝集度」 について、概念と低凝集の問題点。対する高凝集にするテクニック、について取り上げます。
+
+
+ 前提
+
+ 凝集度とは
+
+凝集度とは、「モジュール(クラス)内における、データとロジックの関係性の強さを表す指標です
+
+それぞれ凝集度が高い・低いとは以下の構造を表します。
+
+
+凝集度が高い(高凝集): クラス内のデータと、...]]></summary>
+        <author>
+            <name>Ryutaro</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】データ分析に用いる指標の算出方法について【備忘録】]]></title>
+        <id>https://zenn.dev/siganai/articles/20221127_statistical_index</id>
+        <link href="https://zenn.dev/siganai/articles/20221127_statistical_index"/>
+        <updated>2022-11-27T13:58:24.000Z</updated>
+        <summary type="html"><![CDATA[データを分析する際に使用する指標の算出方法および指標が指し示す内容について備忘録としてまとめる．
+使用言語はPython．
+本記事中で例示するために使用したコードは，ここからダウンロード可能．
+分析するデータはrandomモジュールによりランダムに作成した．
+
+ 準備
+必要なライブラリをインストールする．
+
+terminal
+pip install numpy
+pip install scipy
+
+
+ 算出方法
+
+ 分析対象のデータをランダム作成
+Pythonの標準ライブラリであるrandomモジュールを使用する．
+分析対象の配列targetの配列長を変数lengthで制御する．
+以下に...]]></summary>
+        <author>
+            <name>SiganAI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonで米国CPIの時系列分析]]></title>
+        <id>https://zenn.dev/welliving/articles/b24a95c498707c</id>
+        <link href="https://zenn.dev/welliving/articles/b24a95c498707c"/>
+        <updated>2022-11-27T09:43:55.000Z</updated>
+        <summary type="html"><![CDATA[この記事について
+米国CPIデータを取得するPythonのコードの記事の続きです。
+
+ 時系列モデル
+差分系列を可視化します。
+px.line(cpi.diff().reset_index(),
+    x="DATE",
+    y="CPIAUCNS"
+)
+
+変化率を可視化します。
+px.line(cpi.pct_change().reset_index(),
+    x="DATE",
+    y="CPIAUCNS"
+)
+
+statsmodelsの状態空間モデルのUnobservedComponentを使います。
+import statsmodels.api as sm
+lo...]]></summary>
+        <author>
+            <name>Ryo YOSHI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[世界の人口データを取得するPythonのコード]]></title>
+        <id>https://zenn.dev/welliving/articles/3c0a5919806907</id>
+        <link href="https://zenn.dev/welliving/articles/3c0a5919806907"/>
+        <updated>2022-11-27T02:43:37.000Z</updated>
+        <summary type="html"><![CDATA[この記事について
+United Nations(国際連合)のPopulation Division　World Population Prospectsから世界の人口データをPythonで取得します。
+
+ Pythonのコード
+zipファイルはそのままread_csvで読み込めます。
+import pandas as pd
+
+population = pd.read_csv("https://population.un.org/wpp/Download/Files/1_Indicators%20(Standard)/CSV_FILES/WPP2022_TotalPopulationB...]]></summary>
+        <author>
+            <name>Ryo YOSHI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lambda(Python)でAurora PostgreSQL論理レプリケーションを監視して、Slackにアラート通知する]]></title>
+        <id>https://zenn.dev/datahaikuninja/articles/with-lambda-monitoring-logical-replication</id>
+        <link href="https://zenn.dev/datahaikuninja/articles/with-lambda-monitoring-logical-replication"/>
+        <updated>2022-11-27T02:13:03.000Z</updated>
+        <summary type="html"><![CDATA[概要
+Lambda(Python)で以下の処理（関数）を書いたので、備忘録として記事にします。
+a. pg8000を使用して、LambdaからPostgreSQLデータベースへ接続し、論理レプリケーションの統計情報を取得する
+
+b. boto3を使用して、LambdaからCloudWatch Logsにクエリを発行してエラーログを抽出する
+
+c. slack_sdkを使用して、LambdaからSlackにメッセージを投稿し、スレッドにスニペット（ファイル）を追加する
+Lambda(Python)あるいは、boto3でこれらの処理を書きたい人には参考になるところがあるかもしれません。
+...]]></summary>
+        <author>
+            <name>datahaikuninja</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lambda(Python)をTerraformだけでデプロイする]]></title>
+        <id>https://zenn.dev/datahaikuninja/articles/deploy-python-lambda-function-with-only-terraform</id>
+        <link href="https://zenn.dev/datahaikuninja/articles/deploy-python-lambda-function-with-only-terraform"/>
+        <updated>2022-11-27T02:13:03.000Z</updated>
+        <summary type="html"><![CDATA[概要
+Lambda関数(Python)とLambdaレイヤーをterraformだけでデプロイする方法を紹介します。
+
+ 背景
+
+ やりたかったこと
+TerraformでLambda関数(Python)とLambdaレイヤーを作成してデプロイしたい。
+関数コードやレイヤー(requirements.txt)の変更をトリガーにZipアーカイブを作成し、Lambda関数およびLambdaレイヤーを最新の状態に更新したい。
+
+ 困っていたこと
+Terraformのaws_lambda_functionによって、Lambda関数の各種設定を定義し、関数をデプロイすることができるが、関数コード...]]></summary>
+        <author>
+            <name>datahaikuninja</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[米国CPIデータを取得するPythonのコード]]></title>
         <id>https://zenn.dev/welliving/articles/69a0e38a9a2886</id>
@@ -3977,34 +4112,6 @@ CSVに出力
 本当は使用料金や開放時間も取得したかったのですが、平日と休日で料金や開放時間が...]]></summary>
         <author>
             <name>subaru-hello</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[英語ができない人の pythonのマスター方法]]></title>
-        <id>https://zenn.dev/banananeko/articles/f44621d18826c4</id>
-        <link href="https://zenn.dev/banananeko/articles/f44621d18826c4"/>
-        <updated>2022-10-28T22:39:17.000Z</updated>
-        <summary type="html"><![CDATA[注意書き
-これはあくまでも英語ができなくても pythonができるようになることを保証はしませんあくまで僕の独り言だと思って聞いてください
-
- はじめに
-この記事では英語ができないけど pythonを
-やりたいという人や過去の自分を思い出したい
-という人向けに書いています。
-はじめにも書きましたが
-
-pythonができるようになることを保証はしません
-
-のでご注意ください
-
- 方法その1 スペル丸暗記
-英語ができる人のとってはものすごく効率の悪いことなのですが英語ができない人にとっては
-まあまあ有効な手段です
-たとえば
-print(“hello world")
-にあるprintも昔は...]]></summary>
-        <author>
-            <name>banananeko</name>
         </author>
     </entry>
 </feed>
