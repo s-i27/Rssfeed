@@ -2,10 +2,248 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-11-28T01:46:46.560Z</updated>
+    <updated>2022-11-29T01:46:17.606Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[gRPCの4つの通信方式をPythonでやってみる]]></title>
+        <id>https://zenn.dev/kumamoto/articles/0596ed47f33965</id>
+        <link href="https://zenn.dev/kumamoto/articles/0596ed47f33965"/>
+        <updated>2022-11-29T00:55:28.000Z</updated>
+        <summary type="html"><![CDATA[gRPCの4つの通信方式の理解を深めるため実際に実装を行っていきます。
+既にGo言語で書かれた記事が多くあったので本記事ではPythonで進めていきます。
+コードはGitHubのKumamoto-Hamachi/rpc_practiceのzenn-articleブランチ側に今回の記事のコードを上げています。またmainブランチには発展的な内容として複数Servicerがある場合のコードも上げてあります。
+本記事ではクライアント側の実装も行っていきますが、実際の開発でgRPCの動作確認をする際にはevansやBloomRPC等のツールを利用するのが楽なのでオススメです。
+※evansやBl...]]></summary>
+        <author>
+            <name>Kumamoto-Hamachi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CodilityのLessonをやってみる（9-16）]]></title>
+        <id>https://zenn.dev/paraches/articles/codility_lesson_9_16</id>
+        <link href="https://zenn.dev/paraches/articles/codility_lesson_9_16"/>
+        <updated>2022-11-28T09:56:04.000Z</updated>
+        <summary type="html"><![CDATA[前回の続き。
+今回はLesson 9〜16までのeasyをやって行きます。
+
+ リポジトリ
+https://github.com/paraches/codility_lessons
+
+ Lesson 9 Maximum slice problem
+最大スライス問題
+
+ MaxProfit
+https://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_profit/
+
+ 問題
+配列AにはN個の整数が含まれている。これには連続したN日分の株価が収められている。
+0<=P<Q<Nの時、P日に買...]]></summary>
+        <author>
+            <name>paraches</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[sklearn-onnxで、RandomForestClassifierの出力がboolのときにエラーになる件]]></title>
+        <id>https://zenn.dev/kn1kn1/articles/48a2aeb34a2037</id>
+        <link href="https://zenn.dev/kn1kn1/articles/48a2aeb34a2037"/>
+        <updated>2022-11-28T04:13:24.000Z</updated>
+        <summary type="html"><![CDATA[概要
+表記の件でワークアラウンドコードを書いて回避したので、その備忘録。
+
+ 事象
+以下のようなコードで、ランダムフォレストの学習モデルをONNXに変換しようとしたところ、AttributeError: 'numpy.bool_' object has no attribute 'encode'  のエラーが発生した。
+from sklearn.ensemble import RandomForestClassifier
+
+classifier = RandomForestClassifier(
+    n_estimators = 5,
+    random_state = 42,...]]></summary>
+        <author>
+            <name>kn1kn1</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【ansible】ファイルの先頭行に文字列を追加するplaybookの例]]></title>
+        <id>https://zenn.dev/ryurock/articles/qiita-20151127-4c560143134121905328</id>
+        <link href="https://zenn.dev/ryurock/articles/qiita-20151127-4c560143134121905328"/>
+        <updated>2022-11-28T02:37:28.000Z</updated>
+        <summary type="html"><![CDATA[きっとansibleに限らずなんだけども設定ファイルなどでファイルの先頭行に文字列を追加したい時があると思う。
+(設定ファイルの設定の順番で挙動で変わるものとか)
+今まではCentOSであんまり気にしなかったけどもどうやらOSXではうまく行かなかったのでその時のメモ
+そして@urauraさんのやり方が一番シンプルだったことに気づいた・・・・
+
+ 環境
+
+Mac OSX Yosemite(10.10.5)
+
+python 2.7.10
+
+ansible 1.9.4
+
+
+
+
+
+
+ ファイルの先頭行に文字列を追加するplaybook
+~/.zshrc に挿入したい文字列が存在しなければ .zs...]]></summary>
+        <author>
+            <name>ryurock</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【ansible】僕がansibleを書くときに気をつけている事]]></title>
+        <id>https://zenn.dev/ryurock/articles/qiita-20151126-5231aa038acef2732e90</id>
+        <link href="https://zenn.dev/ryurock/articles/qiita-20151126-5231aa038acef2732e90"/>
+        <updated>2022-11-28T02:37:28.000Z</updated>
+        <summary type="html"><![CDATA[昔のバージョンに比べて大分便利(自分の書き方が古く)になってきたので、自分のdotfileの管理をansibleに切り替えて色々触ってみた時のメモ
+
+ 環境
+
+Mac OSX Yosemite(10.10.5)
+
+python 2.7.10
+
+ansible 1.9.4
+
+
+
+
+
+
+ 参考にしたサイト
+
+Ansible-docs Best Practices
+Ansible-docs All Modules
+Ansible コーディング規約 (の例)
+
+
+ Best Practicesのディレクトリレイアウトは目を通す
+色んなリポジトリを見ていると結構色んなディレクトリ構成でansibl...]]></summary>
+        <author>
+            <name>ryurock</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【ansible】強制的にchangedを発生させない方法]]></title>
+        <id>https://zenn.dev/ryurock/articles/qiita-20151120-639e5f7e49d25c3b6d75</id>
+        <link href="https://zenn.dev/ryurock/articles/qiita-20151120-639e5f7e49d25c3b6d75"/>
+        <updated>2022-11-28T02:37:27.000Z</updated>
+        <summary type="html"><![CDATA[Ansibleのshell moduleを使用してコマンド結果のみをregisterに保存しておきたい時がある
+自分の場合はログインShellがzshなのかbashなのかを調べたくてこんなタスクを書いた
+- name: check using shell register in file path
+  shell: |
+      if [ `echo $SHELL | grep -c "zsh"` -eq 1 ]; then
+        echo ".zshrc"
+      elif [ `echo $SHELL | grep -c "bash"` -eq 1 ]; then
+ ...]]></summary>
+        <author>
+            <name>ryurock</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fakerを使用して日本語を含んだCSVダミーファイルを作成する方法]]></title>
+        <id>https://zenn.dev/ryurock/articles/qiita-20150205-b4db10a7989603d6bf8d</id>
+        <link href="https://zenn.dev/ryurock/articles/qiita-20150205-b4db10a7989603d6bf8d"/>
+        <updated>2022-11-28T02:37:23.000Z</updated>
+        <summary type="html"><![CDATA[CSVのダミーデータを作る場合、巷にダミー作成サイトは沢山ありますが
+大概の場合は日本語に対応されていません。
+そこでPythonの Faker を使用してCSVダミーデータを日本語で作成した時のメモ
+
+ 環境
+
+OSX 10.9.5
+
+
+ 参考にしたサイト
+
+fake-factoryでダミーデータ生成
+
+joke2k/faker
+
+
+ 事前準備に必要なもの
+
+python 2.6.9 (で試しました。他はわかりません・・・)
+pip
+
+
+ Fakerのインストール
+
+/path/to/hoge
+pip install fake-factory
+
+
+ Fakerは日本語対応していません
+...]]></summary>
+        <author>
+            <name>ryurock</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ansible-installerってのを作ってみた]]></title>
+        <id>https://zenn.dev/ryurock/articles/qiita-20140226-bb412e02981168e49a2d</id>
+        <link href="https://zenn.dev/ryurock/articles/qiita-20140226-bb412e02981168e49a2d"/>
+        <updated>2022-11-28T02:34:54.000Z</updated>
+        <summary type="html"><![CDATA[ryurock/ansible-installer
+Ansibleの関係でpythonを入れる時にyyuu/pyenv-installerってのを見つけて、にゃるほどと思いansibleを入れる時も同じ要領で作っておけば楽チンだと思いまして作ってみました。
+作ったばっかなので自己責任でお願いします。(キリッ!!)
+
+ 環境
+
+osx
+Linux
+
+
+ 注意事項
+
+Pythonのインストールでpyenv-installerを使用しています。pyenvを既にお使いの方はpython2.6.9がインストールされますのでご注意ください。globalも2.6.9になります。
+
+
+ 参考にしたサイト...]]></summary>
+        <author>
+            <name>ryurock</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ansibleを導入したい人の為のくどきポイント]]></title>
+        <id>https://zenn.dev/ryurock/articles/qiita-20131220-9cd0aee66003eba482e4</id>
+        <link href="https://zenn.dev/ryurock/articles/qiita-20131220-9cd0aee66003eba482e4"/>
+        <updated>2022-11-28T02:34:53.000Z</updated>
+        <summary type="html"><![CDATA[Advent Calendar初参加です。
+ガクガクプルプルしています。(((( ；ﾟДﾟ))))ｶﾞｸｶﾞｸﾌﾞﾙﾌﾞﾙ
+プロビジョニングフレームワークの中でも比較的ユルっとフワッと始められるAnsible
+でもあなたがもしDevなら導入にあたりOpsの説得が必要です。
+そんなときにAnsibleの導入で謙る、ごねるネタをいくつかご紹介します。
+
+ 対象者
+最近流行のプロビジョニングフレームワークを導入したい！！って方。
+
+ でも、それって結構インフラ担当者から嫌がられる事が多いんですよね。
+そりゃあ、普段あまりプログラムを書かない人達に
+
+ 「プログラムを書いて自動化できるんですよ！...]]></summary>
+        <author>
+            <name>ryurock</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【学生向け】Herokuをタダで使う]]></title>
+        <id>https://zenn.dev/tokoroteen/articles/ae6fed0b15218b</id>
+        <link href="https://zenn.dev/tokoroteen/articles/ae6fed0b15218b"/>
+        <updated>2022-11-28T02:11:31.000Z</updated>
+        <summary type="html"><![CDATA[1. 概要
+こちらの記事の焼き直しです。
+Pythonで作ったWebアプリをHeroku上でデプロイしていましたが、2022/11で無料プランが終了することとなりました。そこで、Renderに移行しようと思いましたが、無料プランでは上手く動いてくれませんでした。
+色々探していたところ、学生向けに1年間有料プランをタダで使わせてくれる制度があることを発見しましたのでそちらを活用していきます。
+Herokuは学生向けに$156奢ってくれるみたいです。
+
+If you are registered with the GitHub Student Developer Pack, you ar...]]></summary>
+        <author>
+            <name>Tokoroteen</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[コード設計]高凝集な設計を目指す]]></title>
         <id>https://zenn.dev/ryutaro_h/articles/b028995914f085</id>
@@ -3995,123 +4233,6 @@ mypy
 リンタ...]]></summary>
         <author>
             <name>Tanny</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonで記述するAzure FunctionsのV2 modelを試してみる]]></title>
-        <id>https://zenn.dev/choshicure/articles/364875750f8888</id>
-        <link href="https://zenn.dev/choshicure/articles/364875750f8888"/>
-        <updated>2022-10-30T13:26:50.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Pythonで記述するAzure FunctionsにV2 modelというものがpreviewで公開されました。
-一番の変更点としては関数アプリの設定ファイルであるfunction.jsonがなくなったことです。
-設定ファイルの代わりにデコレータを利用してトリガーやバインディングの設定を行うようになりました。
-
- まずは試す
-
- 要件
-V2 modelをローカルで試すには以下の要件を満たしている必要があります。
-バージョンが古い、そもそもインストールしていないといった場合は要件を満たすバージョンをインストールしてください。
-
-Python 3.7以降
-Azure Func...]]></summary>
-        <author>
-            <name>choshicure</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MLflowで機械学習パイプラインの管理（1）]]></title>
-        <id>https://zenn.dev/pluck/articles/299ead20e6ab50</id>
-        <link href="https://zenn.dev/pluck/articles/299ead20e6ab50"/>
-        <updated>2022-10-30T08:07:39.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-「AIエンジニアのための機械学習システムデザインパターン」という本読んでいて，パイプライン自体の管理もMLflowでやっていたのがいいなと思ったのでそれについて備忘録という意味でも書いていきます．
-https://www.amazon.co.jp/AIエンジニアのための機械学習システムデザインパターン-AI-TECHNOLOGY-澁井-雄介/dp/4798169447
-
- MLflow
-MLfLowは機械学習用の実験管理ツールで，主に実験のトラッキングやモデルファイルの保存（実際のストレージはS3やGCSなど）に使用することが多いと思います．
-https://mlflow....]]></summary>
-        <author>
-            <name>pluck</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[任意のファイルサイズの画像を生成する]]></title>
-        <id>https://zenn.dev/tamagoo/articles/6c5ca0d595961c</id>
-        <link href="https://zenn.dev/tamagoo/articles/6c5ca0d595961c"/>
-        <updated>2022-10-30T07:39:50.000Z</updated>
-        <summary type="html"><![CDATA[やりたいこと
-画像のファイルサイズを特定の値にしたい。
-入力ファイルサイズに制限のあるシステムである場合には、ファイルサイズの境界値テストをしたいことがあると思います。
-ファイルの形式が問われないのであればfsutilでバイナリ生成ができるのですが、特に画像ファイルに限定される場合、ましてや縦幅/横幅が指定される場合には生成が難しいです。
-実際にその辺りで痛い目を見たので、ファイルサイズを指定して、画像ファイルを作れるようになっておきたいなと思いました。
-
- PNGファイルの概要
-出力する画像ファイルを.pngに限定します。
-というのも、PNGの仕様が都合がいいのですが、その辺りの説...]]></summary>
-        <author>
-            <name>たまごぉ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[データ分析でのEDAチートシート（python/基本編）※随時更新]]></title>
-        <id>https://zenn.dev/senbei139/articles/079a5e72ba83d9</id>
-        <link href="https://zenn.dev/senbei139/articles/079a5e72ba83d9"/>
-        <updated>2022-10-30T05:30:25.000Z</updated>
-        <summary type="html"><![CDATA[EDAでよく使うものをまとめていきます。
-
- 必要ライブラリのインポート
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-
- データファイル（csv)をdataframeとして読み込む
-df = pd.read_csv("path_file.csv")
-
- データセットのカラム確認
-df.columns
-
-"""
-Index(['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species'], dtype='o...]]></summary>
-        <author>
-            <name>senbei139</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【python】スクレイピングしたデータをcsvに出力する]]></title>
-        <id>https://zenn.dev/subaru_hello/articles/38624760719abf</id>
-        <link href="https://zenn.dev/subaru_hello/articles/38624760719abf"/>
-        <updated>2022-10-30T00:28:42.000Z</updated>
-        <summary type="html"><![CDATA[「今日個人で使用できる陸上競技場を検索するアプリ」を作っています。
-いちいちデータを調べてCSVにまとめるのが面倒だったので、スクレイピングしてきたデータをCSVに保存する処理をpythonで実装しました。
-開発環境
-
-
-
-pip
-python
-chromedriver
-
-
-
-
-22.3
-3.9.10
-102.0.5005.27
-
-
-
-
- 戦略
-すでに競技場情報がまとまっているサイトがあったので、以下の手順で取得しようと考えています。
-
-サイトをクローリング
-競技場の名前と住所をスクレイピング
-CSVに出力
-
-本当は使用料金や開放時間も取得したかったのですが、平日と休日で料金や開放時間が...]]></summary>
-        <author>
-            <name>subaru-hello</name>
         </author>
     </entry>
 </feed>
