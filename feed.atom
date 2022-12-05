@@ -2,10 +2,98 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-12-04T01:41:31.086Z</updated>
+    <updated>2022-12-05T01:40:33.835Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[【Python】積み上げ棒グラフを作成する方法について【備忘録】]]></title>
+        <id>https://zenn.dev/siganai/articles/20221204_stack_bar_graph</id>
+        <link href="https://zenn.dev/siganai/articles/20221204_stack_bar_graph"/>
+        <updated>2022-12-04T13:58:11.000Z</updated>
+        <summary type="html"><![CDATA[matplotlibによる積み上げ棒グラフの作成方法について備忘録としてまとめる．
+使用言語はPython．
+本記事中で例示するために使用したコードは，ここからダウンロード可能．
+
+ 方法
+matplotlibのbar()を使用し棒グラフを作成する際に，引数bottomを指定することで積み上げ棒グラフを作成することが可能．
+実際のコードを以下に示す．
+
+ インストール方法
+
+terminal
+pip install matplotlib
+pip install numpy
+
+
+ 実際の使用例
+ここでは例として，numpyのrandom関数を使用して1~10の範囲内でランダムに要素を作成し...]]></summary>
+        <author>
+            <name>SiganAI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChatGPTにChatGPTのことやAPIでの使い方を教えてもらう]]></title>
+        <id>https://zenn.dev/t_shunsuke/articles/879209568ae6bb</id>
+        <link href="https://zenn.dev/t_shunsuke/articles/879209568ae6bb"/>
+        <updated>2022-12-04T12:09:52.000Z</updated>
+        <summary type="html"><![CDATA[0. 概要
+ここ数日間界隈の話題をさらっているChatGPTについて、そもそもこれが何であるのか、あるいはAPI利用方法をChatGPT自信に教えてもらうという内容です。2022/12/04現在、自作アプリケーションに組み込む場合に、（こういうhack？を抜きに）ChatGPTを直接的に叩くようなAPIは用意されていない一方で、代わりにGPT-3等のモデルを使えるOpenAI提供のAPIがあるようで、その使用例も書きます。本稿の記述及びChatGPTの応答に嘘が含まれる可能性が多分にある為、誤りをご指摘いただけると幸いです。
+
+ 1. ChatGPTをざっくり理解する
+まずはジャブ。...]]></summary>
+        <author>
+            <name>t_shunsuke</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonでグラフ画像を作成して、Slackに通知する with AWS]]></title>
+        <id>https://zenn.dev/hirokisakabe/articles/ade6da9ca80a40</id>
+        <link href="https://zenn.dev/hirokisakabe/articles/ade6da9ca80a40"/>
+        <updated>2022-12-04T11:46:13.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+わたしはちょっとしたグラフ画像を作成するときに、よく Python を使います。
+その作成や、完了した旨の通知を Lambda で実現できれば、楽だなあと思っていました。
+今回は、それに取り組みます。
+
+ コードに関する情報
+
+ 実行環境
+
+Python 3.9.15
+Pipenv version 2022.11.11
+Node.js v18.11.0
+Docker
+
+Node.js は AWS CDK 用、Docker は Lambda コンテナイメージのビルド用です。
+Python が 3.9 系なのは、2022/12 時点で、lambda/python イメージの最新...]]></summary>
+        <author>
+            <name>Hiroki SAKABE</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonでクラメール連関係数を計算する]]></title>
+        <id>https://zenn.dev/ohrzw/articles/a9a818e71c3278</id>
+        <link href="https://zenn.dev/ohrzw/articles/a9a818e71c3278"/>
+        <updated>2022-12-04T03:03:50.000Z</updated>
+        <summary type="html"><![CDATA[クラメール連関係数とは？
+「カテゴリーデータ」と「カテゴリーデータ」との間の関連の強さを示す相関係数．
+期待度数を算出し，実測度数と一致していれば関係がなく，一致していなければ関係があるという考え方に基づいている．
+
+ とりあえず手っ取り早く結果を得たい場合のcode
+ import numpy as np
+ import pandas as pd
+ 
+ df = pd.DataFrame()
+ 
+ ### 関数
+ def cramersV(x, y):
+     table = np.array(pd.crosstab(x, y)) #クロス集計
+     n = table.su...]]></summary>
+        <author>
+            <name>ブログ初心者</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ChatGPTをコマンドラインから使うためのCLIツールを作る]]></title>
         <id>https://zenn.dev/ryo_kawamata/articles/2269fc3ad0d375</id>
@@ -3802,179 +3890,6 @@ https://sync-g.co.jp/sjobs/python-flask-biginner/
 こ...]]></summary>
         <author>
             <name>lonely_creator_m</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】関数内のローカル変数名を無理やり取得する]]></title>
-        <id>https://zenn.dev/sugac/articles/3d2cb78e765d23</id>
-        <link href="https://zenn.dev/sugac/articles/3d2cb78e765d23"/>
-        <updated>2022-11-05T12:27:56.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-どうやらpythonにおいてローカル変数の情報は関数オブジェクトが所持していないらしく、
-スマートに取得する方法は見つかりませんでした。
-自分はどうしてもローカル変数名を取得したかったので、astモジュールを使って取得を行いましたが、今回のコードだと漏れが生じる可能性もあるので完璧ではないです。
-
- 環境
-python 3.9.12
-windows
-
- astモジュールとは
-抽象構文木を作成するモジュールです。詳しいことは私も理解していませんが、pythonプログラムの文字列からpythonで実行できるようなデータ形式への変換を行っているっぽいです。
-https://doc...]]></summary>
-        <author>
-            <name>須賀</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[約数列挙のアルゴリズムの実装と改善]]></title>
-        <id>https://zenn.dev/def_yuisato/articles/algorithm-divisor-enumeration</id>
-        <link href="https://zenn.dev/def_yuisato/articles/algorithm-divisor-enumeration"/>
-        <updated>2022-11-05T11:11:52.000Z</updated>
-        <summary type="html"><![CDATA[約数列挙とは
-正の約数 N において、N の約数を全て求めること。
-例) 12 の約数列挙　 → 1,2,3,4,6,12
-
- 通常の実装(O(N))
-
- 【方針】
-
-1 以上 n 以下の整数を i として順番に見ていき、割り切れたら(n % i == 0)i は n の約数と判定する
-時間計算量は 1 から n まで全てを見ていくため O(N)になる。
-
-
- 【実装】
-n = int(input())
-result = []
-for i in range(1, n+1):
-    if n % i == 0:
-        result.append(i)
-print(*resu...]]></summary>
-        <author>
-            <name>佐藤 優偉(Yui Sato)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[python] import 宣言を複数行またぐケース含めて grep 風出力で検索できるツールを作ってみた]]></title>
-        <id>https://zenn.dev/hassaku63/articles/75bc1b56b94528</id>
-        <link href="https://zenn.dev/hassaku63/articles/75bc1b56b94528"/>
-        <updated>2022-11-05T09:21:56.000Z</updated>
-        <summary type="html"><![CDATA[おことわり
-「はじめに」で書く用事を満たしたいなら find - xargs grep で十分です。ここで紹介するツールを使う必要は一切ないです。
-find . -name "*.py" | xargs grep -n 'import'
-ast のお勉強がてら作ってみました。
-
- はじめに
-引き継いで以降ずっと塩漬けしてた古いプロジェクトの依存関係を更新しよう、という仕事が発生したのですが、依存関係の定義である requirements.txt が pip freeze の出力そのままリダイレクトしたような内容になっていて少々困りました。
-# 依存関係は明示的に書いてほしい...
-p...]]></summary>
-        <author>
-            <name>hassaku63</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【VSCode】おすすめの拡張機能 21選]]></title>
-        <id>https://zenn.dev/nameless_sn/articles/recommended_vscode</id>
-        <link href="https://zenn.dev/nameless_sn/articles/recommended_vscode"/>
-        <updated>2022-11-05T03:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-今回の記事では、主にバックエンド(PythonとTypeScript中心)を開発している私が使っているVSCodeの拡張機能を紹介する。
-
- 拡張機能
-基本的にどのような言語でも対応できる拡張機能を紹介する。
-
- Japanese Language Pack for Visual Studio Code
-
-VSCodeを日本語にできる。
-
- REST Client
-
-VSCode上でgetやpostなどのHTTPリクエストを送信できる。GraphQLにも対応している。
-
- GitLens — Git supercharged
-
-commit単位でファイルを比較したり、最新の...]]></summary>
-        <author>
-            <name>Shota Nukumizu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pytest, mock, patchについて整理したい]]></title>
-        <id>https://zenn.dev/shimo_s3/articles/9f486cfee75edc</id>
-        <link href="https://zenn.dev/shimo_s3/articles/9f486cfee75edc"/>
-        <updated>2022-11-05T01:27:42.000Z</updated>
-        <summary type="html"><![CDATA[pytest、unittest.mock.patchらへんでハマっていたのでメモ。
-
- 整理したかったこと
-
-同じ機能で、書き方が何種類もあること
-引数の使い分け
-
-注: このページでは同じものを別の名前で指しているかもしれないです(例:package, module, library という単語は同じものを指すことがある)
-
- テストモジュールについて
-
-unittest ... Pythonビルトインのテストpackage
-pytest ... 3rd partyのテストpackage。unittestよりよく使われていて主流らしい
-
-unittestをそのまま使える
-importし...]]></summary>
-        <author>
-            <name>shimo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第３回 【Python】まだ見ぬアクティビティーを求めてアソビュー ！口コミ スクレイピング]]></title>
-        <id>https://zenn.dev/tokoroteen/articles/4d4e5dbfd8d845</id>
-        <link href="https://zenn.dev/tokoroteen/articles/4d4e5dbfd8d845"/>
-        <updated>2022-11-04T23:00:00.000Z</updated>
-        <summary type="html"><![CDATA[1. 概要
-この記事は第２回の続きです。
-https://zenn.dev/tokoroteen/articles/61892df019f6d9
-第１回および第２回で、アクティビティー予約サイトであるアソビュー!から掲載されている施設の基本情報を取得しました。
-そこで、本来の目的である口コミ情報を学習し、オススメのアクティビティーを提示するモデルを構築するために口コミ集めの作業に入っていきます！
-完成したアプリはこちら↓
-https://lifac.herokuapp.com/
-例えば「空を飛びたい」とき（検索後に海要素を足して、山要素を引くこともできます！！）
-
-例えば「動物に癒さ...]]></summary>
-        <author>
-            <name>Tokoroteen</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Discord.pyでメッセージリンクを取得する方法]]></title>
-        <id>https://zenn.dev/kamotan/articles/43c5e3ecde1ed0</id>
-        <link href="https://zenn.dev/kamotan/articles/43c5e3ecde1ed0"/>
-        <updated>2022-11-04T14:35:36.000Z</updated>
-        <summary type="html"><![CDATA[調べても出てこなかったので垢作って書いておきます。
-discord.py 1.7.3
-
- そもそもメッセージリンクって何？
-この記事読んでる人は取得方法が知りたいでしょうけどちょっとだけ説明させてください。
-メッセージリンクとは、
-https://discord.com/channels/xxxxxxxxxx/xxxxxxxxxx/xxxxxxxxxxxxx
-こういつやつです。
-
-Discord内でメッセージリンクを取得する場合
-!
-メッセージリンクはhttps://discord.com/channels/サーバーID/メッセージチャンネルID/メッセージIDという構成になっています。...]]></summary>
-        <author>
-            <name>かもたん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PlateauのCityGMLをPythonのElementTreeでパースした時に出るns0とかいう邪魔者をぶっ潰す方法]]></title>
-        <id>https://zenn.dev/soh92/articles/f20994e755974f</id>
-        <link href="https://zenn.dev/soh92/articles/f20994e755974f"/>
-        <updated>2022-11-04T13:52:39.000Z</updated>
-        <summary type="html"><![CDATA[ns0=Namespace
-CityGMLをElementTreeでパースした時に現れるns0やns1が一体何者なのかというと、Namespace(名前空間)のことです。
-そんな怖いものではありません。鬱陶しいですが。
-これが
-<?xml version="1.0" encoding="UTF-8"?>
-<core:CityModel xmlns:brid="http://www.opengis.net/citygml/bridge/2.0" xmlns:wtr="http://www.opengis.net/citygml/waterbody/2.0" xmlns...]]></summary>
-        <author>
-            <name>ソウ</name>
         </author>
     </entry>
 </feed>
