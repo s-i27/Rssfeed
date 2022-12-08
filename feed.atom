@@ -2,10 +2,327 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-12-07T01:44:00.339Z</updated>
+    <updated>2022-12-08T01:39:55.058Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[PEP681 - Data Class Transformsって何のためにあるの？]]></title>
+        <id>https://zenn.dev/yukinarit/articles/8b92ae6f812839</id>
+        <link href="https://zenn.dev/yukinarit/articles/8b92ae6f812839"/>
+        <updated>2022-12-08T00:38:46.000Z</updated>
+        <summary type="html"><![CDATA[この記事はMapbox Japan Advent Calendar 2022 8日目の記事です。
+
+ PEP681が追加された背景
+PEP681 - Data Class Transformsはtypingモジュールに@dataclass_transformというデコレータを追加する変更でpydanticやSQLAlchemy、pyserde等のdataclassをベースにしたライブラリの型チェックし易くするために提案されました。
+例えば、@dataclassを追加するだけの超シンプルなデコレータ@add_dataclassがあるとします。
+from dataclasses import...]]></summary>
+        <author>
+            <name>yukinarit</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonでslackを使う(2): slackでtqdm]]></title>
+        <id>https://zenn.dev/sergicalsix/articles/067065d4eccb9a</id>
+        <link href="https://zenn.dev/sergicalsix/articles/067065d4eccb9a"/>
+        <updated>2022-12-07T16:29:36.000Z</updated>
+        <summary type="html"><![CDATA[結論
+zsh
+(venv)% pip install tqdm  (or pip install --upgrade tqdm )
+python
+import time  # demo
+from tqdm.contrib.slack import tqdm
+for i in tqdm([1,2,3,4,5], token = '{token}', channel = '{channel}'):
+    print(i)
+    time.sleep(1) # demo
+
+ 内容
+本記事は[1] https://zenn.dev/sergicalsix/articles/f7ad91d...]]></summary>
+        <author>
+            <name>sergicalsix</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonでslackを使う(1): slackのメッセージ送信]]></title>
+        <id>https://zenn.dev/sergicalsix/articles/f7ad91d1d7cd04</id>
+        <link href="https://zenn.dev/sergicalsix/articles/f7ad91d1d7cd04"/>
+        <updated>2022-12-07T16:17:21.000Z</updated>
+        <summary type="html"><![CDATA[結論
+zsh
+% source {任意の仮想環境 = venv}/bin/activate
+(venv) % pip install "slack_sdk>=3.0"
+zshenv
+export SLACK_API_TOKEN="hogehogehoge" #your token
+python
+import os
+from slack import WebClient
+from slack.errors import SlackApiError
+
+def send_slack_message(text = "Hello from your app! :tada:", chann...]]></summary>
+        <author>
+            <name>sergicalsix</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[mlflowとluigiによるML実験管理例]]></title>
+        <id>https://zenn.dev/mina_moto/articles/qiita-20211205-62611fe7756be4cbdebc</id>
+        <link href="https://zenn.dev/mina_moto/articles/qiita-20211205-62611fe7756be4cbdebc"/>
+        <updated>2022-12-07T15:13:06.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事はBrainPad Advent Calendar 2021の10日目の記事です。
+本記事ではMLの実験を行うときの、コード、パラメータ、モデル、評価結果を管理するための構成例を紹介します。
+サンプルコードはこちら
+
+ 前提知識
+
+Must
+
+python
+docker
+
+
+Want
+
+mlflow
+luigi
+
+
+
+
+ 思想
+
+前処理を加えたデータや学習したモデルなどプログラムで出力されるファイルは全てmlflowの管理下におく。
+コードはgitで管理し、実験結果とcommit hashを紐づける。
+前処理、学習、推論などタスク同士の依存関係を管理して、依存してい...]]></summary>
+        <author>
+            <name>mina_moto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DeepLearningでポケモンを生成する]]></title>
+        <id>https://zenn.dev/mina_moto/articles/qiita-20191216-e85dedb407cdfce28219</id>
+        <link href="https://zenn.dev/mina_moto/articles/qiita-20191216-e85dedb407cdfce28219"/>
+        <updated>2022-12-07T15:13:05.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事は近畿大学Advent Calendar 2019の16日目の記事です．
+何番煎じか分かりませんがGanでポケモンの画像を生成します．将来的には生成した画像に更にポケモン図鑑の説明を付加するようなことをしたいと思っています．
+ソースコードはこちら
+
+ DCGAN
+画像生成にはDCGANを用いました．詳細は論文を参照ください．
+実装はDCGAN-tensorflowを用いたのですが，なぜか公式のソースコードにバグがあったので修正したものを使っています．
+
+ データセット
+pokemon-images-dataset-by-typeで公開されている，ポケモンの画像を用い...]]></summary>
+        <author>
+            <name>mina_moto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[文章の前処理・分かち書きを行い文書ベクトルを算出]]></title>
+        <id>https://zenn.dev/mina_moto/articles/qiita-20191210-af0b3ff3518f7fbd7bce</id>
+        <link href="https://zenn.dev/mina_moto/articles/qiita-20191210-af0b3ff3518f7fbd7bce"/>
+        <updated>2022-12-07T15:13:05.000Z</updated>
+        <summary type="html"><![CDATA[この記事は「Sunrise Advent Calendar 2019」10日目の記事です．
+最近，諸事情により自然言語処理を完全に理解する必要があり，文章の前処理やベクトルの算出とかを行ったので，その辺りの方法について簡単にまとめます．
+
+ 必要ライブラリインポート
+import re
+from gensim.models.doc2vec import Doc2Vec, TaggedDocument
+import string
+import unicodedata
+import MeCab
+
+ 文書の前処理
+対象とする文章
+text = 'Yahoo Japanなどを\r運営するヤフーの...]]></summary>
+        <author>
+            <name>mina_moto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[anacondaコマンドチートシート]]></title>
+        <id>https://zenn.dev/mina_moto/articles/qiita-20181116-bf6e965c36b53579b757</id>
+        <link href="https://zenn.dev/mina_moto/articles/qiita-20181116-bf6e965c36b53579b757"/>
+        <updated>2022-12-07T15:13:04.000Z</updated>
+        <summary type="html"><![CDATA[環境
+macOS Mojave 10.14
+
+ コマンド一覧
+
+ 仮想環境作成
+conda create -n name python=version anaconda
+name:任意の仮想環境名
+version:pythonのバージョンの指定
+
+ 作成した仮想環境一覧の表示
+conda info -e
+
+ 作成した仮想環境に入る
+source activate name
+name:作成した仮想環境名
+
+ 現在の仮想環境から出る
+source deacrivate
+
+ 仮想環境の削除
+conda remove -n name
+name:削除する仮想環境名
+
+ anacondaのアップ...]]></summary>
+        <author>
+            <name>mina_moto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[phpからpythonを呼び出し実行結果を利用]]></title>
+        <id>https://zenn.dev/mina_moto/articles/qiita-20180923-f90ceb2f88994639ca95</id>
+        <link href="https://zenn.dev/mina_moto/articles/qiita-20180923-f90ceb2f88994639ca95"/>
+        <updated>2022-12-07T15:13:04.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事ではphpからpythonプログラムを実行し，その出力結果を文字列としてphpのプログラムで利用する方法について解説します．
+
+ 環境
+一応書いたけど大体の環境で動くと思います．
+php：5.5.38
+python：3.6.4
+
+ 実行するpythonプログラム
+とにかく分かりやすくしました:monkey: 文字列を二行出力するだけです．
+
+exec_from_php.py
+print("1line")
+print("2line")
+
+当然こうなります．
+$ python exec_from_php.py 
+1line
+2line
+
+ phpからpythonを呼び出...]]></summary>
+        <author>
+            <name>mina_moto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vertex Piplinesのコンポーネントのスキップ処理]]></title>
+        <id>https://zenn.dev/light0w0/articles/b1c5b5c57d0a62</id>
+        <link href="https://zenn.dev/light0w0/articles/b1c5b5c57d0a62"/>
+        <updated>2022-12-07T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[!
+これは ZOZO Advent Calendar 2022 カレンダー Vol.2 とMLOps Advent Calendar 2022 カレンダー Vol.1 の8日目の記事です。
+
+
+ 目的
+Vertex Pipelinesの一部のコンポーネント実行をスキップする処理を実現する
+
+ 背景
+パイプラインでdsl.Conditionを使用し、コンポーネントの出力結果によって一部のコンポーネント実行を条件分岐でスキップすることを考えていたが、以下のようなコードではエラーとなった。
+def pipeline_fn():
+
+    cond_task = cond_op()
+
+    w...]]></summary>
+        <author>
+            <name>hikari</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TypeError: __init__() got an unexpected keyword argument 'package_name]]></title>
+        <id>https://zenn.dev/yoshy_at/articles/d2a46b082e8650</id>
+        <link href="https://zenn.dev/yoshy_at/articles/d2a46b082e8650"/>
+        <updated>2022-12-07T09:09:14.000Z</updated>
+        <summary type="html"><![CDATA[いつものようにdockerをビルドしていたら、以下のようなエラーがでた。
+TypeError: __init__() got an unexpected keyword argument 'package_name'
+【解決策】
+・pip installしている「click」のバージョンを8.0.0以上にする。
+
+※ここから補足
+docker-comopse up -d --buildにてビルドをした際に、以下のコマンドがdockerに走っている。
+RUN pip install --upgrade pip pip-tools
+RUN pip install -r requirement...]]></summary>
+        <author>
+            <name>ITエンジニア1年生</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonで関数の時間を計測するラッパーを作成]]></title>
+        <id>https://zenn.dev/sergicalsix/articles/6434552139b126</id>
+        <link href="https://zenn.dev/sergicalsix/articles/6434552139b126"/>
+        <updated>2022-12-07T08:06:19.000Z</updated>
+        <summary type="html"><![CDATA[結論
+import datetime
+from functools import wraps
+
+def calc_func_time(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        start = datetime.datetime.now()
+        result = f(*args, **kwargs)
+        end = datetime.datetime.now()
+        print(f'elapsed time: {f.__name__}: { end - start }')
+...]]></summary>
+        <author>
+            <name>sergicalsix</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Python] コンソールでのキーボードイベントをハンドルする]]></title>
+        <id>https://zenn.dev/k_kuroguro/articles/e8437cdf6d804f</id>
+        <link href="https://zenn.dev/k_kuroguro/articles/e8437cdf6d804f"/>
+        <updated>2022-12-07T03:44:58.000Z</updated>
+        <summary type="html"><![CDATA[概要
+標準モジュールのみで, コンソールにおけるキーボードイベント (キー押下イベント) をハンドルする Python モジュールを作成する. キー入力の処理は OS 依存だが, 本記事では Windows のみ考える.
+なお, 実装については TUI フレームワークの Textual を参考にした. ソースの一部はここから複製・改変されているため, 注記のあるものには以下のライセンスが適用される.
+LICENSE
+Copyright (c) 2021 Riku Kanayama (k_kuroguro)
+Released under the MIT license
+https://...]]></summary>
+        <author>
+            <name>くろぐろ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Azure Log AnalyticsにSwitchBotのテレメトリ情報を記録する]]></title>
+        <id>https://zenn.dev/yotan/articles/bbf7182152c663</id>
+        <link href="https://zenn.dev/yotan/articles/bbf7182152c663"/>
+        <updated>2022-12-07T03:31:17.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+2022年末のAmazonブラックフライデーで、ついSwitchBotハブミニと、温湿度計をポチってしまいました（あとEcho Showも）。
+SwitchBotのアプリでは、IFTTTやアレクサなど主要なサービスに標準で対応しているのですが、各種SwitchBotの操作の為のAPIが公開されているので使ってみました。
+
+SwitchBot スマートリモコン ハブミニ
+SwitchBot 温湿度計
+
+本記事は今回の検証の中で培った技術ノウハウの説明をAzure側メインに行います。
+実際のソースコードやAzureデプロイスクリプト（bicep）は以下のGitHubレポジトリに...]]></summary>
+        <author>
+            <name>よたん</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Flaskの1.xと2.xを無停止で入れ替える]]></title>
+        <id>https://zenn.dev/delta/articles/flask_session_202212</id>
+        <link href="https://zenn.dev/delta/articles/flask_session_202212"/>
+        <updated>2022-12-07T03:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事はteam DELTA Advent Calendar 2022 7日目の記事です。
+
+ 自己紹介
+山田 尚人(やまだ なおと)といいます。
+SEVENRICH GROUP のグループ でCTO Boosterをメインで行っています。
+SEVENRICH GROUPとは？
+https://costcut.cloud/
+個人のZennもあります。
+https://zenn.dev/merutin
+
+ 概要
+Pythonのバージョンアップに伴って、古くなっていたFlaskのバージョンを同時に上げることにしました。
+バージョンを上げるに当たって、サービスを止めずに実施する...]]></summary>
+        <author>
+            <name>DELTAテックブログ</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[機械学習を使ったインサイト抽出]]></title>
         <id>https://zenn.dev/luup/articles/data-takahiro-20221207</id>
@@ -3993,111 +4310,6 @@ syslog を利用したロギングを行うのであれば syslogd の設定で�
 Dockerの設定によっては構築時の最新バージョンのツー...]]></summary>
         <author>
             <name>www.harurow</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】単純パーセプトロンを理解する]]></title>
-        <id>https://zenn.dev/k41531/articles/f47f536a18491a</id>
-        <link href="https://zenn.dev/k41531/articles/f47f536a18491a"/>
-        <updated>2022-11-08T13:29:00.000Z</updated>
-        <summary type="html"><![CDATA[初心に還ってパーセプトロンを実装します。
-
- 単純パーセプトロンがANDを学習している様子
-
-
- パーセプトロンとは
-1958年、Rosenblattによって提案されたネットワークモデル。
-脳の中の生物学的なニューロンを単純化したモデルで、最も単純なニューラルネットワークです。
-線形分離可能な問題であれば解くことができます。
-ここではパーセプトロンの中でも単純パーセプトロンを取り扱います。
-パーセプトロンは、ニューロンを次のようなステップでモデル化している。
-（入力がn個で出力が1個のパーセプトロン）
-
-入力信号を受け取る。（入力：x_i）
-入力の重み付きの和を計算（重み：w_i）
-2の...]]></summary>
-        <author>
-            <name>kaisei</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Ubuntu 22.04 に Ansible をインストールする]]></title>
-        <id>https://zenn.dev/imksoo/articles/81645222f9f30b</id>
-        <link href="https://zenn.dev/imksoo/articles/81645222f9f30b"/>
-        <updated>2022-11-08T05:40:27.000Z</updated>
-        <summary type="html"><![CDATA[Installing Ansible に従って入れるのだが、標準だと python3-pip がないので python3 -m pip の部分で "/usr/bin/python3: No module named pip" になる。
-
-なので、最初に python3-pip をインストールする。
-sudo apt install -y python3-pip
-
-改めて sudo python3 -m pip install ansible を実行する。
-sudo python3 -m pip install ansible]]></summary>
-        <author>
-            <name>きりの</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Raspberry Pi  × 電子ペーパーで最新のお天気情報を表示する電子版を作ってみた]]></title>
-        <id>https://zenn.dev/yutafujiwara/articles/2d568f168c2e65</id>
-        <link href="https://zenn.dev/yutafujiwara/articles/2d568f168c2e65"/>
-        <updated>2022-11-08T03:21:52.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Raspberry Pi × 電子ペーパーで最新のお天気情報を表示する電子版を作りました！！ 初めてRaspberryを触ってみたので、環境構築から開発するまでの取り組みをZennにまとめました！！
-RaspberryPiを購入して何かを作ろうとしている人、夏休みの工作で何か作ろうと考えている人向けの内容になっております。
-
- 作ったもの
-
-
- ソース
-https://github.com/FujiyamaYuta/e_paper_weather_display
-
- 使っているデバイス
-
-Raspberry Pi 3 Model B
-Micro SDカード（32GB）
-電子ペー...]]></summary>
-        <author>
-            <name>フジワラユウタ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[複数のテキストファイルを１つのExcelファイルにまとめたい]]></title>
-        <id>https://zenn.dev/tokoroteen/articles/e82f4c94d62b4b</id>
-        <link href="https://zenn.dev/tokoroteen/articles/e82f4c94d62b4b"/>
-        <updated>2022-11-07T23:00:00.000Z</updated>
-        <summary type="html"><![CDATA[1. 概要
-研究で実験装置からたくさんのテキストファイルが出てきます。
-これらのグラフ化する上で、1つずつExcelにインポートするのがめんどくさいので一気にExcel化できるようにしようと考えました。
-完成品はこちら↓
-https://colab.research.google.com/drive/1H_83P0nVApHKIQvfUVAyOAgPqxxx85nf?usp=sharing
-区切り文字を選んで、実行し、
-
-ファイルを選んで、
-
-Excelファイルにつけたい名前を入力すれば、
-
-出来上がり！！
-
-
- 2. 機能
-
-テキストファイルの区切り文字を選ぶ
-（複数の）テキストフ...]]></summary>
-        <author>
-            <name>Tokoroteen</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TensorFlow2で機械学習をはじめたいと思ってる方へ]]></title>
-        <id>https://zenn.dev/tatsuya4499/articles/880db89990a73e</id>
-        <link href="https://zenn.dev/tatsuya4499/articles/880db89990a73e"/>
-        <updated>2022-11-07T13:45:31.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-普段は主に機械学習のコードはPyTorchで書いています。とりあえず書きやすいですよね。
-PyTorchは 「Define by Run」 と言われ、計算グラフとデータを流すタイミング同時で、何が良いかと言うと、途中の計算結果を確認できてデバックが楽です。そんなPyTorch信者の私ですが、今回TensorFlowでコードを書く必要性が出てきたのでその時のノウハウを忘れないようにメモとして残しておきます。
-もともとPyTorchを触る前までは、TensorFlowやkerasを触っていたのでなんとなくは把握できていましたが、TensorFlow2になってからの内容はあまり把...]]></summary>
-        <author>
-            <name>Tatsuya</name>
         </author>
     </entry>
 </feed>
