@@ -2,10 +2,189 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-12-08T01:39:55.058Z</updated>
+    <updated>2022-12-09T01:43:00.212Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[披露宴の席次を Gromov-Wasserstein 最適輸送で決めた話]]></title>
+        <id>https://zenn.dev/akira_t/articles/seat-opt-via-gw</id>
+        <link href="https://zenn.dev/akira_t/articles/seat-opt-via-gw"/>
+        <updated>2022-12-08T22:31:22.000Z</updated>
+        <summary type="html"><![CDATA[数理最適化 Advent Calendar 2022の9日目です。
+新緑の頃、新型コロナ流行の合間をぬって、ささやかな結婚披露宴を表参道の式場にて催しました。諸々の準備の中でも席次はこだわるとキリがなく、数理最適化を使って決めました。人間関係をできるだけ保つようなゲスト集合から座席集合への写像を考えます。
+
+ゲスト間人間関係を考慮して良い感じの配席を考えたい
+
+ tl;dr
+
+披露宴をしました
+知り合い関係が複雑かつ長机でゲストの席配置が難しい
+
+組合せ爆発は本物。高々20人の配置に1週間以上悩んだ結果、数理最適化した方が早いと結論
+
+
+「知り合い同士を近くに配席する」問題は非凸な二次計...]]></summary>
+        <author>
+            <name>Akira Tanimoto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pytestで関数がn回呼ばれていることをテストしたい]]></title>
+        <id>https://zenn.dev/ymiz/articles/7ca3a3b2a264a3</id>
+        <link href="https://zenn.dev/ymiz/articles/7ca3a3b2a264a3"/>
+        <updated>2022-12-08T21:50:00.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+pytestを使っている
+ある関数A内で関数Bがn回呼ばれることをテストしたい
+どうするか？
+
+
+ 対応
+pytest-mock を利用する。
+https://pypi.org/project/pytest-mock/
+例えば、
+class FooApiClient:
+    def fetch(self, i: int):
+        return i
+
+
+class Bar:
+    def __init__(self, foo: FooApiClient):
+        self.__foo = foo
+
+    def execute(self, count:...]]></summary>
+        <author>
+            <name>ymiz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HomeAssistantでpython scriptを実行した際importできない問題の解決方法]]></title>
+        <id>https://zenn.dev/syfut/articles/c79f8da50aa1bb</id>
+        <link href="https://zenn.dev/syfut/articles/c79f8da50aa1bb"/>
+        <updated>2022-12-08T18:14:35.000Z</updated>
+        <summary type="html"><![CDATA[概要
+HomeAsssistantのPythonSprictのドキュメントに沿ってpythonを実行した場合import機能でエラーが出ることがある。
+Python_script-Home Assistant
+ImportError: __import__ not found
+これはHomeAssistant標準の方法では機能が限定的であるために起きている。
+
+ 解決方法
+importを行う必要がある場合は、シェルコマンドから実行する必要がある。
+Configuration.yamlに以下を記載し、システムを再起動する。
+shell_command:
+    program1: 'p...]]></summary>
+        <author>
+            <name>Boushipan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[e (自然対数の底) を100億桁求める〜ひとはなぜ円周率に惹かれるのか?]]></title>
+        <id>https://zenn.dev/taroh/articles/8ba43baa0f7154</id>
+        <link href="https://zenn.dev/taroh/articles/8ba43baa0f7154"/>
+        <updated>2022-12-08T13:43:53.000Z</updated>
+        <summary type="html"><![CDATA[またまた円周率絡みのぷちネタ。
+円周率を自作プログラムで100億桁求めた。アルゴリズムも3つくらい試したし、バイナリダンプもした。全部は無理だがいちおうかなりの無理筋桁を一度にプリントアウトもしてみた。の続き。
+ほかにもなんか、計算して面白い数字はないものか? ということで、40年ぶりくらいに、自然対数の底 (その他) を計算してみた。
+まあネタとしては、binary splitting法を理解すること (※ ちゃんとしてないが) と、AWSを借りることについての考察の続きも。
+
+ ルート2に人権はないのか?
+わしの計算機には、円周率\piが100億桁転がっている。
+Twitterで流行...]]></summary>
+        <author>
+            <name>taroh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pip の小技集]]></title>
+        <id>https://zenn.dev/sergicalsix/articles/5d8597914f2057</id>
+        <link href="https://zenn.dev/sergicalsix/articles/5d8597914f2057"/>
+        <updated>2022-12-08T13:41:12.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+!
+
+
+pip installを行う時は必ず仮想環境で行ってください
+
+pip installでマイナーなライブラリをインストールする場合は、マルウェアが入っていないか十分に調査してください。
+
+
+
+ 内容
+
+ 初級
+% pip install {library}=={version}
+% pip install {library}>{version}
+% pip install --upgrade {library}
+
+% pip install -r requirements.txt
+% pip freeze
+初球については簡単なものばかりなので、説明は割愛します...]]></summary>
+        <author>
+            <name>sergicalsix</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Kaggle】 Feedback3 コンペでボロ負けしたので教訓を全部吐きます【懺悔】]]></title>
+        <id>https://zenn.dev/aidemy/articles/3299c8fd9f394a</id>
+        <link href="https://zenn.dev/aidemy/articles/3299c8fd9f394a"/>
+        <updated>2022-12-08T08:01:11.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事は、 Aidemy Advent Calendar 2022 の8日目の投稿です。
+みなさま、いかがお過ごしでしょうか。株式会社アイデミーでデータサイエンティストとして勤務しております、ざっしーと申します。
+先日11/29に閉幕したKaggleコンペティション Feedback Prize - English Language Learning （通称Feedback3）に参加してきました。
+そこで見事にボロ負けしてきたので、この記事で教訓を1つ残らず落とします。🫠
+打ち手の考え方などの概念的な話だったり、具体的な手法の話になったりと、話題のレイヤーが多少は雑多にな...]]></summary>
+        <author>
+            <name>ざっしー</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonでclassを使う:method編(2): staticmethod]]></title>
+        <id>https://zenn.dev/sergicalsix/articles/e96ba8f1b3370f</id>
+        <link href="https://zenn.dev/sergicalsix/articles/e96ba8f1b3370f"/>
+        <updated>2022-12-08T04:58:16.000Z</updated>
+        <summary type="html"><![CDATA[本記事はstaticmethodを啓発する記事です。
+まずは以下のclassを考えます。
+class A:
+    def __call__(self):
+        return self.__class__.__name__
+    
+    # bad code
+    def print_fuga(self):
+        print('fuga')
+	
+　　 # good code 
+    @staticmethod
+    def print_hoge():
+        print('hoge')
+上記クラスのメソッドをインスタンスに注目して簡単に説明します。
+...]]></summary>
+        <author>
+            <name>sergicalsix</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonでclassを使う:method編(1): 基本的な特殊メソッド]]></title>
+        <id>https://zenn.dev/sergicalsix/articles/0d44a97a6bd43a</id>
+        <link href="https://zenn.dev/sergicalsix/articles/0d44a97a6bd43a"/>
+        <updated>2022-12-08T04:55:59.000Z</updated>
+        <summary type="html"><![CDATA[導入
+今回はよく目にする4つの特殊メソッドは__init__,__call__,__str__,__repr__に加えて__eq__,__class__.__name__,__dict__を紹介します。
+そして想定される実用的な使い方についてもいくつか紹介します。
+以下のクラスを使って説明していきます。
+class A:
+    z = 1
+    def __init__(self,x = 1):
+        self.x = x
+    def __call__(self):
+        return f'call:{self.__class__.__name__}'
+ ...]]></summary>
+        <author>
+            <name>sergicalsix</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[PEP681 - Data Class Transformsって何のためにあるの？]]></title>
         <id>https://zenn.dev/yukinarit/articles/8b92ae6f812839</id>
@@ -4153,163 +4332,6 @@ Condaでも何でもいいので仮想環境を作ります。
 ff...]]></summary>
         <author>
             <name>atfujita</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのlistをもっと便利に +α 【大規模ソフトウェアを手探る】]]></title>
-        <id>https://zenn.dev/irugo/articles/06a67373aa713a</id>
-        <link href="https://zenn.dev/irugo/articles/06a67373aa713a"/>
-        <updated>2022-11-09T13:17:29.000Z</updated>
-        <summary type="html"><![CDATA[これは何？
-この記事は、東京大学工学部電子情報工学科/電気電子工学科の後期実験「大規模ソフトウェアを手探る」のレポートとして作成されました。この実験では、各班がOSSを1つ選び、開発技法を学びながら新たな機能追加やバグ修正などを試みます。私たちの班(@irungo_ic, @yutyan_ut, @ncrpy)はCPython を選びました。
-https://github.com/python/cpython
-
- CPythonとは
-プログラミング言語であるPythonの、C言語による実装です。つまり、C言語で書かれたPythonのインタプリタです。
-
- CPythonを選んだ理由
-...]]></summary>
-        <author>
-            <name>いるんご</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[自作コマンドでFlake8やmypyを一気に行う]]></title>
-        <id>https://zenn.dev/isuya1992/articles/cmd-check-pycode</id>
-        <link href="https://zenn.dev/isuya1992/articles/cmd-check-pycode"/>
-        <updated>2022-11-09T10:37:06.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Flake8やmypyは、Pythonのコードを静的解析するツールである。Flake8はPEP8のコーディング規約、mypyは型ヒントのミスをチェックする。
-ただし、全ての規約に従ってコーディングするのはナンセンスなケースもあり得る。この場合、コマンドを追記することで、一部の規約を無視できる。
-flake8 [.pyファイル/ディレクトリのパス] --ignore=E501
-mypy [.pyファイルの/ディレクトリのパス]  --ignore-missing-imports
-PEP8のE501は1行の文字数を79文字以下に制限する規則であり、一般的には不要だろう。
-myp...]]></summary>
-        <author>
-            <name>isuya1992</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pythonのエディタを比較してみる]]></title>
-        <id>https://zenn.dev/banananeko/articles/d308d408a1803c</id>
-        <link href="https://zenn.dev/banananeko/articles/d308d408a1803c"/>
-        <updated>2022-11-09T08:48:40.000Z</updated>
-        <summary type="html"><![CDATA[今回比較するエディタ
-今回比較するエディタは
-こちらです↓
-
-IDLE
-visual studio code(以下、VScodeとします)
-pycharm
-
-
- IDLE
-公式サイト
-https://docs.python.org/ja/3/library/idle.html
-
- IDLEとは
-IDLEとは pythonに標準で搭載されているエディタでシンプルなデザインが特徴です
-
- IDLEの機能
-
- 色分け機能
-IDLEには色分け機能があります
-
- 赤色
-エラーの時の文字
-
- 青色
-出力時の文字
-
- 緑色
-「”」でかこまれた文字列
-
- オレンジ色
-キーワードimportやforな...]]></summary>
-        <author>
-            <name>banananeko</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[cmdstanpy : スパースモデル]]></title>
-        <id>https://zenn.dev/yoshida0312/articles/ba57a187654bce</id>
-        <link href="https://zenn.dev/yoshida0312/articles/ba57a187654bce"/>
-        <updated>2022-11-09T08:35:47.000Z</updated>
-        <summary type="html"><![CDATA[import os
-import time
-
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.datasets import make_regression
-from cmdstanpy import CmdStanModel
-
- データの読み込み
-以下のデータを使用しています。
-x, y, true_coef = make_regression(random_state=12, 
-                       n_samples=100, 
-  ...]]></summary>
-        <author>
-            <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【備忘録】SendGrid選定理由]]></title>
-        <id>https://zenn.dev/mksh/articles/reasons-for-selecting-sendgrid-d39648e23bf398</id>
-        <link href="https://zenn.dev/mksh/articles/reasons-for-selecting-sendgrid-d39648e23bf398"/>
-        <updated>2022-11-09T00:41:36.000Z</updated>
-        <summary type="html"><![CDATA[概要
-とあるプロジェクトのメール通知機能にてSendGridを採用した理由に関する社内向けの備忘録。実際のプロジェクトに関する情報は抽象化している。
-
- プロジェクトの規模感
-SendGridを採用したプロジェクトでの見積もりは大まかに以下の通りとなる。
-
-ユーザ数120名（リリース初期）
-1回/日の定時連絡メール
-10回/月程度（平均）の不定期通知メール（リリース初期）
-
-なお定時連絡および不定期の連絡はユーザそれぞれに対してメールが送信される。
-またユーザ数は120名単位で増加する見込みあり。
-上記より、リリース初期段階では3,730通/月のメール配信が見込まれる。
-
- メール通...]]></summary>
-        <author>
-            <name>mksh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python でログファイルを圧縮する方法]]></title>
-        <id>https://zenn.dev/bugph0bia/articles/dcecf44e4d2082</id>
-        <link href="https://zenn.dev/bugph0bia/articles/dcecf44e4d2082"/>
-        <updated>2022-11-08T14:51:32.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Python でログ出力を行う場合、標準ライブラリの logging を使用することが多いと思います。
-logging モジュールに用意されている既定のハンドラの中の RotatingFlieHander を使用するとファイルのログローテーションが簡単に行えて便利なのですが、ローテーションした古いログファイルを圧縮したい場合はひと手間加える必要があります。
-!
-syslog を利用したロギングを行うのであれば syslogd の設定でファイルを圧縮することができますが、ここでは、あくまで RotatingFlieHander を使用したログファイル出力におけるファイル圧縮に...]]></summary>
-        <author>
-            <name>bugph0bia</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[VSCode+Docker+Dev Containerを使って開発環境をコンテナに作ってみた]]></title>
-        <id>https://zenn.dev/harurow/articles/c903de5f479a57</id>
-        <link href="https://zenn.dev/harurow/articles/c903de5f479a57"/>
-        <updated>2022-11-08T13:51:39.000Z</updated>
-        <summary type="html"><![CDATA[今回やったこと
-開発環境をコンテナに構築しホストのVisual Studio Codeからイジイジできるようにした。
-動作検証環境は Mac mini 2020(Apple M1), MacBook Pro 2019(Intel Core)で検証しています。Windows, Linux では試せていません。
-
- メリット
-開発環境の再現性が高いため以下のようなメリットが得られます。
-
-同じ開発環境をすぐに提供できる[1]
-
-ツール・ライブラリのバージョンをプロジェクト毎に決められる
-ホストの環境を汚さずにちょっとお試しができる
-Dockerの設定によっては構築時の最新バージョンのツー...]]></summary>
-        <author>
-            <name>www.harurow</name>
         </author>
     </entry>
 </feed>
