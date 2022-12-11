@@ -12,6 +12,306 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/ttrsq/articles/1280cb7ac7d1b4",
+          "author": "とっとり（砂丘）",
+          "description": "こんにちは\n仮想通貨botter Advent Calendar 2022 の11日目の記事のつもりで書いています。\nこれからBot作りたいけど、みんなはどう設計しているのだろうという人向け。\nloop頻度が1分以上のMLbotを前提としてますが、高頻度でも基本は変わらないと考えています。\nクラスの責務の範囲や、起動周りの機構などに悩んでいたら参考になれば、、\n\n 結論\n\n メインループ\n下記のノリで各クラスの責務を分離をすると苦しくなりにくいです。\nwhile True:\n\t# 新規データ取得\n\tdata = stream.get_marcket_data(target_star...",
+          "link": "https://zenn.dev/ttrsq/articles/1280cb7ac7d1b4",
+          "publishedOn": "2022-12-11T01:40:37.000Z",
+          "wordCount": 2420,
+          "title": "仮想通貨のbotを作りたいが、みんなどう書いてるの？",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--65-YMver--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25A8%25E3%2581%25A3%25E3%2581%25A8%25E3%2582%258A%25EF%25BC%2588%25E7%25A0%2582%25E4%25B8%2598%25EF%25BC%2589%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E4%25BB%25AE%25E6%2583%25B3%25E9%2580%259A%25E8%25B2%25A8%25E3%2581%25AEbot%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258A%25E3%2581%259F%25E3%2581%2584%25E3%2581%258C%25E3%2580%2581%25E3%2581%25BF%25E3%2582%2593%25E3%2581%25AA%25E3%2581%25A9%25E3%2581%2586%25E6%259B%25B8%25E3%2581%2584%25E3%2581%25A6%25E3%2582%258B%25E3%2581%25AE%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kSG5fcGNKSS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q1NGJiNmY0MzkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--65-YMver--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25A8%25E3%2581%25A3%25E3%2581%25A8%25E3%2582%258A%25EF%25BC%2588%25E7%25A0%2582%25E4%25B8%2598%25EF%25BC%2589%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E4%25BB%25AE%25E6%2583%25B3%25E9%2580%259A%25E8%25B2%25A8%25E3%2581%25AEbot%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258A%25E3%2581%259F%25E3%2581%2584%25E3%2581%258C%25E3%2580%2581%25E3%2581%25BF%25E3%2582%2593%25E3%2581%25AA%25E3%2581%25A9%25E3%2581%2586%25E6%259B%25B8%25E3%2581%2584%25E3%2581%25A6%25E3%2582%258B%25E3%2581%25AE%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kSG5fcGNKSS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q1NGJiNmY0MzkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/sugasuga/articles/82d9ad7933e0f2",
+          "author": "sugasuga",
+          "description": "やってみること\n\nGCP上でDataprocクラスタの作成\nmovielensのデータを使ってmovieIdごとのベクトルをGCSに吐き出すスクリプトを作成\ngcloudコマンドを使ってジョブを送信して処理を行う\n\n\n Dataprocクラスタの準備\nterraformで\n\ndataprocクラスタを作成\ndataprocクラスタが使うGCSバケット\n\nの作成。お試しなのでcloud shellなどでterraform initとterraform applyをした。\nresource \"google_storage_bucket\" \"dataproc_bucket\" {\n  # D...",
+          "link": "https://zenn.dev/sugasuga/articles/82d9ad7933e0f2",
+          "publishedOn": "2022-12-10T17:28:32.000Z",
+          "wordCount": 603,
+          "title": "Dataprocとpysparkを使って分散処理で行列分解",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--cpz05cnv--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:sugasuga%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Dataproc%25E3%2581%25A8pyspark%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E5%2588%2586%25E6%2595%25A3%25E5%2587%25A6%25E7%2590%2586%25E3%2581%25A7%25E8%25A1%258C%25E5%2588%2597%25E5%2588%2586%25E8%25A7%25A3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1CZ0pGbVRjSC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3YjRiY2I1MjMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--cpz05cnv--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:sugasuga%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Dataproc%25E3%2581%25A8pyspark%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E5%2588%2586%25E6%2595%25A3%25E5%2587%25A6%25E7%2590%2586%25E3%2581%25A7%25E8%25A1%258C%25E5%2588%2597%25E5%2588%2586%25E8%25A7%25A3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1CZ0pGbVRjSC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3YjRiY2I1MjMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/megeton/articles/af7816c9eb786f",
+          "author": "megeton",
+          "description": "ただの愚痴です\n\n exists と exist\n\n英語圏では exists がやたら使われる\n\nexists(user) のようなコードを見かけるたびに user は単数形なのにと疑問が沸く\n一方 Ruby の Pathname#exist? では単数形なので自然な感じはする\nそういや File.exists? は非推奨になり最近では単数形の File.exist? だけになったらしい\n翻訳すると exist は存在で exists は存在するらしい\n\n複数形の s じゃない？？？ (ますます混乱)\n\n\n\n\n starts_with と start_with\n\nPython → sta...",
+          "link": "https://zenn.dev/megeton/articles/af7816c9eb786f",
+          "publishedOn": "2022-12-10T15:34:27.000Z",
+          "wordCount": 359,
+          "title": "日本人を悩ます複数形問題",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--N4z0sBlI--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:megeton%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E6%2597%25A5%25E6%259C%25AC%25E4%25BA%25BA%25E3%2582%2592%25E6%2582%25A9%25E3%2581%25BE%25E3%2581%2599%25E8%25A4%2587%25E6%2595%25B0%25E5%25BD%25A2%25E5%2595%258F%25E9%25A1%258C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dVQkxBS2pIOE1wRGxsTFRiX01SWG9SVmZzckUyMVIzNEZPU3dCTWc9czgwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--N4z0sBlI--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:megeton%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E6%2597%25A5%25E6%259C%25AC%25E4%25BA%25BA%25E3%2582%2592%25E6%2582%25A9%25E3%2581%25BE%25E3%2581%2599%25E8%25A4%2587%25E6%2595%25B0%25E5%25BD%25A2%25E5%2595%258F%25E9%25A1%258C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dVQkxBS2pIOE1wRGxsTFRiX01SWG9SVmZzckUyMVIzNEZPU3dCTWc9czgwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/miwa_maroon/articles/370330c0593367",
+          "author": "miwa maroon",
+          "description": "ざっくりまとめ\n12/9(金)にMutek×Derivative主催でTouchDesigner Workshopが行われました。\nまさかの平日！！\nってことで、参加できなかった方も多いと思うので、\nこちらの記事で内容をまとめたいと思います！\n\n内容量がすごかったので、\n重要だな～\nとか\n知らなかった～\nとか\n使えるな～\nっていうものに絞って紹介します！\n\n 3つのセクション\n\n Session1 - Ben Voigt - SceneChanger\n\n SceneChangerってなんですの？\nシーンを変えるときに便利なTouchdesignerのパレットです\n例えば、\n複数人で違...",
+          "link": "https://zenn.dev/miwa_maroon/articles/370330c0593367",
+          "publishedOn": "2022-12-10T15:10:15.000Z",
+          "wordCount": 783,
+          "title": "Mutek 2022 TouchDesigner Workshopまとめ",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--iTJyWxTS--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:miwa%2520maroon%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Mutek%25202022%2520TouchDesigner%2520Workshop%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1neS1LM0c2WC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzg2MGNjNTZiYWYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--iTJyWxTS--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:miwa%2520maroon%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Mutek%25202022%2520TouchDesigner%2520Workshop%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1neS1LM0c2WC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzg2MGNjNTZiYWYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/hannah/articles/20221210_001",
+          "author": "はんな",
+          "description": "摘要\nABCD4完でした．D問題にめちゃくちゃ手間取り，まあまあの冷え込みでした．\n\n ABC281\nhttps://atcoder.jp/contests/abc281\n\n コンテスト情報\n\nコンテスト名: AtCoder Beginner Contest 281\n順位: 2140th / 9226\nパフォーマンス: 1054\nレーティング: 1267 → 1247 (-20)\n\n\n A - Count Down\n問題 / 解説\n\n A - 問題\nN以下の非負整数を大きい方から順に出力せよ．\n\n A - 解法\n特筆事項なし．\n\n A - ACコード\ndef main():\n    ...",
+          "link": "https://zenn.dev/hannah/articles/20221210_001",
+          "publishedOn": "2022-12-10T14:35:57.000Z",
+          "wordCount": 2378,
+          "title": "AtCoder Beginner Contest 281 レポート",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--chps3O69--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2582%2593%25E3%2581%25AA%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:AtCoder%2520Beginner%2520Contest%2520281%2520%25E3%2583%25AC%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FDTlBFdTloTUJWWC1RQmtLbGoxYm5mUXBFRWdndDVJYXdrWmdBRXVQR1o4TUlnPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--chps3O69--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2582%2593%25E3%2581%25AA%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:AtCoder%2520Beginner%2520Contest%2520281%2520%25E3%2583%25AC%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FDTlBFdTloTUJWWC1RQmtLbGoxYm5mUXBFRWdndDVJYXdrWmdBRXVQR1o4TUlnPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/sergicalsix/articles/931ca295c36281",
+          "author": "sergicalsix",
+          "description": "getattr,setattrを使う条件を考える\n\n条件X\nインスタンスのメンバー変数(下記の例ではparam_name)がプログラムの内部で変数の値のみ判明しているとき(x = 'param_name')を考える。\nつまり以下のような例である。\n\nclass Model:\n    def __init__(self,s = 'hoge'):\n        self.param_name = s\n\nx = 'param_name'\nmodel = Model()\n\n# このときプログラム上でmodelはparam_nameというメンバーを持っていることは知っているが\n# ↑変数xに...",
+          "link": "https://zenn.dev/sergicalsix/articles/931ca295c36281",
+          "publishedOn": "2022-12-10T11:48:45.000Z",
+          "wordCount": 277,
+          "title": "Pythonでclassを使う:getattrとsetattr",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--KZi2mrtl--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:sergicalsix%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25A7class%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%253Agetattr%25E3%2581%25A8setattr%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1EdlBtZko0Vi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhlODkyZDMzYjUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--KZi2mrtl--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:sergicalsix%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25A7class%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%253Agetattr%25E3%2581%25A8setattr%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1EdlBtZko0Vi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhlODkyZDMzYjUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/shimo_s3/articles/55e7da7fdee532",
+          "author": "shimo",
+          "description": "EventBridgeのスケジュールを更新するCLI/boto3を書いていると、更新するときにデフォルトから変更している全パラメータを再投入しなければならず、面倒です。\n以前、こういうヘルパースクリプトを書いたのですが、いまいち使い勝手が悪いです。自分でもあまり使っていないです。。\nhttps://zenn.dev/shimo_s3/articles/df70484bfe4e39\n小さめの関数にして使うようになったので共有します。1つのパラメータであればこれで十分かなと。\n\n Code\nスケジュール名と変えたいパラメータを受け取って更新する関数です。\n\n\nget_sheduleで現状のパ...",
+          "link": "https://zenn.dev/shimo_s3/articles/55e7da7fdee532",
+          "publishedOn": "2022-12-10T10:31:42.000Z",
+          "wordCount": 413,
+          "title": "[小ネタ]EventBridge Scheduleをboto3で更新するスニペット",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--usBknT4C--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shimo%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%255B%25E5%25B0%258F%25E3%2583%258D%25E3%2582%25BF%255DEventBridge%2520Schedule%25E3%2582%2592boto3%25E3%2581%25A7%25E6%259B%25B4%25E6%2596%25B0%25E3%2581%2599%25E3%2582%258B%25E3%2582%25B9%25E3%2583%258B%25E3%2583%259A%25E3%2583%2583%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1oeTBieUYtWS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAyMjI2YjdhZjguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--usBknT4C--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shimo%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%255B%25E5%25B0%258F%25E3%2583%258D%25E3%2582%25BF%255DEventBridge%2520Schedule%25E3%2582%2592boto3%25E3%2581%25A7%25E6%259B%25B4%25E6%2596%25B0%25E3%2581%2599%25E3%2582%258B%25E3%2582%25B9%25E3%2583%258B%25E3%2583%259A%25E3%2583%2583%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1oeTBieUYtWS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAyMjI2YjdhZjguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/shin1007/articles/70320401676fce",
+          "author": "shin1007",
+          "description": "エラー内容とそのコード\n\n例外が発生しました: SSLError\nHTTPSConnectionPool(host='msedgedriver.azureedge.net', port=443): Max retries exceeded with url: /LATEST_RELEASE_99_WINDOWS (Caused by SSLError(\"Can't connect to HTTPS URL because the SSL module is not available.\"))\n\npath = EdgeChromiumDriverManager().install()\n...",
+          "link": "https://zenn.dev/shin1007/articles/70320401676fce",
+          "publishedOn": "2022-12-10T08:04:24.000Z",
+          "wordCount": 180,
+          "title": "VisualStudio Code上から実行するとSSLエラー",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--hlibOHOY--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:VisualStudio%2520Code%25E4%25B8%258A%25E3%2581%258B%25E3%2582%2589%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E3%2581%25A8SSL%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--hlibOHOY--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:VisualStudio%2520Code%25E4%25B8%258A%25E3%2581%258B%25E3%2582%2589%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E3%2581%25A8SSL%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/shin1007/articles/17b2733066bdd5",
+          "author": "shin1007",
+          "description": "やりたいこと\nPDFに埋め込まれている文字がおかしいときになんとかしたかった。\n下みたいにしたい。連続で同じ文字が繰り返しのときに、一つにしたい。\n\nああああ　→　あ\nああいいううううえお　→　あいうえお\nABCABCABC　→　ABCABCABC\n唯唯諾諾　→　唯諾\n\n\n やったこと\n    # resultにはすでに何らかの文字列が入っているものとする\n    result = re.sub(r\"(.)\\1{1,}\", \"\\g<1>\", result)  # 繰り返し文字列をまとめる\n\n 他にも合わせたスニペット\n\nテキストの整形\nimport re\nfrom uni...",
+          "link": "https://zenn.dev/shin1007/articles/17b2733066bdd5",
+          "publishedOn": "2022-12-10T08:01:24.000Z",
+          "wordCount": 421,
+          "title": "Pythonの正規表現で繰り返しの文字列を1つにする。",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--Fo6MGgLM--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AE%25E6%25AD%25A3%25E8%25A6%258F%25E8%25A1%25A8%25E7%258F%25BE%25E3%2581%25A7%25E7%25B9%25B0%25E3%2582%258A%25E8%25BF%2594%25E3%2581%2597%25E3%2581%25AE%25E6%2596%2587%25E5%25AD%2597%25E5%2588%2597%25E3%2582%25921%25E3%2581%25A4%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Fo6MGgLM--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AE%25E6%25AD%25A3%25E8%25A6%258F%25E8%25A1%25A8%25E7%258F%25BE%25E3%2581%25A7%25E7%25B9%25B0%25E3%2582%258A%25E8%25BF%2594%25E3%2581%2597%25E3%2581%25AE%25E6%2596%2587%25E5%25AD%2597%25E5%2588%2597%25E3%2582%25921%25E3%2581%25A4%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/shin1007/articles/3ffc48223e47c7",
+          "author": "shin1007",
+          "description": "余白を設定できるらしいんですが、方法を探しても見当たりませんでした。\n公式に使い方の例が載っていなくて右往左往していましたが、解決です。\n以下の関数内の、ws.page_margins.left = 0.4から続くところです。\n設定はインチ単位なので気をつけてください。0.4インチで約1センチです。\nimport openpyxl\n\n\ndef new_workbook(path):\n    wb = openpyxl.Workbook()\n    ws = wb.active\n\n    # 余白\n    ws.page_margins.left = 0.4\n    ws.page_mar...",
+          "link": "https://zenn.dev/shin1007/articles/3ffc48223e47c7",
+          "publishedOn": "2022-12-10T07:59:30.000Z",
+          "wordCount": 238,
+          "title": "openpyxlで余白を設定する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--1uvwSbKT--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:openpyxl%25E3%2581%25A7%25E4%25BD%2599%25E7%2599%25BD%25E3%2582%2592%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--1uvwSbKT--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:openpyxl%25E3%2581%25A7%25E4%25BD%2599%25E7%2599%25BD%25E3%2582%2592%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/shin1007/articles/9fb3c56c69c96b",
+          "author": "shin1007",
+          "description": "動的なウェブサイトなどで、タグを追いかけられないときにどうぞ。\nheliumを使うともっと楽なんですが、Anacondaで提供されていないようなので、自作してみました。\n最後のactions.perform()を書き忘れて、「動かない。指定するタグが悪いのか？」って結構悩みました。\ndef click_by_position(driver, x, y) -> None:\n    from selenium.webdriver.common.action_chains import ActionChains\n    actions = ActionChains(driver)\n\n  ...",
+          "link": "https://zenn.dev/shin1007/articles/9fb3c56c69c96b",
+          "publishedOn": "2022-12-10T07:57:47.000Z",
+          "wordCount": 242,
+          "title": "Seleniumで指定座標をクリックさせる",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--ZrA-EK0I--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Selenium%25E3%2581%25A7%25E6%258C%2587%25E5%25AE%259A%25E5%25BA%25A7%25E6%25A8%2599%25E3%2582%2592%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2583%25E3%2582%25AF%25E3%2581%2595%25E3%2581%259B%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--ZrA-EK0I--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Selenium%25E3%2581%25A7%25E6%258C%2587%25E5%25AE%259A%25E5%25BA%25A7%25E6%25A8%2599%25E3%2582%2592%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2583%25E3%2582%25AF%25E3%2581%2595%25E3%2581%259B%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/shin1007/articles/24d7cd9d0c44ee",
+          "author": "shin1007",
+          "description": "良く忘れるのでジャンルごとに分けたよ、というだけのもの。\n公式はこちら\nhttps://docs.python.org/ja/3/library/time.html#time.strftime\n\n\n\nジャンル\n表現\n内容\n\n\n\n\n年\n%y\n上 2 桁なしの西暦年を表す 10 進数 [00,99]。\n\n\n年\n%Y\n上 2 桁付きの西暦年を表す 10 進数。\n\n\n月\n%b\nロケールにおける省略形の月名。\n\n\n月\n%B\nロケールにおける省略なしの月名。\n\n\n月\n%m\n月を表す 10 進数 [01,12]。\n\n\n日\n%j\n年の初めから何日目かを表す 10 進数 [001,366]。\n\n\n日\n%d...",
+          "link": "https://zenn.dev/shin1007/articles/24d7cd9d0c44ee",
+          "publishedOn": "2022-12-10T07:56:14.000Z",
+          "wordCount": 270,
+          "title": "strftime / strptimeのフォーマット",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--MqFjJGAt--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:strftime%2520%252F%2520strptime%25E3%2581%25AE%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%259E%25E3%2583%2583%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--MqFjJGAt--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:strftime%2520%252F%2520strptime%25E3%2581%25AE%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%259E%25E3%2583%2583%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/shin1007/articles/d9e490e73867d7",
+          "author": "shin1007",
+          "description": "やりたいこと\n英語用のフォントと日本語用のフォントを分ける。\n以下のページとほぼ同じことしてます。\n本家にプルリクエストが入っているみたいですが、テストやドキュメンテーションの不足などでリジェクトされているみたいです。\nhttps://github.com/python-openxml/python-docx/pull/329/commits/097586cab016c10cfaefb3cf283355f74889a27d\n\n 使用例\n\nexample.py\nparagraph.runs[0].font.name = \"Arial\"\nparagraph.runs[0].font.na...",
+          "link": "https://zenn.dev/shin1007/articles/d9e490e73867d7",
+          "publishedOn": "2022-12-10T07:53:54.000Z",
+          "wordCount": 648,
+          "title": "python-docxで日本語フォント対応",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--03b8okD1--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:python-docx%25E3%2581%25A7%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25B3%25E3%2583%2588%25E5%25AF%25BE%25E5%25BF%259C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--03b8okD1--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:python-docx%25E3%2581%25A7%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25B3%25E3%2583%2588%25E5%25AF%25BE%25E5%25BF%259C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/shin1007/articles/39f8b3c0c257df",
+          "author": "shin1007",
+          "description": "PyInstallerを利用した際、subprocess関連が入っているときにうまく動作しないことがあります。\nエラーメッセージすら出ないので、なかなかの困りものです。\nこれを回避するための策を提示します。\n\n 以下の関数を定義\ndef subprocess_args(include_stdout=True):\n    # The following is true only on Windows.\n    if hasattr(subprocess, 'STARTUPINFO'):\n        info = subprocess.STARTUPINFO()\n        info...",
+          "link": "https://zenn.dev/shin1007/articles/39f8b3c0c257df",
+          "publishedOn": "2022-12-10T07:52:10.000Z",
+          "wordCount": 472,
+          "title": "subprocess + pyinstaller --noconsole",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--OlL5lN7M--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:subprocess%2520%25E2%2581%25BA%2520pyinstaller%2520--noconsole%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--OlL5lN7M--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:subprocess%2520%25E2%2581%25BA%2520pyinstaller%2520--noconsole%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/shin1007/articles/2476f5af6c51c8",
+          "author": "shin1007",
+          "description": "主に以下のサイトを参考にさせていただきました。\nhttps://techacademy.jp/magazine/34387\nhttps://qiita.com/Chanmoro/items/db51658b073acddea4ac\nhttps://gammasoft.jp/blog/difference-find-and-select-in-beautiful-soup-of-python/\nhttps://ai-inter1.com/beautifulsoup_1/#st-toc-h-29\n\n インポート\nfrom bs4 import BeautifulSoup\n\n soupにHTM...",
+          "link": "https://zenn.dev/shin1007/articles/2476f5af6c51c8",
+          "publishedOn": "2022-12-10T07:50:57.000Z",
+          "wordCount": 615,
+          "title": "BeautifulSoupで特定の要素を選択するチートシート",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--6lx7oguy--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:BeautifulSoup%25E3%2581%25A7%25E7%2589%25B9%25E5%25AE%259A%25E3%2581%25AE%25E8%25A6%2581%25E7%25B4%25A0%25E3%2582%2592%25E9%2581%25B8%25E6%258A%259E%25E3%2581%2599%25E3%2582%258B%25E3%2583%2581%25E3%2583%25BC%25E3%2583%2588%25E3%2582%25B7%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--6lx7oguy--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:BeautifulSoup%25E3%2581%25A7%25E7%2589%25B9%25E5%25AE%259A%25E3%2581%25AE%25E8%25A6%2581%25E7%25B4%25A0%25E3%2582%2592%25E9%2581%25B8%25E6%258A%259E%25E3%2581%2599%25E3%2582%258B%25E3%2583%2581%25E3%2583%25BC%25E3%2583%2588%25E3%2582%25B7%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/shin1007/articles/f06729df14fb9f",
+          "author": "shin1007",
+          "description": "以下リンク（本家）のうち、使いそうなところだけまとめました。\n詳しくは本家を見てください。\nhttps://pyautogui.readthedocs.io/en/latest/quickstart.html\npip install pyautogui Pillow==8.3でインストール。(最新のPillow==8.3.1だとエラーすら吐かずに落ちる)\nimport pyautoguiでインポート。\n下の関数を呼び出す際は手前にpyautogui.を付けましょう。\n\n 設定\n\n\n\n動作\nコード\n\n\n\n\nすべて1秒おきにする\nPAUSE = 1.0\n\n\n\n\n いろいろ取得\n\n\n\n動作\nコ...",
+          "link": "https://zenn.dev/shin1007/articles/f06729df14fb9f",
+          "publishedOn": "2022-12-10T07:49:21.000Z",
+          "wordCount": 1567,
+          "title": "PyAutoGUIのチートシート",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--sEYQDnSs--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:PyAutoGUI%25E3%2581%25AE%25E3%2583%2581%25E3%2583%25BC%25E3%2583%2588%25E3%2582%25B7%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--sEYQDnSs--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:PyAutoGUI%25E3%2581%25AE%25E3%2583%2581%25E3%2583%25BC%25E3%2583%2588%25E3%2582%25B7%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/shin1007/articles/69c3164993955d",
+          "author": "shin1007",
+          "description": "動機\n以下のサイトを見ていて、\n「どう見ても3/8じゃん？P(A)も8/17じゃん？」\nってなって納得行かなかった。\nなので、実際にコードを書いて実験してみて、そもそもの考え方が間違ってたんだなーと理解した。\nhttps://bellcurve.jp/statistics/course/6444.html\n\n 第1の実験（袋３つとも、確率が同じ）\n\n 条件\nわかりやすくするため、ボールの数を変えます。\nたくさん試行回数を増やせば、まぁまぁいい感じの割合になるでしょう(コードでは1200万回試してます)\n\n\n\n袋の名前\n白ボールの数\n赤ボールの数\nこのバッグが選ばれている状態で白ボール...",
+          "link": "https://zenn.dev/shin1007/articles/69c3164993955d",
+          "publishedOn": "2022-12-10T07:47:56.000Z",
+          "wordCount": 1613,
+          "title": "ベイズの定理に納得がいかなかったからPythonで試してみたら納得がいったって話。",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--wsNbeKHN--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2583%2599%25E3%2582%25A4%25E3%2582%25BA%25E3%2581%25AE%25E5%25AE%259A%25E7%2590%2586%25E3%2581%25AB%25E7%25B4%258D%25E5%25BE%2597%25E3%2581%258C%25E3%2581%2584%25E3%2581%258B%25E3%2581%25AA%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E3%2581%258B%25E3%2582%2589Python%25E3%2581%25A7%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2582%2589%25E7%25B4%258D%25E5%25BE%2597%25E3%2581%258C%25E3%2581%2584%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25A3%25E3%2581%25A6%25E8%25A9%25B1%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--wsNbeKHN--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2583%2599%25E3%2582%25A4%25E3%2582%25BA%25E3%2581%25AE%25E5%25AE%259A%25E7%2590%2586%25E3%2581%25AB%25E7%25B4%258D%25E5%25BE%2597%25E3%2581%258C%25E3%2581%2584%25E3%2581%258B%25E3%2581%25AA%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E3%2581%258B%25E3%2582%2589Python%25E3%2581%25A7%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2582%2589%25E7%25B4%258D%25E5%25BE%2597%25E3%2581%258C%25E3%2581%2584%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25A3%25E3%2581%25A6%25E8%25A9%25B1%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/shin1007/articles/b023c50a7d7865",
+          "author": "shin1007",
+          "description": "PyPDF2だと読み書きのときにエラーをはかれる。\nことがある。うちの扱ってるPDFだと結構あるので問題になった。\n (<class 'PyPDF2.utils.PdfReadError'>, PdfReadError('Illeagal character in Name Object',) <traceback object at 0x0123456789ABCDEF\n\n PyMuPDFなら大丈夫！問題ない！\n日本語だとPyPDF2の資料がそこそこあるんですが、PyMuPDFは英語ばっかり。\nなので自分が使ったメソッドとか書いていきます。\nWand+ImageM...",
+          "link": "https://zenn.dev/shin1007/articles/b023c50a7d7865",
+          "publishedOn": "2022-12-10T07:46:13.000Z",
+          "wordCount": 492,
+          "title": "PyPDF2?いやPyMuPDFでしょ",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--vz6x8r0j--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:PyPDF2%253F%25E3%2581%2584%25E3%2582%2584PyMuPDF%25E3%2581%25A7%25E3%2581%2597%25E3%2582%2587%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--vz6x8r0j--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:PyPDF2%253F%25E3%2581%2584%25E3%2582%2584PyMuPDF%25E3%2581%25A7%25E3%2581%2597%25E3%2582%2587%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/shin1007/articles/a0f03992f928a0",
+          "author": "shin1007",
+          "description": "エラー内容とコード\n\n エラー内容\nsqlite3.OperationalError: unable to open database file\n\n コード\nhttps://readthedocs.org/projects/flask-sqlalchemy/downloads/pdf/2.x/\nに存在する\n\napp.py\nfrom flask import Flask\nfrom flask_sqlalchemy import SQLAlchemy\n\napp = Flask(__name__)\napp.config['SQLALCHEMY_DATABASE_URI'] = 'sqlit...",
+          "link": "https://zenn.dev/shin1007/articles/a0f03992f928a0",
+          "publishedOn": "2022-12-10T07:37:52.000Z",
+          "wordCount": 268,
+          "title": "【解決】Flask_SQLAlchemyでのOperationalError",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--hiXmWZJW--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E8%25A7%25A3%25E6%25B1%25BA%25E3%2580%2591Flask_SQLAlchemy%25E3%2581%25A7%25E3%2581%25AEOperationalError%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--hiXmWZJW--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E8%25A7%25A3%25E6%25B1%25BA%25E3%2580%2591Flask_SQLAlchemy%25E3%2581%25A7%25E3%2581%25AEOperationalError%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/shin1007/articles/6261d50fd46a66",
+          "author": "shin1007",
+          "description": "エラー内容\n\nFailed to start the Kernel. \nc:\\miniconda3\\envs\\test\\lib\\site-packages\\traitlets\\traitlets.py:2395: FutureWarning: Supporting extra quotes around strings is deprecated in traitlets 5.0. You can use 'hmac-sha256' instead of '\"hmac-sha256\"' if you require traitlets >=5.\n  FutureWarning,...",
+          "link": "https://zenn.dev/shin1007/articles/6261d50fd46a66",
+          "publishedOn": "2022-12-10T07:36:18.000Z",
+          "wordCount": 232,
+          "title": "【解決】VSCodeでJupyter Notebook使おうとしたらKernelを起動できない",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--WV2trZbM--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590%25E8%25A7%25A3%25E6%25B1%25BA%25E3%2580%2591VSCode%25E3%2581%25A7Jupyter%2520Notebook%25E4%25BD%25BF%25E3%2581%258A%25E3%2581%2586%25E3%2581%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2582%2589Kernel%25E3%2582%2592%25E8%25B5%25B7%25E5%258B%2595%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25AA%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--WV2trZbM--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590%25E8%25A7%25A3%25E6%25B1%25BA%25E3%2580%2591VSCode%25E3%2581%25A7Jupyter%2520Notebook%25E4%25BD%25BF%25E3%2581%258A%25E3%2581%2586%25E3%2581%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2582%2589Kernel%25E3%2582%2592%25E8%25B5%25B7%25E5%258B%2595%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25AA%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
           "id": "https://zenn.dev/chelo/articles/e95bdce0c60a07",
           "author": "チェロ",
           "description": "https://atcoder.jp/contests/arc107/tasks/arc107_b\n\n 解説\nhttps://atcoder.jp/contests/arc107/editorial/262\n下の解説の解説で理解した上でも、茶色500レベルのおれには理解できないぞ\n\n よく分かった解説を更に噛み砕く\nhttps://drken1215.hatenablog.com/entry/2020/10/31/231300\n毎度お世話になっております\n方針は理解したのだけれども、vとか記号が多いと理解できない箇所も多いぞ\n腹落ちするまで噛み砕くぞ!\n\n 問題文の変形\n\n\na+b-c-...",
@@ -2895,51 +3195,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--M5Od34_R--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:calcifer%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:macOS%2520%25E3%2581%25AB%2520bpy%2520%25E3%2582%2592%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1SWnhXTXFySC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I3MmQ1YzM4YzkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/sugyan/articles/5f45e4808ffc95",
-          "author": "sugyan",
-          "description": "きっかけ\n最近 @yanecoder さんが AtCoder の問題を解きまくっていて、さらにshortest記録更新にも熱心に取り組んでいるので、自分も以前に多少は嗜んでいたしと対抗心を燃やして挑んでみたところ、多くの学びがあったので記録として残しておく。\n※使用言語はPython3です\n\n Code Golf とは\nとにかく短いコード(byte数)で目的を達成するプログラムを書くこと。\nhttps://ja.wikipedia.org/wiki/コードゴルフ\nAtCoder では AC をとれれば目的達成といえるし、言語別にすべての提出のコード長も表示されるので分かりやすい。\n\n...",
-          "link": "https://zenn.dev/sugyan/articles/5f45e4808ffc95",
-          "publishedOn": "2022-11-11T09:16:00.000Z",
-          "wordCount": 3540,
-          "title": "AtCoderのとある問題でCode Golfに挑戦した記録 (Python3)",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--fup8iLUX--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:sugyan%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:AtCoder%25E3%2581%25AE%25E3%2581%25A8%25E3%2581%2582%25E3%2582%258B%25E5%2595%258F%25E9%25A1%258C%25E3%2581%25A7Code%2520Golf%25E3%2581%25AB%25E6%258C%2591%25E6%2588%25A6%25E3%2581%2597%25E3%2581%259F%25E8%25A8%2598%25E9%258C%25B2%2520%2528Python3%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hsYm9tX200WEFYRkxPQUM3a3pmaW5zZG81NG9RZU5PMUgtV2hQbjNJPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--fup8iLUX--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:sugyan%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:AtCoder%25E3%2581%25AE%25E3%2581%25A8%25E3%2581%2582%25E3%2582%258B%25E5%2595%258F%25E9%25A1%258C%25E3%2581%25A7Code%2520Golf%25E3%2581%25AB%25E6%258C%2591%25E6%2588%25A6%25E3%2581%2597%25E3%2581%259F%25E8%25A8%2598%25E9%258C%25B2%2520%2528Python3%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hsYm9tX200WEFYRkxPQUM3a3pmaW5zZG81NG9RZU5PMUgtV2hQbjNJPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/siganai/articles/20221106_python_csv_input",
-          "author": "SiganAI",
-          "description": "CSVファイルに保存されたデータを読み込む方法を備忘録としてまとめる．\n使用言語はPython．\n本記事中で例示するために使用したコードとデータは，ここからダウンロード可能．\n\n 方法１：pandasの使用\n個人的に一番使っている方法．\npandasのread_csv関数を使用．\nCSVに保存されているデータをデータフレーム（表形式）で読み込むことが可能．\n引数filepath_or_bufferにCSVファイルのパス（本記事では変数path）を渡す．\n\n インストール方法\n\nterminal\npip install pandas\n\n\n 実際の使用例\n\npandas_test.py\nim...",
-          "link": "https://zenn.dev/siganai/articles/20221106_python_csv_input",
-          "publishedOn": "2022-11-11T09:02:59.000Z",
-          "wordCount": 1412,
-          "title": "【Python】CSVファイルの読み込みについて【備忘録】",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--DTptF9YI--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:SiganAI%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590Python%25E3%2580%2591CSV%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AE%25E8%25AA%25AD%25E3%2581%25BF%25E8%25BE%25BC%25E3%2581%25BF%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2580%2590%25E5%2582%2599%25E5%25BF%2598%25E9%258C%25B2%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkMycHdUMUEzOWY2TzVOSGd4T3FHTUpqNXZNUHU4RHpwRThBQXU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--DTptF9YI--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:SiganAI%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590Python%25E3%2580%2591CSV%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AE%25E8%25AA%25AD%25E3%2581%25BF%25E8%25BE%25BC%25E3%2581%25BF%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2580%2590%25E5%2582%2599%25E5%25BF%2598%25E9%258C%25B2%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkMycHdUMUEzOWY2TzVOSGd4T3FHTUpqNXZNUHU4RHpwRThBQXU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/tokoroteen/articles/c58b4a16269bad",
-          "author": "Tokoroteen",
-          "description": "1. 概要\nhttps://zenn.dev/tokoroteen/articles/113ed90c5eefb6\nこちらの続き\n普段MacでAnacondaを使っているので、ラズパイでもcondaを使えるようにしようと思いましたが、Raspberry Pi 4でMinicondaは上手く動かないみたいです。\n参考：https://qiita.com/hanaata/items/39ada844c7c292d2fef1#python\nラズパイ用にberrycondaというものもあるようですが、こちらも\n\nThis project is no longer active\nhttps:/...",
-          "link": "https://zenn.dev/tokoroteen/articles/c58b4a16269bad",
-          "publishedOn": "2022-11-10T14:48:34.000Z",
-          "wordCount": 234,
-          "title": "Raspberry Pi 4 model Bで仮想環境をつくる",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--e40eoBLY--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Tokoroteen%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Raspberry%2520Pi%25204%2520model%2520B%25E3%2581%25A7%25E4%25BB%25AE%25E6%2583%25B3%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E3%2581%25A4%25E3%2581%258F%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1VS1pkSGdFYS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk3NzNmMDYyZTguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--e40eoBLY--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Tokoroteen%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Raspberry%2520Pi%25204%2520model%2520B%25E3%2581%25A7%25E4%25BB%25AE%25E6%2583%25B3%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E3%2581%25A4%25E3%2581%258F%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1VS1pkSGdFYS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk3NzNmMDYyZTguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
         }
       ]
     }

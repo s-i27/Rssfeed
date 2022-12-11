@@ -2,10 +2,511 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-12-10T01:36:16.007Z</updated>
+    <updated>2022-12-11T01:47:38.156Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[仮想通貨のbotを作りたいが、みんなどう書いてるの？]]></title>
+        <id>https://zenn.dev/ttrsq/articles/1280cb7ac7d1b4</id>
+        <link href="https://zenn.dev/ttrsq/articles/1280cb7ac7d1b4"/>
+        <updated>2022-12-11T01:40:37.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは
+仮想通貨botter Advent Calendar 2022 の11日目の記事のつもりで書いています。
+これからBot作りたいけど、みんなはどう設計しているのだろうという人向け。
+loop頻度が1分以上のMLbotを前提としてますが、高頻度でも基本は変わらないと考えています。
+クラスの責務の範囲や、起動周りの機構などに悩んでいたら参考になれば、、
+
+ 結論
+
+ メインループ
+下記のノリで各クラスの責務を分離をすると苦しくなりにくいです。
+while True:
+	# 新規データ取得
+	data = stream.get_marcket_data(target_star...]]></summary>
+        <author>
+            <name>とっとり（砂丘）</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dataprocとpysparkを使って分散処理で行列分解]]></title>
+        <id>https://zenn.dev/sugasuga/articles/82d9ad7933e0f2</id>
+        <link href="https://zenn.dev/sugasuga/articles/82d9ad7933e0f2"/>
+        <updated>2022-12-10T17:28:32.000Z</updated>
+        <summary type="html"><![CDATA[やってみること
+
+GCP上でDataprocクラスタの作成
+movielensのデータを使ってmovieIdごとのベクトルをGCSに吐き出すスクリプトを作成
+gcloudコマンドを使ってジョブを送信して処理を行う
+
+
+ Dataprocクラスタの準備
+terraformで
+
+dataprocクラスタを作成
+dataprocクラスタが使うGCSバケット
+
+の作成。お試しなのでcloud shellなどでterraform initとterraform applyをした。
+resource "google_storage_bucket" "dataproc_bucket" {
+  # D...]]></summary>
+        <author>
+            <name>sugasuga</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[日本人を悩ます複数形問題]]></title>
+        <id>https://zenn.dev/megeton/articles/af7816c9eb786f</id>
+        <link href="https://zenn.dev/megeton/articles/af7816c9eb786f"/>
+        <updated>2022-12-10T15:34:27.000Z</updated>
+        <summary type="html"><![CDATA[ただの愚痴です
+
+ exists と exist
+
+英語圏では exists がやたら使われる
+
+exists(user) のようなコードを見かけるたびに user は単数形なのにと疑問が沸く
+一方 Ruby の Pathname#exist? では単数形なので自然な感じはする
+そういや File.exists? は非推奨になり最近では単数形の File.exist? だけになったらしい
+翻訳すると exist は存在で exists は存在するらしい
+
+複数形の s じゃない？？？ (ますます混乱)
+
+
+
+
+ starts_with と start_with
+
+Python → sta...]]></summary>
+        <author>
+            <name>megeton</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Mutek 2022 TouchDesigner Workshopまとめ]]></title>
+        <id>https://zenn.dev/miwa_maroon/articles/370330c0593367</id>
+        <link href="https://zenn.dev/miwa_maroon/articles/370330c0593367"/>
+        <updated>2022-12-10T15:10:15.000Z</updated>
+        <summary type="html"><![CDATA[ざっくりまとめ
+12/9(金)にMutek×Derivative主催でTouchDesigner Workshopが行われました。
+まさかの平日！！
+ってことで、参加できなかった方も多いと思うので、
+こちらの記事で内容をまとめたいと思います！
+
+内容量がすごかったので、
+重要だな～
+とか
+知らなかった～
+とか
+使えるな～
+っていうものに絞って紹介します！
+
+ 3つのセクション
+
+ Session1 - Ben Voigt - SceneChanger
+
+ SceneChangerってなんですの？
+シーンを変えるときに便利なTouchdesignerのパレットです
+例えば、
+複数人で違...]]></summary>
+        <author>
+            <name>miwa maroon</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AtCoder Beginner Contest 281 レポート]]></title>
+        <id>https://zenn.dev/hannah/articles/20221210_001</id>
+        <link href="https://zenn.dev/hannah/articles/20221210_001"/>
+        <updated>2022-12-10T14:35:57.000Z</updated>
+        <summary type="html"><![CDATA[摘要
+ABCD4完でした．D問題にめちゃくちゃ手間取り，まあまあの冷え込みでした．
+
+ ABC281
+https://atcoder.jp/contests/abc281
+
+ コンテスト情報
+
+コンテスト名: AtCoder Beginner Contest 281
+順位: 2140th / 9226
+パフォーマンス: 1054
+レーティング: 1267 → 1247 (-20)
+
+
+ A - Count Down
+問題 / 解説
+
+ A - 問題
+N以下の非負整数を大きい方から順に出力せよ．
+
+ A - 解法
+特筆事項なし．
+
+ A - ACコード
+def main():
+    ...]]></summary>
+        <author>
+            <name>はんな</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonでclassを使う:getattrとsetattr]]></title>
+        <id>https://zenn.dev/sergicalsix/articles/931ca295c36281</id>
+        <link href="https://zenn.dev/sergicalsix/articles/931ca295c36281"/>
+        <updated>2022-12-10T11:48:45.000Z</updated>
+        <summary type="html"><![CDATA[getattr,setattrを使う条件を考える
+
+条件X
+インスタンスのメンバー変数(下記の例ではparam_name)がプログラムの内部で変数の値のみ判明しているとき(x = 'param_name')を考える。
+つまり以下のような例である。
+
+class Model:
+    def __init__(self,s = 'hoge'):
+        self.param_name = s
+
+x = 'param_name'
+model = Model()
+
+# このときプログラム上でmodelはparam_nameというメンバーを持っていることは知っているが
+# ↑変数xに...]]></summary>
+        <author>
+            <name>sergicalsix</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[小ネタ]EventBridge Scheduleをboto3で更新するスニペット]]></title>
+        <id>https://zenn.dev/shimo_s3/articles/55e7da7fdee532</id>
+        <link href="https://zenn.dev/shimo_s3/articles/55e7da7fdee532"/>
+        <updated>2022-12-10T10:31:42.000Z</updated>
+        <summary type="html"><![CDATA[EventBridgeのスケジュールを更新するCLI/boto3を書いていると、更新するときにデフォルトから変更している全パラメータを再投入しなければならず、面倒です。
+以前、こういうヘルパースクリプトを書いたのですが、いまいち使い勝手が悪いです。自分でもあまり使っていないです。。
+https://zenn.dev/shimo_s3/articles/df70484bfe4e39
+小さめの関数にして使うようになったので共有します。1つのパラメータであればこれで十分かなと。
+
+ Code
+スケジュール名と変えたいパラメータを受け取って更新する関数です。
+
+
+get_sheduleで現状のパ...]]></summary>
+        <author>
+            <name>shimo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VisualStudio Code上から実行するとSSLエラー]]></title>
+        <id>https://zenn.dev/shin1007/articles/70320401676fce</id>
+        <link href="https://zenn.dev/shin1007/articles/70320401676fce"/>
+        <updated>2022-12-10T08:04:24.000Z</updated>
+        <summary type="html"><![CDATA[エラー内容とそのコード
+
+例外が発生しました: SSLError
+HTTPSConnectionPool(host='msedgedriver.azureedge.net', port=443): Max retries exceeded with url: /LATEST_RELEASE_99_WINDOWS (Caused by SSLError("Can't connect to HTTPS URL because the SSL module is not available."))
+
+path = EdgeChromiumDriverManager().install()
+...]]></summary>
+        <author>
+            <name>shin1007</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonの正規表現で繰り返しの文字列を1つにする。]]></title>
+        <id>https://zenn.dev/shin1007/articles/17b2733066bdd5</id>
+        <link href="https://zenn.dev/shin1007/articles/17b2733066bdd5"/>
+        <updated>2022-12-10T08:01:24.000Z</updated>
+        <summary type="html"><![CDATA[やりたいこと
+PDFに埋め込まれている文字がおかしいときになんとかしたかった。
+下みたいにしたい。連続で同じ文字が繰り返しのときに、一つにしたい。
+
+ああああ　→　あ
+ああいいううううえお　→　あいうえお
+ABCABCABC　→　ABCABCABC
+唯唯諾諾　→　唯諾
+
+
+ やったこと
+    # resultにはすでに何らかの文字列が入っているものとする
+    result = re.sub(r"(.)\1{1,}", "\g<1>", result)  # 繰り返し文字列をまとめる
+
+ 他にも合わせたスニペット
+
+テキストの整形
+import re
+from uni...]]></summary>
+        <author>
+            <name>shin1007</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[openpyxlで余白を設定する]]></title>
+        <id>https://zenn.dev/shin1007/articles/3ffc48223e47c7</id>
+        <link href="https://zenn.dev/shin1007/articles/3ffc48223e47c7"/>
+        <updated>2022-12-10T07:59:30.000Z</updated>
+        <summary type="html"><![CDATA[余白を設定できるらしいんですが、方法を探しても見当たりませんでした。
+公式に使い方の例が載っていなくて右往左往していましたが、解決です。
+以下の関数内の、ws.page_margins.left = 0.4から続くところです。
+設定はインチ単位なので気をつけてください。0.4インチで約1センチです。
+import openpyxl
+
+
+def new_workbook(path):
+    wb = openpyxl.Workbook()
+    ws = wb.active
+
+    # 余白
+    ws.page_margins.left = 0.4
+    ws.page_mar...]]></summary>
+        <author>
+            <name>shin1007</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Seleniumで指定座標をクリックさせる]]></title>
+        <id>https://zenn.dev/shin1007/articles/9fb3c56c69c96b</id>
+        <link href="https://zenn.dev/shin1007/articles/9fb3c56c69c96b"/>
+        <updated>2022-12-10T07:57:47.000Z</updated>
+        <summary type="html"><![CDATA[動的なウェブサイトなどで、タグを追いかけられないときにどうぞ。
+heliumを使うともっと楽なんですが、Anacondaで提供されていないようなので、自作してみました。
+最後のactions.perform()を書き忘れて、「動かない。指定するタグが悪いのか？」って結構悩みました。
+def click_by_position(driver, x, y) -> None:
+    from selenium.webdriver.common.action_chains import ActionChains
+    actions = ActionChains(driver)
+
+  ...]]></summary>
+        <author>
+            <name>shin1007</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[strftime / strptimeのフォーマット]]></title>
+        <id>https://zenn.dev/shin1007/articles/24d7cd9d0c44ee</id>
+        <link href="https://zenn.dev/shin1007/articles/24d7cd9d0c44ee"/>
+        <updated>2022-12-10T07:56:14.000Z</updated>
+        <summary type="html"><![CDATA[良く忘れるのでジャンルごとに分けたよ、というだけのもの。
+公式はこちら
+https://docs.python.org/ja/3/library/time.html#time.strftime
+
+
+
+ジャンル
+表現
+内容
+
+
+
+
+年
+%y
+上 2 桁なしの西暦年を表す 10 進数 [00,99]。
+
+
+年
+%Y
+上 2 桁付きの西暦年を表す 10 進数。
+
+
+月
+%b
+ロケールにおける省略形の月名。
+
+
+月
+%B
+ロケールにおける省略なしの月名。
+
+
+月
+%m
+月を表す 10 進数 [01,12]。
+
+
+日
+%j
+年の初めから何日目かを表す 10 進数 [001,366]。
+
+
+日
+%d...]]></summary>
+        <author>
+            <name>shin1007</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python-docxで日本語フォント対応]]></title>
+        <id>https://zenn.dev/shin1007/articles/d9e490e73867d7</id>
+        <link href="https://zenn.dev/shin1007/articles/d9e490e73867d7"/>
+        <updated>2022-12-10T07:53:54.000Z</updated>
+        <summary type="html"><![CDATA[やりたいこと
+英語用のフォントと日本語用のフォントを分ける。
+以下のページとほぼ同じことしてます。
+本家にプルリクエストが入っているみたいですが、テストやドキュメンテーションの不足などでリジェクトされているみたいです。
+https://github.com/python-openxml/python-docx/pull/329/commits/097586cab016c10cfaefb3cf283355f74889a27d
+
+ 使用例
+
+example.py
+paragraph.runs[0].font.name = "Arial"
+paragraph.runs[0].font.na...]]></summary>
+        <author>
+            <name>shin1007</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[subprocess + pyinstaller --noconsole]]></title>
+        <id>https://zenn.dev/shin1007/articles/39f8b3c0c257df</id>
+        <link href="https://zenn.dev/shin1007/articles/39f8b3c0c257df"/>
+        <updated>2022-12-10T07:52:10.000Z</updated>
+        <summary type="html"><![CDATA[PyInstallerを利用した際、subprocess関連が入っているときにうまく動作しないことがあります。
+エラーメッセージすら出ないので、なかなかの困りものです。
+これを回避するための策を提示します。
+
+ 以下の関数を定義
+def subprocess_args(include_stdout=True):
+    # The following is true only on Windows.
+    if hasattr(subprocess, 'STARTUPINFO'):
+        info = subprocess.STARTUPINFO()
+        info...]]></summary>
+        <author>
+            <name>shin1007</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[BeautifulSoupで特定の要素を選択するチートシート]]></title>
+        <id>https://zenn.dev/shin1007/articles/2476f5af6c51c8</id>
+        <link href="https://zenn.dev/shin1007/articles/2476f5af6c51c8"/>
+        <updated>2022-12-10T07:50:57.000Z</updated>
+        <summary type="html"><![CDATA[主に以下のサイトを参考にさせていただきました。
+https://techacademy.jp/magazine/34387
+https://qiita.com/Chanmoro/items/db51658b073acddea4ac
+https://gammasoft.jp/blog/difference-find-and-select-in-beautiful-soup-of-python/
+https://ai-inter1.com/beautifulsoup_1/#st-toc-h-29
+
+ インポート
+from bs4 import BeautifulSoup
+
+ soupにHTM...]]></summary>
+        <author>
+            <name>shin1007</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PyAutoGUIのチートシート]]></title>
+        <id>https://zenn.dev/shin1007/articles/f06729df14fb9f</id>
+        <link href="https://zenn.dev/shin1007/articles/f06729df14fb9f"/>
+        <updated>2022-12-10T07:49:21.000Z</updated>
+        <summary type="html"><![CDATA[以下リンク（本家）のうち、使いそうなところだけまとめました。
+詳しくは本家を見てください。
+https://pyautogui.readthedocs.io/en/latest/quickstart.html
+pip install pyautogui Pillow==8.3でインストール。(最新のPillow==8.3.1だとエラーすら吐かずに落ちる)
+import pyautoguiでインポート。
+下の関数を呼び出す際は手前にpyautogui.を付けましょう。
+
+ 設定
+
+
+
+動作
+コード
+
+
+
+
+すべて1秒おきにする
+PAUSE = 1.0
+
+
+
+
+ いろいろ取得
+
+
+
+動作
+コ...]]></summary>
+        <author>
+            <name>shin1007</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ベイズの定理に納得がいかなかったからPythonで試してみたら納得がいったって話。]]></title>
+        <id>https://zenn.dev/shin1007/articles/69c3164993955d</id>
+        <link href="https://zenn.dev/shin1007/articles/69c3164993955d"/>
+        <updated>2022-12-10T07:47:56.000Z</updated>
+        <summary type="html"><![CDATA[動機
+以下のサイトを見ていて、
+「どう見ても3/8じゃん？P(A)も8/17じゃん？」
+ってなって納得行かなかった。
+なので、実際にコードを書いて実験してみて、そもそもの考え方が間違ってたんだなーと理解した。
+https://bellcurve.jp/statistics/course/6444.html
+
+ 第1の実験（袋３つとも、確率が同じ）
+
+ 条件
+わかりやすくするため、ボールの数を変えます。
+たくさん試行回数を増やせば、まぁまぁいい感じの割合になるでしょう(コードでは1200万回試してます)
+
+
+
+袋の名前
+白ボールの数
+赤ボールの数
+このバッグが選ばれている状態で白ボール...]]></summary>
+        <author>
+            <name>shin1007</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PyPDF2?いやPyMuPDFでしょ]]></title>
+        <id>https://zenn.dev/shin1007/articles/b023c50a7d7865</id>
+        <link href="https://zenn.dev/shin1007/articles/b023c50a7d7865"/>
+        <updated>2022-12-10T07:46:13.000Z</updated>
+        <summary type="html"><![CDATA[PyPDF2だと読み書きのときにエラーをはかれる。
+ことがある。うちの扱ってるPDFだと結構あるので問題になった。
+ (<class 'PyPDF2.utils.PdfReadError'>, PdfReadError('Illeagal character in Name Object',) <traceback object at 0x0123456789ABCDEF
+
+ PyMuPDFなら大丈夫！問題ない！
+日本語だとPyPDF2の資料がそこそこあるんですが、PyMuPDFは英語ばっかり。
+なので自分が使ったメソッドとか書いていきます。
+Wand+ImageM...]]></summary>
+        <author>
+            <name>shin1007</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【解決】Flask_SQLAlchemyでのOperationalError]]></title>
+        <id>https://zenn.dev/shin1007/articles/a0f03992f928a0</id>
+        <link href="https://zenn.dev/shin1007/articles/a0f03992f928a0"/>
+        <updated>2022-12-10T07:37:52.000Z</updated>
+        <summary type="html"><![CDATA[エラー内容とコード
+
+ エラー内容
+sqlite3.OperationalError: unable to open database file
+
+ コード
+https://readthedocs.org/projects/flask-sqlalchemy/downloads/pdf/2.x/
+に存在する
+
+app.py
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlit...]]></summary>
+        <author>
+            <name>shin1007</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【解決】VSCodeでJupyter Notebook使おうとしたらKernelを起動できない]]></title>
+        <id>https://zenn.dev/shin1007/articles/6261d50fd46a66</id>
+        <link href="https://zenn.dev/shin1007/articles/6261d50fd46a66"/>
+        <updated>2022-12-10T07:36:18.000Z</updated>
+        <summary type="html"><![CDATA[エラー内容
+
+Failed to start the Kernel. 
+c:\miniconda3\envs\test\lib\site-packages\traitlets\traitlets.py:2395: FutureWarning: Supporting extra quotes around strings is deprecated in traitlets 5.0. You can use 'hmac-sha256' instead of '"hmac-sha256"' if you require traitlets >=5.
+  FutureWarning,...]]></summary>
+        <author>
+            <name>shin1007</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ARC 107 B - Quadruple の解説の解説]]></title>
         <id>https://zenn.dev/chelo/articles/e95bdce0c60a07</id>
@@ -4174,72 +4675,6 @@ pip install fake-bpy-module-2.82
 ※ バージョンを指定する]]></summary>
         <author>
             <name>calcifer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AtCoderのとある問題でCode Golfに挑戦した記録 (Python3)]]></title>
-        <id>https://zenn.dev/sugyan/articles/5f45e4808ffc95</id>
-        <link href="https://zenn.dev/sugyan/articles/5f45e4808ffc95"/>
-        <updated>2022-11-11T09:16:00.000Z</updated>
-        <summary type="html"><![CDATA[きっかけ
-最近 @yanecoder さんが AtCoder の問題を解きまくっていて、さらにshortest記録更新にも熱心に取り組んでいるので、自分も以前に多少は嗜んでいたしと対抗心を燃やして挑んでみたところ、多くの学びがあったので記録として残しておく。
-※使用言語はPython3です
-
- Code Golf とは
-とにかく短いコード(byte数)で目的を達成するプログラムを書くこと。
-https://ja.wikipedia.org/wiki/コードゴルフ
-AtCoder では AC をとれれば目的達成といえるし、言語別にすべての提出のコード長も表示されるので分かりやすい。
-
-...]]></summary>
-        <author>
-            <name>sugyan</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】CSVファイルの読み込みについて【備忘録】]]></title>
-        <id>https://zenn.dev/siganai/articles/20221106_python_csv_input</id>
-        <link href="https://zenn.dev/siganai/articles/20221106_python_csv_input"/>
-        <updated>2022-11-11T09:02:59.000Z</updated>
-        <summary type="html"><![CDATA[CSVファイルに保存されたデータを読み込む方法を備忘録としてまとめる．
-使用言語はPython．
-本記事中で例示するために使用したコードとデータは，ここからダウンロード可能．
-
- 方法１：pandasの使用
-個人的に一番使っている方法．
-pandasのread_csv関数を使用．
-CSVに保存されているデータをデータフレーム（表形式）で読み込むことが可能．
-引数filepath_or_bufferにCSVファイルのパス（本記事では変数path）を渡す．
-
- インストール方法
-
-terminal
-pip install pandas
-
-
- 実際の使用例
-
-pandas_test.py
-im...]]></summary>
-        <author>
-            <name>SiganAI</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Raspberry Pi 4 model Bで仮想環境をつくる]]></title>
-        <id>https://zenn.dev/tokoroteen/articles/c58b4a16269bad</id>
-        <link href="https://zenn.dev/tokoroteen/articles/c58b4a16269bad"/>
-        <updated>2022-11-10T14:48:34.000Z</updated>
-        <summary type="html"><![CDATA[1. 概要
-https://zenn.dev/tokoroteen/articles/113ed90c5eefb6
-こちらの続き
-普段MacでAnacondaを使っているので、ラズパイでもcondaを使えるようにしようと思いましたが、Raspberry Pi 4でMinicondaは上手く動かないみたいです。
-参考：https://qiita.com/hanaata/items/39ada844c7c292d2fef1#python
-ラズパイ用にberrycondaというものもあるようですが、こちらも
-
-This project is no longer active
-https:/...]]></summary>
-        <author>
-            <name>Tokoroteen</name>
         </author>
     </entry>
 </feed>
