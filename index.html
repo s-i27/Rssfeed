@@ -22,6 +22,156 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-12-12 datetime="2022-12-12T12:47:05.000Z">2022-12-12</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-12-12 datetime="2022-12-12T12:47:05.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/okome_oisi/articles/43b486e6730f53"
+                        open
+                      >
+                        <summary class="article-expander__title">PySide6(Qt for Python) のGUIアプリで、scheduleモジュールをQThreadで別スレッドにて使用した。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/okome_oisi/articles/43b486e6730f53">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ehK1Hni4--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:okometabetai%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:PySide6%2528Qt%2520for%2520Python%2529%2520%25E3%2581%25AEGUI%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2581%25A7%25E3%2580%2581schedule%25E3%2583%25A2%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25AB%25E3%2582%2592QThread%25E3%2581%25A7%25E5%2588%25A5%25E3%2582%25B9%25E3%2583%25AC%25E3%2583%2583%25E3%2583%2589%25E3%2581%25AB%25E3%2581%25A6%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MHpqVmJiem5wckUybkFMbmJiaU8yN0ljWTlsZFZfS3pabXBnUGYtQ0k9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>注意したこと
+
+scheduleは別スレッドで動かす。そうしないとscheduleが、gui要素関連の処理を呼び出す時、schedule.run_pending()のループが止まってしまう。
+通常は、schedule.run_pending()をwhile文で無限ループするが、そうすると、プログラムを終了する時、Scheduler_Threadが終了できない。
+そのためにwhile文ではなくQTimerで、1秒ごとにschedule.run_pending()を呼び出す。
+しかし、別スレッドでQTimerは利用できない。↓
+
+
+You must start and stop the ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/shundeveloper/articles/986899a7a29e2d"
+                        open
+                      >
+                        <summary class="article-expander__title">二項分布のベイズ推定</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shundeveloper/articles/986899a7a29e2d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--pPLKbf9O--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ShunDev%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E4%25BA%258C%25E9%25A0%2585%25E5%2588%2586%25E5%25B8%2583%25E3%2581%25AE%25E3%2583%2599%25E3%2582%25A4%25E3%2582%25BA%25E6%258E%25A8%25E5%25AE%259A%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1OUUZBdUZNUy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY3Y2U4NzUxNzkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>二項分布のベイズ推定について, ベータ分布が共役事前分布であるという記載はあったが, 事後分布や予測分布の導出が無かったため導出した. また, パラメータの分布や予測分布の更新をプログラミング言語Pythonを用いて可視化を行った.
+
+ 共役事前分布と尤度関数
+
+ 共役事前分布
+二項分布の共役事前分布はベータ分布である.
+
+Beta(\mu | a, b) &#x3D; \frac{\Gamma{(a+b)}}{\Gamma{(a)} \Gamma{(b)}} \mu^{a-1} (1-\mu)^{b-1}
+
+後程使用するので対数をとった形を記載する. ただし, 正規化項を定数としておいていること...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kazaki/articles/17c587514ebe4a"
+                        open
+                      >
+                        <summary class="article-expander__title">CatmullRomSpline曲線で、描画した線をひっぱって編集できるCLIP STUDIOのようなベクターレイヤーを実装する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kazaki/articles/17c587514ebe4a">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--VCyZmJhr--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E8%258F%258A%25E8%25B0%25B7%25E3%2580%2580%25E7%259F%25A5%25E7%259C%259F%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:CatmullRomSpline%25E6%259B%25B2%25E7%25B7%259A%25E3%2581%25A7%25E3%2580%2581%25E6%258F%258F%25E7%2594%25BB%25E3%2581%2597%25E3%2581%259F%25E7%25B7%259A%25E3%2582%2592%25E3%2581%25B2%25E3%2581%25A3%25E3%2581%25B1%25E3%2581%25A3%25E3%2581%25A6%25E7%25B7%25A8%25E9%259B%2586%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258BCLIP%2520STUDIO%25E3%2581%25AE%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AA%25E3%2583%2599%25E3%2582%25AF%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25A4%25E3%2583%25BC%25E3%2582%2592%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1Sd3k1Z1Q1ZS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Y4NTdmMmM0MWEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>DEMO
+左ドラッグで線が引けるペイントアプリっぽいものです。線の色や太さを設定することができるようになっています。
+制御点から10px以内にカーソルが入った状態で右ドラッグで制御点を移動できます。
+https://www.youtube.com/watch?v&#x3D;ephADfQnPC4
+opencvとnumpyあればmain.py実行すれば動作します
+https://github.com/kazumax75/Catmull-Rom_Spline
+
+ はじめに
+今やPCやタブレットを利用してデジタルイラストを書くことが当たり前になった時代。
+僕が中学生の頃は、ライセンスが5000円で買...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/mikage/articles/e0778411fe8832"
+                        open
+                      >
+                        <summary class="article-expander__title">DeepStream 備忘録 vol1</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mikage/articles/e0778411fe8832">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--8Co1Xz8k--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mikage%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:DeepStream%2520%25E5%2582%2599%25E5%25BF%2598%25E9%258C%25B2%2520vol1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1xR0ZUVDlsNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAyZGZmY2Q2N2UuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>最初に
+これは私がDeepStreamを触っているうちに、はまったことや困ったことを忘れないように記録するために書いたものです。
+ですので、初歩的なミスなど経験者にとってはイマイチな情報が多いと思うので、経験者の方はブラウザバックを推奨します。
+もしくは、誤りなどを指摘していただけると非常に助かります。
+
+ deepstream-test4(python.ver)を動かしてみた
+
+ 環境(参考までに)
+
+実行: dGPU (Jetsonではないので、注意）
+DeepStream: 6.1
+CUDA: 11.6
+Python: 3.8
+OS: ubuntu18.04
+
+
+ はまったこと...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-12-11 datetime="2022-12-11T15:00:00.000Z">2022-12-11</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-12-11 datetime="2022-12-11T15:00:00.000Z"></time>
           </button>
@@ -7246,454 +7396,6 @@ rpytho...</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/shimakaze_soft/articles/aa6eb5a2097ede"
-                        open
-                      >
-                        <summary class="article-expander__title">SQLAlchemyでmaster/slaveの切り替え</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shimakaze_soft/articles/aa6eb5a2097ede">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--M7f_G2DP--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shimakaze_soft%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:SQLAlchemy%25E3%2581%25A7master%252Fslave%25E3%2581%25AE%25E5%2588%2587%25E3%2582%258A%25E6%259B%25BF%25E3%2581%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1oc2J3WVROOS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk2ZjllYjE0ZWEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>RDBを使用していて、アクセス数が増えて負荷がかかった際の対処法としては、更新用と参照用でRDBを分けるレプリケーションというものがあります。
-PythonのORMであるSQLAlchemyを使用していて、ORMからRDBにアクセスする際には、参照用と更新用に分けたいという状況もあると思います。
-RDBのレプリケーションを実施した際に、SQLAlchemyに更新用と参照用を切り替えるための処理の追加方法を紹介します。
-
- レプリケーションとは
-ここでレプリケーションを知らない方のために簡単に解説します。
-MySQL/PostgresqlといったRDBを運用していて、アクセス数などが増大し...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/welliving/articles/5a0a9636915e29"
-                        open
-                      >
-                        <summary class="article-expander__title">消費者物価指数データを取得するPythonのコード</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/welliving/articles/5a0a9636915e29">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--R_BipcGn--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Ryo%2520YOSHI%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E6%25B6%2588%25E8%25B2%25BB%25E8%2580%2585%25E7%2589%25A9%25E4%25BE%25A1%25E6%258C%2587%25E6%2595%25B0%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258BPython%25E3%2581%25AE%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1hUzZtSjgxbS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzkxNTU3NWNlMTAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>この記事について
-e-Statから消費者物価指数データをPythonで取得します。
-
- Pythonのコード
-jpy-datareaderを使います。
-from jpy_datareader import estat
-消費者物価指数のデータ数を確認します。
-metainfo &#x3D; estat.MetaInfoReader(api_key, statsDataId&#x3D;&quot;0003427113&quot;, name_or_id&#x3D;&quot;name&quot;)
-meta &#x3D; metainfo.read()
-metainfo.OVERALL_TOTAL_NUMBER
-12486296
-データ数が多いため、条件で絞ります。...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/joo_hashi/articles/0fcfdf93b63a59"
-                        open
-                      >
-                        <summary class="article-expander__title">Python仕事で使うことになりました</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/joo_hashi/articles/0fcfdf93b63a59">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--fMyrkMt4--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:JboyHashimoto%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Python%25E4%25BB%2595%25E4%25BA%258B%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%2586%25E3%2581%2593%25E3%2581%25A8%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258A%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS03OHBTWjJfay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI0Mzc4MDdhZGQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>まさか使う機会が来るとは!
-こんにちは、Jboyです。最近転職して企業さんでPythonを使うことになりました...
-「Pythonって仕事ないよ」と昔聞いたことがある😅
-でも、求人はいっぱいある?、機械学習ばっかりですけどね...
-プログラミングを学ぶならPHP、Javaだと聞きますが、もう初心者のための求人はないと思いますね😭
-プログラミングスクールでは、PHP、Ruby、Javaを教えているところがありますが、最近はPythonを教えているところもある。
-でも、初心者でPythonの仕事につくのって難しいんですよね😅
-やってる僕って結構レアだなと思った🤫
-
- なぜPython?...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/apple_pie1974/articles/ebde81ff587452"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonのstrとrepr</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/apple_pie1974/articles/ebde81ff587452">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--TWjE6-Xb--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ApplePie%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Python%25E3%2581%25AEstr%25E3%2581%25A8repr%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2h2MlM2WDRwRXg1aHJGTUh3WlVpSk5EZWlIOWRyejB3YVFFV3FCTUE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>自分用メモ
-
- strとrepr
-公式リファレンスによると、
-https://docs.python.org/ja/3/reference/datamodel.html?highlight&#x3D;repr#object.__str__
-https://docs.python.org/ja/3/reference/datamodel.html?highlight&#x3D;repr#object.__repr__
-strは
-
-オブジェクトの「非公式の (informal)」あるいは表示に適した文字列表現を計算するために、 str(object) と組み込み関数 format(), print() によって...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/welliving/articles/7f9354195efb18"
-                        open
-                      >
-                        <summary class="article-expander__title">日本国債金利データを取得するPythonのコード</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/welliving/articles/7f9354195efb18">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--va6Tvrk4--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Ryo%2520YOSHI%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E6%2597%25A5%25E6%259C%25AC%25E5%259B%25BD%25E5%2582%25B5%25E9%2587%2591%25E5%2588%25A9%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258BPython%25E3%2581%25AE%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1hUzZtSjgxbS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzkxNTU3NWNlMTAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>この記事について
-財務省のページから国債金利データを取得します。
-
- Pythonのコード
-import numpy as np
-import pandas as pd
-
-jgbcm &#x3D; pd.read_csv(&quot;https://www.mof.go.jp/jgbs/reference/interest_rate/jgbcm.csv&quot;, skiprows&#x3D;1, encoding&#x3D;&quot;shift-jis&quot;)
-jgbcm_all &#x3D; pd.read_csv(&quot;https://www.mof.go.jp/jgbs/reference/interest_rate/data/jgbcm_all....</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mtmatma/articles/c5caf790c13d70"
-                        open
-                      >
-                        <summary class="article-expander__title">Windows コマンドプロンプトのデフォルト文字コード取得</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mtmatma/articles/c5caf790c13d70">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--vAaIrhy7--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:masaru%2520tsuchiyama%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Windows%2520%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2597%25E3%2583%2588%25E3%2581%25AE%25E3%2583%2587%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25AB%25E3%2583%2588%25E6%2596%2587%25E5%25AD%2597%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E5%258F%2596%25E5%25BE%2597%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvbS5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Windows コマンドプロンプトのデフォルト文字コード取得
-&gt;python
-Python 3.10.8 (tags/v3.10.8:aaaf517, Oct 11 2022, 16:50:30) [MSC v.1933 64 bit (AMD64)] on win32
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&gt;&gt;&gt; import _locale
-&gt;&gt;&gt; _locale._getdefaultlocale()
-(&#x27;ja_JP&#x27;, &#x27;cp932&#x27;)...</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/robes/articles/d9d636e47057e8"
-                        open
-                      >
-                        <summary class="article-expander__title">【Python】【初心者】numpyで乱数を発生させるメソッドの整理</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/robes/articles/d9d636e47057e8">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--wUvWojMA--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:osn_Lofi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590Python%25E3%2580%2591%25E3%2580%2590%25E5%2588%259D%25E5%25BF%2583%25E8%2580%2585%25E3%2580%2591numpy%25E3%2581%25A7%25E4%25B9%25B1%25E6%2595%25B0%25E3%2582%2592%25E7%2599%25BA%25E7%2594%259F%25E3%2581%2595%25E3%2581%259B%25E3%2582%258B%25E3%2583%25A1%25E3%2582%25BD%25E3%2583%2583%25E3%2583%2589%25E3%2581%25AE%25E6%2595%25B4%25E7%2590%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1kTFVlMFdPNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>numpyで乱数を発生させるメソッド
-特によく使うrand(),random_sample(),randint(),randn() について整理しました。
-ざっくりまとめると、以下の通りです。
-
-ひとつひとつ実際の動きを見ていきましょう
-
- rand()
-引数に何も指定しない場合、0以上1未満の乱数がスカラーで返ってきます。
-np.random.rand()
-出力値
-0.11687868813774382
-引数xを指定すると、乱数がx次元のベクトルで返ってきます。
-np.random.rand(5)
-出力値
-array([0.42817233, 0.06407754, 0.5981927...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/joanofarc/articles/gradient-boosting-interval-prediction"
-                        open
-                      >
-                        <summary class="article-expander__title">勾配ブースティングで「幅を持たせた予測」を行う</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/joanofarc/articles/gradient-boosting-interval-prediction">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--7jUqa-Yn--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:JoanOfArc%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E5%258B%25BE%25E9%2585%258D%25E3%2583%2596%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%2586%25E3%2582%25A3%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25A7%25E3%2580%258C%25E5%25B9%2585%25E3%2582%2592%25E6%258C%2581%25E3%2581%259F%25E3%2581%259B%25E3%2581%259F%25E4%25BA%2588%25E6%25B8%25AC%25E3%2580%258D%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2owQ3lBMjR0LUJvZHB3bWZJYkJOUGpWS1U0b1BFMVR2YnN4MEVmMEE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>背景と目的
-ビジネスにおいて機械学習による回帰モデルを構築する際に、単に「予測値（点予測）」が知りたいというよりも、「予測値が（どれくらいの確率で）どれくらいの範囲に収まりそうか（区間予測）」を知りたい場面があります。例えば天気予報を眺めてみると台風の進路予測には予報円が出ており、ある程度幅を持たせて進路を予測するといったことが行われています。あるいは需要予測を行う場合に「95%の確率で40個~60個の間に入りそうだ」という幅を持たせた予測をすることができれば、「売れ残りがでると損失が大きいので、明日の仕入れ量は40個にしよう」といった意思決定に繋げることができるかおしれません。
-そ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/satoshi256kbyte/articles/a4fa95984e2974"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonでデザインパターンを学ぶ(Adapterパターン)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/satoshi256kbyte/articles/a4fa95984e2974">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--oj65f6sG--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E6%25B7%25B1%25E7%25B7%2591%25E3%2580%2580%25E8%2581%25A1%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25A7%25E3%2583%2587%25E3%2582%25B6%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2591%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25B3%25E3%2582%2592%25E5%25AD%25A6%25E3%2581%25B6%2528Adapter%25E3%2583%2591%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25B3%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1nZXMyZ3Q5Vy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q2MzU5NTZkNDkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>こんにちは。深緑です。
-チーム内で改めてデザインパターンを学び始めました。
-記録のために記事に残しておこうと思います。
-
- はじめに
-GoFのデザインパターンを一つずつ学んでいきます。
-今回はAdapterパターンです。
-Wikipedia - Adapter パターン
-言語はPythonを使用します。
-
- サンプルコードのシチュエーション
-学校において、現在生徒を特定するコードを和暦＋学部＋学科＋数字４桁で管理しています。
-令和５年度から西暦＋学部＋学科＋数字４桁で管理するとします。
-
-
-
-年度
-コードのフォーマット
-例
-
-
-
-
-令和４年度まで
-和暦＋学部＋学科＋数字４桁
-04TEIT...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/taroh/articles/c965946e457059"
-                        open
-                      >
-                        <summary class="article-expander__title">円周率とわし</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/taroh/articles/c965946e457059">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--1UCU8BeH--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:taroh%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E5%2586%2586%25E5%2591%25A8%25E7%258E%2587%25E3%2581%25A8%25E3%2582%258F%25E3%2581%2597%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3FLVU11eVZVdGdoYUt1aUNyLUhVSzM5eWpGcWJSOWotQU9yeE9DclZBPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>円周率40億桁求めた。
-たった40億桁でこんなこと言うと円周率ガチ勢には笑われるかもしれないが、今生で自作プログラム (Python3で60行ほど、ラップトップでわずか7時間) で円周率をこんなに求められるとは思わなかったなー。
-2022年現在のテクノロジでちょちょっと計算して円周率が計算できた、のを、ハマって多桁・高速化した、2022年11月の1週間くらいの記録。
-!
-追記: 公開してからふと右をみてみると、この駄文、ちょうど1文字1byteのテキスト化した\piでいったら2万桁分くらいらしい。2万桁の\piを計算するのは下記のように10msec程度になったのだが、そのうちTransf...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-11-12 datetime="2022-11-12T23:47:00.000Z">2022-11-12</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-11-12 datetime="2022-11-12T23:47:00.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mimitako/articles/python_list_combination_gen"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonでリストの組合せを作成する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mimitako/articles/python_list_combination_gen">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--q9wkqyy_--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mimitako%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Python%25E3%2581%25A7%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%25E3%2581%25AE%25E7%25B5%2584%25E5%2590%2588%25E3%2581%259B%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS10N3ZoNVdBNC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M2MDJlNmJjZWYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Python でリストの組合せを作成する
-大した技術ではありませんが、地味に使っているので公開します。
-
- モチベーション
-Stable Diffusion で Prompt の組合せ評価を行っているとき、いろいろ組合せがあると面倒だからなんとかならんかなぁ？と考えていました。
-調べれば itertools というライブラリで目的は達成できるのですが、ベースを Json にしていたので、辞書キー:リストの形でうまく使えるようにしたかったです。
-
- 使い方
-コードは下記の通り簡単です。
-
-key:list の形で形成された辞書を作成します。
-各 key のリストを大きいリストでネストし...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/neomocha/articles/2bc426bf067ef1"
-                        open
-                      >
-                        <summary class="article-expander__title">【Python】EDINET APIから取得した有価証券報告書のテキストデータと財務データを保存【Google Colab】</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/neomocha/articles/2bc426bf067ef1">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--23chLHVY--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mocha%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:%25E3%2580%2590Python%25E3%2580%2591EDINET%2520API%25E3%2581%258B%25E3%2582%2589%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2597%25E3%2581%259F%25E6%259C%2589%25E4%25BE%25A1%25E8%25A8%25BC%25E5%2588%25B8%25E5%25A0%25B1%25E5%2591%258A%25E6%259B%25B8%25E3%2581%25AE%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25A8%25E8%25B2%25A1%25E5%258B%2599%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E4%25BF%259D%25E5%25AD%2598%25E3%2580%2590Google%2520Colab%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1zWjIxb3pvOC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM1MjY1ZTk5ZGQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>まとめると
-!
-有価証券報告書からのテキスト分析&amp;財務分析をする準備として、EDINET APIから取得した有価証券報告書のテキストデータと財務データをGoogle Driveへ保存します🐱
-
-!
-Google Colabで動かしています。
-
-つぎの流れでやっていきます。
-
-ライブラリのインポート
-有価証券報告書のdocIDを取得
-有価証券報告書が入ったzipファイルを取得
-zipファイルを解凍
-XBRLファイルからテキストデータと財務データを取得
-取得したデータをGoogle Driveに保存
-
-作成にあたっては次の記事を参考にしました。とても役立つ内容をありがとうございま...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kokopi/articles/fd4ebe665b157b"
-                        open
-                      >
-                        <summary class="article-expander__title">Excelにまとめて画像ファイルを挿入する方法 Python編</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kokopi/articles/fd4ebe665b157b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--V0QQoQ6n--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%2593%25E3%2581%2593%25E3%2581%25B4%25E3%2581%25AE%25E3%2583%2591%25E3%2583%2591%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Excel%25E3%2581%25AB%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E3%2581%25A6%25E7%2594%25BB%25E5%2583%258F%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E6%258C%25BF%25E5%2585%25A5%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2520Python%25E7%25B7%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKdzZNV054RGIwMnhtcWh1S3UwR2NMNlRGbXhHQkJJWm1sazlOaDM9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>解決したい問題
-通常、ExcelのSheet内に画像を取り込みたいときは、メニューの挿入から画像を選択します。
-しかし、それが何枚もとなると面倒臭いですよね？
-さらに、業務などで日常的にとなると費やす時間は計り知れません。
-今回はそんな方に向けた記事を紹介していきます。
-
-
- 対象となる人
-プログラミングって何？なんか英語でつらつらと書くやつ？？
-そんなのさっぱりわからないしやりたくない、できない。というノンプログラマーの方に向けて丁寧に説明していきます。
-
-
- 解決策
-Python(パイソン)というプログラム言語を使って、Excelへの画像貼り付けを自動化します。
-待て待て、さっき...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mimitako/articles/img2text_trial1"
-                        open
-                      >
-                        <summary class="article-expander__title">画像からテキストを生成してみた</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mimitako/articles/img2text_trial1">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Jxpd7TZN--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mimitako%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E7%2594%25BB%25E5%2583%258F%25E3%2581%258B%25E3%2582%2589%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E7%2594%259F%25E6%2588%2590%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS10N3ZoNVdBNC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M2MDJlNmJjZWYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>画像からテキストを生成してみた
-さて、今回は画像からテキストを生成してみようと思います。画像には CC0 のものとそうでないものが混在したため、ここに貼付けせず、リンクで表記しています。
-
- モチベーション
-この作業を行ったモチベーションは Stable Diffusion で遊ぶのは良いが、逆生成(img to prompt)はできないものかと思い実行しました。結果は散々なものです。ここには画像ありませんが、気になった方は読み進めてもらえると嬉しいです。
-
- img2text の中身
-ほぼ Hugging Face にあったコードを利用させていただいています。Link
-修正したとこ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -7701,8 +7403,8 @@ Python(パイソン)というプログラム言語を使って、Excelへの画�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/3671882148">
-        <time id="build-timestamp" datetime="2022-12-12T01:43:09.145Z">2022-12-12T01:43:09.145Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/3681470201">
+        <time id="build-timestamp" datetime="2022-12-13T01:46:13.328Z">2022-12-13T01:46:13.328Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
