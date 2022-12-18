@@ -2,10 +2,231 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-12-17T01:26:49.550Z</updated>
+    <updated>2022-12-18T01:35:04.839Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[趣味開発の CLI アプリを clean architecture 風に作ってみた]]></title>
+        <id>https://zenn.dev/yuchiki/articles/clean-architecture-app</id>
+        <link href="https://zenn.dev/yuchiki/articles/clean-architecture-app"/>
+        <updated>2022-12-17T21:32:38.000Z</updated>
+        <summary type="html"><![CDATA[概要
+趣味開発のアプリを、書籍Clean Architectureで紹介されているclean architectureという作法に従うように改修してみた。コードはこちら。 自分用に使うAtcoder出場支援CLIコマンドで、pythonで書かれている。
+
+ Clean Architecture って？
+Uncle Bob によって 2012 年に提唱された アーキテクチャ。以下の図が有名。
+
+コンポーネント間をレイヤーに分けて、依存の方向性を制御することに肝があるっぽい。
+元のブログに書いてあることは私の理解だと以下の通りだ。
+「コンポーネントは以下のレイヤーに分けた方がいい。上に紹...]]></summary>
+        <author>
+            <name>ゆーちき</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ロータリーエンコーダーモジュール]]></title>
+        <id>https://zenn.dev/yuta_enginner/articles/3f32a738a9e8d3</id>
+        <link href="https://zenn.dev/yuta_enginner/articles/3f32a738a9e8d3"/>
+        <updated>2022-12-17T20:18:52.000Z</updated>
+        <summary type="html"><![CDATA[デバイス概要
+右回転、左回転、クリックで、デジタル信号を発します
+
+
+
+ 使い方
+プルアップを設定しておくと良いでしょう
+s1_pin = Pin(17,Pin.IN,Pin.PULL_UP)
+s2_pin = Pin(18,Pin.IN,Pin.PULL_UP)
+key_pin = Pin(19,Pin.IN,Pin.PULL_UP)
+
+volume = 0
+
+def minus(p):
+    global volume
+    volume -= 1
+
+def plus(p):
+    global volume
+    volume += 1
+
+def setting(p):...]]></summary>
+        <author>
+            <name>Yuta</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【AIアダルトチェック】AWS Rekognitionでアダルト画像かどうかを自動判別して業務を効率化する方法]]></title>
+        <id>https://zenn.dev/tk22/articles/8554485f475ac4</id>
+        <link href="https://zenn.dev/tk22/articles/8554485f475ac4"/>
+        <updated>2022-12-17T15:28:05.000Z</updated>
+        <summary type="html"><![CDATA[【AIアダルトチェック】AWS Rekognitionでアダルト画像かどうかを自動判別して業務を効率化する方法
+webとモバイルアプリ両方で漫画サービスを提供している会社でエンジニアとして働いて次のような課題がありました。
+webでは配信できるアダルトコンテンツ（作品）がApp Storeのガイドラインに引っかかる関係でモバイルアプリでは配信出来ないためコンテンツそれぞれに対してアダルトかどうか判定してアダルト商品にはフラグを立てておく必要があります。（アダルトフラグの立っているものは配信しないロジック）
+この前、某出版社から１万コンテンツの入稿があり、１万コンテンツをアダルトコンテ...]]></summary>
+        <author>
+            <name>TK2</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lambda上に適当に置いてあったコードをちゃんと管理する（個人開発）]]></title>
+        <id>https://zenn.dev/meihei/articles/53a6ce251820e4</id>
+        <link href="https://zenn.dev/meihei/articles/53a6ce251820e4"/>
+        <updated>2022-12-17T14:55:03.000Z</updated>
+        <summary type="html"><![CDATA[この記事はPython Advent Calendar 2022の17日目の記事です。
+2019年に Lambda へデプロイした Python コードが今日まで動いていますが、これが何も管理されていなかったので、そろそろ重い腰を上げてちゃんとやっていこうと思います。
+
+ アプリケーションの説明
+Twitterで自分の名前の後ろに、東京都の天気予報の結果を表示します。これは１時間毎に自動更新されます。
+https://twitter.com/app1e_s
+
+ やること
+
+ 1. コード管理
+（なし） -> Git & GitHub
+今動いているコードが何も管理されておらず...]]></summary>
+        <author>
+            <name>meihei</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ボードゲームの最適解を探索してみる〈ナインタイルパニック〉]]></title>
+        <id>https://zenn.dev/136/articles/ninetilespanic</id>
+        <link href="https://zenn.dev/136/articles/ninetilespanic"/>
+        <updated>2022-12-17T13:56:18.000Z</updated>
+        <summary type="html"><![CDATA[!
+※この記事はまだ執筆中です。
+
+この記事は、Oink Games が販売する「ナインタイルパニック」というゲームの最適解を探すプログラムについての備忘録です。
+このプログラムは、テクニカルな計算時間の短縮や並列計算を行わず、探索対象の性質を考慮して全探索の数を削減しています。
+そのため、アルゴリズムの目新しさなどはありません。
+
+ 「いそげ、脳みそ。」
+ナインタイルパニックの箱裏のキャッチコピーです。どんなゲームかを端的に表しています。
+ルールの詳細は実際にゲームを買って遊ぶのが理解への近道ですが、購入するまでは公式サイトの説明を読んでみてください。
+簡単に言うと、
+
+プレイヤーが全...]]></summary>
+        <author>
+            <name>136</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[２ステップでVS Code上でDockerの分析環境を構築する]]></title>
+        <id>https://zenn.dev/kohhee/articles/d7516e7957b99a</id>
+        <link href="https://zenn.dev/kohhee/articles/d7516e7957b99a"/>
+        <updated>2022-12-17T12:19:25.000Z</updated>
+        <summary type="html"><![CDATA[Dockerで分析環境を構築する。
+JupyterをVS code上で使用できるようにした。
+2ステップで構築する。
+
+
+
+Dockerfileを作成する
+
+
+
+
+VS codeの設定ファイルを作成する
+
+
+
+もともとDockerは苦手の意識があったが、「実践 Docker - ソフトウェアエンジニアの「Docker よくわからない」を終わりにする本」でかなり理解できた。最高にわかりやすかった。
+
+ 1. Dockerfileを作成する
+Dockerfileは以下のようにPythonのImageを用いた。
+FROM python:3.11.1-bullseye
+
+COPY src/req...]]></summary>
+        <author>
+            <name>25</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【2022年版】エンジニアがよく閲覧する情報収集サイトとは？]]></title>
+        <id>https://zenn.dev/hero_kakedashi/articles/40c171a64c9e5c</id>
+        <link href="https://zenn.dev/hero_kakedashi/articles/40c171a64c9e5c"/>
+        <updated>2022-12-17T08:23:32.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+本記事では、下記の悩みに答えます。
+
+エンジニアとして、日々情報収集をしたいけど、どのサイトを確認するべきなのかな。
+エンジニア関連の情報ってどこのサイトで得られるのかな。
+エンジニアがよく閲覧している情報収集サイトを知りたい。
+
+
+ 本記事の対象者
+ITエンジニア(特に情報収集が好きな人)
+
+ 分析方法
+分析方法に関してですが、下図のように分析しました。
+
+上記の分析方法の各流れに関して、以降で簡単に説明しますね。
+
+ はてなブックマーク
+分析する対象として、「はてなブックマーク」を選びました。
+「はてなブックマーク」を分析対象として選んだ理由は、以下のためです。
+
+「は...]]></summary>
+        <author>
+            <name>hero</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ネストした@dataclassの一部を任意のシリアライズ方式でJSONシリアライズする方法]]></title>
+        <id>https://zenn.dev/tomlla/articles/542cc59cb0cc0b268ff9</id>
+        <link href="https://zenn.dev/tomlla/articles/542cc59cb0cc0b268ff9"/>
+        <updated>2022-12-17T04:53:02.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事は Xbit Advent Calendar 2022 の17日目の記事です。
+株式会社クロスビットは らくしふ を中心に、Rustによる自動シフトスケジューリング機能など魅力的な開発を行っている会社です。
+技術スタックとしては GCP, Rails, Typescript(Vue, Next.js), Python, Rust などを使っています。
+以前、Pythonで少し変わったJSON出力を出してみたいシチュエーションがあり、その際取った方法を書いておこうと思います。
+
+ 対象環境
+python3.9 で試しています。
+
+ Case-1: 普通にasdict(...]]></summary>
+        <author>
+            <name>tomlla</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI絵師に自分の似顔絵を描いてもらう]]></title>
+        <id>https://zenn.dev/niisan/articles/ff4c0291a8780a</id>
+        <link href="https://zenn.dev/niisan/articles/ff4c0291a8780a"/>
+        <updated>2022-12-17T04:17:03.000Z</updated>
+        <summary type="html"><![CDATA[こんにちはみなさん
+ツイッターとかで自分の画像を貼るときに、大体の写真の移りが悪くて上げにくいなと思ったことがあるんじゃないかと、というか自分で思いました。
+これが似顔絵とかだったらまだいいのですが、絵をかいてもらう人もいないし、自分の絵心のなさでは似顔絵がとんでもないことになってしまう可能性がありますというかなります。
+しかし、以前に上げた記事においてローカルに降臨したAI絵師君は、画像から新しい画像を作るという技も持っているとのこと。
+これなら、自分の写真からイイ感じに崩した似顔絵を作ってくれるんじゃないかなって思ったわけです。
+まあ、やりやすい人とそうではない人もいそう。
+
+ im...]]></summary>
+        <author>
+            <name>niisan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[YouTubeを利用してLINEの動画オウム返しBotを作る]]></title>
+        <id>https://zenn.dev/maguro_alterna/articles/00083367dd0184</id>
+        <link href="https://zenn.dev/maguro_alterna/articles/00083367dd0184"/>
+        <updated>2022-12-17T03:44:52.000Z</updated>
+        <summary type="html"><![CDATA[ご挨拶
+本記事はQiitaに投稿したものと同様のものになります。
+どうもこんにちは。STECH所属のマグロです。
+STECHと愛知工業大学 システム工学研究会の共同アドベントカレンダーの記事となります。
+今回はLINE APIを使用してYouTubeに動画をアップロードしてみます。
+
+ 作った経緯
+以前記事にしたDiscordとLINEを連携させる際、画像、動画はhttpの形式で送信する必要がありました。
+Discordはファイルの保存にCloudflareを採用しており、httpでファイルの参照が可能でした。
+しかしLINE側はバイナリデータで保存され、加えて一定時間で削除されてし...]]></summary>
+        <author>
+            <name>マグロ</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[鹿と列車の衝突を調べる]]></title>
         <id>https://zenn.dev/shimat/articles/6ea4cfe0f84a3f</id>
@@ -5020,100 +5241,6 @@ whie文を使ったら無限ループになってしまった．
 関数を意識的に作ることで，デバッグはやりやすかったと思う．]]></summary>
         <author>
             <name>SiganAI</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[マークダウンをlocalhostでみたい]]></title>
-        <id>https://zenn.dev/ringotabetai/articles/bda567558daadd</id>
-        <link href="https://zenn.dev/ringotabetai/articles/bda567558daadd"/>
-        <updated>2022-11-18T09:34:09.000Z</updated>
-        <summary type="html"><![CDATA[環境
-Linux ubuntu 22.04.0
-
- Pythonのバージョン確認する
-python3 -V
-
- マークダウンを保存してるディレクトリへ移動
-cd ~/Projects/XXXX/XXXXX
-
- pip install
-pip install mkdocs
-
- ディレクトリ確認
-la -la
-
- mkdocs起動
-mkdocs 
-
- server起動
-mkdocs serve
-https://localhost:8000  とか]]></summary>
-        <author>
-            <name>a</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FastAPI で None の値を null から undefined に変換する]]></title>
-        <id>https://zenn.dev/todoker/articles/2022-fastapi-pydantic-null-to-undefined</id>
-        <link href="https://zenn.dev/todoker/articles/2022-fastapi-pydantic-null-to-undefined"/>
-        <updated>2022-11-18T05:17:32.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-こんにちは。@hayata-yamamotoです。
-FastAPI をベースにしたバックエンドを運用開発していくにあたり None の使用を伴う API 定義を行うと、None で指定した値が OpenAPI 定義上では Optional の扱いを受けてしまい、TypeScript 側で見ると undefined と見做されるという問題がありました。
-今回は、その OpenAPI 定義上の表記と、FastAPI の実際のレスポンスを整合させるために行った設定をご紹介します。
-
- 解決方法
-FastAPI で response_model_exclude_none を Tru...]]></summary>
-        <author>
-            <name>株式会社トドケール</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[TouchDesigner]PythonからGlobal Shortcutを参照]]></title>
-        <id>https://zenn.dev/arkwknsk/articles/73650a926ce974</id>
-        <link href="https://zenn.dev/arkwknsk/articles/73650a926ce974"/>
-        <updated>2022-11-17T21:23:52.000Z</updated>
-        <summary type="html"><![CDATA[Pythonから、動的にGlobal Shortcutを使ってオペレーターを参照する方法。OP名＋連番などのGlobal Shortcutなどを参照できるようになる。
-
- コード
-getattr(op, opName)
-targetOp = getattr(op, opName)
-Pramaters
-opName: 取得したいOPのGlobal Shortcutの文字列
-Returns
-targetOP: 取得されたOP
-
- サンプル
-
-
- ネットワークの解説
-ネットワーク上の2つのBase OPにGlobal Shortcutでアクセスするサンプルです。
-以下のBase OPに、Glo...]]></summary>
-        <author>
-            <name>ARAKAWA Kensuke</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonで差分ファイルの抽出]]></title>
-        <id>https://zenn.dev/mknc/articles/3485cace2d9e09</id>
-        <link href="https://zenn.dev/mknc/articles/3485cace2d9e09"/>
-        <updated>2022-11-17T15:42:50.000Z</updated>
-        <summary type="html"><![CDATA[これ何？
-2つのディレクトリから差分ファイルのパス一覧を生成するスクリプト
-
- 作った経緯
-"差分ファイル"と"追加ファイル"のみ"ディレクトリ構造を維持したまま"抽出したい。
-しかしいい感じのツールが見つからない(需要はありそうだが)。
-さて困った。
-幸いにもPythonに良いモジュールが提供されていたのでスクリプトを自作することにした。
-import filecmp
-import sys
-
-# e.g.
-# python3 extract_diff_path.py bbb aaa |xargs -I{} cp --parents -r {} extract/
-def extrac...]]></summary>
-        <author>
-            <name>mknc</name>
         </author>
     </entry>
 </feed>
