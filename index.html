@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-12-25 datetime="2022-12-25T01:37:17.000Z">2022-12-25</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-12-25 datetime="2022-12-25T01:37:17.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-12-25 datetime="2022-12-25T16:58:00.000Z">2022-12-25</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-12-25 datetime="2022-12-25T16:58:00.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,432 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kmiura55/articles/mycobot-sim-python"
+                        open
+                      >
+                        <summary class="article-expander__title">シュミレータ上のmycobotをPythonで動かしてみた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kmiura55/articles/mycobot-sim-python">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--p8GF3IOt--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:KMiura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2582%25B7%25E3%2583%25A5%25E3%2583%259F%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25BF%25E4%25B8%258A%25E3%2581%25AEmycobot%25E3%2582%2592Python%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1BYWFLWFdUNC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzJlZjZkNWJmMGMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>この記事は ROS Advent Calendar 202217日目の記事です。
+前からmycobotがすごく気になってしょうがないです。
+執筆時点(2022年12月)にはスイッチサイエンスさんでセールで安くなっていたので本当に買うかどうか悩ましいですね。
+というわけでまずは手軽にイメージをつかむためにmycobotのシュミレーターを動かしてみたいと思います。
+
+ 動作環境
+
+Ubuntu 20.04
+ROS Noetic
+
+
+ とりあえず動かす
+
+ ワークスペースの用意
+まずは以下のコマンドでワークスペースを用意します
+mkdir -p ~/catkin_ws/src
+cd ~/cat...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;22
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/4kzknt/articles/1baf245b3caca8"
+                        open
+                      >
+                        <summary class="article-expander__title">gunicornとflaskによるDockerでの開発</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/4kzknt/articles/1baf245b3caca8">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--em1A-8TP--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:4kzknt%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:gunicorn%25E3%2581%25A8flask%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258BDocker%25E3%2581%25A7%25E3%2581%25AE%25E9%2596%258B%25E7%2599%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS14aHJLTTVwdi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzkzYThiZWEyNTMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+クラウドサービスでコンテナーの検証をすることが多くその際に作ったものを備忘録として残しておきます。
+そのため、flask アプリの方の内容は薄いです。あくまでもコンテナーで使用するために作成したものなので、Hello worldのみとなっています。
+
+ 環境
+ローカル環境: Linux(WSL)
+Python 3.10.9
+Docker version 20.10.21
+
+ ディレクトリ
+最終的に作成するディレクトリ構成は以下のようになります。
+project
+ ├── src 
+ ├── Dockerfile 
+ └── requirements.txt # これはなくて...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hannah/articles/20221225_001"
+                        open
+                      >
+                        <summary class="article-expander__title">AtCoder Beginner Contest 283 レポート</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hannah/articles/20221225_001">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--eqs9lY__--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2582%2593%25E3%2581%25AA%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:AtCoder%2520Beginner%2520Contest%2520283%2520%25E3%2583%25AC%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FDTlBFdTloTUJWWC1RQmtLbGoxYm5mUXBFRWdndDVJYXdrWmdBRXVQR1o4TUlnPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+ABCD4完でした．本当にしょうもない結果で書くことがないです．
+
+ ABC283
+
+
+コンテスト名: ユニークビジョンプログラミングコンテスト2022 冬(AtCoder Beginner Contest 283)
+順位: 1850th / 8272
+パフォーマンス: 1075
+レーティング: 1268 → 1250 (-18)
+コンテスト参加回数: 68
+
+https://atcoder.jp/users/hannaheptapod/history/share/abc283
+
+ A - Power
+
+
+ A - 問題
+A^Bを出力せよ．
+
+ A - 解法
+特筆事項なし．
+
+...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kuromame614/articles/c81726e4c3c6d0"
+                        open
+                      >
+                        <summary class="article-expander__title">メトリクスフィルター設定後、自動的にCloudWatchAlarmが作成されるようにしてみた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kuromame614/articles/c81726e4c3c6d0">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ESMfxjNV--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E9%25BB%2592%25E8%25B1%2586%25E3%2580%2582%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2583%25A1%25E3%2583%2588%25E3%2583%25AA%25E3%2582%25AF%25E3%2582%25B9%25E3%2583%2595%25E3%2582%25A3%25E3%2583%25AB%25E3%2582%25BF%25E3%2583%25BC%25E8%25A8%25AD%25E5%25AE%259A%25E5%25BE%258C%25E3%2580%2581%25E8%2587%25AA%25E5%258B%2595%25E7%259A%2584%25E3%2581%25ABCloudWatchAlarm%25E3%2581%258C%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2595%25E3%2582%258C%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkVUS005MmVIRWRkYWFuQjZJY0hiazh1UWVrYUxBQXRRQnF0aFI9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+こんにちは、山田です。
+今回はメトリクスフィルターが設定されたら、自動的にCloudWatchAlarmが作成されるようにLambda関数を作成したので記載していきます。
+よろしくお願いいたします。
+
+ 概要図
+概要図は以下の通りです。
+
+①：メトリクスフィルターとCLoudWatchAlarmの一覧を取得する。
+②：取得した結果、CloudWatchAlarmに名前がないものに関しては、アラームを作成する。
+※前提条件※
+メトリクスフィルター名とCLoudWatchAlarm名は同名とします。
+
+ Lambda関数
+作成したLambda関数は以下になります。
+import...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/f9231fb231072e"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCorder］ABC-055｜B Training Camp</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/f9231fb231072e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--TYz3yDnY--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCorder%25EF%25BC%25BDABC-055%25EF%25BD%259CB%2520Training%2520Camp%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-055 B - Training Camp
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    n &#x3D; getInt()
+    p &#x3D; 10 ** 9 + 7
+
+    r &#x3D; 1
+    for i in range(n):
+        r &#x3D; (r * (i + 1)) % p
+    print(r)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/5471dc8cf18e9c"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCorder］ABC-056｜B NarrowRectanglesEasy</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/5471dc8cf18e9c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--6yeA4Zmx--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCorder%25EF%25BC%25BDABC-056%25EF%25BD%259CB%2520NarrowRectanglesEasy%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-056 B - NarrowRectanglesEasy
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    w, a, b &#x3D; getIntMap()
+
+    d &#x3D; b - (a + w) if b &gt; a else a - (b + w)
+    print(d if d &gt;&#x3D; 0 else 0)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/2d1ad5bbcdaa39"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCorder］ABC-056｜A HonestOrDishonest</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/2d1ad5bbcdaa39">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--hCuyRYxH--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCorder%25EF%25BC%25BDABC-056%25EF%25BD%259CA%2520HonestOrDishonest%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-056 A - HonestOrDishonest
+
+
+
+ 提出結果
+def getStringMap():
+    return input().split()
+
+
+def main():
+    a, b &#x3D; getStringMap()
+
+    if a &#x3D;&#x3D; &#x27;H&#x27;:
+        print(&#x27;H&#x27; if b &#x3D;&#x3D; &#x27;H&#x27; else &#x27;D&#x27;)
+    else:
+        print(&#x27;D&#x27; if b &#x3D;&#x3D; &#x27;H&#x27; else &#x27;H&#x27;)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/27463f33130688"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCorder］ABC-055｜A Restaurant</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/27463f33130688">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--xiPakPmN--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCorder%25EF%25BC%25BDABC-055%25EF%25BD%259CA%2520Restaurant%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-055 A - Restaurant
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    n &#x3D; getInt()
+
+    print((n * 800) - ((n // 15) * 200))
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/techike/articles/f364694b748af8"
+                        open
+                      >
+                        <summary class="article-expander__title">Pythonで使える四捨五入関数を作ってみた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/techike/articles/f364694b748af8">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--m7GqsA0u--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Fossa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%2588%25E3%2582%258B%25E5%259B%259B%25E6%258D%25A8%25E4%25BA%2594%25E5%2585%25A5%25E9%2596%25A2%25E6%2595%25B0%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS0yZjJHWnJrRy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U4YmM1NDU4MGUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+Pythonでデータを扱う場合、整数や小数に対して小学校でならうようないわゆる四捨五入をいい感じでしてくれる関数がなかったので自作してみました。
+整数と小数それぞれの四捨五入方法に関しては、こちらのページを参考にさせて頂きました。
+完成形のコードだけ見たいよという方は私のGithubからどうぞ。
+
+ 環境
+OS : AlmaLinux release 8.7
+Python 3.8.0
+numpy 1.23.4
+とりあえず必要なライブラリ・モジュールをimportしておきます。
+import numpy as np
+from decimal import Decimal, R...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;12
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/keikuchen/articles/9eb8860ef68722"
+                        open
+                      >
+                        <summary class="article-expander__title">install pyenv on 2022-12</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/keikuchen/articles/9eb8860ef68722">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--C4tYZwZx--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:keikuchen%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:install%2520pyenv%2520on%25202022-12%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS00Z1JodGEtMS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzg4ZTQ5MjAzMGEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Macを買い替えて、久々にpyenvとvirtualenv入れ直すか〜というところで改めて導入方法を調べながら進めていったのでそのメモ on 2022-12-25
+
+ TL;DR
+# Xcode Command Line Toolsを入れる
+xcode-select --install
+# homebrewを入れる
+/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+# pyenvを入れる
+brew update
+brew install pyenv...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/minamiso/articles/47e2f97eb1e4eb"
+                        open
+                      >
+                        <summary class="article-expander__title">[M1 mac] VSCodeをcodeコマンドで開きたい</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/minamiso/articles/47e2f97eb1e4eb">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--oHfUKA3K--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:minami%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%255BM1%2520mac%255D%2520VSCode%25E3%2582%2592code%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E3%2581%25A7%25E9%2596%258B%25E3%2581%258D%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvbS5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+M1macでVSCodeを利用しています。今までローカルのフォルダをワークスペースに追加するにはGUIでポチポチしていたのですが、codeコマンドを利用してスムーズに同様の動作ができることを知ったのでこれを使えるようにしていきます。
+
+ VSCodeから設定してみる
+Shift + Cmd + Pで&quot;Shell&quot;と入力して&quot;Install code command in PATH&quot;を選択します。
+
+本来はこれだけでcodeコマンドが使えるようになるはずですが、私の環境では以下エラーが出ました。
+% code
+/usr/local/bin/code: line 6: pyth...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/329/articles/be35a420460da0"
+                        open
+                      >
+                        <summary class="article-expander__title">無料主義〜資本主義の上位互換を目指して〜</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/329/articles/be35a420460da0">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ePLDJRxT--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%25B9%25E3%2582%25AE%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E7%2584%25A1%25E6%2596%2599%25E4%25B8%25BB%25E7%25BE%25A9%25E3%2580%259C%25E8%25B3%2587%25E6%259C%25AC%25E4%25B8%25BB%25E7%25BE%25A9%25E3%2581%25AE%25E4%25B8%258A%25E4%25BD%258D%25E4%25BA%2592%25E6%258F%259B%25E3%2582%2592%25E7%259B%25AE%25E6%258C%2587%25E3%2581%2597%25E3%2581%25A6%25E3%2580%259C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dXbnVHQkEtYmhyTVNLS0V1aUFQdFdQblR3MndheFBPSmhxcFlqPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>無料主義について
+資本主義を代替する経済の仕組みとして「無料主義」という仕組みを考えました。
+資本主義と社会主義など、限られた選択しかなかった経済の仕組みに新たな選択肢を与えます。
+既にこのようなことを考えている人が多いとは思いますが、僕は机上の空論ではなく本当に社会の仕組みの1部として実装していき、
+最終的には経済全体が資本主義ではなく無料主義で回る社会にしていきたいと考えています。
+
+ 無料主義の基本的な仕組み
+無料主義の基本となる仕組みについて解説します。
+下記のような経済の仕組みを、「無料主義」と呼びます。
+
+「幸福度の向上」「生産性の向上」「人権規範を守る」などの目標を掲げ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -10097,8 +10523,8 @@ cpi &#x3D; web.DataReader(&#x27;CPIAUCNS&#x27;, ...</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/3773797926">
-        <time id="build-timestamp" datetime="2022-12-25T01:39:50.889Z">2022-12-25T01:39:50.889Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/3778369149">
+        <time id="build-timestamp" datetime="2022-12-26T01:35:50.511Z">2022-12-26T01:35:50.511Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
