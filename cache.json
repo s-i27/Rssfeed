@@ -12,6 +12,126 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/yutakobayashi/articles/discord-online-members-chart",
+          "author": "Yuta Kobayashi",
+          "description": "最適なオンラインイベント開催時間を見つけるために、Discord サーバーのオンラインユーザー数の変化を収集する必要がありました。\nそこで、今回は Discord の API ラッパーである discord.py を使用して、サーバーのオンラインユーザー数を収集し、matplotlib を使用して可視化する一連の手順を紹介します。\n\n BOT の作成と招待\n\n!\n既に BOT をサーバーに招待済みであれば、次のセクションに進んでください。\n\nBOT アカウントを作成し、サーバーに招待することで、Discord サーバーでの情報収集を開始できます。BOT アカウントの作成には Discor...",
+          "link": "https://zenn.dev/yutakobayashi/articles/discord-online-members-chart",
+          "publishedOn": "2022-12-28T00:09:13.000Z",
+          "wordCount": 1328,
+          "title": "discord.pyでサーバーのオンラインユーザー数の変化を分析してみた",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--TwpYOt45--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Yuta%2520Kobayashi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:discord.py%25E3%2581%25A7%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2581%25AE%25E3%2582%25AA%25E3%2583%25B3%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%25A6%25E3%2583%25BC%25E3%2582%25B6%25E3%2583%25BC%25E6%2595%25B0%25E3%2581%25AE%25E5%25A4%2589%25E5%258C%2596%25E3%2582%2592%25E5%2588%2586%25E6%259E%2590%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1HRmdER0Y0WS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNhMTRkNzA2MTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--TwpYOt45--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Yuta%2520Kobayashi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:discord.py%25E3%2581%25A7%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2581%25AE%25E3%2582%25AA%25E3%2583%25B3%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%25A6%25E3%2583%25BC%25E3%2582%25B6%25E3%2583%25BC%25E6%2595%25B0%25E3%2581%25AE%25E5%25A4%2589%25E5%258C%2596%25E3%2582%2592%25E5%2588%2586%25E6%259E%2590%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1HRmdER0Y0WS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNhMTRkNzA2MTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/pitta/articles/d936e3999d9af9",
+          "author": "pittachan",
+          "description": "なぜかPoetryで作った仮想環境が検索できない\nVSCODEでPoetryで作った仮想環境を選択しようとしても出てこなくて困ったぜ🌟\n\n VSCODEの記述を確認する\nVSCODEドキュメントで確認できる\n\nVirtual environments located in the folder identified by the python.venvPath setting (see General Python settings), which can contain multiple virtual environments. The extension looks for v...",
+          "link": "https://zenn.dev/pitta/articles/d936e3999d9af9",
+          "publishedOn": "2022-12-27T14:22:31.000Z",
+          "wordCount": 173,
+          "title": "VSCODEでPoetryで設定した仮想環境を選択する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--SwBo34We--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:pittachan%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:VSCODE%25E3%2581%25A7Poetry%25E3%2581%25A7%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%2597%25E3%2581%259F%25E4%25BB%25AE%25E6%2583%25B3%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E9%2581%25B8%25E6%258A%259E%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mMHZkMk12bC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M2YWFhNGYwNGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--SwBo34We--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:pittachan%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:VSCODE%25E3%2581%25A7Poetry%25E3%2581%25A7%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%2597%25E3%2581%259F%25E4%25BB%25AE%25E6%2583%25B3%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E9%2581%25B8%25E6%258A%259E%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mMHZkMk12bC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M2YWFhNGYwNGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/yunkai/articles/55c6de4a47bb91",
+          "author": "yunkai",
+          "description": "pixivの検索結果の画像を大量にダウンロードするスクリプトを書きました。\npixivのAPIの非公式ラッパーであるpixivpyを使って実装しました。\n\n pixivpyの使い方\n\n pixivにログイン\npixiv apiを使用するにはpixivにログインする必要があります。\nログインにはrefresh tokenというものを使用します。\nrefresh tokenを取得する方法はこのブログを見てください。\napi = AppPixivAPI()\napi.auth(refresh_token=TOKEN)\n\n ログインできない問題\npixivはbotを弾くためにcloudflareを...",
+          "link": "https://zenn.dev/yunkai/articles/55c6de4a47bb91",
+          "publishedOn": "2022-12-27T13:08:12.000Z",
+          "wordCount": 1238,
+          "title": "Pixivをスクレイピングする",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--Rtq8RNiw--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:yunkai%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Pixiv%25E3%2582%2592%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%2594%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS01TlJLUy02ZS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzNzM4OTUxNGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Rtq8RNiw--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:yunkai%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Pixiv%25E3%2582%2592%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%2594%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS01TlJLUy02ZS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzNzM4OTUxNGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/eeharumt/articles/a440dad4358286",
+          "author": "eeharu",
+          "description": "Pycordにはボイスチャンネルの音声を録音する機能がある。\nhttps://guide.pycord.dev/voice/receiving\nこの機能で参加させた音声チャンネル内の音声を sink というオブジェクトに溜めファイルに変換することができるのだが、今回、ボットAが参加したチャンネル音声をボットBが参加している別のチャンネルに転送するみたいなことをしたかったため、ライブラリ内部でどんなことしているかを覗いてみた。\nPycordのstart_recording の内部を見てみるとrecv_audioをスレッドで実行していそうである。\nself.decoder = opus.De...",
+          "link": "https://zenn.dev/eeharumt/articles/a440dad4358286",
+          "publishedOn": "2022-12-27T07:00:01.000Z",
+          "wordCount": 378,
+          "title": "PycordでDiscordの音声を拾ってみる",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--P8mQIiS---/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:eeharu%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Pycord%25E3%2581%25A7Discord%25E3%2581%25AE%25E9%259F%25B3%25E5%25A3%25B0%25E3%2582%2592%25E6%258B%25BE%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hXRUhnMkVjMUsyMkhUZERCZDBmbzJFMXBzOTl1eDNEdUltRmxJPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--P8mQIiS---/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:eeharu%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Pycord%25E3%2581%25A7Discord%25E3%2581%25AE%25E9%259F%25B3%25E5%25A3%25B0%25E3%2582%2592%25E6%258B%25BE%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hXRUhnMkVjMUsyMkhUZERCZDBmbzJFMXBzOTl1eDNEdUltRmxJPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/c4f4b328651e60",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-058 A - ι⊥l\n\n\n\n 提出結果\ndef getIntMap():\n    return map(int, input().split())\n\n\ndef main():\n    a, b, c = getIntMap()\n    print('YES' if a + b + c == 3 * b else 'NO')\n\n\nif __name__ == \"__main__\":\n    main()",
+          "link": "https://zenn.dev/hyperdb/articles/c4f4b328651e60",
+          "publishedOn": "2022-12-27T05:14:55.000Z",
+          "wordCount": 270,
+          "title": "［AtCorder］ABC-058｜A ι⊥l",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--SIEJCU2t--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCorder%25EF%25BC%25BDABC-058%25EF%25BD%259CA%2520%25CE%25B9%25E2%258A%25A5l%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--SIEJCU2t--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCorder%25EF%25BC%25BDABC-058%25EF%25BD%259CA%2520%25CE%25B9%25E2%258A%25A5l%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/7eae9a5c063aca",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-057 A - Remaining Time\n\n\n\n 提出結果\ndef getIntMap():\n    return map(int, input().split())\n\n\ndef main():\n    a, b = getIntMap()\n\n    print((a + b) % 24)\n\n\nif __name__ == \"__main__\":\n    main()",
+          "link": "https://zenn.dev/hyperdb/articles/7eae9a5c063aca",
+          "publishedOn": "2022-12-27T05:14:55.000Z",
+          "wordCount": 247,
+          "title": "［AtCorder］ABC-057｜A Remaining Time",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--tCfjxuCC--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCorder%25EF%25BC%25BDABC-057%25EF%25BD%259CA%2520Remaining%2520Time%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--tCfjxuCC--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCorder%25EF%25BC%25BDABC-057%25EF%25BD%259CA%2520Remaining%2520Time%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/7e35de29207bd1",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-058 B - ∵∴∵\n\n\n\n 提出結果\ndef getString():\n    return input()\n\n\ndef main():\n    o = getString()\n    e = getString()\n\n    r = len(o) if len(o) <= len(e) else len(e)\n\n    s = ''\n    for i in range(r):\n        s = s + o[i] + e[i]\n    if len(o) > r:\n        s = s + o[-1 * (len(o) - r)]...",
+          "link": "https://zenn.dev/hyperdb/articles/7e35de29207bd1",
+          "publishedOn": "2022-12-27T05:14:54.000Z",
+          "wordCount": 450,
+          "title": "［AtCorder］ABC-058｜B ∵∴∵",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--P3qw1xZq--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCorder%25EF%25BC%25BDABC-058%25EF%25BD%259CB%2520%25E2%2588%25B5%25E2%2588%25B4%25E2%2588%25B5%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--P3qw1xZq--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCorder%25EF%25BC%25BDABC-058%25EF%25BD%259CB%2520%25E2%2588%25B5%25E2%2588%25B4%25E2%2588%25B5%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/3a1d2389271d95",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-057 B - Checkpoints\n\n\n\n 提出結果\ndef getIntMap():\n    return map(int, input().split())\n\n\ndef getIntListRow(N):\n    return [list(map(int, input().split())) for _ in range(N)]\n\n\ndef main():\n    n, m = getIntMap()\n    ab = getIntListRow(n)\n    cd = getIntListRow(m)\n\n    for i in range(len(...",
+          "link": "https://zenn.dev/hyperdb/articles/3a1d2389271d95",
+          "publishedOn": "2022-12-27T05:14:54.000Z",
+          "wordCount": 531,
+          "title": "［AtCorder］ABC-057｜B Checkpoints",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--jzGgMgcw--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCorder%25EF%25BC%25BDABC-057%25EF%25BD%259CB%2520Checkpoints%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--jzGgMgcw--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCorder%25EF%25BC%25BDABC-057%25EF%25BD%259CB%2520Checkpoints%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
           "id": "https://zenn.dev/aidemy/articles/42c4cda2d42667",
           "author": "shigeyuu",
           "description": "1.はじめに\nここ一年ほど使用していたクラウドアプリケーションプラットホームであるHerokuは、2022年11月28日より無料プランが廃止されてしまったため、他のサービスであるRenderに移行しました。\nRenderはGithub連携で簡単にデプロイを行うことができるサービスですが、Githubでは100MB以上のファイルを管理できないという欠点があり、 Git Large File Storageなるものがあるのですが、無料枠は1GBまで。。色々調べているとGoogleDriveからダウンロードする方法を見つけたので備忘録として記述していきます。\n\n 2.本記事のゴール\nローカ...",
@@ -4335,171 +4455,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--dSGkVfcy--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Kumamoto-Hamachi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:gRPC%25E3%2581%25AE4%25E3%2581%25A4%25E3%2581%25AE%25E9%2580%259A%25E4%25BF%25A1%25E6%2596%25B9%25E5%25BC%258F%25E3%2582%2592Python%25E3%2581%25A7%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS0ycDhvc0FrWC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzM2JiOGEyZDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/paraches/articles/codility_lesson_9_16",
-          "author": "paraches",
-          "description": "前回の続き。\n今回はLesson 9〜16までのeasyをやって行きます。\n\n リポジトリ\nhttps://github.com/paraches/codility_lessons\n\n Lesson 9 Maximum slice problem\n最大スライス問題\n\n MaxProfit\nhttps://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_profit/\n\n 問題\n配列AにはN個の整数が含まれている。これには連続したN日分の株価が収められている。\n0<=P<Q<Nの時、P日に買...",
-          "link": "https://zenn.dev/paraches/articles/codility_lesson_9_16",
-          "publishedOn": "2022-11-28T09:56:04.000Z",
-          "wordCount": 3538,
-          "title": "CodilityのLessonをやってみる（9-16）",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--QbIsvyc1--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:paraches%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Codility%25E3%2581%25AELesson%25E3%2582%2592%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25EF%25BC%25889-16%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cxR24wTFd4eDlBT2RidTBjSDNDaGswVnhoNG83RHJQa1N1cHQyYlE9czgwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--QbIsvyc1--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:paraches%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Codility%25E3%2581%25AELesson%25E3%2582%2592%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25EF%25BC%25889-16%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cxR24wTFd4eDlBT2RidTBjSDNDaGswVnhoNG83RHJQa1N1cHQyYlE9czgwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/kn1kn1/articles/48a2aeb34a2037",
-          "author": "kn1kn1",
-          "description": "概要\n表記の件でワークアラウンドコードを書いて回避したので、その備忘録。\n\n 事象\n以下のようなコードで、ランダムフォレストの学習モデルをONNXに変換しようとしたところ、AttributeError: 'numpy.bool_' object has no attribute 'encode'  のエラーが発生した。\nfrom sklearn.ensemble import RandomForestClassifier\n\nclassifier = RandomForestClassifier(\n    n_estimators = 5,\n    random_state = 42,...",
-          "link": "https://zenn.dev/kn1kn1/articles/48a2aeb34a2037",
-          "publishedOn": "2022-11-28T04:13:24.000Z",
-          "wordCount": 269,
-          "title": "sklearn-onnxで、RandomForestClassifierの出力がboolのときにエラーになる件",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--m6NDCHao--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kn1kn1%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:sklearn-onnx%25E3%2581%25A7%25E3%2580%2581RandomForestClassifier%25E3%2581%25AE%25E5%2587%25BA%25E5%258A%259B%25E3%2581%258Cbool%25E3%2581%25AE%25E3%2581%25A8%25E3%2581%258D%25E3%2581%25AB%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258B%25E4%25BB%25B6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1TdXVlVmFjWi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RlYWI2YjE4ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--m6NDCHao--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kn1kn1%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:sklearn-onnx%25E3%2581%25A7%25E3%2580%2581RandomForestClassifier%25E3%2581%25AE%25E5%2587%25BA%25E5%258A%259B%25E3%2581%258Cbool%25E3%2581%25AE%25E3%2581%25A8%25E3%2581%258D%25E3%2581%25AB%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258B%25E4%25BB%25B6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1TdXVlVmFjWi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RlYWI2YjE4ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/ryurock/articles/qiita-20151127-4c560143134121905328",
-          "author": "ryurock",
-          "description": "きっとansibleに限らずなんだけども設定ファイルなどでファイルの先頭行に文字列を追加したい時があると思う。\n(設定ファイルの設定の順番で挙動で変わるものとか)\n今まではCentOSであんまり気にしなかったけどもどうやらOSXではうまく行かなかったのでその時のメモ\nそして@urauraさんのやり方が一番シンプルだったことに気づいた・・・・\n\n 環境\n\nMac OSX Yosemite(10.10.5)\n\npython 2.7.10\n\nansible 1.9.4\n\n\n\n\n\n\n ファイルの先頭行に文字列を追加するplaybook\n~/.zshrc に挿入したい文字列が存在しなければ .zs...",
-          "link": "https://zenn.dev/ryurock/articles/qiita-20151127-4c560143134121905328",
-          "publishedOn": "2022-11-28T02:37:28.000Z",
-          "wordCount": 181,
-          "title": "【ansible】ファイルの先頭行に文字列を追加するplaybookの例",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--dEhSan3X--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ryurock%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590ansible%25E3%2580%2591%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AE%25E5%2585%2588%25E9%25A0%25AD%25E8%25A1%258C%25E3%2581%25AB%25E6%2596%2587%25E5%25AD%2597%25E5%2588%2597%25E3%2582%2592%25E8%25BF%25BD%25E5%258A%25A0%25E3%2581%2599%25E3%2582%258Bplaybook%25E3%2581%25AE%25E4%25BE%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MnVaZFk1ME5weXdTM0hZZm1Icnl3VktKX3UtSkhlQUd0V09vUjU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--dEhSan3X--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ryurock%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590ansible%25E3%2580%2591%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AE%25E5%2585%2588%25E9%25A0%25AD%25E8%25A1%258C%25E3%2581%25AB%25E6%2596%2587%25E5%25AD%2597%25E5%2588%2597%25E3%2582%2592%25E8%25BF%25BD%25E5%258A%25A0%25E3%2581%2599%25E3%2582%258Bplaybook%25E3%2581%25AE%25E4%25BE%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MnVaZFk1ME5weXdTM0hZZm1Icnl3VktKX3UtSkhlQUd0V09vUjU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/ryurock/articles/qiita-20151126-5231aa038acef2732e90",
-          "author": "ryurock",
-          "description": "昔のバージョンに比べて大分便利(自分の書き方が古く)になってきたので、自分のdotfileの管理をansibleに切り替えて色々触ってみた時のメモ\n\n 環境\n\nMac OSX Yosemite(10.10.5)\n\npython 2.7.10\n\nansible 1.9.4\n\n\n\n\n\n\n 参考にしたサイト\n\nAnsible-docs Best Practices\nAnsible-docs All Modules\nAnsible コーディング規約 (の例)\n\n\n Best Practicesのディレクトリレイアウトは目を通す\n色んなリポジトリを見ていると結構色んなディレクトリ構成でansibl...",
-          "link": "https://zenn.dev/ryurock/articles/qiita-20151126-5231aa038acef2732e90",
-          "publishedOn": "2022-11-28T02:37:28.000Z",
-          "wordCount": 477,
-          "title": "【ansible】僕がansibleを書くときに気をつけている事",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--juc5lhF1--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ryurock%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590ansible%25E3%2580%2591%25E5%2583%2595%25E3%2581%258Cansible%25E3%2582%2592%25E6%259B%25B8%25E3%2581%258F%25E3%2581%25A8%25E3%2581%258D%25E3%2581%25AB%25E6%25B0%2597%25E3%2582%2592%25E3%2581%25A4%25E3%2581%2591%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E4%25BA%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MnVaZFk1ME5weXdTM0hZZm1Icnl3VktKX3UtSkhlQUd0V09vUjU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--juc5lhF1--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ryurock%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590ansible%25E3%2580%2591%25E5%2583%2595%25E3%2581%258Cansible%25E3%2582%2592%25E6%259B%25B8%25E3%2581%258F%25E3%2581%25A8%25E3%2581%258D%25E3%2581%25AB%25E6%25B0%2597%25E3%2582%2592%25E3%2581%25A4%25E3%2581%2591%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E4%25BA%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MnVaZFk1ME5weXdTM0hZZm1Icnl3VktKX3UtSkhlQUd0V09vUjU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/ryurock/articles/qiita-20151120-639e5f7e49d25c3b6d75",
-          "author": "ryurock",
-          "description": "Ansibleのshell moduleを使用してコマンド結果のみをregisterに保存しておきたい時がある\n自分の場合はログインShellがzshなのかbashなのかを調べたくてこんなタスクを書いた\n- name: check using shell register in file path\n  shell: |\n      if [ `echo $SHELL | grep -c \"zsh\"` -eq 1 ]; then\n        echo \".zshrc\"\n      elif [ `echo $SHELL | grep -c \"bash\"` -eq 1 ]; then\n ...",
-          "link": "https://zenn.dev/ryurock/articles/qiita-20151120-639e5f7e49d25c3b6d75",
-          "publishedOn": "2022-11-28T02:37:27.000Z",
-          "wordCount": 395,
-          "title": "【ansible】強制的にchangedを発生させない方法",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--cpOimIUU--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ryurock%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590ansible%25E3%2580%2591%25E5%25BC%25B7%25E5%2588%25B6%25E7%259A%2584%25E3%2581%25ABchanged%25E3%2582%2592%25E7%2599%25BA%25E7%2594%259F%25E3%2581%2595%25E3%2581%259B%25E3%2581%25AA%25E3%2581%2584%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MnVaZFk1ME5weXdTM0hZZm1Icnl3VktKX3UtSkhlQUd0V09vUjU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--cpOimIUU--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ryurock%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590ansible%25E3%2580%2591%25E5%25BC%25B7%25E5%2588%25B6%25E7%259A%2584%25E3%2581%25ABchanged%25E3%2582%2592%25E7%2599%25BA%25E7%2594%259F%25E3%2581%2595%25E3%2581%259B%25E3%2581%25AA%25E3%2581%2584%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MnVaZFk1ME5weXdTM0hZZm1Icnl3VktKX3UtSkhlQUd0V09vUjU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/ryurock/articles/qiita-20150205-b4db10a7989603d6bf8d",
-          "author": "ryurock",
-          "description": "CSVのダミーデータを作る場合、巷にダミー作成サイトは沢山ありますが\n大概の場合は日本語に対応されていません。\nそこでPythonの Faker を使用してCSVダミーデータを日本語で作成した時のメモ\n\n 環境\n\nOSX 10.9.5\n\n\n 参考にしたサイト\n\nfake-factoryでダミーデータ生成\n\njoke2k/faker\n\n\n 事前準備に必要なもの\n\npython 2.6.9 (で試しました。他はわかりません・・・)\npip\n\n\n Fakerのインストール\n\n/path/to/hoge\npip install fake-factory\n\n\n Fakerは日本語対応していません\n...",
-          "link": "https://zenn.dev/ryurock/articles/qiita-20150205-b4db10a7989603d6bf8d",
-          "publishedOn": "2022-11-28T02:37:23.000Z",
-          "wordCount": 829,
-          "title": "Fakerを使用して日本語を含んだCSVダミーファイルを作成する方法",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--HOwjKGqc--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ryurock%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Faker%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E3%2582%2592%25E5%2590%25AB%25E3%2582%2593%25E3%2581%25A0CSV%25E3%2583%2580%25E3%2583%259F%25E3%2583%25BC%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MnVaZFk1ME5weXdTM0hZZm1Icnl3VktKX3UtSkhlQUd0V09vUjU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--HOwjKGqc--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ryurock%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Faker%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E3%2582%2592%25E5%2590%25AB%25E3%2582%2593%25E3%2581%25A0CSV%25E3%2583%2580%25E3%2583%259F%25E3%2583%25BC%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MnVaZFk1ME5weXdTM0hZZm1Icnl3VktKX3UtSkhlQUd0V09vUjU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/ryurock/articles/qiita-20140226-bb412e02981168e49a2d",
-          "author": "ryurock",
-          "description": "ryurock/ansible-installer\nAnsibleの関係でpythonを入れる時にyyuu/pyenv-installerってのを見つけて、にゃるほどと思いansibleを入れる時も同じ要領で作っておけば楽チンだと思いまして作ってみました。\n作ったばっかなので自己責任でお願いします。(キリッ!!)\n\n 環境\n\nosx\nLinux\n\n\n 注意事項\n\nPythonのインストールでpyenv-installerを使用しています。pyenvを既にお使いの方はpython2.6.9がインストールされますのでご注意ください。globalも2.6.9になります。\n\n\n 参考にしたサイト...",
-          "link": "https://zenn.dev/ryurock/articles/qiita-20140226-bb412e02981168e49a2d",
-          "publishedOn": "2022-11-28T02:34:54.000Z",
-          "wordCount": 167,
-          "title": "Ansible-installerってのを作ってみた",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--i1xnvgaC--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ryurock%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Ansible-installer%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25AE%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MnVaZFk1ME5weXdTM0hZZm1Icnl3VktKX3UtSkhlQUd0V09vUjU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--i1xnvgaC--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ryurock%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Ansible-installer%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25AE%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MnVaZFk1ME5weXdTM0hZZm1Icnl3VktKX3UtSkhlQUd0V09vUjU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/ryurock/articles/qiita-20131220-9cd0aee66003eba482e4",
-          "author": "ryurock",
-          "description": "Advent Calendar初参加です。\nガクガクプルプルしています。(((( ；ﾟДﾟ))))ｶﾞｸｶﾞｸﾌﾞﾙﾌﾞﾙ\nプロビジョニングフレームワークの中でも比較的ユルっとフワッと始められるAnsible\nでもあなたがもしDevなら導入にあたりOpsの説得が必要です。\nそんなときにAnsibleの導入で謙る、ごねるネタをいくつかご紹介します。\n\n 対象者\n最近流行のプロビジョニングフレームワークを導入したい！！って方。\n\n でも、それって結構インフラ担当者から嫌がられる事が多いんですよね。\nそりゃあ、普段あまりプログラムを書かない人達に\n\n 「プログラムを書いて自動化できるんですよ！...",
-          "link": "https://zenn.dev/ryurock/articles/qiita-20131220-9cd0aee66003eba482e4",
-          "publishedOn": "2022-11-28T02:34:53.000Z",
-          "wordCount": 252,
-          "title": "Ansibleを導入したい人の為のくどきポイント",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--62i3iQ7m--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ryurock%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Ansible%25E3%2582%2592%25E5%25B0%258E%25E5%2585%25A5%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%25E4%25BA%25BA%25E3%2581%25AE%25E7%2582%25BA%25E3%2581%25AE%25E3%2581%258F%25E3%2581%25A9%25E3%2581%258D%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MnVaZFk1ME5weXdTM0hZZm1Icnl3VktKX3UtSkhlQUd0V09vUjU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--62i3iQ7m--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ryurock%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Ansible%25E3%2582%2592%25E5%25B0%258E%25E5%2585%25A5%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%25E4%25BA%25BA%25E3%2581%25AE%25E7%2582%25BA%25E3%2581%25AE%25E3%2581%258F%25E3%2581%25A9%25E3%2581%258D%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MnVaZFk1ME5weXdTM0hZZm1Icnl3VktKX3UtSkhlQUd0V09vUjU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/tokoroteen/articles/ae6fed0b15218b",
-          "author": "Tokoroteen",
-          "description": "1. 概要\nこちらの記事の焼き直しです。\nPythonで作ったWebアプリをHeroku上でデプロイしていましたが、2022/11で無料プランが終了することとなりました。そこで、Renderに移行しようと思いましたが、無料プランでは上手く動いてくれませんでした。\n色々探していたところ、学生向けに1年間有料プランをタダで使わせてくれる制度があることを発見しましたのでそちらを活用していきます。\nHerokuは学生向けに$156奢ってくれるみたいです。\n\nIf you are registered with the GitHub Student Developer Pack, you ar...",
-          "link": "https://zenn.dev/tokoroteen/articles/ae6fed0b15218b",
-          "publishedOn": "2022-11-28T02:11:31.000Z",
-          "wordCount": 295,
-          "title": "【学生向け】Herokuをタダで使う",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--aOfGNzl0--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Tokoroteen%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E3%2580%2590%25E5%25AD%25A6%25E7%2594%259F%25E5%2590%2591%25E3%2581%2591%25E3%2580%2591Heroku%25E3%2582%2592%25E3%2582%25BF%25E3%2583%2580%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1VS1pkSGdFYS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk3NzNmMDYyZTguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--aOfGNzl0--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Tokoroteen%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E3%2580%2590%25E5%25AD%25A6%25E7%2594%259F%25E5%2590%2591%25E3%2581%2591%25E3%2580%2591Heroku%25E3%2582%2592%25E3%2582%25BF%25E3%2583%2580%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1VS1pkSGdFYS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk3NzNmMDYyZTguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/ryutaro_h/articles/b028995914f085",
-          "author": "Ryutaro",
-          "description": "初めに\nエンジニアとして働き始めてから数ヶ月経ち業務に携わる中で、コード設計について学ぶ必要性があると思い、「良いコード/悪いコードで学ぶ設計入門 ―保守しやすい 成長し続けるコードの書き方」を手に取り、学んでいます。本記事はこちらを参考に書いています。\n今回は 「凝集度」 について、概念と低凝集の問題点。対する高凝集にするテクニック、について取り上げます。\n\n\n 前提\n\n 凝集度とは\n\n凝集度とは、「モジュール(クラス)内における、データとロジックの関係性の強さを表す指標です\n\nそれぞれ凝集度が高い・低いとは以下の構造を表します。\n\n\n凝集度が高い(高凝集): クラス内のデータと、...",
-          "link": "https://zenn.dev/ryutaro_h/articles/b028995914f085",
-          "publishedOn": "2022-11-28T01:28:19.000Z",
-          "wordCount": 425,
-          "title": "[コード設計]高凝集な設計を目指す",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--rEWi2SeZ--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Ryutaro%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%255B%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E8%25A8%25AD%25E8%25A8%2588%255D%25E9%25AB%2598%25E5%2587%259D%25E9%259B%2586%25E3%2581%25AA%25E8%25A8%25AD%25E8%25A8%2588%25E3%2582%2592%25E7%259B%25AE%25E6%258C%2587%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1RTGdza19qdi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2IyYjlkMTUzNTAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--rEWi2SeZ--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Ryutaro%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%255B%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E8%25A8%25AD%25E8%25A8%2588%255D%25E9%25AB%2598%25E5%2587%259D%25E9%259B%2586%25E3%2581%25AA%25E8%25A8%25AD%25E8%25A8%2588%25E3%2582%2592%25E7%259B%25AE%25E6%258C%2587%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1RTGdza19qdi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2IyYjlkMTUzNTAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/siganai/articles/20221127_statistical_index",
-          "author": "SiganAI",
-          "description": "データを分析する際に使用する指標の算出方法および指標が指し示す内容について備忘録としてまとめる．\n使用言語はPython．\n本記事中で例示するために使用したコードは，ここからダウンロード可能．\n分析するデータはrandomモジュールによりランダムに作成した．\n\n 準備\n必要なライブラリをインストールする．\n\nterminal\npip install numpy\npip install scipy\n\n\n 算出方法\n\n 分析対象のデータをランダム作成\nPythonの標準ライブラリであるrandomモジュールを使用する．\n分析対象の配列targetの配列長を変数lengthで制御する．\n以下に...",
-          "link": "https://zenn.dev/siganai/articles/20221127_statistical_index",
-          "publishedOn": "2022-11-27T13:58:24.000Z",
-          "wordCount": 1190,
-          "title": "【Python】データ分析に用いる指標の算出方法について【備忘録】",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--Rj2QbjpL--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:SiganAI%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590Python%25E3%2580%2591%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2588%2586%25E6%259E%2590%25E3%2581%25AB%25E7%2594%25A8%25E3%2581%2584%25E3%2582%258B%25E6%258C%2587%25E6%25A8%2599%25E3%2581%25AE%25E7%25AE%2597%25E5%2587%25BA%25E6%2596%25B9%25E6%25B3%2595%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2580%2590%25E5%2582%2599%25E5%25BF%2598%25E9%258C%25B2%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkMycHdUMUEzOWY2TzVOSGd4T3FHTUpqNXZNUHU4RHpwRThBQXU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Rj2QbjpL--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:SiganAI%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590Python%25E3%2580%2591%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2588%2586%25E6%259E%2590%25E3%2581%25AB%25E7%2594%25A8%25E3%2581%2584%25E3%2582%258B%25E6%258C%2587%25E6%25A8%2599%25E3%2581%25AE%25E7%25AE%2597%25E5%2587%25BA%25E6%2596%25B9%25E6%25B3%2595%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2580%2590%25E5%2582%2599%25E5%25BF%2598%25E9%258C%25B2%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkMycHdUMUEzOWY2TzVOSGd4T3FHTUpqNXZNUHU4RHpwRThBQXU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
         }
       ]
     }
