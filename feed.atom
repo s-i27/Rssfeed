@@ -2,10 +2,370 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2022-12-29T01:36:58.242Z</updated>
+    <updated>2022-12-30T01:37:07.996Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[boto3で特定のメソッドをmockする]]></title>
+        <id>https://zenn.dev/shimo_s3/articles/69be3cc07d2313</id>
+        <link href="https://zenn.dev/shimo_s3/articles/69be3cc07d2313"/>
+        <updated>2022-12-29T22:40:06.000Z</updated>
+        <summary type="html"><![CDATA[やりたいこと
+Pythonのユニットテストで、boto3クライアントの特定メソッド(だけ)をモックしたいときがあります。こちらのstackoverflowに良さそうのやり方があったのでメモ。解はいろいろありそうですが、そのうち2つに関して書きます。(※motoは使わない)
+https://stackoverflow.com/questions/37143597/mocking-boto3-s3-client-method-python/
+
+ 方法1. botocoreのstubを使う
+boto3のドキュメントよりコードをコピペ
+import datetime
+import botoc...]]></summary>
+        <author>
+            <name>shimo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonでWebページをPDF化する]]></title>
+        <id>https://zenn.dev/momiji777/articles/70c897ddff016c</id>
+        <link href="https://zenn.dev/momiji777/articles/70c897ddff016c"/>
+        <updated>2022-12-29T11:21:00.000Z</updated>
+        <summary type="html"><![CDATA[仮想環境を作成し、ライブラリをインストール
+python -m venv pdf
+.\pdf\Scripts\activate
+pip install pdfkit
+
+ 次にWkhtmltopdfをインストールする
+wkhtmltopdfを操作する必要があるため、元アプリケーションをインストールします。
+↓インストーラーダウンロードサイト↓
+https://wkhtmltopdf.org/downloads.html
+
+ インストールできているか確認
+wkhtmltopdf -V
+以下の通り表示されていれば、正常にインストールできています。
+
+※エラーが出る場合は環境変数設定ができて...]]></summary>
+        <author>
+            <name>momiji777</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Serverless Framework で作成した Lambda の関数名を直書きしないためにちょっとしたツールを作った]]></title>
+        <id>https://zenn.dev/hayata_yamamoto/articles/3272e136601ba7</id>
+        <link href="https://zenn.dev/hayata_yamamoto/articles/3272e136601ba7"/>
+        <updated>2022-12-29T10:54:09.000Z</updated>
+        <summary type="html"><![CDATA[個人的にServerless Framework を運用する際にちょっとした面倒ポイントになっていた「Lambdaの関数名を直書きしなくてはいけない」問題を解決するために、ちょっとしたツールを開発した話をまとめました。もし共感する人がいたら、ちょっとずつでも育てていこうかと思っており、Contribution もらえると嬉しいです！（歓迎します）
+https://github.com/hayata-yamamoto/ptmpdy
+
+ どのような問題を解決したかったのか
+サーバーレスアプリケーションを構築する際にはさまざまな選択肢があります。例えば、Serverless Framework...]]></summary>
+        <author>
+            <name>山本隼汰 | Hayata Yamamoto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Fakeshell」で標的型攻撃の演習環境を作る]]></title>
+        <id>https://zenn.dev/tatsui/articles/e2e82d844740b3</id>
+        <link href="https://zenn.dev/tatsui/articles/e2e82d844740b3"/>
+        <updated>2022-12-29T10:02:45.000Z</updated>
+        <summary type="html"><![CDATA[標的型攻撃（APT: Advanced Persistent Threat）とは、特定の目的を達成するために特定の組織や個人を標的とする、長期的で持続的な攻撃のことを指します。この攻撃の特徴は、標的となる組織や個人を攻撃するために、様々な手段を用いることです。例えば、脆弱性を突いたり、フィッシング攻撃を行ったり、マルウェアを埋め込んだり、盗聴することなどです。
+このような攻撃は、企業や政府機関をはじめとする、様々な組織が標的となることがあります。そのため、防御のためには、常に最新のセキュリティ対策を行い、社内でのセキュリティ意識の向上のための継続的なセキュリティトレーニングが求められます...]]></summary>
+        <author>
+            <name>phishing-hunter</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python プログラムを常駐させて動かし続けるための Dockerfile を書いていた]]></title>
+        <id>https://zenn.dev/imksoo/articles/233f59e5b84867</id>
+        <link href="https://zenn.dev/imksoo/articles/233f59e5b84867"/>
+        <updated>2022-12-29T09:54:12.000Z</updated>
+        <summary type="html"><![CDATA[Websocket を受信し続けるプログラムを書いていた の Python コードを継続的に動かし続けるためのコンテナを Dockerfile で組み立てていました。
+Python 標準ライブラリ以外のパッケージ一覧を requirements.txt にリストアップしておきます。
+
+requirements.txt 
+asyncio
+boto3
+websockets
+
+Alpine ベースの Python3 イメージに対して pip install -r requirements.txt コマンドを実行して依存パッケージをインストールし、動かしたい Python スクリプト一式をコンテ...]]></summary>
+        <author>
+            <name>きりの</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Websocket を受信し続けるプログラムを書いていた]]></title>
+        <id>https://zenn.dev/imksoo/articles/07a92955c77d7a</id>
+        <link href="https://zenn.dev/imksoo/articles/07a92955c77d7a"/>
+        <updated>2022-12-29T09:46:56.000Z</updated>
+        <summary type="html"><![CDATA[リアルタイムなメッセージングをブラウザー上で実現する Websocket を継続的に受信し続ける Python プログラムを書いてました。
+メッセージには Update(更新)イベント と Delete(削除)イベント の2種類があるのでそれぞれ場合分けしています。
+受信した内容は　Amazon SQS にキューイングすることで、一度に許容量を超える大量にメッセージが配信されてきたときにも貯め込んでおいて後からゆっくり処理することが出来ます。
+
+tootprobe.js
+import os, json, datetime
+import asyncio
+import boto3
+impor...]]></summary>
+        <author>
+            <name>きりの</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonでclassを使う: 設計編(2) 汎用親クラスの設計]]></title>
+        <id>https://zenn.dev/sergicalsix/articles/d9357dac6e0059</id>
+        <link href="https://zenn.dev/sergicalsix/articles/d9357dac6e0059"/>
+        <updated>2022-12-29T07:12:52.000Z</updated>
+        <summary type="html"><![CDATA[結論
+from abc import ABCMeta, abstractmethod
+
+class BaseModel(metaclass=ABCMeta):
+    __slots__ = ('name')
+    @abstractmethod
+    def calc(self):
+        pass
+    
+class Model(BaseModel):
+    __slots__ = ('name')
+    def calc(self):
+        #具体的な処理を記述
+	pass 
+
+ はじめに
+似たようなclassを複数作成する場合の汎用的な親クラスの作...]]></summary>
+        <author>
+            <name>sergicalsix</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCorder］ABC-065｜B Trained?]]></title>
+        <id>https://zenn.dev/hyperdb/articles/f5c30c90fd11b0</id>
+        <link href="https://zenn.dev/hyperdb/articles/f5c30c90fd11b0"/>
+        <updated>2022-12-29T04:18:33.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-065 B - Trained?
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntRow(N):
+    return [int(input()) for _ in range(N)]
+
+
+def main():
+    n = getInt()
+    a = getIntRow(n)
+
+    a.insert(0, 0)
+    b = 1
+    c = 0
+    f = False
+    for i in range(n):
+        c += 1
+        b =...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCorder］ABC-064｜B Traveling AtCoDeer Problem]]></title>
+        <id>https://zenn.dev/hyperdb/articles/ced9b53c0ebbd5</id>
+        <link href="https://zenn.dev/hyperdb/articles/ced9b53c0ebbd5"/>
+        <updated>2022-12-29T04:18:32.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-064 B - Traveling AtCoDeer Problem
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n = getInt()
+    a = getIntList()
+
+    a.sort()
+
+    print(a[n - 1] - a[0])
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCorder］ABC-063｜A Restricted]]></title>
+        <id>https://zenn.dev/hyperdb/articles/939309dd85a4bd</id>
+        <link href="https://zenn.dev/hyperdb/articles/939309dd85a4bd"/>
+        <updated>2022-12-29T04:18:32.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-063 A - Restricted
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b = getIntMap()
+    c = a + b
+
+    print(c if c < 10 else 'error')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCorder］ABC-065｜A Expired?]]></title>
+        <id>https://zenn.dev/hyperdb/articles/42d6fd0597b6ec</id>
+        <link href="https://zenn.dev/hyperdb/articles/42d6fd0597b6ec"/>
+        <updated>2022-12-29T04:18:31.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-065 A - Expired?
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    x, a, b = getIntMap()
+
+    print('delicious' if b - a <= 0 else 'dangerous' if b - a > x else 'safe')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCorder］ABC-063｜B Varied]]></title>
+        <id>https://zenn.dev/hyperdb/articles/3f9794654d30c1</id>
+        <link href="https://zenn.dev/hyperdb/articles/3f9794654d30c1"/>
+        <updated>2022-12-29T04:18:31.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-043 B - Varied
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = list(getString())
+    t = list(set(s))
+
+    print('yes' if len(s) == len(t) else 'no')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCorder］ABC-064｜A RGB Cards]]></title>
+        <id>https://zenn.dev/hyperdb/articles/1881c34d011cd6</id>
+        <link href="https://zenn.dev/hyperdb/articles/1881c34d011cd6"/>
+        <updated>2022-12-29T04:18:31.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-064 A - RGB Cards
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    r, g, b = getIntMap()
+
+    print('YES' if ((r * 100 + g * 10 + b) % 4) == 0 else 'NO')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】ファイル一覧をsortして取得(glob, natsort)]]></title>
+        <id>https://zenn.dev/sergicalsix/articles/2393ab1172952f</id>
+        <link href="https://zenn.dev/sergicalsix/articles/2393ab1172952f"/>
+        <updated>2022-12-29T03:43:01.000Z</updated>
+        <summary type="html"><![CDATA[結論
+python
+import glob
+from natsort import natsorted
+
+def get_sort_files(path):
+    """
+    usage:
+    (i) :get_sort_files('dir/*')
+    (ii):get_sort_files('dir/*.txt')
+    """
+    files = glob.glob(path)
+    return natsorted(files)
+bash
+(venv)$ pip install natsort
+
+ 内容
+ディレクトリのファイル名をsortして表示すること...]]></summary>
+        <author>
+            <name>sergicalsix</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPIに触れてみる]]></title>
+        <id>https://zenn.dev/hirohiroeng/articles/eb7e56a31383c1</id>
+        <link href="https://zenn.dev/hirohiroeng/articles/eb7e56a31383c1"/>
+        <updated>2022-12-29T01:56:26.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+今回は、React から離れて Python のフレームワークであるFastAPIに触れてみました。
+色々と分かった事を自分の備忘録として、まとめていこうと思います。
+
+ 参考にした記事
+https://fastapi.tiangolo.com/ja/
+
+ 触った理由
+フロントの知識も少しずつ深まり、バックエンドの知識や技術を知る必要が今後必要だと感じて、色々ネットを漁った結果FastAPIにたどり着いたという感じです。
+初心者が学ぶには丁度いいとのことで、今回学習してみました。まだまだFlaskの利用者が多いですが今後流行ればいいなと思います。
+
+ FastAPI の構造...]]></summary>
+        <author>
+            <name>hirohiro_eng</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【Python】Aを変えると、Bが変わる不思議な変数とIDの話]]></title>
         <id>https://zenn.dev/unico417/articles/950452926f2ac1</id>
@@ -6928,179 +7288,6 @@ https://spe...]]></summary>
 例えば，以下の簡単な割当問題を考えましょう．m人の作業員にn個...]]></summary>
         <author>
             <name>Umepon</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[二項分布の正規近似 De Moivre-Laplace theorem]]></title>
-        <id>https://zenn.dev/shundeveloper/articles/4b331a06ca88c0</id>
-        <link href="https://zenn.dev/shundeveloper/articles/4b331a06ca88c0"/>
-        <updated>2022-11-30T13:00:00.000Z</updated>
-        <summary type="html"><![CDATA[この記事は英語版wikipedia「De Moivre–Laplace theorem」の解説を行う. すなわち, 二項分布の正規近似について取り扱う. 一方で二項分布の期待値・分散などの基本的性質については記事では触れない.
-二項分布の基本的な性質および証明については「二項分布の期待値と分散, 最尤推定, 可視化」という記事で扱ったので適宜参照されたい.
-
- ド・モアブル-ラプラスの定理
-
- 定理
-二項分布に従う確率変数 X を定義する. このとき n \to \inftyにおいて, 近似的に以下が成り立つ.
-
-\begin{align*}
-\frac{X-np}{\sqrt{npq}...]]></summary>
-        <author>
-            <name>ShunDev</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Discordライブラリのpycordでボイスチャンネルの録音]]></title>
-        <id>https://zenn.dev/maguro_alterna/articles/4b8967d4c90b89</id>
-        <link href="https://zenn.dev/maguro_alterna/articles/4b8967d4c90b89"/>
-        <updated>2022-11-30T07:31:24.000Z</updated>
-        <summary type="html"><![CDATA[本稿は9月にQittaに投稿したものと同様のものです。
-DiscordAPIには音声を録音する機能があります。
-ですがDiscord.pyではプライバシーの面で実装されておらず、Discord.jsは頻繁に変更が施されるため、簡単に録音できる手段は確立されていませんでした。
-そんな中で22年3月、Discord.pyの派生ライブラリ、pycordに録音機能が実装されました。
-日本語での解説が見当たらなかったので、ここで説明します。
-
- 環境
-python 3.8.6 64bit(ここに関しては3.10とかでも問題なし)
-
-pipインストール
-pip install discord
-pip...]]></summary>
-        <author>
-            <name>マグロ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[fish shellのM1 MacにPython + pyenvをインストールする]]></title>
-        <id>https://zenn.dev/lightkun/articles/fc85ec0b0d3986</id>
-        <link href="https://zenn.dev/lightkun/articles/fc85ec0b0d3986"/>
-        <updated>2022-11-30T00:24:18.000Z</updated>
-        <summary type="html"><![CDATA[M1 MacでPython + pyenvをインストールしたメモです。
-
- 環境
-(そろそろOSのバージョン上げないとなぁ。。。)
-機種 : MacBook Pro 2021(M1 Max)
-キーボード : USキーボード
-OS : Monterey(12.2.1)
-fish shell version : 3.5.1
-
- pyenvをインストールする
-https://github.com/pyenv/pyenv#installation
-READMEを見ながらやっていきます。
-$ brew update
-$ brew install pyenv
-インストールが終わったらREADMEの通...]]></summary>
-        <author>
-            <name>lightkun</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python x DDD x Clean Architecture]]></title>
-        <id>https://zenn.dev/koei_kaji/articles/f2d70a662cbe45</id>
-        <link href="https://zenn.dev/koei_kaji/articles/f2d70a662cbe45"/>
-        <updated>2022-11-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-PythonでDDDでクリーンアーキテクチャで実装してみました。
-良くも悪くも、"Pythonでは"あまりネット上で見かけない構成になったので共有しようと思います。
-つくったものは、めちゃ簡単なTodoアプリです。
-https://github.com/koei-kaji/ddd-clean-architecture-python
-
- 経緯
-
-DDDについて全く知らないので、とりあえずPythonで軽量DDDやってみよう
-ついでにクリーンアーキテクチャも全く知らないのでコレもやろう
-
-という軽い気持ちで始めました。
-
- 参考
-nrslibさんの記事を最も参考にさせていただき...]]></summary>
-        <author>
-            <name>KoeiK</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[OpenCV] 黒目の位置でマウスをスクロールするアプリを作ってみた]]></title>
-        <id>https://zenn.dev/htanos/articles/3e57acbc035ae0</id>
-        <link href="https://zenn.dev/htanos/articles/3e57acbc035ae0"/>
-        <updated>2022-11-29T21:41:34.000Z</updated>
-        <summary type="html"><![CDATA[つくったもの
-https://github.com/tanomitsu2002/opencv-eyetrack-scroll
-目の位置をリアルタイムでトラッキングし、左を向いていたら下、右を向いていたら上にスクロールするアプリです。
-セットアップの方法や実行方法はGithubにあるREADME.mdを参照してください。
-README.mdにしたがって実行し、目を左右に動かすとマウスの上下スクロールが入力されます。
-
- 使ったパッケージ
-
-opencv-python
-dlib
-pynput
-
-
- 参考
-https://towardsdatascience.com/real-time-e...]]></summary>
-        <author>
-            <name>Tano</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[10進100億桁の円周率を2進数にしてみようと思ったはなし。]]></title>
-        <id>https://zenn.dev/taroh/articles/38a8855a894fec</id>
-        <link href="https://zenn.dev/taroh/articles/38a8855a894fec"/>
-        <updated>2022-11-29T14:44:15.000Z</updated>
-        <summary type="html"><![CDATA[また円周率かよ。
-ってかあまり円周率には関係ない (かもしれない) ぷちネタであるが。多倍長精度固定小数点の10進数を2進数に変換しようとしてハマったはなしです。
-
- 2進表現の円周率がほしい (べつに要らんけど)
-円周率100億桁を自力で求めてみた。まあこれとて、Python + gmpy2の無限多倍長精度の整数演算を使って、固定小数点的に求めてみたわけであるが……最後の結果の確認をするためにも、そして自己満足喜びに浸るためにも、10進数での表現が必須である。すなわち『3.141592...』とあるとひとは誰でも「あ、円周率だ!!」と言ってくれるが、『0x3.243f6a...』を見せ...]]></summary>
-        <author>
-            <name>taroh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[円周率100億桁の出力]]></title>
-        <id>https://zenn.dev/taroh/articles/9f165fa9cb0335</id>
-        <link href="https://zenn.dev/taroh/articles/9f165fa9cb0335"/>
-        <updated>2022-11-29T14:41:33.000Z</updated>
-        <summary type="html"><![CDATA[円周率100億桁を自作のPythonプログラムで求めた。となると、次の欲求は。
-円周率100億桁をこの目でみてみたい。
-というわけで、いろいろやってみた記録である。
-※ 2022. 11月末現在……試行錯誤中。
-
- 円周率100億桁をどうやって見るか
-円周率100億桁のあたまと終わりは、チャレンジのページにも掲載したが、円周率を100億桁求めたら、ひとは頭の何桁かと、あとわかっている場合 (世界記録とかではなく、リファレンスもある場合)、末尾の何桁かを確認して、「ふぅ♡」と満足するのが普通だろう。おそらく、大抵のひとにとって『7億6654万2310桁目』とか『68億0327万9912桁目...]]></summary>
-        <author>
-            <name>taroh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonリストに使える関数]]></title>
-        <id>https://zenn.dev/pienthon/articles/92058c0da2a93e</id>
-        <link href="https://zenn.dev/pienthon/articles/92058c0da2a93e"/>
-        <updated>2022-11-29T14:34:12.000Z</updated>
-        <summary type="html"><![CDATA[append：最後に要素を足す
-list.append(5)
-
- clear：空のリストにする
-list.clear()
-copy
-
- count：要素の個数を数える
-list.count(5)
-
- extend：リストをくっつける
-list = llist1.extend(list2)
-
- index(要素,検索開始位置)：要素からインデックス取得
-list.index(3)
-
- insert(インデックス,要素)：インデックスの位置に要素を追加
-list.(2,10)
-
- pop：最後の要素を消すor指定インデックス要素を消す
-※要素でなくインデックスを指定する
-list.pop...]]></summary>
-        <author>
-            <name>にゃーん(Pienthon)</name>
         </author>
     </entry>
 </feed>
