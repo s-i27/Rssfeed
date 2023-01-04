@@ -2,10 +2,267 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-01-03T01:35:12.110Z</updated>
+    <updated>2023-01-04T01:37:09.984Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[そのPythonパッケージ管理、venv + pipでよくないですか? in 2023/1]]></title>
+        <id>https://zenn.dev/peacock0803sz/articles/python-packaging-2023-01</id>
+        <link href="https://zenn.dev/peacock0803sz/articles/python-packaging-2023-01"/>
+        <updated>2023-01-04T01:12:45.000Z</updated>
+        <summary type="html"><![CDATA[そのPythonパッケージ管理、venv + pipでよくないですか? in 2023/1
+各所(主にPython界隈の外)で「Pythonパッケージ管理どうするのが正解なの?」とよく耳にするので2023年初頭時点での私の見解を書きます。
+!
+この記事はvenv + pip以外のツール(特にpoetry, pipenv, pip-toolsへのアンチテーゼ要素を多分に含みます。
+私はいわゆる「venvでよくないですか? おじさん」をよくやるのでそれのまとめだと思って頂ければと思います。
+
+
+ tl;dr
+多くの場合のPythonパッケージ管理はvenv(virtualenv) + p...]]></summary>
+        <author>
+            <name>Peacock</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPIを使ってみる]]></title>
+        <id>https://zenn.dev/youichiro/articles/c87fe6e68907bb</id>
+        <link href="https://zenn.dev/youichiro/articles/c87fe6e68907bb"/>
+        <updated>2023-01-03T16:49:37.000Z</updated>
+        <summary type="html"><![CDATA[FastAPI
+
+公式ドキュメント
+
+https://fastapi.tiangolo.com
+
+
+GitHub
+
+https://github.com/tiangolo/fastapi
+
+
+この記事で使用するFastAPIのバージョン
+
+0.88.0
+
+
+
+
+ 作るもの
+FastAPIでシンプルなTODOアプリのAPIを作る
+以下のようなデータモデルを想定する
+以下のCRUDを用意する
+
+create a user
+get a user
+get all users
+create a task
+get all tasks for user
+
+
+ やること
+
+プロジェクトを作成する
+デ...]]></summary>
+        <author>
+            <name>youichiro</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】getattr,setattrの改良]]></title>
+        <id>https://zenn.dev/sergicalsix/articles/47ff9c836cebca</id>
+        <link href="https://zenn.dev/sergicalsix/articles/47ff9c836cebca"/>
+        <updated>2023-01-03T14:22:59.000Z</updated>
+        <summary type="html"><![CDATA[結論
+def getattr_(object,attrs):
+    v = object #objectによってはcopy.copy(),copy.deepcopy()した方が良い
+    for a in attrs.split('.'):
+        v = getattr(v,a)
+    return v
+setattrを改良したい場合はこちら
+def setattr_(object,attrs,value):
+    v = object #objectによってはcopy.copy(),copy.deepcopy()した方が良い
+    split_attr = at...]]></summary>
+        <author>
+            <name>sergicalsix</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[プログラミング初心者がDjangoとTwitter APIでツイート自動まとめBot（リアルタイム）を作成したら予想以上に便利だった件]]></title>
+        <id>https://zenn.dev/tree_pies/articles/6f162d0d74f9eb</id>
+        <link href="https://zenn.dev/tree_pies/articles/6f162d0d74f9eb"/>
+        <updated>2023-01-03T10:55:45.000Z</updated>
+        <summary type="html"><![CDATA[初心者がゆえ四苦八苦しながら作成しました。その過程と成果を備忘録がてらこちらに残しておきたいと思います。
+
+ まずは完成物のご紹介
+完成したサイトは以下になります。
+Tree Pies
+https://treepies.com/
+Twitterアカウント
+
+そもそもこれは何かというと、Twitter上に存在するスレッド上のツイートをTwitterAPIを使い、自動でまとめて記事のように表示してくれるアプリケーションになります。
+これを使うと以下のような長文スレッドもリプライ一つで記事のようにまとめを作成する事が出来ます。
+
+まとめの依頼をすると即座にBotが反応して記事のURL添付と共に...]]></summary>
+        <author>
+            <name>Tree_Pies</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[API Gateway+Lambda CORS対策(Lambdaプロキシ統合 FastAPI編)]]></title>
+        <id>https://zenn.dev/go6887/articles/5c2de65ee0970f</id>
+        <link href="https://zenn.dev/go6887/articles/5c2de65ee0970f"/>
+        <updated>2023-01-03T09:34:06.000Z</updated>
+        <summary type="html"><![CDATA[年末年始、アイディアはあったものの時間がなく開発できていなかったものを一気に仕上げました。最初はユーザ数が見込めないので従量課金の簡単に開発することができる今となってはありふれたアーキテクチャであるAPI Gateway+Lambdaで開発したのですが、その際にReactでつくったwebアプリからAPIを呼び出す際のCORSの対応で時間を使ったので備忘録と残しておきます。
+
+ 背景・問題
+今回のアーキテクチャです。Reactで作られたWebアプリからFastAPIで作成したAPIをLambdaにデプロイし、API Gateway経由でよんでいます。この際に適切に設定をしてあげないと、CO...]]></summary>
+        <author>
+            <name>pino</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python初心者のためのWindows実行環境構築ハンドブック]]></title>
+        <id>https://zenn.dev/mom/books/ca5cefe5d0855e</id>
+        <link href="https://zenn.dev/mom/books/ca5cefe5d0855e"/>
+        <updated>2023-01-03T07:18:06.000Z</updated>
+        <summary type="html"><![CDATA[Windows上でPythonの実行環境を構築する際に、必要十分な基礎知識を習得するための本。]]></summary>
+        <author>
+            <name>TechStar</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数値を大字（だいじ）に変換するPythonモジュールを作成しました]]></title>
+        <id>https://zenn.dev/windvoice/articles/511156796980e6</id>
+        <link href="https://zenn.dev/windvoice/articles/511156796980e6"/>
+        <updated>2023-01-03T06:54:03.000Z</updated>
+        <summary type="html"><![CDATA[前置き
+数値を大字（だいじ）に変換するDaijiJa Pythonモジュールを作成しました。Pythonは趣味で長いこと使ってきましたが、モジュールを作成してGitHubにレポジトリを作成したのは初めてのことなので、記録として残しておきます。
+
+ モジュールの紹介
+DaijiJaモジュールは、日本で領収書などを作成するときに使用される漢数字表記（例：壱万弐千円也）を整数値から作成する機能を持っています。例えば下のように使います。
+import DaijiJa
+print(DaijiJa.daiji(123456))
+壱拾弐万参千四百五拾六
+旧式の文字を使いたい場合もあると思われます。...]]></summary>
+        <author>
+            <name>WindVoice</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Jupyter Notebook で python側の変数 と LaTeX を組み合わせて表示したい。]]></title>
+        <id>https://zenn.dev/t4aru/articles/130b80176c06fa</id>
+        <link href="https://zenn.dev/t4aru/articles/130b80176c06fa"/>
+        <updated>2023-01-03T06:52:15.000Z</updated>
+        <summary type="html"><![CDATA[やりたいこと
+SymPyの計算結果を良い感じに \LaTeX 形式で出力したい。
+
+ 例
+SymPyで対角行列を計算して、その結果をP^{-1}APに続く形に出力したい。
+
+P^{-1}AP = \begin{pmatrix}
+2 & 0 \\
+0 & -3
+\end{pmatrix}
+
+
+ 方法
+
+ display.Math と 書式化演算子 を使う
+
+コード
+import sympy as sp
+from IPython.display import display, Math
+
+result = sp.Matrix([
+    [2, 0],
+    [0, -...]]></summary>
+        <author>
+            <name>r4ai</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[sklearnのMLPRegressorで簡易な転移学習]]></title>
+        <id>https://zenn.dev/yoshida0312/articles/3ccda8b3c2c8b5</id>
+        <link href="https://zenn.dev/yoshida0312/articles/3ccda8b3c2c8b5"/>
+        <updated>2023-01-03T05:12:18.000Z</updated>
+        <summary type="html"><![CDATA[初めに
+転移学習など少し高度なモデルや手法を実装する際はpytorchを採用することが多いのですが、簡単なNNであればsklearnにもsklearn.neural_network.MLPRegressorで実装されています。
+今回は、簡易な転移学習をMLPRegressor.partial_fit()を使用して実施した際に、学習率を変える箇所にハマったので備忘録がてら残します。
+
+ コード
+import pickle
+import itertools
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot a...]]></summary>
+        <author>
+            <name>よしだ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[botocoreのエラーハンドリング]]></title>
+        <id>https://zenn.dev/pontsuyo/articles/c510856e349e40</id>
+        <link href="https://zenn.dev/pontsuyo/articles/c510856e349e40"/>
+        <updated>2023-01-03T04:12:31.000Z</updated>
+        <summary type="html"><![CDATA[状況
+
+ やりたいこと
+S3のオブジェクトを適当にパースしてredshiftに書き込む。
+書き込みはlambdaに載せたPythonスクリプトで実行する。S3へのオブジェクト追加時にイベント通知をlambdaに送信することでトリガーする。
+スクリプトは大体以下です
+def lambda_handler(event: dict, context) -> None:
+    """
+    :param event: S3バケットへのオブジェクト追加イベント
+    :param context:
+    :return:
+    """
+    bucket_name = eve...]]></summary>
+        <author>
+            <name>neginasubi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonで三次元データの補間を行う]]></title>
+        <id>https://zenn.dev/tab_ki/articles/interpolation_of_3d_data</id>
+        <link href="https://zenn.dev/tab_ki/articles/interpolation_of_3d_data"/>
+        <updated>2023-01-03T03:42:49.000Z</updated>
+        <summary type="html"><![CDATA[1. 概要
+「地点 A (x_a, y_a, z_a) における気温 T_a と地点 B (x_b, y_b, z_b) における気温 T_b から、その間にある地点 C (x_c, y_c, z_c) の気温 T_c を推測したい」など、三次元やより高次のデータに対して補間を行いたい場合があります。Python で N 次元データの補間を行いたい場合、SciPy の RegularGridInterpolator を利用するといいですよと教わったのですが、日本語記事が少なかったためメモを残します。
+
+ 1.1. 環境
+
+
+
+Name
+Version
+
+
+
+
+Python
+3.10....]]></summary>
+        <author>
+            <name>Tab_Ki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[rinnaのCLIPのサンプルコードを解説]]></title>
+        <id>https://zenn.dev/yagiyuki/articles/clip_rinna_sample</id>
+        <link href="https://zenn.dev/yagiyuki/articles/clip_rinna_sample"/>
+        <updated>2023-01-03T02:07:18.000Z</updated>
+        <summary type="html"><![CDATA[2022年/5月にrinna社により、日本語特化した事前学習済みの言語画像モデルCLIPが公開されました。
+https://prtimes.jp/main/html/rd/p/000000031.000070041.html
+CLIPについては、以下の記事を参照ください。
+https://qiita.com/sonoisa/items/00e8e2861147842f0237
+以下、上記記事からCLIPの特徴を抜粋した情報です。
+1. 従来のモデルに比べて、非常に広いクラスのオブジェクトを認識できる。
+2. 画像とテキストの両方の埋め込みができる。画像から類似画像を探したり、テキストから...]]></summary>
+        <author>
+            <name>yagiyuki</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Dagger入門（Python SDK）]]></title>
         <id>https://zenn.dev/syfut/articles/3b4ddea324c69f</id>
@@ -7754,184 +8011,6 @@ opentelemetry-instrumentation-fastapi の中身を見てどのような機能を
 実装...]]></summary>
         <author>
             <name>taxin</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[hello world選手権のおまけ2]]></title>
-        <id>https://zenn.dev/banananeko/articles/2ee067051bcc7f</id>
-        <link href="https://zenn.dev/banananeko/articles/2ee067051bcc7f"/>
-        <updated>2022-12-05T12:56:10.000Z</updated>
-        <summary type="html"><![CDATA[まだhello world選手権の記事をみていないなら先に見てください
-https://zenn.dev/banananeko/articles/56c102b3128a47
-記事は下にちゃんとあります
-ネタバレがあるのでこれで見えなくしています
-ネタバレがあるのでこれで見えなくしています
-ネタバレがあるのでこれで見えなくしています
-ネタバレがあるのでこれで見えなくしています
-ネタバレがあるのでこれで見えなくしています
-ネタバレがあるのでこれで見えなくしています
-ネタバレがあるのでこれで見えなくしています
-ネタバレがあるのでこれで見えなくしています
-ネタバレがあるのでこれで見えなくしてい...]]></summary>
-        <author>
-            <name>banananeko</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ChatGPT+Pythonでボイスロイドとリアルタイムで音声会話できるプログラムを作った]]></title>
-        <id>https://zenn.dev/akashixi/articles/303dd79264e1ff</id>
-        <link href="https://zenn.dev/akashixi/articles/303dd79264e1ff"/>
-        <updated>2022-12-05T12:42:11.000Z</updated>
-        <summary type="html"><![CDATA[ChatGPTを試していて、想像以上に受け答えがしっかりしている印象を持ちました。入力と出力を音声に置き換えてアレクサのように応答できれば、音声ベースでAIと対話できるのでは？と思い、プログラムを作ってみました。
-
- 作ったもの
-
-プログラムを起動し、音声で問いかけることで音声でメッセージが返ってきます。
-音声出力の方法としてボイスロイドを用いました。このツイートの例ではVOICEVOXの「春日部つむぎ」にしゃべってもらっています。
-
- 作り方
-やることはシンプルで↓のような流れになります。
-
-音声の入力を受けつけ、なるべく正確にテキストに変換する
-ChatGPTにそのテキストを送信し、...]]></summary>
-        <author>
-            <name>akashixi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ABC280 D - Factorial and Multiple の思い出]]></title>
-        <id>https://zenn.dev/chelo/articles/151e0667146841</id>
-        <link href="https://zenn.dev/chelo/articles/151e0667146841"/>
-        <updated>2022-12-05T12:33:00.000Z</updated>
-        <summary type="html"><![CDATA[わからされたABC280のDについて
-https://atcoder.jp/contests/abc280/tasks/abc280_d
-素因数分解の性質についてわからせられた良い問題でした
-
- 公式解説｢の｣解説が知りたい人へ
-私みたく、茶色の実力だと解説の文章すら理解出来ないと思う。
-けんちょんさんのゴリゴリに噛み砕いてくれている解説を読もう!!
-https://drken1215.hatenablog.com/entry/2022/12/05/160400
-
- 本番中の思考
-
- 考えたこと
-
-倍数を考えることから、Kを素因数分解するのは間違えない
-
-210=2\times3\t...]]></summary>
-        <author>
-            <name>チェロ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[diffusersでschedulerを変える方法]]></title>
-        <id>https://zenn.dev/kaibaoke/articles/art7_change_diffusers_scheduler</id>
-        <link href="https://zenn.dev/kaibaoke/articles/art7_change_diffusers_scheduler"/>
-        <updated>2022-12-05T11:45:39.000Z</updated>
-        <summary type="html"><![CDATA[どうもこんにちは。Kaibaです。
-diffusersでガチャをブン回しているんですがいい加減WebUIでDAAM使ってプロンプト研究しなきゃなと思い続けています。一体いつ導入するのか。
-
- 初めに
-この記事ではdiffuserでSchedulerを変える方法について説明します。 Twitterで魔術師の方々を覗いていると度々eulerが～ddimが～みたいな話を見かけるんですが、サンプラーって何？？どうやって変えればいいの？？ っていうのがよく分からなかったのでメモとして残しておきます。ckptをdiffusers用に変換とかの情報はあったりしたんですがSchedulerを変える方法は...]]></summary>
-        <author>
-            <name>Kaiba</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PHPerがはじめてのPythonでつまづいたポイント8点]]></title>
-        <id>https://zenn.dev/tk_tech/articles/5ac2c6db7fde59</id>
-        <link href="https://zenn.dev/tk_tech/articles/5ac2c6db7fde59"/>
-        <updated>2022-12-05T09:43:07.000Z</updated>
-        <summary type="html"><![CDATA[PGを10年少々やっているPHPerがこのたび、初めてPythonをさわったところつまづいたポイントがいくつかあったので備忘録のためまとめていく。
-
- 筆者(K)の普段使用している言語
-
-PHP
-JavaScript
-HTML
-CSS
-
-他、数回だけど作るのにさわったことのある言語
-
-Node.js
-React
-
-
- 開発環境
-
-AWS Lambda
-Python 3.9
-AWS RDS (PostgreSQL)
-
-AWSコンソールのコードエディターにて開発していく。
-
- 開発概要
-
-S3にアップされたExcelをGETしてちょっと編集して同一S3に別KeyでPUTする
-
-ただこれだけ....]]></summary>
-        <author>
-            <name>TKTK</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Typer の基本的な使い方まとめ]]></title>
-        <id>https://zenn.dev/todoker/articles/2022-typer-introduction</id>
-        <link href="https://zenn.dev/todoker/articles/2022-typer-introduction"/>
-        <updated>2022-12-05T07:09:56.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-こんにちは。@hayata-yamamotoです。
-弊社では、バッチジョブやちょっとしたコマンドライン実行を行うためのツールとして、Typerを採用しています。FastAPI と親和性が高く、使用感も類似しておりシームレスな開発体験を提供してくれています。
-https://typer.tiangolo.com/
-今回は、Typer の使い方をどうしても忘れてしまう私のために備忘録として、Typer の使い方をまとめたコードを共有します。
-コメントに、該当するページが記載されておりますため、Typer を利用されている方々もどうぞご活用ください。
-
-main.py
-impor...]]></summary>
-        <author>
-            <name>株式会社トドケール</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[不均衡データ分類とundersampling + bagging、正例:負例の比率による調整]]></title>
-        <id>https://zenn.dev/kn1kn1/articles/dd54a797cc1972</id>
-        <link href="https://zenn.dev/kn1kn1/articles/dd54a797cc1972"/>
-        <updated>2022-12-05T05:53:59.000Z</updated>
-        <summary type="html"><![CDATA[概要
-機械学習でクラス分類を行う際にクラス間のサンプル数に偏りがあるデータは、不均衡データ（imbalanced data）と呼ばれているが、これを扱う手法としてundersampling + baggingがあり、以下で紹介されている。
-https://tjo.hatenablog.com/entry/2017/08/11/162057
-本稿では、undersampling + baggingを試し、undersamplingの際に正例:負例の比率を操作して検知性能の調整を試してみた。
-
- undersampling + bagging
-undersampling + baggin...]]></summary>
-        <author>
-            <name>kn1kn1</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】積み上げ棒グラフを作成する方法について【備忘録】]]></title>
-        <id>https://zenn.dev/siganai/articles/20221204_stack_bar_graph</id>
-        <link href="https://zenn.dev/siganai/articles/20221204_stack_bar_graph"/>
-        <updated>2022-12-04T13:58:11.000Z</updated>
-        <summary type="html"><![CDATA[matplotlibによる積み上げ棒グラフの作成方法について備忘録としてまとめる．
-使用言語はPython．
-本記事中で例示するために使用したコードは，ここからダウンロード可能．
-
- 方法
-matplotlibのbar()を使用し棒グラフを作成する際に，引数bottomを指定することで積み上げ棒グラフを作成することが可能．
-実際のコードを以下に示す．
-
- インストール方法
-
-terminal
-pip install matplotlib
-pip install numpy
-
-
- 実際の使用例
-ここでは例として，numpyのrandom関数を使用して1~10の範囲内でランダムに要素を作成し...]]></summary>
-        <author>
-            <name>SiganAI</name>
         </author>
     </entry>
 </feed>
