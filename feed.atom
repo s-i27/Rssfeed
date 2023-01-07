@@ -2,10 +2,403 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-01-06T01:40:40.452Z</updated>
+    <updated>2023-01-07T01:36:47.246Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[【SwitchBot】雨が降りそうなときに廊下ライトの色を変えてお知らせする機能を作る]]></title>
+        <id>https://zenn.dev/tanny/articles/808487545eb30f</id>
+        <link href="https://zenn.dev/tanny/articles/808487545eb30f"/>
+        <updated>2023-01-07T00:36:58.000Z</updated>
+        <summary type="html"><![CDATA[やったこと
+「午後から雨予報なのに、天気予報を見逃していて、家を出る時に傘を持って行くのを忘れてしまった！」
+そんな経験はありませんか？（私はよくあります。朝に晴れている時によくやります 😇）というわけで今回は、雨の予報を絶対に見逃さないように、午後の降水確率に応じて廊下のライトの色を変える機能を作ってみました。さすがにライトの色が違えば気づくはず！
+スマートライトは SwichBot のライトを利用します。API 経由で色を制御可能で、それでいて他社製のスマートライトより値段が安いのでおすすめです。
+
+ 完成イメージ
+以下のイメージのように、降水確率が高くなるにつれてライトが青くな...]]></summary>
+        <author>
+            <name>Tanny</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonでUTCの日時文字列をJSTに変換する]]></title>
+        <id>https://zenn.dev/ymiz/articles/2a915f7861372d</id>
+        <link href="https://zenn.dev/ymiz/articles/2a915f7861372d"/>
+        <updated>2023-01-06T21:40:55.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+APIから、日時情報として 2023-01-06T21:02:54.87 の文字列を受け取った
+
+仕様上、UTCである
+
+
+分かりやすさのため、日本時間で扱いたい
+どうするか
+
+
+ 対応
+import datetime
+from dateutil import tz
+
+def convert_exec_date(raw: str):
+    jst = tz.gettz("Asia/Tokyo")
+    d = datetime.datetime.strptime(raw, '%Y-%m-%dT%H:%M:%S.%f')
+    return d.astimezone(js...]]></summary>
+        <author>
+            <name>ymiz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 09. Typoglycemia]]></title>
+        <id>https://zenn.dev/kurokawa/articles/6a5b05e171449e</id>
+        <link href="https://zenn.dev/kurokawa/articles/6a5b05e171449e"/>
+        <updated>2023-01-06T16:42:00.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 09. Typoglycemia
+スペースで区切られた単語列に対して，各単語の先頭と末尾の文字は残し，それ以外の文字の順序をランダムに並び替えるプログラムを作成せよ．ただし，長さが４以下の単語は並び替えないこととする．適当な英語の文（例えば”I couldn’t believe that I could actually understand what I was reading : the phenomenal power of the human mind .”）を与え，その実行結果を確認せよ.
+
+ solution09.py
+import random
+
+def ty...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 08. 暗号文]]></title>
+        <id>https://zenn.dev/kurokawa/articles/01550a6a91dc46</id>
+        <link href="https://zenn.dev/kurokawa/articles/01550a6a91dc46"/>
+        <updated>2023-01-06T15:18:23.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 08. 暗号文
+与えられた文字列の各文字を，以下の仕様で変換する関数cipherを実装せよ．
+
+英小文字ならば(219 - 文字コード)の文字に置換
+その他の文字はそのまま出力
+
+この関数を用い，英語のメッセージを暗号化・復号化せよ．
+
+ solution08.py
+def cipher(s: str) -> str:
+    # 変換後の文字列を格納する変数
+    result = ""
+    # 文字列 s の各文字を処理する
+    for c in s:
+        # 英小文字の場合は変換する
+        if c.islower():
+    ...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pulpでシフト作成を自動化したりした]]></title>
+        <id>https://zenn.dev/uekann/articles/8a26aac5a7de9e</id>
+        <link href="https://zenn.dev/uekann/articles/8a26aac5a7de9e"/>
+        <updated>2023-01-06T14:15:46.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+大学でシフトを組まねばならないことになったので自動化した。
+自動でシフトを組む部分だけ(エクセルファイルの集計などを除いて)まとめてコードにしたものがこれ。
+import pulp
+
+n = 2  # 一度に入る人数
+members = ["A", "B", "C", "D", "E"]  # 　入る人
+days = ["月", "火", "水", "木", "金"]  # 入る時間
+
+# request_table[i][j]はdays[i]におけるmembers[j]の希望度
+request_table = [
+    [3, 1, 1, 2, 3],
+    [2, ...]]></summary>
+        <author>
+            <name>uekann</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 07. テンプレートによる文生成]]></title>
+        <id>https://zenn.dev/kurokawa/articles/17f59cbb7e18d3</id>
+        <link href="https://zenn.dev/kurokawa/articles/17f59cbb7e18d3"/>
+        <updated>2023-01-06T14:09:57.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 07. テンプレートによる文生成
+引数x, y, zを受け取り「x時のyはz」という文字列を返す関数を実装せよ．さらに，x=12, y=”気温”, z=22.4として，実行結果を確認せよ．
+
+ solution07.py
+def template_based_sentence_generation(x, y, z):
+    return f'{x}時の{y}は{z}'
+    #return '{}時の{}は{}'.format(x, y, z)
+
+x = 12
+y = "気温"
+z = 22.4
+
+print(template_based_sentence_genera...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[自作データセットでWhisperをファインチューニングしたら、独自用語だらけのクラロワ実況でも使えるようになった：「ファインチューニング編」]]></title>
+        <id>https://zenn.dev/k_sone/articles/4d137d58dd06a6</id>
+        <link href="https://zenn.dev/k_sone/articles/4d137d58dd06a6"/>
+        <updated>2023-01-06T13:34:24.000Z</updated>
+        <summary type="html"><![CDATA[前回のあらずじ
+前の記事はこちら
+ファインチューニング用の自作データセットをspreadsheetで作れたので、これを使ってファインチューニングしていきたい。
+
+ 作った独自データセットでファインチューニングする
+スプレッドシートで音声データと正解ラベルを作ることができたので、これを使ってファインチューニングします。
+最初に使うライブラリをインストール
+!pip install datasets>=2.6.1
+!pip install git+https://github.com/huggingface/transformers
+!pip install librosa
+!pi...]]></summary>
+        <author>
+            <name>sonken625</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[自作データセットでWhisperをファインチューニングしたら、独自用語だらけのクラロワ実況でも使えるようになった：「データセット作成編」]]></title>
+        <id>https://zenn.dev/k_sone/articles/e0c08268986ac2</id>
+        <link href="https://zenn.dev/k_sone/articles/e0c08268986ac2"/>
+        <updated>2023-01-06T13:33:43.000Z</updated>
+        <summary type="html"><![CDATA[とりあえず結果
+40分くらいの動画で一旦文字起こししてとりあえずファインチューニングしてみた。
+いったん試しくらいでやったから適当だったが、その学習済みモデルで別動画の推論をした結果以下の結果になった
+
+クラロワ実況の一文
+正解の文章
+
+めっちゃしやすくてで迫撃にもアチャクイを当てられるでしょ だもうマジで環境でゴレとかにもまあポイズンウッドだから普通に強くてエリポンも別にディガーで潰せると三銃士が来ても勝てるロイホグ系もねゴーストアチャクイゴブリンウッドだからめっちゃ強いんですよ
+
+元のWhisperでpredictした文章
+
+めっちゃしやすくてで迫撃にもあ着いを当てられるでしょ ...]]></summary>
+        <author>
+            <name>sonken625</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 06. 集合]]></title>
+        <id>https://zenn.dev/kurokawa/articles/056345c41dc0dc</id>
+        <link href="https://zenn.dev/kurokawa/articles/056345c41dc0dc"/>
+        <updated>2023-01-06T12:08:42.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 06. 集合
+“paraparaparadise”と”paragraph”に含まれる文字bi-gramの集合を，それぞれ, XとYとして求め，XとYの和集合，積集合，差集合を求めよ．さらに，’se’というbi-gramがXおよびYに含まれるかどうかを調べよ．
+
+ solution06.py
+def n_gram(target, n=2):
+    return [target[idx:idx + n] for idx in range(len(target) - n + 1)]
+
+text_x = 'paraparaparadise'
+text_y = 'paragraph...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lambda ローカルでサンプルアプリを動かす]]></title>
+        <id>https://zenn.dev/nobumichi/articles/1616e54d42b5ec</id>
+        <link href="https://zenn.dev/nobumichi/articles/1616e54d42b5ec"/>
+        <updated>2023-01-06T11:32:25.000Z</updated>
+        <summary type="html"><![CDATA[前回の記事でLambdaのローカル開発環境を構築したので、今回はAWSチュートリアルのサンプルをビルドして動かしてみる。
+AWSのチュートリアルは下記を参考にする。
+https://docs.aws.amazon.com/ja_jp/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html
+前回執筆した記事は下記の通り。
+https://qiita.com/nobumichi/items/e876a448b7be21e7e51a
+
+ 作業環境
+
+Window...]]></summary>
+        <author>
+            <name>のぶみち</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[構成元素を取り出し化合物を分類する]]></title>
+        <id>https://zenn.dev/pejpo/articles/70e9dc0ae59ca0</id>
+        <link href="https://zenn.dev/pejpo/articles/70e9dc0ae59ca0"/>
+        <updated>2023-01-06T08:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+以前、こちらの記事で、「分子式から元素記号を取り出すロジックを思いつけない」と記載しましたが、正規表現を使って達成できたので、記事にしました。
+「特定の元素を含む化合物を抽出する」際にも使用できますが、今回は、「候補化合物のリストから、指定した元素以外の元素を含む化合物を除く、というケースを取り上げます。
+「C, H, N, Oの他、Sは含んで良いけど、SiやPを含む化合物は除きたい」といった場合を想定しています。本記事では、SMILES記法での構造式から選別しますが、分子式の場合は、前処理が不要のため、内容の2. 以降を参照ください。
+
+ 概要
+
+含んで良い元素をポジティ...]]></summary>
+        <author>
+            <name>Dr_O</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 05. n-gram]]></title>
+        <id>https://zenn.dev/kurokawa/articles/3c7889d540ea1e</id>
+        <link href="https://zenn.dev/kurokawa/articles/3c7889d540ea1e"/>
+        <updated>2023-01-06T07:22:23.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 05. n-gram
+与えられたシーケンス（文字列やリストなど）からn-gramを作る関数を作成せよ．この関数を用い，”I am an NLPer”という文から単語bi-gram，文字bi-gramを得よ．
+
+ solution05.py
+def n_gram(target, n):
+    return [target[idx:idx + n] for idx in range(len(target) - n + 1)]
+
+text = 'I am an NLPer'
+for i in range(1, 4):
+    print(n_gram(text, i))#空白を...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2)  第1章: 準備運動 04. 元素記号]]></title>
+        <id>https://zenn.dev/kurokawa/articles/37dd9b9d10fa32</id>
+        <link href="https://zenn.dev/kurokawa/articles/37dd9b9d10fa32"/>
+        <updated>2023-01-06T06:29:48.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 04. 元素記号
+“Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Might Also Sign Peace Security Clause. Arthur King Can.”という文を単語に分解し，1, 5, 6, 7, 8, 9, 15, 16, 19番目の単語は先頭の1文字，それ以外の単語は先頭の2文字を取り出し，取り出した文字列から単語の位置（先頭から何番目の単語か）への連想配列（辞書型もしくはマップ型）を作成せよ．
+
+ solution04.py
+# (1) コンマ(,)、ピリオ...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hubspotのカスタムコードを使ってカスタムオブジェクトとコンタクトを関連付ける]]></title>
+        <id>https://zenn.dev/readyfor_blog/articles/fd7f74fe13a014</id>
+        <link href="https://zenn.dev/readyfor_blog/articles/fd7f74fe13a014"/>
+        <updated>2023-01-06T06:15:05.000Z</updated>
+        <summary type="html"><![CDATA[この記事で分かること
+Hubspotのワークフローを使うと「新規作成」したオブジェクトを既存のオブジェクトに関連付けることができます。しかしワークフローでは既存のオブジェクト同士を関連付けることができません。
+このようなときに、カスタムコードを使うと既存のオブジェクト同士を関連付けることができます。ここではその方法をまとめます。
+
+ 必要なこと
+
+
+Operations Hub Professional以上の契約
+あった方がいいこと
+
+
+カスタム コード ワークフロー アクション のスキル
+
+【新機能】カスタム コード アクションでPythonを使用可能です のスキル
+
+
+
+
+ 手順...]]></summary>
+        <author>
+            <name>Shohei Urano</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 03. 円周率]]></title>
+        <id>https://zenn.dev/kurokawa/articles/38772df8adf2e9</id>
+        <link href="https://zenn.dev/kurokawa/articles/38772df8adf2e9"/>
+        <updated>2023-01-06T05:57:08.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 03. 円周率
+“Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics.”という文を単語に分解し，各単語の（アルファベットの）文字数を先頭から出現順に並べたリストを作成せよ．
+
+ solution03.py
+# (1) コンマ(,)、ピリオド(.)を置換する
+# (2) 文を単語に分割する
+# (3) 各単語の文字数をカウントする
+
+original_text = "Now I need a drink, alcoholic of cours...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】インスタンス変数をタプル形式でテキストファイルに保存する方法と、読み込む方法]]></title>
+        <id>https://zenn.dev/shimotani/articles/0519af6ff4965b</id>
+        <link href="https://zenn.dev/shimotani/articles/0519af6ff4965b"/>
+        <updated>2023-01-06T05:45:21.000Z</updated>
+        <summary type="html"><![CDATA[インスタンスをリストで保持しているときに、それぞれのインスタンス変数をテキストファイルに保存する方法と、保存したテキストファイルからインスタンスを復元する方法のご紹介です。
+
+ インスタンス変数をテキストファイルに保存する方法
+以下のようにProfileクラスがあってそのインスタンスをリストで保存している場合
+# Profileクラス
+class Profile:
+  def __init__(self, name, age, email):
+    self.name  = name
+    self.age   = age
+    self.email = email
+# Profi...]]></summary>
+        <author>
+            <name>shimotani</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 02. 「パトカー」＋「タクシー」＝「パタトクカシーー」]]></title>
+        <id>https://zenn.dev/kurokawa/articles/dce7bbc530ed93</id>
+        <link href="https://zenn.dev/kurokawa/articles/dce7bbc530ed93"/>
+        <updated>2023-01-06T04:56:09.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 02. 「パトカー」＋「タクシー」＝「パタトクカシーー」
+「パトカー」＋「タクシー」の文字を先頭から交互に連結して文字列「パタトクカシーー」を得よ．
+
+ solution02.py
+text_p = "パトカー"
+text_t = "タクシー"
+
+ans = ""
+for i in range(len(text_p)):
+    ans += text_p[i] + text_t[i]
+
+print(ans)
+
+
+ output
+パタトクカシーー
+
+この問題では、2つの文字の先頭から1文字ずつ取り出します。
+https://github.com/kurokawa5/nlp1...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 01. 「パタトクカシーー」]]></title>
+        <id>https://zenn.dev/kurokawa/articles/df1dad7701bfc4</id>
+        <link href="https://zenn.dev/kurokawa/articles/df1dad7701bfc4"/>
+        <updated>2023-01-06T03:59:48.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 01. 「パタトクカシーー」
+「パタトクカシーー」という文字列の1,3,5,7文字目を取り出して連結した文字列を得よ
+英語版だと「パタトクカシーー」が「schooled」となります。
+今回は「schooled」で挑戦してみました。
+
+ solution01.py
+text = "schooled"
+print(text[::2])
+
+
+ output
+shoe
+
+この問題では、文字列を逆順に並び替えます。
+Pythonではlistなどのシーケンスオブジェクトに対してスライスと呼ばれる操作で範囲を指定して要素を選択できます。スライスは以下のように3つの値(start, end...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 00. 文字列の逆順]]></title>
         <id>https://zenn.dev/kurokawa/articles/cf31a679a95020</id>
@@ -7627,287 +8020,6 @@ pip installでマイナーなライブラリをインストールする場合は
 初球については簡単なものばかりなので、説明は割愛します...]]></summary>
         <author>
             <name>sergicalsix</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Kaggle】 Feedback3 コンペでボロ負けしたので教訓を全部吐きます【懺悔】]]></title>
-        <id>https://zenn.dev/aidemy/articles/3299c8fd9f394a</id>
-        <link href="https://zenn.dev/aidemy/articles/3299c8fd9f394a"/>
-        <updated>2022-12-08T08:01:11.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事は、 Aidemy Advent Calendar 2022 の8日目の投稿です。
-みなさま、いかがお過ごしでしょうか。株式会社アイデミーでデータサイエンティストとして勤務しております、ざっしーと申します。
-先日11/29に閉幕したKaggleコンペティション Feedback Prize - English Language Learning （通称Feedback3）に参加してきました。
-そこで見事にボロ負けしてきたので、この記事で教訓を1つ残らず落とします。🫠
-打ち手の考え方などの概念的な話だったり、具体的な手法の話になったりと、話題のレイヤーが多少は雑多にな...]]></summary>
-        <author>
-            <name>ざっしー</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonでclassを使う:method編(2): staticmethod]]></title>
-        <id>https://zenn.dev/sergicalsix/articles/e96ba8f1b3370f</id>
-        <link href="https://zenn.dev/sergicalsix/articles/e96ba8f1b3370f"/>
-        <updated>2022-12-08T04:58:16.000Z</updated>
-        <summary type="html"><![CDATA[本記事はstaticmethodを啓発する記事です。
-まずは以下のclassを考えます。
-class A:
-    def __call__(self):
-        return self.__class__.__name__
-    
-    # bad code
-    def print_fuga(self):
-        print('fuga')
-	
-　　 # good code 
-    @staticmethod
-    def print_hoge():
-        print('hoge')
-上記クラスのメソッドをインスタンスに注目して簡単に説明します。
-...]]></summary>
-        <author>
-            <name>sergicalsix</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonでclassを使う:method編(1): 基本的な特殊メソッド]]></title>
-        <id>https://zenn.dev/sergicalsix/articles/0d44a97a6bd43a</id>
-        <link href="https://zenn.dev/sergicalsix/articles/0d44a97a6bd43a"/>
-        <updated>2022-12-08T04:55:59.000Z</updated>
-        <summary type="html"><![CDATA[導入
-今回はよく目にする4つの特殊メソッドは__init__,__call__,__str__,__repr__に加えて__eq__,__class__.__name__,__dict__を紹介します。
-そして想定される実用的な使い方についてもいくつか紹介します。
-以下のクラスを使って説明していきます。
-class A:
-    z = 1
-    def __init__(self,x = 1):
-        self.x = x
-    def __call__(self):
-        return f'call:{self.__class__.__name__}'
- ...]]></summary>
-        <author>
-            <name>sergicalsix</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PEP681 - Data Class Transformsって何のためにあるの？]]></title>
-        <id>https://zenn.dev/yukinarit/articles/8b92ae6f812839</id>
-        <link href="https://zenn.dev/yukinarit/articles/8b92ae6f812839"/>
-        <updated>2022-12-08T00:38:46.000Z</updated>
-        <summary type="html"><![CDATA[この記事はMapbox Japan Advent Calendar 2022 8日目の記事です。
-
- PEP681が追加された背景
-PEP681 - Data Class Transformsはtypingモジュールに@dataclass_transformというデコレータを追加する変更でpydanticやSQLAlchemy、pyserde等のdataclassをベースにしたライブラリの型チェックし易くするために提案されました。
-例えば、@dataclassを追加するだけの超シンプルなデコレータ@add_dataclassがあるとします。
-from dataclasses import...]]></summary>
-        <author>
-            <name>yukinarit</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonでslackを使う(2): slackでtqdm]]></title>
-        <id>https://zenn.dev/sergicalsix/articles/067065d4eccb9a</id>
-        <link href="https://zenn.dev/sergicalsix/articles/067065d4eccb9a"/>
-        <updated>2022-12-07T16:29:36.000Z</updated>
-        <summary type="html"><![CDATA[結論
-zsh
-(venv)% pip install tqdm  (or pip install --upgrade tqdm )
-python
-import time  # demo
-from tqdm.contrib.slack import tqdm
-for i in tqdm([1,2,3,4,5], token = '{token}', channel = '{channel}'):
-    print(i)
-    time.sleep(1) # demo
-
- 内容
-本記事は[1] https://zenn.dev/sergicalsix/articles/f7ad91d...]]></summary>
-        <author>
-            <name>sergicalsix</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonでslackを使う(1): slackのメッセージ送信]]></title>
-        <id>https://zenn.dev/sergicalsix/articles/f7ad91d1d7cd04</id>
-        <link href="https://zenn.dev/sergicalsix/articles/f7ad91d1d7cd04"/>
-        <updated>2022-12-07T16:17:21.000Z</updated>
-        <summary type="html"><![CDATA[結論
-zsh
-% source {任意の仮想環境 = venv}/bin/activate
-(venv) % pip install "slack_sdk>=3.0"
-zshenv
-export SLACK_API_TOKEN="hogehogehoge" #your token
-python
-import os
-from slack import WebClient
-from slack.errors import SlackApiError
-
-def send_slack_message(text = "Hello from your app! :tada:", chann...]]></summary>
-        <author>
-            <name>sergicalsix</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[mlflowとluigiによるML実験管理例]]></title>
-        <id>https://zenn.dev/mina_moto/articles/qiita-20211205-62611fe7756be4cbdebc</id>
-        <link href="https://zenn.dev/mina_moto/articles/qiita-20211205-62611fe7756be4cbdebc"/>
-        <updated>2022-12-07T15:13:06.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事はBrainPad Advent Calendar 2021の10日目の記事です。
-本記事ではMLの実験を行うときの、コード、パラメータ、モデル、評価結果を管理するための構成例を紹介します。
-サンプルコードはこちら
-
- 前提知識
-
-Must
-
-python
-docker
-
-
-Want
-
-mlflow
-luigi
-
-
-
-
- 思想
-
-前処理を加えたデータや学習したモデルなどプログラムで出力されるファイルは全てmlflowの管理下におく。
-コードはgitで管理し、実験結果とcommit hashを紐づける。
-前処理、学習、推論などタスク同士の依存関係を管理して、依存してい...]]></summary>
-        <author>
-            <name>mina_moto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DeepLearningでポケモンを生成する]]></title>
-        <id>https://zenn.dev/mina_moto/articles/qiita-20191216-e85dedb407cdfce28219</id>
-        <link href="https://zenn.dev/mina_moto/articles/qiita-20191216-e85dedb407cdfce28219"/>
-        <updated>2022-12-07T15:13:05.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事は近畿大学Advent Calendar 2019の16日目の記事です．
-何番煎じか分かりませんがGanでポケモンの画像を生成します．将来的には生成した画像に更にポケモン図鑑の説明を付加するようなことをしたいと思っています．
-ソースコードはこちら
-
- DCGAN
-画像生成にはDCGANを用いました．詳細は論文を参照ください．
-実装はDCGAN-tensorflowを用いたのですが，なぜか公式のソースコードにバグがあったので修正したものを使っています．
-
- データセット
-pokemon-images-dataset-by-typeで公開されている，ポケモンの画像を用い...]]></summary>
-        <author>
-            <name>mina_moto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[文章の前処理・分かち書きを行い文書ベクトルを算出]]></title>
-        <id>https://zenn.dev/mina_moto/articles/qiita-20191210-af0b3ff3518f7fbd7bce</id>
-        <link href="https://zenn.dev/mina_moto/articles/qiita-20191210-af0b3ff3518f7fbd7bce"/>
-        <updated>2022-12-07T15:13:05.000Z</updated>
-        <summary type="html"><![CDATA[この記事は「Sunrise Advent Calendar 2019」10日目の記事です．
-最近，諸事情により自然言語処理を完全に理解する必要があり，文章の前処理やベクトルの算出とかを行ったので，その辺りの方法について簡単にまとめます．
-
- 必要ライブラリインポート
-import re
-from gensim.models.doc2vec import Doc2Vec, TaggedDocument
-import string
-import unicodedata
-import MeCab
-
- 文書の前処理
-対象とする文章
-text = 'Yahoo Japanなどを\r運営するヤフーの...]]></summary>
-        <author>
-            <name>mina_moto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[anacondaコマンドチートシート]]></title>
-        <id>https://zenn.dev/mina_moto/articles/qiita-20181116-bf6e965c36b53579b757</id>
-        <link href="https://zenn.dev/mina_moto/articles/qiita-20181116-bf6e965c36b53579b757"/>
-        <updated>2022-12-07T15:13:04.000Z</updated>
-        <summary type="html"><![CDATA[環境
-macOS Mojave 10.14
-
- コマンド一覧
-
- 仮想環境作成
-conda create -n name python=version anaconda
-name:任意の仮想環境名
-version:pythonのバージョンの指定
-
- 作成した仮想環境一覧の表示
-conda info -e
-
- 作成した仮想環境に入る
-source activate name
-name:作成した仮想環境名
-
- 現在の仮想環境から出る
-source deacrivate
-
- 仮想環境の削除
-conda remove -n name
-name:削除する仮想環境名
-
- anacondaのアップ...]]></summary>
-        <author>
-            <name>mina_moto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[phpからpythonを呼び出し実行結果を利用]]></title>
-        <id>https://zenn.dev/mina_moto/articles/qiita-20180923-f90ceb2f88994639ca95</id>
-        <link href="https://zenn.dev/mina_moto/articles/qiita-20180923-f90ceb2f88994639ca95"/>
-        <updated>2022-12-07T15:13:04.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事ではphpからpythonプログラムを実行し，その出力結果を文字列としてphpのプログラムで利用する方法について解説します．
-
- 環境
-一応書いたけど大体の環境で動くと思います．
-php：5.5.38
-python：3.6.4
-
- 実行するpythonプログラム
-とにかく分かりやすくしました:monkey: 文字列を二行出力するだけです．
-
-exec_from_php.py
-print("1line")
-print("2line")
-
-当然こうなります．
-$ python exec_from_php.py 
-1line
-2line
-
- phpからpythonを呼び出...]]></summary>
-        <author>
-            <name>mina_moto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Vertex Piplinesのコンポーネントのスキップ処理]]></title>
-        <id>https://zenn.dev/light0w0/articles/b1c5b5c57d0a62</id>
-        <link href="https://zenn.dev/light0w0/articles/b1c5b5c57d0a62"/>
-        <updated>2022-12-07T15:00:00.000Z</updated>
-        <summary type="html"><![CDATA[!
-これは ZOZO Advent Calendar 2022 カレンダー Vol.2 とMLOps Advent Calendar 2022 カレンダー Vol.1 の8日目の記事です。
-
-
- 目的
-Vertex Pipelinesの一部のコンポーネント実行をスキップする処理を実現する
-
- 背景
-パイプラインでdsl.Conditionを使用し、コンポーネントの出力結果によって一部のコンポーネント実行を条件分岐でスキップすることを考えていたが、以下のようなコードではエラーとなった。
-def pipeline_fn():
-
-    cond_task = cond_op()
-
-    w...]]></summary>
-        <author>
-            <name>hikari</name>
         </author>
     </entry>
 </feed>
