@@ -12,6 +12,231 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/kurokawa/articles/bf5ce77a0bd7f6",
+          "author": "kurokawa",
+          "description": "問題\n\n 16. ファイルをN分割する\n自然数Nをコマンドライン引数などの手段で受け取り，入力のファイルを行単位でN分割せよ．同様の処理をsplitコマンドで実現せよ．\n\n solution16.py\nimport sys\nimport pandas as pd\n\nif len(sys.argv) == 1:\n    print('Set arg n, like \"python chapter02/solution16.py 5\"')\nelse:\n    n = int(sys.argv[1])\n    df = pd.read_csv('chapter02/popular-name...",
+          "link": "https://zenn.dev/kurokawa/articles/bf5ce77a0bd7f6",
+          "publishedOn": "2023-01-07T13:28:25.000Z",
+          "wordCount": 476,
+          "title": "言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 16. ファイルをN分割する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--MuJda6kf--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252016.%2520%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592N%25E5%2588%2586%25E5%2589%25B2%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--MuJda6kf--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252016.%2520%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592N%25E5%2588%2586%25E5%2589%25B2%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kuromame614/articles/3a86349d7addb7",
+          "author": "黒豆。",
+          "description": "はじめに\nこんにちは、山田です。\n現在携わっている案件で、CloudWatchロググループに保存されているログを一定期間経過後に長期保管用に作成したS3バケットにエクスポートするコードを作成したので以下に記載していきます。\nよろしくお願いいたします。\n\n 全体概要図\n全体概要図は以下の通りです。\n\n①：ロググループ一覧とS3フォルダ一覧を比較します。\n②：比較した結果S3フォルダに名前がないもの似関しては、新規でS3フォルダを作成します。\n\n③：ロググループに保存されているログをS3にエクスポートします。\n\n コード\n以下が今回作成したコードは以下になります。\nimport boto...",
+          "link": "https://zenn.dev/kuromame614/articles/3a86349d7addb7",
+          "publishedOn": "2023-01-07T11:30:55.000Z",
+          "wordCount": 1052,
+          "title": "ロググループに保存されているログを定期的にS3にエクスポートしてみた。",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--L2ZHUPnj--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E9%25BB%2592%25E8%25B1%2586%25E3%2580%2582%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2583%25AD%25E3%2582%25B0%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E3%2581%25AB%25E4%25BF%259D%25E5%25AD%2598%25E3%2581%2595%25E3%2582%258C%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2583%25AD%25E3%2582%25B0%25E3%2582%2592%25E5%25AE%259A%25E6%259C%259F%25E7%259A%2584%25E3%2581%25ABS3%25E3%2581%25AB%25E3%2582%25A8%25E3%2582%25AF%25E3%2582%25B9%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkVUS005MmVIRWRkYWFuQjZJY0hiazh1UWVrYUxBQXRRQnF0aFI9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--L2ZHUPnj--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E9%25BB%2592%25E8%25B1%2586%25E3%2580%2582%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2583%25AD%25E3%2582%25B0%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E3%2581%25AB%25E4%25BF%259D%25E5%25AD%2598%25E3%2581%2595%25E3%2582%258C%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2583%25AD%25E3%2582%25B0%25E3%2582%2592%25E5%25AE%259A%25E6%259C%259F%25E7%259A%2584%25E3%2581%25ABS3%25E3%2581%25AB%25E3%2582%25A8%25E3%2582%25AF%25E3%2582%25B9%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkVUS005MmVIRWRkYWFuQjZJY0hiazh1UWVrYUxBQXRRQnF0aFI9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kurokawa/articles/d8e944eeafbb4f",
+          "author": "kurokawa",
+          "description": "問題\n\n 15. 末尾のN行を出力\n自然数Nをコマンドライン引数などの手段で受け取り，入力のうち末尾のN行だけを表示せよ．確認にはtailコマンドを用いよ．\n\n solution15.py\nimport sys\nimport pandas as pd\nimport fire\n\nif len(sys.argv) == 1:\n    print('Set arg n, like \"python chapter02/solution15.py 5\"')\nelse:\n    n = int(sys.argv[1])\n    df = pd.read_csv('chapter02/popula...",
+          "link": "https://zenn.dev/kurokawa/articles/d8e944eeafbb4f",
+          "publishedOn": "2023-01-07T10:48:37.000Z",
+          "wordCount": 400,
+          "title": "言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 15. 末尾のN行を出力",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--Ugg9Ladw--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252015.%2520%25E6%259C%25AB%25E5%25B0%25BE%25E3%2581%25AEN%25E8%25A1%258C%25E3%2582%2592%25E5%2587%25BA%25E5%258A%259B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Ugg9Ladw--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252015.%2520%25E6%259C%25AB%25E5%25B0%25BE%25E3%2581%25AEN%25E8%25A1%258C%25E3%2582%2592%25E5%2587%25BA%25E5%258A%259B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/e6dc594f04151a",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-078 A - HEX\n\n\n\n 提出結果\ndef getStringMap():\n    return input().split()\n\n\ndef main():\n    x, y = getStringMap()\n    print('=' if x == y else '<' if x < y else '>')\n\n\nif __name__ == \"__main__\":\n    main()",
+          "link": "https://zenn.dev/hyperdb/articles/e6dc594f04151a",
+          "publishedOn": "2023-01-07T10:07:08.000Z",
+          "wordCount": 257,
+          "title": "［AtCoder］ABC-078｜A - HEX",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--K5gpIvfu--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-078%25EF%25BD%259CA%2520-%2520HEX%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--K5gpIvfu--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-078%25EF%25BD%259CA%2520-%2520HEX%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/2d244241fc1b65",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-077 A - Rotation\n\n\n\n 提出結果\ndef getString():\n    return input()\n\n\ndef main():\n    s = getString()\n    t = getString()\n\n    print('YES' if s == t[::-1] else 'NO')\n\n\nif __name__ == \"__main__\":\n    main()",
+          "link": "https://zenn.dev/hyperdb/articles/2d244241fc1b65",
+          "publishedOn": "2023-01-07T10:07:08.000Z",
+          "wordCount": 251,
+          "title": "［AtCoder］ABC-077｜A - Rotation",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--uuOqBWEb--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-077%25EF%25BD%259CA%2520-%2520Rotation%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--uuOqBWEb--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-077%25EF%25BD%259CA%2520-%2520Rotation%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/1fd089494b7130",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-078 B - ISU\n\n\n\n 提出結果\ndef getIntMap():\n    return map(int, input().split())\n\n\ndef main():\n    x, y, z = getIntMap()\n\n    print((x - z) // (y + z))\n\n\nif __name__ == \"__main__\":\n    main()",
+          "link": "https://zenn.dev/hyperdb/articles/1fd089494b7130",
+          "publishedOn": "2023-01-07T10:07:08.000Z",
+          "wordCount": 257,
+          "title": "［AtCoder］ABC-078｜B - ISU",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--vw6C6_Fo--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-078%25EF%25BD%259CB%2520-%2520ISU%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--vw6C6_Fo--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-078%25EF%25BD%259CB%2520-%2520ISU%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/1c05f80c6fe29c",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-077 B - Around Square\n\n\n\n 提出結果\nimport math\n\n\ndef getInt():\n    return int(input())\n\n\ndef main():\n    n = getInt()\n    m = int(math.sqrt(n))\n    print(m ** 2)\n\n\nif __name__ == \"__main__\":\n    main()",
+          "link": "https://zenn.dev/hyperdb/articles/1c05f80c6fe29c",
+          "publishedOn": "2023-01-07T10:07:07.000Z",
+          "wordCount": 249,
+          "title": "［AtCoder］ABC-077｜B - Around Square",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--96jhn37a--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-077%25EF%25BD%259CB%2520-%2520Around%2520Square%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--96jhn37a--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-077%25EF%25BD%259CB%2520-%2520Around%2520Square%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/wsuzume/articles/5bd0cdd2d227f6",
+          "author": "Josh Nobus",
+          "description": "私の彼氏、靴磨きクリームを「シュークリームには違いないだろ」って食べちゃうのよ\n　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　—— 暗黙の型変換 ——\n\n はじめに\n最近 Python を書いていて少しでも規模が大きくなってくると、事あるごとに型アノテーションと型チェックを仕込むようになってきた。そんなに気になるなら型のある言語を使えばいいじゃないという話だが、データ分析などで書きながら試行錯誤がしやすいという意味では Python のガバさはむしろ有用だと思っている。そうはいうたかてガバすぎるのでちょうどよく引き締めましょうね、という現状の私の局所解を紹介する。\nPyt...",
+          "link": "https://zenn.dev/wsuzume/articles/5bd0cdd2d227f6",
+          "publishedOn": "2023-01-07T09:27:08.000Z",
+          "wordCount": 6187,
+          "title": "Python で実行時型チェックをしよう",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--bQ0Iy5rG--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Josh%2520Nobus%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%2520%25E3%2581%25A7%25E5%25AE%259F%25E8%25A1%258C%25E6%2599%2582%25E5%259E%258B%25E3%2583%2581%25E3%2582%25A7%25E3%2583%2583%25E3%2582%25AF%25E3%2582%2592%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1pTHp4VU5WOS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc3NTk2ODI4YzguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--bQ0Iy5rG--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Josh%2520Nobus%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%2520%25E3%2581%25A7%25E5%25AE%259F%25E8%25A1%258C%25E6%2599%2582%25E5%259E%258B%25E3%2583%2581%25E3%2582%25A7%25E3%2583%2583%25E3%2582%25AF%25E3%2582%2592%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1pTHp4VU5WOS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc3NTk2ODI4YzguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/tremendous1192/articles/3907160eb5b393",
+          "author": "Tremendous1192",
+          "description": "はじめに\nAI、機械学習などの勉強を始めようとインターネットの海に潜ると、日本語圏の情報は大体がPythonです(勿論RやC言語、C++もありますが、主流はPythonと思われます)。\nそのため初心者がPythonの環境構築を始めるのは自然な流れですが、この環境構築が曲者で初心者殺しになっています。\nもっと簡単にPythonを始める方法は無いのでしょうか?\n既にタイトルに結論を書いていますね、WinPythonをお勧めします。\nこの記事では、WinPythonのダウンロード方法から最初のPythonプログラムの作成まで書きました。\n\n 2023/1/8 誤字修正\n\n WinPytho...",
+          "link": "https://zenn.dev/tremendous1192/articles/3907160eb5b393",
+          "publishedOn": "2023-01-07T09:00:00.000Z",
+          "wordCount": 388,
+          "title": "[Python]exeファイルを実行するだけで環境構築が完了するWinPython",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--2bJ2Ia8U--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Tremendous1192%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%255BPython%255Dexe%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E3%2581%25A0%25E3%2581%2591%25E3%2581%25A7%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%258C%25E5%25AE%258C%25E4%25BA%2586%25E3%2581%2599%25E3%2582%258BWinPython%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1pNlRHbDNPeC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZlZWU3MTRkMTQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--2bJ2Ia8U--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Tremendous1192%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%255BPython%255Dexe%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E3%2581%25A0%25E3%2581%2591%25E3%2581%25A7%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%258C%25E5%25AE%258C%25E4%25BA%2586%25E3%2581%2599%25E3%2582%258BWinPython%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1pNlRHbDNPeC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZlZWU3MTRkMTQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kurokawa/articles/e26aef6b38b0c5",
+          "author": "kurokawa",
+          "description": "問題\n\n 14. 先頭からN行を出力\n自然数Nをコマンドライン引数などの手段で受け取り，入力のうち先頭のN行だけを表示せよ．確認にはheadコマンドを用いよ．\n\n solution14.py\nimport sys\nimport pandas as pd\n#import fire\n\nif len(sys.argv) == 1:\n    print('Set arg n, like \"python chapter02/solution14.py 5\"')\nelse:\n    n = int(sys.argv[1])\n    df = pd.read_csv('chapter02/popu...",
+          "link": "https://zenn.dev/kurokawa/articles/e26aef6b38b0c5",
+          "publishedOn": "2023-01-07T08:29:53.000Z",
+          "wordCount": 396,
+          "title": "言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 14. 先頭からN行を出力",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--pEuO0XzD--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252014.%2520%25E5%2585%2588%25E9%25A0%25AD%25E3%2581%258B%25E3%2582%2589N%25E8%25A1%258C%25E3%2582%2592%25E5%2587%25BA%25E5%258A%259B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--pEuO0XzD--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252014.%2520%25E5%2585%2588%25E9%25A0%25AD%25E3%2581%258B%25E3%2582%2589N%25E8%25A1%258C%25E3%2582%2592%25E5%2587%25BA%25E5%258A%259B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kurokawa/articles/274a678b669f87",
+          "author": "kurokawa",
+          "description": "問題\n\n 13. col1.txtとcol2.txtをマージ\n12で作ったcol1.txtとcol2.txtを結合し，元のファイルの1列目と2列目をタブ区切りで並べたテキストファイルを作成せよ．確認にはpasteコマンドを用いよ．\n\n solution13.py\nimport pandas as pd\n\ndf_col1 = pd.read_csv('chapter02/col1.txt', header=None)\ndf_col2 = pd.read_csv('chapter02/col2.txt', header=None)\ndf_merged = pd.concat([df_co...",
+          "link": "https://zenn.dev/kurokawa/articles/274a678b669f87",
+          "publishedOn": "2023-01-07T07:50:56.000Z",
+          "wordCount": 325,
+          "title": "言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 13. col1.txtとcol2.txtをマージ",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--__thSW39--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252013.%2520col1.txt%25E3%2581%25A8col2.txt%25E3%2582%2592%25E3%2583%259E%25E3%2583%25BC%25E3%2582%25B8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--__thSW39--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252013.%2520col1.txt%25E3%2581%25A8col2.txt%25E3%2582%2592%25E3%2583%259E%25E3%2583%25BC%25E3%2582%25B8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/yuyakato/articles/226faa817ed01d",
+          "author": "Yuya Kato",
+          "description": "4行まとめ\n\nTensorFlow HubからはSavedModel形式で機械学習モデルをダウンロードできる。\n\ntf2onnxを使うことでSavedModel形式からONNX形式に変換できる。\n\ntf2onnxでは--rename-inputs、--rename-outputsオプションを使うことでノード名を指定できる。\n\nonnx、tensorflow、tf2onnxパッケージの依存関係はややこしい。\n\n\n はじめに\nTensorFlow Hubでは様々な機械学習モデルが配布されています。\nこれらの機械学習モデルをONNX形式に変換して利用する機会がありましたので、その手順を備忘...",
+          "link": "https://zenn.dev/yuyakato/articles/226faa817ed01d",
+          "publishedOn": "2023-01-07T07:32:21.000Z",
+          "wordCount": 1190,
+          "title": "TensorFlow Hubから取得した機械学習モデルをONNX形式に変換する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--TPJAAMt_--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Yuya%2520Kato%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:TensorFlow%2520Hub%25E3%2581%258B%25E3%2582%2589%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2597%25E3%2581%259F%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2582%2592ONNX%25E5%25BD%25A2%25E5%25BC%258F%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dUSUhmX2JGaE1tcVp0aDNYQUI2NFY0aGRnNlJWbE5CbjVhZmQzdXc9czgwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--TPJAAMt_--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Yuya%2520Kato%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:TensorFlow%2520Hub%25E3%2581%258B%25E3%2582%2589%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2597%25E3%2581%259F%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2582%2592ONNX%25E5%25BD%25A2%25E5%25BC%258F%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dUSUhmX2JGaE1tcVp0aDNYQUI2NFY0aGRnNlJWbE5CbjVhZmQzdXc9czgwLWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kurokawa/articles/ca327241cbfc0f",
+          "author": "kurokawa",
+          "description": "問題\n\n 12. 1列目をcol1.txtに，2列目をcol2.txtに保存\n各行の1列目だけを抜き出したものをcol1.txtに，2列目だけを抜き出したものをcol2.txtとしてファイルに保存せよ．確認にはcutコマンドを用いよ．\n\n solution12.py\nimport pandas as pd\n\ndf = pd.read_csv('chapter02/popular-names.txt', sep='\\t', header=None)\ndf.iloc[:,0].to_csv('chapter02/col1.txt', index=False, header=False)\n...",
+          "link": "https://zenn.dev/kurokawa/articles/ca327241cbfc0f",
+          "publishedOn": "2023-01-07T04:09:16.000Z",
+          "wordCount": 381,
+          "title": "言語処理100本ノック 2020 (Rev 2) 第2章:UNIXコマンド12. 1列目をcol1.txtに,2列目をcol2.txtに保存",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--maee1y8v--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253AUNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%258912.%25201%25E5%2588%2597%25E7%259B%25AE%25E3%2582%2592col1.txt%25E3%2581%25AB%252C2%25E5%2588%2597%25E7%259B%25AE%25E3%2582%2592col2.txt%25E3%2581%25AB%25E4%25BF%259D%25E5%25AD%2598%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--maee1y8v--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253AUNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%258912.%25201%25E5%2588%2597%25E7%259B%25AE%25E3%2582%2592col1.txt%25E3%2581%25AB%252C2%25E5%2588%2597%25E7%259B%25AE%25E3%2582%2592col2.txt%25E3%2581%25AB%25E4%25BF%259D%25E5%25AD%2598%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kurokawa/articles/323f3533ac7da7",
+          "author": "kurokawa",
+          "description": "問題\n\n 11. タブをスペースに置換\nタブ1文字につきスペース1文字に置換せよ．確認にはsedコマンド，trコマンド，もしくはexpandコマンドを用いよ．\n\n solution11.py\nimport pandas as pd\n\ndf = pd.read_csv('chapter02/popular-names.txt', sep='\\t', header=None)\ndf.to_csv('chapter02/solution11.txt', sep=' ', index=False, header=None)\n\n\n solution11.txt\nMary F 7065 1880...",
+          "link": "https://zenn.dev/kurokawa/articles/323f3533ac7da7",
+          "publishedOn": "2023-01-07T03:00:31.000Z",
+          "wordCount": 335,
+          "title": "言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 11. タブをスペースに置換",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--iQ-9KUjh--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252011.%2520%25E3%2582%25BF%25E3%2583%2596%25E3%2582%2592%25E3%2582%25B9%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B9%25E3%2581%25AB%25E7%25BD%25AE%25E6%258F%259B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--iQ-9KUjh--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252011.%2520%25E3%2582%25BF%25E3%2583%2596%25E3%2582%2592%25E3%2582%25B9%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B9%25E3%2581%25AB%25E7%25BD%25AE%25E6%258F%259B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kurokawa/articles/f753807439cee2",
+          "author": "kurokawa",
+          "description": "問題\n\n 10. 行数のカウント\n行数をカウントせよ．確認にはwcコマンドを用いよ．\n\n solution10.py\nimport pandas as pd\n\ndf = pd.read_csv('chapter02/popular-names.txt', sep='\\t', header=None)\nprint(len(df))\n\n\n output\n2780\n\n\n solution10.sh\nwc -l popular-names.txt\n\n\n output\n2780 popular-names.txt\n\nこの問題では、len()を使用します。pandas.DataFrameをlen...",
+          "link": "https://zenn.dev/kurokawa/articles/f753807439cee2",
+          "publishedOn": "2023-01-07T02:39:12.000Z",
+          "wordCount": 235,
+          "title": "言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 10. 行数のカウント",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--wDuOGLOH--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252010.%2520%25E8%25A1%258C%25E6%2595%25B0%25E3%2581%25AE%25E3%2582%25AB%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--wDuOGLOH--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252010.%2520%25E8%25A1%258C%25E6%2595%25B0%25E3%2581%25AE%25E3%2582%25AB%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
           "id": "https://zenn.dev/tanny/articles/808487545eb30f",
           "author": "Tanny",
           "description": "やったこと\n「午後から雨予報なのに、天気予報を見逃していて、家を出る時に傘を持って行くのを忘れてしまった！」\nそんな経験はありませんか？（私はよくあります。朝に晴れている時によくやります 😇）というわけで今回は、雨の予報を絶対に見逃さないように、午後の降水確率に応じて廊下のライトの色を変える機能を作ってみました。さすがにライトの色が違えば気づくはず！\nスマートライトは SwichBot のライトを利用します。API 経由で色を制御可能で、それでいて他社製のスマートライトより値段が安いのでおすすめです。\n\n 完成イメージ\n以下のイメージのように、降水確率が高くなるにつれてライトが青くな...",
@@ -5110,81 +5335,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--I6mQagGP--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:neginasubi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E5%25B7%25A8%25E5%25A4%25A7%25E3%2581%25AAjson%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E3%2582%25B5%25E3%2582%25A4%25E3%2582%25BA%25E5%259F%25BA%25E6%25BA%2596%25E3%2581%25A7%25E5%2588%2586%25E5%2589%25B2%25E3%2581%2599%25E3%2582%258Bpython%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2597%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvcC5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/akira_t/articles/seat-opt-via-gw",
-          "author": "Akira Tanimoto",
-          "description": "数理最適化 Advent Calendar 2022の9日目です。\n新緑の頃、新型コロナ流行の合間をぬって、ささやかな結婚披露宴を表参道の式場にて催しました。諸々の準備の中でも席次はこだわるとキリがなく、数理最適化を使って決めました。人間関係をできるだけ保つようなゲスト集合から座席集合への写像を考えます。\n\nゲスト間人間関係を考慮して良い感じの配席を考えたい\n\n tl;dr\n\n披露宴をしました\n知り合い関係が複雑かつ長机でゲストの席配置が難しい\n\n組合せ爆発は本物。高々20人の配置に1週間以上悩んだ結果、数理最適化した方が早いと結論\n\n\n「知り合い同士を近くに配席する」問題は非凸な二次計...",
-          "link": "https://zenn.dev/akira_t/articles/seat-opt-via-gw",
-          "publishedOn": "2022-12-08T22:31:22.000Z",
-          "wordCount": 693,
-          "title": "披露宴の席次を Gromov-Wasserstein 最適輸送で決めた話",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--SSV0j_Rt--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Akira%2520Tanimoto%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E6%258A%25AB%25E9%259C%25B2%25E5%25AE%25B4%25E3%2581%25AE%25E5%25B8%25AD%25E6%25AC%25A1%25E3%2582%2592%2520Gromov-Wasserstein%2520%25E6%259C%2580%25E9%2581%25A9%25E8%25BC%25B8%25E9%2580%2581%25E3%2581%25A7%25E6%25B1%25BA%25E3%2582%2581%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1HdTN5S09hZC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JiNWY5M2YzNGUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--SSV0j_Rt--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Akira%2520Tanimoto%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E6%258A%25AB%25E9%259C%25B2%25E5%25AE%25B4%25E3%2581%25AE%25E5%25B8%25AD%25E6%25AC%25A1%25E3%2582%2592%2520Gromov-Wasserstein%2520%25E6%259C%2580%25E9%2581%25A9%25E8%25BC%25B8%25E9%2580%2581%25E3%2581%25A7%25E6%25B1%25BA%25E3%2582%2581%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1HdTN5S09hZC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JiNWY5M2YzNGUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/ymiz/articles/7ca3a3b2a264a3",
-          "author": "ymiz",
-          "description": "問題\n\npytestを使っている\nある関数A内で関数Bがn回呼ばれることをテストしたい\nどうするか？\n\n\n 対応\npytest-mock を利用する。\nhttps://pypi.org/project/pytest-mock/\n例えば、\nclass FooApiClient:\n    def fetch(self, i: int):\n        return i\n\n\nclass Bar:\n    def __init__(self, foo: FooApiClient):\n        self.__foo = foo\n\n    def execute(self, count:...",
-          "link": "https://zenn.dev/ymiz/articles/7ca3a3b2a264a3",
-          "publishedOn": "2022-12-08T21:50:00.000Z",
-          "wordCount": 359,
-          "title": "pytestで関数がn回呼ばれていることをテストしたい",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--vd8qnrZy--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ymiz%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:pytest%25E3%2581%25A7%25E9%2596%25A2%25E6%2595%25B0%25E3%2581%258Cn%25E5%259B%259E%25E5%2591%25BC%25E3%2581%25B0%25E3%2582%258C%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2581%2593%25E3%2581%25A8%25E3%2582%2592%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsveS5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--vd8qnrZy--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ymiz%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:pytest%25E3%2581%25A7%25E9%2596%25A2%25E6%2595%25B0%25E3%2581%258Cn%25E5%259B%259E%25E5%2591%25BC%25E3%2581%25B0%25E3%2582%258C%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2581%2593%25E3%2581%25A8%25E3%2582%2592%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsveS5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/syfut/articles/c79f8da50aa1bb",
-          "author": "Boushipan",
-          "description": "概要\nHomeAsssistantのPythonSprictのドキュメントに沿ってpythonを実行した場合import機能でエラーが出ることがある。\nPython_script-Home Assistant\nImportError: __import__ not found\nこれはHomeAssistant標準の方法では機能が限定的であるために起きている。\n\n 解決方法\nimportを行う必要がある場合は、シェルコマンドから実行する必要がある。\nConfiguration.yamlに以下を記載し、システムを再起動する。\nshell_command:\n    program1: 'p...",
-          "link": "https://zenn.dev/syfut/articles/c79f8da50aa1bb",
-          "publishedOn": "2022-12-08T18:14:35.000Z",
-          "wordCount": 103,
-          "title": "HomeAssistantでpython scriptを実行した際importできない問題の解決方法",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--7AvhAjZH--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Boushipan%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:HomeAssistant%25E3%2581%25A7python%2520script%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2597%25E3%2581%259F%25E9%259A%259Bimport%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25AA%25E3%2581%2584%25E5%2595%258F%25E9%25A1%258C%25E3%2581%25AE%25E8%25A7%25A3%25E6%25B1%25BA%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1Oc2tMZVRSYS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNmOGNlOTdmZjQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--7AvhAjZH--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Boushipan%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:HomeAssistant%25E3%2581%25A7python%2520script%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2597%25E3%2581%259F%25E9%259A%259Bimport%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25AA%25E3%2581%2584%25E5%2595%258F%25E9%25A1%258C%25E3%2581%25AE%25E8%25A7%25A3%25E6%25B1%25BA%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1Oc2tMZVRSYS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNmOGNlOTdmZjQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/taroh/articles/8ba43baa0f7154",
-          "author": "taroh",
-          "description": "またまた円周率絡みのぷちネタ。\n円周率を自作プログラムで100億桁求めた。アルゴリズムも3つくらい試したし、バイナリダンプもした。全部は無理だがいちおうかなりの無理筋桁を一度にプリントアウトもしてみた。の続き。\nほかにもなんか、計算して面白い数字はないものか? ということで、40年ぶりくらいに、自然対数の底 (その他) を計算してみた。\nまあネタとしては、binary splitting法を理解すること (※ ちゃんとしてないが) と、AWSを借りることについての考察の続きも。\n\n ルート2に人権はないのか?\nわしの計算機には、円周率\\piが100億桁転がっている。\nTwitterで流行...",
-          "link": "https://zenn.dev/taroh/articles/8ba43baa0f7154",
-          "publishedOn": "2022-12-08T13:43:53.000Z",
-          "wordCount": 3844,
-          "title": "e (自然対数の底) を100億桁求める〜ひとはなぜ円周率に惹かれるのか?",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--CEP6NwvU--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:taroh%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:e%2520%2528%25E8%2587%25AA%25E7%2584%25B6%25E5%25AF%25BE%25E6%2595%25B0%25E3%2581%25AE%25E5%25BA%2595%2529%2520%25E3%2582%2592100%25E5%2584%2584%25E6%25A1%2581%25E6%25B1%2582%25E3%2582%2581%25E3%2582%258B%25E3%2580%259C%25E3%2581%25B2%25E3%2581%25A8%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%259C%25E5%2586%2586%25E5%2591%25A8%25E7%258E%2587%25E3%2581%25AB%25E6%2583%25B9%25E3%2581%258B%25E3%2582%258C%25E3%2582%258B%25E3%2581%25AE%25E3%2581%258B%253F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3FLVU11eVZVdGdoYUt1aUNyLUhVSzM5eWpGcWJSOWotQU9yeE9DclZBPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--CEP6NwvU--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:taroh%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:e%2520%2528%25E8%2587%25AA%25E7%2584%25B6%25E5%25AF%25BE%25E6%2595%25B0%25E3%2581%25AE%25E5%25BA%2595%2529%2520%25E3%2582%2592100%25E5%2584%2584%25E6%25A1%2581%25E6%25B1%2582%25E3%2582%2581%25E3%2582%258B%25E3%2580%259C%25E3%2581%25B2%25E3%2581%25A8%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%259C%25E5%2586%2586%25E5%2591%25A8%25E7%258E%2587%25E3%2581%25AB%25E6%2583%25B9%25E3%2581%258B%25E3%2582%258C%25E3%2582%258B%25E3%2581%25AE%25E3%2581%258B%253F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3FLVU11eVZVdGdoYUt1aUNyLUhVSzM5eWpGcWJSOWotQU9yeE9DclZBPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/sergicalsix/articles/5d8597914f2057",
-          "author": "sergicalsix",
-          "description": "はじめに\n!\n\n\npip installを行う時は必ず仮想環境で行ってください\n\npip installでマイナーなライブラリをインストールする場合は、マルウェアが入っていないか十分に調査してください。\n\n\n\n 内容\n\n 初級\n% pip install {library}=={version}\n% pip install {library}>{version}\n% pip install --upgrade {library}\n\n% pip install -r requirements.txt\n% pip freeze\n初球については簡単なものばかりなので、説明は割愛します...",
-          "link": "https://zenn.dev/sergicalsix/articles/5d8597914f2057",
-          "publishedOn": "2022-12-08T13:41:12.000Z",
-          "wordCount": 484,
-          "title": "pip の小技集",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--rZvNdf1W--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:sergicalsix%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:pip%2520%25E3%2581%25AE%25E5%25B0%258F%25E6%258A%2580%25E9%259B%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1EYkMySVdNNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RmZDMyYjA1MWEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--rZvNdf1W--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:sergicalsix%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:pip%2520%25E3%2581%25AE%25E5%25B0%258F%25E6%258A%2580%25E9%259B%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1EYkMySVdNNy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RmZDMyYjA1MWEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
         }
       ]
     }

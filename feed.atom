@@ -2,10 +2,374 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-01-07T01:36:47.246Z</updated>
+    <updated>2023-01-08T01:43:52.118Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 16. ファイルをN分割する]]></title>
+        <id>https://zenn.dev/kurokawa/articles/bf5ce77a0bd7f6</id>
+        <link href="https://zenn.dev/kurokawa/articles/bf5ce77a0bd7f6"/>
+        <updated>2023-01-07T13:28:25.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 16. ファイルをN分割する
+自然数Nをコマンドライン引数などの手段で受け取り，入力のファイルを行単位でN分割せよ．同様の処理をsplitコマンドで実現せよ．
+
+ solution16.py
+import sys
+import pandas as pd
+
+if len(sys.argv) == 1:
+    print('Set arg n, like "python chapter02/solution16.py 5"')
+else:
+    n = int(sys.argv[1])
+    df = pd.read_csv('chapter02/popular-name...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ロググループに保存されているログを定期的にS3にエクスポートしてみた。]]></title>
+        <id>https://zenn.dev/kuromame614/articles/3a86349d7addb7</id>
+        <link href="https://zenn.dev/kuromame614/articles/3a86349d7addb7"/>
+        <updated>2023-01-07T11:30:55.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは、山田です。
+現在携わっている案件で、CloudWatchロググループに保存されているログを一定期間経過後に長期保管用に作成したS3バケットにエクスポートするコードを作成したので以下に記載していきます。
+よろしくお願いいたします。
+
+ 全体概要図
+全体概要図は以下の通りです。
+
+①：ロググループ一覧とS3フォルダ一覧を比較します。
+②：比較した結果S3フォルダに名前がないもの似関しては、新規でS3フォルダを作成します。
+
+③：ロググループに保存されているログをS3にエクスポートします。
+
+ コード
+以下が今回作成したコードは以下になります。
+import boto...]]></summary>
+        <author>
+            <name>黒豆。</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 15. 末尾のN行を出力]]></title>
+        <id>https://zenn.dev/kurokawa/articles/d8e944eeafbb4f</id>
+        <link href="https://zenn.dev/kurokawa/articles/d8e944eeafbb4f"/>
+        <updated>2023-01-07T10:48:37.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 15. 末尾のN行を出力
+自然数Nをコマンドライン引数などの手段で受け取り，入力のうち末尾のN行だけを表示せよ．確認にはtailコマンドを用いよ．
+
+ solution15.py
+import sys
+import pandas as pd
+import fire
+
+if len(sys.argv) == 1:
+    print('Set arg n, like "python chapter02/solution15.py 5"')
+else:
+    n = int(sys.argv[1])
+    df = pd.read_csv('chapter02/popula...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-078｜A - HEX]]></title>
+        <id>https://zenn.dev/hyperdb/articles/e6dc594f04151a</id>
+        <link href="https://zenn.dev/hyperdb/articles/e6dc594f04151a"/>
+        <updated>2023-01-07T10:07:08.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-078 A - HEX
+
+
+
+ 提出結果
+def getStringMap():
+    return input().split()
+
+
+def main():
+    x, y = getStringMap()
+    print('=' if x == y else '<' if x < y else '>')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-077｜A - Rotation]]></title>
+        <id>https://zenn.dev/hyperdb/articles/2d244241fc1b65</id>
+        <link href="https://zenn.dev/hyperdb/articles/2d244241fc1b65"/>
+        <updated>2023-01-07T10:07:08.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-077 A - Rotation
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = getString()
+    t = getString()
+
+    print('YES' if s == t[::-1] else 'NO')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-078｜B - ISU]]></title>
+        <id>https://zenn.dev/hyperdb/articles/1fd089494b7130</id>
+        <link href="https://zenn.dev/hyperdb/articles/1fd089494b7130"/>
+        <updated>2023-01-07T10:07:08.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-078 B - ISU
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    x, y, z = getIntMap()
+
+    print((x - z) // (y + z))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-077｜B - Around Square]]></title>
+        <id>https://zenn.dev/hyperdb/articles/1c05f80c6fe29c</id>
+        <link href="https://zenn.dev/hyperdb/articles/1c05f80c6fe29c"/>
+        <updated>2023-01-07T10:07:07.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-077 B - Around Square
+
+
+
+ 提出結果
+import math
+
+
+def getInt():
+    return int(input())
+
+
+def main():
+    n = getInt()
+    m = int(math.sqrt(n))
+    print(m ** 2)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python で実行時型チェックをしよう]]></title>
+        <id>https://zenn.dev/wsuzume/articles/5bd0cdd2d227f6</id>
+        <link href="https://zenn.dev/wsuzume/articles/5bd0cdd2d227f6"/>
+        <updated>2023-01-07T09:27:08.000Z</updated>
+        <summary type="html"><![CDATA[私の彼氏、靴磨きクリームを「シュークリームには違いないだろ」って食べちゃうのよ
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　—— 暗黙の型変換 ——
+
+ はじめに
+最近 Python を書いていて少しでも規模が大きくなってくると、事あるごとに型アノテーションと型チェックを仕込むようになってきた。そんなに気になるなら型のある言語を使えばいいじゃないという話だが、データ分析などで書きながら試行錯誤がしやすいという意味では Python のガバさはむしろ有用だと思っている。そうはいうたかてガバすぎるのでちょうどよく引き締めましょうね、という現状の私の局所解を紹介する。
+Pyt...]]></summary>
+        <author>
+            <name>Josh Nobus</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Python]exeファイルを実行するだけで環境構築が完了するWinPython]]></title>
+        <id>https://zenn.dev/tremendous1192/articles/3907160eb5b393</id>
+        <link href="https://zenn.dev/tremendous1192/articles/3907160eb5b393"/>
+        <updated>2023-01-07T09:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+AI、機械学習などの勉強を始めようとインターネットの海に潜ると、日本語圏の情報は大体がPythonです(勿論RやC言語、C++もありますが、主流はPythonと思われます)。
+そのため初心者がPythonの環境構築を始めるのは自然な流れですが、この環境構築が曲者で初心者殺しになっています。
+もっと簡単にPythonを始める方法は無いのでしょうか?
+既にタイトルに結論を書いていますね、WinPythonをお勧めします。
+この記事では、WinPythonのダウンロード方法から最初のPythonプログラムの作成まで書きました。
+
+ 2023/1/8 誤字修正
+
+ WinPytho...]]></summary>
+        <author>
+            <name>Tremendous1192</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 14. 先頭からN行を出力]]></title>
+        <id>https://zenn.dev/kurokawa/articles/e26aef6b38b0c5</id>
+        <link href="https://zenn.dev/kurokawa/articles/e26aef6b38b0c5"/>
+        <updated>2023-01-07T08:29:53.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 14. 先頭からN行を出力
+自然数Nをコマンドライン引数などの手段で受け取り，入力のうち先頭のN行だけを表示せよ．確認にはheadコマンドを用いよ．
+
+ solution14.py
+import sys
+import pandas as pd
+#import fire
+
+if len(sys.argv) == 1:
+    print('Set arg n, like "python chapter02/solution14.py 5"')
+else:
+    n = int(sys.argv[1])
+    df = pd.read_csv('chapter02/popu...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 13. col1.txtとcol2.txtをマージ]]></title>
+        <id>https://zenn.dev/kurokawa/articles/274a678b669f87</id>
+        <link href="https://zenn.dev/kurokawa/articles/274a678b669f87"/>
+        <updated>2023-01-07T07:50:56.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 13. col1.txtとcol2.txtをマージ
+12で作ったcol1.txtとcol2.txtを結合し，元のファイルの1列目と2列目をタブ区切りで並べたテキストファイルを作成せよ．確認にはpasteコマンドを用いよ．
+
+ solution13.py
+import pandas as pd
+
+df_col1 = pd.read_csv('chapter02/col1.txt', header=None)
+df_col2 = pd.read_csv('chapter02/col2.txt', header=None)
+df_merged = pd.concat([df_co...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TensorFlow Hubから取得した機械学習モデルをONNX形式に変換する]]></title>
+        <id>https://zenn.dev/yuyakato/articles/226faa817ed01d</id>
+        <link href="https://zenn.dev/yuyakato/articles/226faa817ed01d"/>
+        <updated>2023-01-07T07:32:21.000Z</updated>
+        <summary type="html"><![CDATA[4行まとめ
+
+TensorFlow HubからはSavedModel形式で機械学習モデルをダウンロードできる。
+
+tf2onnxを使うことでSavedModel形式からONNX形式に変換できる。
+
+tf2onnxでは--rename-inputs、--rename-outputsオプションを使うことでノード名を指定できる。
+
+onnx、tensorflow、tf2onnxパッケージの依存関係はややこしい。
+
+
+ はじめに
+TensorFlow Hubでは様々な機械学習モデルが配布されています。
+これらの機械学習モデルをONNX形式に変換して利用する機会がありましたので、その手順を備忘...]]></summary>
+        <author>
+            <name>Yuya Kato</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第2章:UNIXコマンド12. 1列目をcol1.txtに,2列目をcol2.txtに保存]]></title>
+        <id>https://zenn.dev/kurokawa/articles/ca327241cbfc0f</id>
+        <link href="https://zenn.dev/kurokawa/articles/ca327241cbfc0f"/>
+        <updated>2023-01-07T04:09:16.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 12. 1列目をcol1.txtに，2列目をcol2.txtに保存
+各行の1列目だけを抜き出したものをcol1.txtに，2列目だけを抜き出したものをcol2.txtとしてファイルに保存せよ．確認にはcutコマンドを用いよ．
+
+ solution12.py
+import pandas as pd
+
+df = pd.read_csv('chapter02/popular-names.txt', sep='\t', header=None)
+df.iloc[:,0].to_csv('chapter02/col1.txt', index=False, header=False)
+...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 11. タブをスペースに置換]]></title>
+        <id>https://zenn.dev/kurokawa/articles/323f3533ac7da7</id>
+        <link href="https://zenn.dev/kurokawa/articles/323f3533ac7da7"/>
+        <updated>2023-01-07T03:00:31.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 11. タブをスペースに置換
+タブ1文字につきスペース1文字に置換せよ．確認にはsedコマンド，trコマンド，もしくはexpandコマンドを用いよ．
+
+ solution11.py
+import pandas as pd
+
+df = pd.read_csv('chapter02/popular-names.txt', sep='\t', header=None)
+df.to_csv('chapter02/solution11.txt', sep=' ', index=False, header=None)
+
+
+ solution11.txt
+Mary F 7065 1880...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 10. 行数のカウント]]></title>
+        <id>https://zenn.dev/kurokawa/articles/f753807439cee2</id>
+        <link href="https://zenn.dev/kurokawa/articles/f753807439cee2"/>
+        <updated>2023-01-07T02:39:12.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 10. 行数のカウント
+行数をカウントせよ．確認にはwcコマンドを用いよ．
+
+ solution10.py
+import pandas as pd
+
+df = pd.read_csv('chapter02/popular-names.txt', sep='\t', header=None)
+print(len(df))
+
+
+ output
+2780
+
+
+ solution10.sh
+wc -l popular-names.txt
+
+
+ output
+2780 popular-names.txt
+
+この問題では、len()を使用します。pandas.DataFrameをlen...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【SwitchBot】雨が降りそうなときに廊下ライトの色を変えてお知らせする機能を作る]]></title>
         <id>https://zenn.dev/tanny/articles/808487545eb30f</id>
@@ -7901,125 +8265,6 @@ from sys import getsizeof
 ...]]></summary>
         <author>
             <name>neginasubi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[披露宴の席次を Gromov-Wasserstein 最適輸送で決めた話]]></title>
-        <id>https://zenn.dev/akira_t/articles/seat-opt-via-gw</id>
-        <link href="https://zenn.dev/akira_t/articles/seat-opt-via-gw"/>
-        <updated>2022-12-08T22:31:22.000Z</updated>
-        <summary type="html"><![CDATA[数理最適化 Advent Calendar 2022の9日目です。
-新緑の頃、新型コロナ流行の合間をぬって、ささやかな結婚披露宴を表参道の式場にて催しました。諸々の準備の中でも席次はこだわるとキリがなく、数理最適化を使って決めました。人間関係をできるだけ保つようなゲスト集合から座席集合への写像を考えます。
-
-ゲスト間人間関係を考慮して良い感じの配席を考えたい
-
- tl;dr
-
-披露宴をしました
-知り合い関係が複雑かつ長机でゲストの席配置が難しい
-
-組合せ爆発は本物。高々20人の配置に1週間以上悩んだ結果、数理最適化した方が早いと結論
-
-
-「知り合い同士を近くに配席する」問題は非凸な二次計...]]></summary>
-        <author>
-            <name>Akira Tanimoto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pytestで関数がn回呼ばれていることをテストしたい]]></title>
-        <id>https://zenn.dev/ymiz/articles/7ca3a3b2a264a3</id>
-        <link href="https://zenn.dev/ymiz/articles/7ca3a3b2a264a3"/>
-        <updated>2022-12-08T21:50:00.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
-pytestを使っている
-ある関数A内で関数Bがn回呼ばれることをテストしたい
-どうするか？
-
-
- 対応
-pytest-mock を利用する。
-https://pypi.org/project/pytest-mock/
-例えば、
-class FooApiClient:
-    def fetch(self, i: int):
-        return i
-
-
-class Bar:
-    def __init__(self, foo: FooApiClient):
-        self.__foo = foo
-
-    def execute(self, count:...]]></summary>
-        <author>
-            <name>ymiz</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[HomeAssistantでpython scriptを実行した際importできない問題の解決方法]]></title>
-        <id>https://zenn.dev/syfut/articles/c79f8da50aa1bb</id>
-        <link href="https://zenn.dev/syfut/articles/c79f8da50aa1bb"/>
-        <updated>2022-12-08T18:14:35.000Z</updated>
-        <summary type="html"><![CDATA[概要
-HomeAsssistantのPythonSprictのドキュメントに沿ってpythonを実行した場合import機能でエラーが出ることがある。
-Python_script-Home Assistant
-ImportError: __import__ not found
-これはHomeAssistant標準の方法では機能が限定的であるために起きている。
-
- 解決方法
-importを行う必要がある場合は、シェルコマンドから実行する必要がある。
-Configuration.yamlに以下を記載し、システムを再起動する。
-shell_command:
-    program1: 'p...]]></summary>
-        <author>
-            <name>Boushipan</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[e (自然対数の底) を100億桁求める〜ひとはなぜ円周率に惹かれるのか?]]></title>
-        <id>https://zenn.dev/taroh/articles/8ba43baa0f7154</id>
-        <link href="https://zenn.dev/taroh/articles/8ba43baa0f7154"/>
-        <updated>2022-12-08T13:43:53.000Z</updated>
-        <summary type="html"><![CDATA[またまた円周率絡みのぷちネタ。
-円周率を自作プログラムで100億桁求めた。アルゴリズムも3つくらい試したし、バイナリダンプもした。全部は無理だがいちおうかなりの無理筋桁を一度にプリントアウトもしてみた。の続き。
-ほかにもなんか、計算して面白い数字はないものか? ということで、40年ぶりくらいに、自然対数の底 (その他) を計算してみた。
-まあネタとしては、binary splitting法を理解すること (※ ちゃんとしてないが) と、AWSを借りることについての考察の続きも。
-
- ルート2に人権はないのか?
-わしの計算機には、円周率\piが100億桁転がっている。
-Twitterで流行...]]></summary>
-        <author>
-            <name>taroh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pip の小技集]]></title>
-        <id>https://zenn.dev/sergicalsix/articles/5d8597914f2057</id>
-        <link href="https://zenn.dev/sergicalsix/articles/5d8597914f2057"/>
-        <updated>2022-12-08T13:41:12.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-!
-
-
-pip installを行う時は必ず仮想環境で行ってください
-
-pip installでマイナーなライブラリをインストールする場合は、マルウェアが入っていないか十分に調査してください。
-
-
-
- 内容
-
- 初級
-% pip install {library}=={version}
-% pip install {library}>{version}
-% pip install --upgrade {library}
-
-% pip install -r requirements.txt
-% pip freeze
-初球については簡単なものばかりなので、説明は割愛します...]]></summary>
-        <author>
-            <name>sergicalsix</name>
         </author>
     </entry>
 </feed>
