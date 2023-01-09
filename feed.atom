@@ -2,10 +2,414 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-01-08T01:43:52.118Z</updated>
+    <updated>2023-01-09T01:37:36.455Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[python軽量exeライブラリNuitkaが本当か検証してみた。]]></title>
+        <id>https://zenn.dev/momiji777/articles/30961baceb9897</id>
+        <link href="https://zenn.dev/momiji777/articles/30961baceb9897"/>
+        <updated>2023-01-08T22:22:51.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+以前、「pyinstaller」でexe化する方法をご紹介しました。
+https://zenn.dev/momiji777/articles/2e733826b32fa6
+https://www.youtube.com/watch?v=4IbA14BPQTI
+今回は、「Nuitka」というライブラリを用いて作成します。
+
+ 仮想環境を作成し、ライブラリをインストール
+python -m venv exe
+.\exe\Scripts\activate
+pip install nuitka
+
+ exe化するプログラムを作成
+実際にexe化していくために、簡単なアプリを作成します...]]></summary>
+        <author>
+            <name>momiji777</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第3章: 正規表現 22. カテゴリ名の抽出]]></title>
+        <id>https://zenn.dev/kurokawa/articles/b4b017a929039e</id>
+        <link href="https://zenn.dev/kurokawa/articles/b4b017a929039e"/>
+        <updated>2023-01-08T14:49:53.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 22. カテゴリ名の抽出
+記事のカテゴリ名を（行単位ではなく名前で）抽出せよ．
+
+ solution22.py
+import pandas as pd
+
+df = pd.read_json('chapter03/jawiki-country.json.gz', lines=True, compression='infer')
+text_uk = df.query('title=="イギリス"')['text'].values[0]
+splited_text_uk = text_uk.split('\n')
+ans = list(filter(lambda x: '[Cate...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第3章: 正規表現 21. カテゴリ名を含む行を抽出]]></title>
+        <id>https://zenn.dev/kurokawa/articles/53e0c4f61d8801</id>
+        <link href="https://zenn.dev/kurokawa/articles/53e0c4f61d8801"/>
+        <updated>2023-01-08T13:28:45.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 21. カテゴリ名を含む行を抽出
+記事中でカテゴリ名を宣言している行を抽出せよ
+
+ solution21.py
+import pandas as pd
+
+df = pd.read_json('chapter03/jawiki-country.json.gz', lines=True, compression='infer')
+text_uk = df.query('title=="イギリス"')['text'].values[0]
+
+splited_text_uk = text_uk.split('\n')
+ans = list(filter(lambda x: '[Cat...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[COROS(カロス)トレーニングハブのデータをAPI経由で取得する]]></title>
+        <id>https://zenn.dev/quiver/articles/304e1833b14ce9</id>
+        <link href="https://zenn.dev/quiver/articles/304e1833b14ce9"/>
+        <updated>2023-01-08T12:01:13.000Z</updated>
+        <summary type="html"><![CDATA[キプチョゲやキリアンが愛用しているスポーツウォッチCOROS(カロス)は、計測したデータをダッシュボードTraining Hubから閲覧できます。
+生成されたデータをシステマティックな取得したいことがありますが、残念ながら、Training Hubは公式なAPIが存在しません。
+そのため、ブラウザ(アプリ)閲覧時と同じ仕組みを使い、COROS Training HubからAPIでデータをcURL/Python経由で取得する方法を紹介します。
+
+ 前提
+
+COROS Training Hubのアカウントを所持している
+2023/01/09時点の情報
+
+
+ APIの流れ
+COROS Trai...]]></summary>
+        <author>
+            <name>quiver</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【たった1分】AtCoder初心者が初めて正解するため知っておくべきこと]]></title>
+        <id>https://zenn.dev/sobaotto/articles/2648e20d3ad41f</id>
+        <link href="https://zenn.dev/sobaotto/articles/2648e20d3ad41f"/>
+        <updated>2023-01-08T10:39:55.000Z</updated>
+        <summary type="html"><![CDATA[注釈
+自分が競プロを始めたばかりなので、問題を解く上で必要だと思ったことや気づきなどを随時まとめていこうと思います。
+
+ 入力を受け取る方法
+
+入力
+
+
+N
+x1
+x2
+:
+xN
+
+
+入力例
+
+
+3
+2
+5
+4
+
+n = int(input())
+list=[input() for i in range(n)]
+
+print(list) # [2, 5, 4]
+
+ 参考
+https://qiita.com/jamjamjam/items/e066b8c7bc85487c0785]]></summary>
+        <author>
+            <name>sobaotto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Visual StudioでPythonを使用する方法]]></title>
+        <id>https://zenn.dev/mom/articles/4fd7c02bcc9087</id>
+        <link href="https://zenn.dev/mom/articles/4fd7c02bcc9087"/>
+        <updated>2023-01-08T09:45:36.000Z</updated>
+        <summary type="html"><![CDATA[Python開発では、Visual Studioではなく、Visual Studio Codeを使用することが一般的ですが、C++などの開発経験が豊富で、Visual Studioに使い慣れた方がPythonを使いたい場合は、Visual Studioを選択したいかもしれません。
+そんな方のために、Visual StudioでPythonを実行するにあたり、最低限知っておくと、スムーズにPython実行までできる知識を以下にまとめています。
+
+ 前提
+Visual Studioをインストール済みであること
+
+ 準備
+Visual Studioは起動していない状態で、以下の手順に沿って、...]]></summary>
+        <author>
+            <name>TechStar</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-080｜A - Parking]]></title>
+        <id>https://zenn.dev/hyperdb/articles/f1b425cb431524</id>
+        <link href="https://zenn.dev/hyperdb/articles/f1b425cb431524"/>
+        <updated>2023-01-08T09:33:31.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-080 A - Parking
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    n, a, b = getIntMap()
+    c = n * a
+
+    print(c if c < b else b)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-079｜A - Good Integer]]></title>
+        <id>https://zenn.dev/hyperdb/articles/9365eef7818dde</id>
+        <link href="https://zenn.dev/hyperdb/articles/9365eef7818dde"/>
+        <updated>2023-01-08T09:33:31.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-078 A - Good Integer
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    n = list(getString())
+    n.sort()
+
+    print('Yes' if n[0] == n[1] and n[0] == n[2] else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-080｜B - Harshad Number]]></title>
+        <id>https://zenn.dev/hyperdb/articles/8e577692cde16a</id>
+        <link href="https://zenn.dev/hyperdb/articles/8e577692cde16a"/>
+        <updated>2023-01-08T09:33:30.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-080 B - Harshad Number
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    x = getInt()
+    l = map(int, list(str(x)))
+
+    print('Yes' if x % sum(l) == 0 else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-079｜B - Lucas Number]]></title>
+        <id>https://zenn.dev/hyperdb/articles/5fc1c75bbb986b</id>
+        <link href="https://zenn.dev/hyperdb/articles/5fc1c75bbb986b"/>
+        <updated>2023-01-08T09:33:30.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-079 B - Lucas Number
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    n = getInt()
+    l = [0] * (n + 1)
+
+    l[0] = 2
+    l[1] = 1
+    for i in range(2, n + 1):
+        l[i] = l[i - 1] + l[i - 2]
+    print(l[n])
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ESP32でUDP通信する方法を誰よりもわかりやすく解説　お試し編]]></title>
+        <id>https://zenn.dev/yuta_enginner/articles/2886f2b41a048f</id>
+        <link href="https://zenn.dev/yuta_enginner/articles/2886f2b41a048f"/>
+        <updated>2023-01-08T09:18:32.000Z</updated>
+        <summary type="html"><![CDATA[「esp32 UDP 方法」でググると、色々な記事がヒットしますが、断片的な情報しか書かれていない記事が多すぎます。
+また、ホストやポートなどで、いきなり「127.0.0.1」と書かれても、それが任意の数値なのか何か意味のある数値なのか解説されていないので、初心者にはあまりにも不親切です。
+そこで、この記事では工作をするために必要な情報を解説しつつ、読んだ人が誰でも作れることを目的に解説します。
+※ ぶっちゃけ、レイヤーとかプロトコルなんて工作する上ではどうでもいいので、その辺の解説はしません
+
+ UDPとTCP どちらを選ぶか
+前提として、この記事に辿り着いた時点で、読者は「ESP32...]]></summary>
+        <author>
+            <name>Yuta</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第3章: 正規表現 20. JSONデータの読み込み]]></title>
+        <id>https://zenn.dev/kurokawa/articles/2865e205684475</id>
+        <link href="https://zenn.dev/kurokawa/articles/2865e205684475"/>
+        <updated>2023-01-08T08:55:19.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+Wikipediaの記事を以下のフォーマットで書き出したファイルjawiki-country.json.gzがある．
+
+1行に1記事の情報がJSON形式で格納される
+各行には記事名が”title”キーに，記事本文が”text”キーの辞書オブジェクトに格納され，そのオブジェクトがJSON形式で書き出される
+ファイル全体はgzipで圧縮される
+
+以下の処理を行うプログラムを作成せよ．
+
+
+ 20. JSONデータの読み込み
+Wikipedia記事のJSONファイルを読み込み，「イギリス」に関する記事本文を表示せよ．問題21-29では，ここで抽出した記事本文に対して実行せよ．
+
+ ...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Windows 10】タスクスケジューラで定期的にプログラムを実行する]]></title>
+        <id>https://zenn.dev/eito_blog/articles/cf6fbfdc9314b1</id>
+        <link href="https://zenn.dev/eito_blog/articles/cf6fbfdc9314b1"/>
+        <updated>2023-01-08T08:49:29.000Z</updated>
+        <summary type="html"><![CDATA[このページではbatファイルを定期的（毎日15:00）に実行することを例に、設定方法を解説します。
+
+ タスクスケジューラを開く
+Cortanaの検索窓に「タスクスケジューラ」と入力し、表示されたタスクスケジューラをクリックして開きます。
+
+
+ タスクを作成する
+基本タスクの作成をクリックします。
+
+
+ 基本タスクの作成
+任意の名前と説明を入力して次へをクリックします。
+
+
+ トリガー
+任意の頻度を選択（本ページでは毎日を選択）し、次へをクリックします。
+
+任意の時間を設定（本ページでは15:00:00）し、次へをクリックします。
+
+プログラムの開始を選択し、次へをクリックします。
+
+...]]></summary>
+        <author>
+            <name>エイト</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 19. 各行の1コラム目の文字列の出現頻度を求め，〜]]></title>
+        <id>https://zenn.dev/kurokawa/articles/54b2c1f7b97963</id>
+        <link href="https://zenn.dev/kurokawa/articles/54b2c1f7b97963"/>
+        <updated>2023-01-08T05:33:22.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 19. 各行の1コラム目の文字列の出現頻度を求め，出現頻度の高い順に並べる
+各行の1列目の文字列の出現頻度を求め，その高い順に並べて表示せよ．確認にはcut, uniq, sortコマンドを用いよ．
+
+ solution19.py
+import pandas as pd
+
+df = pd.read_csv('chapter02/popular-names.txt', sep='\t', header=None)
+print(df.iloc[:,0].value_counts())
+#print(df[0].value_counts())
+
+
+ output
+James   ...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 18. 各行を3コラム目の数値の降順にソート]]></title>
+        <id>https://zenn.dev/kurokawa/articles/8eb084693fa70d</id>
+        <link href="https://zenn.dev/kurokawa/articles/8eb084693fa70d"/>
+        <updated>2023-01-08T04:57:30.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 18. 各行を3コラム目の数値の降順にソート
+各行を3コラム目の数値の逆順で整列せよ（注意: 各行の内容は変更せずに並び替えよ）．確認にはsortコマンドを用いよ（この問題はコマンドで実行した時の結果と合わなくてもよい）．
+
+ solution18.py
+import pandas as pd
+
+df = pd.read_csv('chapter02/popular-names.txt', sep='\t', header=None)
+print(df.sort_values(2 ,ascending=False))
+
+
+ output
+            0  1  ...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 17. １列目の文字列の異なり]]></title>
+        <id>https://zenn.dev/kurokawa/articles/ada4ad1ef9b260</id>
+        <link href="https://zenn.dev/kurokawa/articles/ada4ad1ef9b260"/>
+        <updated>2023-01-08T04:05:19.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 17. １列目の文字列の異なり
+1列目の文字列の種類（異なる文字列の集合）を求めよ．確認にはcut, sort, uniqコマンドを用いよ．
+
+ solution17.py
+import pandas as pd
+
+df = pd.read_csv('chapter02/popular-names.txt', sep='\t', header=None)
+ans = list(set(df.iloc[:,0]))
+print(sorted(ans))
+
+
+ output
+['Abigail', 'Aiden', 'Alexander', 'Alexis', 'Alice',...]]></summary>
+        <author>
+            <name>kurokawa</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 16. ファイルをN分割する]]></title>
         <id>https://zenn.dev/kurokawa/articles/bf5ce77a0bd7f6</id>
@@ -7825,446 +8229,6 @@ def main():
     ...]]></summary>
         <author>
             <name>はんな</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonでclassを使う:getattrとsetattr]]></title>
-        <id>https://zenn.dev/sergicalsix/articles/931ca295c36281</id>
-        <link href="https://zenn.dev/sergicalsix/articles/931ca295c36281"/>
-        <updated>2022-12-10T11:48:45.000Z</updated>
-        <summary type="html"><![CDATA[getattr,setattrを使う条件を考える
-
-条件X
-インスタンスのメンバー変数(下記の例ではparam_name)がプログラムの内部で変数の値のみ判明しているとき(x = 'param_name')を考える。
-つまり以下のような例である。
-
-class Model:
-    def __init__(self,s = 'hoge'):
-        self.param_name = s
-
-x = 'param_name'
-model = Model()
-
-# このときプログラム上でmodelはparam_nameというメンバーを持っていることは知っているが
-# ↑変数xに...]]></summary>
-        <author>
-            <name>sergicalsix</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[小ネタ]EventBridge Scheduleをboto3で更新するスニペット]]></title>
-        <id>https://zenn.dev/shimo_s3/articles/55e7da7fdee532</id>
-        <link href="https://zenn.dev/shimo_s3/articles/55e7da7fdee532"/>
-        <updated>2022-12-10T10:31:42.000Z</updated>
-        <summary type="html"><![CDATA[EventBridgeのスケジュールを更新するCLI/boto3を書いていると、更新するときにデフォルトから変更している全パラメータを再投入しなければならず、面倒です。
-以前、こういうヘルパースクリプトを書いたのですが、いまいち使い勝手が悪いです。自分でもあまり使っていないです。。
-https://zenn.dev/shimo_s3/articles/df70484bfe4e39
-小さめの関数にして使うようになったので共有します。1つのパラメータであればこれで十分かなと。
-
- Code
-スケジュール名と変えたいパラメータを受け取って更新する関数です。
-
-
-get_sheduleで現状のパ...]]></summary>
-        <author>
-            <name>shimo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[VisualStudio Code上から実行するとSSLエラー]]></title>
-        <id>https://zenn.dev/shin1007/articles/70320401676fce</id>
-        <link href="https://zenn.dev/shin1007/articles/70320401676fce"/>
-        <updated>2022-12-10T08:04:24.000Z</updated>
-        <summary type="html"><![CDATA[エラー内容とそのコード
-
-例外が発生しました: SSLError
-HTTPSConnectionPool(host='msedgedriver.azureedge.net', port=443): Max retries exceeded with url: /LATEST_RELEASE_99_WINDOWS (Caused by SSLError("Can't connect to HTTPS URL because the SSL module is not available."))
-
-path = EdgeChromiumDriverManager().install()
-...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonの正規表現で繰り返しの文字列を1つにする。]]></title>
-        <id>https://zenn.dev/shin1007/articles/17b2733066bdd5</id>
-        <link href="https://zenn.dev/shin1007/articles/17b2733066bdd5"/>
-        <updated>2022-12-10T08:01:24.000Z</updated>
-        <summary type="html"><![CDATA[やりたいこと
-PDFに埋め込まれている文字がおかしいときになんとかしたかった。
-下みたいにしたい。連続で同じ文字が繰り返しのときに、一つにしたい。
-
-ああああ　→　あ
-ああいいううううえお　→　あいうえお
-ABCABCABC　→　ABCABCABC
-唯唯諾諾　→　唯諾
-
-
- やったこと
-    # resultにはすでに何らかの文字列が入っているものとする
-    result = re.sub(r"(.)\1{1,}", "\g<1>", result)  # 繰り返し文字列をまとめる
-
- 他にも合わせたスニペット
-
-テキストの整形
-import re
-from uni...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[openpyxlで余白を設定する]]></title>
-        <id>https://zenn.dev/shin1007/articles/3ffc48223e47c7</id>
-        <link href="https://zenn.dev/shin1007/articles/3ffc48223e47c7"/>
-        <updated>2022-12-10T07:59:30.000Z</updated>
-        <summary type="html"><![CDATA[余白を設定できるらしいんですが、方法を探しても見当たりませんでした。
-公式に使い方の例が載っていなくて右往左往していましたが、解決です。
-以下の関数内の、ws.page_margins.left = 0.4から続くところです。
-設定はインチ単位なので気をつけてください。0.4インチで約1センチです。
-import openpyxl
-
-
-def new_workbook(path):
-    wb = openpyxl.Workbook()
-    ws = wb.active
-
-    # 余白
-    ws.page_margins.left = 0.4
-    ws.page_mar...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Seleniumで指定座標をクリックさせる]]></title>
-        <id>https://zenn.dev/shin1007/articles/9fb3c56c69c96b</id>
-        <link href="https://zenn.dev/shin1007/articles/9fb3c56c69c96b"/>
-        <updated>2022-12-10T07:57:47.000Z</updated>
-        <summary type="html"><![CDATA[動的なウェブサイトなどで、タグを追いかけられないときにどうぞ。
-heliumを使うともっと楽なんですが、Anacondaで提供されていないようなので、自作してみました。
-最後のactions.perform()を書き忘れて、「動かない。指定するタグが悪いのか？」って結構悩みました。
-def click_by_position(driver, x, y) -> None:
-    from selenium.webdriver.common.action_chains import ActionChains
-    actions = ActionChains(driver)
-
-  ...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[strftime / strptimeのフォーマット]]></title>
-        <id>https://zenn.dev/shin1007/articles/24d7cd9d0c44ee</id>
-        <link href="https://zenn.dev/shin1007/articles/24d7cd9d0c44ee"/>
-        <updated>2022-12-10T07:56:14.000Z</updated>
-        <summary type="html"><![CDATA[良く忘れるのでジャンルごとに分けたよ、というだけのもの。
-公式はこちら
-https://docs.python.org/ja/3/library/time.html#time.strftime
-
-
-
-ジャンル
-表現
-内容
-
-
-
-
-年
-%y
-上 2 桁なしの西暦年を表す 10 進数 [00,99]。
-
-
-年
-%Y
-上 2 桁付きの西暦年を表す 10 進数。
-
-
-月
-%b
-ロケールにおける省略形の月名。
-
-
-月
-%B
-ロケールにおける省略なしの月名。
-
-
-月
-%m
-月を表す 10 進数 [01,12]。
-
-
-日
-%j
-年の初めから何日目かを表す 10 進数 [001,366]。
-
-
-日
-%d...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[python-docxで日本語フォント対応]]></title>
-        <id>https://zenn.dev/shin1007/articles/d9e490e73867d7</id>
-        <link href="https://zenn.dev/shin1007/articles/d9e490e73867d7"/>
-        <updated>2022-12-10T07:53:54.000Z</updated>
-        <summary type="html"><![CDATA[やりたいこと
-英語用のフォントと日本語用のフォントを分ける。
-以下のページとほぼ同じことしてます。
-本家にプルリクエストが入っているみたいですが、テストやドキュメンテーションの不足などでリジェクトされているみたいです。
-https://github.com/python-openxml/python-docx/pull/329/commits/097586cab016c10cfaefb3cf283355f74889a27d
-
- 使用例
-
-example.py
-paragraph.runs[0].font.name = "Arial"
-paragraph.runs[0].font.na...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[subprocess + pyinstaller --noconsole]]></title>
-        <id>https://zenn.dev/shin1007/articles/39f8b3c0c257df</id>
-        <link href="https://zenn.dev/shin1007/articles/39f8b3c0c257df"/>
-        <updated>2022-12-10T07:52:10.000Z</updated>
-        <summary type="html"><![CDATA[PyInstallerを利用した際、subprocess関連が入っているときにうまく動作しないことがあります。
-エラーメッセージすら出ないので、なかなかの困りものです。
-これを回避するための策を提示します。
-
- 以下の関数を定義
-def subprocess_args(include_stdout=True):
-    # The following is true only on Windows.
-    if hasattr(subprocess, 'STARTUPINFO'):
-        info = subprocess.STARTUPINFO()
-        info...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[BeautifulSoupで特定の要素を選択するチートシート]]></title>
-        <id>https://zenn.dev/shin1007/articles/2476f5af6c51c8</id>
-        <link href="https://zenn.dev/shin1007/articles/2476f5af6c51c8"/>
-        <updated>2022-12-10T07:50:57.000Z</updated>
-        <summary type="html"><![CDATA[主に以下のサイトを参考にさせていただきました。
-https://techacademy.jp/magazine/34387
-https://qiita.com/Chanmoro/items/db51658b073acddea4ac
-https://gammasoft.jp/blog/difference-find-and-select-in-beautiful-soup-of-python/
-https://ai-inter1.com/beautifulsoup_1/#st-toc-h-29
-
- インポート
-from bs4 import BeautifulSoup
-
- soupにHTM...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyAutoGUIのチートシート]]></title>
-        <id>https://zenn.dev/shin1007/articles/f06729df14fb9f</id>
-        <link href="https://zenn.dev/shin1007/articles/f06729df14fb9f"/>
-        <updated>2022-12-10T07:49:21.000Z</updated>
-        <summary type="html"><![CDATA[以下リンク（本家）のうち、使いそうなところだけまとめました。
-詳しくは本家を見てください。
-https://pyautogui.readthedocs.io/en/latest/quickstart.html
-pip install pyautogui Pillow==8.3でインストール。(最新のPillow==8.3.1だとエラーすら吐かずに落ちる)
-import pyautoguiでインポート。
-下の関数を呼び出す際は手前にpyautogui.を付けましょう。
-
- 設定
-
-
-
-動作
-コード
-
-
-
-
-すべて1秒おきにする
-PAUSE = 1.0
-
-
-
-
- いろいろ取得
-
-
-
-動作
-コ...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ベイズの定理に納得がいかなかったからPythonで試してみたら納得がいったって話。]]></title>
-        <id>https://zenn.dev/shin1007/articles/69c3164993955d</id>
-        <link href="https://zenn.dev/shin1007/articles/69c3164993955d"/>
-        <updated>2022-12-10T07:47:56.000Z</updated>
-        <summary type="html"><![CDATA[動機
-以下のサイトを見ていて、
-「どう見ても3/8じゃん？P(A)も8/17じゃん？」
-ってなって納得行かなかった。
-なので、実際にコードを書いて実験してみて、そもそもの考え方が間違ってたんだなーと理解した。
-https://bellcurve.jp/statistics/course/6444.html
-
- 第1の実験（袋３つとも、確率が同じ）
-
- 条件
-わかりやすくするため、ボールの数を変えます。
-たくさん試行回数を増やせば、まぁまぁいい感じの割合になるでしょう(コードでは1200万回試してます)
-
-
-
-袋の名前
-白ボールの数
-赤ボールの数
-このバッグが選ばれている状態で白ボール...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyPDF2?いやPyMuPDFでしょ]]></title>
-        <id>https://zenn.dev/shin1007/articles/b023c50a7d7865</id>
-        <link href="https://zenn.dev/shin1007/articles/b023c50a7d7865"/>
-        <updated>2022-12-10T07:46:13.000Z</updated>
-        <summary type="html"><![CDATA[PyPDF2だと読み書きのときにエラーをはかれる。
-ことがある。うちの扱ってるPDFだと結構あるので問題になった。
- (<class 'PyPDF2.utils.PdfReadError'>, PdfReadError('Illeagal character in Name Object',) <traceback object at 0x0123456789ABCDEF
-
- PyMuPDFなら大丈夫！問題ない！
-日本語だとPyPDF2の資料がそこそこあるんですが、PyMuPDFは英語ばっかり。
-なので自分が使ったメソッドとか書いていきます。
-Wand+ImageM...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【解決】Flask_SQLAlchemyでのOperationalError]]></title>
-        <id>https://zenn.dev/shin1007/articles/a0f03992f928a0</id>
-        <link href="https://zenn.dev/shin1007/articles/a0f03992f928a0"/>
-        <updated>2022-12-10T07:37:52.000Z</updated>
-        <summary type="html"><![CDATA[エラー内容とコード
-
- エラー内容
-sqlite3.OperationalError: unable to open database file
-
- コード
-https://readthedocs.org/projects/flask-sqlalchemy/downloads/pdf/2.x/
-に存在する
-
-app.py
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlit...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【解決】VSCodeでJupyter Notebook使おうとしたらKernelを起動できない]]></title>
-        <id>https://zenn.dev/shin1007/articles/6261d50fd46a66</id>
-        <link href="https://zenn.dev/shin1007/articles/6261d50fd46a66"/>
-        <updated>2022-12-10T07:36:18.000Z</updated>
-        <summary type="html"><![CDATA[エラー内容
-
-Failed to start the Kernel. 
-c:\miniconda3\envs\test\lib\site-packages\traitlets\traitlets.py:2395: FutureWarning: Supporting extra quotes around strings is deprecated in traitlets 5.0. You can use 'hmac-sha256' instead of '"hmac-sha256"' if you require traitlets >=5.
-  FutureWarning,...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ARC 107 B - Quadruple の解説の解説]]></title>
-        <id>https://zenn.dev/chelo/articles/e95bdce0c60a07</id>
-        <link href="https://zenn.dev/chelo/articles/e95bdce0c60a07"/>
-        <updated>2022-12-10T00:32:32.000Z</updated>
-        <summary type="html"><![CDATA[https://atcoder.jp/contests/arc107/tasks/arc107_b
-
- 解説
-https://atcoder.jp/contests/arc107/editorial/262
-下の解説の解説で理解した上でも、茶色500レベルのおれには理解できないぞ
-
- よく分かった解説を更に噛み砕く
-https://drken1215.hatenablog.com/entry/2020/10/31/231300
-毎度お世話になっております
-方針は理解したのだけれども、vとか記号が多いと理解できない箇所も多いぞ
-腹落ちするまで噛み砕くぞ!
-
- 問題文の変形
-
-
-a+b-c-...]]></summary>
-        <author>
-            <name>チェロ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Codon】Pythonコンパイラを試してみた]]></title>
-        <id>https://zenn.dev/k41531/articles/8ade9c6c891dea</id>
-        <link href="https://zenn.dev/k41531/articles/8ade9c6c891dea"/>
-        <updated>2022-12-09T22:00:01.000Z</updated>
-        <summary type="html"><![CDATA[https://news.ycombinator.com/item?id=33908576
-Hacker Newsに上がっていたCodonというソフトウェアが気になったので、少し試してみました。
-
- Codonとは？
-PythonのコードをマシンコードにコンパイルするPythonコンパイラです。
-標準のPythonで使われている処理系（CPython）はインタプリタですが、このプロジェクトではPythonの処理系をコンパイラとして実装することでC/C++と遜色ないほどの速度を実現したとありました。
-https://github.com/exaloop/codon
-また、このプロジェクトは...]]></summary>
-        <author>
-            <name>kaisei</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[今話題の ChatGPT を Python でいい感じに使ってみよう！]]></title>
-        <id>https://zenn.dev/ekusiadadus/articles/python_chat_gpt_2022</id>
-        <link href="https://zenn.dev/ekusiadadus/articles/python_chat_gpt_2022"/>
-        <updated>2022-12-09T18:10:30.000Z</updated>
-        <summary type="html"><![CDATA[今話題の ChatGPT を Python でいい感じに使ってみよう！
-すでにご存知の方も多いと思いますが、ChatGPT は一世を風靡している強力な自然言語処理（NLP）ツールです。人間のようなテキストの生成から、チャットボットやバーチャルアシスタントの構築まで、幅広い用途で利用されています。
-ChatGPT の人気の理由の 1 つは、大量のテキストデータで学習させた強力なオープンソースの GPT-3 言語モデルの上に構築されていることです。これにより、ChatGPT は非常に現実的で一貫性のあるテキストを生成することができ、NLP に携わる人にとって貴重なツールとなっています。
-...]]></summary>
-        <author>
-            <name>ekusiadadus</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[巨大なjsonファイルをサイズ基準で分割するpythonスクリプト]]></title>
-        <id>https://zenn.dev/pontsuyo/articles/fab628111b45b3</id>
-        <link href="https://zenn.dev/pontsuyo/articles/fab628111b45b3"/>
-        <updated>2022-12-09T13:49:09.000Z</updated>
-        <summary type="html"><![CDATA[状況
-
-jsonファイルをRedshift serverlessのtableに書き込みたい
-RedshiftのCOPY文を実行して書きこみたいが、書き込み可能なjsonのサイズは最大4MBに制限されている。
-書き込み予定のjsonファイルの生データのサイズは150MB程度である。
-jsonファイルは10,000要素の配列。
-
-
- やりたいこと
-jsonファイルを適度に分割し、COPY文を実行できる程度に小さくする。
-
- スクリプト
-json配列を先頭から読み、二分探索により高々4MBに収まるように区切る
-import ndjson
-from sys import getsizeof
-...]]></summary>
-        <author>
-            <name>neginasubi</name>
         </author>
     </entry>
 </feed>
