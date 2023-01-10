@@ -2,10 +2,382 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-01-09T01:37:36.455Z</updated>
+    <updated>2023-01-10T01:42:36.589Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[コード設計]条件分岐2/ポリシーパターン]]></title>
+        <id>https://zenn.dev/ryutaro_h/articles/ed58ee31dcd2b4</id>
+        <link href="https://zenn.dev/ryutaro_h/articles/ed58ee31dcd2b4"/>
+        <updated>2023-01-10T00:51:29.000Z</updated>
+        <summary type="html"><![CDATA[初めに
+コード設計について「良いコード/悪いコードで学ぶ設計入門 ―保守しやすい 成長し続けるコードの書き方」を手に取り、学んでいます。本記事はこちらを参考に書いています。
+今回は前回に引き続き、条件分岐について取り上げます。
+!
+書籍のコードはJavaで書かれていますが、本記事のコードは私がPythonに書き換えたものです。より良い書き方がありましたらご指摘いただけると泣いて喜びます
+
+
+
+ 本題
+
+ 条件の重複(アンチパターン)
+条件の重複はコードを書いているとよくあることではないでしょうか。本書ではECサイトアプリを想定し、優良会員の判定ロジックが一部重複されている例が取り上げ...]]></summary>
+        <author>
+            <name>Ryutaro</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[駅から一番遠い地点を探る]]></title>
+        <id>https://zenn.dev/shimat/articles/149779377ee34b</id>
+        <link href="https://zenn.dev/shimat/articles/149779377ee34b"/>
+        <updated>2023-01-09T23:26:48.000Z</updated>
+        <summary type="html"><![CDATA[ネタ
+日本の陸地で、鉄道駅から一番遠い地点はどこか？
+普通に考えれば南鳥島[1]になってしまいますが、これを鉄道がある主要5島（本州・北海道・九州・四国・沖縄本島）の中において考えてみます。[2]
+道のりで判定できると最高ですが、難しいので[3]直線距離とします。厳密な解ではなく、ある程度この辺、と分かれば満足です。
+地図情報もPython数値計算も不得手なので、諸々うまい実装ではないと思います。
+
+ 成果物
+Streamlit
+https://shimat-station-voronoi-main-czmu73.streamlit.app/
+東京23区の例です。駅から遠いほど赤・白...]]></summary>
+        <author>
+            <name>shimat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第3章: 正規表現 26. 強調マークアップの除去]]></title>
+        <id>https://zenn.dev/kurokawa/articles/3f730ca3ca5272</id>
+        <link href="https://zenn.dev/kurokawa/articles/3f730ca3ca5272"/>
+        <updated>2023-01-09T17:37:28.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 26. 強調マークアップの除去
+25の処理時に，テンプレートの値からMediaWikiの強調マークアップ（弱い強調，強調，強い強調のすべて）を除去してテキストに変換せよ（参考: [1]マークアップ早見表）．
+
+ solution26.py
+import pandas as pd
+import re
+
+df_j = pd.read_json('chapter03/jawiki-country.json.gz', lines=True, compression='infer')
+text_uk = df_j.query('title=="イギリス"')['text'].valu...]]></summary>
+        <author>
+            <name>kurokawa5</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Glueの開発環境を整える]]></title>
+        <id>https://zenn.dev/tokku5552/articles/glue-verifacation</id>
+        <link href="https://zenn.dev/tokku5552/articles/glue-verifacation"/>
+        <updated>2023-01-09T15:09:58.000Z</updated>
+        <summary type="html"><![CDATA[以下の記事を参考にしながら少し改良して動かすようにしました。
+https://docs.aws.amazon.com/ja_jp/glue/latest/dg/aws-glue-programming-etl-libraries.html
+https://future-architect.github.io/articles/20220428a/
+version: '3.5'
+services:
+  localstack:
+    container_name: glue-docker-sample-localstack
+    image: localstack/localstack:...]]></summary>
+        <author>
+            <name>tokku5552</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第3章: 正規表現 25. テンプレートの抽出]]></title>
+        <id>https://zenn.dev/kurokawa/articles/eeeb3c71c18446</id>
+        <link href="https://zenn.dev/kurokawa/articles/eeeb3c71c18446"/>
+        <updated>2023-01-09T14:17:39.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 25. テンプレートの抽出
+記事中に含まれる「基礎情報」テンプレートのフィールド名と値を抽出し，辞書オブジェクトとして格納せよ．
+
+ solution25.py
+import pandas as pd
+import re
+
+df_j = pd.read_json('chapter03/jawiki-country.json.gz', lines=True, compression='infer')
+text_uk = df_j.query('title=="イギリス"')['text'].values[0]
+
+template_text = re.findall(r'\{\...]]></summary>
+        <author>
+            <name>kurokawa5</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Python/JAX] 微分可能な量子回路シミュレーターの開発を始めた]]></title>
+        <id>https://zenn.dev/ymd_h/articles/ea7f714dddd5af</id>
+        <link href="https://zenn.dev/ymd_h/articles/ea7f714dddd5af"/>
+        <updated>2023-01-09T11:46:16.000Z</updated>
+        <summary type="html"><![CDATA[1. はじめに
+（最近全然Zennの記事を書けていなかったので、今年こそは早い段階で記事にしていこうと思います。）
+お正月の休暇中に趣味で、微分可能な量子回路シミュレータ diffq の開発をはじめました。
+https://github.com/ymd-h/diffq
+
+ 2. ポイント
+
+主ターゲットは、量子回路計算と古典計算を組み合わせる量子機械学習
+
+JAX を採用
+
+GPUフレンドリー
+ベクトル化が容易 (jax.vmap() etc.)
+微分可能 (jax.grad() etc.)
+(現時点では) 非Windowsはサポート
+
+
+開発の動機は、量子機械学習や量子回路シミュレ...]]></summary>
+        <author>
+            <name>山田(ymd)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[10個の質問に答えるだけで会話型AIキャラを生成できるサービス「Chara.AI Generator」を作った！]]></title>
+        <id>https://zenn.dev/makunugi/articles/ebecbb5de562d6</id>
+        <link href="https://zenn.dev/makunugi/articles/ebecbb5de562d6"/>
+        <updated>2023-01-09T09:52:31.000Z</updated>
+        <summary type="html"><![CDATA[概要
+こんにちは、maKunugiです
+今回は表題の通り、会話型AI(= 会話ができるAI)のキャラクターを簡単に生成できるサービスを作ってみた話について、紹介させていただきます。会話ができるAIに興味がある方、ぜひ読んでみていただけると嬉しいです！
+
+ 作ったもの
+作ったもの: Chara.AI Generator
+読み方: キャラエーアイ　ジェネレーター
+https://mebo.work/generator
+私はmebo(ミーボ)という会話型AI構築サービスを2年ほど運営しており、そのサービスの１つの機能として開発しました。
+Chara.AI Generatorは、下記のような...]]></summary>
+        <author>
+            <name>maKunugi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-081｜A - Placing Marbles]]></title>
+        <id>https://zenn.dev/hyperdb/articles/d5e9cbf0375e40</id>
+        <link href="https://zenn.dev/hyperdb/articles/d5e9cbf0375e40"/>
+        <updated>2023-01-09T08:54:08.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-081 A - Placing Marbles
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = list(map(int, list(getString())))
+
+    print(sum(s))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-081｜B - Shift only]]></title>
+        <id>https://zenn.dev/hyperdb/articles/6ba45884c5b045</id>
+        <link href="https://zenn.dev/hyperdb/articles/6ba45884c5b045"/>
+        <updated>2023-01-09T08:52:18.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-081 B - Shift only
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def mod(l):
+    return sum(list(map(lambda x: x % 2, l)))
+
+
+def div(l):
+    return list(map(lambda x: x // 2, l))
+
+
+def main():
+    n = getInt()
+    a =...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[競プロ python 入力チートシート]]></title>
+        <id>https://zenn.dev/omusan/articles/90ff71f300c2c8</id>
+        <link href="https://zenn.dev/omusan/articles/90ff71f300c2c8"/>
+        <updated>2023-01-09T07:42:47.000Z</updated>
+        <summary type="html"><![CDATA[久方ぶりにpythonで競プロに挑戦しようと思い、思い出しがてらメモ。
+
+ １行での入力
+n = input() # 1つの文字列を受け取る
+n = int(input()) # 1つの整数を受け取る
+n = float(input())　# 1つの小数を受け取る
+
+n = input().split(sep) # 複数の文字列をリストとして受け取る
+n = list(map(int, input().split(sep))) # 複数の整数をリストとして受け取る
+
+ 複数行での入力
+S = []
+for _ in range (X)
+S.append(input()) # X回入力があ...]]></summary>
+        <author>
+            <name>Sota Omura</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第3章: 正規表現 24. ファイル参照の抽出]]></title>
+        <id>https://zenn.dev/kurokawa/articles/eefbdbf3c1026e</id>
+        <link href="https://zenn.dev/kurokawa/articles/eefbdbf3c1026e"/>
+        <updated>2023-01-09T06:30:08.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 24. ファイル参照の抽出
+記事から参照されているメディアファイルをすべて抜き出せ．
+
+ solution24.py
+import pandas as pd
+import re
+
+df_j = pd.read_json('chapter03/jawiki-country.json.gz', lines=True, compression='infer')
+text_uk = df_j.query('title=="イギリス"')['text'].values[0]
+
+media = re.findall(r'\[\[ファイル:(.+?)(?:\|.+)*\]\]', tex...]]></summary>
+        <author>
+            <name>kurokawa5</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】Webで使えるPython 基礎編 【１環境説明】]]></title>
+        <id>https://zenn.dev/web_life_ch/articles/49e39f16a07691</id>
+        <link href="https://zenn.dev/web_life_ch/articles/49e39f16a07691"/>
+        <updated>2023-01-09T06:29:43.000Z</updated>
+        <summary type="html"><![CDATA[【１環境説明】
+YouTube: https://youtu.be/iwVYTpC5iZM
+https://youtu.be/iwVYTpC5iZM
+今回からPythonの基本操作について解説します。
+動作環境につきましては、
+自分の方では
+https://docs.anaconda.com/navigator/index.html
+こちらの「Anaconda Navigator」というツールを使用して、
+・Python本体
+・ライブラリの管理
+・仮想環境の構築
+これらをまとめて設定しています。
+!
+こちらのツールですが、いくつか注意が必要です。
+・容量が３G程度必要
+・PCのユーザ...]]></summary>
+        <author>
+            <name>Web Life CH</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonコードを暗号化(難読化)【pyarmor】]]></title>
+        <id>https://zenn.dev/momiji777/articles/65d0167a39b9c9</id>
+        <link href="https://zenn.dev/momiji777/articles/65d0167a39b9c9"/>
+        <updated>2023-01-09T06:15:20.000Z</updated>
+        <summary type="html"><![CDATA[https://www.youtube.com/watch?v=dTe2_j1qIYc
+pythonファイルを共有するときに見られたくない部分があるかと思います。
+「pyarmor」を利用することで、それを可能にすることができます。
+python -m venv test
+.\test\Scripts\Activate
+pip install pyarmor
+今回暗号化するのはこのarmor.pyファイル
+import tkinter
+import tkinter.ttk as ttk
+
+class Application(tkinter.Frame):
+    def __init__...]]></summary>
+        <author>
+            <name>momiji777</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第3章: 正規表現 23. セクション構造]]></title>
+        <id>https://zenn.dev/kurokawa/articles/7c09df652cd1e1</id>
+        <link href="https://zenn.dev/kurokawa/articles/7c09df652cd1e1"/>
+        <updated>2023-01-09T05:43:34.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 23. セクション構造
+記事中に含まれるセクション名とそのレベル（例えば”== セクション名 ==”なら1）を表示せよ.
+
+ solution23.py
+import re
+import pandas as pd
+
+df = pd.read_json('chapter03/jawiki-country.json.gz', lines=True, compression='infer')
+text_uk = df.query('title=="イギリス"')['text'].values[0]
+
+section_pattern = r'(={2,})(.+?)={2,}'
+s...]]></summary>
+        <author>
+            <name>kurokawa5</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonプログラムで野村証券のIPOブックビルディング申込を自動化しよう！]]></title>
+        <id>https://zenn.dev/toranoko114/books/c087933ac982a3</id>
+        <link href="https://zenn.dev/toranoko114/books/c087933ac982a3"/>
+        <updated>2023-01-09T05:23:32.000Z</updated>
+        <summary type="html"><![CDATA[野村証券のIPOブックビルディング申込を自動化するプログラムを公開します。]]></summary>
+        <author>
+            <name>toranoko114</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VSCode で極力手を抜いて開発するハンドブック]]></title>
+        <id>https://zenn.dev/naa0yama/books/python-boilerplate</id>
+        <link href="https://zenn.dev/naa0yama/books/python-boilerplate"/>
+        <updated>2023-01-09T04:58:32.000Z</updated>
+        <summary type="html"><![CDATA[Windows 環境に Linux をお手軽構築し新規参入とチーム開発に使えるハンドブックとして整理しました。
+
+Windows / WSL2 / VSCode / Python / Docker
+asdf / fish / pre-commit / black / flake8 / isort / mypy / pytest / tox]]></summary>
+        <author>
+            <name>naa0yama</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[レインボーテーブル攻撃とは（＊コードによる実演あり）]]></title>
+        <id>https://zenn.dev/oreilly_ota/articles/ad54f3478a832e</id>
+        <link href="https://zenn.dev/oreilly_ota/articles/ad54f3478a832e"/>
+        <updated>2023-01-09T04:50:09.000Z</updated>
+        <summary type="html"><![CDATA[レインボー攻撃とは
+レインボー攻撃とは、レインボーテーブルを使ってハッシュ化されたデータを解読する攻撃である。アカウントを乗っ取る目的として、パスワード解読に使われるパスワードクラックの一つとして知られる。
+
+ ハッシュ化
+まずハッシュ化とは、「ハッシュ関数」というアルゴリズムによって、平文をハッシュ値に書き換えることである。（例：Password123という平文から、43nfneo43jofde31sdwというハッシュ値へ書き換える）
+
+ ハッシュ化と暗号化の違い
+ハッシュ化されたパスワードは、暗号化されたパスワードとは異なり、データを元に戻すことができない。一方で、暗号化されたパ...]]></summary>
+        <author>
+            <name>オライリーヨッシー</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonプログラムでSBI証券のIPOブックビルディング申込を自動化しよう！]]></title>
+        <id>https://zenn.dev/toranoko114/books/553d557cb2c12f</id>
+        <link href="https://zenn.dev/toranoko114/books/553d557cb2c12f"/>
+        <updated>2023-01-09T03:30:12.000Z</updated>
+        <summary type="html"><![CDATA[SBI証券のIPOブックビルディング申込を自動化するプログラムを公開します。]]></summary>
+        <author>
+            <name>toranoko114</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[python軽量exeライブラリNuitkaが本当か検証してみた。]]></title>
         <id>https://zenn.dev/momiji777/articles/30961baceb9897</id>
@@ -7942,293 +8314,6 @@ vi /etc/profile.d/pyenv.sh
 export PYENV_ROOT="/usr/local/...]]></summary>
         <author>
             <name>ta66</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[個人開発]お弁当屋さんの日替わりメニューを通知する Line Bot を作った]]></title>
-        <id>https://zenn.dev/coppla/articles/5699b78710d29c</id>
-        <link href="https://zenn.dev/coppla/articles/5699b78710d29c"/>
-        <updated>2022-12-11T12:31:43.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-先日お気に入りのお弁当屋さんの日替わり弁当を通知する Line Bot を作りました。
-難しいことはしておらず、お弁当屋さんが毎朝ツイートする日替わりメニューの内容を LINE へ転送するシンプルな Bot です。
-もし似たような仕組みを実現したいという人がいれば参考にしてください。
-
- 背景
-私の住まいの近くにお気に入りのお弁当屋さんがあります。
-そちらでは毎日違う種類の日替わり弁当を出しているのですが、その種類が非常に豊富です。
-週一くらいの頻度で訪ねてますが、毎回違うメニューが提供されているのです。
-訪れるたびにどんなメニューか楽しみな反面、実は美味しい日替わりを見逃...]]></summary>
-        <author>
-            <name>coppla</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CLIでアニメーション付き字幕を動画に入れられるツールを作った]]></title>
-        <id>https://zenn.dev/neka_nat/articles/abbb23a48aa2cb</id>
-        <link href="https://zenn.dev/neka_nat/articles/abbb23a48aa2cb"/>
-        <updated>2022-12-11T12:14:00.000Z</updated>
-        <summary type="html"><![CDATA[概要
-今更ながら、音声からの文字起こしAIで有名なwhisperを触り始めたので、それを使ってCLIでYoutubeや動画ファイルに字幕を入れて保存するツールを作ってみました。
-ただ動画に字幕を入れるだけだとwhisper単体でsrtファイルなどに保存すればできてしまうので、文字のアニメーションやエフェクトなどを入れられるツールになっています。
-stenocaptioner という名前でpypiに登録されていてpipでインストールできます。
-https://pypi.org/project/stenocaptioner/
-https://github.com/neka-nat/ste...]]></summary>
-        <author>
-            <name>neka-nat</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[マケデコのDiscordでおもしろかった議論を振り返ってみる]]></title>
-        <id>https://zenn.dev/gamella/articles/72b861b2d0b5e0</id>
-        <link href="https://zenn.dev/gamella/articles/72b861b2d0b5e0"/>
-        <updated>2022-12-11T11:57:50.000Z</updated>
-        <summary type="html"><![CDATA[マケデコ( https://discord.gg/xg6P5RXwaa )という主に株式関連のマーケットAPIを活用し、分析や予測モデルを構築しているbotterのコミュニティをJPX総研様、AlpacaJapanの協賛で運営しています。今年の9月から立ち上げて様々な議論、おもしろいトピックがありました。今日はマケデコアドベントカレンダーの一環としてマケデコ内であったおもしろい議論を紹介しようと思います。
-https://qiita.com/advent-calendar/2022/market-jquants
-
-こんなかんじで各議論はスレッドで振り返れるようになっています
-上記のように...]]></summary>
-        <author>
-            <name>tomo@Alpaca</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[句点・読点をコロン・セミコロンに変換するプログラム]]></title>
-        <id>https://zenn.dev/kinnkinn/articles/27bf534d80c5e6</id>
-        <link href="https://zenn.dev/kinnkinn/articles/27bf534d80c5e6"/>
-        <updated>2022-12-11T09:26:02.000Z</updated>
-        <summary type="html"><![CDATA[句点・読点をコロン・セミコロンに変換するプログラム
-
- コード全体
-#句点・読点をコロン・セミコロンに変換するプログラム
-import pyperclip
-def listToString(str_list):
-    result = ""
-    for s in str_list:
-        result += s
-    return result.strip()
-
-def main():
-  print("句点・読点変換:",'')
-  S = input()
-  slen = len(S)
-  result = []
-  
-  for i in range(slen...]]></summary>
-        <author>
-            <name>kinnkinn</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Numpyで時系列データからフレーム系列を取得する]]></title>
-        <id>https://zenn.dev/aki_watanabe/articles/cfc8b37731f5cc</id>
-        <link href="https://zenn.dev/aki_watanabe/articles/cfc8b37731f5cc"/>
-        <updated>2022-12-11T05:27:05.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-時系列信号からフレーム系列を抽出するための関数とその使用例を紹介します．この関数はscipyの時系列用API（scipy.signal）で使われているプライベート関数 _fft_helperの一部を再利用しやすく切り出したものです．
-
- 背景
-時系列信号を一定時間のフレームに分割して分析する処理は，音声の分野では主に短時間フーリエ変換などの際によく使われています．scipyなど多くのライブラリでは、この処理をAPIとして実装しています．
-しかし，一般のセンサ信号処理においては，抽出したフレームに対してFFT以外の処理を行うことがあります．例えば，周波数領域以外に時間領域の特...]]></summary>
-        <author>
-            <name>akihisa_watanabe</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Barrett Reduction (2)]]></title>
-        <id>https://zenn.dev/converghub/articles/88278d9c786eea</id>
-        <link href="https://zenn.dev/converghub/articles/88278d9c786eea"/>
-        <updated>2022-12-11T04:52:10.000Z</updated>
-        <summary type="html"><![CDATA[Barrett Reduction (2) - on GPU -
-
- はじめに
-前回は、簡単にBarrett Reductionについて記載しました。
-今回は、Pythonで並列計算(GPU)を利用して実行する方法について備忘録を残します。
-
- 使用パッケージ
-
-CuPy
-
-!
-下記が使用前提条件です。
-
-Python 3.7以上
-Compute Capability 3.0以上のCUDA GPUの搭載されたマシン
-CUDA Toolkitがインストールされていること
-
-詳しくは、チュートリアル等を参照ください。
-
-
- とりあえず実装
-CuPyのRawKernelを用いて実装します。...]]></summary>
-        <author>
-            <name>converghub</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Gauge + Selenium + Python の環境構築]]></title>
-        <id>https://zenn.dev/seven_901/articles/d93867b7180d43</id>
-        <link href="https://zenn.dev/seven_901/articles/d93867b7180d43"/>
-        <updated>2022-12-11T03:44:15.000Z</updated>
-        <summary type="html"><![CDATA[概要
-タイトル通り、Gauge + Selenium + Pythonの環境構築を行ったので備忘録です。
-https://gauge.org/
-ゴールはChromeでGoogleを開いて、キーワード検索まで行います。
-ここでは、PythonとVSCodeのインストールを前提で話を進めます。
-
- 環境
-
-Mac
-Python 3.8
-
-
- インストール手順
-
- Gaugeのインストール
-https://docs.gauge.org/getting_started/installing-gauge.html?os=macos&language=python&ide=vsc...]]></summary>
-        <author>
-            <name>seven_901</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[仮想通貨のbotを作りたいが、みんなどう書いてるの？]]></title>
-        <id>https://zenn.dev/ttrsq/articles/1280cb7ac7d1b4</id>
-        <link href="https://zenn.dev/ttrsq/articles/1280cb7ac7d1b4"/>
-        <updated>2022-12-11T01:40:37.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは
-仮想通貨botter Advent Calendar 2022 の11日目の記事のつもりで書いています。
-これからBot作りたいけど、みんなはどう設計しているのだろうという人向け。
-loop頻度が1分以上のMLbotを前提としてますが、高頻度でも基本は変わらないと考えています。
-クラスの責務の範囲や、起動周りの機構などに悩んでいたら参考になれば、、
-
- 結論
-
- メインループ
-下記のノリで各クラスの責務を分離をすると苦しくなりにくいです。
-while True:
-	# 新規データ取得
-	data = stream.get_marcket_data(target_star...]]></summary>
-        <author>
-            <name>とっとり（砂丘）</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Dataprocとpysparkを使って分散処理で行列分解]]></title>
-        <id>https://zenn.dev/sugasuga/articles/82d9ad7933e0f2</id>
-        <link href="https://zenn.dev/sugasuga/articles/82d9ad7933e0f2"/>
-        <updated>2022-12-10T17:28:32.000Z</updated>
-        <summary type="html"><![CDATA[やってみること
-
-GCP上でDataprocクラスタの作成
-movielensのデータを使ってmovieIdごとのベクトルをGCSに吐き出すスクリプトを作成
-gcloudコマンドを使ってジョブを送信して処理を行う
-
-
- Dataprocクラスタの準備
-terraformで
-
-dataprocクラスタを作成
-dataprocクラスタが使うGCSバケット
-
-の作成。お試しなのでcloud shellなどでterraform initとterraform applyをした。
-resource "google_storage_bucket" "dataproc_bucket" {
-  # D...]]></summary>
-        <author>
-            <name>sugasuga</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[日本人を悩ます複数形問題]]></title>
-        <id>https://zenn.dev/megeton/articles/af7816c9eb786f</id>
-        <link href="https://zenn.dev/megeton/articles/af7816c9eb786f"/>
-        <updated>2022-12-10T15:34:27.000Z</updated>
-        <summary type="html"><![CDATA[ただの愚痴です
-
- exists と exist
-
-英語圏では exists がやたら使われる
-
-exists(user) のようなコードを見かけるたびに user は単数形なのにと疑問が沸く
-一方 Ruby の Pathname#exist? では単数形なので自然な感じはする
-そういや File.exists? は非推奨になり最近では単数形の File.exist? だけになったらしい
-翻訳すると exist は存在で exists は存在するらしい
-
-複数形の s じゃない？？？ (ますます混乱)
-
-
-
-
- starts_with と start_with
-
-Python → sta...]]></summary>
-        <author>
-            <name>megeton</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Mutek 2022 TouchDesigner Workshopまとめ]]></title>
-        <id>https://zenn.dev/miwa_maroon/articles/370330c0593367</id>
-        <link href="https://zenn.dev/miwa_maroon/articles/370330c0593367"/>
-        <updated>2022-12-10T15:10:15.000Z</updated>
-        <summary type="html"><![CDATA[ざっくりまとめ
-12/9(金)にMutek×Derivative主催でTouchDesigner Workshopが行われました。
-まさかの平日！！
-ってことで、参加できなかった方も多いと思うので、
-こちらの記事で内容をまとめたいと思います！
-
-内容量がすごかったので、
-重要だな～
-とか
-知らなかった～
-とか
-使えるな～
-っていうものに絞って紹介します！
-
- 3つのセクション
-
- Session1 - Ben Voigt - SceneChanger
-
- SceneChangerってなんですの？
-シーンを変えるときに便利なTouchdesignerのパレットです
-例えば、
-複数人で違...]]></summary>
-        <author>
-            <name>miwa maroon</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AtCoder Beginner Contest 281 レポート]]></title>
-        <id>https://zenn.dev/hannah/articles/20221210_001</id>
-        <link href="https://zenn.dev/hannah/articles/20221210_001"/>
-        <updated>2022-12-10T14:35:57.000Z</updated>
-        <summary type="html"><![CDATA[摘要
-ABCD4完でした．D問題にめちゃくちゃ手間取り，まあまあの冷え込みでした．
-
- ABC281
-https://atcoder.jp/contests/abc281
-
- コンテスト情報
-
-コンテスト名: AtCoder Beginner Contest 281
-順位: 2140th / 9226
-パフォーマンス: 1054
-レーティング: 1267 → 1247 (-20)
-
-
- A - Count Down
-問題 / 解説
-
- A - 問題
-N以下の非負整数を大きい方から順に出力せよ．
-
- A - 解法
-特筆事項なし．
-
- A - ACコード
-def main():
-    ...]]></summary>
-        <author>
-            <name>はんな</name>
         </author>
     </entry>
 </feed>
