@@ -2,10 +2,308 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-01-10T01:42:36.589Z</updated>
+    <updated>2023-01-11T01:40:10.085Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第4章: 形態素解析 32. 動詞の基本形]]></title>
+        <id>https://zenn.dev/kurokawa/articles/f31a533c9e1b52</id>
+        <link href="https://zenn.dev/kurokawa/articles/f31a533c9e1b52"/>
+        <updated>2023-01-10T16:32:28.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 32. 動詞の基本形
+動詞の基本形をすべて抽出せよ．
+
+ solution32.py
+def parse_mecab(block):
+    res = []
+    for line in block.split('\n'):
+        if line == '':
+            return res
+        (surface, attr) = line.split('\t')
+        attr = attr.split(',')
+        lineDict = {
+            'surface': surface,
+  ...]]></summary>
+        <author>
+            <name>kurokawa5</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第4章: 形態素解析 31. 動詞]]></title>
+        <id>https://zenn.dev/kurokawa/articles/17b36db9712a26</id>
+        <link href="https://zenn.dev/kurokawa/articles/17b36db9712a26"/>
+        <updated>2023-01-10T14:51:59.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 31. 動詞
+動詞の表層形をすべて抽出せよ．
+
+ solution31.py
+def parse_mecab(block):
+    res = []
+    for line in block.split('\n'):
+        if line == '':
+            return res
+        (surface, attr) = line.split('\t')
+        attr = attr.split(',')
+        lineDict = {
+            'surface': surface,
+      ...]]></summary>
+        <author>
+            <name>kurokawa5</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-083｜A - Libra]]></title>
+        <id>https://zenn.dev/hyperdb/articles/e94bc479080d64</id>
+        <link href="https://zenn.dev/hyperdb/articles/e94bc479080d64"/>
+        <updated>2023-01-10T10:38:34.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-083 A - Libra
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b, c, d = getIntMap()
+    e = a + b
+    f = c + d
+
+    print('Balanced' if e == f else 'Left' if e > f else 'Right')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-083｜B - Some Sums]]></title>
+        <id>https://zenn.dev/hyperdb/articles/28ea79f1283c67</id>
+        <link href="https://zenn.dev/hyperdb/articles/28ea79f1283c67"/>
+        <updated>2023-01-10T10:38:34.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-083 B - Some Sums
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    n, a, b = getIntMap()
+
+    r = 0
+    for i in range(1, n + 1):
+        s = sum(map(int, list(str(i))))
+        if s >= a and s <= b:
+            r += i
+    print(r)
+
+
+if __name__...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-082｜B - Two Anagrams]]></title>
+        <id>https://zenn.dev/hyperdb/articles/36e8176afd248c</id>
+        <link href="https://zenn.dev/hyperdb/articles/36e8176afd248c"/>
+        <updated>2023-01-10T10:38:18.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-082 B - Two Anagrams
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = list(getString())
+    t = list(getString())
+
+    s.sort()
+    t.sort()
+    t.reverse()
+
+    print('Yes' if s < t else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-082｜A - Round Up the Mean]]></title>
+        <id>https://zenn.dev/hyperdb/articles/2277f16d6b8c5a</id>
+        <link href="https://zenn.dev/hyperdb/articles/2277f16d6b8c5a"/>
+        <updated>2023-01-10T10:38:18.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-082 A - Round Up the Mean
+
+
+
+ 提出結果
+import math
+
+
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b = getIntMap()
+
+    print(math.ceil((a + b) / 2))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第4章: 形態素解析 30. 形態素解析結果の読み込み]]></title>
+        <id>https://zenn.dev/kurokawa/articles/85ba0a5b10594d</id>
+        <link href="https://zenn.dev/kurokawa/articles/85ba0a5b10594d"/>
+        <updated>2023-01-10T08:54:33.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 30. 形態素解析結果の読み込み
+形態素解析結果（neko.txt.mecab）を読み込むプログラムを実装せよ．ただし，各形態素は表層形（surface），基本形（base），品詞（pos），品詞細分類1（pos1）をキーとするマッピング型に格納し，1文を形態素（マッピング型）のリストとして表現せよ．第4章の残りの問題では，ここで作ったプログラムを活用せよ．
+
+ solution30.py
+def parse_mecab(block):
+    res = []
+    for line in block.split('\n'):
+        if line == ''...]]></summary>
+        <author>
+            <name>kurokawa5</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】Webで使えるPython 基礎編【２変数】]]></title>
+        <id>https://zenn.dev/web_life_ch/articles/86aa9386b40509</id>
+        <link href="https://zenn.dev/web_life_ch/articles/86aa9386b40509"/>
+        <updated>2023-01-10T07:43:33.000Z</updated>
+        <summary type="html"><![CDATA[【２変数】
+YouTube: https://youtu.be/XekurJvEkKM
+https://youtu.be/XekurJvEkKM
+今回はPythonの変数について解説します。
+最初に「Hello World」をターミナルに表示するのですが、
+JSと同様に文字列には
+ダブルクォーテーションかシングルクォーテーションを使用します。
+Pythonファイルの実行方法は、
+VSコードの右上の再生ボタンをクリックするか、
+ターミナルに「python main.py」を入力して実行します。
+変数につきましては、JSの「const」のようなものをつける必要はなく、
+そのまま変数名を入...]]></summary>
+        <author>
+            <name>Web Life CH</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第3章: 正規表現 29. 国旗画像のURLを取得する]]></title>
+        <id>https://zenn.dev/kurokawa/articles/43f2a7dd00b025</id>
+        <link href="https://zenn.dev/kurokawa/articles/43f2a7dd00b025"/>
+        <updated>2023-01-10T06:42:57.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 29. 国旗画像のURLを取得する
+テンプレートの内容を利用し，国旗画像のURLを取得せよ．（ヒント: [1]MediaWiki APIの[2]imageinfoを呼び出して，ファイル参照をURLに変換すればよい）．
+
+ solution29.py
+import pandas as pd
+import re
+import requests
+
+df_j = pd.read_json('chapter03/jawiki-country.json.gz', lines=True, compression='infer')
+text_uk = df_j.query('title==...]]></summary>
+        <author>
+            <name>kurokawa5</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第3章: 正規表現 28. MediaWikiマークアップの除去]]></title>
+        <id>https://zenn.dev/kurokawa/articles/7b0a0fc3c37f37</id>
+        <link href="https://zenn.dev/kurokawa/articles/7b0a0fc3c37f37"/>
+        <updated>2023-01-10T05:08:13.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 28. MediaWikiマークアップの除去
+27の処理に加えて，テンプレートの値からMediaWikiマークアップを可能な限り除去し，国の基本情報を整形せよ．
+
+ solution28.py
+import pandas as pd
+import re
+
+df_j = pd.read_json('chapter03/jawiki-country.json.gz', lines=True, compression='infer')
+text_uk = df_j.query('title=="イギリス"')['text'].values[0]
+
+template_text = ...]]></summary>
+        <author>
+            <name>kurokawa5</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第3章: 正規表現 27. 内部リンクの除去]]></title>
+        <id>https://zenn.dev/kurokawa/articles/955a8ea3a255ce</id>
+        <link href="https://zenn.dev/kurokawa/articles/955a8ea3a255ce"/>
+        <updated>2023-01-10T04:00:43.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 27. 内部リンクの除去
+26の処理に加えて，テンプレートの値からMediaWikiの内部リンクマークアップを除去し，テキストに変換せよ（参考: [1]マークアップ早見表）．
+
+ solution27.py
+import pandas as pd
+import re
+
+df_j = pd.read_json('chapter03/jawiki-country.json.gz', lines=True, compression='infer')
+text_uk = df_j.query('title=="イギリス"')['text'].values[0]
+
+template_...]]></summary>
+        <author>
+            <name>kurokawa5</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ProbSpace pollen counts （PVS 2nd-Code）]]></title>
+        <id>https://zenn.dev/saru_da_mon/articles/df34772a14d73e</id>
+        <link href="https://zenn.dev/saru_da_mon/articles/df34772a14d73e"/>
+        <updated>2023-01-10T02:44:18.000Z</updated>
+        <summary type="html"><![CDATA[https://comp.probspace.com/competitions/pollen_counts
+
+ PobSpace 花粉飛散予測_MODEL_STACK
+作成者：saru_da_mon（AI-FOX）
+
+ 本コードの使用権利
+MIT License に準拠する。
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in ...]]></summary>
+        <author>
+            <name>saru_da_mon</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[コード設計]条件分岐2/ポリシーパターン]]></title>
         <id>https://zenn.dev/ryutaro_h/articles/ed58ee31dcd2b4</id>
@@ -8194,126 +8492,6 @@ from PyQt6 import QtCore, QtWidgets
 class MainWindow(QtWidge...]]></summary>
         <author>
             <name>armani</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PySide6(Qt for Python) のGUIアプリで、scheduleモジュールをQThreadで別スレッドにて使用した。]]></title>
-        <id>https://zenn.dev/okome_oisi/articles/43b486e6730f53</id>
-        <link href="https://zenn.dev/okome_oisi/articles/43b486e6730f53"/>
-        <updated>2022-12-12T12:47:05.000Z</updated>
-        <summary type="html"><![CDATA[注意したこと
-
-scheduleは別スレッドで動かす。そうしないとscheduleが、gui要素関連の処理を呼び出す時、schedule.run_pending()のループが止まってしまう。
-通常は、schedule.run_pending()をwhile文で無限ループするが、そうすると、プログラムを終了する時、Scheduler_Threadが終了できない。
-そのためにwhile文ではなくQTimerで、1秒ごとにschedule.run_pending()を呼び出す。
-しかし、別スレッドでQTimerは利用できない。↓
-
-
-You must start and stop the ...]]></summary>
-        <author>
-            <name>okometabetai</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[二項分布のベイズ推定]]></title>
-        <id>https://zenn.dev/shundeveloper/articles/986899a7a29e2d</id>
-        <link href="https://zenn.dev/shundeveloper/articles/986899a7a29e2d"/>
-        <updated>2022-12-12T11:32:12.000Z</updated>
-        <summary type="html"><![CDATA[二項分布のベイズ推定について, ベータ分布が共役事前分布であるという記載はあったが, 事後分布や予測分布の導出が無かったため導出した. また, パラメータの分布や予測分布の更新をプログラミング言語Pythonを用いて可視化を行った.
-
- 共役事前分布と尤度関数
-
- 共役事前分布
-二項分布の共役事前分布はベータ分布である.
-
-Beta(\mu | a, b) = \frac{\Gamma{(a+b)}}{\Gamma{(a)} \Gamma{(b)}} \mu^{a-1} (1-\mu)^{b-1}
-
-後程使用するので対数をとった形を記載する. ただし, 正規化項を定数としておいていること...]]></summary>
-        <author>
-            <name>ShunDev</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CatmullRomSpline曲線で、描画した線をひっぱって編集できるCLIP STUDIOのようなベクターレイヤーを実装する]]></title>
-        <id>https://zenn.dev/kazaki/articles/17c587514ebe4a</id>
-        <link href="https://zenn.dev/kazaki/articles/17c587514ebe4a"/>
-        <updated>2022-12-12T10:00:54.000Z</updated>
-        <summary type="html"><![CDATA[DEMO
-左ドラッグで線が引けるペイントアプリっぽいものです。線の色や太さを設定することができるようになっています。
-制御点から10px以内にカーソルが入った状態で右ドラッグで制御点を移動できます。
-https://www.youtube.com/watch?v=ephADfQnPC4
-opencvとnumpyあればmain.py実行すれば動作します
-https://github.com/kazumax75/Catmull-Rom_Spline
-
- はじめに
-今やPCやタブレットを利用してデジタルイラストを書くことが当たり前になった時代。
-僕が中学生の頃は、ライセンスが5000円で買...]]></summary>
-        <author>
-            <name>菊谷　知真</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DeepStream 備忘録 vol1]]></title>
-        <id>https://zenn.dev/mikage/articles/e0778411fe8832</id>
-        <link href="https://zenn.dev/mikage/articles/e0778411fe8832"/>
-        <updated>2022-12-12T08:25:55.000Z</updated>
-        <summary type="html"><![CDATA[最初に
-これは私がDeepStreamを触っているうちに、はまったことや困ったことを忘れないように記録するために書いたものです。
-ですので、初歩的なミスなど経験者にとってはイマイチな情報が多いと思うので、経験者の方はブラウザバックを推奨します。
-もしくは、誤りなどを指摘していただけると非常に助かります。
-
- deepstream-test4(python.ver)を動かしてみた
-
- 環境(参考までに)
-
-実行: dGPU (Jetsonではないので、注意）
-DeepStream: 6.1
-CUDA: 11.6
-Python: 3.8
-OS: ubuntu18.04
-
-
- はまったこと...]]></summary>
-        <author>
-            <name>mikage</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[最新の音声認識モデル『Whisper』を使ってみたよ]]></title>
-        <id>https://zenn.dev/stafes_blog/articles/7f08ad8c783371</id>
-        <link href="https://zenn.dev/stafes_blog/articles/7f08ad8c783371"/>
-        <updated>2022-12-11T15:00:00.000Z</updated>
-        <summary type="html"><![CDATA[!
-この記事は、スターフェスティバル Advent Calendar 2022の12日目です。
-
-昨日は、あひるさんの知らない技術まみれのチームに移動した時に実践したことでした。
-畑の違う技術や分野に挑戦するときはすごい体力がいりますが、そこに果敢に挑戦して成果を出し続けている姿に日々刺激をもらっています..!
-改まして、こんにちは！   @koonagiです。
-普段はインフラエンジニア兼データエンジニアとしてTerraformを書いたり、CI/CD作ったり、ETL処理書いたりしています。
-普段とは違うことをしてみようと音声認識モデル『Whisper』をつかってみたので、そのことについて...]]></summary>
-        <author>
-            <name>koonagi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonの仮想環境（Pyenv)]]></title>
-        <id>https://zenn.dev/ta66/articles/a64ef44efeebab</id>
-        <link href="https://zenn.dev/ta66/articles/a64ef44efeebab"/>
-        <updated>2022-12-11T14:36:26.000Z</updated>
-        <summary type="html"><![CDATA[RHEL系でPythonの仮想環境を導入します。
-多くは、個々のユーザ単位で設定されるかと思いますが、
-今回は、全体での設定しました。
-
- pyenvをgitよりダウンロード
-(rootで実施)
-mkdir /usr/loacl/pyenv
-git clone https://github.com/pyenv/pyenv.git /usr/local/pyenv
-chmod -R 777 /usr/local/pyenv
-vi /etc/profile.d/pyenv.sh
---------------------------
-export PYENV_ROOT="/usr/local/...]]></summary>
-        <author>
-            <name>ta66</name>
         </author>
     </entry>
 </feed>
