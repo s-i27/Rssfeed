@@ -22,6 +22,358 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-01-12 datetime="2023-01-12T17:30:35.000Z">2023-01-12</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-01-12 datetime="2023-01-12T17:30:35.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/river_terrace/articles/22457e5095b51d"
+                        open
+                      >
+                        <summary class="article-expander__title">子孫末代まで殺したい</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/river_terrace/articles/22457e5095b51d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--FyXyZajO--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E6%25AE%25B5%25E4%25B8%2598%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E5%25AD%2590%25E5%25AD%25AB%25E6%259C%25AB%25E4%25BB%25A3%25E3%2581%25BE%25E3%2581%25A7%25E6%25AE%25BA%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1CZjZpdWFURy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzA1ZGZkNzBiY2UuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+プロセスをkillする際、その子プロセスや更にその子プロセスなど、子孫にあたるプロセス全て一括でkillする方法について。Pythonのpsutilを使う。
+
+ 方法
+import psutil
+
+def kill_recursively(pid):
+    for p in psutil.Process(pid).children(recursive&#x3D;True):
+        p.kill()
+    psutil.Process(pid).kill()
+上記の関数に祖先のプロセスIDを渡すと、子孫末代まで殺してくれる。
+
+ もうちょっとだけ詳しく
+
+
+psutil.Pr...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/anozon/articles/python-flag-state"
+                        open
+                      >
+                        <summary class="article-expander__title">Python の Flag と状態モデルの相性がいい</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/anozon/articles/python-flag-state">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--y8mzONkG--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:anozon%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%2520%25E3%2581%25AE%2520Flag%2520%25E3%2581%25A8%25E7%258A%25B6%25E6%2585%258B%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AE%25E7%259B%25B8%25E6%2580%25A7%25E3%2581%258C%25E3%2581%2584%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1wemVHdUh0Ny0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzIxYmY3ZTdiMGQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Python の enum には Flag という機能があることを知りました。入れ子の状態(直和集合にあたるもの)を表現するのに便利そうだと思い使ってみました。
+今回はエアコンの状態を例に説明します。
+from enum import Flag, IntEnum, auto
+
+class State(Flag):
+    Off &#x3D; auto()
+    Cooling &#x3D; auto()
+    Heating &#x3D; auto()
+    Dry &#x3D; auto()
+    Running &#x3D; Cooling | Heating | Dry
+まず enum 同様以下のように使用できます。
+#...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/sosa/books/5108156a051f5c"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】WordPress管理画面を スクレーピングして集計、Streamlitで公開する方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sosa/books/5108156a051f5c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--g_VrwswM--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci8wNTcwYzNlYmUxLmpwZWc&#x3D;%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>WordPressでテーマCocoonを使用している場合、管理画面で記事ごとのアクセス数が表示されています。この値をスクレーピングして取得。Pythonのpandasで処理し結果をcsvファイルで出力。そのcsvファイルをStreamlitでパラメータ操作できる表やグラフで公開する手順とソースコードです。
+
+今回作ったもの
+イチゲブログのアクセス集計
+https://miyamiko-ichige-count-ichige-vxlcfl.streamlit.app/
+
+必要な知識
+Pythonの基本、ライブラリSelenium、BeatifulSoup、pandasの基本、Git、GitHubの基本
+
+必要な環境
+Python、エディタ（VSCodeなど）
+私の場合Windows11、PythonはAnacondaをインストールしてJupiterNotebookで開発。エディタはVSCode。
+
+GitHub、Streamlitの登録や基本的な操作方法の説明はありません。
+
+コードは、そのままでは動きません。あくまでこのコードを参考にして、ご自分でカスタマイズしてください。</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/web_life_ch/articles/a42a77308c3847"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】Webで使えるPython 基礎編【４タプル】</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/web_life_ch/articles/a42a77308c3847">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--8RC_pEkI--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Web%2520Life%2520CH%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590Python%25E3%2580%2591Web%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%2588%25E3%2582%258BPython%2520%25E5%259F%25BA%25E7%25A4%258E%25E7%25B7%25A8%25E3%2580%2590%25EF%25BC%2594%25E3%2582%25BF%25E3%2583%2597%25E3%2583%25AB%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUl0YnZtbWNjTWFMM3dyd2x3VE5sVVZjTlhmZHEzZzF2QnJfMUJMSkJrN049czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>【４タプル】
+YouTube: https://youtu.be/0sfZwprcg3o
+https://youtu.be/0sfZwprcg3o
+今回は「タプル」について解説します。
+タプルは基本的にリストと同じように扱うことができるのですが、
+・一度定義したタプルの要素の変更が基本的には難しい。
+・タプルの要素が1つの時は1つ目の要素の後に「,」（カンマ）をつける必要がある。
+こちらの2点に注意が必要です。
+
+main.py
+persons &#x3D; (&#x27;taro&#x27;, &#x27;jiro&#x27;, &#x27;saburo&#x27;)
+# persons[1] &#x3D; &#x27;hanako&#x27;
+print(persons[1])...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kurokawa/articles/b2e959b79b6043"
+                        open
+                      >
+                        <summary class="article-expander__title">言語処理100本ノック 2020 (Rev 2) 第5章: 係り受け解析 40. 係り受け解析結果の読み込み（形態素）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kurokawa/articles/b2e959b79b6043">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--VZTtgh-S--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa5%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC5%25E7%25AB%25A0%253A%2520%25E4%25BF%2582%25E3%2582%258A%25E5%258F%2597%25E3%2581%2591%25E8%25A7%25A3%25E6%259E%2590%252040.%2520%25E4%25BF%2582%25E3%2582%258A%25E5%258F%2597%25E3%2581%2591%25E8%25A7%25A3%25E6%259E%2590%25E7%25B5%2590%25E6%259E%259C%25E3%2581%25AE%25E8%25AA%25AD%25E3%2581%25BF%25E8%25BE%25BC%25E3%2581%25BF%25EF%25BC%2588%25E5%25BD%25A2%25E6%2585%258B%25E7%25B4%25A0%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>問題
+
+ 40. 係り受け解析結果の読み込み（形態素）
+形態素を表すクラスMorphを実装せよ．このクラスは表層形（surface），基本形（base），品詞（pos），品詞細分類1（pos1）をメンバ変数に持つこととする．さらに，係り受け解析の結果（ai.ja.txt.parsed）を読み込み，各文をMorphオブジェクトのリストとして表現し，冒頭の説明文の形態素列を表示せよ．
+
+ solution40.py
+class Morph:
+    def __init__(self, dc):
+        self.surface &#x3D; dc[&#x27;surface&#x27;]
+        s...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/f6764ef9e00057"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-086｜B - 1 21</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/f6764ef9e00057">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--yM8o87jY--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-086%25EF%25BD%259CB%2520-%25201%252021%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-086 B - 1 21
+
+
+
+ 提出結果
+import math
+
+
+def getStringMap():
+    return input().split()
+
+
+def main():
+    a, b &#x3D; getStringMap()
+
+    n &#x3D; int(a + b)
+
+    print(&#x27;Yes&#x27; if (math.sqrt(n)).is_integer() else &#x27;No&#x27;)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/dd73a1ea27c3f0"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-085｜A - Already 2018</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/dd73a1ea27c3f0">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--DTfwxkRg--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-085%25EF%25BD%259CA%2520-%2520Already%25202018%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-085 A - Already 2018
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s &#x3D; getString()
+
+    print(s.replace(&#x27;2017&#x27;, &#x27;2018&#x27;))
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/b88cd0d8920faa"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-086｜A - Product</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/b88cd0d8920faa">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--an3BarOg--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-086%25EF%25BD%259CA%2520-%2520Product%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-086 A - Product
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b &#x3D; getIntMap()
+
+    print(&#x27;Even&#x27; if a % 2 &#x3D;&#x3D; 0 or b % 2 &#x3D;&#x3D; 0 else &#x27;Odd&#x27;)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/9f420c41e56e37"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-085｜B - Kagami Mochi</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/9f420c41e56e37">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--_LpIpsg6--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-085%25EF%25BD%259CB%2520-%2520Kagami%2520Mochi%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-085 B - Kagami Mochi
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntRow(N):
+    return [int(input()) for _ in range(N)]
+
+
+def main():
+    n &#x3D; getInt()
+    d &#x3D; getIntRow(n)
+
+    r &#x3D; set(d)
+
+    print(len(r))
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-01-11 datetime="2023-01-11T17:43:42.000Z">2023-01-11</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-01-11 datetime="2023-01-11T17:43:42.000Z"></time>
           </button>
@@ -12582,609 +12934,6 @@ https://adventar.org/calendars/7655
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/megane_otoko/articles/089_bul_image_maker"
-                        open
-                      >
-                        <summary class="article-expander__title">クソアプリ Advent Calendar 2022 カレンダー2 15日目</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/megane_otoko/articles/089_bul_image_maker">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--IWYF3nXV--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:koji%252F%25E3%2583%25A1%25E3%2582%25AC%25E3%2583%258D%25E7%2594%25B7%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2582%25AF%25E3%2582%25BD%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%2520Advent%2520Calendar%25202022%2520%25E3%2582%25AB%25E3%2583%25AC%25E3%2583%25B3%25E3%2583%2580%25E3%2583%25BC2%252015%25E6%2597%25A5%25E7%259B%25AE%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1HM2JuR1h1ci0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY4ZjAyMjc2ZjQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>クソアプリ Advent Calendar 2022、カレンダー 2 の 15 日目の記事です。
-
- アプリ
-
-こんな感じのぼかした感じの画像を作成できるアプリです。
-
-
-
-
-アプリの URL はこちら、実装はこちら。
-
-
-UI はこんな感じ。出力する画像ファイルのサイズはスライダーで調整可能。
-
-
-
-UI 部分は streamlit で実装
-
-
-進捗表示は streamlit のプレースホルダーを使用
-
-
-スライダーで指定した試行回数の分だけ、ランダムで設定した範囲の累積和を計算した結果を画像(白黒)として処理する。
-
-
-streamlit で表示する画像の値は 0.0 ~ 1.0 ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/marketer/articles/1c221041cdbd5f"
-                        open
-                      >
-                        <summary class="article-expander__title">Text CAPTCHAを解決する方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/marketer/articles/1c221041cdbd5f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--wsA27Ydu--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:marketer%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Text%2520CAPTCHA%25E3%2582%2592%25E8%25A7%25A3%25E6%25B1%25BA%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1oYXVBZVhsQy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3Yzk0YmJjMTIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Find captcha question.
-
-
-APIに質問を送信してください。
-
- SDKを使用する場合 (推奨):
-
-
-
- PHP
-    // https://github.com/2captchacom/2captcha-php
-
-    require(__DIR__ . &#x27;/../src/autoloader.php&#x27;);
-
-    $solver &#x3D; new \TwoCaptcha\TwoCaptcha(&#x27;YOUR_API_KEY&#x27;);
-
-    try {
-        $result &#x3D; $solver-&gt;text([
-            &#x27;text&#x27;...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/marketer/articles/f53b3a42e163db"
-                        open
-                      >
-                        <summary class="article-expander__title">SolveMediaの突破方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/marketer/articles/f53b3a42e163db">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--78c4gM8Q--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:marketer%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:SolveMedia%25E3%2581%25AE%25E7%25AA%2581%25E7%25A0%25B4%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1oYXVBZVhsQy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3Yzk0YmJjMTIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>CAPTCHA画像をダウンロードします。
-
-
-画像をAPIに送信します。
-
-
-
- SDKを使用する場合 (推奨):
-
- PHP
-    // https://github.com/2captchacom/2captcha-php
-
-    require(__DIR__ . &#x27;/../src/autoloader.php&#x27;);
-
-    $solver &#x3D; new \TwoCaptcha\TwoCaptcha(&#x27;YOUR_API_KEY&#x27;);
-
-    try {
-        $result &#x3D; $solver-&gt;normal(&#x27;path/to/captcha.jpg&#x27;);...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/marketer/articles/b645ea1cf15537"
-                        open
-                      >
-                        <summary class="article-expander__title">Rotate Captchaの突破方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/marketer/articles/b645ea1cf15537">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--lqmFnNf9--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:marketer%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Rotate%2520Captcha%25E3%2581%25AE%25E7%25AA%2581%25E7%25A0%25B4%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1oYXVBZVhsQy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3Yzk0YmJjMTIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>CAPTCHA画像をダウンロードします。
-
-
-画像をAPIに送信します。
-
-
-
- SDKを使用する場合 (推奨):
-
- PHP
-    // https://github.com/2captchacom/2captcha-php
-
-    require(__DIR__ . &#x27;/../src/autoloader.php&#x27;);
-
-    $solver &#x3D; new \TwoCaptcha\TwoCaptcha(&#x27;YOUR_API_KEY&#x27;);
-
-    try {
-        $result &#x3D; $solver-&gt;rotate([
-            &#x27;file&#x27;  &#x3D;...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/marketer/articles/399868c2dedd4a"
-                        open
-                      >
-                        <summary class="article-expander__title">reCAPTCHA V3の突破方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/marketer/articles/399868c2dedd4a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--RD9lrokp--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:marketer%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:reCAPTCHA%2520V3%25E3%2581%25AE%25E7%25AA%2581%25E7%25A0%25B4%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1oYXVBZVhsQy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3Yzk0YmJjMTIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>ウェブサイトのソースコードを調べて、grecaptcha.executeコールを検索します。このコールは、ウェブサイトのコードのどこにでも、含まれているJavaScriptファイル内のページの  要素内にあります。例えば、デモページのソースコードではこちらです。:
-window.grecaptcha.ready(function() {
-    grecaptcha.execute(
-        &#x27;6LfB5_IbAAAAAMCtsjEHEHKqcB9iQocwwxTiihJu&#x27;, 
-        {action: &#x27;demo_action&#x27;},
- ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/marketer/articles/0416bfa49cbce5"
-                        open
-                      >
-                        <summary class="article-expander__title">reCAPTCHA V2 Invisibleの突破方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/marketer/articles/0416bfa49cbce5">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--RwB997uP--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:marketer%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:reCAPTCHA%2520V2%2520Invisible%25E3%2581%25AE%25E7%25AA%2581%25E7%25A0%25B4%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1oYXVBZVhsQy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3Yzk0YmJjMTIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>ブラウザでデベロッパーコンソールを開き、data-sitekey属性を持つ要素を見つけます。
-Check
-
-
-
-sitekeyとpageurlを APIに送信します。
-
-
-
- SDK を使用する場合 (推奨):
-
- PHP
-    // https://github.com/2captchacom/...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/ganbarimasu/articles/de6d046cd97572"
-                        open
-                      >
-                        <summary class="article-expander__title">【Python】MoviePy × 文字認識(Tesseract OCR )を用いた Apex Legendsの動画解析</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ganbarimasu/articles/de6d046cd97572">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--enniHGJb--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:yoroshiku%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E3%2580%2590Python%25E3%2580%2591MoviePy%2520%25C3%2597%2520%25E6%2596%2587%25E5%25AD%2597%25E8%25AA%258D%25E8%25AD%2598%2528Tesseract%2520OCR%2520%2529%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%2520Apex%2520Legends%25E3%2581%25AE%25E5%258B%2595%25E7%2594%25BB%25E8%25A7%25A3%25E6%259E%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS0yVDZPeDB0ei0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAxMTkwMTY5OTAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>本記事が対象とする人：
-
-MoviePyとOpenCVを用いたpythonでの動画編集・解析がしてみたい方
-画像中の文字を認識し、テキストとして読み取る技術（本記事ではTesseract OCRを使用）を
-使ってみたい方
-他の人の個人開発を見るのが好きな方
-
-!
-精度が高いモデルにはなっていないので、取り組み内容を楽しんでいただければ幸いです。
-また、汎用性が高くなさそうなコードに関してはネストするようにしてあります。
-気になる方は適宜、確認していただければと思います。
-
-!
-ゲーム動画を対象とした開発であり、チート行為を行うためのものではありません。
-
-
- はじめに
-
- 背景
-現在、e...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/marketer/articles/0964175d310f88"
-                        open
-                      >
-                        <summary class="article-expander__title">reCAPTCHA V2コールバックの突破方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/marketer/articles/0964175d310f88">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--pzMI1n1f--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:marketer%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:reCAPTCHA%2520V2%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%25AB%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2581%25AE%25E7%25AA%2581%25E7%25A0%25B4%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1oYXVBZVhsQy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3Yzk0YmJjMTIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>ブラウザでデベロッパーコンソールを開き、data-sitekey属性を持つ要素を見つけます。
-
-    
-
-
-
-sitekeyとpageurl を APIに送信します。
-
-
- SDK を使用する場合 (推奨):
-
- PHP
-    // https://github.com/2captchacom/2captcha-php
-
-    require(__DIR__...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/marketer/articles/1dfc7c3898966c"
-                        open
-                      >
-                        <summary class="article-expander__title">通常のCAPTCHAを突破する方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/marketer/articles/1dfc7c3898966c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ODFo1o7E--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:marketer%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E9%2580%259A%25E5%25B8%25B8%25E3%2581%25AECAPTCHA%25E3%2582%2592%25E7%25AA%2581%25E7%25A0%25B4%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1oYXVBZVhsQy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3Yzk0YmJjMTIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>CAPTCHA画像をダウンロードします。
-
-
-画像を API に送信します。
-
-
-
- SDKを使用する場合 (推奨):
-
- PHP
-    // https://github.com/2captchacom/2captcha-php
-
-    require(__DIR__ . &#x27;/../src/autoloader.php&#x27;);
-
-    $solver &#x3D; new \TwoCaptcha\TwoCaptcha(&#x27;YOUR_API_KEY&#x27;);
-
-    try {
-        $result &#x3D; $solver-&gt;normal(&#x27;path/to/captcha.jpg&#x27;...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/13e6376de2f640"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCorder］ABC-042｜B 和風いろはちゃんイージー</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/13e6376de2f640">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--LGa3fuhC--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCorder%25EF%25BC%25BDABC-042%25EF%25BD%259CB%2520%25E5%2592%258C%25E9%25A2%25A8%25E3%2581%2584%25E3%2582%258D%25E3%2581%25AF%25E3%2581%25A1%25E3%2582%2583%25E3%2582%2593%25E3%2582%25A4%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-ABC042 B - 文字列大好きいろはちゃんイージー
-
-
- 提出結果
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def getStringRow(N):
-    return [input() for _ in range(N)]
-
-
-def main():
-    p &#x3D; getIntList()
-    d &#x3D; getStringRow(p[0])
-    d.sort()
-
-    print(&quot;&quot;.join(d))
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-  ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/b462a2dbdc2d1c"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCorder］ABC-042｜A 和風いろはちゃんイージー</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/b462a2dbdc2d1c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--zHvW53iM--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCorder%25EF%25BC%25BDABC-042%25EF%25BD%259CA%2520%25E5%2592%258C%25E9%25A2%25A8%25E3%2581%2584%25E3%2582%258D%25E3%2581%25AF%25E3%2581%25A1%25E3%2582%2583%25E3%2582%2593%25E3%2582%25A4%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-ABC042 A - 和風いろはちゃんイージー
-
-
- 提出結果
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    d &#x3D; getIntList()
-    d.sort()
-
-    if d &#x3D;&#x3D; [5, 5, 7]:
-        print(&#x27;YES&#x27;)
-    else:
-        print(&#x27;NO&#x27;)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()
-
- ふりかえり
-普段プログラムを書いている時は配列同志を比較する...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/marketer/articles/2d01912355304d"
-                        open
-                      >
-                        <summary class="article-expander__title"># KeyCaptchaの突破方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/marketer/articles/2d01912355304d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--E8dLlItX--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:marketer%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%2523%2520KeyCaptcha%25E3%2581%25AE%25E7%25AA%2581%25E7%25A0%25B4%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1oYXVBZVhsQy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3Yzk0YmJjMTIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>ページのソースコードで次のKeyCaptchaパラメータを見つけます。
-s_s_c_user_id
-s_s_c_session_id
-s_s_c_web_server_sign
-s_s_c_web_server_sign2
-
-
-
-これらのパラメータをAPIに送信します。
-
-
-
- SDKを使用する場合 (推奨):
-
- PHP
-    // https://github.com/2captchacom/2captcha-php
-
-    require(__DIR__ . &#x27;/../src/autoloader.php&#x27;);
-
-    $solver &#x3D; new \TwoCaptcha\...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hpp/articles/d48964b84ca2cf"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonで辞書のリストの平均を取る</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hpp/articles/d48964b84ca2cf">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--TFpb0wpa--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:hpp%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Python%25E3%2581%25A7%25E8%25BE%259E%25E6%259B%25B8%25E3%2581%25AE%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%25E3%2581%25AE%25E5%25B9%25B3%25E5%259D%2587%25E3%2582%2592%25E5%258F%2596%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dFelg5bGVLNzNDeDJ1eGVKTmdpOERyOFJmWXM3bS1TMzZuSnhmPXM4MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>辞書のリストの平均をキーごとに取得するのは結構めんどう、なので簡単に使える関数を書いてみた。
-def dict_average(dicts: Iterable[Dict]) -&gt; Dict:
-    dicts: List[Dict] &#x3D; list(dicts)
-    averaged &#x3D; {}
-
-    for k, v in dicts[0].items():
-        try:
-            v &#x3D; v.item()
-        except:
-            pass
-        if type(v) in [int, float]:
-  ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/tmasuo/articles/aa0634c14e6210"
-                        open
-                      >
-                        <summary class="article-expander__title">Snowflake の E2E ML を試してみる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tmasuo/articles/aa0634c14e6210">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ePglOl8k--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:tmasuo%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Snowflake%2520%25E3%2581%25AE%2520E2E%2520ML%2520%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1zNy1Ed3ZaUy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0ZjU1NzVhYjMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>📜 この記事は
-Snowflake Advent Calendar 2022 Calendar 2 Day 14 の記事になります。Snowflake で Sales Engineer をしております、@tmasuo がお届けします。
-この記事で触れる Snowflake の各機能のリリース状態は 2022 年 12 月 1 日時点に基づきます。
-
- 🐍 Snowpark for Python - GA
-11 月に行われた Snowday 2022 にて Snowpark for Python の GA がついに発表されました🎉
-昨年の 11 月に Private Preview、今...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2022-12-13 datetime="2022-12-13T16:21:09.000Z">2022-12-13</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2022-12-13 datetime="2022-12-13T16:21:09.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/ningen/articles/059bdc8d99d785"
-                        open
-                      >
-                        <summary class="article-expander__title">指定した値のみが配列に入っていることを保証したいとき</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ningen/articles/059bdc8d99d785">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--iajoLYNS--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ningen%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E6%258C%2587%25E5%25AE%259A%25E3%2581%2597%25E3%2581%259F%25E5%2580%25A4%25E3%2581%25AE%25E3%2581%25BF%25E3%2581%258C%25E9%2585%258D%25E5%2588%2597%25E3%2581%25AB%25E5%2585%25A5%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2581%2593%25E3%2581%25A8%25E3%2582%2592%25E4%25BF%259D%25E8%25A8%25BC%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%25E3%2581%25A8%25E3%2581%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKenI4cnFKamZhd0Etd0VJc2JkODRWRGFYUDRtU3dQcUZITzZhTUo9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>表題のようなことを実現したいときに最初に思いつくのは以下のようなプログラムではないでしょうか?
-allowed_values &#x3D; [1,2,3]
-
-input_data &#x3D; [1,2]
-invalid_input_data &#x3D; [1,2,4]
-
-# 何も出力されない
-for data in input_data:
-  if data not in allowed_values:
-    print(&#x27;error. input_data&#x27;)
-    
-# 「error. invalid_input_data」が表示される 
-for data in invalid_input_data:
- ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/aidemy/articles/9a53740a6ec575"
-                        open
-                      >
-                        <summary class="article-expander__title">ビッグデータ処理技術に関わる基本の勉強結果を整理</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/aidemy/articles/9a53740a6ec575">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--k5CcOq9W--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:ErikaOta%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2583%2593%25E3%2583%2583%25E3%2582%25B0%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2587%25A6%25E7%2590%2586%25E6%258A%2580%25E8%25A1%2593%25E3%2581%25AB%25E9%2596%25A2%25E3%2582%258F%25E3%2582%258B%25E5%259F%25BA%25E6%259C%25AC%25E3%2581%25AE%25E5%258B%2589%25E5%25BC%25B7%25E7%25B5%2590%25E6%259E%259C%25E3%2582%2592%25E6%2595%25B4%25E7%2590%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNVo1M0cwSXJGdFBMVk8wZnUwWWEzZV91MHhVQ1E4aUY1aWRSakdzdz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>この記事は、 Aidemy Advent Calendar 2022 の12/13分の投稿です。
-
- 本記事執筆の背景
-
-時間軸上の経緯
-
-筆者は株式会社アイデミーにて、機械学習モデル構築/データ処理基盤構築 等の実案件支援に関わるチームに最近異動(それまでは弊社SaaSプロダクトのカスタマーサクセス+弊社の各種サービスの営業を担う部署に所属)
-
-
-現チームでの筆者の位置づけ上の経緯
-
-異動先チームにはプロジェクトマネージャ(データ活用領域に強み)、データサイエンティスト、データエンジニアが多数所属し、筆者の関連リテラシー・スキルは現時点で大きくビハインド
-
-
-上記を踏まえた本記事作成の...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -13192,8 +12941,8 @@ for data in invalid_input_data:
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/3898327932">
-        <time id="build-timestamp" datetime="2023-01-12T01:40:38.886Z">2023-01-12T01:40:38.886Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/3907602403">
+        <time id="build-timestamp" datetime="2023-01-13T01:43:03.436Z">2023-01-13T01:43:03.436Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

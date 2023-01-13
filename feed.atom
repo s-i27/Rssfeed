@@ -2,10 +2,246 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-01-12T01:40:38.937Z</updated>
+    <updated>2023-01-13T01:43:03.480Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[子孫末代まで殺したい]]></title>
+        <id>https://zenn.dev/river_terrace/articles/22457e5095b51d</id>
+        <link href="https://zenn.dev/river_terrace/articles/22457e5095b51d"/>
+        <updated>2023-01-12T17:30:35.000Z</updated>
+        <summary type="html"><![CDATA[概要
+プロセスをkillする際、その子プロセスや更にその子プロセスなど、子孫にあたるプロセス全て一括でkillする方法について。Pythonのpsutilを使う。
+
+ 方法
+import psutil
+
+def kill_recursively(pid):
+    for p in psutil.Process(pid).children(recursive=True):
+        p.kill()
+    psutil.Process(pid).kill()
+上記の関数に祖先のプロセスIDを渡すと、子孫末代まで殺してくれる。
+
+ もうちょっとだけ詳しく
+
+
+psutil.Pr...]]></summary>
+        <author>
+            <name>段丘</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python の Flag と状態モデルの相性がいい]]></title>
+        <id>https://zenn.dev/anozon/articles/python-flag-state</id>
+        <link href="https://zenn.dev/anozon/articles/python-flag-state"/>
+        <updated>2023-01-12T11:38:04.000Z</updated>
+        <summary type="html"><![CDATA[Python の enum には Flag という機能があることを知りました。入れ子の状態(直和集合にあたるもの)を表現するのに便利そうだと思い使ってみました。
+今回はエアコンの状態を例に説明します。
+from enum import Flag, IntEnum, auto
+
+class State(Flag):
+    Off = auto()
+    Cooling = auto()
+    Heating = auto()
+    Dry = auto()
+    Running = Cooling | Heating | Dry
+まず enum 同様以下のように使用できます。
+#...]]></summary>
+        <author>
+            <name>anozon</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】WordPress管理画面を スクレーピングして集計、Streamlitで公開する方法]]></title>
+        <id>https://zenn.dev/sosa/books/5108156a051f5c</id>
+        <link href="https://zenn.dev/sosa/books/5108156a051f5c"/>
+        <updated>2023-01-12T09:18:21.000Z</updated>
+        <summary type="html"><![CDATA[WordPressでテーマCocoonを使用している場合、管理画面で記事ごとのアクセス数が表示されています。この値をスクレーピングして取得。Pythonのpandasで処理し結果をcsvファイルで出力。そのcsvファイルをStreamlitでパラメータ操作できる表やグラフで公開する手順とソースコードです。
+
+今回作ったもの
+イチゲブログのアクセス集計
+https://miyamiko-ichige-count-ichige-vxlcfl.streamlit.app/
+
+必要な知識
+Pythonの基本、ライブラリSelenium、BeatifulSoup、pandasの基本、Git、GitHubの基本
+
+必要な環境
+Python、エディタ（VSCodeなど）
+私の場合Windows11、PythonはAnacondaをインストールしてJupiterNotebookで開発。エディタはVSCode。
+
+GitHub、Streamlitの登録や基本的な操作方法の説明はありません。
+
+コードは、そのままでは動きません。あくまでこのコードを参考にして、ご自分でカスタマイズしてください。]]></summary>
+        <author>
+            <name>sosa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】Webで使えるPython 基礎編【４タプル】]]></title>
+        <id>https://zenn.dev/web_life_ch/articles/a42a77308c3847</id>
+        <link href="https://zenn.dev/web_life_ch/articles/a42a77308c3847"/>
+        <updated>2023-01-12T07:05:47.000Z</updated>
+        <summary type="html"><![CDATA[【４タプル】
+YouTube: https://youtu.be/0sfZwprcg3o
+https://youtu.be/0sfZwprcg3o
+今回は「タプル」について解説します。
+タプルは基本的にリストと同じように扱うことができるのですが、
+・一度定義したタプルの要素の変更が基本的には難しい。
+・タプルの要素が1つの時は1つ目の要素の後に「,」（カンマ）をつける必要がある。
+こちらの2点に注意が必要です。
+
+main.py
+persons = ('taro', 'jiro', 'saburo')
+# persons[1] = 'hanako'
+print(persons[1])...]]></summary>
+        <author>
+            <name>Web Life CH</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第5章: 係り受け解析 40. 係り受け解析結果の読み込み（形態素）]]></title>
+        <id>https://zenn.dev/kurokawa/articles/b2e959b79b6043</id>
+        <link href="https://zenn.dev/kurokawa/articles/b2e959b79b6043"/>
+        <updated>2023-01-12T06:18:19.000Z</updated>
+        <summary type="html"><![CDATA[問題
+
+ 40. 係り受け解析結果の読み込み（形態素）
+形態素を表すクラスMorphを実装せよ．このクラスは表層形（surface），基本形（base），品詞（pos），品詞細分類1（pos1）をメンバ変数に持つこととする．さらに，係り受け解析の結果（ai.ja.txt.parsed）を読み込み，各文をMorphオブジェクトのリストとして表現し，冒頭の説明文の形態素列を表示せよ．
+
+ solution40.py
+class Morph:
+    def __init__(self, dc):
+        self.surface = dc['surface']
+        s...]]></summary>
+        <author>
+            <name>kurokawa5</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-086｜B - 1 21]]></title>
+        <id>https://zenn.dev/hyperdb/articles/f6764ef9e00057</id>
+        <link href="https://zenn.dev/hyperdb/articles/f6764ef9e00057"/>
+        <updated>2023-01-12T06:00:01.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-086 B - 1 21
+
+
+
+ 提出結果
+import math
+
+
+def getStringMap():
+    return input().split()
+
+
+def main():
+    a, b = getStringMap()
+
+    n = int(a + b)
+
+    print('Yes' if (math.sqrt(n)).is_integer() else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-085｜A - Already 2018]]></title>
+        <id>https://zenn.dev/hyperdb/articles/dd73a1ea27c3f0</id>
+        <link href="https://zenn.dev/hyperdb/articles/dd73a1ea27c3f0"/>
+        <updated>2023-01-12T06:00:01.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-085 A - Already 2018
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = getString()
+
+    print(s.replace('2017', '2018'))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-086｜A - Product]]></title>
+        <id>https://zenn.dev/hyperdb/articles/b88cd0d8920faa</id>
+        <link href="https://zenn.dev/hyperdb/articles/b88cd0d8920faa"/>
+        <updated>2023-01-12T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-086 A - Product
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b = getIntMap()
+
+    print('Even' if a % 2 == 0 or b % 2 == 0 else 'Odd')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-085｜B - Kagami Mochi]]></title>
+        <id>https://zenn.dev/hyperdb/articles/9f420c41e56e37</id>
+        <link href="https://zenn.dev/hyperdb/articles/9f420c41e56e37"/>
+        <updated>2023-01-12T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-085 B - Kagami Mochi
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntRow(N):
+    return [int(input()) for _ in range(N)]
+
+
+def main():
+    n = getInt()
+    d = getIntRow(n)
+
+    r = set(d)
+
+    print(len(r))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【DAMO-YOLO】PyTorch＋Webカメラでリアルタイム推論してみた]]></title>
         <id>https://zenn.dev/opamp/articles/b2d673bbccb9d4</id>
@@ -8258,420 +8494,6 @@ https://adventar.org/calendars/7655
 近年のコンピュータは、Unicode を用いて多種多様な文字を表示することができます。この Unicode にはおもしろ機能などが様々あるので、ちょっと遊んでみようと思い...]]></summary>
         <author>
             <name>Jugesuke</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[クソアプリ Advent Calendar 2022 カレンダー2 15日目]]></title>
-        <id>https://zenn.dev/megane_otoko/articles/089_bul_image_maker</id>
-        <link href="https://zenn.dev/megane_otoko/articles/089_bul_image_maker"/>
-        <updated>2022-12-14T11:30:57.000Z</updated>
-        <summary type="html"><![CDATA[クソアプリ Advent Calendar 2022、カレンダー 2 の 15 日目の記事です。
-
- アプリ
-
-こんな感じのぼかした感じの画像を作成できるアプリです。
-
-
-
-
-アプリの URL はこちら、実装はこちら。
-
-
-UI はこんな感じ。出力する画像ファイルのサイズはスライダーで調整可能。
-
-
-
-UI 部分は streamlit で実装
-
-
-進捗表示は streamlit のプレースホルダーを使用
-
-
-スライダーで指定した試行回数の分だけ、ランダムで設定した範囲の累積和を計算した結果を画像(白黒)として処理する。
-
-
-streamlit で表示する画像の値は 0.0 ~ 1.0 ...]]></summary>
-        <author>
-            <name>koji/メガネ男</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Text CAPTCHAを解決する方法]]></title>
-        <id>https://zenn.dev/marketer/articles/1c221041cdbd5f</id>
-        <link href="https://zenn.dev/marketer/articles/1c221041cdbd5f"/>
-        <updated>2022-12-14T08:26:59.000Z</updated>
-        <summary type="html"><![CDATA[Find captcha question.
-
-
-APIに質問を送信してください。
-
- SDKを使用する場合 (推奨):
-
-
-
- PHP
-    // https://github.com/2captchacom/2captcha-php
-
-    require(__DIR__ . '/../src/autoloader.php');
-
-    $solver = new \TwoCaptcha\TwoCaptcha('YOUR_API_KEY');
-
-    try {
-        $result = $solver->text([
-            'text'...]]></summary>
-        <author>
-            <name>marketer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SolveMediaの突破方法]]></title>
-        <id>https://zenn.dev/marketer/articles/f53b3a42e163db</id>
-        <link href="https://zenn.dev/marketer/articles/f53b3a42e163db"/>
-        <updated>2022-12-14T08:16:57.000Z</updated>
-        <summary type="html"><![CDATA[CAPTCHA画像をダウンロードします。
-
-
-画像をAPIに送信します。
-
-
-
- SDKを使用する場合 (推奨):
-
- PHP
-    // https://github.com/2captchacom/2captcha-php
-
-    require(__DIR__ . '/../src/autoloader.php');
-
-    $solver = new \TwoCaptcha\TwoCaptcha('YOUR_API_KEY');
-
-    try {
-        $result = $solver->normal('path/to/captcha.jpg');...]]></summary>
-        <author>
-            <name>marketer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rotate Captchaの突破方法]]></title>
-        <id>https://zenn.dev/marketer/articles/b645ea1cf15537</id>
-        <link href="https://zenn.dev/marketer/articles/b645ea1cf15537"/>
-        <updated>2022-12-14T07:58:30.000Z</updated>
-        <summary type="html"><![CDATA[CAPTCHA画像をダウンロードします。
-
-
-画像をAPIに送信します。
-
-
-
- SDKを使用する場合 (推奨):
-
- PHP
-    // https://github.com/2captchacom/2captcha-php
-
-    require(__DIR__ . '/../src/autoloader.php');
-
-    $solver = new \TwoCaptcha\TwoCaptcha('YOUR_API_KEY');
-
-    try {
-        $result = $solver->rotate([
-            'file'  =...]]></summary>
-        <author>
-            <name>marketer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[reCAPTCHA V3の突破方法]]></title>
-        <id>https://zenn.dev/marketer/articles/399868c2dedd4a</id>
-        <link href="https://zenn.dev/marketer/articles/399868c2dedd4a"/>
-        <updated>2022-12-14T07:44:42.000Z</updated>
-        <summary type="html"><![CDATA[ウェブサイトのソースコードを調べて、grecaptcha.executeコールを検索します。このコールは、ウェブサイトのコードのどこにでも、含まれているJavaScriptファイル内のページの <script> 要素内にあります。例えば、デモページのソースコードではこちらです。:
-window.grecaptcha.ready(function() {
-    grecaptcha.execute(
-        '6LfB5_IbAAAAAMCtsjEHEHKqcB9iQocwwxTiihJu', 
-        {action: 'demo_action'},
- ...]]></summary>
-        <author>
-            <name>marketer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[reCAPTCHA V2 Invisibleの突破方法]]></title>
-        <id>https://zenn.dev/marketer/articles/0416bfa49cbce5</id>
-        <link href="https://zenn.dev/marketer/articles/0416bfa49cbce5"/>
-        <updated>2022-12-14T07:26:46.000Z</updated>
-        <summary type="html"><![CDATA[ブラウザでデベロッパーコンソールを開き、data-sitekey属性を持つ要素を見つけます。
-<button class="g-recaptcha" data-sitekey="6LdO5_IbAAAAAAeVBL9TClS19NUTt5wswEb3Q7C5" data-callback="onSubmit" id="recaptcha">Check</button>
-
-
-
-sitekeyとpageurlを APIに送信します。
-
-
-
- SDK を使用する場合 (推奨):
-
- PHP
-    // https://github.com/2captchacom/...]]></summary>
-        <author>
-            <name>marketer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】MoviePy × 文字認識(Tesseract OCR )を用いた Apex Legendsの動画解析]]></title>
-        <id>https://zenn.dev/ganbarimasu/articles/de6d046cd97572</id>
-        <link href="https://zenn.dev/ganbarimasu/articles/de6d046cd97572"/>
-        <updated>2022-12-14T07:19:55.000Z</updated>
-        <summary type="html"><![CDATA[本記事が対象とする人：
-
-MoviePyとOpenCVを用いたpythonでの動画編集・解析がしてみたい方
-画像中の文字を認識し、テキストとして読み取る技術（本記事ではTesseract OCRを使用）を
-使ってみたい方
-他の人の個人開発を見るのが好きな方
-
-!
-精度が高いモデルにはなっていないので、取り組み内容を楽しんでいただければ幸いです。
-また、汎用性が高くなさそうなコードに関してはネストするようにしてあります。
-気になる方は適宜、確認していただければと思います。
-
-!
-ゲーム動画を対象とした開発であり、チート行為を行うためのものではありません。
-
-
- はじめに
-
- 背景
-現在、e...]]></summary>
-        <author>
-            <name>yoroshiku</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[reCAPTCHA V2コールバックの突破方法]]></title>
-        <id>https://zenn.dev/marketer/articles/0964175d310f88</id>
-        <link href="https://zenn.dev/marketer/articles/0964175d310f88"/>
-        <updated>2022-12-14T07:16:24.000Z</updated>
-        <summary type="html"><![CDATA[ブラウザでデベロッパーコンソールを開き、data-sitekey属性を持つ要素を見つけます。
-
-    <div class="g-recaptcha" data-sitekey="6LfD3PIbAAAAAJs_eEHvoOl75_83eXSqpPSRFJ_u" id="recaptcha"></div>
-
-
-sitekeyとpageurl を APIに送信します。
-
-
- SDK を使用する場合 (推奨):
-
- PHP
-    // https://github.com/2captchacom/2captcha-php
-
-    require(__DIR__...]]></summary>
-        <author>
-            <name>marketer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[通常のCAPTCHAを突破する方法]]></title>
-        <id>https://zenn.dev/marketer/articles/1dfc7c3898966c</id>
-        <link href="https://zenn.dev/marketer/articles/1dfc7c3898966c"/>
-        <updated>2022-12-14T07:02:00.000Z</updated>
-        <summary type="html"><![CDATA[CAPTCHA画像をダウンロードします。
-
-
-画像を API に送信します。
-
-
-
- SDKを使用する場合 (推奨):
-
- PHP
-    // https://github.com/2captchacom/2captcha-php
-
-    require(__DIR__ . '/../src/autoloader.php');
-
-    $solver = new \TwoCaptcha\TwoCaptcha('YOUR_API_KEY');
-
-    try {
-        $result = $solver->normal('path/to/captcha.jpg'...]]></summary>
-        <author>
-            <name>marketer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCorder］ABC-042｜B 和風いろはちゃんイージー]]></title>
-        <id>https://zenn.dev/hyperdb/articles/13e6376de2f640</id>
-        <link href="https://zenn.dev/hyperdb/articles/13e6376de2f640"/>
-        <updated>2022-12-14T05:35:43.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-ABC042 B - 文字列大好きいろはちゃんイージー
-
-
- 提出結果
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def getStringRow(N):
-    return [input() for _ in range(N)]
-
-
-def main():
-    p = getIntList()
-    d = getStringRow(p[0])
-    d.sort()
-
-    print("".join(d))
-
-
-if __name__ == "__main__":
-  ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCorder］ABC-042｜A 和風いろはちゃんイージー]]></title>
-        <id>https://zenn.dev/hyperdb/articles/b462a2dbdc2d1c</id>
-        <link href="https://zenn.dev/hyperdb/articles/b462a2dbdc2d1c"/>
-        <updated>2022-12-14T05:33:46.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-ABC042 A - 和風いろはちゃんイージー
-
-
- 提出結果
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    d = getIntList()
-    d.sort()
-
-    if d == [5, 5, 7]:
-        print('YES')
-    else:
-        print('NO')
-
-
-if __name__ == "__main__":
-    main()
-
- ふりかえり
-普段プログラムを書いている時は配列同志を比較する...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[# KeyCaptchaの突破方法]]></title>
-        <id>https://zenn.dev/marketer/articles/2d01912355304d</id>
-        <link href="https://zenn.dev/marketer/articles/2d01912355304d"/>
-        <updated>2022-12-14T05:08:01.000Z</updated>
-        <summary type="html"><![CDATA[ページのソースコードで次のKeyCaptchaパラメータを見つけます。
-s_s_c_user_id
-s_s_c_session_id
-s_s_c_web_server_sign
-s_s_c_web_server_sign2
-
-
-
-これらのパラメータをAPIに送信します。
-
-
-
- SDKを使用する場合 (推奨):
-
- PHP
-    // https://github.com/2captchacom/2captcha-php
-
-    require(__DIR__ . '/../src/autoloader.php');
-
-    $solver = new \TwoCaptcha\...]]></summary>
-        <author>
-            <name>marketer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonで辞書のリストの平均を取る]]></title>
-        <id>https://zenn.dev/hpp/articles/d48964b84ca2cf</id>
-        <link href="https://zenn.dev/hpp/articles/d48964b84ca2cf"/>
-        <updated>2022-12-14T03:52:29.000Z</updated>
-        <summary type="html"><![CDATA[辞書のリストの平均をキーごとに取得するのは結構めんどう、なので簡単に使える関数を書いてみた。
-def dict_average(dicts: Iterable[Dict]) -> Dict:
-    dicts: List[Dict] = list(dicts)
-    averaged = {}
-
-    for k, v in dicts[0].items():
-        try:
-            v = v.item()
-        except:
-            pass
-        if type(v) in [int, float]:
-  ...]]></summary>
-        <author>
-            <name>hpp</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Snowflake の E2E ML を試してみる]]></title>
-        <id>https://zenn.dev/tmasuo/articles/aa0634c14e6210</id>
-        <link href="https://zenn.dev/tmasuo/articles/aa0634c14e6210"/>
-        <updated>2022-12-14T01:15:37.000Z</updated>
-        <summary type="html"><![CDATA[📜 この記事は
-Snowflake Advent Calendar 2022 Calendar 2 Day 14 の記事になります。Snowflake で Sales Engineer をしております、@tmasuo がお届けします。
-この記事で触れる Snowflake の各機能のリリース状態は 2022 年 12 月 1 日時点に基づきます。
-
- 🐍 Snowpark for Python - GA
-11 月に行われた Snowday 2022 にて Snowpark for Python の GA がついに発表されました🎉
-昨年の 11 月に Private Preview、今...]]></summary>
-        <author>
-            <name>tmasuo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[指定した値のみが配列に入っていることを保証したいとき]]></title>
-        <id>https://zenn.dev/ningen/articles/059bdc8d99d785</id>
-        <link href="https://zenn.dev/ningen/articles/059bdc8d99d785"/>
-        <updated>2022-12-13T16:21:09.000Z</updated>
-        <summary type="html"><![CDATA[表題のようなことを実現したいときに最初に思いつくのは以下のようなプログラムではないでしょうか?
-allowed_values = [1,2,3]
-
-input_data = [1,2]
-invalid_input_data = [1,2,4]
-
-# 何も出力されない
-for data in input_data:
-  if data not in allowed_values:
-    print('error. input_data')
-    
-# 「error. invalid_input_data」が表示される 
-for data in invalid_input_data:
- ...]]></summary>
-        <author>
-            <name>ningen</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ビッグデータ処理技術に関わる基本の勉強結果を整理]]></title>
-        <id>https://zenn.dev/aidemy/articles/9a53740a6ec575</id>
-        <link href="https://zenn.dev/aidemy/articles/9a53740a6ec575"/>
-        <updated>2022-12-13T14:50:47.000Z</updated>
-        <summary type="html"><![CDATA[この記事は、 Aidemy Advent Calendar 2022 の12/13分の投稿です。
-
- 本記事執筆の背景
-
-時間軸上の経緯
-
-筆者は株式会社アイデミーにて、機械学習モデル構築/データ処理基盤構築 等の実案件支援に関わるチームに最近異動(それまでは弊社SaaSプロダクトのカスタマーサクセス+弊社の各種サービスの営業を担う部署に所属)
-
-
-現チームでの筆者の位置づけ上の経緯
-
-異動先チームにはプロジェクトマネージャ(データ活用領域に強み)、データサイエンティスト、データエンジニアが多数所属し、筆者の関連リテラシー・スキルは現時点で大きくビハインド
-
-
-上記を踏まえた本記事作成の...]]></summary>
-        <author>
-            <name>ErikaOta</name>
         </author>
     </entry>
 </feed>
