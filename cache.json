@@ -12,6 +12,306 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/kurokawa/articles/34de38cafe510e",
+          "author": "kurokawa5",
+          "description": "問題\n\n 57. 特徴量の重みの確認\n52で学習したロジスティック回帰モデルの中で，重みの高い特徴量トップ10と，重みの低い特徴量トップ10を確認せよ．\n\n solution57.py\nimport pandas as pd\nimport numpy as np\nimport re\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.feature_extraction.text import Tf...",
+          "link": "https://zenn.dev/kurokawa/articles/34de38cafe510e",
+          "publishedOn": "2023-01-14T16:17:09.000Z",
+          "wordCount": 1905,
+          "title": "言語処理100本ノック 2020 (Rev 2) 第6章: 機械学習 57. 特徴量の重みの確認",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--JTwcppT9--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa5%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC6%25E7%25AB%25A0%253A%2520%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%252057.%2520%25E7%2589%25B9%25E5%25BE%25B4%25E9%2587%258F%25E3%2581%25AE%25E9%2587%258D%25E3%2581%25BF%25E3%2581%25AE%25E7%25A2%25BA%25E8%25AA%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--JTwcppT9--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa5%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC6%25E7%25AB%25A0%253A%2520%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%252057.%2520%25E7%2589%25B9%25E5%25BE%25B4%25E9%2587%258F%25E3%2581%25AE%25E9%2587%258D%25E3%2581%25BF%25E3%2581%25AE%25E7%25A2%25BA%25E8%25AA%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kyaon/articles/87d59dbcb8b88c",
+          "author": "kyaon",
+          "description": "JGLUEのSTSとNLIにおける文ペア数を調べてみた\n\n 概要\n自然言語処理モデルの評価用データセットJGLUEのSTSとNLIのラベルの各組み合わせで文ペア数を調べた．\n\n 目次\n\n概要\nJGLUE\nSTS\nNLI\n環境\n\nコード\n\nNLIとSTSをマージ\nヒートマップで各組み合わせの文ペア数を出力\n各組み合わせの文ペア数の結果\n\n\nおまけ\n\n\n JGLUE\n2022年に言語処理学会で『JGLUE: 日本語言語理解ベンチマーク』という論文が紹介された．\nJGLUEのSTSとNLIの文ペアはYahoo Japan Captions Datasetを用いている．\n次に公開されているデ...",
+          "link": "https://zenn.dev/kyaon/articles/87d59dbcb8b88c",
+          "publishedOn": "2023-01-14T14:01:02.000Z",
+          "wordCount": 1722,
+          "title": "JGLUEのSTSとNLIにおける文ペア数を調べてみた",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--HCkTIQSL--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kyaon%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:JGLUE%25E3%2581%25AESTS%25E3%2581%25A8NLI%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2591%25E3%2582%258B%25E6%2596%2587%25E3%2583%259A%25E3%2582%25A2%25E6%2595%25B0%25E3%2582%2592%25E8%25AA%25BF%25E3%2581%25B9%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1WaG9nM3QzNi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRiMDdiYmEyMTAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--HCkTIQSL--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kyaon%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:JGLUE%25E3%2581%25AESTS%25E3%2581%25A8NLI%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2591%25E3%2582%258B%25E6%2596%2587%25E3%2583%259A%25E3%2582%25A2%25E6%2595%25B0%25E3%2582%2592%25E8%25AA%25BF%25E3%2581%25B9%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1WaG9nM3QzNi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRiMDdiYmEyMTAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kurokawa/articles/771f6b5edc2d00",
+          "author": "kurokawa5",
+          "description": "問題\n\n 56. 適合率，再現率，F1スコアの計測\n52で学習したロジスティック回帰モデルの適合率，再現率，F1スコアを，評価データ上で計測せよ．カテゴリごとに適合率，再現率，F1スコアを求め，カテゴリごとの性能をマイクロ平均（micro-average）とマクロ平均（macro-average）で統合せよ．\n\n solution56.py\nimport pandas as pd\nimport numpy as np\nimport re\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nfrom sklearn.model_s...",
+          "link": "https://zenn.dev/kurokawa/articles/771f6b5edc2d00",
+          "publishedOn": "2023-01-14T10:59:54.000Z",
+          "wordCount": 1626,
+          "title": "言語処理100本ノック 2020 (Rev 2) 第6章: 機械学習 56. 適合率，再現率，F1スコアの計測",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--nYVwD9Fm--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa5%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC6%25E7%25AB%25A0%253A%2520%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%252056.%2520%25E9%2581%25A9%25E5%2590%2588%25E7%258E%2587%25EF%25BC%258C%25E5%2586%258D%25E7%258F%25BE%25E7%258E%2587%25EF%25BC%258CF1%25E3%2582%25B9%25E3%2582%25B3%25E3%2582%25A2%25E3%2581%25AE%25E8%25A8%2588%25E6%25B8%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--nYVwD9Fm--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa5%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC6%25E7%25AB%25A0%253A%2520%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%252056.%2520%25E9%2581%25A9%25E5%2590%2588%25E7%258E%2587%25EF%25BC%258C%25E5%2586%258D%25E7%258F%25BE%25E7%258E%2587%25EF%25BC%258CF1%25E3%2582%25B9%25E3%2582%25B3%25E3%2582%25A2%25E3%2581%25AE%25E8%25A8%2588%25E6%25B8%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mizuiro__sakura/articles/b31bf4ac40ff0e",
+          "author": "Mizuiro__sakura",
+          "description": "こんにちにゃんです。\n水色桜（みずいろさくら）です。\n今回はLUKEをファインチューニングして、Hugging Faceにアップしたので、そのモデルのデモの様子などについて書いていこうと思います。\n作成したモデルはこちらのサイト（Hugging Face）にアップしてあります。\nコピペして使えるコード（ディレクトリ名は適宜変更してください）も添えてあるのでぜひ使ってみてください。\n本記事を使えば、環境構築（pythonなどのインストール）を除けば、たった2ステップでLUKEで感情分析が行えるようになります。\n\n 環境\ntorch 1.12.1\ntransformers 4.24.0\nPy...",
+          "link": "https://zenn.dev/mizuiro__sakura/articles/b31bf4ac40ff0e",
+          "publishedOn": "2023-01-14T08:53:02.000Z",
+          "wordCount": 554,
+          "title": "ファインチューニング（感情分析）したLUKEを公開しました（たった２ステップで完結！LUKEでの感情分析）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--5aY9cKsf--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%25EF%25BC%2588%25E6%2584%259F%25E6%2583%2585%25E5%2588%2586%25E6%259E%2590%25EF%25BC%2589%25E3%2581%2597%25E3%2581%259FLUKE%25E3%2582%2592%25E5%2585%25AC%25E9%2596%258B%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%25EF%25BC%2588%25E3%2581%259F%25E3%2581%25A3%25E3%2581%259F%25EF%25BC%2592%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2583%2597%25E3%2581%25A7%25E5%25AE%258C%25E7%25B5%2590%25EF%25BC%2581LUKE%25E3%2581%25A7%25E3%2581%25AE%25E6%2584%259F%25E6%2583%2585%25E5%2588%2586%25E6%259E%2590%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--5aY9cKsf--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%25EF%25BC%2588%25E6%2584%259F%25E6%2583%2585%25E5%2588%2586%25E6%259E%2590%25EF%25BC%2589%25E3%2581%2597%25E3%2581%259FLUKE%25E3%2582%2592%25E5%2585%25AC%25E9%2596%258B%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%25EF%25BC%2588%25E3%2581%259F%25E3%2581%25A3%25E3%2581%259F%25EF%25BC%2592%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2583%2597%25E3%2581%25A7%25E5%25AE%258C%25E7%25B5%2590%25EF%25BC%2581LUKE%25E3%2581%25A7%25E3%2581%25AE%25E6%2584%259F%25E6%2583%2585%25E5%2588%2586%25E6%259E%2590%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mizuiro__sakura/articles/b011c2c90bdada",
+          "author": "Mizuiro__sakura",
+          "description": "こんにちにゃんです。\n水色桜（みずいろさくら）です。\n今回は現状日本語モデルで最大規模を誇る言語モデルdeberta-v2-base-japaneseをファインチューニングして、Question-Answeringタスクを解いてみようと思います。\n作成したモデルはこちらのサイト（Hugging Face）で配布しています。\n初心者でも簡単に使えるようにしているのでぜひ使ってみてください。\nhttps://huggingface.co/Mizuiro-sakura/deberta-v2-base-japanese-finetuned-QA\n\n 環境\ntorch 1.12.1\ntransfo...",
+          "link": "https://zenn.dev/mizuiro__sakura/articles/b011c2c90bdada",
+          "publishedOn": "2023-01-14T08:41:56.000Z",
+          "wordCount": 406,
+          "title": "日本語言語モデルで現状最大規模を誇るdeberta-v2をQAタスク用にファインチューニングして公開してみた",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--31wKdnBh--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E8%25A8%2580%25E8%25AA%259E%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25A7%25E7%258F%25BE%25E7%258A%25B6%25E6%259C%2580%25E5%25A4%25A7%25E8%25A6%258F%25E6%25A8%25A1%25E3%2582%2592%25E8%25AA%2587%25E3%2582%258Bdeberta-v2%25E3%2582%2592QA%25E3%2582%25BF%25E3%2582%25B9%25E3%2582%25AF%25E7%2594%25A8%25E3%2581%25AB%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%2597%25E3%2581%25A6%25E5%2585%25AC%25E9%2596%258B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--31wKdnBh--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E8%25A8%2580%25E8%25AA%259E%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25A7%25E7%258F%25BE%25E7%258A%25B6%25E6%259C%2580%25E5%25A4%25A7%25E8%25A6%258F%25E6%25A8%25A1%25E3%2582%2592%25E8%25AA%2587%25E3%2582%258Bdeberta-v2%25E3%2582%2592QA%25E3%2582%25BF%25E3%2582%25B9%25E3%2582%25AF%25E7%2594%25A8%25E3%2581%25AB%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%2597%25E3%2581%25A6%25E5%2585%25AC%25E9%2596%258B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mizuiro__sakura/articles/1d712d7e849b60",
+          "author": "Mizuiro__sakura",
+          "description": "こんにちにゃんです。\n水色桜（みずいろさくら）です。\n今回は現在（２０２３年１月）、世界最高精度を有している言語モデルであるLUKEをファインチューニングして、Question-Answeringタスク（SQuAD、狭義の質問応答）を行ってみようと思います。\n作成したモデルはこちらのサイトで公開していますので、もしよろしければ使ってみてください。\n今回も初心者でもたった２ステップ（ステップ１：必要なライブラリのダウンロード、ステップ２：コードのコピペ）で簡単に使えるようにしてあります。\nこのモデルを使えばチャットボットなども作成することが可能です。\nhttps://huggingface...",
+          "link": "https://zenn.dev/mizuiro__sakura/articles/1d712d7e849b60",
+          "publishedOn": "2023-01-14T08:39:50.000Z",
+          "wordCount": 3089,
+          "title": "世界最高精度の言語モデルLUKEをファインチューニングして公開してみた（Question-Answering, SQuAD）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--uWUFLdRu--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:%25E4%25B8%2596%25E7%2595%258C%25E6%259C%2580%25E9%25AB%2598%25E7%25B2%25BE%25E5%25BA%25A6%25E3%2581%25AE%25E8%25A8%2580%25E8%25AA%259E%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25ABLUKE%25E3%2582%2592%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%2597%25E3%2581%25A6%25E5%2585%25AC%25E9%2596%258B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25EF%25BC%2588Question-Answering%252C%2520SQuAD%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--uWUFLdRu--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:%25E4%25B8%2596%25E7%2595%258C%25E6%259C%2580%25E9%25AB%2598%25E7%25B2%25BE%25E5%25BA%25A6%25E3%2581%25AE%25E8%25A8%2580%25E8%25AA%259E%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25ABLUKE%25E3%2582%2592%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%2597%25E3%2581%25A6%25E5%2585%25AC%25E9%2596%258B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25EF%25BC%2588Question-Answering%252C%2520SQuAD%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mizuiro__sakura/articles/a04f6bcc21c612",
+          "author": "Mizuiro__sakura",
+          "description": "こんにちにゃんです。\n水色桜（みずいろさくら）です。\n今回は2020年4月当時、5つのタスクで世界最高精度を達成した新しい言語モデルLUKEの論文について、新規性は何なのかなどについて書いていきたいと思います。\n日本語バージョンのLUKEは執筆現在（2022年11月）も4つのタスクで最高スコアを有しています。\nもし記事中で何かご不明な点、間違いなどがありましたら、教えていただけると嬉しいです。\n2022年12月27日追記：LUKEをファインチューニングして感情分析に用いれるモデルを作成してみました。下記の記事に載せたリンクからモデルをダウンロードできます。LUKEを試してみたいという方...",
+          "link": "https://zenn.dev/mizuiro__sakura/articles/a04f6bcc21c612",
+          "publishedOn": "2023-01-14T08:36:05.000Z",
+          "wordCount": 592,
+          "title": "世界最高精度を達成した言語モデルLUKEの論文を徹底解説（試しに使えるソースコードも記載）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--j2Ws-do0--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E4%25B8%2596%25E7%2595%258C%25E6%259C%2580%25E9%25AB%2598%25E7%25B2%25BE%25E5%25BA%25A6%25E3%2582%2592%25E9%2581%2594%25E6%2588%2590%25E3%2581%2597%25E3%2581%259F%25E8%25A8%2580%25E8%25AA%259E%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25ABLUKE%25E3%2581%25AE%25E8%25AB%2596%25E6%2596%2587%25E3%2582%2592%25E5%25BE%25B9%25E5%25BA%2595%25E8%25A7%25A3%25E8%25AA%25AC%25EF%25BC%2588%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25AB%25E4%25BD%25BF%25E3%2581%2588%25E3%2582%258B%25E3%2582%25BD%25E3%2583%25BC%25E3%2582%25B9%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2582%25E8%25A8%2598%25E8%25BC%2589%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--j2Ws-do0--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E4%25B8%2596%25E7%2595%258C%25E6%259C%2580%25E9%25AB%2598%25E7%25B2%25BE%25E5%25BA%25A6%25E3%2582%2592%25E9%2581%2594%25E6%2588%2590%25E3%2581%2597%25E3%2581%259F%25E8%25A8%2580%25E8%25AA%259E%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25ABLUKE%25E3%2581%25AE%25E8%25AB%2596%25E6%2596%2587%25E3%2582%2592%25E5%25BE%25B9%25E5%25BA%2595%25E8%25A7%25A3%25E8%25AA%25AC%25EF%25BC%2588%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25AB%25E4%25BD%25BF%25E3%2581%2588%25E3%2582%258B%25E3%2582%25BD%25E3%2583%25BC%25E3%2582%25B9%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2582%25E8%25A8%2598%25E8%25BC%2589%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mizuiro__sakura/articles/48ae05d3a23061",
+          "author": "Mizuiro__sakura",
+          "description": "こんにちにゃんです。\n水色桜（みずいろさくら）です。\n今回はBERTを用いたチャットボットについて説明していこうと思います。\nそもそもBERTって何って感じの方にもわかりやすいように書いていくつもりです。\nまず今回の目標を先に示そうと思います。\n下の画像のように、背景となる文章を与えたときに、質問に答えてくれるプログラムを作成します。\n（ぐへへ…これを使えば宿題も自動でやってくれ…ちょっ先生に言うのだけは！）\nまずBERTの基礎となっているtransformersというものについて説明し、その後、BERTについて説明します。最後に実際にプログラムの説明をしていきます。\n本記事では簡略化の...",
+          "link": "https://zenn.dev/mizuiro__sakura/articles/48ae05d3a23061",
+          "publishedOn": "2023-01-14T08:33:01.000Z",
+          "wordCount": 726,
+          "title": "（初心者向け）BERTを用いたチャットボット（質疑応答）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--1Y8Lr7O1--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%2588%25E5%2588%259D%25E5%25BF%2583%25E8%2580%2585%25E5%2590%2591%25E3%2581%2591%25EF%25BC%2589BERT%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25EF%25BC%2588%25E8%25B3%25AA%25E7%2596%2591%25E5%25BF%259C%25E7%25AD%2594%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--1Y8Lr7O1--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%2588%25E5%2588%259D%25E5%25BF%2583%25E8%2580%2585%25E5%2590%2591%25E3%2581%2591%25EF%25BC%2589BERT%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25EF%25BC%2588%25E8%25B3%25AA%25E7%2596%2591%25E5%25BF%259C%25E7%25AD%2594%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mizuiro__sakura/articles/3ae3ab29625986",
+          "author": "Mizuiro__sakura",
+          "description": "こんにちにゃんです。\n水色桜（みずいろさくら）です。\n今回は波の伝搬と干渉の３次元シミュレーションについて書いていこうと思います。\n実行結果は下のgifみたいな感じになります。\n\nまず背景について説明いたします。\n波の挙動は波動方程式によって記述されます。\n\n波動方程式はスライドに示すような定数係数二階線形偏微分方程式です。そのままでは機械で分析ができないため、スライドに示すように数値的に微分を行います。\n結果として一番下のような形になります。\nこの式を元にしてプログラムを書いていきます。\n境界条件はディレクレ境界条件（端の値を常に０とする）とします。\nプログラムは次の通りです。\n\nwa...",
+          "link": "https://zenn.dev/mizuiro__sakura/articles/3ae3ab29625986",
+          "publishedOn": "2023-01-14T08:30:05.000Z",
+          "wordCount": 3420,
+          "title": "波の伝搬と干渉の３次元シミュレーションをしてみた（波動方程式、ダブルスリット、python）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--mro8rz45--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E6%25B3%25A2%25E3%2581%25AE%25E4%25BC%259D%25E6%2590%25AC%25E3%2581%25A8%25E5%25B9%25B2%25E6%25B8%2589%25E3%2581%25AE%25EF%25BC%2593%25E6%25AC%25A1%25E5%2585%2583%25E3%2582%25B7%25E3%2583%259F%25E3%2583%25A5%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%2592%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25EF%25BC%2588%25E6%25B3%25A2%25E5%258B%2595%25E6%2596%25B9%25E7%25A8%258B%25E5%25BC%258F%25E3%2580%2581%25E3%2583%2580%25E3%2583%2596%25E3%2583%25AB%25E3%2582%25B9%25E3%2583%25AA%25E3%2583%2583%25E3%2583%2588%25E3%2580%2581python%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--mro8rz45--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E6%25B3%25A2%25E3%2581%25AE%25E4%25BC%259D%25E6%2590%25AC%25E3%2581%25A8%25E5%25B9%25B2%25E6%25B8%2589%25E3%2581%25AE%25EF%25BC%2593%25E6%25AC%25A1%25E5%2585%2583%25E3%2582%25B7%25E3%2583%259F%25E3%2583%25A5%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%2592%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25EF%25BC%2588%25E6%25B3%25A2%25E5%258B%2595%25E6%2596%25B9%25E7%25A8%258B%25E5%25BC%258F%25E3%2580%2581%25E3%2583%2580%25E3%2583%2596%25E3%2583%25AB%25E3%2582%25B9%25E3%2583%25AA%25E3%2583%2583%25E3%2583%2588%25E3%2580%2581python%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mizuiro__sakura/articles/b03143114261c8",
+          "author": "Mizuiro__sakura",
+          "description": "こんにちにゃんです。\n水色桜（みずいろさくら）です。\n今回はVOSKというライブラリを用いて声を文字起こしし、それに対して自然な返答を行うようなAIを作っていきたいと思います。\nまず、それぞれのライブラリについて説明します。\nVOSKはalphacepheiさんが開発した２０言語以上に対応した音声認識ツールキットです。言語モデルが約50MBと軽く、組み込みを容易に行うことが可能です。\nVOSK Offline Speech Recognition API\nhttps://alphacephei.com/vosk/\n\nVOSKのインストールは\npip install vosk\nで行うことが...",
+          "link": "https://zenn.dev/mizuiro__sakura/articles/b03143114261c8",
+          "publishedOn": "2023-01-14T08:24:25.000Z",
+          "wordCount": 2565,
+          "title": "音声認識可能な対話型AIを作成してみた(VOSK, GiNZA, python,チャットボット)",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--hXN9m5Jy--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E9%259F%25B3%25E5%25A3%25B0%25E8%25AA%258D%25E8%25AD%2598%25E5%258F%25AF%25E8%2583%25BD%25E3%2581%25AA%25E5%25AF%25BE%25E8%25A9%25B1%25E5%259E%258BAI%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2528VOSK%252C%2520GiNZA%252C%2520python%252C%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--hXN9m5Jy--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E9%259F%25B3%25E5%25A3%25B0%25E8%25AA%258D%25E8%25AD%2598%25E5%258F%25AF%25E8%2583%25BD%25E3%2581%25AA%25E5%25AF%25BE%25E8%25A9%25B1%25E5%259E%258BAI%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2528VOSK%252C%2520GiNZA%252C%2520python%252C%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mizuiro__sakura/articles/7e8373a759ef1b",
+          "author": "Mizuiro__sakura",
+          "description": "こんにちにゃんです。\n水色桜（みずいろさくら）です。\n今回は言語商会・長岡技術科学大学、山本先生の日本語感情表現辞書( https://www.jnlp.org/GengoHouse/snow/d18 )を用いて夏目漱石さんの「こころ」（青空文庫（　https://www.aozora.gr.jp/　　　　\n））の感情分析を行っていきたいと思います。\n山本先生のコーパスは単語に対して被験者の３人が48の感情のうちどの感情を感じたかが記されています。このコーパスを用いることで、文章に含まれている最も強い感情を特定することが可能です。\n解析結果は次のような感じです。\n\n内訳を見ると、好きとい...",
+          "link": "https://zenn.dev/mizuiro__sakura/articles/7e8373a759ef1b",
+          "publishedOn": "2023-01-14T08:20:16.000Z",
+          "wordCount": 5616,
+          "title": "夏目漱石さんの「こころ」の心を感情分析プログラムで解析してみた",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--LuLuHS2u--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E5%25A4%258F%25E7%259B%25AE%25E6%25BC%25B1%25E7%259F%25B3%25E3%2581%2595%25E3%2582%2593%25E3%2581%25AE%25E3%2580%258C%25E3%2581%2593%25E3%2581%2593%25E3%2582%258D%25E3%2580%258D%25E3%2581%25AE%25E5%25BF%2583%25E3%2582%2592%25E6%2584%259F%25E6%2583%2585%25E5%2588%2586%25E6%259E%2590%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%25A0%25E3%2581%25A7%25E8%25A7%25A3%25E6%259E%2590%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--LuLuHS2u--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E5%25A4%258F%25E7%259B%25AE%25E6%25BC%25B1%25E7%259F%25B3%25E3%2581%2595%25E3%2582%2593%25E3%2581%25AE%25E3%2580%258C%25E3%2581%2593%25E3%2581%2593%25E3%2582%258D%25E3%2580%258D%25E3%2581%25AE%25E5%25BF%2583%25E3%2582%2592%25E6%2584%259F%25E6%2583%2585%25E5%2588%2586%25E6%259E%2590%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%25A0%25E3%2581%25A7%25E8%25A7%25A3%25E6%259E%2590%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mizuiro__sakura/articles/4226070bdd6309",
+          "author": "Mizuiro__sakura",
+          "description": "こんにちにゃんです。\n水色桜（みずいろさくら）です。\nGiNZAに関する記事4本目です。\nこの記事では感情分析について書いていきます。\nまず感情分析とは何かということから説明していきます。\n感情分析は、AIがテキストや音声から人間の気持ちや意図を読み取ることを言います。\nたとえば、「やったー。テストでいい点が取れた！」という文があったときに、プラスの感情もしくは喜びの感情を出力するような感じです。\n感情分析の手法は大きく分けて２つあります。\n1つ目はルールベースのアプローチです。\nルールベースのアプローチは前持って定義されたルールを用いて感情分析をする手法です。例えば、あらかじめ単語ごと...",
+          "link": "https://zenn.dev/mizuiro__sakura/articles/4226070bdd6309",
+          "publishedOn": "2023-01-14T08:13:52.000Z",
+          "wordCount": 2096,
+          "title": "感情分析のやり方が7割わかるようになる記事（初心者向け）（ソースコードあり）（GiNZA）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--vPCKXCMk--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E6%2584%259F%25E6%2583%2585%25E5%2588%2586%25E6%259E%2590%25E3%2581%25AE%25E3%2582%2584%25E3%2582%258A%25E6%2596%25B9%25E3%2581%258C7%25E5%2589%25B2%25E3%2582%258F%25E3%2581%258B%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258B%25E8%25A8%2598%25E4%25BA%258B%25EF%25BC%2588%25E5%2588%259D%25E5%25BF%2583%25E8%2580%2585%25E5%2590%2591%25E3%2581%2591%25EF%25BC%2589%25EF%25BC%2588%25E3%2582%25BD%25E3%2583%25BC%25E3%2582%25B9%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2581%2582%25E3%2582%258A%25EF%25BC%2589%25EF%25BC%2588GiNZA%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--vPCKXCMk--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E6%2584%259F%25E6%2583%2585%25E5%2588%2586%25E6%259E%2590%25E3%2581%25AE%25E3%2582%2584%25E3%2582%258A%25E6%2596%25B9%25E3%2581%258C7%25E5%2589%25B2%25E3%2582%258F%25E3%2581%258B%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258B%25E8%25A8%2598%25E4%25BA%258B%25EF%25BC%2588%25E5%2588%259D%25E5%25BF%2583%25E8%2580%2585%25E5%2590%2591%25E3%2581%2591%25EF%25BC%2589%25EF%25BC%2588%25E3%2582%25BD%25E3%2583%25BC%25E3%2582%25B9%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2581%2582%25E3%2582%258A%25EF%25BC%2589%25EF%25BC%2588GiNZA%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mizuiro__sakura/articles/f55ffda3d98147",
+          "author": "Mizuiro__sakura",
+          "description": "こんにちにゃんです。\nGiNZAに関する記事3本目です。\nこの記事では固有表現抽出と類似度計算、簡単なチャットボット作成について書いていこうと思います。\n\nGiNZAで出来ること４つ目は固有表現抽出です。固有表現は固有名詞や人名のことです。\n\nent.py\n#④固有表現抽出\ndoc=nlp('今日は銀座で花さんと買い物をした。')\nfor ent in doc.ents:  #固有表現（エンティティ）群から固有表現を一つずつ抽出\n    print(\n        ent.text+', '+   #固有表現\n        ent.label_+', '+  #固有表現の種類\n   ...",
+          "link": "https://zenn.dev/mizuiro__sakura/articles/f55ffda3d98147",
+          "publishedOn": "2023-01-14T08:10:56.000Z",
+          "wordCount": 1157,
+          "title": "GiNZA入門3（基本操作編2、チャットボット作成編）（基本的な使い方マスターを目指す方向け）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--bhfkGooS--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:GiNZA%25E5%2585%25A5%25E9%2596%25803%25EF%25BC%2588%25E5%259F%25BA%25E6%259C%25AC%25E6%2593%258D%25E4%25BD%259C%25E7%25B7%25A82%25E3%2580%2581%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E4%25BD%259C%25E6%2588%2590%25E7%25B7%25A8%25EF%25BC%2589%25EF%25BC%2588%25E5%259F%25BA%25E6%259C%25AC%25E7%259A%2584%25E3%2581%25AA%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%25E3%2583%259E%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%2592%25E7%259B%25AE%25E6%258C%2587%25E3%2581%2599%25E6%2596%25B9%25E5%2590%2591%25E3%2581%2591%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--bhfkGooS--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:GiNZA%25E5%2585%25A5%25E9%2596%25803%25EF%25BC%2588%25E5%259F%25BA%25E6%259C%25AC%25E6%2593%258D%25E4%25BD%259C%25E7%25B7%25A82%25E3%2580%2581%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E4%25BD%259C%25E6%2588%2590%25E7%25B7%25A8%25EF%25BC%2589%25EF%25BC%2588%25E5%259F%25BA%25E6%259C%25AC%25E7%259A%2584%25E3%2581%25AA%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%25E3%2583%259E%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%2592%25E7%259B%25AE%25E6%258C%2587%25E3%2581%2599%25E6%2596%25B9%25E5%2590%2591%25E3%2581%2591%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mizuiro__sakura/articles/b9de1291fb816d",
+          "author": "Mizuiro__sakura",
+          "description": "こんにちにゃんです❕\nGiNZA入門に関する記事２本目です。\nこの記事ではGiNZAの基本的な操作方法について書いていきます。\nまず主にGiNZAで出来ることは次の通りです。\n\n一つ一つ説明していきます。\nまずGiNZAを用いるために、spaCyをインポートします。\nそうしたらそのあとGiNZAのロードを行い、nlpという変数に渡します。\nGiNZAではdocクラスというものがあります。\ndocクラスはこの後説明する解析の結果を保持するクラスで、doc=nlp(文章（str型）)で解析が完了します。\n簡単に言うと文章とそれに関する情報をまとめて持っているというイメージです（どこからどこま...",
+          "link": "https://zenn.dev/mizuiro__sakura/articles/b9de1291fb816d",
+          "publishedOn": "2023-01-14T08:07:35.000Z",
+          "wordCount": 472,
+          "title": "GiNZA入門２（基本操作編１）（基本的な使い方マスターを目指す方向け）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s---rxV4kGc--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:GiNZA%25E5%2585%25A5%25E9%2596%2580%25EF%25BC%2592%25EF%25BC%2588%25E5%259F%25BA%25E6%259C%25AC%25E6%2593%258D%25E4%25BD%259C%25E7%25B7%25A8%25EF%25BC%2591%25EF%25BC%2589%25EF%25BC%2588%25E5%259F%25BA%25E6%259C%25AC%25E7%259A%2584%25E3%2581%25AA%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%25E3%2583%259E%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%2592%25E7%259B%25AE%25E6%258C%2587%25E3%2581%2599%25E6%2596%25B9%25E5%2590%2591%25E3%2581%2591%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s---rxV4kGc--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:GiNZA%25E5%2585%25A5%25E9%2596%2580%25EF%25BC%2592%25EF%25BC%2588%25E5%259F%25BA%25E6%259C%25AC%25E6%2593%258D%25E4%25BD%259C%25E7%25B7%25A8%25EF%25BC%2591%25EF%25BC%2589%25EF%25BC%2588%25E5%259F%25BA%25E6%259C%25AC%25E7%259A%2584%25E3%2581%25AA%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%25E3%2583%259E%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%2592%25E7%259B%25AE%25E6%258C%2587%25E3%2581%2599%25E6%2596%25B9%25E5%2590%2591%25E3%2581%2591%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/mizuiro__sakura/articles/d557ed7b766caa",
+          "author": "Mizuiro__sakura",
+          "description": "初めまして。\n水色桜（みずいろさくら）と申します。\nこの記事群では自然言語処理ライブラリGiNZAの使い方について簡単に説明していこうと思います。\n最終的には感情分析プログラムの作成まで書いていきたいと考えています。\nこの記事はGiNZAの簡単な説明と、導入方法についてです。\nまず、そもそも自然言語とは何？とお思いの方もいらっしゃるかと思います。\n「自然言語」とは「日本語」や「英語」のような普段人間が使っている言葉です。\n単に「言語」と言ってしまうとプログラミング言語を含んでいるみたいになってしまうので、対比の意味もあって、「自然言語」と言います。\n自然言語処理というのは普段人間が使う言...",
+          "link": "https://zenn.dev/mizuiro__sakura/articles/d557ed7b766caa",
+          "publishedOn": "2023-01-14T08:02:54.000Z",
+          "wordCount": 124,
+          "title": "GiNZA入門１（導入）（基本的な使い方マスターを目指す方向け）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--wz6vDoN_--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:GiNZA%25E5%2585%25A5%25E9%2596%2580%25EF%25BC%2591%25EF%25BC%2588%25E5%25B0%258E%25E5%2585%25A5%25EF%25BC%2589%25EF%25BC%2588%25E5%259F%25BA%25E6%259C%25AC%25E7%259A%2584%25E3%2581%25AA%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%25E3%2583%259E%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%2592%25E7%259B%25AE%25E6%258C%2587%25E3%2581%2599%25E6%2596%25B9%25E5%2590%2591%25E3%2581%2591%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--wz6vDoN_--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Mizuiro__sakura%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:GiNZA%25E5%2585%25A5%25E9%2596%2580%25EF%25BC%2591%25EF%25BC%2588%25E5%25B0%258E%25E5%2585%25A5%25EF%25BC%2589%25EF%25BC%2588%25E5%259F%25BA%25E6%259C%25AC%25E7%259A%2584%25E3%2581%25AA%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%25E3%2583%259E%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%2592%25E7%259B%25AE%25E6%258C%2587%25E3%2581%2599%25E6%2596%25B9%25E5%2590%2591%25E3%2581%2591%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1mcjlDdWkyaC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4NTQ0ZjZhNmYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kurokawa/articles/3c2f00872b4292",
+          "author": "kurokawa5",
+          "description": "問題\n\n 55. 混同行列の作成\n52で学習したロジスティック回帰モデルの混同行列（confusion matrix）を，学習データおよび評価データ上で作成せよ．\n\n solution55.py\nimport pandas as pd\nimport numpy as np\nimport re\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.feature_extraction.text impo...",
+          "link": "https://zenn.dev/kurokawa/articles/3c2f00872b4292",
+          "publishedOn": "2023-01-14T07:09:38.000Z",
+          "wordCount": 1164,
+          "title": "言語処理100本ノック 2020 (Rev 2) 第6章: 機械学習 55. 混同行列の作成",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--RQfdpsKx--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa5%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC6%25E7%25AB%25A0%253A%2520%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%252055.%2520%25E6%25B7%25B7%25E5%2590%258C%25E8%25A1%258C%25E5%2588%2597%25E3%2581%25AE%25E4%25BD%259C%25E6%2588%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--RQfdpsKx--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa5%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC6%25E7%25AB%25A0%253A%2520%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%252055.%2520%25E6%25B7%25B7%25E5%2590%258C%25E8%25A1%258C%25E5%2588%2597%25E3%2581%25AE%25E4%25BD%259C%25E6%2588%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kurokawa/articles/b75e40809d6ea1",
+          "author": "kurokawa5",
+          "description": "問題\n\n 54. 正解率の計測\n52で学習したロジスティック回帰モデルの正解率を，学習データおよび評価データ上で計測せよ．\n\n solution54.py\nimport pandas as pd\nimport numpy as np\nimport re\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.linear_model import LogisticRegression\nfro...",
+          "link": "https://zenn.dev/kurokawa/articles/b75e40809d6ea1",
+          "publishedOn": "2023-01-14T06:47:04.000Z",
+          "wordCount": 1084,
+          "title": "言語処理100本ノック 2020 (Rev 2) 第6章: 機械学習 54. 正解率の計測",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--hrrwTfb2--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa5%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC6%25E7%25AB%25A0%253A%2520%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%252054.%2520%25E6%25AD%25A3%25E8%25A7%25A3%25E7%258E%2587%25E3%2581%25AE%25E8%25A8%2588%25E6%25B8%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--hrrwTfb2--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa5%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC6%25E7%25AB%25A0%253A%2520%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%252054.%2520%25E6%25AD%25A3%25E8%25A7%25A3%25E7%258E%2587%25E3%2581%25AE%25E8%25A8%2588%25E6%25B8%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kurokawa/articles/2718ea47072f4e",
+          "author": "kurokawa5",
+          "description": "問題\n\n 53. 予測\n52で学習したロジスティック回帰モデルを用い，与えられた記事見出しからカテゴリとその予測確率を計算するプログラムを実装せよ．\n\n solution53.py\nimport pandas as pd\nimport numpy as np\nimport re\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.linear_model import LogisticR...",
+          "link": "https://zenn.dev/kurokawa/articles/2718ea47072f4e",
+          "publishedOn": "2023-01-14T05:47:53.000Z",
+          "wordCount": 968,
+          "title": "言語処理100本ノック 2020 (Rev 2) 第6章: 機械学習 53. 予測",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--5qvk7BEc--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa5%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC6%25E7%25AB%25A0%253A%2520%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%252053.%2520%25E4%25BA%2588%25E6%25B8%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--5qvk7BEc--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa5%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC6%25E7%25AB%25A0%253A%2520%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%252053.%2520%25E4%25BA%2588%25E6%25B8%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/web_life_ch/articles/c5ee19ba9195ba",
+          "author": "Web Life CH",
+          "description": "【６条件分岐】\nYouTube: https://youtu.be/inU4rLpBn-k\nhttps://youtu.be/inU4rLpBn-k\n今回はPythonの「条件分岐」について解説します。\nさっくりとした内容ですがJSと異なる点は以下になります。\n・「else if」がPythonだと「elif」になる\n・真偽値等は「True」「False」「None」のように頭文字が大文字になる\n・「&&」「||」は「and」「or」を使用する\n\nmain.py\n# animal = 'bird'\n\n# if animal == 'cat':\n#   print('n...",
+          "link": "https://zenn.dev/web_life_ch/articles/c5ee19ba9195ba",
+          "publishedOn": "2023-01-14T05:45:00.000Z",
+          "wordCount": 320,
+          "title": "【Python】Webで使えるPython 基礎編【６条件分岐】",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--wZ3JOz-D--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Web%2520Life%2520CH%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590Python%25E3%2580%2591Web%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%2588%25E3%2582%258BPython%2520%25E5%259F%25BA%25E7%25A4%258E%25E7%25B7%25A8%25E3%2580%2590%25EF%25BC%2596%25E6%259D%25A1%25E4%25BB%25B6%25E5%2588%2586%25E5%25B2%2590%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUl0YnZtbWNjTWFMM3dyd2x3VE5sVVZjTlhmZHEzZzF2QnJfMUJMSkJrN049czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--wZ3JOz-D--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Web%2520Life%2520CH%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590Python%25E3%2580%2591Web%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%2588%25E3%2582%258BPython%2520%25E5%259F%25BA%25E7%25A4%258E%25E7%25B7%25A8%25E3%2580%2590%25EF%25BC%2596%25E6%259D%25A1%25E4%25BB%25B6%25E5%2588%2586%25E5%25B2%2590%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUl0YnZtbWNjTWFMM3dyd2x3VE5sVVZjTlhmZHEzZzF2QnJfMUJMSkJrN049czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
+          "id": "https://zenn.dev/kurokawa/articles/4a78f7356a1465",
+          "author": "kurokawa5",
+          "description": "問題\n\n 52. 学習\n51で構築した学習データを用いて，ロジスティック回帰モデルを学習せよ．\n\n solution52.py\nimport pandas as pd\nimport numpy as np\nimport re\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.feature_extraction.text import TfidfVectorizer\nfrom sklearn.linear_model import LogisticRegression\n\ndef preprocessin...",
+          "link": "https://zenn.dev/kurokawa/articles/4a78f7356a1465",
+          "publishedOn": "2023-01-14T05:35:55.000Z",
+          "wordCount": 821,
+          "title": "言語処理100本ノック 2020 (Rev 2) 第6章: 機械学習 52. 学習",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--Z--321zB--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa5%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC6%25E7%25AB%25A0%253A%2520%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%252052.%2520%25E5%25AD%25A6%25E7%25BF%2592%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Z--321zB--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa5%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC6%25E7%25AB%25A0%253A%2520%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%252052.%2520%25E5%25AD%25A6%25E7%25BF%2592%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
+        },
+        {
           "id": "https://zenn.dev/momiji777/articles/2d40bb20d2cef9",
           "author": "momiji777",
           "description": "ライブラリをインストール\npip install folium\n\n 地図を表示\nfolium.Map()を使って地図のインスタンスを作成します。引数に地図の中心の位置(latitude, longitude)を指定します。日本の中心位置は、緯度35度、経度139度です。\nimport folium\nm = folium.Map(location=[35, 139], zoom_start=5)\nm\n\n\n マーキングする\n地図にマーカーを追加します。 add_child()メソッドを使って、Markerクラスのインスタンスを地図に追加します。\nfolium.Marker(locatio...",
@@ -5325,66 +5625,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--NSIv--Co--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:smorce%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E3%2580%2590Stable%2520Diffusion%25E3%2580%2591%25E7%2584%25A1%25E6%2596%2599Colab%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A8random%2520prompt%25E3%2581%25A7%25E7%25A9%25B6%25E6%25A5%25B5%25E3%2581%25AE%25E4%25B8%2580%25E6%259E%259A%25E3%2582%2592%25E7%2594%259F%25E6%2588%2590%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3B1ZkNkVFhLYUNuNi00RWdFTk1vV3I4NURoRXVSQW9jNi00Mm9mPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/oreilly_ota/articles/3b3075350a8074",
-          "author": "オライリーヨッシー",
-          "description": "現象\nDjangoでアプリ開発をしていアプリ開発をしており、下記のようにエンドポイントを指定しているにもかかわらず、curl http://127.0.0.1:5000/search で404が返された。\n@app.route(\"/search\", methods=['GET'])\ndef search_question():\n    result = jsonify(\n        {\n            \"search\":\"search\"\n        }\n    )\n    return result\n\n\n 原因\n下記のように、create_app関数内でエンドポイント...",
-          "link": "https://zenn.dev/oreilly_ota/articles/3b3075350a8074",
-          "publishedOn": "2022-12-16T01:31:47.000Z",
-          "wordCount": 336,
-          "title": "Djangoの__init__.pyで、URL指定してもreturnが返ってこなかった話",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--9xax-coX--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%25AA%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25A8%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25BC%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:Django%25E3%2581%25AE__init__.py%25E3%2581%25A7%25E3%2580%2581URL%25E6%258C%2587%25E5%25AE%259A%25E3%2581%2597%25E3%2581%25A6%25E3%2582%2582return%25E3%2581%258C%25E8%25BF%2594%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2593%25E3%2581%25AA%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvby5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--9xax-coX--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%25AA%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25A8%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25BC%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:Django%25E3%2581%25AE__init__.py%25E3%2581%25A7%25E3%2580%2581URL%25E6%258C%2587%25E5%25AE%259A%25E3%2581%2597%25E3%2581%25A6%25E3%2582%2582return%25E3%2581%258C%25E8%25BF%2594%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2593%25E3%2581%25AA%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvby5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/aidemy/articles/f1d3ba3c98b708",
-          "author": "Shingo Nakazawa",
-          "description": "これはAidemy Advent Calendar 2022 16日目の記事です。\nまた、本記事に掲載したコードをまとめたNotebookをGitHubにて公開しています。\n\n はじめに\nこんにちは。株式会社アイデミーデータサイエンティストの中沢(@shnakazawa_ja)です。普段は社内のデータ基盤整備、クライアント様のデータ解析、R&Dといった業務に携わっています。\n本稿ではPythonを用いたデータのクラスタリングとその先の解析について記載します。\nクラスタリングは教師なし学習の代表例として挙げられることが多い一方、その結果の可視化や続く解析、解釈についての情報は少ない...",
-          "link": "https://zenn.dev/aidemy/articles/f1d3ba3c98b708",
-          "publishedOn": "2022-12-16T00:32:19.000Z",
-          "wordCount": 3732,
-          "title": "教師なしクラスタリングのその先へ~次元削減と定量解析~",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--A3Ckueyx--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Shingo%2520Nakazawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E6%2595%2599%25E5%25B8%25AB%25E3%2581%25AA%25E3%2581%2597%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25AE%25E3%2581%259D%25E3%2581%25AE%25E5%2585%2588%25E3%2581%25B8%7E%25E6%25AC%25A1%25E5%2585%2583%25E5%2589%258A%25E6%25B8%259B%25E3%2581%25A8%25E5%25AE%259A%25E9%2587%258F%25E8%25A7%25A3%25E6%259E%2590%7E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1M0ZpRDBMTzl3ZF9sN0M0OWhDbnNCWVJfek13akk2QmVNLVJ4OUw9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--A3Ckueyx--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Shingo%2520Nakazawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E6%2595%2599%25E5%25B8%25AB%25E3%2581%25AA%25E3%2581%2597%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25AE%25E3%2581%259D%25E3%2581%25AE%25E5%2585%2588%25E3%2581%25B8%7E%25E6%25AC%25A1%25E5%2585%2583%25E5%2589%258A%25E6%25B8%259B%25E3%2581%25A8%25E5%25AE%259A%25E9%2587%258F%25E8%25A7%25A3%25E6%259E%2590%7E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1M0ZpRDBMTzl3ZF9sN0M0OWhDbnNCWVJfek13akk2QmVNLVJ4OUw9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/ibaraki/articles/bef0b43522475b",
-          "author": "いばらき",
-          "description": "Qiita 「Python Advent Calendar 2022」 18日目の記事です。\nhttps://qiita.com/advent-calendar/2022/python\nPythonにおけるポリモーフィズムの実装で、「ABC(Abstract Base Class/抽象基底クラス)とProtocol(プロトコルクラス)の違いってなんだ？」となったので、実際に試してみました。\n\n ABCとProtocolとは何か？\n\n Pythonの公式ドキュメント\nhttps://docs.python.org/ja/3/library/typing.html\n\n つかいどころ\nものすご...",
-          "link": "https://zenn.dev/ibaraki/articles/bef0b43522475b",
-          "publishedOn": "2022-12-15T15:00:00.000Z",
-          "wordCount": 1233,
-          "title": "PythonにおけるProtocol(ダックタイピング)とABC(抽象化)の違い",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--jWqqiCSL--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%2584%25E3%2581%25B0%25E3%2582%2589%25E3%2581%258D%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2591%25E3%2582%258BProtocol%2528%25E3%2583%2580%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2594%25E3%2583%25B3%25E3%2582%25B0%2529%25E3%2581%25A8ABC%2528%25E6%258A%25BD%25E8%25B1%25A1%25E5%258C%2596%2529%25E3%2581%25AE%25E9%2581%2595%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lXRjZXeUJCMTBrRDZNaV9Fa0tLQi13WFJSUC04eFlJbDV5eWljPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--jWqqiCSL--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%2584%25E3%2581%25B0%25E3%2582%2589%25E3%2581%258D%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2591%25E3%2582%258BProtocol%2528%25E3%2583%2580%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2594%25E3%2583%25B3%25E3%2582%25B0%2529%25E3%2581%25A8ABC%2528%25E6%258A%25BD%25E8%25B1%25A1%25E5%258C%2596%2529%25E3%2581%25AE%25E9%2581%2595%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lXRjZXeUJCMTBrRDZNaV9Fa0tLQi13WFJSUC04eFlJbDV5eWljPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/colum2131/articles/e178e20be6171e",
-          "author": "colum2131",
-          "description": "この記事はKaggle Advent Calendar 2022の16日目の記事です。\n\n 0.はじめに\nKaggleではShopeeやH&Mコンペなどの(e-)commerceに関連した、類似商品検索やレコメンド系のコンペが度々開催されます。\nこれらのコンペには商品名や商品画像、ユーザーの購入履歴といったデータが含まれており、商品・ユーザーベースの特徴の抽出を行う必要があります。さらにその特徴を用いて候補となる商品を並び出して、機械学習を用いて最終的に出力する商品を予測します。\n本記事では、このようなコンペの第一歩として、商品名などテキストに注目した特徴抽出をscikit-le...",
-          "link": "https://zenn.dev/colum2131/articles/e178e20be6171e",
-          "publishedOn": "2022-12-15T15:00:00.000Z",
-          "wordCount": 1973,
-          "title": "scikit-learnで5行でできる類似テキスト検索",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s---CFzZ9fh--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:colum2131%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:scikit-learn%25E3%2581%25A75%25E8%25A1%258C%25E3%2581%25A7%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E9%25A1%259E%25E4%25BC%25BC%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E6%25A4%259C%25E7%25B4%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1OZVhxclplSS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RhZDZiMjhmMmEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s---CFzZ9fh--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:colum2131%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:scikit-learn%25E3%2581%25A75%25E8%25A1%258C%25E3%2581%25A7%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E9%25A1%259E%25E4%25BC%25BC%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E6%25A4%259C%25E7%25B4%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1OZVhxclplSS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RhZDZiMjhmMmEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
         }
       ]
     }
