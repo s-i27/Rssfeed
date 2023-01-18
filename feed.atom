@@ -2,10 +2,226 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-01-17T01:38:11.495Z</updated>
+    <updated>2023-01-18T01:41:12.318Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[最強の言語モデルLUKEを固有表現抽出（NER）用にファインチューニングして公開してみた]]></title>
+        <id>https://zenn.dev/mizuiro__sakura/articles/72806b2c3bc82e</id>
+        <link href="https://zenn.dev/mizuiro__sakura/articles/72806b2c3bc82e"/>
+        <updated>2023-01-18T00:51:03.000Z</updated>
+        <summary type="html"><![CDATA[こんにちにゃんです。
+水色桜（みずいろさくら）です。
+今回はLUKEをファインチューニングして、固有表現抽出タスク（Named Entity Recognition, NER）を解くモデルを作成していきたいと思います。
+作成したモデルはこちらのサイトで公開していますので、もしよろしければ使ってみてください。
+今回も初心者でもたった２ステップ（ステップ１：必要なライブラリのダウンロード、ステップ２：コードのコピペ）で簡単に使えるようにしてあります。
+https://huggingface.co/Mizuiro-sakura/luke-japanese-base-finetuned-ner
+...]]></summary>
+        <author>
+            <name>Mizuiro__sakura</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[bottleソースコードリーディング　その１]]></title>
+        <id>https://zenn.dev/dai7/articles/04210d413e9f95</id>
+        <link href="https://zenn.dev/dai7/articles/04210d413e9f95"/>
+        <updated>2023-01-17T17:57:58.000Z</updated>
+        <summary type="html"><![CDATA[webフレームワークのソースコードリーディングの記録です。
+Djangoは量が多いのでまずは軽量フレームワークのbottleのソースコードを読んでみました。
+https://bottlepy.org/docs/dev/
+
+ サンプルコード
+from bottle import route, run, template
+
+@route('/hello/<name>')
+def index(name):
+    return template('<b>Hello {{name}}</b>!', name=name)
+
+run(host='localhost...]]></summary>
+        <author>
+            <name>dai7</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WordをTEI/XMLに変換する]]></title>
+        <id>https://zenn.dev/nakamura196/articles/044b0ecacfaa63</id>
+        <link href="https://zenn.dev/nakamura196/articles/044b0ecacfaa63"/>
+        <updated>2023-01-17T14:21:36.000Z</updated>
+        <summary type="html"><![CDATA[概要
+WordをTEI/XMLファイルに変換する機会がありました。調べてみたところ、TEIGarage ConversionなどのTEI公式のツールに加えて、以下のTEI Publisherでの変換例が見つかりました。
+https://teipublisher.com/exist/apps/tei-publisher/test/test.docx.xml
+上記の例では、Wordのスタイル情報を中心に、TEIのタグに変換しているようだったので、この方法を試してみました。なお今回は、TEI Publisherとは独立して使用することを目的として、python-docxライブラリを使用しま...]]></summary>
+        <author>
+            <name>nakamura196</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Moto と PynamoDB で DynamoDB を用いたAPIのテストを書く方法]]></title>
+        <id>https://zenn.dev/todoker/articles/2023-pynamodb-moto-testing-environment</id>
+        <link href="https://zenn.dev/todoker/articles/2023-pynamodb-moto-testing-environment"/>
+        <updated>2023-01-17T14:08:27.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは。@hayata-yamamotoです。
+DynamoDB のようなリソースを用いてプロダクトを開発する際、ローカル用にエミュレーターを起動し、そこにテスト用のデータを詰め込んで利用することがあると思います。よくあるのはテストのために docker-compose.yml を書いて、docker compose up -d しテストを実行するパターンです。しかしこれは、徐々にサービスが大きくなり関連するリソースが増えてきた時に docker-compose.yml 自体のメンテナンスがめんどくさくなってくる問題を抱えていました。
+弊社では、この問題を少しでも緩和で...]]></summary>
+        <author>
+            <name>株式会社トドケール</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DjangoでのContent-Security-Policy設定方法]]></title>
+        <id>https://zenn.dev/teasy/articles/django-csp-sample</id>
+        <link href="https://zenn.dev/teasy/articles/django-csp-sample"/>
+        <updated>2023-01-17T11:31:26.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+年末年始の休暇に 体系的に学ぶ 安全なWebアプリケーションの作り方 という本を読みました。
+その中で OWASP ZAP という脆弱性診断ツールの使い方が紹介されていました。
+そこで、以前開発したサービスに対してOWASP ZAPでの脆弱性診断を行ったところ、Medium以上のリスクが一つ見つかり、それはContent-Security-Policy(CSP)のヘッダが未設定というものでした。
+そのサービスはDjangoを使って開発したので、それ向けのCSP設定ツールであるDjango-CSPを導入し、見つけたリスクに対処しました。
+以前開発したものは TCP Expos...]]></summary>
+        <author>
+            <name>teasy</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】Webで使えるPython 基礎編【９Class 作成】]]></title>
+        <id>https://zenn.dev/web_life_ch/articles/1ad38df0348f67</id>
+        <link href="https://zenn.dev/web_life_ch/articles/1ad38df0348f67"/>
+        <updated>2023-01-17T07:09:14.000Z</updated>
+        <summary type="html"><![CDATA[【９Class 作成】
+YouTube: https://youtu.be/FutAegjvK_k
+https://youtu.be/FutAegjvK_k
+今回は前回の概要を踏まえて「クラス」の作成を行います。
+クラス名の頭文字は大文字で設定します。
+下記コードの「tama」のようにクラスを使用して作成されたものは
+「クラスのインスタンス」と呼ばれたりします。
+「Animal」のクラスを実行する際には「()」内に引数を設定することができます。
+こちらを設定する際には、クラスに「init」を設定する必要があります。
+「init」の引数には「self」とインスタンス作成時に設定された引...]]></summary>
+        <author>
+            <name>Web Life CH</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-095｜A - Something on It]]></title>
+        <id>https://zenn.dev/hyperdb/articles/e0c49690d9cc79</id>
+        <link href="https://zenn.dev/hyperdb/articles/e0c49690d9cc79"/>
+        <updated>2023-01-17T04:44:09.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-095 A - Something on It
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = list(getString())
+
+    r = 700
+    for t in s:
+        if t == 'o':
+            r += 100
+    print(r)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-095｜B - Bitter Alchemy]]></title>
+        <id>https://zenn.dev/hyperdb/articles/9d67d88392ddde</id>
+        <link href="https://zenn.dev/hyperdb/articles/9d67d88392ddde"/>
+        <updated>2023-01-17T04:44:09.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-095 B - Bitter Alchemy
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntRow(N):
+    return [int(input()) for _ in range(N)]
+
+
+def main():
+    n, x = getIntMap()
+    m = getIntRow(n)
+
+    m.sort()
+
+    c = len(m)
+    x -= sum(m)
+    c += x // m[0]
+
+    print...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rustを使って機械学習アルゴリズムを実装しPythonから呼び出す: k-meansクラスタリング]]></title>
+        <id>https://zenn.dev/skwbc/articles/rust_python_kmeans</id>
+        <link href="https://zenn.dev/skwbc/articles/rust_python_kmeans"/>
+        <updated>2023-01-17T04:33:25.000Z</updated>
+        <summary type="html"><![CDATA[概要
+最近Rustの勉強を始めたのですが、以下の2点について実際どうなんだろうと思ったので、Rustを使って機械学習アルゴリズムを実装してPythonから呼び出すということを試してみました。
+
+Pythonで実装すると遅い処理をRustで高速化できるか
+実装したアルゴリズムを簡単に並列化することが出来るか
+
+この記事では、どのように実装したかについて説明した後、Python実装とRust実装の速度を実験により比較します。
+ちなみに、前の記事の続きになりますが、この記事だけで完結するように書いてはいます。
+興味がありましたら前の記事も読んでみてください。
+
+ 記事を読むにあたり注意して...]]></summary>
+        <author>
+            <name>skwbc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Django REST frameworkを使ってAPIを作成してみる]]></title>
+        <id>https://zenn.dev/negineko/articles/837c00debde591</id>
+        <link href="https://zenn.dev/negineko/articles/837c00debde591"/>
+        <updated>2023-01-17T04:11:52.000Z</updated>
+        <summary type="html"><![CDATA[!
+この記事は書き途中です！
+
+
+ 🍀 Django REST framework
+Django REST frameworkはPythonで動作するREST APIの作成ツールです
+大元のWebアプリケーションフレームワークのDjangoを拡張したものになっています
+// TODO : REST APIについての説明
+
+ 🖥 開発環境
+
+Macbook Pro (intel)
+
+OSX 13.1
+
+
+VS Code
+
+
+ 📚 インストール
+Pythonの仮想環境を作ってそこに、Djangoのアプリケーションを作成していきます
+$ python -m venv env
+$ source ...]]></summary>
+        <author>
+            <name>negineko</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[matplotlibでの日本語表示 on AWS Lambda]]></title>
         <id>https://zenn.dev/n12dsk/articles/9e329f847755ec</id>
@@ -8804,202 +9020,6 @@ server_address = ('localhost', 8080)
 httpd = HTTPServer(server_address, BaseHTTPRequestHandle...]]></summary>
         <author>
             <name>timoneko</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonでclassを使う: 設計編(1) 関数とクラス]]></title>
-        <id>https://zenn.dev/sergicalsix/articles/2c7832353b6afa</id>
-        <link href="https://zenn.dev/sergicalsix/articles/2c7832353b6afa"/>
-        <updated>2022-12-19T12:13:38.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事は、(主に研究等で)pythonのプログラムを書く時に、どのように設計すれば良いかについて論じながら、クラスを導入する時に生じるメリットについて述べていきます。
-
- 内容
-
- 単一の処理の記述
-任意の処理Aの記述の際は、非常に簡単な処理を除けば、処理Aに対応する関数を記述すると良いです。
-関数のメリットは以下が考えられます。
-
-処理に関数名として処理に名前をつけられるため、可読性が高い
-1により余計なコメントアウトを書く必要はない
-汎用化させやすい(同じ処理を何度も書く必要がない)
-docstringで記述した関数のコメントをコードで呼べる
-処理の引数に型アシストを...]]></summary>
-        <author>
-            <name>sergicalsix</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Jax/FlaxでKaggleをやってみよう！]]></title>
-        <id>https://zenn.dev/inoichan/articles/3509d3f2e9211e</id>
-        <link href="https://zenn.dev/inoichan/articles/3509d3f2e9211e"/>
-        <updated>2022-12-19T11:24:00.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは。いのいちです。
-この記事は(の18日目の記事ですこの記事はKaggle Advent Calendr 2022の18日目の記事です。
-最近はスプラトゥーンにはまっていて毎日忙しくてあまりコンペに参加できてませんが、2023年はどんどんコンペに参加していきたいなと思っています。私はコンペに参加するときはいつも1つはこれまでやったことないことをやると決めています。そこで新しい挑戦としてJax/Flaxを使ってみようと思い至りました。私が普段参加するComputer Vison系のコンペでは主にPytorchが使用されており、TPUをぶん回すコンペでTensorflowが使われてい...]]></summary>
-        <author>
-            <name>いのいち</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[統計学] ベータ分布の期待値と分散]]></title>
-        <id>https://zenn.dev/shundeveloper/articles/b5b4002bc09f3b</id>
-        <link href="https://zenn.dev/shundeveloper/articles/b5b4002bc09f3b"/>
-        <updated>2022-12-19T11:09:02.000Z</updated>
-        <summary type="html"><![CDATA[ベルヌーイ分布や二項分布のベイズ推定の記事で, ベータ分布を扱ったので, ベータ分布についても記載します.
-
- 確率密度分布
-
-\begin{align*}
-&f(x|a,b)
-=
-B(a,b)^{-1}x^{a-1}(1-x)^{b-1}\cdots(1)
-\\
-&\text{Where,} \; B(a,b) = \int_0^1 t^{a-1}(1-t)^{b-1}\;dt
-\end{align*}
-
-
- 期待値・分散
-
- ベータ関数の性質
-期待値を求めるにはベータ分布の性質を使うと効率が良い. ベータ関数は以下の性質を持つ.
-
-B(a+1,b)=\frac{a}{...]]></summary>
-        <author>
-            <name>ShunDev</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TodoistのAPIがv9になって困っている]]></title>
-        <id>https://zenn.dev/bindeburg/articles/b516dd1ded02fb</id>
-        <link href="https://zenn.dev/bindeburg/articles/b516dd1ded02fb"/>
-        <updated>2022-12-19T10:36:29.000Z</updated>
-        <summary type="html"><![CDATA[背景
-
-TodoistのAPIがいつの間にかv9になっていた。
-
-元々使っていたスクリプトが使えなくなった。
-修正しなきゃ
-
-
-
-
- やりたいこと
-
-図書館（仙台市図書館）のOPACからBeaoutifulSoupで貸出情報を取得
-
-この部分は今回は省略
-
-
-TodoistのAPIを使って、取得した書名と返却期限をTodoistに追加したい。
-
-APIのバージョン更新で従来のものが使えなくなったので修正したい。
-
-
-
-
- やったこと
-
-まずはpipインストール
-
-pip install todoist-api-python
-
- コード
-
-from todoist_api_python...]]></summary>
-        <author>
-            <name>Yuki Lynn</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】Pytorchの物体検出アルゴリズムFaster-RCNN を用いたゲーム画面からの人物検知とその応用]]></title>
-        <id>https://zenn.dev/ganbarimasu/articles/227a8f29fff8bb</id>
-        <link href="https://zenn.dev/ganbarimasu/articles/227a8f29fff8bb"/>
-        <updated>2022-12-19T03:00:00.000Z</updated>
-        <summary type="html"><![CDATA[この記事の続きになります！よかったらぜひ読んでみてください！
-https://zenn.dev/ganbarimasu/articles/de6d046cd97572
-本記事が対象とする人：
-
-Pytorchで利用できる物体検出の学習済みモデルであるFaster-RCNN modelの使い方とその応用方法について興味のある方
-他の人の個人開発を見るのが好きな方
-前の記事の続きが気になる方
-
-!
-精度が高いモデルにはなっていないので、取り組み内容を楽しんでいただければ幸いです。
-また、汎用性が高くなさそうなコードに関しては折りたたむようにしてあります。
-出力結果などの記述で、かなりの文章量...]]></summary>
-        <author>
-            <name>yoroshiku</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AtCoder Beginner Contest 282レポート]]></title>
-        <id>https://zenn.dev/hannah/articles/20221218_001</id>
-        <link href="https://zenn.dev/hannah/articles/20221218_001"/>
-        <updated>2022-12-19T02:25:56.000Z</updated>
-        <summary type="html"><![CDATA[摘要
-ABCDの4完でした．Dまでスムーズだったのでまずまずのパフォーマンスです．
-
- ABC282
-https://atcoder.jp/contests/abc282
-
- コンテスト情報
-
-コンテスト名: HHKBプログラミングコンテスト2022 Winter(AtCoder Beginner Contest 282)
-順位: 1016th / 8407
-パフォーマンス: 1441
-レーティング: 1247 → 1268 (+21) Highest更新！
-段級位: 4 級
-コンテスト参加回数: 67
-
-
- A - Generalized ABC
-問題 / 解説
-
- A - 問題
-...]]></summary>
-        <author>
-            <name>はんな</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[超高速DataFrameライブラリー「Polars」について]]></title>
-        <id>https://zenn.dev/hiro_torii/articles/06d7e845e146ee</id>
-        <link href="https://zenn.dev/hiro_torii/articles/06d7e845e146ee"/>
-        <updated>2022-12-19T01:49:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-ここ最近、Polarsについて調べる中で色々と面白そうだと思い現在勉強中です。今回の記事では勉強内容の整理も兼ねて、Polarsの特色を紹介できればと思っています。
-!
-まだまだ勉強中かつ、日夜ライブラリーが更新されているため記載した情報に乖離があった場合はご容赦ください。
-
-
- Polarsとは
-https://www.pola.rs/
-https://github.com/pola-rs/polars/
-RustとPythonで使える[1]超高速("Blazingly fast")DataFrameライブラリー、つまりデータ解析に使えるライブラリーとなります。panda...]]></summary>
-        <author>
-            <name>hiro-torii</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[コード設計]条件分岐/早期Return・ストラテジパターン]]></title>
-        <id>https://zenn.dev/ryutaro_h/articles/e02cecca6a82df</id>
-        <link href="https://zenn.dev/ryutaro_h/articles/e02cecca6a82df"/>
-        <updated>2022-12-19T00:27:32.000Z</updated>
-        <summary type="html"><![CDATA[初めに
-コード設計について「良いコード/悪いコードで学ぶ設計入門 ―保守しやすい 成長し続けるコードの書き方」を手に取り、学んでいます。本記事はこちらを参考に書いています。
-今回は 「条件分岐」 について、アンチパターンとそれに対する対応を挙げていきます。
-
-
- 本題
-
- if文のネスト・else句(アンチパターン)
-if文のネストや、else句の活用は、コードの見通しが悪くなり、可読性低下に繋がります。数十行、数百行のコードが分岐ブロックの中に書かれていると、どこからどこまでがどの条件の時に実行されているのか、理解にとても時間がかかるようになります。
-
-(イメージ:Python)
-...]]></summary>
-        <author>
-            <name>Ryutaro</name>
         </author>
     </entry>
 </feed>
