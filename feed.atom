@@ -2,10 +2,246 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-01-19T01:43:26.419Z</updated>
+    <updated>2023-01-20T01:41:26.391Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[Python]with構文でスッキリしたある範囲の処理時間を計測する方法]]></title>
+        <id>https://zenn.dev/perlain/articles/d2451aa75819ab</id>
+        <link href="https://zenn.dev/perlain/articles/d2451aa75819ab"/>
+        <updated>2023-01-20T01:14:05.000Z</updated>
+        <summary type="html"><![CDATA[よくある方法
+まずは処理時間を計測するよく見る方法は以下のような感じでしょうか
+import time
+start = time.time()
+time.sleep(5) # 何らかの処理(関数)
+end = time.time()
+
+print(f"経過時間: {end - start:.2f} seconds")
+この方法だと、計測したい箇所が出るたびに開始の時間start = time.time()準備して
+終了の時間を減算――って面倒ですよね。見栄えもあまりよくないはずです。
+
+ @contextmanagerを使う
+しかし、これをもっとスッキリかけて汎用的に書ける方法があり...]]></summary>
+        <author>
+            <name>lain</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Inverse Kinematicsを用いたキャラクターの姿勢操作]]></title>
+        <id>https://zenn.dev/fukazaemon/articles/1eef820cfebad6</id>
+        <link href="https://zenn.dev/fukazaemon/articles/1eef820cfebad6"/>
+        <updated>2023-01-19T14:51:44.000Z</updated>
+        <summary type="html"><![CDATA[概要
+本記事ではキャラクターアニメーションにおいて重要なInverse Kinematics(IK)について紹介します。自分の学習用に執筆したため、一部間違い等が存在する可能性がございます。何かございましたらご一報いただけると幸いです。
+
+Deep Learningでキャラクターアニメーションを扱う際に、前処理・後処理用のPythonスクリプトを書いているので、foot skatingの修正用などに簡単なInverse Kinematicsアルゴリズムを書きました。この記事の3D Plotはこちらで実装しています。今後Jacobianを用いたFullbody IKなども実装予定です。...]]></summary>
+        <author>
+            <name>Fukahire</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Package] yfinanceを使ったS&P500の簡単なバックテスト（つみたて投資）]]></title>
+        <id>https://zenn.dev/takilog/articles/5f9163b293133f</id>
+        <link href="https://zenn.dev/takilog/articles/5f9163b293133f"/>
+        <updated>2023-01-19T13:29:55.000Z</updated>
+        <summary type="html"><![CDATA[TL; DR
+
+yfinanceを使ってS&P500の毎月の評価額と日本円⇔ドルの為替情報を取得した
+理想状況（手数料・税金なし）で毎月一定の日本円をS&P500に積み上げたときの評価額をプロットした
+自分で最強の資産運用バックテストを書こう
+
+
+ 背景
+Kindle版でSoft Skillsの第1版を昔読んだのですが、第2版を最近紙で入手しました。心穏やかに生活するには投資も大事だな、と思って記事と書き捨てのスクリプトを書きました。
+https://amzn.to/3CVAJAk
+資産運用の真面目な話はこちらの記事を読んでください。
+https://hayatoit...]]></summary>
+        <author>
+            <name>たきろぐ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JSONDecodeError: Expecting value: line 1 column 1 (char 0)の解決方法]]></title>
+        <id>https://zenn.dev/robes/articles/21f0d613b7c441</id>
+        <link href="https://zenn.dev/robes/articles/21f0d613b7c441"/>
+        <updated>2023-01-19T13:15:36.000Z</updated>
+        <summary type="html"><![CDATA[金融庁の電子閲覧サイトEDINETからAPIを使って、複数のJSONファイルを取得しようとした際に、次のエラーがでました。この解決方法について、記事に残します。
+JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ちなみにEDINETからJSONファイルを取得するコードはこんな感じ。
+このコードを回しているときにエラーが出たのです。
+for day in day_list:
+    url = "https://disclosure.edinet-fsa.go.jp/api/v1/documents.json"
+    p...]]></summary>
+        <author>
+            <name>osn_Lofi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Seleniumを使ってWeb操作を自動化してみた]]></title>
+        <id>https://zenn.dev/ryuuuuuu/articles/ae6ed94118c665</id>
+        <link href="https://zenn.dev/ryuuuuuu/articles/ae6ed94118c665"/>
+        <updated>2023-01-19T12:32:38.000Z</updated>
+        <summary type="html"><![CDATA[Escape from tarkovというゲームをやっているときにEFT marketというサイトにアイテム名を入れて自動的に検索させる機能を作ってみたくなったので作ってみました。
+
+ 1. Web Driverのインストール
+seleniumを使うにはchromedriver.exeをファイルになければならないのでChromeDriverにアクセスし、Chromeと同じバージョンのファイルをインストールします。
+※Chromeバージョンの確認方法は「設定」→「Chromeについて」から確認できます。
+
+ 2. Seleniumのインストール
+以下を実行しSeleniumをインストールし...]]></summary>
+        <author>
+            <name>りゅう</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonでWindowsの通知を出す]]></title>
+        <id>https://zenn.dev/shin1007/articles/dee323f5f2d053</id>
+        <link href="https://zenn.dev/shin1007/articles/dee323f5f2d053"/>
+        <updated>2023-01-19T08:34:25.000Z</updated>
+        <summary type="html"><![CDATA[Winotifyを利用しよう！
+https://github.com/versa-syahptr/winotify
+以下のような感じで、通知センターに登録されるタイプの通知を出すことができます。
+
+
+ インストール
+pip install winotify
+
+ 利用法
+
+import pathlib
+
+import winotify
+
+toast = winotify.Notification(app_id="<YOUR_APP_NAME>",
+                              icon=pathlib.Path("icon.png").reso...]]></summary>
+        <author>
+            <name>shin1007</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Django】Pythonで作るRest API【１Django インストール】]]></title>
+        <id>https://zenn.dev/web_life_ch/articles/a455e5ae68853f</id>
+        <link href="https://zenn.dev/web_life_ch/articles/a455e5ae68853f"/>
+        <updated>2023-01-19T05:04:01.000Z</updated>
+        <summary type="html"><![CDATA[【１Django インストール】
+YouTube: https://youtu.be/SXXtbxF6WDg
+https://youtu.be/SXXtbxF6WDg
+今回から「Django」を使ってRest APIを作成してきます。
+前回の基礎編で「venv」で仮想環境を作成した方は、
+そのまま同じ仮想環境を使用しても大丈夫です。
+または同じ方法で新しくプロジェクトを作成しても問題ありません。
+「Anaconda Navigator」で仮想環境を作成していて、
+「base」の環境を使用している方は、
+左下の「create」から新しく仮想環境の作成をお願いします。
+仮想環境の作成がで...]]></summary>
+        <author>
+            <name>Web Life CH</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-097｜A - Colorful Transceivers]]></title>
+        <id>https://zenn.dev/hyperdb/articles/ced10959010e17</id>
+        <link href="https://zenn.dev/hyperdb/articles/ced10959010e17"/>
+        <updated>2023-01-19T04:48:53.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-097 A - Colorful Transceivers
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b, c, d = getIntMap()
+
+    print('Yes' if abs(a - c) <= d or (abs(a - b)
+          <= d and abs(c - b) <= d) else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-097｜B - Exponential]]></title>
+        <id>https://zenn.dev/hyperdb/articles/a7db6dec39811e</id>
+        <link href="https://zenn.dev/hyperdb/articles/a7db6dec39811e"/>
+        <updated>2023-01-19T04:48:53.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-097 B - Exponential
+
+
+
+ 提出結果
+import math
+
+
+def getInt():
+    return int(input())
+
+
+def main():
+    x = getInt()
+
+    r = 0
+    if x == 1:
+        r = 1
+    else:
+        for i in range(2, int(math.pow(x, 1 / 2)) + 1):
+            y = i ** 2
+            r = y if y > r else r
+     ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[エンジニア向けのニュースアプリを作った【個人開発】]]></title>
+        <id>https://zenn.dev/kimurayut/articles/5d270dcfcd9053</id>
+        <link href="https://zenn.dev/kimurayut/articles/5d270dcfcd9053"/>
+        <updated>2023-01-19T03:45:12.000Z</updated>
+        <summary type="html"><![CDATA[要約
+
+エンジニア向けのニュースアプリをFlutterで作った。
+毎日Zenn、Qiita、noteやそのほか海外のテックメディアを開くのが面倒。
+RSSフィードで登録していくのもいいが面倒だし、時に不要な情報もある。
+個人に最適化されたニュースを提供し、エンジニアの日々の情報収集を効率化させることを目的とした個人開発アプリを作ることにした。
+スマホアプリ開発言語はFlutter,バックエンド言語はPython、インフラはGCPのCloud FunctionsとFirebaseを利用。
+
+
+ 背景と課題
+わたしたちエンジニアは毎日チェックすべき情報が多すぎる。毎日Zenn、Qiita...]]></summary>
+        <author>
+            <name>きむら</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DiscordとLINEをPython+FastAPI+Dockerで連携させる【その1】DiscordからLINEへテキストメッセージ]]></title>
+        <id>https://zenn.dev/maguro_alterna/articles/f5a52f1cb8b1e7</id>
+        <link href="https://zenn.dev/maguro_alterna/articles/f5a52f1cb8b1e7"/>
+        <updated>2023-01-19T01:48:03.000Z</updated>
+        <summary type="html"><![CDATA[挨拶
+qiitaにも同様の投稿をしています。
+https://qiita.com/maguro-alternative/items/6f57d4cc6c9923ba6a1d
+こんにちは。マグロです。
+以前記事にしたものの続編です。
+https://qiita.com/maguro-alternative/items/4a47de7725b5ee84b230
+LINE Notify対応版が完成したので、記事にします。
+https://github.com/maguro-alternative/discordfast
+順を追って解説できるように、記事をいくつか分割して解説します。
+今回は...]]></summary>
+        <author>
+            <name>マグロ</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[JPCOARスキーマを用いたxmlファイルのバリデーション]]></title>
         <id>https://zenn.dev/nakamura196/articles/3c91cd443e084c</id>
@@ -8255,306 +8491,6 @@ def main(event: dict, context) -> str:
 	# context.get_remaining_time_i...]]></summary>
         <author>
             <name>neginasubi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonガール① 環境構築・データ型・制御構文編]]></title>
-        <id>https://zenn.dev/drip200/books/2a23e1dcaeef37</id>
-        <link href="https://zenn.dev/drip200/books/2a23e1dcaeef37"/>
-        <updated>2022-12-21T12:14:37.000Z</updated>
-        <summary type="html"><![CDATA[プログラミング言語「Python」を対話形式で楽しくテンポよく学べる入門書。
-
-シンプルで学びやすい言語Python。そんなPythonを楽しくテンポよく学べるのが本書です。ふたりの女性エンジニアの対話を読みながらPythonの基本を学べます。他の言語とは異なるPython特有の仕様に関する疑問にも、Pythonの歴史と思想を踏まえてお答えします。
-
-最新のPyhtonに対応しており、Python3.5から導入された型ヒントについてもサポート。静的型付け言語の経験者でも違和感なく扱えるよう、できる限り型を明記したサンプルコードを用意して説明しています。
-
-本作は三部作構成です。本書は第一部である「環境構築・データ型・制御構文編」です。開発環境構築からはじまり、intやstrなどの組み込み型、if文やfor文などの制御構文までの範囲を学ぶことができます。
-
-★2022年11月01日 第1版発行/173ページ/PDFフォーマット
-★ご購入前に無料サンプルをご覧いただけます。「無料サンプル」のボタンからダウンロードしてください。
-こんな方におすすめ！
-🧑‍🎓大学でＣ言語やFORTRANを学んだことがあるが、仕事や研究のためにPythonを使う方
-
-👨‍💻JavaやPHP、Rubyなどでバックエンドを実装していたが、Pythonで実装することになった方
-
-👩‍💻フロントエンドでJavaScriptやTypeScriptを書いていたが、バックエンドでPythonの実装をすることになった方
-
-🧑‍🔬R言語でデータ分析をしていたがPythonでのデータ分析をはじめたい方
-
-🙍‍♂️Pythonを他の入門書や公式チュートリアルで勉強したが物足りない方
-
-👨‍💼仕事でPython案件に関わることになったが、Pythonの経験がない方
-
-【読者の感想】
-Pythonの入門書という位置付けだけど読み物としても面白い」
-
-「読みやすい！続編まってます！」
-
-「対話形式になっているからかサクサク読める」
-
-【推薦文】
-こんなにサクサク読める技術書は見たことがない。技術書は積読派だけどこれはすぐに読み終えた。]]></summary>
-        <author>
-            <name>どりっぷ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[HATETRISのPythonエミュレータを作ってみた]]></title>
-        <id>https://zenn.dev/decfrr/articles/1c9d7be7346413</id>
-        <link href="https://zenn.dev/decfrr/articles/1c9d7be7346413"/>
-        <updated>2022-12-21T11:58:09.000Z</updated>
-        <summary type="html"><![CDATA[この記事はEEIC Advent Calendar 2022 21日目の記事として作成しました
-
- はじめに
-こんにちは。EEIC2022の Hirota (@decfrr) です。Advent Calender主催のくらげ君に何か記事を書くように言われたので記事を書きます。
-後期にやったことで何か記事を書こう、とぼんやりと考えていました。後期学生実験で取り扱った内容で何か記事を書けば良いかなと思っていましたが、第1,3期の実験で取り扱った内容は公開しづらい内容で、第2期の人工知能演習で作成した成果物は1位を取れなかったのでボツになりました。（成果物は ここ にあります。）
-そこで、人工...]]></summary>
-        <author>
-            <name>decfrr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[面倒な双一次変換の計算をPythonに任せてみる]]></title>
-        <id>https://zenn.dev/reyura/articles/e338629912fb5b</id>
-        <link href="https://zenn.dev/reyura/articles/e338629912fb5b"/>
-        <updated>2022-12-21T11:13:23.000Z</updated>
-        <summary type="html"><![CDATA[上の写真の系について，運動方程式は，
- M \ddot{x} + B \dot{x} + K x = f 
-ですね．ではこの物体を人間が握るものとして，アドミタンス提示型のインピーダンス制御をかけるましょう．つまり，アクチュエータを用いて任意のM,B,Kを表現したいのです．入力をF(s)，出力を\dot{X}(s)とすると，伝達関数Gは
- G = \frac{s}{Ms^2 + Bs + K} 
-という2型になります．(本当は剛性いらないので1型にできるが...)
-そろそろ本題に入りますが，目標速度\dot{x}はどうやって計算しますか? 僕は双一次変換を使います．今回の例の正解は，
-...]]></summary>
-        <author>
-            <name>yura</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Maya】Pythonでアニメーションベイクを実行するとキーが一致しなくなる]]></title>
-        <id>https://zenn.dev/khrtz/articles/3c1e61d7979283</id>
-        <link href="https://zenn.dev/khrtz/articles/3c1e61d7979283"/>
-        <updated>2022-12-21T11:10:19.000Z</updated>
-        <summary type="html"><![CDATA[スクリプトでベイクした際にモーションがズレる
-cmds.bakeResultsを使ってベイクした際にモーションがガクガクしたりキーがおかしくなることがあって解決するために検証したことをまとめました。このAPIがちょっと癖があって何も考えず使えるものではなさそうです。Mayaのメニューからベイクした際には問題ないのですが。
-
- 環境
-Maya2020.4 Python2.7
-
- 実装方法
-すでに手動でベイクして調整している場合は現在実行しているコマンドを確認します。
-これをスクリプトで実現するようにします。
-bakeResults -simulation true -t "0:254"...]]></summary>
-        <author>
-            <name>へるつ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[大学の研究室でClearMLをホストして研究を効率化する]]></title>
-        <id>https://zenn.dev/siy1121/articles/5f44bcfb65ca10</id>
-        <link href="https://zenn.dev/siy1121/articles/5f44bcfb65ca10"/>
-        <updated>2022-12-21T10:00:00.000Z</updated>
-        <summary type="html"><![CDATA[!
-この記事は MLOps Advent Calendar 2022 21日目の記事です。
-
-
- 要約
-大学の研究室でClearMLを導入して実験記録やデータセットの管理を自動化した結果、
-研究の本質的な作業に使える時間が増えたよという話です。
-単にMLOps導入の話であれば既に多くの知見がありますが、それほど規模が大きくない大学の研究室でMLOpsツールを活用する一つの事例として参考になれば幸いです。
-（特に自分の研究室でこういったツールを使ってみたいけど、周りが興味なくて導入に踏み切れない同士がいたら参考にしてください。）
-
- はじめに
-zennでは初めまして、SIY1121です。
-...]]></summary>
-        <author>
-            <name>siy1121</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Unity】Unexpected stdin とエラーが出てビルドできない時の対処法メモ]]></title>
-        <id>https://zenn.dev/harusaki_32/articles/803de627440089</id>
-        <link href="https://zenn.dev/harusaki_32/articles/803de627440089"/>
-        <updated>2022-12-21T08:07:59.000Z</updated>
-        <summary type="html"><![CDATA[結論
-パッケージのアップデートでビルドが通るようになりました
-
-
- 環境
-
-MacBook Air M2 2022
-
-Ventura 13.1
-
-Unity 2021.3.15
-
-
-
-
-
-
- エラー内容
-Internal build system error. Backend exited with code 2.
-tundra: error: Unexpected stdin
-※一部省略しています
-
- 先人調査
-どうやらPython2がmacOSから削除されたことが原因のよう。
-皆さん Firebase SDK のアップデートで対応されているみたいですが、今回問題となっているプロジ...]]></summary>
-        <author>
-            <name>harusaki-32</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCorder］ABC-052｜A  Two Rectangles]]></title>
-        <id>https://zenn.dev/hyperdb/articles/716d546e63da15</id>
-        <link href="https://zenn.dev/hyperdb/articles/716d546e63da15"/>
-        <updated>2022-12-21T05:45:03.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-052 A - Two Rectangles
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b, c, d = getIntMap()
-
-    print(a * b if a * b >= c * d else c * d)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCorder］ABC-052｜B Increment Decrement]]></title>
-        <id>https://zenn.dev/hyperdb/articles/6d08d3e6814f57</id>
-        <link href="https://zenn.dev/hyperdb/articles/6d08d3e6814f57"/>
-        <updated>2022-12-21T05:45:03.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-052 B - Increment Decrement
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def getInt():
-    return int(input())
-
-
-def main():
-    n = getInt()
-    buf = list(getString())
-
-    x = 0
-    m = 0
-    for s in buf:
-        x = x + (1 if s == 'I' else - 1)
-        m = x if x > m else ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[rustでデータ分析100本ノックをやってみたら、めっちゃ書きやすかった話【Polars】]]></title>
-        <id>https://zenn.dev/hagakun_dev/articles/5d50adb928d902</id>
-        <link href="https://zenn.dev/hagakun_dev/articles/5d50adb928d902"/>
-        <updated>2022-12-20T22:03:00.000Z</updated>
-        <summary type="html"><![CDATA[rustでデータ分析100本ノックをやってみたら、めっちゃ書きやすかった話【Polars】
-
- まとめ
-
-rustのPolarsは、思ったよりもずっと直感的な書き味でイイ👍
-pandasよりも早い（ブレイジングファスト！）のでイイ👍
-ワケあってpython(pandas)が使えない環境でも使えてイイ👍
-
-
- 対象読者
-
-rust初心者～中級者
-とりあえずrustでデータ分析をしてみたい方
-python(pandas)を使わずにデータ分析をしてみたい方
-
-
- 対象でない読者
-
-rustに慣れていて、たくさんのexampleは必要ない方
-パフォーマンスを最高にするために、Polarsを学...]]></summary>
-        <author>
-            <name>はがくん@薬剤師のなかではコード書くの好き</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[motoでATSエンドポイントへのアクセスをモックできるか？]]></title>
-        <id>https://zenn.dev/nkty/articles/1c6a2b9a9cbcaf</id>
-        <link href="https://zenn.dev/nkty/articles/1c6a2b9a9cbcaf"/>
-        <updated>2022-12-20T14:33:43.000Z</updated>
-        <summary type="html"><![CDATA[結論：たぶん無理だと思います。テストコードをうまく書くのが良さそうです。（もし何か手段があれば教えて下さい）
-以下、やりたかったことと、その背景、妥協策を書きます。
-
- やりたかったこと
-やりたかったことは、ATSエンドポイントでAWS IoTやShadowにアクセスするPythonアプリを、motoでテストしたい、ということです。
-
- 背景
-
- certifiの更新をせざるを得なくなった
-Pythonアプリなら大抵、boto3というモジュールを使うと思いますが、boto3をインストールすると、内部でcertifiというモジュールもインストールされます。certifiは、Mozillaが...]]></summary>
-        <author>
-            <name>nkty</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Selenium4に関する雑多なメモ]]></title>
-        <id>https://zenn.dev/nmasato/articles/f54b172c1b6b07</id>
-        <link href="https://zenn.dev/nmasato/articles/f54b172c1b6b07"/>
-        <updated>2022-12-20T13:51:50.000Z</updated>
-        <summary type="html"><![CDATA[参考リンク
-
-
-
-内容
-リンク
-
-
-
-
-Seleniumブラウザー自動化プロジェクト
-https://www.selenium.dev/ja/
-
-
-Selenium with Python
-https://selenium-python.readthedocs.io/
-
-
-XPathの構文
-https://learn.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100)?redirectedfrom=MSDN
-
-
-
-
- ライブラリのインポート
-
-
-
-項目
-コマンド
-
-
-
-
-we...]]></summary>
-        <author>
-            <name>nmasato</name>
         </author>
     </entry>
 </feed>
