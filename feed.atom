@@ -2,10 +2,214 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-01-24T01:39:57.814Z</updated>
+    <updated>2023-01-25T01:36:34.460Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[1114. Print in Order]]></title>
+        <id>https://zenn.dev/rururu/articles/97b060f56d0a32</id>
+        <link href="https://zenn.dev/rururu/articles/97b060f56d0a32"/>
+        <updated>2023-01-24T15:08:06.000Z</updated>
+        <summary type="html"><![CDATA[説明
+
+ 問題
+
+https://leetcode.com/problems/print-in-order/
+
+全てが間違っているかもしれない説明です。
+ざっくり回答コード
+https://github.com/Runacy/public-anything/blob/main/algorythm/print_in_order.py
+デバッグしたかったのでprintしています。
+参考にする時は、printをぬいてね。
+さて、これを実行すると、次のような順序で実行されます。
+1
+2
+3
+4
+5
+8
+11
+6
+7
+8
+9
+10
+12
+13
+
+ 1~4
+def __init__(self):...]]></summary>
+        <author>
+            <name>Runa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Flaskで複数のフォームからPOSTで受けたいとき]]></title>
+        <id>https://zenn.dev/masaru21/articles/1e4bd9d6998b8f</id>
+        <link href="https://zenn.dev/masaru21/articles/1e4bd9d6998b8f"/>
+        <updated>2023-01-24T14:40:59.000Z</updated>
+        <summary type="html"><![CDATA[pythonとflaskで書いたウェブアプリでエラーが出たので、修正作業を続けています。
+その中で、複数のページに設定したフォームからPOSTで送ってきたデータを受け取ることが思うようにできなかったのです。
+ChatGPTに、コードの確認をしてもらったことで、意図した通りにデータの受け取りが出来るようになりました。
+私のようにFlaskで複数のフォームからのデータの受け取りに悩んでいる人が居たら、役立てて頂けたらと思い記事に書きました。
+以下ChatGPTの回答を原文のまま掲載します。
+This code is a Flask application that has three rou...]]></summary>
+        <author>
+            <name>lonely_creator_m</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[冗長な書き方のコードをChatGPTが修正してくれた]]></title>
+        <id>https://zenn.dev/masaru21/articles/4c9004202f7c80</id>
+        <link href="https://zenn.dev/masaru21/articles/4c9004202f7c80"/>
+        <updated>2023-01-24T14:24:43.000Z</updated>
+        <summary type="html"><![CDATA[恥ずかしい話なのですが、コードをよく考えずに書いてしまっていました。
+pythonでflaskを使って書いたコードですが、ChatGPTに冗長なコードと言われてしまいました。
+こちらが、元のコードです。
+{% extends 'base.html' %} {% block head %}
+<title>画数調べ</title>
+<script type="text/javascript" src="/static/js/hantei.js"></script>
+{% endblock %} 
+{% block content %}
+<...]]></summary>
+        <author>
+            <name>lonely_creator_m</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[mocopiの通信内容を解析してみた Vol.02]]></title>
+        <id>https://zenn.dev/toyoshimorioka/articles/761fe45ebe4802</id>
+        <link href="https://zenn.dev/toyoshimorioka/articles/761fe45ebe4802"/>
+        <updated>2023-01-24T13:13:41.000Z</updated>
+        <summary type="html"><![CDATA[前回書いた「mocopiの通信内容を分析してみた Vol.01」の続きです。
+前回の内容でクォータニオン（XYZW）とポジションのXYZの7つの情報をボーンの数、27個分メッセージからパースしてシリアライズするところまでできました。
+
+ ボーンの親子関係
+mocopiの開発サイトによると、各IDのボーンの位置は以下のようになっています。
+
+一方、mocopiからのデータは見ている限り、いくら動いてもroot以外のポジションのXYZは殆ど変化しません。恐らく各ボーンに親子関係が作られており、親との差分が主に回転情報に入っていると考えられます。
+色々解析した結果、mocopiのボーンの親子関...]]></summary>
+        <author>
+            <name>moriokatoyoshi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Django Pythonanywhereでmediaファイルを表示する]]></title>
+        <id>https://zenn.dev/taksnr/articles/67fd6f4c7a260e</id>
+        <link href="https://zenn.dev/taksnr/articles/67fd6f4c7a260e"/>
+        <updated>2023-01-24T10:54:05.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Djangoで本番環境に移行する際、mediaファイルにエラーが出た同志はたくさんいるのではないだろうか。ここではpythonanywhereでdjangoを使う際に私が活用した外部ツールを紹介する。
+
+ Debug=Falseではmediaファイルが表示されない
+DEBUG=True と設定すると、本来Webサーバーを経由してstaticやmediaのファイルを読み込むところをdjangoアプリ内のstaticとmediaを見に行くようになっている。しかし、Debug=Falseになるとこの設定は無効になるためパスを繋げてあげないといけない。
+公式ドキュメント
+そこで簡単...]]></summary>
+        <author>
+            <name>taksnr</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[オープンソースのChatRWKVを試してみた]]></title>
+        <id>https://zenn.dev/masaru21/articles/1b587787067f61</id>
+        <link href="https://zenn.dev/masaru21/articles/1b587787067f61"/>
+        <updated>2023-01-24T06:16:21.000Z</updated>
+        <summary type="html"><![CDATA[先日この記事を知りました。
+https://gigazine.net/news/20230123-chatrwkv-chatgpt/
+そしてGoogle Colab（Colaboratory）で、試してみました。
+こちらをフォークして試してほしいと書いてあったので、試してみました。
+https://github.com/harrisonvanderbyl/rwkv_chatbot
+私のフォークは、こちらです。
+https://github.com/miracle777/rwkv_chatbot
+
+ クローンを作りました。
+!git clone https://github.com/mir...]]></summary>
+        <author>
+            <name>lonely_creator_m</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-104｜B - AcCepted]]></title>
+        <id>https://zenn.dev/hyperdb/articles/5751e89a0d54de</id>
+        <link href="https://zenn.dev/hyperdb/articles/5751e89a0d54de"/>
+        <updated>2023-01-24T04:56:01.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-104 B - AcCepted
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = getString()
+
+    r = True
+    if s[0] != 'A':
+        r = False
+    elif s[2:-1].count('C') != 1:
+        r = False
+    elif not (s.replace('A', '').replace('C', '')).islower():
+        r = False
+   ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-104｜A - Rated for Me]]></title>
+        <id>https://zenn.dev/hyperdb/articles/0c3e760b38039e</id>
+        <link href="https://zenn.dev/hyperdb/articles/0c3e760b38039e"/>
+        <updated>2023-01-24T04:56:01.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-104 A - Rated for Me
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    r = getInt()
+
+    print('ABC' if r < 1200 else 'ARC' if r < 2800 else 'AGC')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Django】Pythonで作るRest API【６ダッシュボードデータ表示】]]></title>
+        <id>https://zenn.dev/web_life_ch/articles/4a301b77bdd824</id>
+        <link href="https://zenn.dev/web_life_ch/articles/4a301b77bdd824"/>
+        <updated>2023-01-24T04:55:51.000Z</updated>
+        <summary type="html"><![CDATA[【６ダッシュボードデータ表示】
+YouTube: hhttps://youtu.be/fNVAZMDJq7I
+https://youtu.be/fNVAZMDJq7I
+今回は作成した「Post」のモデルをダッシュボードで
+表示できるように設定を行います。
+まずは「posts」-> 「admin.py」の設定を行います。
+
+myapp/posts/admin.py
+from django.contrib import admin
+from .models import Post
+
+# Register your models here.
+admin.site.register(P...]]></summary>
+        <author>
+            <name>Web Life CH</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[競技プログラミングの鉄則　アルゴリズムと思考力を高める77の技術をpythonで解いていく 第2章]]></title>
         <id>https://zenn.dev/omusan/articles/cf4b3a320bdc30</id>
@@ -8136,181 +8340,6 @@ https://peps.python.org/pep-0557/
 https://qiita.com/m...]]></summary>
         <author>
             <name>karaage0703</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hubspotのカスタムコードを使って期日を指定したタスクを作る]]></title>
-        <id>https://zenn.dev/readyfor_blog/articles/12aed242e8e8b4</id>
-        <link href="https://zenn.dev/readyfor_blog/articles/12aed242e8e8b4"/>
-        <updated>2022-12-26T13:00:28.000Z</updated>
-        <summary type="html"><![CDATA[この記事で分かること
-Hubspotではワークフローを使うと「タスク」を自動的に作ることができます。しかしこの機能を使っても期日の設定はこの2パターンしか存在しません。
-
-即時
-oo日後
-
-
-一方でタスクの期日には、これらの日付を使いたいという要望がしばしばありました。ここではカスタムコードを使ってこれを実現する方法をまとめます。
-
-カレンダーの特定の日付を指定する
-オブジェクトのプロパティに入れた日付
-
-
- 必要なこと
-
-
-Operations Hub Professional以上の契約
-あった方がいいこと
-
-
-カスタム コード ワークフロー アクション のスキル
-
-【新機能】カス...]]></summary>
-        <author>
-            <name>Shohei Urano</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[大学数学] マクローリン展開の可視化]]></title>
-        <id>https://zenn.dev/shundeveloper/articles/639b05f3a45181</id>
-        <link href="https://zenn.dev/shundeveloper/articles/639b05f3a45181"/>
-        <updated>2022-12-26T11:13:28.000Z</updated>
-        <summary type="html"><![CDATA[概要
-無限微分可能な関数 f(x) について, 多くの場合下記が成立する.
-
-f(x)=\sum_{k=0}^\infty f^{(k)}(0)\frac{x^k}{k!}
-
-ただし, f^{(k)}(\cdot) はfのk階微分である. この式はテイラー展開を a=0 を代入すれば求められる.
-以前下記の記事を書いていた時に, よく使う式だがどれぐらい近似できているか考えたことがないなと思い立ったのでPythonを用いて描画し, 検証することにした.
-[統計学] ポアソン分布の期待値, 分散, 積率母関数, 最尤推定, 可視化
-
- よく用いられる関数のマクローリン展開
-せっかくなの...]]></summary>
-        <author>
-            <name>ShunDev</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyTorch3D入門]]></title>
-        <id>https://zenn.dev/k_s/articles/91ae8c42e9fc6a</id>
-        <link href="https://zenn.dev/k_s/articles/91ae8c42e9fc6a"/>
-        <updated>2022-12-26T07:04:19.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-ほぼ横浜の民 Advent Calendar 2022の2022年12月26日の記事です。
-近年Computer Visionと深層学習は切り離せない関係にありますね。
-最近注目を集めている3Dに関する技術[1]でも深層学習の活用が発展しています。
-というわけで、3D Computer Visionで深層学習を活用する手段であるPyTorch3Dについて、公式のチュートリアルをなぞりながら雰囲気を掴んでみようと思います。
-※「3D Computer Visionで深層学習の技術を活用する手段」は他にも多くあり、点群DNNではPyTorch Geometricが、アカデミアの...]]></summary>
-        <author>
-            <name>k_s</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[二分探索（binary search）のサンプル（Python3）]]></title>
-        <id>https://zenn.dev/yutabeee/articles/e2b9557981e62c</id>
-        <link href="https://zenn.dev/yutabeee/articles/e2b9557981e62c"/>
-        <updated>2022-12-26T06:12:19.000Z</updated>
-        <summary type="html"><![CDATA[プログラミング初心者の備忘録ですです。
-
- 二分探索（binary search)とは
-二分探索とは、データ検索アルゴリズムの一つで、ソート（整列）済みのデータ群の探索範囲を半分に絞り込むを操作を繰り返すことで高速に探索を行う手法。
-https://e-words.jp/w/二分探索.html
-
- Python3による二分探索の例
-大きさnの数列Aにkの値が存在すればTrueなければFalseを返すbinary_search関数。
-
-binary_search1.py
-def binary_search(A, n, k):
-    left, right = 0, n - 1
-    w...]]></summary>
-        <author>
-            <name>yutabeeee</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DeadlineのRezサポートについて調査]]></title>
-        <id>https://zenn.dev/hsuzuki_gcs/articles/b5cc341d0dc792</id>
-        <link href="https://zenn.dev/hsuzuki_gcs/articles/b5cc341d0dc792"/>
-        <updated>2022-12-26T05:55:54.000Z</updated>
-        <summary type="html"><![CDATA[DeadlineのRez対応
-Deadlineは10.2.0.10リリースでRezへのサポートを発表したため、調べてみます。
-
- 課題
-Rezによる環境構築をベースとするパイプラインでは、作業者はRez環境で作業を行い、レンダーファームを使用する場合はRez環境内からジョブを送信します。
-ジョブがレンダーマシン中で実行される際には、同じRez環境を構成して、環境変数の設定やプラグインの読み込みなどが行われた状態でジョブが行されるようになってほしいです。
-
- これまでの方法
-今までは、使用者は各々の方法でDeadlineにRezを統合する実装を施す必要がありました。
-実装の方法はいくつ...]]></summary>
-        <author>
-            <name>hsuzuki_gcs</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[高速なPythonの静的コード解析ツールを作った話]]></title>
-        <id>https://zenn.dev/mtshiba/articles/2848e416e4bcca</id>
-        <link href="https://zenn.dev/mtshiba/articles/2848e416e4bcca"/>
-        <updated>2022-12-26T04:02:21.000Z</updated>
-        <summary type="html"><![CDATA[TL;DR
-pylyzerというPython向けの静的コード解析ツールを開発した。
-https://github.com/mtshiba/pylyzer
-pylyzerは既存の静的解析ツール(e.g. pytype, pyright)よりも細かいコードの欠陥を指摘でき、エラー表示が丁寧であり、更に高速である。コードによっては100倍以上速く検査できた。
-
-pylyzerはcargo(Rustのパッケージマネージャ)がインストールされている場合は以下のコマンドでインストール出来る。
-cargo install pylyzer
-pipでもインストール出来るが、現時点ではこの場合、標準ライ...]]></summary>
-        <author>
-            <name>shiba</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[シュミレータ上のmycobotをPythonで動かしてみた]]></title>
-        <id>https://zenn.dev/kmiura55/articles/mycobot-sim-python</id>
-        <link href="https://zenn.dev/kmiura55/articles/mycobot-sim-python"/>
-        <updated>2022-12-25T16:58:00.000Z</updated>
-        <summary type="html"><![CDATA[この記事は ROS Advent Calendar 202217日目の記事です。
-前からmycobotがすごく気になってしょうがないです。
-執筆時点(2022年12月)にはスイッチサイエンスさんでセールで安くなっていたので本当に買うかどうか悩ましいですね。
-というわけでまずは手軽にイメージをつかむためにmycobotのシュミレーターを動かしてみたいと思います。
-
- 動作環境
-
-Ubuntu 20.04
-ROS Noetic
-
-
- とりあえず動かす
-
- ワークスペースの用意
-まずは以下のコマンドでワークスペースを用意します
-mkdir -p ~/catkin_ws/src
-cd ~/cat...]]></summary>
-        <author>
-            <name>KMiura</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[gunicornとflaskによるDockerでの開発]]></title>
-        <id>https://zenn.dev/4kzknt/articles/1baf245b3caca8</id>
-        <link href="https://zenn.dev/4kzknt/articles/1baf245b3caca8"/>
-        <updated>2022-12-25T14:41:32.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-クラウドサービスでコンテナーの検証をすることが多くその際に作ったものを備忘録として残しておきます。
-そのため、flask アプリの方の内容は薄いです。あくまでもコンテナーで使用するために作成したものなので、Hello worldのみとなっています。
-
- 環境
-ローカル環境: Linux(WSL)
-Python 3.10.9
-Docker version 20.10.21
-
- ディレクトリ
-最終的に作成するディレクトリ構成は以下のようになります。
-project
- ├── src 
- ├── Dockerfile 
- └── requirements.txt # これはなくて...]]></summary>
-        <author>
-            <name>4kzknt</name>
         </author>
     </entry>
 </feed>
