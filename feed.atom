@@ -2,10 +2,226 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-01-28T01:40:45.497Z</updated>
+    <updated>2023-01-29T01:44:41.857Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[1/22~1/27で技術的にやったこと]]></title>
+        <id>https://zenn.dev/zi_matsu/articles/f92fde515b2b60</id>
+        <link href="https://zenn.dev/zi_matsu/articles/f92fde515b2b60"/>
+        <updated>2023-01-29T00:35:56.000Z</updated>
+        <summary type="html"><![CDATA[s3とeventbridgeって同じじゃね？どっちがいいんだ？
+結局どちらもイベントの重複は発生するみたい・・・
+https://dev.classmethod.jp/articles/s3-event-notification-vs-eventbridge-event-processing-overflow-rate-2/
+
+ そのほかでやったこと
+案件の調査系と軽い修正しかやっていないので特に技術的なことはなし]]></summary>
+        <author>
+            <name>Matsuzaki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DiscordとLINEをPython+FastAPI+Dockerで連携させる【その2】LINEからDiscordへテキストメッセージ]]></title>
+        <id>https://zenn.dev/maguro_alterna/articles/65848d6f96ed30</id>
+        <link href="https://zenn.dev/maguro_alterna/articles/65848d6f96ed30"/>
+        <updated>2023-01-28T23:43:59.000Z</updated>
+        <summary type="html"><![CDATA[挨拶
+こんにちは。マグロです。
+前回の続きとなります。
+https://zenn.dev/maguro_alterna/articles/f5a52f1cb8b1e7
+今回はLINEからDiscordへテキストメッセージを送れるようにします。
+
+ 設計
+LINEBotはメッセージを受け取った場合、Developerサイトで設定したWebHookに内容が送信されます。
+そのためFastAPIでサーバーを立ち上げ、WebHookを設定します。
+しかしここで一つ問題があります。
+そこからどうやってDiscordに送る？？
+Discord.pyやPycordを使って送ればいいと思いますが、...]]></summary>
+        <author>
+            <name>マグロ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Zulipでデイリーログ]]></title>
+        <id>https://zenn.dev/mebiusbox/articles/99c21aed33b344</id>
+        <link href="https://zenn.dev/mebiusbox/articles/99c21aed33b344"/>
+        <updated>2023-01-28T16:43:59.000Z</updated>
+        <summary type="html"><![CDATA[Zulip はオープンソースのチャットツールです．
+https://zulip.com/
+ZulipはSlackライクですが、 チャネル に相当する ストリーム の他に、Zulipには トピック があります．トピックがあるとディスカッションが明確になり、結論に辿りやすくなると思っています．Redditや2ちゃんねるのようにカテゴリ＋スレッドがストリーム＋トピックのようになっています．例えば、Rustの日本語コミュニティではZulipを使っていますが、閲覧するだけなら掲示板のように見ることができます．
+https://rust-lang-jp.zulipchat.com/
+今回はZulip...]]></summary>
+        <author>
+            <name>mebiusbox</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LightGBMのcallbacksを使う（early_stopping_roundsとverbose）]]></title>
+        <id>https://zenn.dev/nishimoto/articles/dae925f50dde2a</id>
+        <link href="https://zenn.dev/nishimoto/articles/dae925f50dde2a"/>
+        <updated>2023-01-28T10:01:07.000Z</updated>
+        <summary type="html"><![CDATA[サマリー
+LightGBMのcallbacksを使えWarningに対応した。
+今回はearly_stopping_roundsとverboseのみ。
+結論として、lgbの学習中に以下のoptionを与えてあげればOK
+callbacks=[
+    lgb.early_stopping(stopping_rounds=50, verbose=True),
+    lgb.log_evaluation(100),
+],
+公式Docsは以下
+https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.early_stoppi...]]></summary>
+        <author>
+            <name>nishimoto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[競プロ備忘録：2進数を10進数に変換する]]></title>
+        <id>https://zenn.dev/pienthon/articles/e8390314595187</id>
+        <link href="https://zenn.dev/pienthon/articles/e8390314595187"/>
+        <updated>2023-01-28T08:38:59.000Z</updated>
+        <summary type="html"><![CDATA[1. 10進数に変換する計算を紙に書く
+i(for文で使うi)と式の対応は具体例を考えながら書きます。
+
+
+ 完成
+N = input()
+
+Answer = 0
+len = int(len(N))
+for i in range(len):
+    Answer += int(N[len-i-1]) * (2 ** i)
+
+print(Answer)]]></summary>
+        <author>
+            <name>にゃーん(Pienthon)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[BERTモデルとファインチューニング]]></title>
+        <id>https://zenn.dev/yosuke00/articles/9d9d405e164198</id>
+        <link href="https://zenn.dev/yosuke00/articles/9d9d405e164198"/>
+        <updated>2023-01-28T05:20:17.000Z</updated>
+        <summary type="html"><![CDATA[1.はじめに
+前回は、Transformerのモデルアーキテクチャについて述べました。
+今回はそのTransformerの派生系である通称BERT(Biderectional Encoder Representations from Transformer)についてまとめていきます。
+今回もTransformerによる自然言語処理で学んだことを自分なりの言葉で書いていきます。
+
+ 2.BERTとは
+まず初めに、BERTとは何者かについて軽く紹介します。
+BERTとは、先述した通りTransformerの派生系のモデルの一種です。
+その特徴は大きく以下の二点が挙げられます。
+
+名前にも...]]></summary>
+        <author>
+            <name>Yosuke00</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Django】Pythonで作るRest API【１０Serializer】]]></title>
+        <id>https://zenn.dev/web_life_ch/articles/e27b81c73d8ada</id>
+        <link href="https://zenn.dev/web_life_ch/articles/e27b81c73d8ada"/>
+        <updated>2023-01-28T05:12:36.000Z</updated>
+        <summary type="html"><![CDATA[【１０Serializer】
+YouTube: https://youtu.be/LmX0aBPw1jI
+https://youtu.be/LmX0aBPw1jI
+今回は「Serializer」を作成します。
+レスポンスで返すデータは「json」形式ある必要がありますので、
+データベースから取得したデータをそのままレスポンスに設定するだけでは
+データを返すことができません。
+Serializerはデータベースで取得したデータを
+レスポンスで返すことができるように変換してくれる機能があります。
+今回は「posts」のフォルダ内に「serializers.py」を作成します。
+
+myap...]]></summary>
+        <author>
+            <name>Web Life CH</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-108｜B - Ruined Square]]></title>
+        <id>https://zenn.dev/hyperdb/articles/9e65b1a6afb49b</id>
+        <link href="https://zenn.dev/hyperdb/articles/9e65b1a6afb49b"/>
+        <updated>2023-01-28T04:33:41.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-108 B - Ruined Square
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    x1, y1, x2, y2 = getIntMap()
+
+    x = x2 - x1
+    y = y2 - y1
+
+    x3 = x2 - y
+    y3 = y2 + x
+
+    x4 = x1 - y
+    y4 = y1 + x
+
+    print("%d %d %d %d" % (x3, y3, x4, y4))
+
+
+if __...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-108｜A - Pair]]></title>
+        <id>https://zenn.dev/hyperdb/articles/8127aece43448f</id>
+        <link href="https://zenn.dev/hyperdb/articles/8127aece43448f"/>
+        <updated>2023-01-28T04:33:41.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-108 A - Pair
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    k = getInt()
+
+    x = k // 2
+    y = k % 2
+
+    print(x * (x + y))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[遊戯王ニューロンOCR]]></title>
+        <id>https://zenn.dev/tomokin/articles/156a194043e295</id>
+        <link href="https://zenn.dev/tomokin/articles/156a194043e295"/>
+        <updated>2023-01-28T02:15:37.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+遊戯王マスターデュエルがリリースされてからはや1年経ちました。
+公式からの競技イベントは少ないですが、有志の方が大会を開催してくださっています。
+一部の大会では、主催者様の定めた特殊なレギュレーションを用いており、参加者のデッキが正しくレギュレーションを守っているか人力でチェックする必要があります。
+デッキに含まれるカードリストのテキストデータがあればチェック作業が自動化できそうですが、公式アプリである遊戯王ニューロンはなんとカードのリストを jpeg 画像として出力します。
+そこで、この jpeg 画像を読み取り、テキストデータ化するアプリケーションを作成しました。
+
+上...]]></summary>
+        <author>
+            <name>tomokin</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CHSH不等式の導出、破れと破れの実験]]></title>
         <id>https://zenn.dev/msrn_yossy/articles/0b234ac515c669</id>
@@ -7752,78 +7968,6 @@ zero-shot、one-shot、few-shotにおい...]]></summary>
 もともとアカデミア出身で、半年前まではシステム制御理論の学術研究をしていました。ただ基本的には数式をこねくり回して遊ぶ理論系...]]></summary>
         <author>
             <name>団地のCTO</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[統計学] ガンマ分布の期待値・分散, 積率母関数, 可視化]]></title>
-        <id>https://zenn.dev/shundeveloper/articles/eba111782c85cf</id>
-        <link href="https://zenn.dev/shundeveloper/articles/eba111782c85cf"/>
-        <updated>2022-12-30T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[確率密度関数
-ガンマ分布の確率密度関数は以下で表される
-
-\begin{align*}
-&f(x|\alpha, \beta) =
-\frac{1}{\beta^\alpha \Gamma{(\alpha)}}
-x^{\alpha-1} e^{-\frac{x}{\beta}} \quad \text{if}\quad 0<x, \quad f(x|\alpha, \beta)=0 \quad \text{otherwise} 
-\\
-&\text{Where,}\quad \Gamma{(\alpha)}=\int_0^\infty x^{\alpha-1} ...]]></summary>
-        <author>
-            <name>ShunDev</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Ubuntu 22.04 + Python × Selenium 環境構築まとめ]]></title>
-        <id>https://zenn.dev/techike/articles/a8e28c55c9aa11</id>
-        <link href="https://zenn.dev/techike/articles/a8e28c55c9aa11"/>
-        <updated>2022-12-30T05:29:47.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Ubuntu 22.04上でPython×Seleniumでスクレイピングをするための環境構築をブラウザごとにまとめていきます。
-ここで取り扱うブラウザは、Chrome, Microsoft Edge, Firefoxの3つです。
-何も考えずにサクッと構築したい人向けなので、細かいことを知りたい方は参考リンクなどからたどっていただければと思います。
-
- 環境
-下記環境では構築できることを確認済みです。
-OS : Ubuntu 22.04
-Python : 3.10.6
-sudo を使用している所は適宜パスワード入力をするか、パスワード無しでsudoを使える設定にするかしてう...]]></summary>
-        <author>
-            <name>Fossa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ChatGPTを使ってハニーポットを実装した話]]></title>
-        <id>https://zenn.dev/tatsui/articles/51fc73926bac8b</id>
-        <link href="https://zenn.dev/tatsui/articles/51fc73926bac8b"/>
-        <updated>2022-12-30T03:18:56.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-「ハニーポット」とは脆弱性のあるサーバを偽装することで、脆弱性を利用された場合に攻撃者が実行するコマンドやツールを収集することができるセキュリティツールです。そのため、ハニーポット上では、複数のLinuxコマンドを安全に実行することが求められます。
-しかし、Linuxコマンドは数多くあり、それぞれが複雑な挙動をするため、手動で実装するのは大変な作業です。
-そこで、最近話題のChatGPTにLinuxコマンドエミュレータのソースコードを書いてもらい、実装の効率化を試みました。
-実装したコードはGithubに公開しています。
-
-
- 仕様の検討
-はじめに全体のざっくりとした仕様を...]]></summary>
-        <author>
-            <name>phishing-hunter</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[boto3で特定のメソッドをmockする]]></title>
-        <id>https://zenn.dev/shimo_s3/articles/69be3cc07d2313</id>
-        <link href="https://zenn.dev/shimo_s3/articles/69be3cc07d2313"/>
-        <updated>2022-12-29T22:40:06.000Z</updated>
-        <summary type="html"><![CDATA[やりたいこと
-Pythonのユニットテストで、boto3クライアントの特定メソッド(だけ)をモックしたいときがあります。こちらのstackoverflowに良さそうのやり方があったのでメモ。解はいろいろありそうですが、そのうち2つに関して書きます。(※motoは使わない)
-https://stackoverflow.com/questions/37143597/mocking-boto3-s3-client-method-python/
-
- 方法1. botocoreのstubを使う
-boto3のドキュメントよりコードをコピペ
-import datetime
-import botoc...]]></summary>
-        <author>
-            <name>shimo</name>
         </author>
     </entry>
 </feed>
