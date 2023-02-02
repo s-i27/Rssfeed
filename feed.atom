@@ -2,10 +2,121 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-02-01T01:52:19.368Z</updated>
+    <updated>2023-02-02T01:42:25.731Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[オープンソースAI【Whisper、GPT3、GoogleTextToSpeech】を用いた音声対話ロボットの作成]]></title>
+        <id>https://zenn.dev/kentaroszk/articles/3421e27c061853</id>
+        <link href="https://zenn.dev/kentaroszk/articles/3421e27c061853"/>
+        <updated>2023-02-01T13:26:43.000Z</updated>
+        <summary type="html"><![CDATA[概要
+
+この画像にあるように、マイクで話しかけて、AIに回答を考えてもらい、その結果を音声として出力する、というものを作成しました。ロボットと対話できます。
+
+ 環境
+全てGoogleColabの環境でできます。
+
+ 利用するライブラリ
+主に4つ使ってます。
+gTTS # ← GoogleTextToSpeechという音声合成のためのライブラリです
+whisper
+langchain
+openai
+
+ ライブラリの入れ方
+全てpipで入れることができます。
+pip install gTTS
+pip install git+https://github.com/openai/whisp...]]></summary>
+        <author>
+            <name>KENTAROSZK</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-113｜A - Discount Fare]]></title>
+        <id>https://zenn.dev/hyperdb/articles/3acb45ec8356af</id>
+        <link href="https://zenn.dev/hyperdb/articles/3acb45ec8356af"/>
+        <updated>2023-02-01T07:10:30.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-113 A - Discount Fare
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    x, y = getIntMap()
+
+    print(x + y // 2)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-113｜B - Palace]]></title>
+        <id>https://zenn.dev/hyperdb/articles/28cb85811ed842</id>
+        <link href="https://zenn.dev/hyperdb/articles/28cb85811ed842"/>
+        <updated>2023-02-01T07:10:30.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-113 B - Palace
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n = getInt()
+    t, a = getIntMap()
+    h = getIntList()
+
+    x = []
+    for i in ra...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Django】Pythonで作るRest API【１４Create Post】]]></title>
+        <id>https://zenn.dev/web_life_ch/articles/e5a86941a9d110</id>
+        <link href="https://zenn.dev/web_life_ch/articles/e5a86941a9d110"/>
+        <updated>2023-02-01T05:22:21.000Z</updated>
+        <summary type="html"><![CDATA[【１４Create Post】
+YouTube: https://youtu.be/0nXp4g-pwYs
+https://youtu.be/0nXp4g-pwYs
+今回は「Post」の作成用のビューを作成します。
+リクエストと一緒に送られてくるPostのデータは「request.data」に
+ブラウザでログインしているユーザーのデータは
+「request.user」に格納されています。
+
+myapp/posts/views.py
+from django.shortcuts import render
+from django.http import HttpResponse
+from...]]></summary>
+        <author>
+            <name>Web Life CH</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[module file package ( on python )]]></title>
         <id>https://zenn.dev/karamawanu/articles/984be184f55a81</id>
@@ -7551,227 +7662,6 @@ def setattr_(object,attrs,value):
     split_attr = at...]]></summary>
         <author>
             <name>sergicalsix</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[プログラミング初心者がDjangoとTwitter APIでツイート自動まとめBot（リアルタイム）を作成したら予想以上に便利だった件]]></title>
-        <id>https://zenn.dev/tree_pies/articles/6f162d0d74f9eb</id>
-        <link href="https://zenn.dev/tree_pies/articles/6f162d0d74f9eb"/>
-        <updated>2023-01-03T10:55:45.000Z</updated>
-        <summary type="html"><![CDATA[初心者がゆえ四苦八苦しながら作成しました。その過程と成果を備忘録がてらこちらに残しておきたいと思います。
-
- まずは完成物のご紹介
-完成したサイトは以下になります。
-Tree Pies
-https://treepies.com/
-Twitterアカウント
-
-そもそもこれは何かというと、Twitter上に存在するスレッド上のツイートをTwitterAPIを使い、自動でまとめて記事のように表示してくれるアプリケーションになります。
-これを使うと以下のような長文スレッドもリプライ一つで記事のようにまとめを作成する事が出来ます。
-
-まとめの依頼をすると即座にBotが反応して記事のURL添付と共に...]]></summary>
-        <author>
-            <name>Tree_Pies</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[API Gateway+Lambda CORS対策(Lambdaプロキシ統合 FastAPI編)]]></title>
-        <id>https://zenn.dev/go6887/articles/5c2de65ee0970f</id>
-        <link href="https://zenn.dev/go6887/articles/5c2de65ee0970f"/>
-        <updated>2023-01-03T09:34:06.000Z</updated>
-        <summary type="html"><![CDATA[年末年始、アイディアはあったものの時間がなく開発できていなかったものを一気に仕上げました。最初はユーザ数が見込めないので従量課金の簡単に開発することができる今となってはありふれたアーキテクチャであるAPI Gateway+Lambdaで開発したのですが、その際にReactでつくったwebアプリからAPIを呼び出す際のCORSの対応で時間を使ったので備忘録と残しておきます。
-
- 背景・問題
-今回のアーキテクチャです。Reactで作られたWebアプリからFastAPIで作成したAPIをLambdaにデプロイし、API Gateway経由でよんでいます。この際に適切に設定をしてあげないと、CO...]]></summary>
-        <author>
-            <name>pino</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python初心者のためのWindows実行環境構築ハンドブック]]></title>
-        <id>https://zenn.dev/mom/books/ca5cefe5d0855e</id>
-        <link href="https://zenn.dev/mom/books/ca5cefe5d0855e"/>
-        <updated>2023-01-03T07:18:06.000Z</updated>
-        <summary type="html"><![CDATA[Windows上でPythonの実行環境を構築する際に、必要十分な基礎知識を習得するための本。]]></summary>
-        <author>
-            <name>TechStar</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[数値を大字（だいじ）に変換するPythonモジュールを作成しました]]></title>
-        <id>https://zenn.dev/windvoice/articles/511156796980e6</id>
-        <link href="https://zenn.dev/windvoice/articles/511156796980e6"/>
-        <updated>2023-01-03T06:54:03.000Z</updated>
-        <summary type="html"><![CDATA[前置き
-数値を大字（だいじ）に変換するDaijiJa Pythonモジュールを作成しました。Pythonは趣味で長いこと使ってきましたが、モジュールを作成してGitHubにレポジトリを作成したのは初めてのことなので、記録として残しておきます。
-
- モジュールの紹介
-DaijiJaモジュールは、日本で領収書などを作成するときに使用される漢数字表記（例：壱万弐千円也）を整数値から作成する機能を持っています。例えば下のように使います。
-import DaijiJa
-print(DaijiJa.daiji(123456))
-壱拾弐万参千四百五拾六
-旧式の文字を使いたい場合もあると思われます。...]]></summary>
-        <author>
-            <name>WindVoice</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Jupyter Notebook で python側の変数 と LaTeX を組み合わせて表示したい。]]></title>
-        <id>https://zenn.dev/t4aru/articles/130b80176c06fa</id>
-        <link href="https://zenn.dev/t4aru/articles/130b80176c06fa"/>
-        <updated>2023-01-03T06:52:15.000Z</updated>
-        <summary type="html"><![CDATA[やりたいこと
-SymPyの計算結果を良い感じに \LaTeX 形式で出力したい。
-
- 例
-SymPyで対角行列を計算して、その結果をP^{-1}APに続く形に出力したい。
-
-P^{-1}AP = \begin{pmatrix}
-2 & 0 \\
-0 & -3
-\end{pmatrix}
-
-
- 方法
-
- display.Math と 書式化演算子 を使う
-
-コード
-import sympy as sp
-from IPython.display import display, Math
-
-result = sp.Matrix([
-    [2, 0],
-    [0, -...]]></summary>
-        <author>
-            <name>r4ai</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[sklearnのMLPRegressorで簡易な転移学習]]></title>
-        <id>https://zenn.dev/yoshida0312/articles/3ccda8b3c2c8b5</id>
-        <link href="https://zenn.dev/yoshida0312/articles/3ccda8b3c2c8b5"/>
-        <updated>2023-01-03T05:12:18.000Z</updated>
-        <summary type="html"><![CDATA[初めに
-転移学習など少し高度なモデルや手法を実装する際はpytorchを採用することが多いのですが、簡単なNNであればsklearnにもsklearn.neural_network.MLPRegressorで実装されています。
-今回は、簡易な転移学習をMLPRegressor.partial_fit()を使用して実施した際に、学習率を変える箇所にハマったので備忘録がてら残します。
-
- コード
-import pickle
-import itertools
-
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot a...]]></summary>
-        <author>
-            <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[botocoreのエラーハンドリング]]></title>
-        <id>https://zenn.dev/pontsuyo/articles/c510856e349e40</id>
-        <link href="https://zenn.dev/pontsuyo/articles/c510856e349e40"/>
-        <updated>2023-01-03T04:12:31.000Z</updated>
-        <summary type="html"><![CDATA[状況
-
- やりたいこと
-S3のオブジェクトを適当にパースしてredshiftに書き込む。
-書き込みはlambdaに載せたPythonスクリプトで実行する。S3へのオブジェクト追加時にイベント通知をlambdaに送信することでトリガーする。
-スクリプトは大体以下です
-def lambda_handler(event: dict, context) -> None:
-    """
-    :param event: S3バケットへのオブジェクト追加イベント
-    :param context:
-    :return:
-    """
-    bucket_name = eve...]]></summary>
-        <author>
-            <name>neginasubi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonで三次元データの補間を行う]]></title>
-        <id>https://zenn.dev/tab_ki/articles/interpolation_of_3d_data</id>
-        <link href="https://zenn.dev/tab_ki/articles/interpolation_of_3d_data"/>
-        <updated>2023-01-03T03:42:49.000Z</updated>
-        <summary type="html"><![CDATA[1. 概要
-「地点 A (x_a, y_a, z_a) における気温 T_a と地点 B (x_b, y_b, z_b) における気温 T_b から、その間にある地点 C (x_c, y_c, z_c) の気温 T_c を推測したい」など、三次元やより高次のデータに対して補間を行いたい場合があります。Python で N 次元データの補間を行いたい場合、SciPy の RegularGridInterpolator を利用するといいですよと教わったのですが、日本語記事が少なかったためメモを残します。
-
- 1.1. 環境
-
-
-
-Name
-Version
-
-
-
-
-Python
-3.10....]]></summary>
-        <author>
-            <name>Tab_Ki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[rinnaのCLIPのサンプルコードを解説]]></title>
-        <id>https://zenn.dev/yagiyuki/articles/clip_rinna_sample</id>
-        <link href="https://zenn.dev/yagiyuki/articles/clip_rinna_sample"/>
-        <updated>2023-01-03T02:07:18.000Z</updated>
-        <summary type="html"><![CDATA[2022年/5月にrinna社により、日本語特化した事前学習済みの言語画像モデルCLIPが公開されました。
-https://prtimes.jp/main/html/rd/p/000000031.000070041.html
-CLIPについては、以下の記事を参照ください。
-https://qiita.com/sonoisa/items/00e8e2861147842f0237
-以下、上記記事からCLIPの特徴を抜粋した情報です。
-1. 従来のモデルに比べて、非常に広いクラスのオブジェクトを認識できる。
-2. 画像とテキストの両方の埋め込みができる。画像から類似画像を探したり、テキストから...]]></summary>
-        <author>
-            <name>yagiyuki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Dagger入門（Python SDK）]]></title>
-        <id>https://zenn.dev/syfut/articles/3b4ddea324c69f</id>
-        <link href="https://zenn.dev/syfut/articles/3b4ddea324c69f"/>
-        <updated>2023-01-02T16:25:34.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Docker創始者らが開発したソフトウェアのビルド・テスト・デプロイの自動化（CI/CD）ツールDaggerを使用してみました。
-　本記事では公式リファレンスに則りDaggerを導入する方法とDaggerを使う上で認識しておくべきと感じた前提知識をまとめました。
-　(Daggerはまだ新しい技術であり、アップデートも繰り返されているため、今後執筆時点(2023.1.3)と状況が大きく変わって来る可能性があるのでその点ご了承下さい。)
-
- Daggerの前提知識・使用イメージ
-
- (1)既存のシステムを置き換えるか
-Daggerは既存のCI/CDツール(GitHubActionや...]]></summary>
-        <author>
-            <name>Boushipan</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2022年にpythonとAWS Lambdaで作ったもの]]></title>
-        <id>https://zenn.dev/motokoike/articles/dc9224e84d7c4e</id>
-        <link href="https://zenn.dev/motokoike/articles/dc9224e84d7c4e"/>
-        <updated>2023-01-02T15:38:35.000Z</updated>
-        <summary type="html"><![CDATA[1. まえがき
-去年作ったプログラムのまとめ記事となります。
-
- 2. 競馬関係のTwitter BOT
-2022年の初めに、「AWSではじめるインフラ構築入門」の本を購入し、アプリを作成
-自分でも作成して見ようと、興味がある競馬関連のTwitterのBOTを4つ作成
-
-1号機（今日のハクサン地方競馬出走情報Bot）
-
-https://twitter.com/hakusan_keiba
-
-2号機（明日のメイショウ冠名馬中央競馬出走情報と今日の競走結果情報BOT）
-
-https://twitter.com/MeishoBot
-
-3号機（マカオ競馬の日本人騎手レース結果Bot）
-
-htt...]]></summary>
-        <author>
-            <name>元小池</name>
         </author>
     </entry>
 </feed>
