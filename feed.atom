@@ -2,10 +2,225 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-02-03T01:43:51.129Z</updated>
+    <updated>2023-02-04T01:38:20.705Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[fastAPI入門]]></title>
+        <id>https://zenn.dev/mossan_hoshi/articles/20220404_fastapi</id>
+        <link href="https://zenn.dev/mossan_hoshi/articles/20220404_fastapi"/>
+        <updated>2023-02-03T23:03:48.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+本記事ではfastAPI本「Building Data Science Applications with FastAPI」を紹介します。この本はオライリーサブスクで読めます。本記事は以前にQiita投稿した記事の再構成です。
+
+
+
+
+
+
+
+
+
+原題
+「Building Data Science Applications with FastAPI」
+
+
+リリース年月
+2021/10 (🚨少し昔の本です)
+
+
+カテゴリ
+fastAPI入門
+
+
+おすすめ度(5段階)
+⭐⭐⭐⭐☆
+
+
+対象者
+fastAPI初心者
+
+
+
+
+ fastAPI is 何？
+
+python向けのAPIサ...]]></summary>
+        <author>
+            <name>mossan_hoshi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Raspberry piでCO2を計測してSlack通知する！]]></title>
+        <id>https://zenn.dev/taro0079/articles/e4a2ba05a01e74</id>
+        <link href="https://zenn.dev/taro0079/articles/e4a2ba05a01e74"/>
+        <updated>2023-02-03T14:02:07.000Z</updated>
+        <summary type="html"><![CDATA[最近アウトプットが足りていないな、と思ってひそかに作っていたものを公開します。
+昨今のコロナ禍で、その感染・拡大防止のためにオフィスの換気が重要であると言われています。
+弊社でも、CO2モニターを購入しましたが、結局アラームに誰も気づかず換気し忘れるといった事態が多発しています。
+そこでCO2濃度が基準値を超えたときにslackで換気を促す通知を送れば解決するのでは、と考えraspberry piとCO2濃度センサーを使って自作しました。
+
+ 必要なもの
+
+raspberry pi
+CO2濃度センサー MH-Z19
+
+私はここで買いましたけど執筆当時は品切れ状態でした... https:...]]></summary>
+        <author>
+            <name>taro0079</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonの並列処理ライブラリRayでインスタンスメソッドを並列化する]]></title>
+        <id>https://zenn.dev/ymicky/articles/cde7f78e3f8888</id>
+        <link href="https://zenn.dev/ymicky/articles/cde7f78e3f8888"/>
+        <updated>2023-02-03T08:27:40.000Z</updated>
+        <summary type="html"><![CDATA[Rayはメソッドをデコレータで囲んであげるだけで並列処理を簡単にかける便利なライブラリである。
+https://docs.ray.io/en/latest/ray-overview/index.html
+以下はサンプルコード。
+import ray
+import time
+
+ray.init(num_cpus=4)
+# wait initailization ray
+time.sleep(1)
+
+def func1(self, x):
+    time.sleep(1)
+    return x * 2
+
+@ray.remote
+def func2(self, x):
+    x = f...]]></summary>
+        <author>
+            <name>ymicky</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-115｜B - Christmas Eve Eve]]></title>
+        <id>https://zenn.dev/hyperdb/articles/8ef157fdaba3d0</id>
+        <link href="https://zenn.dev/hyperdb/articles/8ef157fdaba3d0"/>
+        <updated>2023-02-03T05:53:19.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-115 B - Christmas Eve Eve
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntRow(N):
+    return [int(input()) for _ in range(N)]
+
+
+def main():
+    n = getInt()
+    p = getIntRow(n)
+
+    p.sort()
+    p.reverse()
+
+    p[0] = p[0] // 2
+
+    print(sum(p))
+
+
+if __name__ == "__mai...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-115｜A - Christmas Eve Eve Eve]]></title>
+        <id>https://zenn.dev/hyperdb/articles/30cc399f9e9d52</id>
+        <link href="https://zenn.dev/hyperdb/articles/30cc399f9e9d52"/>
+        <updated>2023-02-03T05:53:18.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-115 A - Christmas Eve Eve Eve
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    d = getInt()
+
+    w = ['Christmas']
+    for i in range(25 - d):
+        w.append('Eve')
+    print(' '.join(w))
+
+
+if __name__ == "__main__":
+    main()```]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Django】Pythonで作るRest API【１６Delete Post】]]></title>
+        <id>https://zenn.dev/web_life_ch/articles/40481d277a01fa</id>
+        <link href="https://zenn.dev/web_life_ch/articles/40481d277a01fa"/>
+        <updated>2023-02-03T04:59:21.000Z</updated>
+        <summary type="html"><![CDATA[【１６Delete Post】
+YouTube: https://youtu.be/beV7qrOWibA
+https://youtu.be/beV7qrOWibA
+今回は「Post」のデリートのビューを実装します。
+まず、前回作成した「urls.py」ですが、
+    path('<str:pk>/', getPostById, name='getPost'),
+    path('create/', createPost, name='createPost'),
+
+上の状態ですと
+ブラウザに入力した際に「create」が「pk」として認識されて
+エラー画面が表示されて...]]></summary>
+        <author>
+            <name>Web Life CH</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[trioでサーバーを立ち上げながらバックグラウンド処理を並列で実行(Quart-Trio)]]></title>
+        <id>https://zenn.dev/ivry/articles/4f92f736a8a853</id>
+        <link href="https://zenn.dev/ivry/articles/4f92f736a8a853"/>
+        <updated>2023-02-03T03:34:59.000Z</updated>
+        <summary type="html"><![CDATA[モチベーション
+IVRyのエンジニアの小瀬です。IVRy ではRailsを中心にバックエンドのコードを書いています。
+https://twitter.com/ats312kose
+タイトルだけみてやりたいことが伝え切れてない可能性が高いので、やりたいことと、趣味でやっているプロジェクトについて説明させていただきます。
+IVRyでは主にRailsのコードを書いているのですが、趣味でPythonを使った音楽の自動演奏プログラムを作っています。音楽の自動演奏といってもやっていることはmidiを使った演奏指示であり、音はDAW(Abelton Liveなど)にある沢山の楽器の力を借りています...]]></summary>
+        <author>
+            <name>kose_atsuya</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonでLocustのUserClass生成を自動化してみる]]></title>
+        <id>https://zenn.dev/c10ne/articles/44f30802c8b05c</id>
+        <link href="https://zenn.dev/c10ne/articles/44f30802c8b05c"/>
+        <updated>2023-02-03T02:22:44.000Z</updated>
+        <summary type="html"><![CDATA[動機
+Locustを使い、数千ユーザ分のテストをしたかった。
+ただ、サービスにはログイン機構があり、かつ１つのユーザごとに複数回のログイン処理をサーバ側で止めてしまう。よって、Locustの仕様？である、１ユーザ複製だと機能しなかった。
+※Locustでpythonを数年ぶりに触りました、入門書ぶり。基本すべて脱noobくらい
+
+ 解決法
+ユーザを複数作成し、ユーザごとに１回ずつのログインにして負荷テストを行う。超力技。
+
+ Python理解(分かる人はスキップ)
+
+sample.py
+f = open('userClass.txt', 'w')
+for x in range(5):...]]></summary>
+        <author>
+            <name>c10ne</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[GeoJSON上の複数区域のgeometryデータを一つにまとめる]]></title>
         <id>https://zenn.dev/spacemarket/articles/012a2a524ec7b8</id>
@@ -7369,87 +7584,6 @@ print(text[::-1])
 # You can also use reversed() m...]]></summary>
         <author>
             <name>kurokawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pytestが実行できる環境を作ってみる]]></title>
-        <id>https://zenn.dev/ttttttttttakuya/articles/3b5e8936ca6372</id>
-        <link href="https://zenn.dev/ttttttttttakuya/articles/3b5e8936ca6372"/>
-        <updated>2023-01-05T13:31:10.000Z</updated>
-        <summary type="html"><![CDATA[Pytest環境構築
-
- はじめに
-テスト駆動 Python第2版のCHAPTER1を読み終えたので、環境構築の手順を自分のPC環境で行う場合
-どのような手順を踏めばpytestが実行できる環境を用意できるのか、その手順をまとめてみました。
-
- 環境
-
-macOS Ventura 13.0.1
-Python 3.9
-Visual Studio Code
-ターミナルで使うシェルはzshを使用
-
-
- 前提
-
-Visual Studio Code上でPythonが実行できる状態になってること。
-pyenvインストール済みでターミナル上でpyenvコマンドが実行できること。
-
-
- 構築手順
-...]]></summary>
-        <author>
-            <name>Takuya Yamamura</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonで動画ファイルからGIFアニメーションを作成]]></title>
-        <id>https://zenn.dev/naoji/articles/python-video-export</id>
-        <link href="https://zenn.dev/naoji/articles/python-video-export"/>
-        <updated>2023-01-05T10:54:46.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Scratchで作った作品の解説のために、youtubeで動画を公開し記事にリンクを貼っていましたが、再生ボタンを押すという一手間、と、再生した後におすすめ動画一覧が表示されてしまう点、を改善したかったため、今回、GIFアニメーションに置き換えました。その際、色々な調整を効率化するためPythonのスクリプトで動画を変換してみました。
-
- GIFアニメーションとは
-GIFは画像ファイルフォーマットの一つで、静止画だけでなくアニメーションも表示できます（詳しくはこちら）。音声はファイルに保存できない、256色までしか表示できない、等の短所がありますが、古くあるフォーマットなの...]]></summary>
-        <author>
-            <name>naoji</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DialogflowのログをJSONにパースするためのPythonパッケージをPYPIにあげてみた]]></title>
-        <id>https://zenn.dev/peter_yusuke/articles/a1ab1e14115c5b</id>
-        <link href="https://zenn.dev/peter_yusuke/articles/a1ab1e14115c5b"/>
-        <updated>2023-01-05T09:59:02.000Z</updated>
-        <summary type="html"><![CDATA[Dialogflowの会話データログをJSON形式に変換するPythonパッケージを作成しPYPIにあげたので紹介します。
-
- Dialogflowとは？
-DialogflowとはGoogleが提供しているチャットボットの自然言語理解プラットフォームです。
-簡単にNLPが搭載されたチャットボットを作成することができ、WEBやSNSに連携しやすいよう設計されている環境です。
-
- 作ったもの
-Dialogflowから出力されるResponsのログをJSONにパースするdialogflow-log-parserというPythonパッケージを作成しました。
-https://pypi.org/pr...]]></summary>
-        <author>
-            <name>peter_yusuke</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Streamlit + Snowpark for Python を 2023 年な感じで動かしてみる]]></title>
-        <id>https://zenn.dev/tmasuo/articles/41ee0bdbb5a8c2</id>
-        <link href="https://zenn.dev/tmasuo/articles/41ee0bdbb5a8c2"/>
-        <updated>2023-01-05T07:58:30.000Z</updated>
-        <summary type="html"><![CDATA[🎍 2023 年な感じ？
-Snowflake Advent Calendar 2022 でこんな記事を作成していました。
-https://zenn.dev/tmasuo/articles/7d32bbe9a7532a
-こちらで、
-
-Streamlit の引数として取るのは Pandas DataFrame
-
-と書いていたのですが、実は 2022 年末にリリースされた v1.16.0 で Pandas DataFrame のみならず、Snowpark DataFrame および PySpark DataFrame を引数として取ることができるようになっています🎉
-https://dis...]]></summary>
-        <author>
-            <name>tmasuo</name>
         </author>
     </entry>
 </feed>
