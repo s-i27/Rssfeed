@@ -2,10 +2,413 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-02-04T01:38:20.705Z</updated>
+    <updated>2023-02-05T01:47:27.309Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[bookersの投稿API（python）を使ってみた]]></title>
+        <id>https://zenn.dev/motokoike/articles/0df53ac8dda8f7</id>
+        <link href="https://zenn.dev/motokoike/articles/0df53ac8dda8f7"/>
+        <updated>2023-02-04T17:59:24.000Z</updated>
+        <summary type="html"><![CDATA[bookersについて
+有料予想・有料記事を登録できるサイト
+記事投稿できるAPIが提供されている為、競馬予想から競馬予想投稿までを自動化してみました。
+
+ 投稿API用シークレットキー
+bookersにログイン後、アカウント設定の最下部の投稿API用シークレットキーを取得する。
+
+
+ 記事一覧取得[GET]
+pythonサンプルコード
+import requests
+# Tokenに投稿API用シークレットキーを指定する
+headers = {
+    'Authorization': 'Token *****************',
+}
+res = requests.get(...]]></summary>
+        <author>
+            <name>元小池</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Mastodon.pyを使ってPythonからトゥートする]]></title>
+        <id>https://zenn.dev/sion_pn/articles/1f672c6d2df165</id>
+        <link href="https://zenn.dev/sion_pn/articles/1f672c6d2df165"/>
+        <updated>2023-02-04T16:30:02.000Z</updated>
+        <summary type="html"><![CDATA[Twitter API有料化に伴い、個人で動かしているTwitter Botの運用継続が難しくなりそうなので、Mastodon APIのPythonラッパーであるMastodon.pyを使ってMastodonへのPythonによるToot実装を試してみました。
+https://github.com/halcy/Mastodon.py
+
+ 環境構築
+
+ Python環境の構築
+Pythonの開発環境が構築できていない場合、以下の記事を参考に環境構築を行なって下さい。
+https://zenn.dev/sion_pn/articles/4418eeda7c62d0
+https://zenn....]]></summary>
+        <author>
+            <name>SiON</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】webスクレイピング時にPDFファイルをローカルへ保存せずにテキスト抽出する]]></title>
+        <id>https://zenn.dev/tab_ki/articles/web_scraping</id>
+        <link href="https://zenn.dev/tab_ki/articles/web_scraping"/>
+        <updated>2023-02-04T15:53:59.000Z</updated>
+        <summary type="html"><![CDATA[1. 概要
+BeautifulSoupなどを利用したwebスクレイピングにおいて、PDFファイルの解析時にファイルを一度ローカルに書き込んでしまうと余計な時間がかかります。この記事は取得したPDFのバイナリデータをストリーム形式に変換することでそのまま解析する方法のメモになります。PDFの解析ライブラリにはpdfminerを利用します。
+
+ 1.1. 環境
+
+
+
+Name
+Version
+
+
+
+
+Python
+3.10.6
+
+
+pdfminer.six
+20221105
+
+
+
+
+ 1.2. pdfminer
+PDFをPythonで解析するためのライブラリです。pipでインストールでき...]]></summary>
+        <author>
+            <name>Tab_Ki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[記事一覧を出力してみる]]></title>
+        <id>https://zenn.dev/hyperdb/articles/1ae6c6301de459</id>
+        <link href="https://zenn.dev/hyperdb/articles/1ae6c6301de459"/>
+        <updated>2023-02-04T14:41:47.000Z</updated>
+        <summary type="html"><![CDATA[昨年の12月からAtCoderの過去問チャレンジを続けているのですが、別のブログにこちらの記事へのリンクを載せた記事を書こうと思っているのですが、aticlesディレクトリの直下の記事が増えてくると目的の記事がどれなのかが分かりづらくなってきました。
+そこでaticlesディレクトリの直下の記事の一覧をファイルに書き出すプログラムを書いてみました。
+自分用ということで記事の一覧をタイトルでソートしたものをルートにartticle_list.mdという名称のマークダウンファイルに書き出しています。
+自分の場合は記事のリストを並べ替えるだけですが、ちょっと改造すれば抽出する記事をフィルタリン...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[order byを使って、QuerySetを任意の順番でソートする]]></title>
+        <id>https://zenn.dev/nosukey/articles/sort_queryset_by_query</id>
+        <link href="https://zenn.dev/nosukey/articles/sort_queryset_by_query"/>
+        <updated>2023-02-04T13:44:53.000Z</updated>
+        <summary type="html"><![CDATA[書くこと
+
+並べ替えたい順番のid配列(pk等)を持っている状態で、QuerySetのソートする方法
+pythonで処理せず、order byで実現する
+
+
+ 利用する技術
+
+Django
+MySQL
+SQlite
+
+
+ 今日のゴール
+## 前提: 以下は変数として持つ
+# - queryset: 並び替えたい対象のQuerySet
+# - ids: 並び順を示すpk(等)の配列 
+
+from .common import sorter
+
+# 取得結果:
+# 第一引数のquerysetを第二引数で与えたidの順番に並べ替えたもの
+sorted_queryset = sorter.so...]]></summary>
+        <author>
+            <name>Nosukey</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DjangoでCustom QuerySetを利用して、Railsのscope風クエリ名前付けを実現する]]></title>
+        <id>https://zenn.dev/nosukey/articles/use_costom_query_set</id>
+        <link href="https://zenn.dev/nosukey/articles/use_costom_query_set"/>
+        <updated>2023-02-04T13:06:26.000Z</updated>
+        <summary type="html"><![CDATA[書くこと
+
+Ruby on Railsのscope風、簡易機能をDjangoで書く方法
+QuerySetのメソッドチェーンで呼び出せる名前付けクエリを定義する方法
+
+
+ 利用する技術
+
+Django
+model.QuerySet
+model.Manager
+
+
+ 今日のゴール
+このようなArticleモデルが定義されていたとき
+class Article(models.Model):
+    title = models.CharField(max_length=100)
+    # (省略)
+    is_active = models.BooleanField(default=T...]]></summary>
+        <author>
+            <name>Nosukey</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【GPTIndex】パワポを読み込んだChatbotを作ろう！]]></title>
+        <id>https://zenn.dev/ryo1443/articles/fe921917d91ea0</id>
+        <link href="https://zenn.dev/ryo1443/articles/fe921917d91ea0"/>
+        <updated>2023-02-04T12:52:46.000Z</updated>
+        <summary type="html"><![CDATA[概要
+今回は、GPTIndexを活用してパワーポイントの画像を読み込ませ、スライドの内容に関する応対が可能なChatbotを作ります。以下のような場面で役立つかも？
+
+スライドが長すぎて内容を読むのが面倒くさい時
+スライドを要約したり、整理したりする必要がある時
+
+今回の全コードはこちら：
+https://github.com/ryo1443/GPTIndex_powerpoint_sample
+
+ 読み込ませるスライド
+ネット上にはパワーポイントファイルが中々落ちていないので、ChatGPTを活用して自作しました。メタバースに関する適当なまとめです。ファイルが欲しい方はgithub...]]></summary>
+        <author>
+            <name>Ryo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-116｜B - Collatz Probleme]]></title>
+        <id>https://zenn.dev/hyperdb/articles/b7d55619f81497</id>
+        <link href="https://zenn.dev/hyperdb/articles/b7d55619f81497"/>
+        <updated>2023-02-04T10:00:32.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-116 B - Collatz Problem
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def calc(n):
+    if n % 2 == 0:
+        return n // 2
+    return 3 * n + 1
+
+
+def main():
+    s = getInt()
+
+    a = [s]
+    i = 1
+    while True:
+        x = calc(a[i - 1])
+        if x in a:
+            print(i...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-116｜A - Right Triangle]]></title>
+        <id>https://zenn.dev/hyperdb/articles/5bdd8dea1ec59d</id>
+        <link href="https://zenn.dev/hyperdb/articles/5bdd8dea1ec59d"/>
+        <updated>2023-02-04T10:00:32.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-116 A - Right Triangle
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b, c = getIntMap()
+
+    print(a * b // 2)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LambdaとSESを使ってサーバレスでEメール送信してみた]]></title>
+        <id>https://zenn.dev/kuryu8/articles/8af37decb19e9f</id>
+        <link href="https://zenn.dev/kuryu8/articles/8af37decb19e9f"/>
+        <updated>2023-02-04T09:22:41.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+前回はLightsailを使ってメールを送信するシステムを構築しましたが、今回はAWS Lambdaを使ってサーバレスでメールを送信するシステムを構築しました。
+
+ 構築環境
+サーバレスコンピューティングサービス：AWS Lambda
+メールシステム：Amazon SES
+言語：pythoon
+
+ 前提条件
+下記で「1.SESの作成」と「2.Amazon SESにSMTP認証情報を作成する」を行う
+https://zenn.dev/kuryu8/articles/dd72150c33c856
+
+ 構築手順
+
+ 1.LambdaがAPIコールを実行するためのIAMポリシーとロ...]]></summary>
+        <author>
+            <name>kuryu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[UnexpectedAlertPresentExceptionの対応]]></title>
+        <id>https://zenn.dev/ingress/articles/daf3f055be20bf</id>
+        <link href="https://zenn.dev/ingress/articles/daf3f055be20bf"/>
+        <updated>2023-02-04T07:00:18.000Z</updated>
+        <summary type="html"><![CDATA[Pythonでスクレイピング中にアラートのポップアップ(UnexpectedAlertPresentException)が出て先に進めなくなってしまった時の対応方法
+
+ 【環境】
+OS: CentOS Stream release 8
+Python3バージョン:Python 3.6.8
+Seleniumバージョン（pip3 list）: selenium 3.141.0
+
+ 【事象】
+PythonのSeleniumを使った、ブラウザの自動操作を行っている時、フォームのボタンをクリック操作した際に、UnexpectedAlertPresentException というエラーが発生。
+エ...]]></summary>
+        <author>
+            <name>クラウド職人J</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【PyTorch】BERTの実装を理解する]]></title>
+        <id>https://zenn.dev/kaeru39/articles/a60f6bed057f0c</id>
+        <link href="https://zenn.dev/kaeru39/articles/a60f6bed057f0c"/>
+        <updated>2023-02-04T05:12:19.000Z</updated>
+        <summary type="html"><![CDATA[以下の書籍を読んだ際にBERTの実装をコメントを付けながら読み進めていきましたので、まとめます。新卒で入社した会社で深層学習を勉強していたときに大変お世話になった書籍です。自信を持っておすすめします。
+https://www.amazon.co.jp/dp/4839970254/
+今回はモデルの説明だけでも説明量が多い関係から、optimizerやDatasetLoader、推論部の説明は割愛します。ご了承ください。
+
+ BERTとは
+Bidirectional Encoder Representations from Transformersの略です。Transformerからなる双方...]]></summary>
+        <author>
+            <name>kaeru39</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Django】Pythonで作るRest API【１７Update Post】]]></title>
+        <id>https://zenn.dev/web_life_ch/articles/ef55e55cfcb125</id>
+        <link href="https://zenn.dev/web_life_ch/articles/ef55e55cfcb125"/>
+        <updated>2023-02-04T04:43:13.000Z</updated>
+        <summary type="html"><![CDATA[【１７Update Post】
+YouTube: https://youtu.be/zn2_DeYLzFw
+https://youtu.be/zn2_DeYLzFw
+今回は「Post」のアップデートのビューを作成します。
+
+myapp/posts/views.py
+from django.shortcuts import render
+from django.http import HttpResponse
+from rest_framework import viewsets
+from .models import Post
+from .serializers import Pos...]]></summary>
+        <author>
+            <name>Web Life CH</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Moto と PynamoDB で DynamoDB を用いたAPIのテストを書く方法]]></title>
+        <id>https://zenn.dev/hayata_yamamoto/articles/016b41781d9783</id>
+        <link href="https://zenn.dev/hayata_yamamoto/articles/016b41781d9783"/>
+        <updated>2023-02-04T03:45:06.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは。@hayata-yamamotoです。
+DynamoDB のようなリソースを用いてプロダクトを開発する際、ローカル用にエミュレーターを起動し、そこにテスト用のデータを詰め込んで利用することがあると思います。よくあるのはテストのために docker-compose.yml を書いて、docker compose up -d しテストを実行するパターンです。しかしこれは、徐々にサービスが大きくなり関連するリソースが増えてきた時に docker-compose.yml 自体のメンテナンスがめんどくさくなってくる問題を抱えていました。
+弊社では、この問題を少しでも緩和で...]]></summary>
+        <author>
+            <name>山本隼汰 | Hayata Yamamoto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Typer の基本的な使い方まとめ]]></title>
+        <id>https://zenn.dev/hayata_yamamoto/articles/d475649cb0922e</id>
+        <link href="https://zenn.dev/hayata_yamamoto/articles/d475649cb0922e"/>
+        <updated>2023-02-04T03:40:52.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは。@hayata-yamamotoです。
+弊社では、バッチジョブやちょっとしたコマンドライン実行を行うためのツールとして、Typer を採用しています。FastAPI と親和性が高く、使用感も類似しておりシームレスな開発体験を提供してくれています。
+https://typer.tiangolo.com/
+今回は、Typer の使い方をどうしても忘れてしまう私のために備忘録として、Typer の使い方をまとめたコードを共有します。
+コメントに、該当するページが記載されておりますため、Typer を利用されている方々もどうぞご活用ください。
+
+main.py
+impo...]]></summary>
+        <author>
+            <name>山本隼汰 | Hayata Yamamoto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPI で None の値を null から undefined に変換する]]></title>
+        <id>https://zenn.dev/hayata_yamamoto/articles/df0661e61d8c15</id>
+        <link href="https://zenn.dev/hayata_yamamoto/articles/df0661e61d8c15"/>
+        <updated>2023-02-04T03:38:08.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは。@hayata-yamamotoです。
+FastAPI をベースにしたバックエンドを運用開発していくにあたり None の使用を伴う API 定義を行うと、None で指定した値が OpenAPI 定義上では Optional の扱いを受けてしまい、TypeScript 側で見ると undefined と見做されるという問題がありました。
+今回は、その OpenAPI 定義上の表記と、FastAPI の実際のレスポンスを整合させるために行った設定をご紹介します。
+
+ 解決方法
+FastAPI で response_model_exclude_none を Tru...]]></summary>
+        <author>
+            <name>山本隼汰 | Hayata Yamamoto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[2022年版] トドケールの開発組織について]]></title>
+        <id>https://zenn.dev/hayata_yamamoto/articles/4e68e8510f4e66</id>
+        <link href="https://zenn.dev/hayata_yamamoto/articles/4e68e8510f4e66"/>
+        <updated>2023-02-04T03:29:54.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは。@hayata-yamamotoです。
+この記事は、トドケールのプロダクトや開発組織、メンバーにご興味を持ってくれた方に向けて、我々がどんな技術をどんな風に用いて、どんな組織でなんのために開発しているのかをまとめたものになります。なお、2021 年夏に公開した以下の記事の続編です。
+https://zenn.dev/todoker/articles/start-tech-blog
+!
+2021 年版からの違い（サマリ）
+
+オフショア中心の開発体制から、自社開発に開発体制が大きく変わりました
+開発組織を UX デザイン、エンジニアにわけ、プロトタイプドリブンで動けるようにしまし...]]></summary>
+        <author>
+            <name>山本隼汰 | Hayata Yamamoto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPI と Mangum で作るサーバーレスAPI]]></title>
+        <id>https://zenn.dev/hayata_yamamoto/articles/781efca1687272</id>
+        <link href="https://zenn.dev/hayata_yamamoto/articles/781efca1687272"/>
+        <updated>2023-02-04T03:26:56.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは。hayata-yamamoto です。
+唐突ですが、皆さんは「サーバーレス」お好きでしょうか？AWS であれば、Lambda, Fargate, Aurora Serverless あたりを思い浮かべるかもしれません。GCP にも似たようなサーバーレスサービスがありますよね。サーバーを自分たちで用意せず、クラウドベンダーが”いい感じに”設定したサーバーを拝借できることで、エンジニアはアプリケーションの開発に集中できる、そんなサービスです。オートスケールの設定が容易にできたり、リソース使用にかかる費用が従量課金になっており、ワークロードに合わせてコスト最適化を行い...]]></summary>
+        <author>
+            <name>山本隼汰 | Hayata Yamamoto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python の単体テストで AWS のモックをサクッと導入したいなら moto を使え！]]></title>
+        <id>https://zenn.dev/hayata_yamamoto/articles/8634b93502a4c1</id>
+        <link href="https://zenn.dev/hayata_yamamoto/articles/8634b93502a4c1"/>
+        <updated>2023-02-04T03:25:30.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは。@hayata-yamamoto です。
+Pythonista の皆さんは、AWS 関連の開発をする際にこんなことを感じたことはありませんか？
+
+AWS のリソースを自分の環境に立てるのマジでだるい
+
+とはいえ、ローカル含む、自分の作業環境でアプリケーション開発するためには、AWS のモックサービスを使わざるを得ない状況も多いのではないでしょうか。そう言った場合、docker-compose.yml などを書き、seed データの追加用シェルなどを書く、 docker-compose up -d で起動して、開発時やテスト時に使う。そんな運用をされている方もいる...]]></summary>
+        <author>
+            <name>山本隼汰 | Hayata Yamamoto</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[fastAPI入門]]></title>
         <id>https://zenn.dev/mossan_hoshi/articles/20220404_fastapi</id>
@@ -7304,284 +7707,6 @@ y = "気温"
 z = 22.4
 
 print(template_based_sentence_genera...]]></summary>
-        <author>
-            <name>kurokawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[自作データセットでWhisperをファインチューニングしたら、独自用語だらけのクラロワ実況でも使えるようになった：「ファインチューニング編」]]></title>
-        <id>https://zenn.dev/k_sone/articles/4d137d58dd06a6</id>
-        <link href="https://zenn.dev/k_sone/articles/4d137d58dd06a6"/>
-        <updated>2023-01-06T13:34:24.000Z</updated>
-        <summary type="html"><![CDATA[前回のあらずじ
-前の記事はこちら
-ファインチューニング用の自作データセットをspreadsheetで作れたので、これを使ってファインチューニングしていきたい。
-
- 作った独自データセットでファインチューニングする
-スプレッドシートで音声データと正解ラベルを作ることができたので、これを使ってファインチューニングします。
-最初に使うライブラリをインストール
-!pip install datasets>=2.6.1
-!pip install git+https://github.com/huggingface/transformers
-!pip install librosa
-!pi...]]></summary>
-        <author>
-            <name>sonken625</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[自作データセットでWhisperをファインチューニングしたら、独自用語だらけのクラロワ実況でも使えるようになった：「データセット作成編」]]></title>
-        <id>https://zenn.dev/k_sone/articles/e0c08268986ac2</id>
-        <link href="https://zenn.dev/k_sone/articles/e0c08268986ac2"/>
-        <updated>2023-01-06T13:33:43.000Z</updated>
-        <summary type="html"><![CDATA[とりあえず結果
-40分くらいの動画で一旦文字起こししてとりあえずファインチューニングしてみた。
-いったん試しくらいでやったから適当だったが、その学習済みモデルで別動画の推論をした結果以下の結果になった
-
-クラロワ実況の一文
-正解の文章
-
-めっちゃしやすくてで迫撃にもアチャクイを当てられるでしょ だもうマジで環境でゴレとかにもまあポイズンウッドだから普通に強くてエリポンも別にディガーで潰せると三銃士が来ても勝てるロイホグ系もねゴーストアチャクイゴブリンウッドだからめっちゃ強いんですよ
-
-元のWhisperでpredictした文章
-
-めっちゃしやすくてで迫撃にもあ着いを当てられるでしょ ...]]></summary>
-        <author>
-            <name>sonken625</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 06. 集合]]></title>
-        <id>https://zenn.dev/kurokawa/articles/056345c41dc0dc</id>
-        <link href="https://zenn.dev/kurokawa/articles/056345c41dc0dc"/>
-        <updated>2023-01-06T12:08:42.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 06. 集合
-“paraparaparadise”と”paragraph”に含まれる文字bi-gramの集合を，それぞれ, XとYとして求め，XとYの和集合，積集合，差集合を求めよ．さらに，’se’というbi-gramがXおよびYに含まれるかどうかを調べよ．
-
- solution06.py
-def n_gram(target, n=2):
-    return [target[idx:idx + n] for idx in range(len(target) - n + 1)]
-
-text_x = 'paraparaparadise'
-text_y = 'paragraph...]]></summary>
-        <author>
-            <name>kurokawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Lambda ローカルでサンプルアプリを動かす]]></title>
-        <id>https://zenn.dev/nobumichi/articles/1616e54d42b5ec</id>
-        <link href="https://zenn.dev/nobumichi/articles/1616e54d42b5ec"/>
-        <updated>2023-01-06T11:32:25.000Z</updated>
-        <summary type="html"><![CDATA[前回の記事でLambdaのローカル開発環境を構築したので、今回はAWSチュートリアルのサンプルをビルドして動かしてみる。
-AWSのチュートリアルは下記を参考にする。
-https://docs.aws.amazon.com/ja_jp/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html
-前回執筆した記事は下記の通り。
-https://qiita.com/nobumichi/items/e876a448b7be21e7e51a
-
- 作業環境
-
-Window...]]></summary>
-        <author>
-            <name>のぶみち</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[構成元素を取り出し化合物を分類する]]></title>
-        <id>https://zenn.dev/pejpo/articles/70e9dc0ae59ca0</id>
-        <link href="https://zenn.dev/pejpo/articles/70e9dc0ae59ca0"/>
-        <updated>2023-01-06T08:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-以前、こちらの記事で、「分子式から元素記号を取り出すロジックを思いつけない」と記載しましたが、正規表現を使って達成できたので、記事にしました。
-「特定の元素を含む化合物を抽出する」際にも使用できますが、今回は、「候補化合物のリストから、指定した元素以外の元素を含む化合物を除く、というケースを取り上げます。
-「C, H, N, Oの他、Sは含んで良いけど、SiやPを含む化合物は除きたい」といった場合を想定しています。本記事では、SMILES記法での構造式から選別しますが、分子式の場合は、前処理が不要のため、内容の2. 以降を参照ください。
-
- 概要
-
-含んで良い元素をポジティ...]]></summary>
-        <author>
-            <name>Dr_O</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 05. n-gram]]></title>
-        <id>https://zenn.dev/kurokawa/articles/3c7889d540ea1e</id>
-        <link href="https://zenn.dev/kurokawa/articles/3c7889d540ea1e"/>
-        <updated>2023-01-06T07:22:23.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 05. n-gram
-与えられたシーケンス（文字列やリストなど）からn-gramを作る関数を作成せよ．この関数を用い，”I am an NLPer”という文から単語bi-gram，文字bi-gramを得よ．
-
- solution05.py
-def n_gram(target, n):
-    return [target[idx:idx + n] for idx in range(len(target) - n + 1)]
-
-text = 'I am an NLPer'
-for i in range(1, 4):
-    print(n_gram(text, i))#空白を...]]></summary>
-        <author>
-            <name>kurokawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2)  第1章: 準備運動 04. 元素記号]]></title>
-        <id>https://zenn.dev/kurokawa/articles/37dd9b9d10fa32</id>
-        <link href="https://zenn.dev/kurokawa/articles/37dd9b9d10fa32"/>
-        <updated>2023-01-06T06:29:48.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 04. 元素記号
-“Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Might Also Sign Peace Security Clause. Arthur King Can.”という文を単語に分解し，1, 5, 6, 7, 8, 9, 15, 16, 19番目の単語は先頭の1文字，それ以外の単語は先頭の2文字を取り出し，取り出した文字列から単語の位置（先頭から何番目の単語か）への連想配列（辞書型もしくはマップ型）を作成せよ．
-
- solution04.py
-# (1) コンマ(,)、ピリオ...]]></summary>
-        <author>
-            <name>kurokawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hubspotのカスタムコードを使ってカスタムオブジェクトとコンタクトを関連付ける]]></title>
-        <id>https://zenn.dev/readyfor_blog/articles/fd7f74fe13a014</id>
-        <link href="https://zenn.dev/readyfor_blog/articles/fd7f74fe13a014"/>
-        <updated>2023-01-06T06:15:05.000Z</updated>
-        <summary type="html"><![CDATA[この記事で分かること
-Hubspotのワークフローを使うと「新規作成」したオブジェクトを既存のオブジェクトに関連付けることができます。しかしワークフローでは既存のオブジェクト同士を関連付けることができません。
-このようなときに、カスタムコードを使うと既存のオブジェクト同士を関連付けることができます。ここではその方法をまとめます。
-
- 必要なこと
-
-
-Operations Hub Professional以上の契約
-あった方がいいこと
-
-
-カスタム コード ワークフロー アクション のスキル
-
-【新機能】カスタム コード アクションでPythonを使用可能です のスキル
-
-
-
-
- 手順...]]></summary>
-        <author>
-            <name>Shohei Urano</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 03. 円周率]]></title>
-        <id>https://zenn.dev/kurokawa/articles/38772df8adf2e9</id>
-        <link href="https://zenn.dev/kurokawa/articles/38772df8adf2e9"/>
-        <updated>2023-01-06T05:57:08.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 03. 円周率
-“Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics.”という文を単語に分解し，各単語の（アルファベットの）文字数を先頭から出現順に並べたリストを作成せよ．
-
- solution03.py
-# (1) コンマ(,)、ピリオド(.)を置換する
-# (2) 文を単語に分割する
-# (3) 各単語の文字数をカウントする
-
-original_text = "Now I need a drink, alcoholic of cours...]]></summary>
-        <author>
-            <name>kurokawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】インスタンス変数をタプル形式でテキストファイルに保存する方法と、読み込む方法]]></title>
-        <id>https://zenn.dev/shimotani/articles/0519af6ff4965b</id>
-        <link href="https://zenn.dev/shimotani/articles/0519af6ff4965b"/>
-        <updated>2023-01-06T05:45:21.000Z</updated>
-        <summary type="html"><![CDATA[インスタンスをリストで保持しているときに、それぞれのインスタンス変数をテキストファイルに保存する方法と、保存したテキストファイルからインスタンスを復元する方法のご紹介です。
-
- インスタンス変数をテキストファイルに保存する方法
-以下のようにProfileクラスがあってそのインスタンスをリストで保存している場合
-# Profileクラス
-class Profile:
-  def __init__(self, name, age, email):
-    self.name  = name
-    self.age   = age
-    self.email = email
-# Profi...]]></summary>
-        <author>
-            <name>shimotani</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 02. 「パトカー」＋「タクシー」＝「パタトクカシーー」]]></title>
-        <id>https://zenn.dev/kurokawa/articles/dce7bbc530ed93</id>
-        <link href="https://zenn.dev/kurokawa/articles/dce7bbc530ed93"/>
-        <updated>2023-01-06T04:56:09.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 02. 「パトカー」＋「タクシー」＝「パタトクカシーー」
-「パトカー」＋「タクシー」の文字を先頭から交互に連結して文字列「パタトクカシーー」を得よ．
-
- solution02.py
-text_p = "パトカー"
-text_t = "タクシー"
-
-ans = ""
-for i in range(len(text_p)):
-    ans += text_p[i] + text_t[i]
-
-print(ans)
-
-
- output
-パタトクカシーー
-
-この問題では、2つの文字の先頭から1文字ずつ取り出します。
-https://github.com/kurokawa5/nlp1...]]></summary>
-        <author>
-            <name>kurokawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 01. 「パタトクカシーー」]]></title>
-        <id>https://zenn.dev/kurokawa/articles/df1dad7701bfc4</id>
-        <link href="https://zenn.dev/kurokawa/articles/df1dad7701bfc4"/>
-        <updated>2023-01-06T03:59:48.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 01. 「パタトクカシーー」
-「パタトクカシーー」という文字列の1,3,5,7文字目を取り出して連結した文字列を得よ
-英語版だと「パタトクカシーー」が「schooled」となります。
-今回は「schooled」で挑戦してみました。
-
- solution01.py
-text = "schooled"
-print(text[::2])
-
-
- output
-shoe
-
-この問題では、文字列を逆順に並び替えます。
-Pythonではlistなどのシーケンスオブジェクトに対してスライスと呼ばれる操作で範囲を指定して要素を選択できます。スライスは以下のように3つの値(start, end...]]></summary>
-        <author>
-            <name>kurokawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第1章: 準備運動 00. 文字列の逆順]]></title>
-        <id>https://zenn.dev/kurokawa/articles/cf31a679a95020</id>
-        <link href="https://zenn.dev/kurokawa/articles/cf31a679a95020"/>
-        <updated>2023-01-05T14:56:54.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 00. 文字列の逆順
-文字列”stressed”の文字を逆に（末尾から先頭に向かって）並べた文字列を得よ．
-
- solution00.py
-# Sequence types (list, tuple, string, range) support slicing.
-# Therefore, you can sort in reverse order by setting text[::-1] in the slice operation.
-text = "stressed"
-print(text[::-1])
-
-# You can also use reversed() m...]]></summary>
         <author>
             <name>kurokawa</name>
         </author>
