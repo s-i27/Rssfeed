@@ -2,10 +2,288 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-02-06T01:37:51.798Z</updated>
+    <updated>2023-02-07T01:38:53.898Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Pythonで画像の表からテキストを取り出しCSVファイルにする]]></title>
+        <id>https://zenn.dev/arafipro/articles/2023-02-07-python-ocr</id>
+        <link href="https://zenn.dev/arafipro/articles/2023-02-07-python-ocr"/>
+        <updated>2023-02-06T23:22:18.000Z</updated>
+        <summary type="html"><![CDATA[まえがき
+先日、以下のようなツイートをしました。
+https://twitter.com/arafipro/status/1621535571675086850?s=20&t=ubi_jQYvlpm6phfHdcSYjA
+まとめると以下のような感じ
+!
+画像からテキストを読み取る➡️テキストファイル➡️CSVファイル➡️HTMLファイル
+
+せっかく実現できたのを自分だけ満足してもったいない。
+そこで記事にアウトプットしてみなさんと共有したいと思います。
+
+ 目的
+以下の画像の表からテキストを取り出しCSVファイルに編集します。
+ファイル名はimage.pngとします。
+
+ちな...]]></summary>
+        <author>
+            <name>MarginSaltDeveloper</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cloud loggingのシンクを使って、BQにJsonログを流し込む際のトラップと回避方法]]></title>
+        <id>https://zenn.dev/sugasuga/articles/73fa05d45ea3ad</id>
+        <link href="https://zenn.dev/sugasuga/articles/73fa05d45ea3ad"/>
+        <updated>2023-02-06T16:03:48.000Z</updated>
+        <summary type="html"><![CDATA[TL;DR
+Cloud loggingのシンクを使うと、Cloud loggingで収集したデータをBQ・GCS・pubsubに転送できる。
+BQへと転送される際に、ログがJsonの場合、自動でBQの構造型としてパースされる。そのため、いろいろJsonに情報を詰め込んでいると、テーブルのスキーマが壊れる。
+上記を回避するには、LogAnalytics機能つきのバケットへシンクしてからBQに転送するのがおすすめ
+
+ Cloud loggingのシンクとは
+Cloud Logging に入ってきたログは、シンクによって宛先であるログバケットや BQに振り分けられ、転送される。
+
+ 実際の...]]></summary>
+        <author>
+            <name>sugasuga</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonでlru_cacheを利用して、メモ化を実現する]]></title>
+        <id>https://zenn.dev/nosukey/articles/python_use_lru_cache</id>
+        <link href="https://zenn.dev/nosukey/articles/python_use_lru_cache"/>
+        <updated>2023-02-06T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[書くこと
+
+メモ化のような機能をpythonで書く
+
+
+ 利用する技術
+
+python
+functools.lru_cache
+
+
+ 方法論
+以下のようにメモ化したい関数の前に@lru_cacheを入れるだけ。
+from functools import lru_cache
+
+
+class Test:
+    # 中略
+    @lru_cache
+    def xxx(self):
+        return "cached_value"
+
+ 雑談
+記法としては、
+Rubyの @xxx ||=ではなく、memorizegemを使う感じに似ていますね。]]></summary>
+        <author>
+            <name>Nosukey</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DjangoでCustom Managerを利用して、Railsのfind_by風オブジェクト取得を実現する]]></title>
+        <id>https://zenn.dev/nosukey/articles/django_create_get_object_or_none</id>
+        <link href="https://zenn.dev/nosukey/articles/django_create_get_object_or_none"/>
+        <updated>2023-02-06T12:19:03.000Z</updated>
+        <summary type="html"><![CDATA[書くこと
+
+Ruby on Railsのfind_by風、簡易機能をDjangoで書く方法
+Djangoのget で ObjectDoesNotExistを握りつぶす方法
+
+
+ 利用する技術
+
+Django
+model.Manager
+
+
+ 今日のゴール
+このようなArticleモデルが定義されていたとき
+class Article(models.Model):
+    title = models.CharField(max_length=100)
+    # (省略)
+    is_active = models.BooleanField(default=True)
+呼び出し側で...]]></summary>
+        <author>
+            <name>Nosukey</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【無料】GPUがなくてもStable Diffusionで遊びたい！]]></title>
+        <id>https://zenn.dev/cp20/articles/stable-diffusion-webui-with-modal</id>
+        <link href="https://zenn.dev/cp20/articles/stable-diffusion-webui-with-modal"/>
+        <updated>2023-02-06T11:30:00.000Z</updated>
+        <summary type="html"><![CDATA[まえがき
+「GPUを持ってないけどAI絵を描いてみたい！」というお悩みを抱えている皆さん、Google Colabで満足していませんか？この記事ではModalを使うことでGoogle Colabより（きっと）優れたAI絵生成体験をGETする方法をご紹介します。
+!
+少し知識のある人向けの記事なのでご注意
+
+
+ What is Modal?
+
+イケメンなランディングページだね
+みんなが良く知るあの「モーダル」ではありません。名前の由来は謎ですが、「Your end-to-end stack for cloud compute」という謳い文句の通りクラウドコンピューティングツール(?)で...]]></summary>
+        <author>
+            <name>しーぴー</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-119｜A - Still TBD]]></title>
+        <id>https://zenn.dev/hyperdb/articles/d681573c4b9f9e</id>
+        <link href="https://zenn.dev/hyperdb/articles/d681573c4b9f9e"/>
+        <updated>2023-02-06T09:02:36.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-119 A - Still TBD
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = getString()
+
+    print('Heisei' if s <= '2019/04/30' else 'TBD')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-119｜B - Digital Gifts]]></title>
+        <id>https://zenn.dev/hyperdb/articles/5b44487a0cc503</id>
+        <link href="https://zenn.dev/hyperdb/articles/5b44487a0cc503"/>
+        <updated>2023-02-06T09:02:36.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-119 B - Digital Gifts
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getStringListRow(N):
+    return [list(input().split()) for _ in range(N)]
+
+
+def yen(a):
+    x, u = a
+
+    return float(x) if u == 'JPY' else 380000.0 * float(x)
+
+
+def main():
+    n = getInt()
+    d = getStrin...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TensorRTを使ってStableDiffusionを爆速にする（Windows編）]]></title>
+        <id>https://zenn.dev/fkunn1326/articles/c3d9d1d8606b04</id>
+        <link href="https://zenn.dev/fkunn1326/articles/c3d9d1d8606b04"/>
+        <updated>2023-02-06T08:50:57.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは、Fくんです。
+受験シーズンです...
+https://zenn.dev/ddpn08/articles/tensorrt-stable-diffusion
+これのwindows版ですね
+どのくらい速くなるとかLinuxとかColabでの実行方法は前の記事を見ていただいて...
+
+ Lsmith
+https://github.com/ddPn08/Lsmith
+TensorRTをGUIで扱いやすくするものがだだっこぱんださんから出てます。
+すぐwindows対応出ると思います
+ここから先はtensorrt repoのdemo-diffusion.pyを動かしたい人向けです
+
+ ...]]></summary>
+        <author>
+            <name>fkunn1326</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python_playwright 環境づくり]]></title>
+        <id>https://zenn.dev/rin_kusumistudy/articles/cdbfade8f0e8ff</id>
+        <link href="https://zenn.dev/rin_kusumistudy/articles/cdbfade8f0e8ff"/>
+        <updated>2023-02-06T07:32:55.000Z</updated>
+        <summary type="html"><![CDATA[はじめ、pythonとIDEをダウンロードします。
+①pythonインストール、64bit(パソコンのbitと合わせる)：https://pythonlinks.python.jp/en/index.html
+pythonの設定：https://www.python.jp/install/windows/install.html
+②Python IDE→PyCharmのインストール(Community)：https://www.jetbrains.com/pycharm/download/#section=windows
+PyCharmインストール手順：https://sukkiri.j...]]></summary>
+        <author>
+            <name>rin_kusumi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Sentence-BERTを用いた高速な類似文書検索]]></title>
+        <id>https://zenn.dev/skwbc/articles/sentence_bert_implementation</id>
+        <link href="https://zenn.dev/skwbc/articles/sentence_bert_implementation"/>
+        <updated>2023-02-06T05:05:36.000Z</updated>
+        <summary type="html"><![CDATA[概要
+BERTを使って高精度な類似文書検索を実現出来ると仕事に役立つのではと思い個人的に色々と実験していたのですが、結局仕事でこれを使う機会は無さそうなので供養のために実装と実験結果を記事にしたいと思います。
+この記事では、Sentence-BERT (以下、SBERTと呼ぶ) という手法について主に取り上げます。
+このSBERTという手法に注目したのは単純に以下のような理由からです。
+
+文書間の類似度を高精度に求めることが出来ると、高精度な類似文書検索が実現できる。
+BERTを使って文書類似度を求めると、非常に高精度だが非常に遅い。
+SBERTを用いると、高精度かつ高速に文書類似度...]]></summary>
+        <author>
+            <name>skwbc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Django】Pythonで作るRest API【１９User Serializer】]]></title>
+        <id>https://zenn.dev/web_life_ch/articles/cb67dad3ad70b3</id>
+        <link href="https://zenn.dev/web_life_ch/articles/cb67dad3ad70b3"/>
+        <updated>2023-02-06T03:34:47.000Z</updated>
+        <summary type="html"><![CDATA[【１９User Serializer】
+YouTube: https://youtu.be/wXcAo2jkQgY
+https://youtu.be/wXcAo2jkQgY
+今回は「User」のデータに関する処理を実装していくのですが、
+ビューを作成する前に、URLとシリアライザーの設定を行います。
+まずは「accounts」のフォルダ内に「urls.py」を作成します。
+
+myapp/accounts/urls.py
+from django.urls import path
+
+urlpatterns = [
+    # path('me/', helloWorld, name='m...]]></summary>
+        <author>
+            <name>Web Life CH</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[repl 特化 pythonでデータベースの探検をするのに快適 db.py]]></title>
+        <id>https://zenn.dev/karamawanu/articles/14e3fa2325e53c</id>
+        <link href="https://zenn.dev/karamawanu/articles/14e3fa2325e53c"/>
+        <updated>2023-02-06T03:11:41.000Z</updated>
+        <summary type="html"><![CDATA[replでの作業に特化した db.py を発見した。データベースの中身を探検するのに快適である。
+ほとんど知名度がないらしいので紹介する。
+https://pypi.org/project/db.py/
+https://github.com/yhat/db.py
+"repl"そのものの説明については、テキトーに検索してほしい。
+
+ 利用例
+例えば redmine のsqliteデータベースを探検する場合を示す。
+import db
+内部で多数の別ライブラリをインポートしてるため、例えば macbook air 2015 でも0.3秒程度の待ちがある。
+z = db.DB(filename...]]></summary>
+        <author>
+            <name>karamawanu</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Python の hid モジュールを理解する]]></title>
         <id>https://zenn.dev/elfmimi/articles/c85b113e3c4479</id>
@@ -7190,367 +7468,6 @@ df = pd.read_json('chapter03/jawiki-country.json.gz', lines=True, compression='i
 text_uk = df.query('title=="イギリス"')['text'].values[0]
 splited_text_uk = text_uk.split('\n')
 ans = list(filter(lambda x: '[Cate...]]></summary>
-        <author>
-            <name>kurokawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第3章: 正規表現 21. カテゴリ名を含む行を抽出]]></title>
-        <id>https://zenn.dev/kurokawa/articles/53e0c4f61d8801</id>
-        <link href="https://zenn.dev/kurokawa/articles/53e0c4f61d8801"/>
-        <updated>2023-01-08T13:28:45.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 21. カテゴリ名を含む行を抽出
-記事中でカテゴリ名を宣言している行を抽出せよ
-
- solution21.py
-import pandas as pd
-
-df = pd.read_json('chapter03/jawiki-country.json.gz', lines=True, compression='infer')
-text_uk = df.query('title=="イギリス"')['text'].values[0]
-
-splited_text_uk = text_uk.split('\n')
-ans = list(filter(lambda x: '[Cat...]]></summary>
-        <author>
-            <name>kurokawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[COROS(カロス)トレーニングハブのデータをAPI経由で取得する]]></title>
-        <id>https://zenn.dev/quiver/articles/304e1833b14ce9</id>
-        <link href="https://zenn.dev/quiver/articles/304e1833b14ce9"/>
-        <updated>2023-01-08T12:01:13.000Z</updated>
-        <summary type="html"><![CDATA[キプチョゲやキリアンが愛用しているスポーツウォッチCOROS(カロス)は、計測したデータをダッシュボードTraining Hubから閲覧できます。
-生成されたデータをシステマティックな取得したいことがありますが、残念ながら、Training Hubは公式なAPIが存在しません。
-そのため、ブラウザ(アプリ)閲覧時と同じ仕組みを使い、COROS Training HubからAPIでデータをcURL/Python経由で取得する方法を紹介します。
-
- 前提
-
-COROS Training Hubのアカウントを所持している
-2023/01/09時点の情報
-
-
- APIの流れ
-COROS Trai...]]></summary>
-        <author>
-            <name>quiver</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【たった1分】AtCoder初心者が初めて正解するため知っておくべきこと]]></title>
-        <id>https://zenn.dev/sobaotto/articles/2648e20d3ad41f</id>
-        <link href="https://zenn.dev/sobaotto/articles/2648e20d3ad41f"/>
-        <updated>2023-01-08T10:39:55.000Z</updated>
-        <summary type="html"><![CDATA[注釈
-自分が競プロを始めたばかりなので、問題を解く上で必要だと思ったことや気づきなどを随時まとめていこうと思います。
-
- 入力を受け取る方法
-
-入力
-
-
-N
-x1
-x2
-:
-xN
-
-
-入力例
-
-
-3
-2
-5
-4
-
-n = int(input())
-list=[input() for i in range(n)]
-
-print(list) # [2, 5, 4]
-
- 参考
-https://qiita.com/jamjamjam/items/e066b8c7bc85487c0785]]></summary>
-        <author>
-            <name>sobaotto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Visual StudioでPythonを使用する方法]]></title>
-        <id>https://zenn.dev/mom/articles/4fd7c02bcc9087</id>
-        <link href="https://zenn.dev/mom/articles/4fd7c02bcc9087"/>
-        <updated>2023-01-08T09:45:36.000Z</updated>
-        <summary type="html"><![CDATA[Python開発では、Visual Studioではなく、Visual Studio Codeを使用することが一般的ですが、C++などの開発経験が豊富で、Visual Studioに使い慣れた方がPythonを使いたい場合は、Visual Studioを選択したいかもしれません。
-そんな方のために、Visual StudioでPythonを実行するにあたり、最低限知っておくと、スムーズにPython実行までできる知識を以下にまとめています。
-
- 前提
-Visual Studioをインストール済みであること
-
- 準備
-Visual Studioは起動していない状態で、以下の手順に沿って、...]]></summary>
-        <author>
-            <name>TechStar</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-080｜A - Parking]]></title>
-        <id>https://zenn.dev/hyperdb/articles/f1b425cb431524</id>
-        <link href="https://zenn.dev/hyperdb/articles/f1b425cb431524"/>
-        <updated>2023-01-08T09:33:31.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-080 A - Parking
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    n, a, b = getIntMap()
-    c = n * a
-
-    print(c if c < b else b)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-079｜A - Good Integer]]></title>
-        <id>https://zenn.dev/hyperdb/articles/9365eef7818dde</id>
-        <link href="https://zenn.dev/hyperdb/articles/9365eef7818dde"/>
-        <updated>2023-01-08T09:33:31.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-078 A - Good Integer
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    n = list(getString())
-    n.sort()
-
-    print('Yes' if n[0] == n[1] and n[0] == n[2] else 'No')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-080｜B - Harshad Number]]></title>
-        <id>https://zenn.dev/hyperdb/articles/8e577692cde16a</id>
-        <link href="https://zenn.dev/hyperdb/articles/8e577692cde16a"/>
-        <updated>2023-01-08T09:33:30.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-080 B - Harshad Number
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    x = getInt()
-    l = map(int, list(str(x)))
-
-    print('Yes' if x % sum(l) == 0 else 'No')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-079｜B - Lucas Number]]></title>
-        <id>https://zenn.dev/hyperdb/articles/5fc1c75bbb986b</id>
-        <link href="https://zenn.dev/hyperdb/articles/5fc1c75bbb986b"/>
-        <updated>2023-01-08T09:33:30.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-079 B - Lucas Number
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    n = getInt()
-    l = [0] * (n + 1)
-
-    l[0] = 2
-    l[1] = 1
-    for i in range(2, n + 1):
-        l[i] = l[i - 1] + l[i - 2]
-    print(l[n])
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ESP32でUDP通信する方法を誰よりもわかりやすく解説　お試し編]]></title>
-        <id>https://zenn.dev/yuta_enginner/articles/2886f2b41a048f</id>
-        <link href="https://zenn.dev/yuta_enginner/articles/2886f2b41a048f"/>
-        <updated>2023-01-08T09:18:32.000Z</updated>
-        <summary type="html"><![CDATA[「esp32 UDP 方法」でググると、色々な記事がヒットしますが、断片的な情報しか書かれていない記事が多すぎます。
-また、ホストやポートなどで、いきなり「127.0.0.1」と書かれても、それが任意の数値なのか何か意味のある数値なのか解説されていないので、初心者にはあまりにも不親切です。
-そこで、この記事では工作をするために必要な情報を解説しつつ、読んだ人が誰でも作れることを目的に解説します。
-※ ぶっちゃけ、レイヤーとかプロトコルなんて工作する上ではどうでもいいので、その辺の解説はしません
-
- UDPとTCP どちらを選ぶか
-前提として、この記事に辿り着いた時点で、読者は「ESP32...]]></summary>
-        <author>
-            <name>Yuta</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第3章: 正規表現 20. JSONデータの読み込み]]></title>
-        <id>https://zenn.dev/kurokawa/articles/2865e205684475</id>
-        <link href="https://zenn.dev/kurokawa/articles/2865e205684475"/>
-        <updated>2023-01-08T08:55:19.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
-Wikipediaの記事を以下のフォーマットで書き出したファイルjawiki-country.json.gzがある．
-
-1行に1記事の情報がJSON形式で格納される
-各行には記事名が”title”キーに，記事本文が”text”キーの辞書オブジェクトに格納され，そのオブジェクトがJSON形式で書き出される
-ファイル全体はgzipで圧縮される
-
-以下の処理を行うプログラムを作成せよ．
-
-
- 20. JSONデータの読み込み
-Wikipedia記事のJSONファイルを読み込み，「イギリス」に関する記事本文を表示せよ．問題21-29では，ここで抽出した記事本文に対して実行せよ．
-
- ...]]></summary>
-        <author>
-            <name>kurokawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Windows 10】タスクスケジューラで定期的にプログラムを実行する]]></title>
-        <id>https://zenn.dev/eito_blog/articles/cf6fbfdc9314b1</id>
-        <link href="https://zenn.dev/eito_blog/articles/cf6fbfdc9314b1"/>
-        <updated>2023-01-08T08:49:29.000Z</updated>
-        <summary type="html"><![CDATA[このページではbatファイルを定期的（毎日15:00）に実行することを例に、設定方法を解説します。
-
- タスクスケジューラを開く
-Cortanaの検索窓に「タスクスケジューラ」と入力し、表示されたタスクスケジューラをクリックして開きます。
-
-
- タスクを作成する
-基本タスクの作成をクリックします。
-
-
- 基本タスクの作成
-任意の名前と説明を入力して次へをクリックします。
-
-
- トリガー
-任意の頻度を選択（本ページでは毎日を選択）し、次へをクリックします。
-
-任意の時間を設定（本ページでは15:00:00）し、次へをクリックします。
-
-プログラムの開始を選択し、次へをクリックします。
-
-...]]></summary>
-        <author>
-            <name>エイト</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 19. 各行の1コラム目の文字列の出現頻度を求め，〜]]></title>
-        <id>https://zenn.dev/kurokawa/articles/54b2c1f7b97963</id>
-        <link href="https://zenn.dev/kurokawa/articles/54b2c1f7b97963"/>
-        <updated>2023-01-08T05:33:22.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 19. 各行の1コラム目の文字列の出現頻度を求め，出現頻度の高い順に並べる
-各行の1列目の文字列の出現頻度を求め，その高い順に並べて表示せよ．確認にはcut, uniq, sortコマンドを用いよ．
-
- solution19.py
-import pandas as pd
-
-df = pd.read_csv('chapter02/popular-names.txt', sep='\t', header=None)
-print(df.iloc[:,0].value_counts())
-#print(df[0].value_counts())
-
-
- output
-James   ...]]></summary>
-        <author>
-            <name>kurokawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 18. 各行を3コラム目の数値の降順にソート]]></title>
-        <id>https://zenn.dev/kurokawa/articles/8eb084693fa70d</id>
-        <link href="https://zenn.dev/kurokawa/articles/8eb084693fa70d"/>
-        <updated>2023-01-08T04:57:30.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 18. 各行を3コラム目の数値の降順にソート
-各行を3コラム目の数値の逆順で整列せよ（注意: 各行の内容は変更せずに並び替えよ）．確認にはsortコマンドを用いよ（この問題はコマンドで実行した時の結果と合わなくてもよい）．
-
- solution18.py
-import pandas as pd
-
-df = pd.read_csv('chapter02/popular-names.txt', sep='\t', header=None)
-print(df.sort_values(2 ,ascending=False))
-
-
- output
-            0  1  ...]]></summary>
-        <author>
-            <name>kurokawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 17. １列目の文字列の異なり]]></title>
-        <id>https://zenn.dev/kurokawa/articles/ada4ad1ef9b260</id>
-        <link href="https://zenn.dev/kurokawa/articles/ada4ad1ef9b260"/>
-        <updated>2023-01-08T04:05:19.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 17. １列目の文字列の異なり
-1列目の文字列の種類（異なる文字列の集合）を求めよ．確認にはcut, sort, uniqコマンドを用いよ．
-
- solution17.py
-import pandas as pd
-
-df = pd.read_csv('chapter02/popular-names.txt', sep='\t', header=None)
-ans = list(set(df.iloc[:,0]))
-print(sorted(ans))
-
-
- output
-['Abigail', 'Aiden', 'Alexander', 'Alexis', 'Alice',...]]></summary>
         <author>
             <name>kurokawa</name>
         </author>

@@ -22,6 +22,430 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-02-06 datetime="2023-02-06T23:22:18.000Z">2023-02-06</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-02-06 datetime="2023-02-06T23:22:18.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/arafipro/articles/2023-02-07-python-ocr"
+                        open
+                      >
+                        <summary class="article-expander__title">Pythonで画像の表からテキストを取り出しCSVファイルにする</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/arafipro/articles/2023-02-07-python-ocr">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--UfaHEljO--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:MarginSaltDevel...%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25A7%25E7%2594%25BB%25E5%2583%258F%25E3%2581%25AE%25E8%25A1%25A8%25E3%2581%258B%25E3%2582%2589%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E5%258F%2596%25E3%2582%258A%25E5%2587%25BA%25E3%2581%2597CSV%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkV5bG4zYzRDaTR3UldhS01Ba3hQMDdvSUVNTHMxS0pub211T089czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>まえがき
+先日、以下のようなツイートをしました。
+https://twitter.com/arafipro/status/1621535571675086850?s&#x3D;20&amp;t&#x3D;ubi_jQYvlpm6phfHdcSYjA
+まとめると以下のような感じ
+!
+画像からテキストを読み取る➡️テキストファイル➡️CSVファイル➡️HTMLファイル
+
+せっかく実現できたのを自分だけ満足してもったいない。
+そこで記事にアウトプットしてみなさんと共有したいと思います。
+
+ 目的
+以下の画像の表からテキストを取り出しCSVファイルに編集します。
+ファイル名はimage.pngとします。
+
+ちな...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;18
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/sugasuga/articles/73fa05d45ea3ad"
+                        open
+                      >
+                        <summary class="article-expander__title">Cloud loggingのシンクを使って、BQにJsonログを流し込む際のトラップと回避方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sugasuga/articles/73fa05d45ea3ad">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--lB0TmRQP--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:sugasuga%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:Cloud%2520logging%25E3%2581%25AE%25E3%2582%25B7%25E3%2583%25B3%25E3%2582%25AF%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2580%2581BQ%25E3%2581%25ABJson%25E3%2583%25AD%25E3%2582%25B0%25E3%2582%2592%25E6%25B5%2581%25E3%2581%2597%25E8%25BE%25BC%25E3%2582%2580%25E9%259A%259B%25E3%2581%25AE%25E3%2583%2588%25E3%2583%25A9%25E3%2583%2583%25E3%2583%2597%25E3%2581%25A8%25E5%259B%259E%25E9%2581%25BF%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1CZ0pGbVRjSC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3YjRiY2I1MjMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>TL;DR
+Cloud loggingのシンクを使うと、Cloud loggingで収集したデータをBQ・GCS・pubsubに転送できる。
+BQへと転送される際に、ログがJsonの場合、自動でBQの構造型としてパースされる。そのため、いろいろJsonに情報を詰め込んでいると、テーブルのスキーマが壊れる。
+上記を回避するには、LogAnalytics機能つきのバケットへシンクしてからBQに転送するのがおすすめ
+
+ Cloud loggingのシンクとは
+Cloud Logging に入ってきたログは、シンクによって宛先であるログバケットや BQに振り分けられ、転送される。
+
+ 実際の...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nosukey/articles/python_use_lru_cache"
+                        open
+                      >
+                        <summary class="article-expander__title">pythonでlru_cacheを利用して、メモ化を実現する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nosukey/articles/python_use_lru_cache">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--popfIKrf--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Nosukey%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:python%25E3%2581%25A7lru_cache%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E3%2580%2581%25E3%2583%25A1%25E3%2583%25A2%25E5%258C%2596%25E3%2582%2592%25E5%25AE%259F%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1iUGRpOGhPeC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5OGI2ZmFjZmEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>書くこと
+
+メモ化のような機能をpythonで書く
+
+
+ 利用する技術
+
+python
+functools.lru_cache
+
+
+ 方法論
+以下のようにメモ化したい関数の前に@lru_cacheを入れるだけ。
+from functools import lru_cache
+
+
+class Test:
+    # 中略
+    @lru_cache
+    def xxx(self):
+        return &quot;cached_value&quot;
+
+ 雑談
+記法としては、
+Rubyの @xxx ||&#x3D;ではなく、memorizegemを使う感じに似ていますね。</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nosukey/articles/django_create_get_object_or_none"
+                        open
+                      >
+                        <summary class="article-expander__title">DjangoでCustom Managerを利用して、Railsのfind_by風オブジェクト取得を実現する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nosukey/articles/django_create_get_object_or_none">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--rGfg34A4--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Nosukey%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:Django%25E3%2581%25A7Custom%2520Manager%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E3%2580%2581Rails%25E3%2581%25AEfind_by%25E9%25A2%25A8%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E5%258F%2596%25E5%25BE%2597%25E3%2582%2592%25E5%25AE%259F%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1iUGRpOGhPeC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5OGI2ZmFjZmEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>書くこと
+
+Ruby on Railsのfind_by風、簡易機能をDjangoで書く方法
+Djangoのget で ObjectDoesNotExistを握りつぶす方法
+
+
+ 利用する技術
+
+Django
+model.Manager
+
+
+ 今日のゴール
+このようなArticleモデルが定義されていたとき
+class Article(models.Model):
+    title &#x3D; models.CharField(max_length&#x3D;100)
+    # (省略)
+    is_active &#x3D; models.BooleanField(default&#x3D;True)
+呼び出し側で...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/cp20/articles/stable-diffusion-webui-with-modal"
+                        open
+                      >
+                        <summary class="article-expander__title">【無料】GPUがなくてもStable Diffusionで遊びたい！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/cp20/articles/stable-diffusion-webui-with-modal">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--s_wPhIpj--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%2597%25E3%2583%25BC%25E3%2581%25B4%25E3%2583%25BC%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E7%2584%25A1%25E6%2596%2599%25E3%2580%2591GPU%25E3%2581%258C%25E3%2581%25AA%25E3%2581%258F%25E3%2581%25A6%25E3%2582%2582Stable%2520Diffusion%25E3%2581%25A7%25E9%2581%258A%25E3%2581%25B3%25E3%2581%259F%25E3%2581%2584%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lkMENtX3dVYnd6b0NyR1g2aEFVaWdkWnZ3dDJPb2g3cVpEWElEUlE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>まえがき
+「GPUを持ってないけどAI絵を描いてみたい！」というお悩みを抱えている皆さん、Google Colabで満足していませんか？この記事ではModalを使うことでGoogle Colabより（きっと）優れたAI絵生成体験をGETする方法をご紹介します。
+!
+少し知識のある人向けの記事なのでご注意
+
+
+ What is Modal?
+
+イケメンなランディングページだね
+みんなが良く知るあの「モーダル」ではありません。名前の由来は謎ですが、「Your end-to-end stack for cloud compute」という謳い文句の通りクラウドコンピューティングツール(?)で...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/d681573c4b9f9e"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-119｜A - Still TBD</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/d681573c4b9f9e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--4y8nfziC--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-119%25EF%25BD%259CA%2520-%2520Still%2520TBD%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-119 A - Still TBD
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s &#x3D; getString()
+
+    print(&#x27;Heisei&#x27; if s &lt;&#x3D; &#x27;2019/04/30&#x27; else &#x27;TBD&#x27;)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/5b44487a0cc503"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-119｜B - Digital Gifts</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/5b44487a0cc503">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--M6G9y4ct--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-119%25EF%25BD%259CB%2520-%2520Digital%2520Gifts%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-119 B - Digital Gifts
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getStringListRow(N):
+    return [list(input().split()) for _ in range(N)]
+
+
+def yen(a):
+    x, u &#x3D; a
+
+    return float(x) if u &#x3D;&#x3D; &#x27;JPY&#x27; else 380000.0 * float(x)
+
+
+def main():
+    n &#x3D; getInt()
+    d &#x3D; getStrin...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/fkunn1326/articles/c3d9d1d8606b04"
+                        open
+                      >
+                        <summary class="article-expander__title">TensorRTを使ってStableDiffusionを爆速にする（Windows編）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/fkunn1326/articles/c3d9d1d8606b04">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--IZlp8Pgo--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:fkunn1326%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:TensorRT%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6StableDiffusion%25E3%2582%2592%25E7%2588%2586%25E9%2580%259F%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25EF%25BC%2588Windows%25E7%25B7%25A8%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3B1bTZLR0IyMTdFb08ybmcwUFlvM0QzT1laQ01XWFF0SzNwV2hzPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>こんにちは、Fくんです。
+受験シーズンです...
+https://zenn.dev/ddpn08/articles/tensorrt-stable-diffusion
+これのwindows版ですね
+どのくらい速くなるとかLinuxとかColabでの実行方法は前の記事を見ていただいて...
+
+ Lsmith
+https://github.com/ddPn08/Lsmith
+TensorRTをGUIで扱いやすくするものがだだっこぱんださんから出てます。
+すぐwindows対応出ると思います
+ここから先はtensorrt repoのdemo-diffusion.pyを動かしたい人向けです
+
+ ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/rin_kusumistudy/articles/cdbfade8f0e8ff"
+                        open
+                      >
+                        <summary class="article-expander__title">python_playwright 環境づくり</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/rin_kusumistudy/articles/cdbfade8f0e8ff">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--2gzlByeF--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:rin_kusumi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:python_playwright%2520%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A5%25E3%2581%258F%25E3%2582%258A%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNnJabkpzcldLVzcydHVTdk42Rk4zeEp2MnMzbFVvVmU2VGFSNkxpUT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめ、pythonとIDEをダウンロードします。
+①pythonインストール、64bit(パソコンのbitと合わせる)：https://pythonlinks.python.jp/en/index.html
+pythonの設定：https://www.python.jp/install/windows/install.html
+②Python IDE→PyCharmのインストール(Community)：https://www.jetbrains.com/pycharm/download/#section&#x3D;windows
+PyCharmインストール手順：https://sukkiri.j...</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/skwbc/articles/sentence_bert_implementation"
+                        open
+                      >
+                        <summary class="article-expander__title">Sentence-BERTを用いた高速な類似文書検索</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/skwbc/articles/sentence_bert_implementation">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--eg04oZ2n--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:skwbc%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Sentence-BERT%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E9%25AB%2598%25E9%2580%259F%25E3%2581%25AA%25E9%25A1%259E%25E4%25BC%25BC%25E6%2596%2587%25E6%259B%25B8%25E6%25A4%259C%25E7%25B4%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvcy5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+BERTを使って高精度な類似文書検索を実現出来ると仕事に役立つのではと思い個人的に色々と実験していたのですが、結局仕事でこれを使う機会は無さそうなので供養のために実装と実験結果を記事にしたいと思います。
+この記事では、Sentence-BERT (以下、SBERTと呼ぶ) という手法について主に取り上げます。
+このSBERTという手法に注目したのは単純に以下のような理由からです。
+
+文書間の類似度を高精度に求めることが出来ると、高精度な類似文書検索が実現できる。
+BERTを使って文書類似度を求めると、非常に高精度だが非常に遅い。
+SBERTを用いると、高精度かつ高速に文書類似度...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;36
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/web_life_ch/articles/cb67dad3ad70b3"
+                        open
+                      >
+                        <summary class="article-expander__title">【Django】Pythonで作るRest API【１９User Serializer】</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/web_life_ch/articles/cb67dad3ad70b3">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--DEHBBULr--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Web%2520Life%2520CH%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590Django%25E3%2580%2591Python%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258BRest%2520API%25E3%2580%2590%25EF%25BC%2591%25EF%25BC%2599User%2520Serializer%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUl0YnZtbWNjTWFMM3dyd2x3VE5sVVZjTlhmZHEzZzF2QnJfMUJMSkJrN049czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>【１９User Serializer】
+YouTube: https://youtu.be/wXcAo2jkQgY
+https://youtu.be/wXcAo2jkQgY
+今回は「User」のデータに関する処理を実装していくのですが、
+ビューを作成する前に、URLとシリアライザーの設定を行います。
+まずは「accounts」のフォルダ内に「urls.py」を作成します。
+
+myapp/accounts/urls.py
+from django.urls import path
+
+urlpatterns &#x3D; [
+    # path(&#x27;me/&#x27;, helloWorld, name&#x3D;&#x27;m...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/karamawanu/articles/14e3fa2325e53c"
+                        open
+                      >
+                        <summary class="article-expander__title">repl 特化 pythonでデータベースの探検をするのに快適 db.py</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/karamawanu/articles/14e3fa2325e53c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--0XLvq4Nv--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:karamawanu%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:repl%2520%25E7%2589%25B9%25E5%258C%2596%2520python%25E3%2581%25A7%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2599%25E3%2583%25BC%25E3%2582%25B9%25E3%2581%25AE%25E6%258E%25A2%25E6%25A4%259C%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25AB%25E5%25BF%25AB%25E9%2581%25A9%2520db.py%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2laSzJJYTRGZWZqV2RySzJqdHFlWnBmaE5HZ3BHLWxid2NUX0NLWHF3PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>replでの作業に特化した db.py を発見した。データベースの中身を探検するのに快適である。
+ほとんど知名度がないらしいので紹介する。
+https://pypi.org/project/db.py/
+https://github.com/yhat/db.py
+&quot;repl&quot;そのものの説明については、テキトーに検索してほしい。
+
+ 利用例
+例えば redmine のsqliteデータベースを探検する場合を示す。
+import db
+内部で多数の別ライブラリをインポートしてるため、例えば macbook air 2015 でも0.3秒程度の待ちがある。
+z &#x3D; db.DB(filename...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-02-05 datetime="2023-02-05T13:42:18.000Z">2023-02-05</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-02-05 datetime="2023-02-05T13:42:18.000Z"></time>
           </button>
@@ -11125,507 +11549,6 @@ ans &#x3D; list(filter(lambda x: &#x27;[Cate...</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kurokawa/articles/53e0c4f61d8801"
-                        open
-                      >
-                        <summary class="article-expander__title">言語処理100本ノック 2020 (Rev 2) 第3章: 正規表現 21. カテゴリ名を含む行を抽出</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kurokawa/articles/53e0c4f61d8801">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--T74HJsya--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC3%25E7%25AB%25A0%253A%2520%25E6%25AD%25A3%25E8%25A6%258F%25E8%25A1%25A8%25E7%258F%25BE%252021.%2520%25E3%2582%25AB%25E3%2583%2586%25E3%2582%25B4%25E3%2583%25AA%25E5%2590%258D%25E3%2582%2592%25E5%2590%25AB%25E3%2582%2580%25E8%25A1%258C%25E3%2582%2592%25E6%258A%25BD%25E5%2587%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>問題
-
- 21. カテゴリ名を含む行を抽出
-記事中でカテゴリ名を宣言している行を抽出せよ
-
- solution21.py
-import pandas as pd
-
-df &#x3D; pd.read_json(&#x27;chapter03/jawiki-country.json.gz&#x27;, lines&#x3D;True, compression&#x3D;&#x27;infer&#x27;)
-text_uk &#x3D; df.query(&#x27;title&#x3D;&#x3D;&quot;イギリス&quot;&#x27;)[&#x27;text&#x27;].values[0]
-
-splited_text_uk &#x3D; text_uk.split(&#x27;\n&#x27;)
-ans &#x3D; list(filter(lambda x: &#x27;[Cat...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/quiver/articles/304e1833b14ce9"
-                        open
-                      >
-                        <summary class="article-expander__title">COROS(カロス)トレーニングハブのデータをAPI経由で取得する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/quiver/articles/304e1833b14ce9">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--04VGEGTa--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:quiver%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:COROS%2528%25E3%2582%25AB%25E3%2583%25AD%25E3%2582%25B9%2529%25E3%2583%2588%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%25E3%2583%258F%25E3%2583%2596%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592API%25E7%25B5%258C%25E7%2594%25B1%25E3%2581%25A7%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1oQ0FMSXMyMy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZlZTA5M2I2ZTMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>キプチョゲやキリアンが愛用しているスポーツウォッチCOROS(カロス)は、計測したデータをダッシュボードTraining Hubから閲覧できます。
-生成されたデータをシステマティックな取得したいことがありますが、残念ながら、Training Hubは公式なAPIが存在しません。
-そのため、ブラウザ(アプリ)閲覧時と同じ仕組みを使い、COROS Training HubからAPIでデータをcURL/Python経由で取得する方法を紹介します。
-
- 前提
-
-COROS Training Hubのアカウントを所持している
-2023/01/09時点の情報
-
-
- APIの流れ
-COROS Trai...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/sobaotto/articles/2648e20d3ad41f"
-                        open
-                      >
-                        <summary class="article-expander__title">【たった1分】AtCoder初心者が初めて正解するため知っておくべきこと</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sobaotto/articles/2648e20d3ad41f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--WsOg8P5G--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:sobaotto%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E3%2581%259F%25E3%2581%25A3%25E3%2581%259F1%25E5%2588%2586%25E3%2580%2591AtCoder%25E5%2588%259D%25E5%25BF%2583%25E8%2580%2585%25E3%2581%258C%25E5%2588%259D%25E3%2582%2581%25E3%2581%25A6%25E6%25AD%25A3%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%25E3%2581%259F%25E3%2582%2581%25E7%259F%25A5%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%258A%25E3%2581%258F%25E3%2581%25B9%25E3%2581%258D%25E3%2581%2593%25E3%2581%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2djODJLZlJXUzE4dUZnYWFxZkYyRTBMeHlnbjVoX3RVYWxEQlZNPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>注釈
-自分が競プロを始めたばかりなので、問題を解く上で必要だと思ったことや気づきなどを随時まとめていこうと思います。
-
- 入力を受け取る方法
-
-入力
-
-
-N
-x1
-x2
-:
-xN
-
-
-入力例
-
-
-3
-2
-5
-4
-
-n &#x3D; int(input())
-list&#x3D;[input() for i in range(n)]
-
-print(list) # [2, 5, 4]
-
- 参考
-https://qiita.com/jamjamjam/items/e066b8c7bc85487c0785</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mom/articles/4fd7c02bcc9087"
-                        open
-                      >
-                        <summary class="article-expander__title">Visual StudioでPythonを使用する方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mom/articles/4fd7c02bcc9087">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--v9TCgdXl--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:TechStar%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Visual%2520Studio%25E3%2581%25A7Python%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKd3VqeWpoTWdoSFNNRlZjRTd4QlNxZ2owdEd1MGtIellERHA2cVc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Python開発では、Visual Studioではなく、Visual Studio Codeを使用することが一般的ですが、C++などの開発経験が豊富で、Visual Studioに使い慣れた方がPythonを使いたい場合は、Visual Studioを選択したいかもしれません。
-そんな方のために、Visual StudioでPythonを実行するにあたり、最低限知っておくと、スムーズにPython実行までできる知識を以下にまとめています。
-
- 前提
-Visual Studioをインストール済みであること
-
- 準備
-Visual Studioは起動していない状態で、以下の手順に沿って、...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/f1b425cb431524"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-080｜A - Parking</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/f1b425cb431524">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--2JcVqi69--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-080%25EF%25BD%259CA%2520-%2520Parking%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-080 A - Parking
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    n, a, b &#x3D; getIntMap()
-    c &#x3D; n * a
-
-    print(c if c &lt; b else b)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/9365eef7818dde"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-079｜A - Good Integer</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/9365eef7818dde">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--q_-wQGpD--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-079%25EF%25BD%259CA%2520-%2520Good%2520Integer%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-078 A - Good Integer
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    n &#x3D; list(getString())
-    n.sort()
-
-    print(&#x27;Yes&#x27; if n[0] &#x3D;&#x3D; n[1] and n[0] &#x3D;&#x3D; n[2] else &#x27;No&#x27;)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/8e577692cde16a"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-080｜B - Harshad Number</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/8e577692cde16a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--DzWPlxFd--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-080%25EF%25BD%259CB%2520-%2520Harshad%2520Number%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-080 B - Harshad Number
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    x &#x3D; getInt()
-    l &#x3D; map(int, list(str(x)))
-
-    print(&#x27;Yes&#x27; if x % sum(l) &#x3D;&#x3D; 0 else &#x27;No&#x27;)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/5fc1c75bbb986b"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-079｜B - Lucas Number</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/5fc1c75bbb986b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--6v8KKFKG--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-079%25EF%25BD%259CB%2520-%2520Lucas%2520Number%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-079 B - Lucas Number
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    n &#x3D; getInt()
-    l &#x3D; [0] * (n + 1)
-
-    l[0] &#x3D; 2
-    l[1] &#x3D; 1
-    for i in range(2, n + 1):
-        l[i] &#x3D; l[i - 1] + l[i - 2]
-    print(l[n])
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yuta_enginner/articles/2886f2b41a048f"
-                        open
-                      >
-                        <summary class="article-expander__title">ESP32でUDP通信する方法を誰よりもわかりやすく解説　お試し編</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yuta_enginner/articles/2886f2b41a048f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--eND6-sJv--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Yuta%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:ESP32%25E3%2581%25A7UDP%25E9%2580%259A%25E4%25BF%25A1%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%25E3%2582%2592%25E8%25AA%25B0%25E3%2582%2588%25E3%2582%258A%25E3%2582%2582%25E3%2582%258F%25E3%2581%258B%25E3%2582%258A%25E3%2582%2584%25E3%2581%2599%25E3%2581%258F%25E8%25A7%25A3%25E8%25AA%25AC%25E3%2580%2580%25E3%2581%258A%25E8%25A9%25A6%25E3%2581%2597%25E7%25B7%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pSNWN1eWVkem1YMEtUUi1tRUg2VklaU0NtMmkwREp1SU1Ra3lpVnc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>「esp32 UDP 方法」でググると、色々な記事がヒットしますが、断片的な情報しか書かれていない記事が多すぎます。
-また、ホストやポートなどで、いきなり「127.0.0.1」と書かれても、それが任意の数値なのか何か意味のある数値なのか解説されていないので、初心者にはあまりにも不親切です。
-そこで、この記事では工作をするために必要な情報を解説しつつ、読んだ人が誰でも作れることを目的に解説します。
-※ ぶっちゃけ、レイヤーとかプロトコルなんて工作する上ではどうでもいいので、その辺の解説はしません
-
- UDPとTCP どちらを選ぶか
-前提として、この記事に辿り着いた時点で、読者は「ESP32...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kurokawa/articles/2865e205684475"
-                        open
-                      >
-                        <summary class="article-expander__title">言語処理100本ノック 2020 (Rev 2) 第3章: 正規表現 20. JSONデータの読み込み</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kurokawa/articles/2865e205684475">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--pOSIzZaW--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC3%25E7%25AB%25A0%253A%2520%25E6%25AD%25A3%25E8%25A6%258F%25E8%25A1%25A8%25E7%258F%25BE%252020.%2520JSON%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E8%25AA%25AD%25E3%2581%25BF%25E8%25BE%25BC%25E3%2581%25BF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>問題
-
-Wikipediaの記事を以下のフォーマットで書き出したファイルjawiki-country.json.gzがある．
-
-1行に1記事の情報がJSON形式で格納される
-各行には記事名が”title”キーに，記事本文が”text”キーの辞書オブジェクトに格納され，そのオブジェクトがJSON形式で書き出される
-ファイル全体はgzipで圧縮される
-
-以下の処理を行うプログラムを作成せよ．
-
-
- 20. JSONデータの読み込み
-Wikipedia記事のJSONファイルを読み込み，「イギリス」に関する記事本文を表示せよ．問題21-29では，ここで抽出した記事本文に対して実行せよ．
-
- ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/eito_blog/articles/cf6fbfdc9314b1"
-                        open
-                      >
-                        <summary class="article-expander__title">【Windows 10】タスクスケジューラで定期的にプログラムを実行する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/eito_blog/articles/cf6fbfdc9314b1">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--uNMPEOTq--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2582%25A8%25E3%2582%25A4%25E3%2583%2588%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590Windows%252010%25E3%2580%2591%25E3%2582%25BF%25E3%2582%25B9%25E3%2582%25AF%25E3%2582%25B9%25E3%2582%25B1%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25A9%25E3%2581%25A7%25E5%25AE%259A%25E6%259C%259F%25E7%259A%2584%25E3%2581%25AB%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%25A0%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1fZG9XSFdDLS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E1ZTg3MmJkZDUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>このページではbatファイルを定期的（毎日15:00）に実行することを例に、設定方法を解説します。
-
- タスクスケジューラを開く
-Cortanaの検索窓に「タスクスケジューラ」と入力し、表示されたタスクスケジューラをクリックして開きます。
-
-
- タスクを作成する
-基本タスクの作成をクリックします。
-
-
- 基本タスクの作成
-任意の名前と説明を入力して次へをクリックします。
-
-
- トリガー
-任意の頻度を選択（本ページでは毎日を選択）し、次へをクリックします。
-
-任意の時間を設定（本ページでは15:00:00）し、次へをクリックします。
-
-プログラムの開始を選択し、次へをクリックします。
-
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kurokawa/articles/54b2c1f7b97963"
-                        open
-                      >
-                        <summary class="article-expander__title">言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 19. 各行の1コラム目の文字列の出現頻度を求め，〜</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kurokawa/articles/54b2c1f7b97963">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ytVZr_Nl--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252019.%2520%25E5%2590%2584%25E8%25A1%258C%25E3%2581%25AE1%25E3%2582%25B3%25E3%2583%25A9%25E3%2583%25A0%25E7%259B%25AE%25E3%2581%25AE%25E6%2596%2587%25E5%25AD%2597%25E5%2588%2597%25E3%2581%25AE%25E5%2587%25BA%25E7%258F%25BE%25E9%25A0%25BB%25E5%25BA%25A6%25E3%2582%2592%25E6%25B1%2582%25E3%2582%2581%25EF%25BC%258C%25E3%2580%259C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>問題
-
- 19. 各行の1コラム目の文字列の出現頻度を求め，出現頻度の高い順に並べる
-各行の1列目の文字列の出現頻度を求め，その高い順に並べて表示せよ．確認にはcut, uniq, sortコマンドを用いよ．
-
- solution19.py
-import pandas as pd
-
-df &#x3D; pd.read_csv(&#x27;chapter02/popular-names.txt&#x27;, sep&#x3D;&#x27;\t&#x27;, header&#x3D;None)
-print(df.iloc[:,0].value_counts())
-#print(df[0].value_counts())
-
-
- output
-James   ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kurokawa/articles/8eb084693fa70d"
-                        open
-                      >
-                        <summary class="article-expander__title">言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 18. 各行を3コラム目の数値の降順にソート</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kurokawa/articles/8eb084693fa70d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--SUz3eLYS--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252018.%2520%25E5%2590%2584%25E8%25A1%258C%25E3%2582%25923%25E3%2582%25B3%25E3%2583%25A9%25E3%2583%25A0%25E7%259B%25AE%25E3%2581%25AE%25E6%2595%25B0%25E5%2580%25A4%25E3%2581%25AE%25E9%2599%258D%25E9%25A0%2586%25E3%2581%25AB%25E3%2582%25BD%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>問題
-
- 18. 各行を3コラム目の数値の降順にソート
-各行を3コラム目の数値の逆順で整列せよ（注意: 各行の内容は変更せずに並び替えよ）．確認にはsortコマンドを用いよ（この問題はコマンドで実行した時の結果と合わなくてもよい）．
-
- solution18.py
-import pandas as pd
-
-df &#x3D; pd.read_csv(&#x27;chapter02/popular-names.txt&#x27;, sep&#x3D;&#x27;\t&#x27;, header&#x3D;None)
-print(df.sort_values(2 ,ascending&#x3D;False))
-
-
- output
-            0  1  ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kurokawa/articles/ada4ad1ef9b260"
-                        open
-                      >
-                        <summary class="article-expander__title">言語処理100本ノック 2020 (Rev 2) 第2章: UNIXコマンド 17. １列目の文字列の異なり</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kurokawa/articles/ada4ad1ef9b260">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--fHYTrsWD--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kurokawa%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25202020%2520%2528Rev%25202%2529%2520%25E7%25AC%25AC2%25E7%25AB%25A0%253A%2520UNIX%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%252017.%2520%25EF%25BC%2591%25E5%2588%2597%25E7%259B%25AE%25E3%2581%25AE%25E6%2596%2587%25E5%25AD%2597%25E5%2588%2597%25E3%2581%25AE%25E7%2595%25B0%25E3%2581%25AA%25E3%2582%258A%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS11RkZhNjdHay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM5NDA0Mjc5ZGMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>問題
-
- 17. １列目の文字列の異なり
-1列目の文字列の種類（異なる文字列の集合）を求めよ．確認にはcut, sort, uniqコマンドを用いよ．
-
- solution17.py
-import pandas as pd
-
-df &#x3D; pd.read_csv(&#x27;chapter02/popular-names.txt&#x27;, sep&#x3D;&#x27;\t&#x27;, header&#x3D;None)
-ans &#x3D; list(set(df.iloc[:,0]))
-print(sorted(ans))
-
-
- output
-[&#x27;Abigail&#x27;, &#x27;Aiden&#x27;, &#x27;Alexander&#x27;, &#x27;Alexis&#x27;, &#x27;Alice&#x27;,...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -11633,8 +11556,8 @@ print(sorted(ans))
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4099525109">
-        <time id="build-timestamp" datetime="2023-02-06T01:37:51.767Z">2023-02-06T01:37:51.767Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4109643793">
+        <time id="build-timestamp" datetime="2023-02-07T01:38:53.866Z">2023-02-07T01:38:53.866Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
