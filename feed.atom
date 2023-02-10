@@ -2,10 +2,188 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-02-09T01:42:02.652Z</updated>
+    <updated>2023-02-10T01:47:24.960Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[【Python】木の直径]]></title>
+        <id>https://zenn.dev/tamlog06/articles/50240d6de1c6e7</id>
+        <link href="https://zenn.dev/tamlog06/articles/50240d6de1c6e7"/>
+        <updated>2023-02-09T15:24:22.000Z</updated>
+        <summary type="html"><![CDATA[木の直径
+木の単純パスの長さの最大値の事を、木の直径と言います。
+例えば、以下のグラフであれば、
+
+頂点１と４（または５）を繋ぐ単純パスが最も長いものであるので、このグラフの直径は３です。
+
+ O(N^2)の解法
+頂点間のパスが最も長いものを見つければ良いので、BFSやDFS等を用いて、全ての頂点間の距離を距離を求めてあげれば、その最大値が木の直径になります。ただし、これではN \sim 10^5程度になると解けません。
+
+ O(N)の解法
+木の直径を求めることは、O(N)で可能です。最短経路を2回求める事で、これが達成できます。
+
+頂点１からの最短経路が最も長い頂点uを求める。
+頂...]]></summary>
+        <author>
+            <name>tamlog06</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DRFでUpdateAPIViewとListSerializerを利用して、Bulk Updateを実現する]]></title>
+        <id>https://zenn.dev/nosukey/articles/drf_bulk_update_list_serializ</id>
+        <link href="https://zenn.dev/nosukey/articles/drf_bulk_update_list_serializ"/>
+        <updated>2023-02-09T12:17:10.000Z</updated>
+        <summary type="html"><![CDATA[書くこと
+
+一度のリクエストで複数のデータ更新ができるView, Serializerの定義
+更新時はBulk Updateするものとして、update queryは1件だけ発行
+ListSerializerを継承した、汎用的なBulkUpdateListSerializerの定義
+BulkUpdateListSerializerの活用法
+
+
+ 利用する技術
+
+Django Rest Framework
+rest_framework.generics.UpdateAPIView
+serializers.ModelSerializer
+serializers.ListSerialize...]]></summary>
+        <author>
+            <name>Nosukey</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Streamlitを試す（インストールからSreamlitCloudへのデプロイまで）]]></title>
+        <id>https://zenn.dev/mopinfish/articles/try-streamlit</id>
+        <link href="https://zenn.dev/mopinfish/articles/try-streamlit"/>
+        <updated>2023-02-09T05:30:11.000Z</updated>
+        <summary type="html"><![CDATA[tags: tech survey
+
+
+
+ References
+
+StreamlitでWebアプリ開発！インストールからデプロイまで徹底解説
+STREAMLITを活用してデータ可視化アプリを作ろう （パート1）
+STREAMLITを活用してデータ可視化アプリを作ろう （パート2）
+
+
+ Source
+作成したソースはすべて下記に置いてあります。
+
+Github
+
+
+ Motivation
+Herokuが有料化したことに伴い、個人的なちょっとしたツールをホスティングできる代替となるPaasを探していました。
+Pythonによる数理最適化勉強会でStreamlitおよびそれをホスティングで...]]></summary>
+        <author>
+            <name>Otsuka Noboru</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Django】Pythonで作るRest API【２２Token Views】]]></title>
+        <id>https://zenn.dev/web_life_ch/articles/a0c07ff48799c3</id>
+        <link href="https://zenn.dev/web_life_ch/articles/a0c07ff48799c3"/>
+        <updated>2023-02-09T04:07:55.000Z</updated>
+        <summary type="html"><![CDATA[【２２Token Views】
+YouTube: https://youtu.be/JnDJt2kCAtE
+https://youtu.be/JnDJt2kCAtE
+今回は前回実装しなかった「url.py」の設定部分について解説します。
+https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html#project-configuration
+まずは「myapp」の「url.py」に上記のビューとパスを追加します。
+こちらは今回「myapp」に追加していますが、
+「accoun...]]></summary>
+        <author>
+            <name>Web Life CH</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-122｜B - ATCoder]]></title>
+        <id>https://zenn.dev/hyperdb/articles/ec985ac3dc6845</id>
+        <link href="https://zenn.dev/hyperdb/articles/ec985ac3dc6845"/>
+        <updated>2023-02-09T04:07:24.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-122 B - ATCoder
+
+
+
+ 提出結果
+import re
+
+
+def getString():
+    return input()
+
+
+def main():
+    s = getString()
+
+    pattern = r'^([ACGT]{1,}).*'
+
+    l = 0
+    for i in range(len(s)):
+        m = re.search(pattern, s[i:])
+        if m:
+            x = len(m.group(1))
+            l = x i...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-122｜A - Double Helix]]></title>
+        <id>https://zenn.dev/hyperdb/articles/3341cdc07ca7cf</id>
+        <link href="https://zenn.dev/hyperdb/articles/3341cdc07ca7cf"/>
+        <updated>2023-02-09T04:07:23.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-122 A - Double Helix
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    b = getString()
+    l = {'A': 'T', 'C': 'G', 'G': 'C', 'T': 'A'}
+
+    print(l[b])
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ChatGPT]ソートプログラムをPythonで書いてもらう]]></title>
+        <id>https://zenn.dev/isi00141/articles/624f50c8577e81</id>
+        <link href="https://zenn.dev/isi00141/articles/624f50c8577e81"/>
+        <updated>2023-02-08T23:49:31.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+ChatGPT(対話型のテキスト生成ツール)サービスでソートプログラムをPythonで書いてもらいました。
+対象は「バブルソート」「マージソート」「クイックソート」です。
+ここでは前提として
+・ChatGPTのアカウントを持っている
+・Python3がインストールされている。
+こととします。
+（参考）ChatGPTのホームページ
+https://openai.com/blog/chatgpt/
+
+ 1.バブルソートの作成
+ChatGPTで以下のように質問します。
+>>10個の数列のバブルソートをPythonで書いて
+ChatGPTは以下のように回答してくれました...]]></summary>
+        <author>
+            <name>ISI</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[python.h No such file or directory に出会った]]></title>
         <id>https://zenn.dev/apuspac/articles/no-such-python-h</id>
@@ -6824,374 +7002,6 @@ Node.js の方が情報量は多そうですが、Python でもできるので�
 DynamoDB Streams 経由でメール送信用の L...]]></summary>
         <author>
             <name>hmatsu47</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Severless Frameworkで構築するLambda関数にエラー監視ツールSentryを導入する]]></title>
-        <id>https://zenn.dev/m1kan1/articles/e9804debe9e920</id>
-        <link href="https://zenn.dev/m1kan1/articles/e9804debe9e920"/>
-        <updated>2023-01-11T12:29:08.000Z</updated>
-        <summary type="html"><![CDATA[Severless Frameworkで構築するLambda関数にSentryを導入する方法について記載します。
-Lambda関数はPythonを使用しています。
-導入したソースコードはgithubに載せています。
-
- Sentryとは
-Sentryとは、フロントからバックエンドまで、アプリケーションで発生したエラーを監視できるツールです。
-https://sentry.io/welcome/
-
- 事前準備
-
-Sentryアカウントを作成します
-プロジェクトを作成します
-サインアップしてログインすると、初めにこのような画面が表示されました。
-
-
-今回はServerlessのLambda(...]]></summary>
-        <author>
-            <name>m1kan1</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第4章: 形態素解析 38. ヒストグラム]]></title>
-        <id>https://zenn.dev/kurokawa/articles/7162ee3bb96a95</id>
-        <link href="https://zenn.dev/kurokawa/articles/7162ee3bb96a95"/>
-        <updated>2023-01-11T11:11:33.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 38. ヒストグラム
-単語の出現頻度のヒストグラムを描け．ただし，横軸は出現頻度を表し，1から単語の出現頻度の最大値までの線形目盛とする．縦軸はx軸で示される出現頻度となった単語の異なり数（種類数）である．
-
- solution38.py
-import itertools
-from collections import Counter
-from collections import defaultdict
-import matplotlib.pyplot as plt
-import japanize_matplotlib
-
-def parse_mecab(block):
- ...]]></summary>
-        <author>
-            <name>kurokawa5</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第4章: 形態素解析 37. 「猫」と共起頻度の高い上位10語]]></title>
-        <id>https://zenn.dev/kurokawa/articles/0534aa32189a5f</id>
-        <link href="https://zenn.dev/kurokawa/articles/0534aa32189a5f"/>
-        <updated>2023-01-11T10:54:31.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 37. 「猫」と共起頻度の高い上位10語
-「猫」とよく共起する（共起頻度が高い）10語とその出現頻度をグラフ（例えば棒グラフなど）で表示せよ．
-
- solution37.py
-import itertools
-from collections import Counter
-from collections import defaultdict
-import matplotlib.pyplot as plt
-import japanize_matplotlib
-
-def parse_mecab(block):
-    res = []
-    for line in bloc...]]></summary>
-        <author>
-            <name>kurokawa5</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[「肉汁餃子のダンダダン」の店舗情報をWebスクレイピングして地図上に可視化してみる]]></title>
-        <id>https://zenn.dev/gai_ds/articles/06d3a8354ebe1b</id>
-        <link href="https://zenn.dev/gai_ds/articles/06d3a8354ebe1b"/>
-        <updated>2023-01-11T09:41:44.000Z</updated>
-        <summary type="html"><![CDATA[概要
-
-「最近ダンダダンていう居酒屋よく見るな〜」と思い、試しに地図上に可視化してみました。
-肉汁餃子のダンダダンは餃子が美味しい居酒屋です。
-餃子アイスも美味しいです。
-
-https://www.dandadan.jp/
-
- 手順
-1. ダンダダンのサイトから店舗情報をスクレイピング
-2. 住所から緯度経度を取得(ジオコーディング)
-3. kepler.glで可視化
-
- 1. ダンダダンのサイトから店舗情報をスクレイピング
-まずはダンダダンのホームページの店舗情報から店舗名と住所をスクレイピングしたいと思います。
-GoogleCoraboratoryを用いてスクレイピングをします。...]]></summary>
-        <author>
-            <name>ガイ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-084｜A - New Year]]></title>
-        <id>https://zenn.dev/hyperdb/articles/7bef95325ad968</id>
-        <link href="https://zenn.dev/hyperdb/articles/7bef95325ad968"/>
-        <updated>2023-01-11T08:27:15.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-084 A - New Year
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    m = getInt()
-
-    print(48 - m)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-084｜B - Postal Code]]></title>
-        <id>https://zenn.dev/hyperdb/articles/3a06137ed53c36</id>
-        <link href="https://zenn.dev/hyperdb/articles/3a06137ed53c36"/>
-        <updated>2023-01-11T08:27:14.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-084 B - Postal Code
-
-
-
- 提出結果
-import re
-
-
-def getIntMap():
-    return map(int, input().split())
-
-
-def getString():
-    return input()
-
-
-def main():
-    a, b = getIntMap()
-    s = getString()
-
-    c = r'[0-9]{' + str(a) + '}-[0-9]{' + str(b) + '}'
-    m = re.match(c, s)
-
-    print('Ye...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第4章: 形態素解析 36. 頻度上位10語]]></title>
-        <id>https://zenn.dev/kurokawa/articles/6915c80bfe73b7</id>
-        <link href="https://zenn.dev/kurokawa/articles/6915c80bfe73b7"/>
-        <updated>2023-01-11T08:26:30.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 36. 頻度上位10語
-出現頻度が高い10語とその出現頻度をグラフ（例えば棒グラフなど）で表示せよ．
-
- solution36.py
-import itertools
-from collections import Counter
-from collections import defaultdict
-import matplotlib.pyplot as plt
-import japanize_matplotlib
-
-def parse_mecab(block):
-    res = []
-    for line in block.split('\n'):
-      ...]]></summary>
-        <author>
-            <name>kurokawa5</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[最新のYOLOv8 が公開されたので試してみる]]></title>
-        <id>https://zenn.dev/takeguchi/articles/8e93b2dee6381d</id>
-        <link href="https://zenn.dev/takeguchi/articles/8e93b2dee6381d"/>
-        <updated>2023-01-11T08:26:11.000Z</updated>
-        <summary type="html"><![CDATA[最新のYOLOv8がUltralyticsより公開されました。まだ論文がarxivに公開されていないらしく情報が少ないですが、とりあえず試してみることにします。
-https://github.com/ultralytics/ultralytics
-ドキュメントをパッと見てまず思ったのがYOLOv8がPythonのパッケージとして配布されていることですかね。https://docs.ultralytics.com によると,YOLOv8では以前のYOLOを切り替えることができるみたいです。これは拡張性とかかなり期待できそうです！
-早速bus.jpgでテスト。
-$ pip install u...]]></summary>
-        <author>
-            <name>tttakeh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pyenvとpipenvで、快適Python生活（Windows向け）]]></title>
-        <id>https://zenn.dev/sql_geinin/articles/29f2b0a5c55db2</id>
-        <link href="https://zenn.dev/sql_geinin/articles/29f2b0a5c55db2"/>
-        <updated>2023-01-11T07:38:11.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Windowsで、複数バージョンのPython扱う「pyenv」と
-フォルダごとに仮想環境を立ててライブラリ等を管理する「pipenv」を導入し
-快適なPython生活を手に入れることが目標です。
-
- 背景
-これまで、Pythonのインストールといえば「Anaconda」をインストールすることが定石でした。
-Anacondaには、numpyやpandasといった主要なライブラリや
-Jupyter Notebook（今はJupyter Labですね）といったツールがデフォルトで入っており
-さらには、フォルダごとに環境を作ったりということもやってくれて便利でした。
-しかし、Anac...]]></summary>
-        <author>
-            <name>SQL芸人</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第4章: 形態素解析 35. 単語の出現頻度]]></title>
-        <id>https://zenn.dev/kurokawa/articles/4019a27e79381b</id>
-        <link href="https://zenn.dev/kurokawa/articles/4019a27e79381b"/>
-        <updated>2023-01-11T07:30:53.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 35. 単語の出現頻度
-文章中に出現する単語とその出現頻度を求め，出現頻度の高い順に並べよ．
-
- solution35.py
-import itertools
-from collections import Counter
-from collections import defaultdict
-
-def parse_mecab(block):
-    res = []
-    for line in block.split('\n'):
-        if line == '':
-            return res
-        (surface, attr)...]]></summary>
-        <author>
-            <name>kurokawa5</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】Webで使えるPython 基礎編【３リスト】]]></title>
-        <id>https://zenn.dev/web_life_ch/articles/2456c7851bc910</id>
-        <link href="https://zenn.dev/web_life_ch/articles/2456c7851bc910"/>
-        <updated>2023-01-11T05:59:20.000Z</updated>
-        <summary type="html"><![CDATA[【３リスト】
-YouTube: https://youtu.be/GRV2AqziZso
-https://youtu.be/GRV2AqziZso
-今回はPythonの「リスト」について解説します。
-こちらはjavascriptの配列のようなものになります。
-
-main.py
-persons = ["taro", "jiro", "saburo", "shiro"]
-
-# print(persons)
-# print(persons[1])
-
-# for v in persons:
-#   print(v)
-
-# persons[2] = "hanako"
-# persons.app...]]></summary>
-        <author>
-            <name>Web Life CH</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第4章: 形態素解析 34. 名詞の連接]]></title>
-        <id>https://zenn.dev/kurokawa/articles/d6ec1df77b95df</id>
-        <link href="https://zenn.dev/kurokawa/articles/d6ec1df77b95df"/>
-        <updated>2023-01-11T04:21:51.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 34. 名詞の連接
-名詞の連接（連続して出現する名詞）を最長一致で抽出せよ．
-
- solution34.py
-def parse_mecab(block):
-    res = []
-    for line in block.split('\n'):
-        if line == '':
-            return res
-        (surface, attr) = line.split('\t')
-        attr = attr.split(',')
-        lineDict = {
-            'surface':...]]></summary>
-        <author>
-            <name>kurokawa5</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第4章: 形態素解析 33. 「AのB」]]></title>
-        <id>https://zenn.dev/kurokawa/articles/f12654deb756bf</id>
-        <link href="https://zenn.dev/kurokawa/articles/f12654deb756bf"/>
-        <updated>2023-01-11T02:53:41.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 33. 「AのB」
-2つの名詞が「の」で連結されている名詞句を抽出せよ．
-
- solution33.py
-def parse_mecab(block):
-    res = []
-    for line in block.split('\n'):
-        if line == '':
-            return res
-        (surface, attr) = line.split('\t')
-        attr = attr.split(',')
-        lineDict = {
-            'surface': s...]]></summary>
-        <author>
-            <name>kurokawa5</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第4章: 形態素解析 32. 動詞の基本形]]></title>
-        <id>https://zenn.dev/kurokawa/articles/f31a533c9e1b52</id>
-        <link href="https://zenn.dev/kurokawa/articles/f31a533c9e1b52"/>
-        <updated>2023-01-10T16:32:28.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 32. 動詞の基本形
-動詞の基本形をすべて抽出せよ．
-
- solution32.py
-def parse_mecab(block):
-    res = []
-    for line in block.split('\n'):
-        if line == '':
-            return res
-        (surface, attr) = line.split('\t')
-        attr = attr.split(',')
-        lineDict = {
-            'surface': surface,
-  ...]]></summary>
-        <author>
-            <name>kurokawa5</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[言語処理100本ノック 2020 (Rev 2) 第4章: 形態素解析 31. 動詞]]></title>
-        <id>https://zenn.dev/kurokawa/articles/17b36db9712a26</id>
-        <link href="https://zenn.dev/kurokawa/articles/17b36db9712a26"/>
-        <updated>2023-01-10T14:51:59.000Z</updated>
-        <summary type="html"><![CDATA[問題
-
- 31. 動詞
-動詞の表層形をすべて抽出せよ．
-
- solution31.py
-def parse_mecab(block):
-    res = []
-    for line in block.split('\n'):
-        if line == '':
-            return res
-        (surface, attr) = line.split('\t')
-        attr = attr.split(',')
-        lineDict = {
-            'surface': surface,
-      ...]]></summary>
-        <author>
-            <name>kurokawa5</name>
         </author>
     </entry>
 </feed>
