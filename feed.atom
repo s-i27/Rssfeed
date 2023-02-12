@@ -2,10 +2,502 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-02-11T01:35:51.420Z</updated>
+    <updated>2023-02-12T01:44:58.230Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[プログレスバーをファイル出力する]]></title>
+        <id>https://zenn.dev/bee2/articles/af30e36251e5f5</id>
+        <link href="https://zenn.dev/bee2/articles/af30e36251e5f5"/>
+        <updated>2023-02-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[プログレスバー (Progress Bar)
+下の様に処理の進捗状況をアニメーションっぽく表示する機能です:
+
+コードは以下:
+
+prog.py
+from tqdm import tqdm
+import time
+
+for i in tqdm(range(10)):
+    time.sleep(1)
+print("tqdm finished")
+
+参考: tqdmでプログレスバーを表示させる
+
+
+ やりたいこと
+これをターミナルだけでなくログファイルにも出力したい。
+
+ 問題点
+以下の様に、単に標準出力をファイル出力すると:
+python3 prog.py 2>&1 ...]]></summary>
+        <author>
+            <name>bee2</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[DRF]エンドポイントに含まれる複合ユニークキーを利用して単一レコードを取得する]]></title>
+        <id>https://zenn.dev/nosukey/articles/drf_use_multipe_field_lookup_mixin</id>
+        <link href="https://zenn.dev/nosukey/articles/drf_use_multipe_field_lookup_mixin"/>
+        <updated>2023-02-11T14:15:58.000Z</updated>
+        <summary type="html"><![CDATA[書くこと
+
+DRFのViewに標準搭載されているlookup_fieldに似た機能として、lookup_fieldsを実現するmixinの実装
+
+
+lookup_fieldは単一キーによるレコード取得(<--標準搭載)
+
+lookup_fieldsでは複数キーによるレコード取得(<--実現する!)
+
+
+mixinを利用したViewファイルの記述例
+
+
+ 利用する技術
+
+Django REST Framework
+rest_framework.generics
+
+
+ 想定シチュエーション
+複合ユニークキーが含まれていて、この複合ユニークキーを使ったレコード取得をしたい。
+u...]]></summary>
+        <author>
+            <name>Nosukey</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Instagram Gragh API取得手順]]></title>
+        <id>https://zenn.dev/eito_blog/articles/25863b3844ece7</id>
+        <link href="https://zenn.dev/eito_blog/articles/25863b3844ece7"/>
+        <updated>2023-02-11T14:03:00.000Z</updated>
+        <summary type="html"><![CDATA[Instagram Graph APIを利用することでInstagram上のアカウント情報などを取得することができます。
+本記事ではInstagram Graph APIの取得手順について解説していきます。
+
+ プロアカウントに切り替える
+設定からアカウントを選択
+
+プロアカウントに切り替えるを選択
+
+自分に合った情報を入力してください。
+途中でアカウントタイプを選択する部分がありますが、本記事ではクリエイタータイプを選択しました。
+
+ FacebookとInstagramの連携
+PCからFacebookにログインします。
+ログイン後、設定 > ページをクリックします。
+
+Fac...]]></summary>
+        <author>
+            <name>エイト</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[AtCoder]ABC289 repo]]></title>
+        <id>https://zenn.dev/ulxsth/articles/82d582760a359a</id>
+        <link href="https://zenn.dev/ulxsth/articles/82d582760a359a"/>
+        <updated>2023-02-11T13:40:16.000Z</updated>
+        <summary type="html"><![CDATA[https://atcoder.jp/contests/abc289
+
+ A - flip
+s = input()
+
+for i in range(len(s)):
+    print("0" if s[i] == "1" else "1", end="")
+    
+print("\n")
+
+ B - レ
+複数の無向グラフを帰りがけ順で出力するだけ
+n, m = list(map(int, input().split()))
+a = list(map(int, input().split()))
+nums = [i for i in range(1, n+1)]
+
+while len(...]]></summary>
+        <author>
+            <name>仮病</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Liner.ai]オブジェクト検出でインコを検出してみる！]]></title>
+        <id>https://zenn.dev/watson_sei/articles/c08ad1b62735f3</id>
+        <link href="https://zenn.dev/watson_sei/articles/c08ad1b62735f3"/>
+        <updated>2023-02-11T13:13:04.000Z</updated>
+        <summary type="html"><![CDATA[Liner.aiについて
+Liner は、ML モデルを簡単にトレーニングできる無料のツールです。トレーニング データを取得し、統合しやすい ML モデルを提供します。コーディングや機械学習の専門知識は必要ありません。
+
+ 対象OS
+Windows
+Mac (Apple, Intel)
+Linux
+
+ やってみる
+今回はインコの画像をトレーニングさせてオブジェクト検出をしてみます。
+Liner.aiが初めての人は前回の記事を一読してから試してみてください！
+
+ アノーテーションデータ作成
+今回は、オブジェクト検出をするためにデータセットの画像からインコだけを抽出したXMLファイルが必...]]></summary>
+        <author>
+            <name>Watson-Sei</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[画像生成AI StableDiffusion触ってみた]]></title>
+        <id>https://zenn.dev/bonsai_engineer/articles/2752a91d25bbac</id>
+        <link href="https://zenn.dev/bonsai_engineer/articles/2752a91d25bbac"/>
+        <updated>2023-02-11T12:59:19.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+ちょっと簡単に画像生成できるAIないかなと調べたところHugging Faceの画像生成AI StableDiffusionがでてきたので実装してみた。
+環境はGPU使いたかったため、Colabで行うことにする。
+
+ Stable Diffusionとは
+Stable DiffusionはLMU MunichのMachine Vision and Learningの研究者によって開発されたLatent Diffusion modelモデルの画像生成AIらしい。
+テキストを入力し、学習済みのAIモデルが自動で画像を生成してくれる。
+例えば、Flower and Sunと入力す...]]></summary>
+        <author>
+            <name>盆栽エンジニア</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonでfor文の後にelseを使う]]></title>
+        <id>https://zenn.dev/yunkai/articles/python-for-else</id>
+        <link href="https://zenn.dev/yunkai/articles/python-for-else"/>
+        <updated>2023-02-11T12:14:34.000Z</updated>
+        <summary type="html"><![CDATA[Pythonではforブロックの後にelseを使うことができます。
+例えば、forブロックの中でフラグを立てて、forブロックの後でフラグを確認するようなことを、elseブロックで行うことができます。
+forブロックの後のelseブロックは、forが最後まで実行されたときに、実行されます。
+しかし、forブロックの中でbreakを使ってforを抜けた場合は、elseブロックは実行されません。
+for i in range(5):
+    print(i)
+else:
+    print("loop done")
+
+# 出力
+# 0
+# 1
+# 2
+# 3
+# 4
+# loop done
+...]]></summary>
+        <author>
+            <name>yunkai</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChatGPT（OpenAI）環境をインストール]]></title>
+        <id>https://zenn.dev/ingress/articles/7b3335609f824e</id>
+        <link href="https://zenn.dev/ingress/articles/7b3335609f824e"/>
+        <updated>2023-02-11T11:27:41.000Z</updated>
+        <summary type="html"><![CDATA[CentOSにChatGPT（OpenAI）のAPIにアクセスする環境をセットアップしてみる
+
+ 背景
+PlaygroundからChatGPTを使うのもいいけど、やっぱりPythonからChatGPTのAPI（正確には裏でGPT-3と呼ばれるAIのモデルが動いています）をコールして返答を得たかったのでアプリケーションの環境を手順に従ってセットアップしてみました。
+
+ インストール
+今回はCentOSにPythonでセットアップします。
+!
+pipモジュールのインストールで互換性エラーが出てしまうため、Pythonのバージョンは3.10固定で行いました。もし違うバージョンでインストール...]]></summary>
+        <author>
+            <name>クラウド職人J</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python]]></title>
+        <id>https://zenn.dev/jonchon_u/articles/f7701964fc3bb8</id>
+        <link href="https://zenn.dev/jonchon_u/articles/f7701964fc3bb8"/>
+        <updated>2023-02-11T11:20:32.000Z</updated>
+        <summary type="html"><![CDATA[できること と おすすめ
+
+AI・機械学習  <-ｵｽｽﾒ
+
+画像処理
+時系列解析
+自然言語処理
+
+
+データ分析(データサイエンス)  <-ｵｽｽﾒ
+業務効率化・自動化  <-ｵｽｽﾒ
+WEBスクレイピング(WEBページ上から情報を収集する技術)  <-ｵｽｽﾒ
+WEBアプリケーション
+デスクトップアプリ
+ブロックチェーン
+最近はNode.jsでの実装が多い
+
+
+ ライブラリ
+
+ AI・機械学習系
+
+Keras
+TensorFlow
+PyTorch
+scilit-learn
+
+
+ データ分析系
+
+NumPy
+Pandas
+scilit-learn
+Matpl...]]></summary>
+        <author>
+            <name>jonchon</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DiscordとLINEをPython+FastAPI+Dockerで連携させる【その3】LINEからDiscordへの画像]]></title>
+        <id>https://zenn.dev/maguro_alterna/articles/34a220e834a5cb</id>
+        <link href="https://zenn.dev/maguro_alterna/articles/34a220e834a5cb"/>
+        <updated>2023-02-11T08:35:50.000Z</updated>
+        <summary type="html"><![CDATA[挨拶
+こんにちは。マグロです。
+こちらの続きとなります。
+https://zenn.dev/maguro_alterna/articles/65848d6f96ed30
+今回はLINEから画像をDiscordに送ります。
+
+ 背景
+こちらの記事の通り、LINEはアップロードされたファイルはバイナリデータでサーバーに保存され、一定時間で削除されます。
+https://zenn.dev/maguro_alterna/articles/21706a293a8eeb
+今回は上記の記事同様、Gyazoを使用してDiscord側に共有させます。
+必須ではありませんが、記事の内容をやっておくと、流...]]></summary>
+        <author>
+            <name>マグロ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GPUクラウドを使ってStable Diffusion Web UIを手軽に体験]]></title>
+        <id>https://zenn.dev/yoneapp/articles/a942f17ad7dbe8</id>
+        <link href="https://zenn.dev/yoneapp/articles/a942f17ad7dbe8"/>
+        <updated>2023-02-11T08:24:32.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+筆者は、Stable Diffusion自体を動かしたことがなかったのですが
+SNSで流れてくる素敵なAIイラストを見て
+自分でもやってみたいなーと思いまして色々調べました。
+手軽に試したいと考えた上で最近は
+SDWebUI(Stable Diffusion Web UI) が流行りであり
+LoRA を使ってイラストの傾向を補正するという事が行われているのかなと思いました。
+ただGPUなども重要らしく、PC環境を用意するのなかなか大変です。
+そこで本記事では Paperspace というクラウドサービスで
+ちゃちゃっと Stable Diffusion Web UI を起動...]]></summary>
+        <author>
+            <name>よねあぷ@AIコミュ運営</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonの複数バージョンを同時に使い分ける]]></title>
+        <id>https://zenn.dev/ingress/articles/4c403abf027e44</id>
+        <link href="https://zenn.dev/ingress/articles/4c403abf027e44"/>
+        <updated>2023-02-11T08:13:20.000Z</updated>
+        <summary type="html"><![CDATA[Pythonの複数バージョンを同時に使い分ける
+
+ 背景
+ChatGPTのAPIに接続するために環境を自宅のCentOSにインストールしようとしたところ、既にインストールしてあるPythonのバージョン3.6.8ではpipでモジュールをインストールする際に特定のモジュールとの互換性がないエラーでコケてしまう。なぜかPython 3.10を決め打ちで要求されるので仕方なくWindowsにPythonをインストールして使ってみたがやっぱり不便で仕方がないのでCentOSのPythonのバージョンを複数同時に使い分けられたらいいのでは？と思い調べるとpyenvなるツールがあるらしい。
+
+ ...]]></summary>
+        <author>
+            <name>クラウド職人J</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[オープンソースで文章要約と翻訳、音声合成をさせてみた【PEGASUS/GoogleTextToSpeech/GoogleTrans】]]></title>
+        <id>https://zenn.dev/kentaroszk/articles/6ad19b54c9e7b3</id>
+        <link href="https://zenn.dev/kentaroszk/articles/6ad19b54c9e7b3"/>
+        <updated>2023-02-11T07:12:22.000Z</updated>
+        <summary type="html"><![CDATA[概要
+テキストファイルを要約して、音声合成してくれるプログラムです。
+要点だけをまとめてくれるので、用途はビジネスマンや学生が長い文章を読む時間がない時に、さらっと把握する時に使えると思います。。
+言語対応としては、英語と日本語の両方に対応しており、
+インプット：英語 or 日本語
+アウトプット：英語 or 日本語
+を可変させることができます。
+特に、インプットに関しては英語か日本語かを自動で判定してくれるので、プログラム実行時に明示する必要がありません。
+プログラムの処理の流れは下の図のような流れとなっています。
+
+コードの全文はGitHubにあります。
+
+ 環境
+GoogleCo...]]></summary>
+        <author>
+            <name>KENTAROSZK</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonのコンテキストの仕組みを使って処理時間を良い感じに表示する]]></title>
+        <id>https://zenn.dev/tanagumo/articles/280c33cc28f8ec</id>
+        <link href="https://zenn.dev/tanagumo/articles/280c33cc28f8ec"/>
+        <updated>2023-02-11T06:36:47.000Z</updated>
+        <summary type="html"><![CDATA[プログラムの処理時間を計測したいようなケースがたまにあります。処理が簡単な場合は
+import time
+
+def some_func():
+    ...
+    
+b = time.perf_counter()
+some_func()
+print(f'{time_perf_counter() - b} secs')
+とかで十分なのですが
+def foo():
+    bar()
+    
+def bar():
+    baz1()
+    baz2()
+    
+def baz1():
+    ....
+    
+def baz2():
+    ....
+のようになってくると（そして...]]></summary>
+        <author>
+            <name>tanagumo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-124｜A - Buttons]]></title>
+        <id>https://zenn.dev/hyperdb/articles/cbf6100bfcae7c</id>
+        <link href="https://zenn.dev/hyperdb/articles/cbf6100bfcae7c"/>
+        <updated>2023-02-11T03:35:08.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-124 A - Buttons
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b = getIntMap()
+
+    print(max([a + b, a * 2 -1, b * 2 - 1]))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-124｜B - Great Ocean View]]></title>
+        <id>https://zenn.dev/hyperdb/articles/9d57fd69e580ec</id>
+        <link href="https://zenn.dev/hyperdb/articles/9d57fd69e580ec"/>
+        <updated>2023-02-11T03:35:08.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-124 B - Great Ocean View
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n = getInt()
+    h = getIntList()
+
+    c = 1
+    for i in range(1, len(h)):
+        x = max(h[:i])
+        if x <= h[i]:
+      ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-125｜B - Resale]]></title>
+        <id>https://zenn.dev/hyperdb/articles/5c6a36e21297f4</id>
+        <link href="https://zenn.dev/hyperdb/articles/5c6a36e21297f4"/>
+        <updated>2023-02-11T03:35:08.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-125 B - Resale
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n = getInt()
+    v = getIntList()
+    c = getIntList()
+
+    r = 0
+    for i in range(len(v)):
+        x = v[i] - c[i]
+        r += x if x &g...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-125｜A - Biscuit Generator]]></title>
+        <id>https://zenn.dev/hyperdb/articles/14a355b1041170</id>
+        <link href="https://zenn.dev/hyperdb/articles/14a355b1041170"/>
+        <updated>2023-02-11T03:35:07.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-125 A - Biscuit Generator
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b, t = getIntMap()
+
+    print(t // a * b)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Django】Pythonで作るRest API【２４Authorization Bearer】]]></title>
+        <id>https://zenn.dev/web_life_ch/articles/bac9e1338a08c7</id>
+        <link href="https://zenn.dev/web_life_ch/articles/bac9e1338a08c7"/>
+        <updated>2023-02-11T02:59:28.000Z</updated>
+        <summary type="html"><![CDATA[【２４Authorization Bearer】
+YouTube: https://youtu.be/66feAviHjQg
+https://youtu.be/66feAviHjQg
+今回は前回設定したパーミッションを「Postman」を使用して
+テストを行います。
+https://www.postman.com/downloads/
+Postmanが起動できましたら
+認証が通っていない状態で、
+「http://localhost:8000/accounts/me」
+こちらに「GET」リクエストを送信します。
+認証が通っていませんので、
+「"detail": "Authenticat...]]></summary>
+        <author>
+            <name>Web Life CH</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[はじめてのFlask]]></title>
         <id>https://zenn.dev/coco9122/articles/flask-startup-coco9122</id>
@@ -6812,134 +7304,6 @@ AtCoderの常設中コンテストの中に「アルゴリズムと数学  演�
 整数Nが与えられるので、りんごとみかんを合わ...]]></summary>
         <author>
             <name>とりごん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-087｜B - Coins]]></title>
-        <id>https://zenn.dev/hyperdb/articles/a0d878e6585e59</id>
-        <link href="https://zenn.dev/hyperdb/articles/a0d878e6585e59"/>
-        <updated>2023-01-13T09:28:12.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-087 B - Coins
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    a = getInt()
-    b = getInt()
-    c = getInt()
-    x = getInt()
-
-    a = a if x // 500 >= a else x // 500
-    b = b if x // 100 >= b else x // 100
-    c = c if x // 50 >= c else x // 50
-
-    r = ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-087｜A - Buying Sweets]]></title>
-        <id>https://zenn.dev/hyperdb/articles/39cf9e86d4c937</id>
-        <link href="https://zenn.dev/hyperdb/articles/39cf9e86d4c937"/>
-        <updated>2023-01-13T09:28:12.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-087 A - Buying Sweets
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    x = getInt()
-    a = getInt()
-    b = getInt()
-
-    print((x - a) % b)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rust・Python間でNumPyの配列を受け渡したい]]></title>
-        <id>https://zenn.dev/skwbc/articles/rust_python_data_sharing</id>
-        <link href="https://zenn.dev/skwbc/articles/rust_python_data_sharing"/>
-        <updated>2023-01-13T09:07:24.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Rustを使って機械学習アルゴリズムを実装してPythonから呼び出せるようにしたいのですが、言語間でのデータの受け渡しをどうすれば良いかが分からなかったので、幾つかの方法を実装して比較してみました。
-Pythonで機械学習の実装を呼び出すということは、多くの場合NumPyの配列の受け渡しが出来なければいけないと思うので、今回は特にNumPyの配列の受け渡しの方法について考えます。
-この記事で試した方法は以下の3つです。
-
-ctypesを使って、配列をシリアライズして文字列として渡す
-ctypesを使って、配列をdoubleのポインタとして渡す
-PyO3とmaturinを使って...]]></summary>
-        <author>
-            <name>skwbc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】Webで使えるPython 基礎編【５辞書】]]></title>
-        <id>https://zenn.dev/web_life_ch/articles/6c5a1c0cadfaa7</id>
-        <link href="https://zenn.dev/web_life_ch/articles/6c5a1c0cadfaa7"/>
-        <updated>2023-01-13T07:07:03.000Z</updated>
-        <summary type="html"><![CDATA[【５辞書】
-YouTube: https://youtu.be/5Z7uadgEHNg
-https://youtu.be/5Z7uadgEHNg
-今回はPythonの「辞書」について解説します。
-辞書はjavascriptのオブジェクトと同じような使い方ができます。
-
-main.py
-person = {'name': 'taro', 'age': 25}
-# print(person)
-# print(person['name'])
-
-# for k in person.keys():
-#   print(k)
-
-# for v in person.values():
-#   pr...]]></summary>
-        <author>
-            <name>Web Life CH</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[子孫末代まで殺したい]]></title>
-        <id>https://zenn.dev/river_terrace/articles/22457e5095b51d</id>
-        <link href="https://zenn.dev/river_terrace/articles/22457e5095b51d"/>
-        <updated>2023-01-12T17:30:35.000Z</updated>
-        <summary type="html"><![CDATA[概要
-プロセスをkillする際、その子プロセスや更にその子プロセスなど、子孫にあたるプロセス全て一括でkillする方法について。Pythonのpsutilを使う。
-
- 方法
-import psutil
-
-def kill_recursively(pid):
-    for p in psutil.Process(pid).children(recursive=True):
-        p.kill()
-    psutil.Process(pid).kill()
-上記の関数に祖先のプロセスIDを渡すと、子孫末代まで殺してくれる。
-
- もうちょっとだけ詳しく
-
-
-psutil.Pr...]]></summary>
-        <author>
-            <name>段丘</name>
         </author>
     </entry>
 </feed>
