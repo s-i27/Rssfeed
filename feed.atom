@@ -2,10 +2,259 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-02-17T01:47:29.541Z</updated>
+    <updated>2023-02-18T01:42:36.819Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[PDM を使用したプロジェクトで ModuleNotFoundError が発生する]]></title>
+        <id>https://zenn.dev/hamakou108/articles/fec1bf1155ecaa</id>
+        <link href="https://zenn.dev/hamakou108/articles/fec1bf1155ecaa"/>
+        <updated>2023-02-18T01:32:53.000Z</updated>
+        <summary type="html"><![CDATA[事象
+Python のパッケージマネージャー PDM を使ったプロジェクトで、プログラム実行時に ModuleNotFoundError が発生。
+例えば typer モジュールを import している main.py を実行すると次のような出力になる。
+import typer
+
+
+def main(name: str):
+    print(f"Hello {name}")
+
+
+if __name__ == "__main__":
+    typer.run(main)
+$ python main.py foo
+Traceback (most recent call last)...]]></summary>
+        <author>
+            <name>hamakou108</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[mypyでPythonの関数定義を型チェック、できるけど...]]></title>
+        <id>https://zenn.dev/ktnyt/articles/414c01264eeff8</id>
+        <link href="https://zenn.dev/ktnyt/articles/414c01264eeff8"/>
+        <updated>2023-02-17T14:14:53.000Z</updated>
+        <summary type="html"><![CDATA[関数定義をチェックするimplementsを作ってみた
+
+ モチベーション
+dependency_injector を使って関数をDIしていくコンテナを作っていたんですが、Djangoを使っている都合上モデルのimportが発生するコードをDIコンテナ定義ファイルからimportできないという制約がありました。そこで一旦providers.CallableでごまかしておいてAppConfigのreadyフック内で関数の実態を詰め込んでたんですが、dependency_injectorの型が結構ルーズなので実際に走らせてみないと関数シグネチャの不一致を見落としたり、そもそもdepend...]]></summary>
+        <author>
+            <name>Mirei (Kotone) Itaya</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Google Cloud Storage】バケットの所定フォルダ内のファイル一覧を出力しCSVファイルに保管]]></title>
+        <id>https://zenn.dev/oreilly_ota/articles/984e53161c823f</id>
+        <link href="https://zenn.dev/oreilly_ota/articles/984e53161c823f"/>
+        <updated>2023-02-17T12:04:05.000Z</updated>
+        <summary type="html"><![CDATA[概要
+標記の通り、GCSにて"bucket_A"を作成、その直下に作成した"folder_A"に保存したファイル一覧を出力して、CSVに保管する方法を解説する。保管するCSVファイルは、今回実行するファイルと同じ階層に保存しているfile_names.csvである。全体のコードは末尾に記載しているので、お急ぎの方はそちらを参照いただきたい。
+
+ 必要なライブラリをインポート
+まずは、必要なライブラリを一通りインポートする。
+import datetime
+import csv
+from dateutil.relativedelta import relativedelta
+from ...]]></summary>
+        <author>
+            <name>オライリーヨッシー</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Stable Diffusion web UI の初期値を設定したい]]></title>
+        <id>https://zenn.dev/ainellc/articles/83df54b11d58f9</id>
+        <link href="https://zenn.dev/ainellc/articles/83df54b11d58f9"/>
+        <updated>2023-02-17T08:50:38.000Z</updated>
+        <summary type="html"><![CDATA[Stable Diffusion web UI
+みなさん、Stable Diffusion web UIって使われていますか？
+これまで、Diffusersへ直接パラメータを設定して使っていたのですが、WebUIを試してみると、これはこれで楽でいいなと楽しんでいます。
+
+ ちょっとした不満
+ただ、Google Colaboratoryで使う際に、WebUIを起動する度に毎回パラメータを設定するのが面倒だなと思えてきました。
+
+ 改善策
+コードを確認したところ、パラメータ設定用のJSONファイルを与えてやれば良いことが判りました。
+Google Drive上のJSONファイルを参照でき...]]></summary>
+        <author>
+            <name>Aine LLC.</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonの時系列解析手法(SARIMA、LSTM、NeuralProphet)実装と比較]]></title>
+        <id>https://zenn.dev/shungo_a/articles/73b877b3b5a349</id>
+        <link href="https://zenn.dev/shungo_a/articles/73b877b3b5a349"/>
+        <updated>2023-02-17T07:43:06.000Z</updated>
+        <summary type="html"><![CDATA[本記事の動機
+製造業において見込み生産を行う場合適切な生産数を算出することが重要になります。適切な生産数でない場合、例えば、見込みの生産量が実際の数量を上回った場合だと在庫が多くなり廃棄コストなどの保有リスクが増加していきます。見込みの生産量が実際の需要量を下回った場合は、製品の生産が遅れ納期遵守率の低下等のリスクが発生する可能性があります。このようなリスクを減少させるために、内示等の情報を利用して可能な限り実際の需要量を予測して生産活動を行うことになります。
+　他方、顧客ニーズの多様化や製品ライフサイクルの短縮化により多品種少量生産が求められています。多品種少量生産下では各製品に対...]]></summary>
+        <author>
+            <name>S.A</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-132｜A - Fifty-Fifty]]></title>
+        <id>https://zenn.dev/hyperdb/articles/d43e240b206cc5</id>
+        <link href="https://zenn.dev/hyperdb/articles/d43e240b206cc5"/>
+        <updated>2023-02-17T03:44:17.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-132 A - Fifty-Fifty
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = list(getString())
+
+    print('Yes' if len(set(s)) == 2 else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-132｜B - Ordinary Number]]></title>
+        <id>https://zenn.dev/hyperdb/articles/8517e7d17aff88</id>
+        <link href="https://zenn.dev/hyperdb/articles/8517e7d17aff88"/>
+        <updated>2023-02-17T03:44:16.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-132 B - Ordinary Number
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n = getInt()
+    p = getIntList()
+
+    c = 0
+    for i in range(len(p) - 2):
+        q = p[i:i+3]
+        if min(q) != q[1] and max...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-131｜A - Security]]></title>
+        <id>https://zenn.dev/hyperdb/articles/6796234739e31b</id>
+        <link href="https://zenn.dev/hyperdb/articles/6796234739e31b"/>
+        <updated>2023-02-17T03:44:16.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-131 A - Security
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = list(getString())
+
+    f = True
+    for i in range(len(s) - 1):
+        if s[i] == s[i + 1]:
+            f = False
+            break
+    print('Good' if f else 'Bad')
+
+
+if __name__ == "__main__":
+   ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-131｜B - Bite Eating]]></title>
+        <id>https://zenn.dev/hyperdb/articles/5a7f8623dedbf4</id>
+        <link href="https://zenn.dev/hyperdb/articles/5a7f8623dedbf4"/>
+        <updated>2023-02-17T03:44:15.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-131 B - Bite Eating
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    n, l = getIntMap()
+
+    a = [i + l for i in range(n)]
+    s = sum(a)
+
+    if min(a) >= 0:
+        m = min(a)
+    elif max(a) < 0:
+        m = max(a)
+    else:
+        b = min([...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[cv2.VideoCaptureでJupyter Notebook上に動画を1フレームずつ表示をする]]></title>
+        <id>https://zenn.dev/jizai_labo/articles/230215_videoshow</id>
+        <link href="https://zenn.dev/jizai_labo/articles/230215_videoshow"/>
+        <updated>2023-02-17T02:29:41.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは！すだです！
+私は普段はメーカーで画像認識 AI の研究開発を行うエンジニアをしつつ、空き時間にはプログラミングのメンターとして、画像認識 AI を中心に Deep Learning を教えています。
+普段の業務では、動画をcv2.VideoCaptureなどで 1 フレームずつ読み込んで、画像処理をして、その結果を動画として保存することも多いのですが、Jupyter Notebook 上で、
+
+動画ファイルを作成
+動画ビューワで結果を確認
+
+という流れがとても面倒です。
+特に画像処理結果を可視化する時にデザインを細かく調整したいときなんかは、結構な苦痛になります...]]></summary>
+        <author>
+            <name>すだ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Django】Pythonで作るRest API【２８User Model 概要】]]></title>
+        <id>https://zenn.dev/web_life_ch/articles/541d60d344e067</id>
+        <link href="https://zenn.dev/web_life_ch/articles/541d60d344e067"/>
+        <updated>2023-02-17T01:58:41.000Z</updated>
+        <summary type="html"><![CDATA[【２８User Model 概要】
+YouTube: https://youtu.be/cQn4SKcxgCs
+https://youtu.be/cQn4SKcxgCs
+今回から「User」の新規作成について解説します。
+動画では「User」モデルの概要について解説しています。
+作成するユーザーはスーパーユーザーではなく、
+権限を持たない一般ユーザーです。
+ログインに必要なデータは「username」と「password」ですが、
+「username」の値をメールアドレスにした場合、
+「username」と「email」が不一致になる場合があります。
+不一致を防ぐ方法はいくつかあるの...]]></summary>
+        <author>
+            <name>Web Life CH</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【Python】Windowsの操作を自動化!何でも使える方法【PyAutoGui】【Pandas】]]></title>
         <id>https://zenn.dev/sosa/books/3d3fd460fe65dd</id>
@@ -6756,222 +7005,6 @@ print(f"経過時間: {end - start:.2f} seconds")
 Deep Learningでキャラクターアニメーションを扱う際に、前処理・後処理用のPythonスクリプトを書いているので、foot skatingの修正用などに簡単なInverse Kinematicsアルゴリズムを書きました。この記事の3D Plotはこちらで実装しています。今後Jacobianを用いたFullbody IKなども実装予定です。...]]></summary>
         <author>
             <name>Fukahire</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Package] yfinanceを使ったS&P500の簡単なバックテスト（つみたて投資）]]></title>
-        <id>https://zenn.dev/takilog/articles/5f9163b293133f</id>
-        <link href="https://zenn.dev/takilog/articles/5f9163b293133f"/>
-        <updated>2023-01-19T13:29:55.000Z</updated>
-        <summary type="html"><![CDATA[TL; DR
-
-yfinanceを使ってS&P500の毎月の評価額と日本円⇔ドルの為替情報を取得した
-理想状況（手数料・税金なし）で毎月一定の日本円をS&P500に積み上げたときの評価額をプロットした
-自分で最強の資産運用バックテストを書こう
-
-
- 背景
-Kindle版でSoft Skillsの第1版を昔読んだのですが、第2版を最近紙で入手しました。心穏やかに生活するには投資も大事だな、と思って記事と書き捨てのスクリプトを書きました。
-https://amzn.to/3CVAJAk
-資産運用の真面目な話はこちらの記事を読んでください。
-https://hayatoit...]]></summary>
-        <author>
-            <name>たきろぐ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[JSONDecodeError: Expecting value: line 1 column 1 (char 0)の解決方法]]></title>
-        <id>https://zenn.dev/robes/articles/21f0d613b7c441</id>
-        <link href="https://zenn.dev/robes/articles/21f0d613b7c441"/>
-        <updated>2023-01-19T13:15:36.000Z</updated>
-        <summary type="html"><![CDATA[金融庁の電子閲覧サイトEDINETからAPIを使って、複数のJSONファイルを取得しようとした際に、次のエラーがでました。この解決方法について、記事に残します。
-JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-ちなみにEDINETからJSONファイルを取得するコードはこんな感じ。
-このコードを回しているときにエラーが出たのです。
-for day in day_list:
-    url = "https://disclosure.edinet-fsa.go.jp/api/v1/documents.json"
-    p...]]></summary>
-        <author>
-            <name>osn_Lofi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Seleniumを使ってWeb操作を自動化してみた]]></title>
-        <id>https://zenn.dev/ryuuuuuu/articles/ae6ed94118c665</id>
-        <link href="https://zenn.dev/ryuuuuuu/articles/ae6ed94118c665"/>
-        <updated>2023-01-19T12:32:38.000Z</updated>
-        <summary type="html"><![CDATA[Escape from tarkovというゲームをやっているときにEFT marketというサイトにアイテム名を入れて自動的に検索させる機能を作ってみたくなったので作ってみました。
-
- 1. Web Driverのインストール
-seleniumを使うにはchromedriver.exeをファイルになければならないのでChromeDriverにアクセスし、Chromeと同じバージョンのファイルをインストールします。
-※Chromeバージョンの確認方法は「設定」→「Chromeについて」から確認できます。
-
- 2. Seleniumのインストール
-以下を実行しSeleniumをインストールし...]]></summary>
-        <author>
-            <name>りゅう</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonでWindowsの通知を出す]]></title>
-        <id>https://zenn.dev/shin1007/articles/dee323f5f2d053</id>
-        <link href="https://zenn.dev/shin1007/articles/dee323f5f2d053"/>
-        <updated>2023-01-19T08:34:25.000Z</updated>
-        <summary type="html"><![CDATA[Winotifyを利用しよう！
-https://github.com/versa-syahptr/winotify
-以下のような感じで、通知センターに登録されるタイプの通知を出すことができます。
-
-
- インストール
-pip install winotify
-
- 利用法
-
-import pathlib
-
-import winotify
-
-toast = winotify.Notification(app_id="<YOUR_APP_NAME>",
-                              icon=pathlib.Path("icon.png").reso...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Django】Pythonで作るRest API【１Django インストール】]]></title>
-        <id>https://zenn.dev/web_life_ch/articles/a455e5ae68853f</id>
-        <link href="https://zenn.dev/web_life_ch/articles/a455e5ae68853f"/>
-        <updated>2023-01-19T05:04:01.000Z</updated>
-        <summary type="html"><![CDATA[【１Django インストール】
-YouTube: https://youtu.be/SXXtbxF6WDg
-https://youtu.be/SXXtbxF6WDg
-今回から「Django」を使ってRest APIを作成してきます。
-前回の基礎編で「venv」で仮想環境を作成した方は、
-そのまま同じ仮想環境を使用しても大丈夫です。
-または同じ方法で新しくプロジェクトを作成しても問題ありません。
-「Anaconda Navigator」で仮想環境を作成していて、
-「base」の環境を使用している方は、
-左下の「create」から新しく仮想環境の作成をお願いします。
-仮想環境の作成がで...]]></summary>
-        <author>
-            <name>Web Life CH</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-097｜A - Colorful Transceivers]]></title>
-        <id>https://zenn.dev/hyperdb/articles/ced10959010e17</id>
-        <link href="https://zenn.dev/hyperdb/articles/ced10959010e17"/>
-        <updated>2023-01-19T04:48:53.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-097 A - Colorful Transceivers
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b, c, d = getIntMap()
-
-    print('Yes' if abs(a - c) <= d or (abs(a - b)
-          <= d and abs(c - b) <= d) else 'No')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-097｜B - Exponential]]></title>
-        <id>https://zenn.dev/hyperdb/articles/a7db6dec39811e</id>
-        <link href="https://zenn.dev/hyperdb/articles/a7db6dec39811e"/>
-        <updated>2023-01-19T04:48:53.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-097 B - Exponential
-
-
-
- 提出結果
-import math
-
-
-def getInt():
-    return int(input())
-
-
-def main():
-    x = getInt()
-
-    r = 0
-    if x == 1:
-        r = 1
-    else:
-        for i in range(2, int(math.pow(x, 1 / 2)) + 1):
-            y = i ** 2
-            r = y if y > r else r
-     ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[エンジニア向けのニュースアプリを作った【個人開発】]]></title>
-        <id>https://zenn.dev/kimurayut/articles/5d270dcfcd9053</id>
-        <link href="https://zenn.dev/kimurayut/articles/5d270dcfcd9053"/>
-        <updated>2023-01-19T03:45:12.000Z</updated>
-        <summary type="html"><![CDATA[要約
-
-エンジニア向けのニュースアプリをFlutterで作った。
-毎日Zenn、Qiita、noteやそのほか海外のテックメディアを開くのが面倒。
-RSSフィードで登録していくのもいいが面倒だし、時に不要な情報もある。
-個人に最適化されたニュースを提供し、エンジニアの日々の情報収集を効率化させることを目的とした個人開発アプリを作ることにした。
-スマホアプリ開発言語はFlutter,バックエンド言語はPython、インフラはGCPのCloud FunctionsとFirebaseを利用。
-
-
- 背景と課題
-わたしたちエンジニアは毎日チェックすべき情報が多すぎる。毎日Zenn、Qiita...]]></summary>
-        <author>
-            <name>きむら</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DiscordとLINEをPython+FastAPI+Dockerで連携させる【その1】DiscordからLINEへテキストメッセージ]]></title>
-        <id>https://zenn.dev/maguro_alterna/articles/f5a52f1cb8b1e7</id>
-        <link href="https://zenn.dev/maguro_alterna/articles/f5a52f1cb8b1e7"/>
-        <updated>2023-01-19T01:48:03.000Z</updated>
-        <summary type="html"><![CDATA[挨拶
-qiitaにも同様の投稿をしています。
-https://qiita.com/maguro-alternative/items/6f57d4cc6c9923ba6a1d
-こんにちは。マグロです。
-以前記事にしたものの続編です。
-https://qiita.com/maguro-alternative/items/4a47de7725b5ee84b230
-LINE Notify対応版が完成したので、記事にします。
-https://github.com/maguro-alternative/discordfast
-順を追って解説できるように、記事をいくつか分割して解説します。
-今回は...]]></summary>
-        <author>
-            <name>マグロ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[JPCOARスキーマを用いたxmlファイルのバリデーション]]></title>
-        <id>https://zenn.dev/nakamura196/articles/3c91cd443e084c</id>
-        <link href="https://zenn.dev/nakamura196/articles/3c91cd443e084c"/>
-        <updated>2023-01-18T16:37:10.000Z</updated>
-        <summary type="html"><![CDATA[概要
-JPCOARスキーマでは、XMLスキーマ定義を以下のリポジトリで公開してくださっています。スキーマの作成およびデータの公開を行っていただき、ありがとうございます。
-https://github.com/JPCOAR/schema
-本記事では、上記のスキーマを使ったxmlファイルのバリデーションを試してみたので、その備忘録です。（今回のようなバリデーションは初めてのため、不正確な用語や情報を含む可能性があります。申し訳ありません。）
-Google Colabのノートブックも用意しました。
-https://colab.research.google.com/github/nakam...]]></summary>
-        <author>
-            <name>nakamura196</name>
         </author>
     </entry>
 </feed>
