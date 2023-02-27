@@ -2,10 +2,266 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-02-26T01:51:56.773Z</updated>
+    <updated>2023-02-27T01:45:07.105Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Cosmos DBで確認：ラズパイに繋いだセンサーで温度を取得してみた]]></title>
+        <id>https://zenn.dev/kdl_iotblog/articles/970a3c947773dd</id>
+        <link href="https://zenn.dev/kdl_iotblog/articles/970a3c947773dd"/>
+        <updated>2023-02-27T01:16:41.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+前回のブログにてLINEから温度が確認できたので、今回は温度センサーの値をMicrosoft Azure（以下 Azure）のCosmos DBに格納していきたいと思います。
+
+ システム構成
+以下のようなシステム構成で構築を進めていきます。
+
+
+ Azureリソースの作成
+
+ IoT Hubの作成
+まずはAzure IoT Hub（以下 IoT Hub）の作成から進めていきます。以下のように選択し、作成ボタンを押下します。
+
+リソースの作成：IoT Hubを選択
+
+
+
+
+次画面では以下のように入力し、確認および作成ボタンを押下します。
+
+リソースグループ：作成したリソース...]]></summary>
+        <author>
+            <name>kdl-iotblog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[特定 CloudTrail イベント発生時 Lambda を実行]]></title>
+        <id>https://zenn.dev/ano/articles/9e1da4ed3776b8</id>
+        <link href="https://zenn.dev/ano/articles/9e1da4ed3776b8"/>
+        <updated>2023-02-27T00:09:27.000Z</updated>
+        <summary type="html"><![CDATA[ゴール / やりたいこと
+CloudTrail で 特定イベントがあった場合に Lambda を実行する
+※今回は作成/更新されたポリシー内でリソース * に対してアクションが Allow とされているかのチェック
+
+ アーキテクチャ図
+
+
+ 詳細
+監視している CloudTrail で CloudWatch Logs へのログ保存を有効にする
+
+CloudWatch Logs で Lambda をターゲットとしたサブスクリプションフィルターを作成する
+
+ターゲットにする Lambda を指定して Filter 設定をする
+※Log format は CloudTrail にして F...]]></summary>
+        <author>
+            <name>Ano</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Matplotlib で複数の図に一つの凡例を描画する]]></title>
+        <id>https://zenn.dev/__leopardus__/articles/454a65ccd2ca91</id>
+        <link href="https://zenn.dev/__leopardus__/articles/454a65ccd2ca91"/>
+        <updated>2023-02-26T15:34:17.000Z</updated>
+        <summary type="html"><![CDATA[matplotlib の figure.add_subplot を使って複数の図を描く，という状況を考えます．
+こういう状況は，例えば手法 A と手法 B を複数のデータ上で比較するといった場合に起こります．
+ここでは，簡単のために次のような例を考えます．
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+N_ROW, N_COL = 1, 2
+
+x = np.linspace(0, 10, 100)
+
+
+# 幅6，高さ4の図2つ分の描画領域を描く
+fig = plt.figure(figsize=(12, 4))
+
+# 1つ目のグ...]]></summary>
+        <author>
+            <name>R</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2ちゃんねらーAI :  大規模言語モデルのファインチューニングの実験]]></title>
+        <id>https://zenn.dev/vel/articles/573d6b952c319d</id>
+        <link href="https://zenn.dev/vel/articles/573d6b952c319d"/>
+        <updated>2023-02-26T12:09:50.000Z</updated>
+        <summary type="html"><![CDATA[概要
+大規模言語モデルのチャットサービスを仕事に使いたくても, 非公開情報について話すのはアウト. 業務内容に詳しいAIとチャットしてみたいのに... 実現するためには, 事前学習済みAIを取得し, (非公開で) データを追加学習させてカスタムする方法を知っておく必要がある. その実験として, 「GPT-2」を「おーぷん2ちゃんねる対話コーパス」でファインチューニング. 2ちゃんねらーの知識を持ってる風のAIを作ってみた. 同じ方法で非公開データの知識を持ってる風のAIを作れるかもしれない.
+
+ 1. 背景
+大規模言語モデルの発展が目覚ましい. 中でも
+
+ChatGPT[1]
+
+Bi...]]></summary>
+        <author>
+            <name>OvO</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【DevOps】Heroku / GitHub Actionsを連携して、CI / CDパイプラインを構築する]]></title>
+        <id>https://zenn.dev/oreilly_ota/articles/7d0e9fbd57aaed</id>
+        <link href="https://zenn.dev/oreilly_ota/articles/7d0e9fbd57aaed"/>
+        <updated>2023-02-26T08:13:37.000Z</updated>
+        <summary type="html"><![CDATA[概要
+今回は「GitHub Actionsを用いた、HerokuへのCI/CDパイプライン」を構築した。まずは、詳細に作業内容を説明して、その後ハンズオンを行い、理解を深める。
+
+ 作業内容
+
+ 全体の流れ
+今回は、CI/CDパイプラインを活用することで、新しいバージョンのソフトウェアを実行するためのステップを構築した。開発エンジニアは、GitHubレポジトリに対して、新しいコードをpushしマージする。一度新しいコードがGitHubレポジトリにマージされると、GitHub ActionsによるCI/CDパイプラインが起動して、新しいコードはHerokuサーバにデプロイされる。
+具体...]]></summary>
+        <author>
+            <name>オライリーヨッシー</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ControlNetで文字画像を生成する【雑コード付き】]]></title>
+        <id>https://zenn.dev/watanko/articles/db479c7705977d</id>
+        <link href="https://zenn.dev/watanko/articles/db479c7705977d"/>
+        <updated>2023-02-26T07:22:41.000Z</updated>
+        <summary type="html"><![CDATA[最近ControlNetで遊ぶのにハマっているwatankoです。
+https://twitter.com/yamkaz/status/1628891312299839489?s=61&t=a2y7iu1YzOVPOzsx2-caHw
+先日このようなツイートを見かけ、面白そうなので試してみることにしました。
+
+ 生成結果
+
+
+
+
+
+ やっていること
+以下のような白黒の文字画像を、"直接"depthモデルに突っ込むだけです。(解説:例えばdepthの場合ControlNetは第一段階として入力画像から深度画像を推定したのち、第二段階で推定した深度画像を入力として画像を生成します。第...]]></summary>
+        <author>
+            <name>watanko</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-149｜B - Greedy Takahashi]]></title>
+        <id>https://zenn.dev/hyperdb/articles/918650dd2179a1</id>
+        <link href="https://zenn.dev/hyperdb/articles/918650dd2179a1"/>
+        <updated>2023-02-26T04:22:48.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-149 B - Greedy Takahashi
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b, k = getIntMap()
+
+    ax = max(0, a - k)
+    bx = max(0, b - max(0, k - a))
+
+    print('%d %d' % (ax, bx))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-148｜B - Strings with the Same Length]]></title>
+        <id>https://zenn.dev/hyperdb/articles/81e0e04d1d468d</id>
+        <link href="https://zenn.dev/hyperdb/articles/81e0e04d1d468d"/>
+        <updated>2023-02-26T04:22:47.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-148 B - Strings with the Same Length
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getStringMap():
+    return input().split()
+
+
+def main():
+    n = getInt()
+    s, t = getStringMap()
+
+    a = ''
+    for i in range(n):
+        a += (s[i] + t[i])
+    print(a)
+
+
+if __name__ == "...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-149｜A - Strings]]></title>
+        <id>https://zenn.dev/hyperdb/articles/12b4ab4e3933ca</id>
+        <link href="https://zenn.dev/hyperdb/articles/12b4ab4e3933ca"/>
+        <updated>2023-02-26T04:22:47.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-149 A - Strings
+
+
+
+ 提出結果
+def getStringMap():
+    return input().split()
+
+
+def main():
+    s, t = getStringMap()
+
+    print(t + s)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-148｜A - Round One]]></title>
+        <id>https://zenn.dev/hyperdb/articles/10e6ca48b9b397</id>
+        <link href="https://zenn.dev/hyperdb/articles/10e6ca48b9b397"/>
+        <updated>2023-02-26T04:22:46.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-148 A - Round One
+
+
+
+ 提出結果
+def getIntRow(N):
+    return [int(input()) for _ in range(N)]
+
+
+def main():
+    n = getIntRow(2)
+    m = [i for i in [1, 2, 3] if i not in n]
+
+    print(sum(m))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[変動要因に類似点がある時系列データの需要予測に対する考察]]></title>
         <id>https://zenn.dev/shungo_a/articles/a5887fada61694</id>
@@ -7191,226 +7447,6 @@ https://rust-lang-jp.zulipchat.com/
 今回はZulip...]]></summary>
         <author>
             <name>mebiusbox</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LightGBMのcallbacksを使う（early_stopping_roundsとverbose）]]></title>
-        <id>https://zenn.dev/nishimoto/articles/dae925f50dde2a</id>
-        <link href="https://zenn.dev/nishimoto/articles/dae925f50dde2a"/>
-        <updated>2023-01-28T10:01:07.000Z</updated>
-        <summary type="html"><![CDATA[サマリー
-LightGBMのcallbacksを使えWarningに対応した。
-今回はearly_stopping_roundsとverboseのみ。
-結論として、lgbの学習中に以下のoptionを与えてあげればOK
-callbacks=[
-    lgb.early_stopping(stopping_rounds=50, verbose=True),
-    lgb.log_evaluation(100),
-],
-公式Docsは以下
-https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.early_stoppi...]]></summary>
-        <author>
-            <name>nishimoto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[競プロ備忘録：2進数を10進数に変換する]]></title>
-        <id>https://zenn.dev/pienthon/articles/e8390314595187</id>
-        <link href="https://zenn.dev/pienthon/articles/e8390314595187"/>
-        <updated>2023-01-28T08:38:59.000Z</updated>
-        <summary type="html"><![CDATA[1. 10進数に変換する計算を紙に書く
-i(for文で使うi)と式の対応は具体例を考えながら書きます。
-
-
- 完成
-N = input()
-
-Answer = 0
-len = int(len(N))
-for i in range(len):
-    Answer += int(N[len-i-1]) * (2 ** i)
-
-print(Answer)]]></summary>
-        <author>
-            <name>にゃーん(Pienthon)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[BERTモデルとファインチューニング]]></title>
-        <id>https://zenn.dev/yosuke00/articles/9d9d405e164198</id>
-        <link href="https://zenn.dev/yosuke00/articles/9d9d405e164198"/>
-        <updated>2023-01-28T05:20:17.000Z</updated>
-        <summary type="html"><![CDATA[1.はじめに
-前回は、Transformerのモデルアーキテクチャについて述べました。
-今回はそのTransformerの派生系である通称BERT(Biderectional Encoder Representations from Transformer)についてまとめていきます。
-今回もTransformerによる自然言語処理で学んだことを自分なりの言葉で書いていきます。
-
- 2.BERTとは
-まず初めに、BERTとは何者かについて軽く紹介します。
-BERTとは、先述した通りTransformerの派生系のモデルの一種です。
-その特徴は大きく以下の二点が挙げられます。
-
-名前にも...]]></summary>
-        <author>
-            <name>Yosuke00</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Django】Pythonで作るRest API【１０Serializer】]]></title>
-        <id>https://zenn.dev/web_life_ch/articles/e27b81c73d8ada</id>
-        <link href="https://zenn.dev/web_life_ch/articles/e27b81c73d8ada"/>
-        <updated>2023-01-28T05:12:36.000Z</updated>
-        <summary type="html"><![CDATA[【１０Serializer】
-YouTube: https://youtu.be/LmX0aBPw1jI
-https://youtu.be/LmX0aBPw1jI
-今回は「Serializer」を作成します。
-レスポンスで返すデータは「json」形式ある必要がありますので、
-データベースから取得したデータをそのままレスポンスに設定するだけでは
-データを返すことができません。
-Serializerはデータベースで取得したデータを
-レスポンスで返すことができるように変換してくれる機能があります。
-今回は「posts」のフォルダ内に「serializers.py」を作成します。
-
-myap...]]></summary>
-        <author>
-            <name>Web Life CH</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-108｜B - Ruined Square]]></title>
-        <id>https://zenn.dev/hyperdb/articles/9e65b1a6afb49b</id>
-        <link href="https://zenn.dev/hyperdb/articles/9e65b1a6afb49b"/>
-        <updated>2023-01-28T04:33:41.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-108 B - Ruined Square
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    x1, y1, x2, y2 = getIntMap()
-
-    x = x2 - x1
-    y = y2 - y1
-
-    x3 = x2 - y
-    y3 = y2 + x
-
-    x4 = x1 - y
-    y4 = y1 + x
-
-    print("%d %d %d %d" % (x3, y3, x4, y4))
-
-
-if __...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-108｜A - Pair]]></title>
-        <id>https://zenn.dev/hyperdb/articles/8127aece43448f</id>
-        <link href="https://zenn.dev/hyperdb/articles/8127aece43448f"/>
-        <updated>2023-01-28T04:33:41.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-108 A - Pair
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    k = getInt()
-
-    x = k // 2
-    y = k % 2
-
-    print(x * (x + y))
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[遊戯王ニューロンOCR]]></title>
-        <id>https://zenn.dev/tomokin/articles/156a194043e295</id>
-        <link href="https://zenn.dev/tomokin/articles/156a194043e295"/>
-        <updated>2023-01-28T02:15:37.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-遊戯王マスターデュエルがリリースされてからはや1年経ちました。
-公式からの競技イベントは少ないですが、有志の方が大会を開催してくださっています。
-一部の大会では、主催者様の定めた特殊なレギュレーションを用いており、参加者のデッキが正しくレギュレーションを守っているか人力でチェックする必要があります。
-デッキに含まれるカードリストのテキストデータがあればチェック作業が自動化できそうですが、公式アプリである遊戯王ニューロンはなんとカードのリストを jpeg 画像として出力します。
-そこで、この jpeg 画像を読み取り、テキストデータ化するアプリケーションを作成しました。
-
-上...]]></summary>
-        <author>
-            <name>tomokin</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CHSH不等式の導出、破れと破れの実験]]></title>
-        <id>https://zenn.dev/msrn_yossy/articles/0b234ac515c669</id>
-        <link href="https://zenn.dev/msrn_yossy/articles/0b234ac515c669"/>
-        <updated>2023-01-27T16:42:15.000Z</updated>
-        <summary type="html"><![CDATA[(Bell-)CHSH不等式を導出し、量子論ではそれが破れることを見ます。さらに、IBMの量子コンピュータを使って破れを実験的に観察します。
-リハビリです。
-
- CHSH不等式
-(Bell-)Clauser-Horne-Shimony-Holt不等式((Bell-)CHSH不等式)は、ふたつの粒子のスピンに関するある種の相関について成り立つ不等式です。この不等式は局所実在論を仮定する限り成立します。導出の前に、局所実在論とは何かを見ましょう。
-
- 局所実在論
-物理学的な意味での局所実在論は、以下の仮定を満たす理論の総称です：
-
-
-局所性: 超光速通信ができない。
-
-実在性: すべての物理...]]></summary>
-        <author>
-            <name>msrn</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】OAuth2.0認証を利用してTwitter APIと連携し、認証されたTwitter IDを得る方法]]></title>
-        <id>https://zenn.dev/yuk6ra/articles/0874eac6336c40</id>
-        <link href="https://zenn.dev/yuk6ra/articles/0874eac6336c40"/>
-        <updated>2023-01-27T16:27:33.000Z</updated>
-        <summary type="html"><![CDATA[はじめてZennを利用します。どんな感じなのかなと思い、試しに書いている感じですので、何卒宜しくお願い致します。皆さんもそうだと思いますが、学びならやっておりますので、間違った情報もあるかと思います。その際は、遠慮なくご指摘していただけますと幸いです。
-
- はじめに
-弊社でWeb3関連のプロダクトを開発するにあたり、ウォレットアドレス（ユーザログインで利用）とTwitterのアカウントを連携させる必要性がでてきました。海外のWeb3プロダクトを見ていても、OAuth2.0が主流のようです。
-Twitterは昔Pythonで遊んでた頃にAPI使っていたものの、今回OAuth2.0は初めてで...]]></summary>
-        <author>
-            <name>yuk6ra</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Jboyさんって何者?]]></title>
-        <id>https://zenn.dev/joo_hashi/articles/c0d21b59bc5bb7</id>
-        <link href="https://zenn.dev/joo_hashi/articles/c0d21b59bc5bb7"/>
-        <updated>2023-01-27T14:24:36.000Z</updated>
-        <summary type="html"><![CDATA[ただの猫ですよ
-こんにちは、Jboyです~
-最近は、noteで自分の生活の情報を発信していたのですが、技術に関係した話題はZennがいいと思ってこちらに書くことにします。
-私の経歴なんですけど、仕事を転々としていて、ケーキ屋やったり、清掃員やったり、今はIT関係の仕事になったり、フリーランスになったりと、めちゃくちゃです。
-以前もこんな話題を出したので、今日は自分のスキルシートっていうですかね?、どんな技術が使えるか紹介したいなと思います。
-
- 現在
-現在はFlutterとFirebaseに注力してます。以前は、Swift勉強してましたけで、もう忘れました🤭
-最近使っていて、得意な技...]]></summary>
-        <author>
-            <name>JboyHashimoto</name>
         </author>
     </entry>
 </feed>
