@@ -2,10 +2,217 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-02-27T01:45:07.105Z</updated>
+    <updated>2023-02-28T01:44:31.827Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[【Python】FlaskサーバでJWT認証を実装する]]></title>
+        <id>https://zenn.dev/oreilly_ota/articles/1e1cad2451391d</id>
+        <link href="https://zenn.dev/oreilly_ota/articles/1e1cad2451391d"/>
+        <updated>2023-02-27T23:55:23.000Z</updated>
+        <summary type="html"><![CDATA[概要
+本記事では、JWT（JSON Web Token）を使用した認証を、flaskで実装する方法を紹介する。本記事のゴールとしては、localhostで立ち上げたflaskアプリケーション （http://127.0.0.1:5000/headers） に対して、Bearer Tokenを使用しGETを行う。そうすると、flaskアプリケーションでBearer Tokenが認証されて、200のステータスコードで "Access Granted" と出力される。
+
+
+ 要件仕様
+上記アプリケーションを実装する上で、三つの機能が求められる。
+
+get_token_auth_header...]]></summary>
+        <author>
+            <name>オライリーヨッシー</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonでNoneの時、Default Valueを取得する]]></title>
+        <id>https://zenn.dev/nosukey/articles/python_get_default_value</id>
+        <link href="https://zenn.dev/nosukey/articles/python_get_default_value"/>
+        <updated>2023-02-27T14:57:12.000Z</updated>
+        <summary type="html"><![CDATA[書くこと
+以下のようなコードを短く書く方法
+# getValue(): string value or None
+value = getValue()
+
+if value is None:
+    value = "DefaultValue"
+
+ 方法論
+orを利用する
+value = getValue() or 'DefaultValue'
+
+ 付録: dict型の値取得と組み合わせる
+dict = {'key': 'value', 'none_key': None}
+
+dict.get('no_key', 'NoKeyDefaultValue')
+# => 'NoKeyDe...]]></summary>
+        <author>
+            <name>Nosukey</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[firestoreのpython orm、fireoで簡単にfirestoreを使う ②モデルとデータの保存]]></title>
+        <id>https://zenn.dev/yoheikusano/articles/1b8444217f64a7</id>
+        <link href="https://zenn.dev/yoheikusano/articles/1b8444217f64a7"/>
+        <updated>2023-02-27T14:57:02.000Z</updated>
+        <summary type="html"><![CDATA[結構なボリュームになりそうなので分けて書いていきます。
+①はじめに　簡単な使い方　
+②モデルの定義方法と保存方法　（こちらの記事となります。）
+
+こちらの記事はドキュメントより必要な点を抜粋しています。
+
+ モデルについて
+FireOは最初にモデル（データのひな型）を作ります。
+基本はfrom fireo.model import Modelを行い、Modelを継承して作成していきます。
+以下のようにしてモデルを定義します。
+class MyModel(Model):
+    uid = IDField()
+    user_name = TextField(required=True)...]]></summary>
+        <author>
+            <name>草野洋平</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DjangoのORMで子テーブルのカラムを使ってfilterする]]></title>
+        <id>https://zenn.dev/nosukey/articles/django_filter_child_columns</id>
+        <link href="https://zenn.dev/nosukey/articles/django_filter_child_columns"/>
+        <updated>2023-02-27T14:20:47.000Z</updated>
+        <summary type="html"><![CDATA[書くこと
+
+distinctを使ってフィルターする方法
+annotateを使ってフィルターする方法
+
+
+ 利用技術
+
+Django
+
+
+ 想定
+
+ モデル
+以下のArticleとCommentモデルがあるとする。
+class Article(models.Model):
+    title = models.CharField(max_length=100)
+    # (省略)
+
+
+class Comment(models.Model):
+    text = models.CharField(max_length=100)
+    active = models.BooleanF...]]></summary>
+        <author>
+            <name>Nosukey</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonでlocalStack(Docker)のS3オブジェクトを取得する]]></title>
+        <id>https://zenn.dev/yumemi_inc/articles/cefe0006068553</id>
+        <link href="https://zenn.dev/yumemi_inc/articles/cefe0006068553"/>
+        <updated>2023-02-27T09:45:00.000Z</updated>
+        <summary type="html"><![CDATA[AWSリソースをローカル環境で使うことができるlocalStackを試しに使ってみました。
+https://localstack.cloud/
+
+ 環境
+機種 : MacBook Pro 2021(M1 Max)
+OS : Monterey(12.2.1)
+Python version(Docker): 3.11.2
+pip version(Docker): 22.3.1
+awscli-local version: 0.20
+
+ 各種インストール
+
+ localStackのインストール
+localStackを記載ある方法通りインストールします。が、Dockerコンテナを立てるので、なくて...]]></summary>
+        <author>
+            <name>lightkun</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[firestoreのpython orm、fireoで簡単にfirestoreを使う ①使い方]]></title>
+        <id>https://zenn.dev/yoheikusano/articles/9a16def37d341b</id>
+        <link href="https://zenn.dev/yoheikusano/articles/9a16def37d341b"/>
+        <updated>2023-02-27T06:38:31.000Z</updated>
+        <summary type="html"><![CDATA[結構なボリュームになりそうなので分けて書いていきます。
+①はじめに　簡単な使い方　（こちらの記事となります。）
+②モデルの定義方法と保存方法
+
+たとえばこんなクラスがあったとします。こちらをそのままFirestoreに保存し、それをそのままFirestoreから取り出すようなライブラリーです。
+@dataclass
+class Conversation():
+    uid:str
+    startAt:datetime.datetime
+    endAt:datetime.datetime
+    outgoing:str
+    incoming:str
+    talk:str...]]></summary>
+        <author>
+            <name>草野洋平</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-150｜A - 500 Yen Coins]]></title>
+        <id>https://zenn.dev/hyperdb/articles/d194cb7a348c9e</id>
+        <link href="https://zenn.dev/hyperdb/articles/d194cb7a348c9e"/>
+        <updated>2023-02-27T04:11:03.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-150 A - 500 Yen Coins
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    k, x = getIntMap()
+
+    print('Yes' if x / k <= 500.0 else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-150｜B - Count ABC]]></title>
+        <id>https://zenn.dev/hyperdb/articles/1981400dfc854d</id>
+        <link href="https://zenn.dev/hyperdb/articles/1981400dfc854d"/>
+        <updated>2023-02-27T04:11:03.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-150 B - Count ABC
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getString():
+    return input()
+
+
+def main():
+    n = getInt()
+    s = getString()
+
+    c = 0
+    for i in range(n - 2):
+        if s[i:i+3] == 'ABC':
+            c += 1
+    print(c)
+
+
+if __name__ == "__main__":
+...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Cosmos DBで確認：ラズパイに繋いだセンサーで温度を取得してみた]]></title>
         <id>https://zenn.dev/kdl_iotblog/articles/970a3c947773dd</id>
@@ -7174,279 +7381,6 @@ zsh
 /...]]></summary>
         <author>
             <name>SiON</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【ABC287】AtCoder Beginner Contest 287 A-D 振り返り【python】]]></title>
-        <id>https://zenn.dev/tmori/articles/2fc3cd14d27582</id>
-        <link href="https://zenn.dev/tmori/articles/2fc3cd14d27582"/>
-        <updated>2023-01-29T12:38:03.000Z</updated>
-        <summary type="html"><![CDATA[https://atcoder.jp/contests/abc287
-
- A - Majority
-それぞれの文字のカウントする。Forが大きかったらYes。
-
- 解法
-n = int(input())
-s_list = [input() for i in range(n)]  # 文字列S
-
-for_count = 0
-against_count = 0
-for i in s_list:
-    if i == "For":
-        for_count += 1
-    else:
-        against_count += 1
-
-if for_count >= a...]]></summary>
-        <author>
-            <name>tmori</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonを使って時系列分析を丁寧に Part.1（時系列分析のモデル、周期成分、自己相関）]]></title>
-        <id>https://zenn.dev/da_o_k/articles/36a8bbf636b796</id>
-        <link href="https://zenn.dev/da_o_k/articles/36a8bbf636b796"/>
-        <updated>2023-01-29T09:46:11.000Z</updated>
-        <summary type="html"><![CDATA[時系列分析
-時系列データは
-
-トレンド
-季節成分
-不規則成分
-
-の3要素が合成している、と考えるのが一般的です。
-合成の仕方は2通りが考えられ
-
-加法モデル
-乗法モデル
-
-です。
-
- モデルの定式化
-トレンドをT(t)、規則成分をS(t)、不規則（Irregular）成分をI(t)として、元データO(t)を表すことを考えてみます。
-加法モデルであれば、そりゃ
-
-\begin{align*}
-O(t) = T(t) + S(t) + I(t)
-\end{align*}
-
-となりますね。乗法モデルであればもちろん
-
-\begin{align*}
-O(t) = T(t) \times S(...]]></summary>
-        <author>
-            <name>da_o_k_</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonからMySQLにアクセスしたい]]></title>
-        <id>https://zenn.dev/goriratatsu/articles/08e9343ed1999a</id>
-        <link href="https://zenn.dev/goriratatsu/articles/08e9343ed1999a"/>
-        <updated>2023-01-29T08:08:38.000Z</updated>
-        <summary type="html"><![CDATA[PythonでFlaskを触っていると、データベースを使いたくなることがあります。アクセスするためのドライバーには下記のようなものがありますが、今回最も基本的なmysql-connector-pythonを使うことにします。
-
-mysql-connector-python
-PyMySQL
-
-
- mysql-connector-pythonとはなにか？
-mysql-connector-pythonは、Oracle社などが提供しているドライバーで、PEP 249 – Python Database API Specification v2.0に準拠しています[1]。PEPは、PEP8 – S...]]></summary>
-        <author>
-            <name>Gorira-Tatsu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Django】Pythonで作るRest API【１１ViewSets】]]></title>
-        <id>https://zenn.dev/web_life_ch/articles/33bc877e52209a</id>
-        <link href="https://zenn.dev/web_life_ch/articles/33bc877e52209a"/>
-        <updated>2023-01-29T05:28:46.000Z</updated>
-        <summary type="html"><![CDATA[【１１ViewSets】
-YouTube: https://youtu.be/mEcvCwJLC4g
-https://youtu.be/mEcvCwJLC4g
-今回は「ViewSets」を使用して、
-「Post」モデルのビューを作成します。
-https://www.django-rest-framework.org/api-guide/viewsets/
-rest_frameworkのビューはいくつか種類があるのですが、
-すべての機能を持っているのが「ViewSets」で
-そこから少しづつ機能を削っていって
-最終的にAPIとして必要最低限の機能を持ったものが
-「APIView」となり...]]></summary>
-        <author>
-            <name>Web Life CH</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-110｜A - Maximize the Formula]]></title>
-        <id>https://zenn.dev/hyperdb/articles/f8bedc9dc5a27f</id>
-        <link href="https://zenn.dev/hyperdb/articles/f8bedc9dc5a27f"/>
-        <updated>2023-01-29T04:08:38.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-110 A - Maximize the Formula
-
-
-
- 提出結果
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n = getIntList()
-
-    n.sort()
-    n[2] = n[2] * 10
-
-    print(sum(n))
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-109｜A - ABC333]]></title>
-        <id>https://zenn.dev/hyperdb/articles/716dab3eafb957</id>
-        <link href="https://zenn.dev/hyperdb/articles/716dab3eafb957"/>
-        <updated>2023-01-29T04:08:37.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-109 A - ABC333
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b = getIntMap()
-
-    print('Yes' if (a * b) % 2 == 1 else 'No')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-110｜B - 1 Dimensional World's Tale]]></title>
-        <id>https://zenn.dev/hyperdb/articles/43a563e0463796</id>
-        <link href="https://zenn.dev/hyperdb/articles/43a563e0463796"/>
-        <updated>2023-01-29T04:08:37.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-110 B - 1 Dimensional World's Tale
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n, m, x, y = getIntMap()
-    X = max(getIntList())
-    Y = min(getIntList())
-
-    r = False
-    for z in...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-109｜B - Shiritori]]></title>
-        <id>https://zenn.dev/hyperdb/articles/31ae70c4329076</id>
-        <link href="https://zenn.dev/hyperdb/articles/31ae70c4329076"/>
-        <updated>2023-01-29T04:08:37.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-109 B - Shiritori
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getStringRow(N):
-    return [input() for _ in range(N)]
-
-
-def main():
-    n = getInt()
-    w = getStringRow(n)
-
-    r = True
-    if len(w) != len(set(w)):
-        r = False
-    else:
-        for i in range(1, n):...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1/22~1/27で技術的にやったこと]]></title>
-        <id>https://zenn.dev/zi_matsu/articles/f92fde515b2b60</id>
-        <link href="https://zenn.dev/zi_matsu/articles/f92fde515b2b60"/>
-        <updated>2023-01-29T00:35:56.000Z</updated>
-        <summary type="html"><![CDATA[s3とeventbridgeって同じじゃね？どっちがいいんだ？
-結局どちらもイベントの重複は発生するみたい・・・
-https://dev.classmethod.jp/articles/s3-event-notification-vs-eventbridge-event-processing-overflow-rate-2/
-
- そのほかでやったこと
-案件の調査系と軽い修正しかやっていないので特に技術的なことはなし]]></summary>
-        <author>
-            <name>Matsuzaki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DiscordとLINEをPython+FastAPI+Dockerで連携させる【その2】LINEからDiscordへテキストメッセージ]]></title>
-        <id>https://zenn.dev/maguro_alterna/articles/65848d6f96ed30</id>
-        <link href="https://zenn.dev/maguro_alterna/articles/65848d6f96ed30"/>
-        <updated>2023-01-28T23:43:59.000Z</updated>
-        <summary type="html"><![CDATA[挨拶
-こんにちは。マグロです。
-前回の続きとなります。
-https://zenn.dev/maguro_alterna/articles/f5a52f1cb8b1e7
-今回はLINEからDiscordへテキストメッセージを送れるようにします。
-
- 設計
-LINEBotはメッセージを受け取った場合、Developerサイトで設定したWebHookに内容が送信されます。
-そのためFastAPIでサーバーを立ち上げ、WebHookを設定します。
-しかしここで一つ問題があります。
-そこからどうやってDiscordに送る？？
-Discord.pyやPycordを使って送ればいいと思いますが、...]]></summary>
-        <author>
-            <name>マグロ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Zulipでデイリーログ]]></title>
-        <id>https://zenn.dev/mebiusbox/articles/99c21aed33b344</id>
-        <link href="https://zenn.dev/mebiusbox/articles/99c21aed33b344"/>
-        <updated>2023-01-28T16:43:59.000Z</updated>
-        <summary type="html"><![CDATA[Zulip はオープンソースのチャットツールです．
-https://zulip.com/
-ZulipはSlackライクですが、 チャネル に相当する ストリーム の他に、Zulipには トピック があります．トピックがあるとディスカッションが明確になり、結論に辿りやすくなると思っています．Redditや2ちゃんねるのようにカテゴリ＋スレッドがストリーム＋トピックのようになっています．例えば、Rustの日本語コミュニティではZulipを使っていますが、閲覧するだけなら掲示板のように見ることができます．
-https://rust-lang-jp.zulipchat.com/
-今回はZulip...]]></summary>
-        <author>
-            <name>mebiusbox</name>
         </author>
     </entry>
 </feed>

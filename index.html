@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-02-27 datetime="2023-02-27T01:16:41.000Z">2023-02-27</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-02-27 datetime="2023-02-27T01:16:41.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-02-27 datetime="2023-02-27T23:55:23.000Z">2023-02-27</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-02-27 datetime="2023-02-27T23:55:23.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,293 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/oreilly_ota/articles/1e1cad2451391d"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】FlaskサーバでJWT認証を実装する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/oreilly_ota/articles/1e1cad2451391d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--kxTAR6ua--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591Flask%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2581%25A7JWT%25E8%25AA%258D%25E8%25A8%25BC%25E3%2582%2592%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25AA%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25A8%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25BC%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvby5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+本記事では、JWT（JSON Web Token）を使用した認証を、flaskで実装する方法を紹介する。本記事のゴールとしては、localhostで立ち上げたflaskアプリケーション （http://127.0.0.1:5000/headers） に対して、Bearer Tokenを使用しGETを行う。そうすると、flaskアプリケーションでBearer Tokenが認証されて、200のステータスコードで &quot;Access Granted&quot; と出力される。
+
+
+ 要件仕様
+上記アプリケーションを実装する上で、三つの機能が求められる。
+
+get_token_auth_header...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nosukey/articles/python_get_default_value"
+                        open
+                      >
+                        <summary class="article-expander__title">pythonでNoneの時、Default Valueを取得する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nosukey/articles/python_get_default_value">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--NKuzgkwH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A7None%25E3%2581%25AE%25E6%2599%2582%25E3%2580%2581Default%2520Value%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Nosukey%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5OGI2ZmFjZmEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>書くこと
+以下のようなコードを短く書く方法
+# getValue(): string value or None
+value &#x3D; getValue()
+
+if value is None:
+    value &#x3D; &quot;DefaultValue&quot;
+
+ 方法論
+orを利用する
+value &#x3D; getValue() or &#x27;DefaultValue&#x27;
+
+ 付録: dict型の値取得と組み合わせる
+dict &#x3D; {&#x27;key&#x27;: &#x27;value&#x27;, &#x27;none_key&#x27;: None}
+
+dict.get(&#x27;no_key&#x27;, &#x27;NoKeyDefaultValue&#x27;)
+# &#x3D;&gt; &#x27;NoKeyDe...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yoheikusano/articles/1b8444217f64a7"
+                        open
+                      >
+                        <summary class="article-expander__title">firestoreのpython orm、fireoで簡単にfirestoreを使う ②モデルとデータの保存</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoheikusano/articles/1b8444217f64a7">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s---PxxrbhY--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:firestore%25E3%2581%25AEpython%2520orm%25E3%2580%2581fireo%25E3%2581%25A7%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25ABfirestore%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%2520%25E2%2591%25A1%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25A8%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E4%25BF%259D%25E5%25AD%2598%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E8%258D%2589%25E9%2587%258E%25E6%25B4%258B%25E5%25B9%25B3%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2YzZDIwYTZkZDUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>結構なボリュームになりそうなので分けて書いていきます。
+①はじめに　簡単な使い方　
+②モデルの定義方法と保存方法　（こちらの記事となります。）
+
+こちらの記事はドキュメントより必要な点を抜粋しています。
+
+ モデルについて
+FireOは最初にモデル（データのひな型）を作ります。
+基本はfrom fireo.model import Modelを行い、Modelを継承して作成していきます。
+以下のようにしてモデルを定義します。
+class MyModel(Model):
+    uid &#x3D; IDField()
+    user_name &#x3D; TextField(required&#x3D;True)...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nosukey/articles/django_filter_child_columns"
+                        open
+                      >
+                        <summary class="article-expander__title">DjangoのORMで子テーブルのカラムを使ってfilterする</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nosukey/articles/django_filter_child_columns">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--BnHzc4Bj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%25E3%2581%25AEORM%25E3%2581%25A7%25E5%25AD%2590%25E3%2583%2586%25E3%2583%25BC%25E3%2583%2596%25E3%2583%25AB%25E3%2581%25AE%25E3%2582%25AB%25E3%2583%25A9%25E3%2583%25A0%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6filter%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Nosukey%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5OGI2ZmFjZmEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>書くこと
+
+distinctを使ってフィルターする方法
+annotateを使ってフィルターする方法
+
+
+ 利用技術
+
+Django
+
+
+ 想定
+
+ モデル
+以下のArticleとCommentモデルがあるとする。
+class Article(models.Model):
+    title &#x3D; models.CharField(max_length&#x3D;100)
+    # (省略)
+
+
+class Comment(models.Model):
+    text &#x3D; models.CharField(max_length&#x3D;100)
+    active &#x3D; models.BooleanF...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yumemi_inc/articles/cefe0006068553"
+                        open
+                      >
+                        <summary class="article-expander__title">PythonでlocalStack(Docker)のS3オブジェクトを取得する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yumemi_inc/articles/cefe0006068553">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Q5DCG9-C--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7localStack%2528Docker%2529%25E3%2581%25AES3%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%82%86%E3%82%81%E3%81%BF%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:lightkun%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U2MzAxMTgwMzUuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM1YTU1MTFmYzguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>AWSリソースをローカル環境で使うことができるlocalStackを試しに使ってみました。
+https://localstack.cloud/
+
+ 環境
+機種 : MacBook Pro 2021(M1 Max)
+OS : Monterey(12.2.1)
+Python version(Docker): 3.11.2
+pip version(Docker): 22.3.1
+awscli-local version: 0.20
+
+ 各種インストール
+
+ localStackのインストール
+localStackを記載ある方法通りインストールします。が、Dockerコンテナを立てるので、なくて...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yoheikusano/articles/9a16def37d341b"
+                        open
+                      >
+                        <summary class="article-expander__title">firestoreのpython orm、fireoで簡単にfirestoreを使う ①使い方</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoheikusano/articles/9a16def37d341b">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--KHytq_P8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:firestore%25E3%2581%25AEpython%2520orm%25E3%2580%2581fireo%25E3%2581%25A7%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25ABfirestore%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%2520%25E2%2591%25A0%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E8%258D%2589%25E9%2587%258E%25E6%25B4%258B%25E5%25B9%25B3%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2YzZDIwYTZkZDUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>結構なボリュームになりそうなので分けて書いていきます。
+①はじめに　簡単な使い方　（こちらの記事となります。）
+②モデルの定義方法と保存方法
+
+たとえばこんなクラスがあったとします。こちらをそのままFirestoreに保存し、それをそのままFirestoreから取り出すようなライブラリーです。
+@dataclass
+class Conversation():
+    uid:str
+    startAt:datetime.datetime
+    endAt:datetime.datetime
+    outgoing:str
+    incoming:str
+    talk:str...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/d194cb7a348c9e"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-150｜A - 500 Yen Coins</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/d194cb7a348c9e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--J2A1fzWf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-150%25EF%25BD%259CA%2520-%2520500%2520Yen%2520Coins%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-150 A - 500 Yen Coins
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    k, x &#x3D; getIntMap()
+
+    print(&#x27;Yes&#x27; if x / k &lt;&#x3D; 500.0 else &#x27;No&#x27;)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/1981400dfc854d"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-150｜B - Count ABC</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/1981400dfc854d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--6TiYfx9b--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-150%25EF%25BD%259CB%2520-%2520Count%2520ABC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-150 B - Count ABC
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getString():
+    return input()
+
+
+def main():
+    n &#x3D; getInt()
+    s &#x3D; getString()
+
+    c &#x3D; 0
+    for i in range(n - 2):
+        if s[i:i+3] &#x3D;&#x3D; &#x27;ABC&#x27;:
+            c +&#x3D; 1
+    print(c)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -11040,415 +11327,6 @@ zsh
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/tmori/articles/2fc3cd14d27582"
-                        open
-                      >
-                        <summary class="article-expander__title">【ABC287】AtCoder Beginner Contest 287 A-D 振り返り【python】</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tmori/articles/2fc3cd14d27582">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--NnlyK673--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:tmori%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E3%2580%2590ABC287%25E3%2580%2591AtCoder%2520Beginner%2520Contest%2520287%2520A-D%2520%25E6%258C%25AF%25E3%2582%258A%25E8%25BF%2594%25E3%2582%258A%25E3%2580%2590python%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1IT2VrME9VRS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwMWQwYjU2OGIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>https://atcoder.jp/contests/abc287
-
- A - Majority
-それぞれの文字のカウントする。Forが大きかったらYes。
-
- 解法
-n &#x3D; int(input())
-s_list &#x3D; [input() for i in range(n)]  # 文字列S
-
-for_count &#x3D; 0
-against_count &#x3D; 0
-for i in s_list:
-    if i &#x3D;&#x3D; &quot;For&quot;:
-        for_count +&#x3D; 1
-    else:
-        against_count +&#x3D; 1
-
-if for_count &gt;&#x3D; a...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/da_o_k/articles/36a8bbf636b796"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonを使って時系列分析を丁寧に Part.1（時系列分析のモデル、周期成分、自己相関）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/da_o_k/articles/36a8bbf636b796">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--I8Hi6tcy--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:da_o_k_%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:Python%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E6%2599%2582%25E7%25B3%25BB%25E5%2588%2597%25E5%2588%2586%25E6%259E%2590%25E3%2582%2592%25E4%25B8%2581%25E5%25AF%25A7%25E3%2581%25AB%2520Part.1%25EF%25BC%2588%25E6%2599%2582%25E7%25B3%25BB%25E5%2588%2597%25E5%2588%2586%25E6%259E%2590%25E3%2581%25AE%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2580%2581%25E5%2591%25A8%25E6%259C%259F%25E6%2588%2590%25E5%2588%2586%25E3%2580%2581%25E8%2587%25AA%25E5%25B7%25B1%25E7%259B%25B8%25E9%2596%25A2%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1WUEltd3c2Si0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E1YjE3ZjQ2MzUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>時系列分析
-時系列データは
-
-トレンド
-季節成分
-不規則成分
-
-の3要素が合成している、と考えるのが一般的です。
-合成の仕方は2通りが考えられ
-
-加法モデル
-乗法モデル
-
-です。
-
- モデルの定式化
-トレンドをT(t)、規則成分をS(t)、不規則（Irregular）成分をI(t)として、元データO(t)を表すことを考えてみます。
-加法モデルであれば、そりゃ
-
-\begin{align*}
-O(t) &#x3D; T(t) + S(t) + I(t)
-\end{align*}
-
-となりますね。乗法モデルであればもちろん
-
-\begin{align*}
-O(t) &#x3D; T(t) \times S(...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/goriratatsu/articles/08e9343ed1999a"
-                        open
-                      >
-                        <summary class="article-expander__title">PythonからMySQLにアクセスしたい</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/goriratatsu/articles/08e9343ed1999a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--RSz7TBKZ--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Gorira-Tatsu%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%258B%25E3%2582%2589MySQL%25E3%2581%25AB%25E3%2582%25A2%25E3%2582%25AF%25E3%2582%25BB%25E3%2582%25B9%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1LdUhTVTZtVC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzgwZTE0ZTYxNDUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>PythonでFlaskを触っていると、データベースを使いたくなることがあります。アクセスするためのドライバーには下記のようなものがありますが、今回最も基本的なmysql-connector-pythonを使うことにします。
-
-mysql-connector-python
-PyMySQL
-
-
- mysql-connector-pythonとはなにか？
-mysql-connector-pythonは、Oracle社などが提供しているドライバーで、PEP 249 – Python Database API Specification v2.0に準拠しています[1]。PEPは、PEP8 – S...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/web_life_ch/articles/33bc877e52209a"
-                        open
-                      >
-                        <summary class="article-expander__title">【Django】Pythonで作るRest API【１１ViewSets】</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/web_life_ch/articles/33bc877e52209a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--bgs1qM8c--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Web%2520Life%2520CH%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590Django%25E3%2580%2591Python%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258BRest%2520API%25E3%2580%2590%25EF%25BC%2591%25EF%25BC%2591ViewSets%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUl0YnZtbWNjTWFMM3dyd2x3VE5sVVZjTlhmZHEzZzF2QnJfMUJMSkJrN049czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>【１１ViewSets】
-YouTube: https://youtu.be/mEcvCwJLC4g
-https://youtu.be/mEcvCwJLC4g
-今回は「ViewSets」を使用して、
-「Post」モデルのビューを作成します。
-https://www.django-rest-framework.org/api-guide/viewsets/
-rest_frameworkのビューはいくつか種類があるのですが、
-すべての機能を持っているのが「ViewSets」で
-そこから少しづつ機能を削っていって
-最終的にAPIとして必要最低限の機能を持ったものが
-「APIView」となり...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/f8bedc9dc5a27f"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-110｜A - Maximize the Formula</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/f8bedc9dc5a27f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--9JaKVLkk--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-110%25EF%25BD%259CA%2520-%2520Maximize%2520the%2520Formula%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-110 A - Maximize the Formula
-
-
-
- 提出結果
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n &#x3D; getIntList()
-
-    n.sort()
-    n[2] &#x3D; n[2] * 10
-
-    print(sum(n))
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/716dab3eafb957"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-109｜A - ABC333</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/716dab3eafb957">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--26_WIXWf--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-109%25EF%25BD%259CA%2520-%2520ABC333%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-109 A - ABC333
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b &#x3D; getIntMap()
-
-    print(&#x27;Yes&#x27; if (a * b) % 2 &#x3D;&#x3D; 1 else &#x27;No&#x27;)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/43a563e0463796"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-110｜B - 1 Dimensional World&#x27;s Tale</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/43a563e0463796">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--dnMNHQRb--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-110%25EF%25BD%259CB%2520-%25201%2520Dimensional%2520World%2527s%2520Tale%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-110 B - 1 Dimensional World&#x27;s Tale
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n, m, x, y &#x3D; getIntMap()
-    X &#x3D; max(getIntList())
-    Y &#x3D; min(getIntList())
-
-    r &#x3D; False
-    for z in...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/31ae70c4329076"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-109｜B - Shiritori</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/31ae70c4329076">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--xaMxQQgY--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-109%25EF%25BD%259CB%2520-%2520Shiritori%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-109 B - Shiritori
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getStringRow(N):
-    return [input() for _ in range(N)]
-
-
-def main():
-    n &#x3D; getInt()
-    w &#x3D; getStringRow(n)
-
-    r &#x3D; True
-    if len(w) !&#x3D; len(set(w)):
-        r &#x3D; False
-    else:
-        for i in range(1, n):...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/zi_matsu/articles/f92fde515b2b60"
-                        open
-                      >
-                        <summary class="article-expander__title">1/22~1/27で技術的にやったこと</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/zi_matsu/articles/f92fde515b2b60">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--TAIL7OZ8--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Matsuzaki%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:1%252F22%7E1%252F27%25E3%2581%25A7%25E6%258A%2580%25E8%25A1%2593%25E7%259A%2584%25E3%2581%25AB%25E3%2582%2584%25E3%2581%25A3%25E3%2581%259F%25E3%2581%2593%25E3%2581%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS16ZW9oU3UweC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzcyNzNkNzczYTAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>s3とeventbridgeって同じじゃね？どっちがいいんだ？
-結局どちらもイベントの重複は発生するみたい・・・
-https://dev.classmethod.jp/articles/s3-event-notification-vs-eventbridge-event-processing-overflow-rate-2/
-
- そのほかでやったこと
-案件の調査系と軽い修正しかやっていないので特に技術的なことはなし</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-01-28 datetime="2023-01-28T23:43:59.000Z">2023-01-28</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-01-28 datetime="2023-01-28T23:43:59.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/maguro_alterna/articles/65848d6f96ed30"
-                        open
-                      >
-                        <summary class="article-expander__title">DiscordとLINEをPython+FastAPI+Dockerで連携させる【その2】LINEからDiscordへテキストメッセージ</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/maguro_alterna/articles/65848d6f96ed30">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--3ViFwet3--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2583%259E%25E3%2582%25B0%25E3%2583%25AD%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:Discord%25E3%2581%25A8LINE%25E3%2582%2592Python%252BFastAPI%252BDocker%25E3%2581%25A7%25E9%2580%25A3%25E6%2590%25BA%25E3%2581%2595%25E3%2581%259B%25E3%2582%258B%25E3%2580%2590%25E3%2581%259D%25E3%2581%25AE2%25E3%2580%2591LINE%25E3%2581%258B%25E3%2582%2589Discord%25E3%2581%25B8%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25A1%25E3%2583%2583%25E3%2582%25BB%25E3%2583%25BC%25E3%2582%25B8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1zVU5vLVltay0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzlmYzliOWM1MDQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>挨拶
-こんにちは。マグロです。
-前回の続きとなります。
-https://zenn.dev/maguro_alterna/articles/f5a52f1cb8b1e7
-今回はLINEからDiscordへテキストメッセージを送れるようにします。
-
- 設計
-LINEBotはメッセージを受け取った場合、Developerサイトで設定したWebHookに内容が送信されます。
-そのためFastAPIでサーバーを立ち上げ、WebHookを設定します。
-しかしここで一つ問題があります。
-そこからどうやってDiscordに送る？？
-Discord.pyやPycordを使って送ればいいと思いますが、...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;33
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mebiusbox/articles/99c21aed33b344"
-                        open
-                      >
-                        <summary class="article-expander__title">Zulipでデイリーログ</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mebiusbox/articles/99c21aed33b344">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--BPT9Bj2w--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mebiusbox%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Zulip%25E3%2581%25A7%25E3%2583%2587%25E3%2582%25A4%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25AD%25E3%2582%25B0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1VS29IbHl1YS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2UzZjRiZTVmOTguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Zulip はオープンソースのチャットツールです．
-https://zulip.com/
-ZulipはSlackライクですが、 チャネル に相当する ストリーム の他に、Zulipには トピック があります．トピックがあるとディスカッションが明確になり、結論に辿りやすくなると思っています．Redditや2ちゃんねるのようにカテゴリ＋スレッドがストリーム＋トピックのようになっています．例えば、Rustの日本語コミュニティではZulipを使っていますが、閲覧するだけなら掲示板のように見ることができます．
-https://rust-lang-jp.zulipchat.com/
-今回はZulip...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -11456,8 +11334,8 @@ https://rust-lang-jp.zulipchat.com/
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4278045818">
-        <time id="build-timestamp" datetime="2023-02-27T01:45:07.063Z">2023-02-27T01:45:07.063Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4288661453">
+        <time id="build-timestamp" datetime="2023-02-28T01:44:31.785Z">2023-02-28T01:44:31.785Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
