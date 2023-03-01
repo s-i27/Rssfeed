@@ -22,6 +22,494 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-02-28 datetime="2023-02-28T23:30:21.000Z">2023-02-28</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-02-28 datetime="2023-02-28T23:30:21.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kz2021/articles/f9a5f84497d7fb"
+                        open
+                      >
+                        <summary class="article-expander__title">『Python』EDINET上の財務情報を取得・アプリで可視化③</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kz2021/articles/f9a5f84497d7fb">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--rjxDtVPX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258EPython%25E3%2580%258FEDINET%25E4%25B8%258A%25E3%2581%25AE%25E8%25B2%25A1%25E5%258B%2599%25E6%2583%2585%25E5%25A0%25B1%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2583%25BB%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2581%25A7%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E2%2591%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kz2021%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlNDg2NzRlM2YuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+大まかな流れは下の図の通りです。
+
+ここでは、➁で保存したCSVを使用してアプリを作成・可視化するまでの工程を取り扱います。
+アプリ作成のライブラリにPythonのStreamlit、可視化のライブラリにPlotlyを使います。
+また、Streamlitのマルチページという機能を使って作成しています。
+マルチページの説明は以下のサイトが分かりやすいのでそちらを載せておきます。
+https://qiita.com/nockn/items/f40a80cc79fcb358083c
+https://kajiblo.com/streamlit-maltipage/
+
+ファイル構成
+...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;20
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kz2021/articles/3522b74240a010"
+                        open
+                      >
+                        <summary class="article-expander__title">『Python』EDINET上の財務情報を取得・アプリで可視化➁</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kz2021/articles/3522b74240a010">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--1xRMr4ZV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258EPython%25E3%2580%258FEDINET%25E4%25B8%258A%25E3%2581%25AE%25E8%25B2%25A1%25E5%258B%2599%25E6%2583%2585%25E5%25A0%25B1%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2583%25BB%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2581%25A7%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E2%259E%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kz2021%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlNDg2NzRlM2YuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+大まかな流れは下の図の通りです。
+
+ここでは➀で取得した書類から実際に財務諸表の数値を取り出しデータフレームとしてcsvに保存するまでの工程を取り扱います。
+➀ではXBRLとPDFの形式でそれぞれ書類を取得しましたが、ここではその中のXBRL形式で取得した有価証券報告書を使用します。
+ちなみに、XBRL形式では以下のように表されています。
+
+今回マーカーで引いた部分を使用することで数値を取り出すことが出来ます。
+
+ 実行したコード
+
+ライブラリのインポート
+!pip install edinet_xbrl
+
+from google.colab import drive
+dr...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;13
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kz2021/articles/0261e039a41866"
+                        open
+                      >
+                        <summary class="article-expander__title">『Python』EDINET上の財務情報を取得・アプリで可視化➀</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kz2021/articles/0261e039a41866">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--wBSMJwuv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258EPython%25E3%2580%258FEDINET%25E4%25B8%258A%25E3%2581%25AE%25E8%25B2%25A1%25E5%258B%2599%25E6%2583%2585%25E5%25A0%25B1%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2583%25BB%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2581%25A7%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E2%259E%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kz2021%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlNDg2NzRlM2YuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+今回は、EDINETというサイトから上場企業の有価証券報告書を取得し、その情報をローカル環境のアプリで可視化する作業について記載していこうと思います。（➀から➂に分けて記載します。）
+大まかな流れは下の図の通りです。
+
+この記事では、EDINET APIで書類を取得し保存する工程をGoogle Colabで実行した時のコードを記載したいと思います。
+
+ EDINETについて
+https://www.fsa.go.jp/search/20130917.html
+EDINETは、ざっくり言えば様々な企業の決算情報を纏めた書類を縦覧できるサイトです。
+それぞれの書類をPDFやXB...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kleamp1e/articles/202302-instruct-pix2pix"
+                        open
+                      >
+                        <summary class="article-expander__title">ローカルのDocker環境でInstructPix2Pixを動かしてみた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kleamp1e/articles/202302-instruct-pix2pix">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--TCLV-R3w--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E3%2581%25AEDocker%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A7InstructPix2Pix%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kleamp1e%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2laSXFmblBGM2NPY2w2UTdrVUdZS3E4MllSd1VocFBka1lRUWRmPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+InstructPix2PixをローカルのDocker環境で動かしてみた際のメモです。
+予めDocker、NVIDIAドライバ、NVIDIA Container Runtimeのセットアップが必要です。
+
+ 環境
+試した環境は以下の通りです。
+$ grep PRETTY_NAME /etc/os-release
+PRETTY_NAME&#x3D;&quot;Ubuntu 20.04.5 LTS&quot;
+
+$ uname -a
+Linux gpu 5.4.0-139-generic #156-Ubuntu SMP Fri Jan 20 17:27:18 UTC 2023 x86_64 x86_64 x...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nkentar/articles/article_20230228"
+                        open
+                      >
+                        <summary class="article-expander__title">Playwrightで会話風画像を生成してブログに埋め込む</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nkentar/articles/article_20230228">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--JSV3TdkI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Playwright%25E3%2581%25A7%25E4%25BC%259A%25E8%25A9%25B1%25E9%25A2%25A8%25E7%2594%25BB%25E5%2583%258F%25E3%2582%2592%25E7%2594%259F%25E6%2588%2590%25E3%2581%2597%25E3%2581%25A6%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%25E3%2581%25AB%25E5%259F%258B%25E3%2582%2581%25E8%25BE%25BC%25E3%2582%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:N-ken%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZlYjJhMGNhM2MuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>この記事について
+Zennブログ用のmarkdownに、以下の記述をすることで…
+![会話内容を…](/images/article_20230228-1.png) 
+![こんな感じで…](/images/article_20230228-2.png) 
+![画像表示するようにしてみたよ！](/images/article_20230228-3.png) 
+
+
+ 
+
+ モチベーション
+...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/iyamada/articles/5f76cb1217e53a"
+                        open
+                      >
+                        <summary class="article-expander__title">pythonで「ドドスコスコスコ」を文字数を減らして書きたい</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/iyamada/articles/5f76cb1217e53a">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--4ZYDLM0_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A7%25E3%2580%258C%25E3%2583%2589%25E3%2583%2589%25E3%2582%25B9%25E3%2582%25B3%25E3%2582%25B9%25E3%2582%25B3%25E3%2582%25B9%25E3%2582%25B3%25E3%2580%258D%25E3%2582%2592%25E6%2596%2587%25E5%25AD%2597%25E6%2595%25B0%25E3%2582%2592%25E6%25B8%259B%25E3%2582%2589%25E3%2581%2597%25E3%2581%25A6%25E6%259B%25B8%25E3%2581%258D%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2584%25E3%2582%2584%25E3%2581%2581...%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2ZhYmEyMTEwZTEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+結論のコード
+import random as r;c&#x3D;15
+while c%4096^1911:c&#x3D;c*2+r.randrange(2);print([&quot;ドド&quot;,&quot;スコ&quot;][c%2])
+print(&quot;ラブ注入♡&quot;)
+今回扱ったコードをGitHubで見る↗︎
+
+次の記事 : 未執筆
+
+ 本題
+かなり前に目にした、下の問題
+
+
+
+ twitterより
+@sheeeeepla さんのツイート
+【問題】配列{&quot;ドド&quot;,&quot;スコ&quot;}からランダムに要素を標準出力し続け、『その並びが「ドドスコスコスコ」を3回繰り返したもの』に一致したときに「ラブ注入♡」と標準出力して終了するプログラムを作成...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/log5/articles/brief-spec-of-benzaiten-adlib"
+                        open
+                      >
+                        <summary class="article-expander__title">BenzaitenAdlibのざっくり解説</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/log5/articles/brief-spec-of-benzaiten-adlib">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--X3hlmD4c--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:BenzaitenAdlib%25E3%2581%25AE%25E3%2581%2596%25E3%2581%25A3%25E3%2581%258F%25E3%2582%258A%25E8%25A7%25A3%25E8%25AA%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:log5%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRiYjY2YmEwN2QuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>これは何?
+先日開催された「AIミュージックバトル!弁財天」にて使用したプログラム BenzaitenAdlib の後処理について説明する記事です。
+当日の解法共有LTでもお話しましたが、このプログラムは学習フェーズが公式サンプルのものと同じであるため、この記事では後処理についてのみ説明します。
+!
+なお、この記事で説明するのは、第1回弁財天の試合で使用したバージョンのプログラム に関するものです。これ以降にアップデートが入り、説明と異なる仕様になっている可能性があります。
+
+
+ 用語
+
+
+ノート とは、音符のことです。
+
+ノート番号 とは、ノートの音の高さのことで、雑に言うと鍵盤で...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/fumi_sagawa/articles/0232e3441a9b87"
+                        open
+                      >
+                        <summary class="article-expander__title">ChatGPTを用いたDiscordBot作成</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/fumi_sagawa/articles/0232e3441a9b87">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--JRC17xFe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ChatGPT%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259FDiscordBot%25E4%25BD%259C%25E6%2588%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25B5%25E3%2582%25AC%25E3%2583%25AF%25E3%2583%2595%25E3%2583%259F%25E3%2583%25A4%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzljMDI3NGY3YWYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>先日立ち上げたDiscord Serverを便利にしたいと思い、「特定のスタンプを押したらあるチャンネルでシェアするBot」を作りました。
+ChatGPTの使い方と合わせて共有です。
+
+プロンプト
+プロンプトの改良
+リファクタリング
+デプロイ
+振り返り
+
+
+ プロンプト
+初期プロンプトは以下です。
+あなたはプロのエンジニアです。
+
+以下の要件のコードを作成してください。
+- Discordのbot
+- 投稿に絵文字がついた際に発火
+- その投稿のURLをあるチャンネルに投稿する
+- 絵文字は特定のカスタム絵文字である
+また、コードは以下のサンプルから書き始めてください。
+
+ステップバイス...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/jizai_labo/articles/230221_mmdet_train_model"
+                        open
+                      >
+                        <summary class="article-expander__title">Google Colab + MMDetectionで楽してObject Detection - 4. データセットでモデルを学習 -</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/jizai_labo/articles/230221_mmdet_train_model">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--2XQKg_Rw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%2520Colab%2520%252B%2520MMDetection%25E3%2581%25A7%25E6%25A5%25BD%25E3%2581%2597%25E3%2581%25A6Object%2520Detection%2520-%25204.%2520%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%25BB%25E3%2583%2583...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2599%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5N2ZmNDMxNzguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+こんにちは！すだです！
+このシリーズ記事では、MMDetection で行えるいろんな便利な機能を紹介していきます。
+今回は、前回の「3. データセットでモデルを評価」の続きで、メジャーな公開データセットを使って Object Detection モデルを学習をしてみたい思います！
+過去の記事をまだ読んでいない方は、先にお読みください！
+https://zenn.dev/jizai_labo/articles/mmdet_outline
+今回作成した Colab Notebook はこちらです。
+https://colab.research.google.com/drive...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/mya3gou/articles/zenn-dialoguesystem"
+                        open
+                      >
+                        <summary class="article-expander__title">授業で地域の特徴を付与した対話システムのチーム開発を行った話</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mya3gou/articles/zenn-dialoguesystem">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ZsDKT_u9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%258E%2588%25E6%25A5%25AD%25E3%2581%25A7%25E5%259C%25B0%25E5%259F%259F%25E3%2581%25AE%25E7%2589%25B9%25E5%25BE%25B4%25E3%2582%2592%25E4%25BB%2598%25E4%25B8%258E%25E3%2581%2597%25E3%2581%259F%25E5%25AF%25BE%25E8%25A9%25B1%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2581%25AE%25E3%2583%2581%25E3%2583%25BC%25E3%2583%25A0%25E9%2596%258B%25E7%2599%25BA%25E3%2582%2592%25E8%25A1%258C%25E3%2581%25A3%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25BF%25E3%2582%2583%25E3%2583%25BC3%25E5%258F%25B7%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE1YTIzZjU1ZmUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>2023/02/28
+
+ はじめに
+大学3回生後期にチーム開発を行う授業があったのでその話をしようと思います．来年のB3とか対話システム作る人の役に立てば良いかなと思っています．
+
+ テーマ決め
+テーマは大まかに分けて画像認識，センシング，自然言語処理の3テーマがあったのですが，自分は自然言語処理をやっている人工知能研究室に所属しているので，取り敢えず自然言語処理のテーマを選びました．
+その中でさらに機械翻訳と対話システムという2種類のテーマがあったのですが，機械とおしゃべりできたらめっちゃ面白そうじゃんというモチベで対話システムを選びました．結果地獄みたいな作業量でしたが，最後はそこそ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/straydog/articles/908d516f7e2d4c"
+                        open
+                      >
+                        <summary class="article-expander__title">個人的venv入門</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/straydog/articles/908d516f7e2d4c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--LxYC2Tfr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_64:%25E5%2580%258B%25E4%25BA%25BA%25E7%259A%2584venv%25E5%2585%25A5%25E9%2596%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:stray%2520dog%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBjYzhmZDAzMGYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+去年まではとにかく生産することに重きを置いていたのですが、最近は余裕があるので、本来最初からやっておかなければならなかったことに入門します。
+仮想環境まわりは記事がごちゃってるイメージが強かったので、個人的な備忘録として記述します。OSは「Windows 10 pro」です。
+
+ 仮想環境構築
+コマンドは以下の通り。
+python -m venv .venv
+上記がスタンダードぽいです。基本的には、同じソースコードで複数の環境を試すからという理由でしょうか。
+
+ アクティベートとディアクティベート
+アクティベートは以下の通り。これにより仮想環境に入ります。
+.\.venv\...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/df387cdc1b86d8"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-151｜A - Next Alphabet</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/df387cdc1b86d8">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--BT8zZCDE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-151%25EF%25BD%259CA%2520-%2520Next%2520Alphabet%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-151 A - Next Alphabet
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s &#x3D; getString()
+
+    print(chr(ord(s) + 1))
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/dde59fbd047e57"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-151｜B - Achieve the Goal</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/dde59fbd047e57">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--0kk02XlB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-151%25EF%25BD%259CB%2520-%2520Achieve%2520the%2520Goal%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-151 B - Achieve the Goal
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n, k, m &#x3D; getIntMap()
+    a &#x3D; getIntList()
+
+    b &#x3D; max(0, n * m - sum(a))
+
+    print(b if b &lt;&#x3D; k else -1)
+
+
+if...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/activecore/articles/0d410261a4ce9e"
+                        open
+                      >
+                        <summary class="article-expander__title">置換がめんどくさい（pythonで一定期間ごとに日付を変えて置換して新しくファイルを作成する（作業記録ファイル作成））</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/activecore/articles/0d410261a4ce9e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--3sDzIdG3--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25BD%25AE%25E6%258F%259B%25E3%2581%258C%25E3%2582%2581%25E3%2582%2593%25E3%2581%25A9%25E3%2581%258F%25E3%2581%2595%25E3%2581%2584%25EF%25BC%2588python%25E3%2581%25A7%25E4%25B8%2580%25E5%25AE%259A%25E6%259C%259F%25E9%2596%2593%25E3%2581%2594%25E3%2581%25A8%25E3%2581%25AB%25E6%2597%25A5%25E4%25BB%2598%25E3%2582%2592%25E5%25A4%2589%25E3%2581%2588%25E3%2581%25A6%25E7%25BD%25AE%25E6%258F%259B%25E3%2581%2597%25E3%2581%25A6%25E6%2596%25B0%25E3%2581%2597%25E3%2581%258F%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%25EF%25BC%2588%25E4%25BD%259C%25E6%25A5%25AD%25E8%25A8%2598%25E9%258C%25B2%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E4%25BD%259C%25E6%2588%2590%25EF%25BC%2589%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%82%A2%E3%82%AF%E3%83%86%E3%82%A3%E3%83%96%E3%82%B3%E3%82%A2%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:John%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VlYjdkMGRlNzguanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNjMGQ4N2M1ZTUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+pythonを用いて一定期間ごとに日付を変更した置換ファイルを大量に作成する方法、コード
+背景
+業務にて、8日ごとに期間は変えなければならないが似たようなtxtファイルを3,4ヶ月間分作成しなければならず、フォーマットをダウンロードして、置換する作業を何回もするのは無駄だと感じたので。
+方法
+pythonのコードで
+・会話形式で開始日と終了日をstartday, enddayと定義
+・ファイルの中のyyyymmddを作成日に、yyyy-mm-ddとxxxx-mm-ddを開始日から8日ごとで区切った区間での開始日と終了日に置換したファイルを作成
+以上のようなコードのようになる。
+ポイ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-02-27 datetime="2023-02-27T23:55:23.000Z">2023-02-27</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-02-27 datetime="2023-02-27T23:55:23.000Z"></time>
           </button>
@@ -10897,445 +11385,10 @@ if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-01-30 datetime="2023-01-30T12:18:14.000Z">2023-01-30</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-01-30 datetime="2023-01-30T12:18:14.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/nakamura196/articles/b8f25b8869c0d0"
-                        open
-                      >
-                        <summary class="article-expander__title">IIIF Image API level 0による画像公開方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nakamura196/articles/b8f25b8869c0d0">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--3n53XbxJ--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:nakamura196%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:IIIF%2520Image%2520API%2520level%25200%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E7%2594%25BB%25E5%2583%258F%25E5%2585%25AC%25E9%2596%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pkd3BpX1gzTWIzV3VqTnVnV2tPTlJlU3VsNFNTN1BNMWlPQm9LRm5JPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>概要
-IIIF Image API level 0は、事前に作成した静的なタイル画像を用いて画像配信を行います。これにより、GitHub PagesやAmazon S3といった静的ファイルのホスティングサービスのみでの画像公開が可能となります。一方、任意の範囲の画像切り出しができないといった欠点も挙げられます。
-本記事は、IIIF Image API level 0を用いた画像公開の一例について紹介します。
-
- ツール
-以下のノートブックでお試しいただけます。
-https://colab.research.google.com/github/nakamura196/ndl_ocr/b...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/de3e1a50328995"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-111｜B - AtCoder Beginner Contest 111</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/de3e1a50328995">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Wk15JYRA--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-111%25EF%25BD%259CB%2520-%2520AtCoder%2520Beginner%2520Contest%2520111%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-111 B - AtCoder Beginner Contest 111
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def ns(n):
-    return n * 100 + n * 10 + n
-
-
-def main():
-    n &#x3D; getInt()
-
-    a &#x3D; 0
-    for i in range(9):
-        m &#x3D; ns(9 - i)
-        if n &lt;&#x3D; m:
-            a &#x3D; m
-            continue
-      ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/60c3ac8a4aa47a"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-111｜A - AtCoder Beginner Contest 999</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/60c3ac8a4aa47a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--78EW6Fyb--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-111%25EF%25BD%259CA%2520-%2520AtCoder%2520Beginner%2520Contest%2520999%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-111 A - AtCoder Beginner Contest 999
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    n &#x3D; list(getString())
-
-    s &#x3D; &#x27;&#x27;
-    for c in n:
-        s +&#x3D; &#x27;1&#x27; if c &#x3D;&#x3D; &#x27;9&#x27; else &#x27;9&#x27;
-    print(s)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kawamottyan/articles/1bc294d8f33f09"
-                        open
-                      >
-                        <summary class="article-expander__title">記述統計学</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kawamottyan/articles/1bc294d8f33f09">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--FH0yCf93--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kawamottyan%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:%25E8%25A8%2598%25E8%25BF%25B0%25E7%25B5%25B1%25E8%25A8%2588%25E5%25AD%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1M1AycFE5VW9INnQ1N09DNDBTSjV1Wms5Nzg4RUV6SWM4RDNpWkc4dz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>あらまし
-機械学習エンジニアに未経験から転職した。研修期間に学んだことを書きます。
-📌 文系にもわかりやすいように、わかりやすく書く。
-
- 🔗Outline
-1.データを分類する
-2.データの特徴を調べる
-
- 📘Instructions
-
- データを分類する
-データにはその特徴別に種類があります。それらを識別することで、その特徴にあった記述や推測が可能になります。
-
-カテゴリー型（質的変数 or Categorical Variables）
-数値型（量的変数 or Numeric Variables）
-
-離散型（Discrete Variables）
-連続型（Continuous V...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/web_life_ch/articles/182179ea91d56e"
-                        open
-                      >
-                        <summary class="article-expander__title">【Django】Pythonで作るRest API【１２ViewSets 2】</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/web_life_ch/articles/182179ea91d56e">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--PUQmcePy--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Web%2520Life%2520CH%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590Django%25E3%2580%2591Python%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258BRest%2520API%25E3%2580%2590%25EF%25BC%2591%25EF%25BC%2592ViewSets%25202%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUl0YnZtbWNjTWFMM3dyd2x3VE5sVVZjTlhmZHEzZzF2QnJfMUJMSkJrN049czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>【１２ViewSets 2】
-YouTube: https://youtu.be/1up4WF4xMr0
-https://youtu.be/1up4WF4xMr0
-今回は前回作成したビューの確認をブラウザを使用して行います。
-まずはこちらにアクセスして、
-「Post」の一覧ページを表示します。
-http://localhost:8000/posts/posts/
-そして、下の入力フォームから新しく「Post」のデータを作成します。
-このURLで実行できるのは「GET, POST, HEAD, OPTIONS」のリクエストとなります。
-右上の「GET」のボタンをクリックすると再度「Po...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/sosa/books/ce3eb17bc0dbf6"
-                        open
-                      >
-                        <summary class="article-expander__title">【ディープラーニング入門】PyTorchのクイックスタートを「あやめ」でやる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sosa/books/ce3eb17bc0dbf6">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--prgeWEv1--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci9lOTQ2OWFiZTIzLmpwZWc&#x3D;%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>目的
-- PyTorchチュートリアルのクイックスタートのサンプルを変える。
-- 今回作った学習済みのモデルをStreamlitで作ったWEBアプリに入れ公開してみる。
-
-PyTorchは、Pythonで書かれたオープンソースの機械学習ライブラリです。ニューラルネットワークを実装するためのAPIを提供し、ニューラルネットワークを簡単に実装できるように設計されてます。そのPyTorchチュートリアルにクイックスタートのサンプルhttps://yutaroogawa.github.io/pytorch_tutorials_jp/があります。このサンプルプログラムは画像の分類プログラムです。これを機械学習のプログラムでよく利用される「あやめ」の種類分類に変更する方法です。プログラムの変更はクイックスタートに対応させていきますのでクイックスタートがより分かりやすくなると思います。
-クイックスタートと同じGoogle　Colaboratoryを使います。
-最終的にはGoogle　Colaboratoryで学習して完成したモデルを実用化としてScreamlitで運用してみます。そうすることでより全体像がつかめるのではないかと思います。
-完成品https://miyamiko-pytorch-ayame-ayame-pytorch-6t9av1.streamlit.app/</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/dokokade/articles/24d4531fc61288"
-                        open
-                      >
-                        <summary class="article-expander__title">ColabとGoogleドライブで画像を水増しするよ😇</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/dokokade/articles/24d4531fc61288">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--omhmtWSx--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Dokokade%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Colab%25E3%2581%25A8Google%25E3%2583%2589%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2581%25A7%25E7%2594%25BB%25E5%2583%258F%25E3%2582%2592%25E6%25B0%25B4%25E5%25A2%2597%25E3%2581%2597%25E3%2581%2599%25E3%2582%258B%25E3%2582%2588%2520%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1fUzhjMC1GLS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhmOTJkNWI2ZDkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>全然わかってないですが、
-どうも機械学習は反転させたり...ほか何かしたりして素材を水増しするらしいです。これはいい情報です。どうやって数万枚も集めるんだよって思っていました。とはいえそこらも組み込まれたりするらしいですけど。でもとりあえず反転してみようと思いました。
-
- Googleドライブをマウントする
-pip install Pillow
-import os #ファイルやフォルダ操作
-from PIL import Image #PillowからImageをインポート
-import cv2
-import glob
-from google.colab import drive #...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/dokokade/articles/6ee7ee993645ea"
-                        open
-                      >
-                        <summary class="article-expander__title">ColabとGoogleドライブで画像をリサイズするよ😇</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/dokokade/articles/6ee7ee993645ea">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--b_Qi6mfe--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Dokokade%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Colab%25E3%2581%25A8Google%25E3%2583%2589%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2581%25A7%25E7%2594%25BB%25E5%2583%258F%25E3%2582%2592%25E3%2583%25AA%25E3%2582%25B5%25E3%2582%25A4%25E3%2582%25BA%25E3%2581%2599%25E3%2582%258B%25E3%2582%2588%2520%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1fUzhjMC1GLS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhmOTJkNWI2ZDkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>学習データを整形したい
-機械学習用に集めたデータのサイズを合わせたり、顔認証で顔中心に切り抜いたりする際に、最初の関門はデータセットの作り方です。なかなか公開されているデータセットはコンプラに重点を置いており「すげーなー」ってなるけど、これを何に使うのか？となりがちです。で、初歩の初歩として、素材を整える必要があります。それがGoogleドライブの画像を整形して保存することになります。
-
- ColabでGoogleドライブをマウントして
-先人たちを参考にColabで以下を記述してポチポチしていきます。
-pip install Pillow
-import os #ファイルやフォルダ操作...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/peperoncicicino/articles/83273b0c78fd64"
-                        open
-                      >
-                        <summary class="article-expander__title">企業名の辞書「JCLdic」を使ってテキストから企業名を抽出する API を作りました with Docker</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/peperoncicicino/articles/83273b0c78fd64">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Jk9o-Eq5--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Doarakko%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:%25E4%25BC%2581%25E6%25A5%25AD%25E5%2590%258D%25E3%2581%25AE%25E8%25BE%259E%25E6%259B%25B8%25E3%2580%258CJCLdic%25E3%2580%258D%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E3%2581%258B%25E3%2582%2589%25E4%25BC%2581%25E6%25A5%25AD%25E5%2590%258D%25E3%2582%2592%25E6%258A%25BD%25E5%2587%25BA%25E3%2581%2599%25E3%2582%258B%2520API%2520%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258A%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2520with%2520Docker%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1ZWGR3Wk1ITC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk2YzBiMDRkNGEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>JCLdicとは
-TIS株式会社が公開した企業名の辞書で、国税庁に登録されている法人情報を元に生成されています。
-「TIS」「ティアイエス」「テイアイエス」などの表記揺れを考慮して認識できるようです。
-
-参照：TIS、自然言語処理で企業名認識を行うための辞書「JCLdic」を無償公開
-CSVとMeCabの辞書形式それぞれで以下3つの辞書が公開されています。
-
-JCL-slim
-
-ふりがななし
-余分な英語なし
-デジタル名なし
-2文字以上30文字以下の社名
-
-
-JCL-medium
-
-デジタル名なし
-2文字以上30文字以下の社名
-
-
-JCL-full
-
-こちらが各辞書ごとのユニークな企業...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/ainellc/articles/4b04fadecbefa0"
-                        open
-                      >
-                        <summary class="article-expander__title">pip uninstall all</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ainellc/articles/4b04fadecbefa0">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--YN6ZVTmB--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Aine%2520LLC.%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:pip%2520uninstall%2520all%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS0ydUZqTjNzXy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JkOTJiOWM2MzIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>pipでインストールしたものを全て消す。確認も省略しているので要注意。
-pip freeze &gt; freeze.txt; pip uninstall -y -r freeze.txt; rm freeze.txt</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/tokoroteen/articles/f2859a2c2a2766"
-                        open
-                      >
-                        <summary class="article-expander__title">べ、べつにAIに褒められたって嬉しくないんだからね///（褒めてくれるLINE Botをつくる）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tokoroteen/articles/f2859a2c2a2766">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--p6T_AU1W--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Tokoroteen%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2581%25B9%25E3%2580%2581%25E3%2581%25B9%25E3%2581%25A4%25E3%2581%25ABAI%25E3%2581%25AB%25E8%25A4%2592%25E3%2582%2581%25E3%2582%2589%25E3%2582%258C%25E3%2581%259F%25E3%2581%25A3%25E3%2581%25A6%25E5%25AC%2589%25E3%2581%2597%25E3%2581%258F%25E3%2581%25AA%25E3%2581%2584%25E3%2582%2593%25E3%2581%25A0%25E3%2581%258B%25E3%2582%2589%25E3%2581%25AD%252F%252F%252F%25EF%25BC%2588%25E8%25A4%2592%25E3%2582%2581%25E3%2581%25A6%25E3%2581%258F%25E3%2582%258C%25E3%2582%258BLINE%2520Bot%25E3%2582%2592%25E3%2581%25A4%25E3%2581%258F%25E3%2582%258B%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1VS1pkSGdFYS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk3NzNmMDYyZTguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>いや、嘘です。嬉しいです。
-AIであっても褒められたいですよね？
-この記事は「日々こんなに辛い思いをしているのになんで誰も褒めてくれなんだ💢」と、褒めが足りなくて困っている方々向けのソリューションです。
-完成品はこんな感じです↓
-
-
- 1. 概要
-友人に何か作って欲しいものはないかと聞いたら、ただただ無条件に褒めてくれるサービスが欲しいと言っていたので「それだっ！」と思い作ってみることにしました。
-他の友人も一人暮らしで寂しいから、「さっさとお風呂入りなよー」とか言ってくれるヴァーチャルオカンが欲しいと言っていたので、寂しさを埋めてくれるようなサービスの需要は結構あるのかもしれません。
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;32
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-01-29 datetime="2023-01-29T14:17:37.000Z">2023-01-29</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-01-29 datetime="2023-01-29T14:17:37.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/sion_pn/articles/d0f9e45716cabb"
-                        open
-                      >
-                        <summary class="article-expander__title">MacでVSCode+pyenv+venv+pipを使い、Pythonの開発環境を構築する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sion_pn/articles/d0f9e45716cabb">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--J1OgGKGq--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:SiON%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:Mac%25E3%2581%25A7VSCode%252Bpyenv%252Bvenv%252Bpip%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2584%25E3%2580%2581Python%25E3%2581%25AE%25E9%2596%258B%25E7%2599%25BA%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNXBpNXV1TDJvZUNVYlBqU2FPTUtYb0wwQzNFbXByeEZ0OGxIVnM9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>複数のプロジェクトでPython開発を行う際、プロジェクト毎にPythonのバージョンや依存パッケージなどを使いわける必要があるかと思います。
-本記事では、pyenvとvenvを用いて作成した仮想環境にpipでパッケージをインストールし、Visual Studio Codeで扱うための設定手順について紹介します。
-
- 環境構築
-
- Homebrewをインストール
-まずは、関連するパッケージをインストールする環境を整えるため、Homebrewをインストールします。
-https://brew.sh/index_ja
-上記ページに記載がある、インストール用のコマンドを実行します。
-
-zsh
-/...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4288661453">
-        <time id="build-timestamp" datetime="2023-02-28T01:44:31.785Z">2023-02-28T01:44:31.785Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4299221256">
+        <time id="build-timestamp" datetime="2023-03-01T01:54:31.728Z">2023-03-01T01:54:31.728Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
