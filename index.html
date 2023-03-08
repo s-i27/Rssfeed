@@ -22,6 +22,298 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-03-07 datetime="2023-03-07T16:06:28.000Z">2023-03-07</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-03-07 datetime="2023-03-07T16:06:28.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kokopi/articles/a35d53b6ebae1d"
+                        open
+                      >
+                        <summary class="article-expander__title">Cannot find reference &#x27;url&#x27; in &#x27;__init__.py&#x27;の解決策</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kokopi/articles/a35d53b6ebae1d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Rt26Z2GP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cannot%2520find%2520reference%2520%2527url%2527%2520in%2520%2527__init__.py%2527%25E3%2581%25AE%25E8%25A7%25A3%25E6%25B1%25BA%25E7%25AD%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2593%25E3%2581%2593%25E3%2581%25B4%25E3%2581%25AE%25E3%2583%2591%25E3%2583%2591%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKdzZNV054RGIwMnhtcWh1S3UwR2NMNlRGbXhHQkJJWm1sazlOaDM9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>djangoでこんなエラーに遭遇
+Cannot find reference &#x27;url&#x27; in &#x27;init.py&#x27;
+
+
+ 原因
+Django4からurl関数が廃止されてしまったためです。
+Django3までの場合はなんの問題もなく使えていたものです。
+
+ 解決策
+下記のようにfromの部分を書き換えてください。
+from修正前
+from django.conf.urls import url
+from修正後
+from django.urls import path
+当然ですが、関数を呼び出す部分も修正してあげる必要があります。
+例）
+関数呼び出し修正前
+urlpatterns &#x3D; [...</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/fikastudio/articles/2f6c27a12d10e7"
+                        open
+                      >
+                        <summary class="article-expander__title">番兵法を用いた線形探索</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/fikastudio/articles/2f6c27a12d10e7">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--0wu2lKea--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%2595%25AA%25E5%2585%25B5%25E6%25B3%2595%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E7%25B7%259A%25E5%25BD%25A2%25E6%258E%25A2%25E7%25B4%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%2583%2585%25E5%25A0%25B1%25E5%25B7%25A5%25E5%25AD%25A6%25E5%2585%25A5%25E9%2596%2580%25E3%2583%2581%25E3%2583%25A3%25E3%2583%25B3%25E3%2583%258D%25E3%2583%25AB%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U2MDVjZjEwZDcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>要素が直線上に並んだリスト（配列）からの探索は、リストの先頭から順番に走査して探索対象と同じかどうかを確認することで実現できます。これを線形探索、もしくは逐次探索と言います。
+Python での実装例を以下に示しています。
+L &#x3D; [1, 9, 2, 5, 4, 7]
+def linear_search(search_obj):
+    index &#x3D; 0
+    while True:
+        if index &#x3D;&#x3D; len(L): # $1
+	    # 探索失敗
+        if L[index] &#x3D;&#x3D; search_obj: # $2
+	    # 探索成功
+	in...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tukiakaritabane/articles/python-mmd-shape-keys"
+                        open
+                      >
+                        <summary class="article-expander__title">INABAの表情筋を鍛えるためのPythonスクリプト</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tukiakaritabane/articles/python-mmd-shape-keys">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--w3kF1Y-0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:INABA%25E3%2581%25AE%25E8%25A1%25A8%25E6%2583%2585%25E7%25AD%258B%25E3%2582%2592%25E9%258D%259B%25E3%2581%2588%25E3%2582%258B%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AEPython%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2597%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%259C%2588%25E6%2598%258E%25E3%2581%259F%25E3%2581%25B0%25E3%2581%25AD%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WWk4UDRnUzZFczQzY25wbFlrWjdoMkFrWkRQQ2hvZUNzaFZzYUs9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>表情シェイプキーのコピー作業を自動化できないか調べたところ、
+PythonでBlenderをマクロ操作できることが分かったので、書いてみました。
+注意点と使用方法は以下の通りです。
+
+ 注意点
+以下の表情シェイプキーは、表情の内容が変更されます。
+
+
+
+シェイプキー
+変更後の表情
+
+
+
+
+にやり
+口角上げ
+
+
+上
+デフォルト表情(Basis)
+
+
+下
+デフォルト表情(Basis)
+
+
+
+対応する表情がないシェイプキーについては、デフォルト表情(Basis)のシェイプキーをコピーしています。
+
+
+
+シェイプキー
+
+
+
+
+光下
+
+
+口角広げ
+
+
+上
+
+
+下
+
+
+
+
+ 使用方法
+FBXをインポ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/ca02667d6797be"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-159｜A - The Number of Even Pairs</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/ca02667d6797be">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--9FHLl2wk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-159%25EF%25BD%259CA%2520-%2520The%2520Number%2520of%2520Even%2520Pairs%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-159 A - The Number of Even Pairs
+
+
+
+ 提出結果
+import math
+
+
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    n, m &#x3D; getIntMap()
+
+    print(math.comb(n, 2) + math.comb(m, 2))
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/ac85b4a2b9b340"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-159｜B - String Palindrome</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/ac85b4a2b9b340">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--6euEVf8X--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-159%25EF%25BD%259CB%2520-%2520String%2520Palindrome%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-159 B - String Palindrome
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def palindrome(s):
+    r &#x3D; s[::-1]
+
+    return True if s &#x3D;&#x3D; r else False
+
+
+def main():
+    s &#x3D; getString()
+
+    l &#x3D; len(s)
+    t &#x3D; s[:(l - 1) // 2]
+    u &#x3D; s[(l + 3) // 2 - 1:]
+
+    print(&#x27;Yes&#x27; if palindrome(s)...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/k41531/articles/6133b1b045d1aa"
+                        open
+                      >
+                        <summary class="article-expander__title">venvでtkinterを使おうとして詰まった話</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/k41531/articles/6133b1b045d1aa">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--cIWtpehB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:venv%25E3%2581%25A7tkinter%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%258A%25E3%2581%2586%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25A6%25E8%25A9%25B0%25E3%2581%25BE%25E3%2581%25A3%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kaisei%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q4ZTJhN2E2NDcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>環境
+
+Mac mini(M1)
+
+Venture 13.1
+
+
+Python
+
+ホスト：3.11.2
+venv：3.10.10
+
+
+
+
+ 解決策
+バージョンに合ったpython-tkを入れる。
+brew install python-tk@3.10
+
+ 問題
+ホストとバージョンの違うPythonをvenvで動かしている際。tkinterが次のエラーを出して困っていた。
+Traceback (most recent call last):
+  File &quot;/opt/homebrew/Cellar/python@3.10/3.10.10_1/Frameworks/Python.fram...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-03-06 datetime="2023-03-06T13:16:39.000Z">2023-03-06</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-03-06 datetime="2023-03-06T13:16:39.000Z"></time>
           </button>
@@ -10422,296 +10714,6 @@ Rubyの @xxx ||&#x3D;ではなく、memorizegemを使う感じに似ています
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/nosukey/articles/django_create_get_object_or_none"
-                        open
-                      >
-                        <summary class="article-expander__title">DjangoでCustom Managerを利用して、Railsのfind_by風オブジェクト取得を実現する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nosukey/articles/django_create_get_object_or_none">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--rGfg34A4--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Nosukey%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:Django%25E3%2581%25A7Custom%2520Manager%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E3%2580%2581Rails%25E3%2581%25AEfind_by%25E9%25A2%25A8%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E5%258F%2596%25E5%25BE%2597%25E3%2582%2592%25E5%25AE%259F%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1iUGRpOGhPeC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5OGI2ZmFjZmEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>書くこと
-
-Ruby on Railsのfind_by風、簡易機能をDjangoで書く方法
-Djangoのget で ObjectDoesNotExistを握りつぶす方法
-
-
- 利用する技術
-
-Django
-model.Manager
-
-
- 今日のゴール
-このようなArticleモデルが定義されていたとき
-class Article(models.Model):
-    title &#x3D; models.CharField(max_length&#x3D;100)
-    # (省略)
-    is_active &#x3D; models.BooleanField(default&#x3D;True)
-呼び出し側で...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/cp20/articles/stable-diffusion-webui-with-modal"
-                        open
-                      >
-                        <summary class="article-expander__title">【無料】GPUがなくてもStable Diffusionで遊びたい！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/cp20/articles/stable-diffusion-webui-with-modal">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--s_wPhIpj--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%2597%25E3%2583%25BC%25E3%2581%25B4%25E3%2583%25BC%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E7%2584%25A1%25E6%2596%2599%25E3%2580%2591GPU%25E3%2581%258C%25E3%2581%25AA%25E3%2581%258F%25E3%2581%25A6%25E3%2582%2582Stable%2520Diffusion%25E3%2581%25A7%25E9%2581%258A%25E3%2581%25B3%25E3%2581%259F%25E3%2581%2584%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lkMENtX3dVYnd6b0NyR1g2aEFVaWdkWnZ3dDJPb2g3cVpEWElEUlE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>まえがき
-「GPUを持ってないけどAI絵を描いてみたい！」というお悩みを抱えている皆さん、Google Colabで満足していませんか？この記事ではModalを使うことでGoogle Colabより（きっと）優れたAI絵生成体験をGETする方法をご紹介します。
-!
-少し知識のある人向けの記事なのでご注意
-
-
- What is Modal?
-
-イケメンなランディングページだね
-みんなが良く知るあの「モーダル」ではありません。名前の由来は謎ですが、「Your end-to-end stack for cloud compute」という謳い文句の通りクラウドコンピューティングツール(?)で...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/d681573c4b9f9e"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-119｜A - Still TBD</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/d681573c4b9f9e">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--4y8nfziC--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-119%25EF%25BD%259CA%2520-%2520Still%2520TBD%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-119 A - Still TBD
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s &#x3D; getString()
-
-    print(&#x27;Heisei&#x27; if s &lt;&#x3D; &#x27;2019/04/30&#x27; else &#x27;TBD&#x27;)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/5b44487a0cc503"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-119｜B - Digital Gifts</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/5b44487a0cc503">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--M6G9y4ct--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-119%25EF%25BD%259CB%2520-%2520Digital%2520Gifts%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-119 B - Digital Gifts
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getStringListRow(N):
-    return [list(input().split()) for _ in range(N)]
-
-
-def yen(a):
-    x, u &#x3D; a
-
-    return float(x) if u &#x3D;&#x3D; &#x27;JPY&#x27; else 380000.0 * float(x)
-
-
-def main():
-    n &#x3D; getInt()
-    d &#x3D; getStrin...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/fkunn1326/articles/c3d9d1d8606b04"
-                        open
-                      >
-                        <summary class="article-expander__title">TensorRTを使ってStableDiffusionを爆速にする（Windows編）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/fkunn1326/articles/c3d9d1d8606b04">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--IZlp8Pgo--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:fkunn1326%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:TensorRT%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6StableDiffusion%25E3%2582%2592%25E7%2588%2586%25E9%2580%259F%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25EF%25BC%2588Windows%25E7%25B7%25A8%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3B1bTZLR0IyMTdFb08ybmcwUFlvM0QzT1laQ01XWFF0SzNwV2hzPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>こんにちは、Fくんです。
-受験シーズンです...
-https://zenn.dev/ddpn08/articles/tensorrt-stable-diffusion
-これのwindows版ですね
-どのくらい速くなるとかLinuxとかColabでの実行方法は前の記事を見ていただいて...
-
- Lsmith
-https://github.com/ddPn08/Lsmith
-TensorRTをGUIで扱いやすくするものがだだっこぱんださんから出てます。
-すぐwindows対応出ると思います
-ここから先はtensorrt repoのdemo-diffusion.pyを動かしたい人向けです
-
- ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/rin_kusumistudy/articles/cdbfade8f0e8ff"
-                        open
-                      >
-                        <summary class="article-expander__title">python_playwright 環境づくり</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/rin_kusumistudy/articles/cdbfade8f0e8ff">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--2gzlByeF--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:rin_kusumi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:python_playwright%2520%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A5%25E3%2581%258F%25E3%2582%258A%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNnJabkpzcldLVzcydHVTdk42Rk4zeEp2MnMzbFVvVmU2VGFSNkxpUT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめ、pythonとIDEをダウンロードします。
-①pythonインストール、64bit(パソコンのbitと合わせる)：https://pythonlinks.python.jp/en/index.html
-pythonの設定：https://www.python.jp/install/windows/install.html
-②Python IDE→PyCharmのインストール(Community)：https://www.jetbrains.com/pycharm/download/#section&#x3D;windows
-PyCharmインストール手順：https://sukkiri.j...</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/skwbc/articles/sentence_bert_implementation"
-                        open
-                      >
-                        <summary class="article-expander__title">Sentence-BERTを用いた高速な類似文書検索</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/skwbc/articles/sentence_bert_implementation">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--eg04oZ2n--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:skwbc%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Sentence-BERT%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E9%25AB%2598%25E9%2580%259F%25E3%2581%25AA%25E9%25A1%259E%25E4%25BC%25BC%25E6%2596%2587%25E6%259B%25B8%25E6%25A4%259C%25E7%25B4%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvcy5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>概要
-BERTを使って高精度な類似文書検索を実現出来ると仕事に役立つのではと思い個人的に色々と実験していたのですが、結局仕事でこれを使う機会は無さそうなので供養のために実装と実験結果を記事にしたいと思います。
-この記事では、Sentence-BERT (以下、SBERTと呼ぶ) という手法について主に取り上げます。
-このSBERTという手法に注目したのは単純に以下のような理由からです。
-
-文書間の類似度を高精度に求めることが出来ると、高精度な類似文書検索が実現できる。
-BERTを使って文書類似度を求めると、非常に高精度だが非常に遅い。
-SBERTを用いると、高精度かつ高速に文書類似度...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;36
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/web_life_ch/articles/cb67dad3ad70b3"
-                        open
-                      >
-                        <summary class="article-expander__title">【Django】Pythonで作るRest API【１９User Serializer】</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/web_life_ch/articles/cb67dad3ad70b3">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--DEHBBULr--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Web%2520Life%2520CH%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590Django%25E3%2580%2591Python%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258BRest%2520API%25E3%2580%2590%25EF%25BC%2591%25EF%25BC%2599User%2520Serializer%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUl0YnZtbWNjTWFMM3dyd2x3VE5sVVZjTlhmZHEzZzF2QnJfMUJMSkJrN049czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>【１９User Serializer】
-YouTube: https://youtu.be/wXcAo2jkQgY
-https://youtu.be/wXcAo2jkQgY
-今回は「User」のデータに関する処理を実装していくのですが、
-ビューを作成する前に、URLとシリアライザーの設定を行います。
-まずは「accounts」のフォルダ内に「urls.py」を作成します。
-
-myapp/accounts/urls.py
-from django.urls import path
-
-urlpatterns &#x3D; [
-    # path(&#x27;me/&#x27;, helloWorld, name&#x3D;&#x27;m...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/karamawanu/articles/14e3fa2325e53c"
-                        open
-                      >
-                        <summary class="article-expander__title">repl 特化 pythonでデータベースの探検をするのに快適 db.py</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/karamawanu/articles/14e3fa2325e53c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--0XLvq4Nv--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:karamawanu%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:repl%2520%25E7%2589%25B9%25E5%258C%2596%2520python%25E3%2581%25A7%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2599%25E3%2583%25BC%25E3%2582%25B9%25E3%2581%25AE%25E6%258E%25A2%25E6%25A4%259C%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25AB%25E5%25BF%25AB%25E9%2581%25A9%2520db.py%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2laSzJJYTRGZWZqV2RySzJqdHFlWnBmaE5HZ3BHLWxid2NUX0NLWHF3PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>replでの作業に特化した db.py を発見した。データベースの中身を探検するのに快適である。
-ほとんど知名度がないらしいので紹介する。
-https://pypi.org/project/db.py/
-https://github.com/yhat/db.py
-&quot;repl&quot;そのものの説明については、テキトーに検索してほしい。
-
- 利用例
-例えば redmine のsqliteデータベースを探検する場合を示す。
-import db
-内部で多数の別ライブラリをインポートしてるため、例えば macbook air 2015 でも0.3秒程度の待ちがある。
-z &#x3D; db.DB(filename...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -10719,8 +10721,8 @@ z &#x3D; db.DB(filename...</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4349806402">
-        <time id="build-timestamp" datetime="2023-03-07T01:51:58.269Z">2023-03-07T01:51:58.269Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4360323120">
+        <time id="build-timestamp" datetime="2023-03-08T01:49:09.966Z">2023-03-08T01:49:09.966Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

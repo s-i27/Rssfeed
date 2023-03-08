@@ -12,6 +12,96 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/kokopi/articles/a35d53b6ebae1d",
+          "author": "ここぴのパパ",
+          "description": "djangoでこんなエラーに遭遇\nCannot find reference 'url' in 'init.py'\n\n\n 原因\nDjango4からurl関数が廃止されてしまったためです。\nDjango3までの場合はなんの問題もなく使えていたものです。\n\n 解決策\n下記のようにfromの部分を書き換えてください。\nfrom修正前\nfrom django.conf.urls import url\nfrom修正後\nfrom django.urls import path\n当然ですが、関数を呼び出す部分も修正してあげる必要があります。\n例）\n関数呼び出し修正前\nurlpatterns = [...",
+          "link": "https://zenn.dev/kokopi/articles/a35d53b6ebae1d",
+          "publishedOn": "2023-03-07T16:06:28.000Z",
+          "wordCount": 142,
+          "title": "Cannot find reference 'url' in '__init__.py'の解決策",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--Rt26Z2GP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cannot%2520find%2520reference%2520%2527url%2527%2520in%2520%2527__init__.py%2527%25E3%2581%25AE%25E8%25A7%25A3%25E6%25B1%25BA%25E7%25AD%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2593%25E3%2581%2593%25E3%2581%25B4%25E3%2581%25AE%25E3%2583%2591%25E3%2583%2591%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKdzZNV054RGIwMnhtcWh1S3UwR2NMNlRGbXhHQkJJWm1sazlOaDM9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Rt26Z2GP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cannot%2520find%2520reference%2520%2527url%2527%2520in%2520%2527__init__.py%2527%25E3%2581%25AE%25E8%25A7%25A3%25E6%25B1%25BA%25E7%25AD%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2593%25E3%2581%2593%25E3%2581%25B4%25E3%2581%25AE%25E3%2583%2591%25E3%2583%2591%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKdzZNV054RGIwMnhtcWh1S3UwR2NMNlRGbXhHQkJJWm1sazlOaDM9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/fikastudio/articles/2f6c27a12d10e7",
+          "author": "情報工学入門チャンネル",
+          "description": "要素が直線上に並んだリスト（配列）からの探索は、リストの先頭から順番に走査して探索対象と同じかどうかを確認することで実現できます。これを線形探索、もしくは逐次探索と言います。\nPython での実装例を以下に示しています。\nL = [1, 9, 2, 5, 4, 7]\ndef linear_search(search_obj):\n    index = 0\n    while True:\n        if index == len(L): # $1\n\t    # 探索失敗\n        if L[index] == search_obj: # $2\n\t    # 探索成功\n\tin...",
+          "link": "https://zenn.dev/fikastudio/articles/2f6c27a12d10e7",
+          "publishedOn": "2023-03-07T15:21:24.000Z",
+          "wordCount": 445,
+          "title": "番兵法を用いた線形探索",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--0wu2lKea--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%2595%25AA%25E5%2585%25B5%25E6%25B3%2595%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E7%25B7%259A%25E5%25BD%25A2%25E6%258E%25A2%25E7%25B4%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%2583%2585%25E5%25A0%25B1%25E5%25B7%25A5%25E5%25AD%25A6%25E5%2585%25A5%25E9%2596%2580%25E3%2583%2581%25E3%2583%25A3%25E3%2583%25B3%25E3%2583%258D%25E3%2583%25AB%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U2MDVjZjEwZDcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--0wu2lKea--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%2595%25AA%25E5%2585%25B5%25E6%25B3%2595%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E7%25B7%259A%25E5%25BD%25A2%25E6%258E%25A2%25E7%25B4%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%2583%2585%25E5%25A0%25B1%25E5%25B7%25A5%25E5%25AD%25A6%25E5%2585%25A5%25E9%2596%2580%25E3%2583%2581%25E3%2583%25A3%25E3%2583%25B3%25E3%2583%258D%25E3%2583%25AB%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U2MDVjZjEwZDcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/tukiakaritabane/articles/python-mmd-shape-keys",
+          "author": "月明たばね",
+          "description": "表情シェイプキーのコピー作業を自動化できないか調べたところ、\nPythonでBlenderをマクロ操作できることが分かったので、書いてみました。\n注意点と使用方法は以下の通りです。\n\n 注意点\n以下の表情シェイプキーは、表情の内容が変更されます。\n\n\n\nシェイプキー\n変更後の表情\n\n\n\n\nにやり\n口角上げ\n\n\n上\nデフォルト表情(Basis)\n\n\n下\nデフォルト表情(Basis)\n\n\n\n対応する表情がないシェイプキーについては、デフォルト表情(Basis)のシェイプキーをコピーしています。\n\n\n\nシェイプキー\n\n\n\n\n光下\n\n\n口角広げ\n\n\n上\n\n\n下\n\n\n\n\n 使用方法\nFBXをインポ...",
+          "link": "https://zenn.dev/tukiakaritabane/articles/python-mmd-shape-keys",
+          "publishedOn": "2023-03-07T13:21:49.000Z",
+          "wordCount": 1612,
+          "title": "INABAの表情筋を鍛えるためのPythonスクリプト",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--w3kF1Y-0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:INABA%25E3%2581%25AE%25E8%25A1%25A8%25E6%2583%2585%25E7%25AD%258B%25E3%2582%2592%25E9%258D%259B%25E3%2581%2588%25E3%2582%258B%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AEPython%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2597%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%259C%2588%25E6%2598%258E%25E3%2581%259F%25E3%2581%25B0%25E3%2581%25AD%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WWk4UDRnUzZFczQzY25wbFlrWjdoMkFrWkRQQ2hvZUNzaFZzYUs9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--w3kF1Y-0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:INABA%25E3%2581%25AE%25E8%25A1%25A8%25E6%2583%2585%25E7%25AD%258B%25E3%2582%2592%25E9%258D%259B%25E3%2581%2588%25E3%2582%258B%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AEPython%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2597%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%259C%2588%25E6%2598%258E%25E3%2581%259F%25E3%2581%25B0%25E3%2581%25AD%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WWk4UDRnUzZFczQzY25wbFlrWjdoMkFrWkRQQ2hvZUNzaFZzYUs9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/ca02667d6797be",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-159 A - The Number of Even Pairs\n\n\n\n 提出結果\nimport math\n\n\ndef getIntMap():\n    return map(int, input().split())\n\n\ndef main():\n    n, m = getIntMap()\n\n    print(math.comb(n, 2) + math.comb(m, 2))\n\n\nif __name__ == \"__main__\":\n    main()",
+          "link": "https://zenn.dev/hyperdb/articles/ca02667d6797be",
+          "publishedOn": "2023-03-07T09:24:31.000Z",
+          "wordCount": 272,
+          "title": "［AtCoder］ABC-159｜A - The Number of Even Pairs",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--9FHLl2wk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-159%25EF%25BD%259CA%2520-%2520The%2520Number%2520of%2520Even%2520Pairs%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--9FHLl2wk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-159%25EF%25BD%259CA%2520-%2520The%2520Number%2520of%2520Even%2520Pairs%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/ac85b4a2b9b340",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-159 B - String Palindrome\n\n\n\n 提出結果\ndef getString():\n    return input()\n\n\ndef palindrome(s):\n    r = s[::-1]\n\n    return True if s == r else False\n\n\ndef main():\n    s = getString()\n\n    l = len(s)\n    t = s[:(l - 1) // 2]\n    u = s[(l + 3) // 2 - 1:]\n\n    print('Yes' if palindrome(s)...",
+          "link": "https://zenn.dev/hyperdb/articles/ac85b4a2b9b340",
+          "publishedOn": "2023-03-07T09:24:31.000Z",
+          "wordCount": 391,
+          "title": "［AtCoder］ABC-159｜B - String Palindrome",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--6euEVf8X--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-159%25EF%25BD%259CB%2520-%2520String%2520Palindrome%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--6euEVf8X--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-159%25EF%25BD%259CB%2520-%2520String%2520Palindrome%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/k41531/articles/6133b1b045d1aa",
+          "author": "kaisei",
+          "description": "環境\n\nMac mini(M1)\n\nVenture 13.1\n\n\nPython\n\nホスト：3.11.2\nvenv：3.10.10\n\n\n\n\n 解決策\nバージョンに合ったpython-tkを入れる。\nbrew install python-tk@3.10\n\n 問題\nホストとバージョンの違うPythonをvenvで動かしている際。tkinterが次のエラーを出して困っていた。\nTraceback (most recent call last):\n  File \"/opt/homebrew/Cellar/python@3.10/3.10.10_1/Frameworks/Python.fram...",
+          "link": "https://zenn.dev/k41531/articles/6133b1b045d1aa",
+          "publishedOn": "2023-03-07T07:12:35.000Z",
+          "wordCount": 258,
+          "title": "venvでtkinterを使おうとして詰まった話",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--cIWtpehB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:venv%25E3%2581%25A7tkinter%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%258A%25E3%2581%2586%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25A6%25E8%25A9%25B0%25E3%2581%25BE%25E3%2581%25A3%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kaisei%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q4ZTJhN2E2NDcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--cIWtpehB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:venv%25E3%2581%25A7tkinter%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%258A%25E3%2581%2586%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25A6%25E8%25A9%25B0%25E3%2581%25BE%25E3%2581%25A3%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kaisei%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q4ZTJhN2E2NDcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
           "id": "https://zenn.dev/motokoike/articles/1569e91413aba3",
           "author": "元小池",
           "description": "はじめに\nTradingViewのアラート通知は、「Webhook URL」を指定できるので、AWS（lambda）を利用してPOSTリクエストを受信し、LINEへ通知するbotを作成してみました。\n\n\n 構成イメージ\n\n\n 前提条件\n\nTradingViewの有料アカウント（Pro以上）を取得済みであること。\nAWSのアカウントを取得済みであること。\nLINEのアカウントを取得済みであること。\n\nTradingViewのアカウントを未作成の場合は、こちらからご登録下さい。\n\n LINE Notifyへログイン\nこちらのリンクからLINE Notifyのぺージに遷移し、「ログイン」ボ...",
@@ -4285,141 +4375,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--popfIKrf--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Nosukey%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:python%25E3%2581%25A7lru_cache%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E3%2580%2581%25E3%2583%25A1%25E3%2583%25A2%25E5%258C%2596%25E3%2582%2592%25E5%25AE%259F%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1iUGRpOGhPeC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5OGI2ZmFjZmEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/nosukey/articles/django_create_get_object_or_none",
-          "author": "Nosukey",
-          "description": "書くこと\n\nRuby on Railsのfind_by風、簡易機能をDjangoで書く方法\nDjangoのget で ObjectDoesNotExistを握りつぶす方法\n\n\n 利用する技術\n\nDjango\nmodel.Manager\n\n\n 今日のゴール\nこのようなArticleモデルが定義されていたとき\nclass Article(models.Model):\n    title = models.CharField(max_length=100)\n    # (省略)\n    is_active = models.BooleanField(default=True)\n呼び出し側で...",
-          "link": "https://zenn.dev/nosukey/articles/django_create_get_object_or_none",
-          "publishedOn": "2023-02-06T12:19:03.000Z",
-          "wordCount": 457,
-          "title": "DjangoでCustom Managerを利用して、Railsのfind_by風オブジェクト取得を実現する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--rGfg34A4--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Nosukey%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:Django%25E3%2581%25A7Custom%2520Manager%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E3%2580%2581Rails%25E3%2581%25AEfind_by%25E9%25A2%25A8%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E5%258F%2596%25E5%25BE%2597%25E3%2582%2592%25E5%25AE%259F%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1iUGRpOGhPeC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5OGI2ZmFjZmEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--rGfg34A4--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Nosukey%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_60_bold:Django%25E3%2581%25A7Custom%2520Manager%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E3%2580%2581Rails%25E3%2581%25AEfind_by%25E9%25A2%25A8%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E5%258F%2596%25E5%25BE%2597%25E3%2582%2592%25E5%25AE%259F%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1iUGRpOGhPeC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5OGI2ZmFjZmEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/cp20/articles/stable-diffusion-webui-with-modal",
-          "author": "しーぴー",
-          "description": "まえがき\n「GPUを持ってないけどAI絵を描いてみたい！」というお悩みを抱えている皆さん、Google Colabで満足していませんか？この記事ではModalを使うことでGoogle Colabより（きっと）優れたAI絵生成体験をGETする方法をご紹介します。\n!\n少し知識のある人向けの記事なのでご注意\n\n\n What is Modal?\n\nイケメンなランディングページだね\nみんなが良く知るあの「モーダル」ではありません。名前の由来は謎ですが、「Your end-to-end stack for cloud compute」という謳い文句の通りクラウドコンピューティングツール(?)で...",
-          "link": "https://zenn.dev/cp20/articles/stable-diffusion-webui-with-modal",
-          "publishedOn": "2023-02-06T11:30:00.000Z",
-          "wordCount": 3389,
-          "title": "【無料】GPUがなくてもStable Diffusionで遊びたい！",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--s_wPhIpj--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%2597%25E3%2583%25BC%25E3%2581%25B4%25E3%2583%25BC%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E7%2584%25A1%25E6%2596%2599%25E3%2580%2591GPU%25E3%2581%258C%25E3%2581%25AA%25E3%2581%258F%25E3%2581%25A6%25E3%2582%2582Stable%2520Diffusion%25E3%2581%25A7%25E9%2581%258A%25E3%2581%25B3%25E3%2581%259F%25E3%2581%2584%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lkMENtX3dVYnd6b0NyR1g2aEFVaWdkWnZ3dDJPb2g3cVpEWElEUlE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--s_wPhIpj--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%2597%25E3%2583%25BC%25E3%2581%25B4%25E3%2583%25BC%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2580%2590%25E7%2584%25A1%25E6%2596%2599%25E3%2580%2591GPU%25E3%2581%258C%25E3%2581%25AA%25E3%2581%258F%25E3%2581%25A6%25E3%2582%2582Stable%2520Diffusion%25E3%2581%25A7%25E9%2581%258A%25E3%2581%25B3%25E3%2581%259F%25E3%2581%2584%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lkMENtX3dVYnd6b0NyR1g2aEFVaWdkWnZ3dDJPb2g3cVpEWElEUlE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/hyperdb/articles/d681573c4b9f9e",
-          "author": "はいぱぁ",
-          "description": "設問ページ\n\n🔗ABC-119 A - Still TBD\n\n\n\n 提出結果\ndef getString():\n    return input()\n\n\ndef main():\n    s = getString()\n\n    print('Heisei' if s <= '2019/04/30' else 'TBD')\n\n\nif __name__ == \"__main__\":\n    main()",
-          "link": "https://zenn.dev/hyperdb/articles/d681573c4b9f9e",
-          "publishedOn": "2023-02-06T09:02:36.000Z",
-          "wordCount": 234,
-          "title": "［AtCoder］ABC-119｜A - Still TBD",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--4y8nfziC--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-119%25EF%25BD%259CA%2520-%2520Still%2520TBD%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--4y8nfziC--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-119%25EF%25BD%259CA%2520-%2520Still%2520TBD%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/hyperdb/articles/5b44487a0cc503",
-          "author": "はいぱぁ",
-          "description": "設問ページ\n\n🔗ABC-119 B - Digital Gifts\n\n\n\n 提出結果\ndef getInt():\n    return int(input())\n\n\ndef getStringListRow(N):\n    return [list(input().split()) for _ in range(N)]\n\n\ndef yen(a):\n    x, u = a\n\n    return float(x) if u == 'JPY' else 380000.0 * float(x)\n\n\ndef main():\n    n = getInt()\n    d = getStrin...",
-          "link": "https://zenn.dev/hyperdb/articles/5b44487a0cc503",
-          "publishedOn": "2023-02-06T09:02:36.000Z",
-          "wordCount": 394,
-          "title": "［AtCoder］ABC-119｜B - Digital Gifts",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--M6G9y4ct--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-119%25EF%25BD%259CB%2520-%2520Digital%2520Gifts%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--M6G9y4ct--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-119%25EF%25BD%259CB%2520-%2520Digital%2520Gifts%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/fkunn1326/articles/c3d9d1d8606b04",
-          "author": "fkunn1326",
-          "description": "こんにちは、Fくんです。\n受験シーズンです...\nhttps://zenn.dev/ddpn08/articles/tensorrt-stable-diffusion\nこれのwindows版ですね\nどのくらい速くなるとかLinuxとかColabでの実行方法は前の記事を見ていただいて...\n\n Lsmith\nhttps://github.com/ddPn08/Lsmith\nTensorRTをGUIで扱いやすくするものがだだっこぱんださんから出てます。\nすぐwindows対応出ると思います\nここから先はtensorrt repoのdemo-diffusion.pyを動かしたい人向けです\n\n ...",
-          "link": "https://zenn.dev/fkunn1326/articles/c3d9d1d8606b04",
-          "publishedOn": "2023-02-06T08:50:57.000Z",
-          "wordCount": 702,
-          "title": "TensorRTを使ってStableDiffusionを爆速にする（Windows編）",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--IZlp8Pgo--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:fkunn1326%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:TensorRT%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6StableDiffusion%25E3%2582%2592%25E7%2588%2586%25E9%2580%259F%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25EF%25BC%2588Windows%25E7%25B7%25A8%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3B1bTZLR0IyMTdFb08ybmcwUFlvM0QzT1laQ01XWFF0SzNwV2hzPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--IZlp8Pgo--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:fkunn1326%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:TensorRT%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6StableDiffusion%25E3%2582%2592%25E7%2588%2586%25E9%2580%259F%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25EF%25BC%2588Windows%25E7%25B7%25A8%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3B1bTZLR0IyMTdFb08ybmcwUFlvM0QzT1laQ01XWFF0SzNwV2hzPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/rin_kusumistudy/articles/cdbfade8f0e8ff",
-          "author": "rin_kusumi",
-          "description": "はじめ、pythonとIDEをダウンロードします。\n①pythonインストール、64bit(パソコンのbitと合わせる)：https://pythonlinks.python.jp/en/index.html\npythonの設定：https://www.python.jp/install/windows/install.html\n②Python IDE→PyCharmのインストール(Community)：https://www.jetbrains.com/pycharm/download/#section=windows\nPyCharmインストール手順：https://sukkiri.j...",
-          "link": "https://zenn.dev/rin_kusumistudy/articles/cdbfade8f0e8ff",
-          "publishedOn": "2023-02-06T07:32:55.000Z",
-          "wordCount": 92,
-          "title": "python_playwright 環境づくり",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--2gzlByeF--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:rin_kusumi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:python_playwright%2520%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A5%25E3%2581%258F%25E3%2582%258A%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNnJabkpzcldLVzcydHVTdk42Rk4zeEp2MnMzbFVvVmU2VGFSNkxpUT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--2gzlByeF--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:rin_kusumi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:python_playwright%2520%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A5%25E3%2581%258F%25E3%2582%258A%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNnJabkpzcldLVzcydHVTdk42Rk4zeEp2MnMzbFVvVmU2VGFSNkxpUT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/skwbc/articles/sentence_bert_implementation",
-          "author": "skwbc",
-          "description": "概要\nBERTを使って高精度な類似文書検索を実現出来ると仕事に役立つのではと思い個人的に色々と実験していたのですが、結局仕事でこれを使う機会は無さそうなので供養のために実装と実験結果を記事にしたいと思います。\nこの記事では、Sentence-BERT (以下、SBERTと呼ぶ) という手法について主に取り上げます。\nこのSBERTという手法に注目したのは単純に以下のような理由からです。\n\n文書間の類似度を高精度に求めることが出来ると、高精度な類似文書検索が実現できる。\nBERTを使って文書類似度を求めると、非常に高精度だが非常に遅い。\nSBERTを用いると、高精度かつ高速に文書類似度...",
-          "link": "https://zenn.dev/skwbc/articles/sentence_bert_implementation",
-          "publishedOn": "2023-02-06T05:05:36.000Z",
-          "wordCount": 10740,
-          "title": "Sentence-BERTを用いた高速な類似文書検索",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--eg04oZ2n--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:skwbc%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Sentence-BERT%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E9%25AB%2598%25E9%2580%259F%25E3%2581%25AA%25E9%25A1%259E%25E4%25BC%25BC%25E6%2596%2587%25E6%259B%25B8%25E6%25A4%259C%25E7%25B4%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvcy5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--eg04oZ2n--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:skwbc%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Sentence-BERT%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E9%25AB%2598%25E9%2580%259F%25E3%2581%25AA%25E9%25A1%259E%25E4%25BC%25BC%25E6%2596%2587%25E6%259B%25B8%25E6%25A4%259C%25E7%25B4%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvcy5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/web_life_ch/articles/cb67dad3ad70b3",
-          "author": "Web Life CH",
-          "description": "【１９User Serializer】\nYouTube: https://youtu.be/wXcAo2jkQgY\nhttps://youtu.be/wXcAo2jkQgY\n今回は「User」のデータに関する処理を実装していくのですが、\nビューを作成する前に、URLとシリアライザーの設定を行います。\nまずは「accounts」のフォルダ内に「urls.py」を作成します。\n\nmyapp/accounts/urls.py\nfrom django.urls import path\n\nurlpatterns = [\n    # path('me/', helloWorld, name='m...",
-          "link": "https://zenn.dev/web_life_ch/articles/cb67dad3ad70b3",
-          "publishedOn": "2023-02-06T03:34:47.000Z",
-          "wordCount": 485,
-          "title": "【Django】Pythonで作るRest API【１９User Serializer】",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--DEHBBULr--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Web%2520Life%2520CH%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590Django%25E3%2580%2591Python%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258BRest%2520API%25E3%2580%2590%25EF%25BC%2591%25EF%25BC%2599User%2520Serializer%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUl0YnZtbWNjTWFMM3dyd2x3VE5sVVZjTlhmZHEzZzF2QnJfMUJMSkJrN049czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--DEHBBULr--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Web%2520Life%2520CH%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590Django%25E3%2580%2591Python%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258BRest%2520API%25E3%2580%2590%25EF%25BC%2591%25EF%25BC%2599User%2520Serializer%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUl0YnZtbWNjTWFMM3dyd2x3VE5sVVZjTlhmZHEzZzF2QnJfMUJMSkJrN049czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
-        },
-        {
-          "id": "https://zenn.dev/karamawanu/articles/14e3fa2325e53c",
-          "author": "karamawanu",
-          "description": "replでの作業に特化した db.py を発見した。データベースの中身を探検するのに快適である。\nほとんど知名度がないらしいので紹介する。\nhttps://pypi.org/project/db.py/\nhttps://github.com/yhat/db.py\n\"repl\"そのものの説明については、テキトーに検索してほしい。\n\n 利用例\n例えば redmine のsqliteデータベースを探検する場合を示す。\nimport db\n内部で多数の別ライブラリをインポートしてるため、例えば macbook air 2015 でも0.3秒程度の待ちがある。\nz = db.DB(filename...",
-          "link": "https://zenn.dev/karamawanu/articles/14e3fa2325e53c",
-          "publishedOn": "2023-02-06T03:11:41.000Z",
-          "wordCount": 671,
-          "title": "repl 特化 pythonでデータベースの探検をするのに快適 db.py",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--0XLvq4Nv--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:karamawanu%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:repl%2520%25E7%2589%25B9%25E5%258C%2596%2520python%25E3%2581%25A7%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2599%25E3%2583%25BC%25E3%2582%25B9%25E3%2581%25AE%25E6%258E%25A2%25E6%25A4%259C%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25AB%25E5%25BF%25AB%25E9%2581%25A9%2520db.py%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2laSzJJYTRGZWZqV2RySzJqdHFlWnBmaE5HZ3BHLWxid2NUX0NLWHF3PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--0XLvq4Nv--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:karamawanu%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:repl%2520%25E7%2589%25B9%25E5%258C%2596%2520python%25E3%2581%25A7%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2599%25E3%2583%25BC%25E3%2582%25B9%25E3%2581%25AE%25E6%258E%25A2%25E6%25A4%259C%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25AB%25E5%25BF%25AB%25E9%2581%25A9%2520db.py%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2laSzJJYTRGZWZqV2RySzJqdHFlWnBmaE5HZ3BHLWxid2NUX0NLWHF3PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png"
         }
       ]
     }

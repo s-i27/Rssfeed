@@ -2,10 +2,216 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-03-07T01:51:58.300Z</updated>
+    <updated>2023-03-08T01:49:09.996Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Cannot find reference 'url' in '__init__.py'の解決策]]></title>
+        <id>https://zenn.dev/kokopi/articles/a35d53b6ebae1d</id>
+        <link href="https://zenn.dev/kokopi/articles/a35d53b6ebae1d"/>
+        <updated>2023-03-07T16:06:28.000Z</updated>
+        <summary type="html"><![CDATA[djangoでこんなエラーに遭遇
+Cannot find reference 'url' in 'init.py'
+
+
+ 原因
+Django4からurl関数が廃止されてしまったためです。
+Django3までの場合はなんの問題もなく使えていたものです。
+
+ 解決策
+下記のようにfromの部分を書き換えてください。
+from修正前
+from django.conf.urls import url
+from修正後
+from django.urls import path
+当然ですが、関数を呼び出す部分も修正してあげる必要があります。
+例）
+関数呼び出し修正前
+urlpatterns = [...]]></summary>
+        <author>
+            <name>ここぴのパパ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[番兵法を用いた線形探索]]></title>
+        <id>https://zenn.dev/fikastudio/articles/2f6c27a12d10e7</id>
+        <link href="https://zenn.dev/fikastudio/articles/2f6c27a12d10e7"/>
+        <updated>2023-03-07T15:21:24.000Z</updated>
+        <summary type="html"><![CDATA[要素が直線上に並んだリスト（配列）からの探索は、リストの先頭から順番に走査して探索対象と同じかどうかを確認することで実現できます。これを線形探索、もしくは逐次探索と言います。
+Python での実装例を以下に示しています。
+L = [1, 9, 2, 5, 4, 7]
+def linear_search(search_obj):
+    index = 0
+    while True:
+        if index == len(L): # $1
+	    # 探索失敗
+        if L[index] == search_obj: # $2
+	    # 探索成功
+	in...]]></summary>
+        <author>
+            <name>情報工学入門チャンネル</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[INABAの表情筋を鍛えるためのPythonスクリプト]]></title>
+        <id>https://zenn.dev/tukiakaritabane/articles/python-mmd-shape-keys</id>
+        <link href="https://zenn.dev/tukiakaritabane/articles/python-mmd-shape-keys"/>
+        <updated>2023-03-07T13:21:49.000Z</updated>
+        <summary type="html"><![CDATA[表情シェイプキーのコピー作業を自動化できないか調べたところ、
+PythonでBlenderをマクロ操作できることが分かったので、書いてみました。
+注意点と使用方法は以下の通りです。
+
+ 注意点
+以下の表情シェイプキーは、表情の内容が変更されます。
+
+
+
+シェイプキー
+変更後の表情
+
+
+
+
+にやり
+口角上げ
+
+
+上
+デフォルト表情(Basis)
+
+
+下
+デフォルト表情(Basis)
+
+
+
+対応する表情がないシェイプキーについては、デフォルト表情(Basis)のシェイプキーをコピーしています。
+
+
+
+シェイプキー
+
+
+
+
+光下
+
+
+口角広げ
+
+
+上
+
+
+下
+
+
+
+
+ 使用方法
+FBXをインポ...]]></summary>
+        <author>
+            <name>月明たばね</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-159｜A - The Number of Even Pairs]]></title>
+        <id>https://zenn.dev/hyperdb/articles/ca02667d6797be</id>
+        <link href="https://zenn.dev/hyperdb/articles/ca02667d6797be"/>
+        <updated>2023-03-07T09:24:31.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-159 A - The Number of Even Pairs
+
+
+
+ 提出結果
+import math
+
+
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    n, m = getIntMap()
+
+    print(math.comb(n, 2) + math.comb(m, 2))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-159｜B - String Palindrome]]></title>
+        <id>https://zenn.dev/hyperdb/articles/ac85b4a2b9b340</id>
+        <link href="https://zenn.dev/hyperdb/articles/ac85b4a2b9b340"/>
+        <updated>2023-03-07T09:24:31.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-159 B - String Palindrome
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def palindrome(s):
+    r = s[::-1]
+
+    return True if s == r else False
+
+
+def main():
+    s = getString()
+
+    l = len(s)
+    t = s[:(l - 1) // 2]
+    u = s[(l + 3) // 2 - 1:]
+
+    print('Yes' if palindrome(s)...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[venvでtkinterを使おうとして詰まった話]]></title>
+        <id>https://zenn.dev/k41531/articles/6133b1b045d1aa</id>
+        <link href="https://zenn.dev/k41531/articles/6133b1b045d1aa"/>
+        <updated>2023-03-07T07:12:35.000Z</updated>
+        <summary type="html"><![CDATA[環境
+
+Mac mini(M1)
+
+Venture 13.1
+
+
+Python
+
+ホスト：3.11.2
+venv：3.10.10
+
+
+
+
+ 解決策
+バージョンに合ったpython-tkを入れる。
+brew install python-tk@3.10
+
+ 問題
+ホストとバージョンの違うPythonをvenvで動かしている際。tkinterが次のエラーを出して困っていた。
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10_1/Frameworks/Python.fram...]]></summary>
+        <author>
+            <name>kaisei</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[TradingViewのアラート通知をAWS（lambda）を使ってLINEへ通知する]]></title>
         <id>https://zenn.dev/motokoike/articles/1569e91413aba3</id>
@@ -6788,208 +6994,6 @@ class Test:
 Rubyの @xxx ||=ではなく、memorizegemを使う感じに似ていますね。]]></summary>
         <author>
             <name>Nosukey</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DjangoでCustom Managerを利用して、Railsのfind_by風オブジェクト取得を実現する]]></title>
-        <id>https://zenn.dev/nosukey/articles/django_create_get_object_or_none</id>
-        <link href="https://zenn.dev/nosukey/articles/django_create_get_object_or_none"/>
-        <updated>2023-02-06T12:19:03.000Z</updated>
-        <summary type="html"><![CDATA[書くこと
-
-Ruby on Railsのfind_by風、簡易機能をDjangoで書く方法
-Djangoのget で ObjectDoesNotExistを握りつぶす方法
-
-
- 利用する技術
-
-Django
-model.Manager
-
-
- 今日のゴール
-このようなArticleモデルが定義されていたとき
-class Article(models.Model):
-    title = models.CharField(max_length=100)
-    # (省略)
-    is_active = models.BooleanField(default=True)
-呼び出し側で...]]></summary>
-        <author>
-            <name>Nosukey</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【無料】GPUがなくてもStable Diffusionで遊びたい！]]></title>
-        <id>https://zenn.dev/cp20/articles/stable-diffusion-webui-with-modal</id>
-        <link href="https://zenn.dev/cp20/articles/stable-diffusion-webui-with-modal"/>
-        <updated>2023-02-06T11:30:00.000Z</updated>
-        <summary type="html"><![CDATA[まえがき
-「GPUを持ってないけどAI絵を描いてみたい！」というお悩みを抱えている皆さん、Google Colabで満足していませんか？この記事ではModalを使うことでGoogle Colabより（きっと）優れたAI絵生成体験をGETする方法をご紹介します。
-!
-少し知識のある人向けの記事なのでご注意
-
-
- What is Modal?
-
-イケメンなランディングページだね
-みんなが良く知るあの「モーダル」ではありません。名前の由来は謎ですが、「Your end-to-end stack for cloud compute」という謳い文句の通りクラウドコンピューティングツール(?)で...]]></summary>
-        <author>
-            <name>しーぴー</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-119｜A - Still TBD]]></title>
-        <id>https://zenn.dev/hyperdb/articles/d681573c4b9f9e</id>
-        <link href="https://zenn.dev/hyperdb/articles/d681573c4b9f9e"/>
-        <updated>2023-02-06T09:02:36.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-119 A - Still TBD
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s = getString()
-
-    print('Heisei' if s <= '2019/04/30' else 'TBD')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-119｜B - Digital Gifts]]></title>
-        <id>https://zenn.dev/hyperdb/articles/5b44487a0cc503</id>
-        <link href="https://zenn.dev/hyperdb/articles/5b44487a0cc503"/>
-        <updated>2023-02-06T09:02:36.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-119 B - Digital Gifts
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getStringListRow(N):
-    return [list(input().split()) for _ in range(N)]
-
-
-def yen(a):
-    x, u = a
-
-    return float(x) if u == 'JPY' else 380000.0 * float(x)
-
-
-def main():
-    n = getInt()
-    d = getStrin...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TensorRTを使ってStableDiffusionを爆速にする（Windows編）]]></title>
-        <id>https://zenn.dev/fkunn1326/articles/c3d9d1d8606b04</id>
-        <link href="https://zenn.dev/fkunn1326/articles/c3d9d1d8606b04"/>
-        <updated>2023-02-06T08:50:57.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは、Fくんです。
-受験シーズンです...
-https://zenn.dev/ddpn08/articles/tensorrt-stable-diffusion
-これのwindows版ですね
-どのくらい速くなるとかLinuxとかColabでの実行方法は前の記事を見ていただいて...
-
- Lsmith
-https://github.com/ddPn08/Lsmith
-TensorRTをGUIで扱いやすくするものがだだっこぱんださんから出てます。
-すぐwindows対応出ると思います
-ここから先はtensorrt repoのdemo-diffusion.pyを動かしたい人向けです
-
- ...]]></summary>
-        <author>
-            <name>fkunn1326</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[python_playwright 環境づくり]]></title>
-        <id>https://zenn.dev/rin_kusumistudy/articles/cdbfade8f0e8ff</id>
-        <link href="https://zenn.dev/rin_kusumistudy/articles/cdbfade8f0e8ff"/>
-        <updated>2023-02-06T07:32:55.000Z</updated>
-        <summary type="html"><![CDATA[はじめ、pythonとIDEをダウンロードします。
-①pythonインストール、64bit(パソコンのbitと合わせる)：https://pythonlinks.python.jp/en/index.html
-pythonの設定：https://www.python.jp/install/windows/install.html
-②Python IDE→PyCharmのインストール(Community)：https://www.jetbrains.com/pycharm/download/#section=windows
-PyCharmインストール手順：https://sukkiri.j...]]></summary>
-        <author>
-            <name>rin_kusumi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Sentence-BERTを用いた高速な類似文書検索]]></title>
-        <id>https://zenn.dev/skwbc/articles/sentence_bert_implementation</id>
-        <link href="https://zenn.dev/skwbc/articles/sentence_bert_implementation"/>
-        <updated>2023-02-06T05:05:36.000Z</updated>
-        <summary type="html"><![CDATA[概要
-BERTを使って高精度な類似文書検索を実現出来ると仕事に役立つのではと思い個人的に色々と実験していたのですが、結局仕事でこれを使う機会は無さそうなので供養のために実装と実験結果を記事にしたいと思います。
-この記事では、Sentence-BERT (以下、SBERTと呼ぶ) という手法について主に取り上げます。
-このSBERTという手法に注目したのは単純に以下のような理由からです。
-
-文書間の類似度を高精度に求めることが出来ると、高精度な類似文書検索が実現できる。
-BERTを使って文書類似度を求めると、非常に高精度だが非常に遅い。
-SBERTを用いると、高精度かつ高速に文書類似度...]]></summary>
-        <author>
-            <name>skwbc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Django】Pythonで作るRest API【１９User Serializer】]]></title>
-        <id>https://zenn.dev/web_life_ch/articles/cb67dad3ad70b3</id>
-        <link href="https://zenn.dev/web_life_ch/articles/cb67dad3ad70b3"/>
-        <updated>2023-02-06T03:34:47.000Z</updated>
-        <summary type="html"><![CDATA[【１９User Serializer】
-YouTube: https://youtu.be/wXcAo2jkQgY
-https://youtu.be/wXcAo2jkQgY
-今回は「User」のデータに関する処理を実装していくのですが、
-ビューを作成する前に、URLとシリアライザーの設定を行います。
-まずは「accounts」のフォルダ内に「urls.py」を作成します。
-
-myapp/accounts/urls.py
-from django.urls import path
-
-urlpatterns = [
-    # path('me/', helloWorld, name='m...]]></summary>
-        <author>
-            <name>Web Life CH</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[repl 特化 pythonでデータベースの探検をするのに快適 db.py]]></title>
-        <id>https://zenn.dev/karamawanu/articles/14e3fa2325e53c</id>
-        <link href="https://zenn.dev/karamawanu/articles/14e3fa2325e53c"/>
-        <updated>2023-02-06T03:11:41.000Z</updated>
-        <summary type="html"><![CDATA[replでの作業に特化した db.py を発見した。データベースの中身を探検するのに快適である。
-ほとんど知名度がないらしいので紹介する。
-https://pypi.org/project/db.py/
-https://github.com/yhat/db.py
-"repl"そのものの説明については、テキトーに検索してほしい。
-
- 利用例
-例えば redmine のsqliteデータベースを探検する場合を示す。
-import db
-内部で多数の別ライブラリをインポートしてるため、例えば macbook air 2015 でも0.3秒程度の待ちがある。
-z = db.DB(filename...]]></summary>
-        <author>
-            <name>karamawanu</name>
         </author>
     </entry>
 </feed>
