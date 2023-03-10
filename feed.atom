@@ -2,10 +2,209 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-03-09T01:49:25.019Z</updated>
+    <updated>2023-03-10T01:49:26.514Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[OpenAI 言語モデルごとのエンコーディング一覧]]></title>
+        <id>https://zenn.dev/microsoft/articles/3438cf410cc0b5</id>
+        <link href="https://zenn.dev/microsoft/articles/3438cf410cc0b5"/>
+        <updated>2023-03-09T12:18:46.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+タイトルのとおり情報をまとめました。
+
+ エンコーディングについて
+OpenAI 言語モデルにおけるエンコーディングとは、テキストがトークンに変換される際の (トークナイズされる際の) ルールのようなものです。モデルによって使用するエンコーディングは異なります。
+
+ 確認方法
+各モデルが使うエンコーディングは Python パッケージの tiktoken で確認することができます。
+下記の例では ChatGPT API のモデルのひとつである gpt-3.5-turbo のエンコーディングを確認しています。
+>>> import tiktoken
+>...]]></summary>
+        <author>
+            <name>ryohtaka</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Airflowでサマータイムを考慮した話]]></title>
+        <id>https://zenn.dev/hashiba/articles/summertime-in-airflow</id>
+        <link href="https://zenn.dev/hashiba/articles/summertime-in-airflow"/>
+        <updated>2023-03-09T11:01:07.000Z</updated>
+        <summary type="html"><![CDATA[概要
+Airflowでサマータイムを考慮する必要があり、Airflowのタイムゾーンの取り扱いについての調査を実施。調査結果は、以下の通り。
+個別のDAGでサマータイムを意識する場合は、Time zone aware DAGsを使い、タイムゾーンの設定にTZ database name（例えばEurope/London、 America/New_York）を指定する。（標準時（例えばGMT、EST）ではだめ）
+
+ 調査
+
+ 方向性
+Airflowすでにタイムゾーンが考慮されており、2つの方法で対応が可能。
+https://airflow.apache.org/docs/apache-...]]></summary>
+        <author>
+            <name>Shinichi Hashiba</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitHub ActionsでPython3.10を使うと3.1になっちゃう、、、]]></title>
+        <id>https://zenn.dev/osawa_koki/articles/171898325c4a9c</id>
+        <link href="https://zenn.dev/osawa_koki/articles/171898325c4a9c"/>
+        <updated>2023-03-09T10:02:05.000Z</updated>
+        <summary type="html"><![CDATA[解決策
+'3.10' とシングルクォーテーションで囲むと解決しました。
+ダブルクォーテーションでもOKです。
+
+ 原因
+3.10だと数字として認識され、3.1になってしまうようです。
+'3.10'とシングルクォーテーションで囲むと文字列として認識され、3.10になります。]]></summary>
+        <author>
+            <name>osawa-koki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python 3.7+ で typed dynamic property みたいなことしたいメモ]]></title>
+        <id>https://zenn.dev/syoyo/articles/b37df06229c123</id>
+        <link href="https://zenn.dev/syoyo/articles/b37df06229c123"/>
+        <updated>2023-03-09T08:35:23.000Z</updated>
+        <summary type="html"><![CDATA[背景
+class のインスタンス作ったときには property は作らない.
+ユーザーが dynamic に(実行時に)つくったときに実行時型チェックしたい.
+c = MyClass()
+print(c.name) # NG. name はまだ存在しない
+c.name = "" # str. OK
+c.name = 3 # Error!
+
+型付き property がほしい(property の名前と型は事前にわかっているようなのがある)
+None 状態はつくらず, property が無い状態を作りたい
+
+型アノテーションで Union[str, None] とかめんどい.
+また...]]></summary>
+        <author>
+            <name>syoyo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PyTorchとEfficientNetV2で作る画像分類モデル]]></title>
+        <id>https://zenn.dev/aidemy/articles/f851fb091dbb23</id>
+        <link href="https://zenn.dev/aidemy/articles/f851fb091dbb23"/>
+        <updated>2023-03-09T08:14:16.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは。機械学習初心者の中沢(@shnakazawa_ja)です[1]。
+世の中にはテーブルデータを対象とした機械学習モデルのチュートリアルは多くありますが、画像に対するものは少なく、コードまで提供されているものは更に少なくなります。そこで、今回から数記事に分けて基本的なコンピュータビジョンモデリングの手法をPythonで実装していきたいと思います。
+本稿では Classification (画像分類) を扱います。また、本稿ではモデルをパッケージから取得します。
+
+実装はKaggle Notebook上で行うことで誰もが再現できるコードを目指します。主な読者として
+
+...]]></summary>
+        <author>
+            <name>Shingo Nakazawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pipのeditableモードでインストールしたパッケージをアンインストールする方法 ~ChatGPTに聞く~]]></title>
+        <id>https://zenn.dev/roistaff/articles/348a56000ff5e7</id>
+        <link href="https://zenn.dev/roistaff/articles/348a56000ff5e7"/>
+        <updated>2023-03-09T05:16:46.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+皆さんは、Pythonで自作のパッケージをローカルにインストールして試す時に、editableモードを使いませんか。変更した内容が即座に更新されるeditableモードは、自作のパッケージ開発には欠かせないインストールモードなのですが、editableモードでインストールしたパッケージをアンインストールしたかった時、pip uninstall package_name ではうまくいきませんでした。
+　調べてみると、editableモードでインストールしたパッケージをアンインストールできないという事例が他にもあったので、解決策を調べてみました。
+
+ 問題
+このように
+sudo...]]></summary>
+        <author>
+            <name>Staff Roi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-161｜A - ABC Swap]]></title>
+        <id>https://zenn.dev/hyperdb/articles/c93327dc1bc7cf</id>
+        <link href="https://zenn.dev/hyperdb/articles/c93327dc1bc7cf"/>
+        <updated>2023-03-09T04:35:15.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-161 A - ABC Swap
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def swap(a, b):
+    return b, a
+
+
+def main():
+    x, y, z = getIntMap()
+
+    x, y = swap(x, y)
+    x, z = swap(x, z)
+
+    print('%d %d %d' % (x, y, z))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-161｜B - Popular Vote]]></title>
+        <id>https://zenn.dev/hyperdb/articles/91e1f7794979a9</id>
+        <link href="https://zenn.dev/hyperdb/articles/91e1f7794979a9"/>
+        <updated>2023-03-09T04:35:15.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-161 B - Popular Vote
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n, m = getIntMap()
+    a = getIntList()
+
+    c = 0
+    l = sum(a) / (4 * m)
+
+    for x in a:
+        if x >= l:
+   ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Pre-PEP] Inline Syntax for TypedDict]]></title>
+        <id>https://zenn.dev/frodo/articles/72714e2a2f8d4d</id>
+        <link href="https://zenn.dev/frodo/articles/72714e2a2f8d4d"/>
+        <updated>2023-03-09T03:30:54.000Z</updated>
+        <summary type="html"><![CDATA[昨日(2023年3月8日)、Pyright v1.1.297にInline Syntax for TypedDictの実験的サポートが実装されました。Inline Syntax for TypedDictとはどのような機能なのか、何が嬉しいのかを説明しようと思います。
+
+ Motivation
+従来より、Pythonの辞書型は、typing.TypedDict を利用して型付けを行うことができます。
+from typing import TypedDict
+
+class Vector(TypedDict):
+  x: float
+  y: float
+  z: float
+
+vec: V...]]></summary>
+        <author>
+            <name>Frodo</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Work Toolsを作った話]]></title>
         <id>https://zenn.dev/yakumo/articles/4c7ad15dc36eaf</id>
@@ -6774,261 +6973,6 @@ poetry add pycocotools
               |          ^~...]]></summary>
         <author>
             <name>Suzuki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【初心者向け】Google Earth Engineを用いた衛星データ解析入門  ~タイムラプスを作成し地球の環境変動を観察~]]></title>
-        <id>https://zenn.dev/labcode/books/2xvfkoic4p7biv</id>
-        <link href="https://zenn.dev/labcode/books/2xvfkoic4p7biv"/>
-        <updated>2023-02-08T13:38:45.000Z</updated>
-        <summary type="html"><![CDATA[衛星データを使って地球環境の変動について観察したいと考えたり、自身の研究に地球規模のマクロな視点を取り入れたいと考えたことはありますか。
-
-本書はプログラミングの経験があまりない人でも衛星データを使った解析が始められるように、Google Earth Engineというツールを中心に簡単な衛星データの取り扱い方を解説しています。
-
-この機会に是非、衛星データ解析を始めてみませんか。
-
-【対象とする読者】
-・衛星データ解析を扱ったことがないが興味がある人
-・地球環境の変動に興味がある人
-・自分の研究に地球規模のマクロな視点を取り入れたい人
-
-【販売価格】
-期間限定で ¥1000→¥500 (50% OFF!!)で販売しております！]]></summary>
-        <author>
-            <name>LabCode（ラボコード）</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[boto3でS3の署名付きURLを発行する方法！]]></title>
-        <id>https://zenn.dev/zukamiso/articles/boto3-s3-presigned-url</id>
-        <link href="https://zenn.dev/zukamiso/articles/boto3-s3-presigned-url"/>
-        <updated>2023-02-08T09:57:40.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Lambdaからboto3を使ってS3にあるファイルをダウンロードするためのコードが必要になったので備忘録として書いておきます。
-LambdaのIAMポリシーなどの設定も必要なのでそれらに関連した内容も記載します。
-
- ポリシーの作成
-Lambdaリソースの作成方法については省略します。
-IAMロールは作成済みとして、そのIAMロールにポリシーをアタッチします。
-必要なポリシーはAmazonS3ReadOnlyAccessです。
-もう少し厳密に設定する場合はs3:GetObjectの権限があるとOKです。
-
- ソースコード
-サンプルのコードです。
-例外などは適宜実装してください...]]></summary>
-        <author>
-            <name>zukamiso</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[5分で作る【VS Code×Docker×Python環境】の作り方]]></title>
-        <id>https://zenn.dev/kentaroszk/articles/e9d890274ecc4f</id>
-        <link href="https://zenn.dev/kentaroszk/articles/e9d890274ecc4f"/>
-        <updated>2023-02-08T09:08:43.000Z</updated>
-        <summary type="html"><![CDATA[概要
-VS CodeとDockerのインストールが完了していることを前提に、5分程度でひとまず、Pythonを動かせる状況までもっていきます。本当に必要最低限の環境だけ作ります。
-VS CodeでDockerを使い、Pythonで開発したいと思ったので、その備忘録として。
-
- 環境
-Windows11です。
-あと、VS CodeとDockerDesktopのインストールができている状況を想定しています。
-
- 事前準備
-VS Codeの拡張機能から『Dev Containers』と検索してインストールします。
-
-どこでも良いので、テキトーにフォルダを作ります。
-└ .devcontai...]]></summary>
-        <author>
-            <name>KENTAROSZK</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-121｜B - Can you solve this?]]></title>
-        <id>https://zenn.dev/hyperdb/articles/803ab1609a25a9</id>
-        <link href="https://zenn.dev/hyperdb/articles/803ab1609a25a9"/>
-        <updated>2023-02-08T07:29:51.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-121 B - Can you solve this?
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def main():
-    n, m, c = getIntMap()
-  ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-121｜A - White Cells]]></title>
-        <id>https://zenn.dev/hyperdb/articles/4bb87b606c6c0b</id>
-        <link href="https://zenn.dev/hyperdb/articles/4bb87b606c6c0b"/>
-        <updated>2023-02-08T07:29:50.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-121 A - White Cells
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    h, w = getIntMap()
-    x, y = getIntMap()
-
-    print((h - x) * (w - y))
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのデコレータとは何か]]></title>
-        <id>https://zenn.dev/oreilly_ota/articles/3999e443d8f3fd</id>
-        <link href="https://zenn.dev/oreilly_ota/articles/3999e443d8f3fd"/>
-        <updated>2023-02-08T02:56:54.000Z</updated>
-        <summary type="html"><![CDATA[1.デコレータとは
-
- 1-1.役割
-デコレータの役割とは、関数やクラスの中身を書き換えずに処理を追加することである。デコレータは関数であり、引数として関数やクラスを受け取り、関数やクラスで処理を返す。
-
- 1-2.具体例1
-次の関数に処理を追加する場合を想定する。
-def hello():
-    print('Hello')
-
-hello()
-出力されるHello前後に「----」を加える場合、下記のようなコードが書ける
-def print_line():
-    print('----------')
-    hello()
-    print('----------')
-
-d...]]></summary>
-        <author>
-            <name>オライリーヨッシー</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Django】Pythonで作るRest API【２１Simple JWT】]]></title>
-        <id>https://zenn.dev/web_life_ch/articles/97740e592ba07b</id>
-        <link href="https://zenn.dev/web_life_ch/articles/97740e592ba07b"/>
-        <updated>2023-02-08T02:44:30.000Z</updated>
-        <summary type="html"><![CDATA[【２１Simple JWT】
-YouTube: https://youtu.be/3xUJJC18-6g
-https://youtu.be/3xUJJC18-6g
-今回はユーザー認証の部分について解説します。
-https://www.django-rest-framework.org/api-guide/authentication/
-認証につきましては、いくつかやり方があるのですが、
-今回は「Simple JWT 」を使用します。
-https://django-rest-framework-simplejwt.readthedocs.io/en/latest/index.html
-...]]></summary>
-        <author>
-            <name>Web Life CH</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyInstallerでStreamlitアプリをexe/app化する]]></title>
-        <id>https://zenn.dev/aidemy/articles/caa3dae565c987</id>
-        <link href="https://zenn.dev/aidemy/articles/caa3dae565c987"/>
-        <updated>2023-02-08T00:11:53.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-こんにちは。株式会社アイデミーデータサイエンティストの中沢(@shnakazawa_ja)です。
-みなさんはStreamlitをご存知でしょうか？
-StreamlitとはPythonでWebアプリを作成するためのフレームワークで、HTMLの知識無しにWebアプリを簡単に作成できるという特長があります (例: 公式Gallery)。特に適当に書いてもUIをいい感じに整えてくれる点は素晴らしく、分析結果のインタラクティブなプロットや機械学習処理を手軽にアプリ化できるため弊社内でも大流行、仕事から趣味まで大活躍しています。
-Streamlitで作ったアプリを人に使ってもらうときに...]]></summary>
-        <author>
-            <name>Shingo Nakazawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Python]EC2（非GCP環境のサーバ） → BigQueryにCloud Storage経由でデータをロードする]]></title>
-        <id>https://zenn.dev/c_hero/articles/d1f10e2d17ac2e</id>
-        <link href="https://zenn.dev/c_hero/articles/d1f10e2d17ac2e"/>
-        <updated>2023-02-07T22:35:39.000Z</updated>
-        <summary type="html"><![CDATA[EC2（非GCP環境のサーバ）からBigQueryに、Cloud Storage経由でデータをロードするサンプルコード（覚書き）
-
- 前提条件
-プログラム動作環境であるEC2（非GCP環境のサーバ）は作成済であるものとする
-
- 事前準備
-
- (1) サービスアカウントの作成
-データをロードしたいGCPのプロジェクトにサインインし、以下の条件でサービスアカウントを作成しておく
-
-
-
-項目
-実施内容
-
-
-
-
-鍵の発行
-JSON形式で発行
-
-
-ロール
-BigQuery ジョブユーザー（bigquery.jobs.create）BigQuery データ編集者（bigquery.tables.cr...]]></summary>
-        <author>
-            <name>Chiharu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[それなりに動きそうな漢数字（万進法）と数字の変換 python3 "jpnumeric"]]></title>
-        <id>https://zenn.dev/karamawanu/articles/798587ce0b2d12</id>
-        <link href="https://zenn.dev/karamawanu/articles/798587ce0b2d12"/>
-        <updated>2023-02-07T15:59:00.000Z</updated>
-        <summary type="html"><![CDATA[日本で使ってる漢数字は、万進法ともいうらしく、千以下の単位が何度も現れる。
-しかし、数字＋単位文字 という組み合わせで処理すれば、そんなに難しくなさそう？
-と思って実装してみたのがこれ。それなりに動きそうではある。
-https://github.com/kamawanu/pypi-jpnumeric
-
-万未満の単位文字は 10^nしながら保留しておき
-"万"が来てから10^5倍して合計に加えるだけといえばだけ。
-
-それなりに動いてるようだが、あまりテストしてないので変換間違いがあったら連絡してくれると嬉しい。
-出来心でpypiパッケージとしても登録してみた。
-https://pypi.o...]]></summary>
-        <author>
-            <name>karamawanu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ChatGPTをDiscordに導入する方法をChatGPTに聞いてみた]]></title>
-        <id>https://zenn.dev/ikepe/articles/3e1fb9c025814a</id>
-        <link href="https://zenn.dev/ikepe/articles/3e1fb9c025814a"/>
-        <updated>2023-02-07T15:13:01.000Z</updated>
-        <summary type="html"><![CDATA[経緯について
-最近ニュースでもよく聞くようになったOpenAI社のChatGPTですが、ふとDiscordで使えたら便利だなと思い、この記事を書き始めました。プログラムも作れると聞いていたので、プログラムも作成してもらい、指示通り作りました。また、個人的な理由ですが、Discordのbotを作るたびに作りかたを調べているので、自分でブログに記録しておきたいというのも経緯の一つです。
-
- そもそもChatGPTとは
-せっかくなのでChatGPTに「ChatGPTの特徴を教えて」と聞いてみました。
-https://chat.openai.com/chat
-
-ChatGPTは、OpenAI...]]></summary>
-        <author>
-            <name>いけぺ〜</name>
         </author>
     </entry>
 </feed>
