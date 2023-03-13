@@ -2,10 +2,217 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-03-12T01:46:30.993Z</updated>
+    <updated>2023-03-13T01:39:04.963Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[PDM + GitHub Actions でテストとパッケージングを自動化する]]></title>
+        <id>https://zenn.dev/hamakou108/articles/255d7ea55ccd69</id>
+        <link href="https://zenn.dev/hamakou108/articles/255d7ea55ccd69"/>
+        <updated>2023-03-13T00:19:53.000Z</updated>
+        <summary type="html"><![CDATA[PDMを使ってパッケージ管理している Python プロジェクトで GitHub Actions を使ってテストや静的解析、パッケージングを自動化する方法について記述する。
+なお、 PDM のインストールや初期設定については過去に書いた記事があるのでこちらを参照。
+
+ 環境
+
+macOS: Ventura 13.0.1
+Python: 3.11.2
+PDM: 2.4.5
+
+
+ PDM の GitHub Action
+PDM から提供されている GitHub Action を使用する。
+https://github.com/marketplace/actions/setup-pdm
+以降で...]]></summary>
+        <author>
+            <name>hamakou108</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChatGPT-APIの出力をプログラムに落としこむ（Text-Embeddings）]]></title>
+        <id>https://zenn.dev/shimokenpi/articles/0831bbf64028ba</id>
+        <link href="https://zenn.dev/shimokenpi/articles/0831bbf64028ba"/>
+        <updated>2023-03-12T17:42:27.000Z</updated>
+        <summary type="html"><![CDATA[目的
+例えばChatGPTに人間同士の議論の審判をさせるというケースを考えます。
+ネット上のバイアスやそもそも意味を理解できているのかという問題がありますが、AIに議論の判定（もしくは進行）をさせるというのは中立性の面からも将来主流になるのではと思います。
+ではChatGPTにAとBの議論の勝敗判定をさせたとして、その出力は当然文章になるわけですが、プログラムで扱うにはAIから得られた文章を
+
+A勝ち
+B勝ち
+引き分け
+
+に分類する必要があります。
+ChatGPTに出力の形式を指定するという方法もあるのですが、安定性に難あり、トークンを余計に使う、などの問題があります。
+そこでOpe...]]></summary>
+        <author>
+            <name>六兵衛</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[motoでdynamoのモックを作成する]]></title>
+        <id>https://zenn.dev/nkty/articles/7266e4666f3908</id>
+        <link href="https://zenn.dev/nkty/articles/7266e4666f3908"/>
+        <updated>2023-03-12T10:25:22.000Z</updated>
+        <summary type="html"><![CDATA[結論から。自分はこのように書いています。
+from moto import mock_dynamodb
+import pytest
+import boto3
+import logging
+
+
+class TestHoge:
+
+    @pytest.fixture(autouse=True)
+    def dynamo_setup(self):
+        with mock_dynamodb():
+            # テーブル作成
+            dynamodb = boto3.resource("dynamodb", region_name="ap-north...]]></summary>
+        <author>
+            <name>nkty</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonでcsvを読み込む]]></title>
+        <id>https://zenn.dev/isogaba/articles/5170bdac8dbc09</id>
+        <link href="https://zenn.dev/isogaba/articles/5170bdac8dbc09"/>
+        <updated>2023-03-12T10:25:12.000Z</updated>
+        <summary type="html"><![CDATA[最近Pythonでcsvを読み込み、データを操作することが多くなりました。
+そのため、これを機にPythonでcsvを操作できるライブラリはどのようなものがあるか調べることにしました。
+本記事ではcsv読み込みに絞って比較したいと思います。
+なお、csvデータは気象庁が公開している過去の気象データを使用させて頂いております。
+気象庁ホームページ
+
+ csvデータを操作するライブラリ
+pythonでcsvを操作できる以下のライブラリについて比較します。
+
+標準機能・標準ライブラリ(csvモジュール)
+NumPy
+pandas
+Polars
+
+
+ 標準機能・標準ライブラリでcsvを読み込む
+...]]></summary>
+        <author>
+            <name>急がば回れ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonのコードをformatterのblackで整える]]></title>
+        <id>https://zenn.dev/yumemi_inc/articles/2f9334de7fd165</id>
+        <link href="https://zenn.dev/yumemi_inc/articles/2f9334de7fd165"/>
+        <updated>2023-03-12T08:34:29.000Z</updated>
+        <summary type="html"><![CDATA[背景
+Puthonのコードをキレイに整形してくれるblackを使ってコードを整えてみました。
+https://github.com/psf/black
+下記の記事にあるように、black以外にも使えそうなものはありますが、blackが結構メインで使っているところが多くなってきていそうな雰囲気があります。ただし、名前が黒と同じなのでややこしい。
+https://zenn.dev/naiq112/articles/df1b32fc08d383
+
+ 環境
+機種 : MacBook Pro 2021(M1 Max)
+python version : 3.9.16
+pip version : ...]]></summary>
+        <author>
+            <name>lightkun</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-165｜B - 1%]]></title>
+        <id>https://zenn.dev/hyperdb/articles/6d7925cee4e867</id>
+        <link href="https://zenn.dev/hyperdb/articles/6d7925cee4e867"/>
+        <updated>2023-03-12T05:53:57.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-165 B - 1%
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    x = getInt()
+
+    a = 100
+    c = 0
+    while a < x:
+        a += a // 100
+        c += 1
+    print(c)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-165｜A - We Love Golf]]></title>
+        <id>https://zenn.dev/hyperdb/articles/1cae336ff060cf</id>
+        <link href="https://zenn.dev/hyperdb/articles/1cae336ff060cf"/>
+        <updated>2023-03-12T05:53:56.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-165 A - We Love Golf
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    k = getInt()
+    a, b = getIntMap()
+
+    f = False
+    for i in range(a, b + 1):
+        if i % k == 0:
+            f = True
+            brea...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[3/6~3/10で技術的にやったこと]]></title>
+        <id>https://zenn.dev/zi_matsu/articles/4030be7360134b</id>
+        <link href="https://zenn.dev/zi_matsu/articles/4030be7360134b"/>
+        <updated>2023-03-12T05:07:57.000Z</updated>
+        <summary type="html"><![CDATA[aiohttpとasyncioを使用したPythonの非同期HTTPリクエストについて
+非同期コードは結果を待つ間に一度処理を中断しその間に他のコードを実行できるコード。
+他のコードの実行をブロックしないのでノンブロッキングコードとも言われる
+asyncioライブラリは非同期処理を行うツールがある
+aiohttpライブラリにはHTTPリクエストの機能がある。
+これらを組み合わせることによって非同期の中でも並行してhttpのリクエストを行うことができる
+イメージは同時に複数のapiをコールできる感じ
+実装としては以下のようなイメージ(結構簡略化して書いてあります）
+async def ...]]></summary>
+        <author>
+            <name>Matsuzaki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonのお試し用]]></title>
+        <id>https://zenn.dev/haimaru/articles/6cba8dc0edf56d</id>
+        <link href="https://zenn.dev/haimaru/articles/6cba8dc0edf56d"/>
+        <updated>2023-03-12T04:48:56.000Z</updated>
+        <summary type="html"><![CDATA[Python is 何？
+print("Hello World")]]></summary>
+        <author>
+            <name>haimarusan</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Githubのプロフィールを動的に変化させるカスタマイズを作ってみた]]></title>
         <id>https://zenn.dev/rie_amasato/articles/a9e600c0e105db</id>
@@ -6675,439 +6882,6 @@ nums = [i for i in range(1, n+1)]
 while len(...]]></summary>
         <author>
             <name>仮病</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Liner.ai]オブジェクト検出でインコを検出してみる！]]></title>
-        <id>https://zenn.dev/watson_sei/articles/c08ad1b62735f3</id>
-        <link href="https://zenn.dev/watson_sei/articles/c08ad1b62735f3"/>
-        <updated>2023-02-11T13:13:04.000Z</updated>
-        <summary type="html"><![CDATA[Liner.aiについて
-Liner は、ML モデルを簡単にトレーニングできる無料のツールです。トレーニング データを取得し、統合しやすい ML モデルを提供します。コーディングや機械学習の専門知識は必要ありません。
-
- 対象OS
-Windows
-Mac (Apple, Intel)
-Linux
-
- やってみる
-今回はインコの画像をトレーニングさせてオブジェクト検出をしてみます。
-Liner.aiが初めての人は前回の記事を一読してから試してみてください！
-
- アノーテーションデータ作成
-今回は、オブジェクト検出をするためにデータセットの画像からインコだけを抽出したXMLファイルが必...]]></summary>
-        <author>
-            <name>Watson-Sei</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[画像生成AI StableDiffusion触ってみた]]></title>
-        <id>https://zenn.dev/bonsai_engineer/articles/2752a91d25bbac</id>
-        <link href="https://zenn.dev/bonsai_engineer/articles/2752a91d25bbac"/>
-        <updated>2023-02-11T12:59:19.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-ちょっと簡単に画像生成できるAIないかなと調べたところHugging Faceの画像生成AI StableDiffusionがでてきたので実装してみた。
-環境はGPU使いたかったため、Colabで行うことにする。
-
- Stable Diffusionとは
-Stable DiffusionはLMU MunichのMachine Vision and Learningの研究者によって開発されたLatent Diffusion modelモデルの画像生成AIらしい。
-テキストを入力し、学習済みのAIモデルが自動で画像を生成してくれる。
-例えば、Flower and Sunと入力す...]]></summary>
-        <author>
-            <name>盆栽エンジニア</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonでfor文の後にelseを使う]]></title>
-        <id>https://zenn.dev/yunkai/articles/python-for-else</id>
-        <link href="https://zenn.dev/yunkai/articles/python-for-else"/>
-        <updated>2023-02-11T12:14:34.000Z</updated>
-        <summary type="html"><![CDATA[Pythonではforブロックの後にelseを使うことができます。
-例えば、forブロックの中でフラグを立てて、forブロックの後でフラグを確認するようなことを、elseブロックで行うことができます。
-forブロックの後のelseブロックは、forが最後まで実行されたときに、実行されます。
-しかし、forブロックの中でbreakを使ってforを抜けた場合は、elseブロックは実行されません。
-for i in range(5):
-    print(i)
-else:
-    print("loop done")
-
-# 出力
-# 0
-# 1
-# 2
-# 3
-# 4
-# loop done
-...]]></summary>
-        <author>
-            <name>yunkai</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ChatGPT（OpenAI）環境をインストール]]></title>
-        <id>https://zenn.dev/ingress/articles/7b3335609f824e</id>
-        <link href="https://zenn.dev/ingress/articles/7b3335609f824e"/>
-        <updated>2023-02-11T11:27:41.000Z</updated>
-        <summary type="html"><![CDATA[CentOSにChatGPT（OpenAI）のAPIにアクセスする環境をセットアップしてみる
-
- 背景
-PlaygroundからChatGPTを使うのもいいけど、やっぱりPythonからChatGPTのAPI（正確には裏でGPT-3と呼ばれるAIのモデルが動いています）をコールして返答を得たかったのでアプリケーションの環境を手順に従ってセットアップしてみました。
-
- インストール
-今回はCentOSにPythonでセットアップします。
-!
-pipモジュールのインストールで互換性エラーが出てしまうため、Pythonのバージョンは3.10固定で行いました。もし違うバージョンでインストール...]]></summary>
-        <author>
-            <name>クラウド職人J</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python]]></title>
-        <id>https://zenn.dev/jonchon_u/articles/f7701964fc3bb8</id>
-        <link href="https://zenn.dev/jonchon_u/articles/f7701964fc3bb8"/>
-        <updated>2023-02-11T11:20:32.000Z</updated>
-        <summary type="html"><![CDATA[できること と おすすめ
-
-AI・機械学習  <-ｵｽｽﾒ
-
-画像処理
-時系列解析
-自然言語処理
-
-
-データ分析(データサイエンス)  <-ｵｽｽﾒ
-業務効率化・自動化  <-ｵｽｽﾒ
-WEBスクレイピング(WEBページ上から情報を収集する技術)  <-ｵｽｽﾒ
-WEBアプリケーション
-デスクトップアプリ
-ブロックチェーン
-最近はNode.jsでの実装が多い
-
-
- ライブラリ
-
- AI・機械学習系
-
-Keras
-TensorFlow
-PyTorch
-scilit-learn
-
-
- データ分析系
-
-NumPy
-Pandas
-scilit-learn
-Matpl...]]></summary>
-        <author>
-            <name>jonchon</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DiscordとLINEをPython+FastAPI+Dockerで連携させる【その3】LINEからDiscordへの画像]]></title>
-        <id>https://zenn.dev/maguro_alterna/articles/34a220e834a5cb</id>
-        <link href="https://zenn.dev/maguro_alterna/articles/34a220e834a5cb"/>
-        <updated>2023-02-11T08:35:50.000Z</updated>
-        <summary type="html"><![CDATA[挨拶
-こんにちは。マグロです。
-こちらの続きとなります。
-https://zenn.dev/maguro_alterna/articles/65848d6f96ed30
-今回はLINEから画像をDiscordに送ります。
-
- 背景
-こちらの記事の通り、LINEはアップロードされたファイルはバイナリデータでサーバーに保存され、一定時間で削除されます。
-https://zenn.dev/maguro_alterna/articles/21706a293a8eeb
-今回は上記の記事同様、Gyazoを使用してDiscord側に共有させます。
-必須ではありませんが、記事の内容をやっておくと、流...]]></summary>
-        <author>
-            <name>マグロ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GPUクラウドを使ってStable Diffusion Web UIを手軽に体験]]></title>
-        <id>https://zenn.dev/yoneapp/articles/a942f17ad7dbe8</id>
-        <link href="https://zenn.dev/yoneapp/articles/a942f17ad7dbe8"/>
-        <updated>2023-02-11T08:24:32.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-筆者は、Stable Diffusion自体を動かしたことがなかったのですが
-SNSで流れてくる素敵なAIイラストを見て
-自分でもやってみたいなーと思いまして色々調べました。
-手軽に試したいと考えた上で最近は
-SDWebUI(Stable Diffusion Web UI) が流行りであり
-LoRA を使ってイラストの傾向を補正するという事が行われているのかなと思いました。
-ただGPUなども重要らしく、PC環境を用意するのなかなか大変です。
-そこで本記事では Paperspace というクラウドサービスで
-ちゃちゃっと Stable Diffusion Web UI を起動...]]></summary>
-        <author>
-            <name>よねあぷ@AIコミュ運営</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonの複数バージョンを同時に使い分ける]]></title>
-        <id>https://zenn.dev/ingress/articles/4c403abf027e44</id>
-        <link href="https://zenn.dev/ingress/articles/4c403abf027e44"/>
-        <updated>2023-02-11T08:13:20.000Z</updated>
-        <summary type="html"><![CDATA[Pythonの複数バージョンを同時に使い分ける
-
- 背景
-ChatGPTのAPIに接続するために環境を自宅のCentOSにインストールしようとしたところ、既にインストールしてあるPythonのバージョン3.6.8ではpipでモジュールをインストールする際に特定のモジュールとの互換性がないエラーでコケてしまう。なぜかPython 3.10を決め打ちで要求されるので仕方なくWindowsにPythonをインストールして使ってみたがやっぱり不便で仕方がないのでCentOSのPythonのバージョンを複数同時に使い分けられたらいいのでは？と思い調べるとpyenvなるツールがあるらしい。
-
- ...]]></summary>
-        <author>
-            <name>クラウド職人J</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[オープンソースで文章要約と翻訳、音声合成をさせてみた【PEGASUS/GoogleTextToSpeech/GoogleTrans】]]></title>
-        <id>https://zenn.dev/kentaroszk/articles/6ad19b54c9e7b3</id>
-        <link href="https://zenn.dev/kentaroszk/articles/6ad19b54c9e7b3"/>
-        <updated>2023-02-11T07:12:22.000Z</updated>
-        <summary type="html"><![CDATA[概要
-テキストファイルを要約して、音声合成してくれるプログラムです。
-要点だけをまとめてくれるので、用途はビジネスマンや学生が長い文章を読む時間がない時に、さらっと把握する時に使えると思います。。
-言語対応としては、英語と日本語の両方に対応しており、
-インプット：英語 or 日本語
-アウトプット：英語 or 日本語
-を可変させることができます。
-特に、インプットに関しては英語か日本語かを自動で判定してくれるので、プログラム実行時に明示する必要がありません。
-プログラムの処理の流れは下の図のような流れとなっています。
-
-コードの全文はGitHubにあります。
-
- 環境
-GoogleCo...]]></summary>
-        <author>
-            <name>KENTAROSZK</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのコンテキストの仕組みを使って処理時間を良い感じに表示する]]></title>
-        <id>https://zenn.dev/tanagumo/articles/280c33cc28f8ec</id>
-        <link href="https://zenn.dev/tanagumo/articles/280c33cc28f8ec"/>
-        <updated>2023-02-11T06:36:47.000Z</updated>
-        <summary type="html"><![CDATA[プログラムの処理時間を計測したいようなケースがたまにあります。処理が簡単な場合は
-import time
-
-def some_func():
-    ...
-    
-b = time.perf_counter()
-some_func()
-print(f'{time_perf_counter() - b} secs')
-とかで十分なのですが
-def foo():
-    bar()
-    
-def bar():
-    baz1()
-    baz2()
-    
-def baz1():
-    ....
-    
-def baz2():
-    ....
-のようになってくると（そして...]]></summary>
-        <author>
-            <name>tanagumo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-124｜A - Buttons]]></title>
-        <id>https://zenn.dev/hyperdb/articles/cbf6100bfcae7c</id>
-        <link href="https://zenn.dev/hyperdb/articles/cbf6100bfcae7c"/>
-        <updated>2023-02-11T03:35:08.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-124 A - Buttons
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b = getIntMap()
-
-    print(max([a + b, a * 2 -1, b * 2 - 1]))
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-124｜B - Great Ocean View]]></title>
-        <id>https://zenn.dev/hyperdb/articles/9d57fd69e580ec</id>
-        <link href="https://zenn.dev/hyperdb/articles/9d57fd69e580ec"/>
-        <updated>2023-02-11T03:35:08.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-124 B - Great Ocean View
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n = getInt()
-    h = getIntList()
-
-    c = 1
-    for i in range(1, len(h)):
-        x = max(h[:i])
-        if x <= h[i]:
-      ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-125｜B - Resale]]></title>
-        <id>https://zenn.dev/hyperdb/articles/5c6a36e21297f4</id>
-        <link href="https://zenn.dev/hyperdb/articles/5c6a36e21297f4"/>
-        <updated>2023-02-11T03:35:08.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-125 B - Resale
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n = getInt()
-    v = getIntList()
-    c = getIntList()
-
-    r = 0
-    for i in range(len(v)):
-        x = v[i] - c[i]
-        r += x if x &g...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-125｜A - Biscuit Generator]]></title>
-        <id>https://zenn.dev/hyperdb/articles/14a355b1041170</id>
-        <link href="https://zenn.dev/hyperdb/articles/14a355b1041170"/>
-        <updated>2023-02-11T03:35:07.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-125 A - Biscuit Generator
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b, t = getIntMap()
-
-    print(t // a * b)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Django】Pythonで作るRest API【２４Authorization Bearer】]]></title>
-        <id>https://zenn.dev/web_life_ch/articles/bac9e1338a08c7</id>
-        <link href="https://zenn.dev/web_life_ch/articles/bac9e1338a08c7"/>
-        <updated>2023-02-11T02:59:28.000Z</updated>
-        <summary type="html"><![CDATA[【２４Authorization Bearer】
-YouTube: https://youtu.be/66feAviHjQg
-https://youtu.be/66feAviHjQg
-今回は前回設定したパーミッションを「Postman」を使用して
-テストを行います。
-https://www.postman.com/downloads/
-Postmanが起動できましたら
-認証が通っていない状態で、
-「http://localhost:8000/accounts/me」
-こちらに「GET」リクエストを送信します。
-認証が通っていませんので、
-「"detail": "Authenticat...]]></summary>
-        <author>
-            <name>Web Life CH</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[はじめてのFlask]]></title>
-        <id>https://zenn.dev/coco9122/articles/flask-startup-coco9122</id>
-        <link href="https://zenn.dev/coco9122/articles/flask-startup-coco9122"/>
-        <updated>2023-02-10T14:45:03.000Z</updated>
-        <summary type="html"><![CDATA[Flaskとは
-FlaskはPythonのWebアプリケーションフレームワークです。とってもシンプルに記述できます。
-気になる方は公式サイトを参照してください。
-https://msiz07-flask-docs-ja.readthedocs.io/ja/latest/
-
- 今回の目的
-http://localhost:8080にアクセスしたら"Hello World!"と表示できるようにしよう！
-
- 使用するもの
-dockerを使用します。
-dockerについて知りたい方は以下を参照してください。大変参考になります。
-https://zenn.dev/suzuki_hoge/boo...]]></summary>
-        <author>
-            <name>CoCo9122</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LEBERの検温送信を自動化したい]]></title>
-        <id>https://zenn.dev/jup1ter/articles/4917bf291ba681</id>
-        <link href="https://zenn.dev/jup1ter/articles/4917bf291ba681"/>
-        <updated>2023-02-10T14:13:48.000Z</updated>
-        <summary type="html"><![CDATA[※自己責任です※
-Seleniumを使ってブラウザをスクレイピングして毎朝自動送信することを可能にしよう！
-本記事ではSeleniumを用いたスクレイピングとGihHubActionを使った定期実行を行う方法を解説します。（備忘録要素含む
-
- めんどくさい人は2章のコードと3章だけで動きます。
-
- 目次
-
-1.必要なもの
-2.ローカル環境でスクレイピングを実行できるようにする
-
-1.準備
-2.LEBERのサイトをクリックできるようにする
-3.他の部分も同様に作る
-コード
-4.実行する
-
-
-3.GithubActionを使って実行できるようにする
-4.最後に
-
-
- 1.必要なもの
-gi...]]></summary>
-        <author>
-            <name>Jup1ter</name>
         </author>
     </entry>
 </feed>
