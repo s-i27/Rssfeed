@@ -2,10 +2,251 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-03-14T01:21:24.449Z</updated>
+    <updated>2023-03-15T01:38:12.759Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[【まとめ編】AWS Boto3 by Pythonで特定タグ未付与のリソース抽出]]></title>
+        <id>https://zenn.dev/kangaezaru/articles/d75970018b8fa8</id>
+        <link href="https://zenn.dev/kangaezaru/articles/d75970018b8fa8"/>
+        <updated>2023-03-15T01:10:37.000Z</updated>
+        <summary type="html"><![CDATA[1. 本稿の概要
+
+ ◆ ゴール
+以下のような機能を満たすPythonスクリプトを作成しました。
+
+EC2インスタンスで特定タグが付いていないリソースをフィルタリング
+ローカル環境でI/Oが自由なPythonスクリプトとして実行
+その抽出結果はCSVカンマ区切り形式でローカルに出力
+
+それを(弊社の中の)各主要サービスにおいて作成し、連結・自動化して一括自動出力まで目指す
+
+ ◆ 背景
+百人規模のグループのAWSで不特定多数のユーザによりリソースが作られ、ガバナンスも効いていない世界に迷い込んだ。用途不明のサーバが跋扈しコストと責任の追跡ができていない世紀末である。とりあえずA...]]></summary>
+        <author>
+            <name>kangaezaru</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【EC2編】AWS Boto3 by Pythonで特定タグ未付与のリソース抽出]]></title>
+        <id>https://zenn.dev/kangaezaru/articles/aba89a266df2f4</id>
+        <link href="https://zenn.dev/kangaezaru/articles/aba89a266df2f4"/>
+        <updated>2023-03-15T01:01:33.000Z</updated>
+        <summary type="html"><![CDATA[1. 本稿の概要
+
+ ◆ ゴール
+以下のような機能を満たすPythonスクリプトを作成しました。
+こちらはEC2インスタンス向けです。
+
+EC2インスタンスで特定タグが付いていないリソースをフィルタリング
+ローカル環境でI/Oが自由なPythonスクリプトとして実行
+その抽出結果はCSVカンマ区切り形式でローカルに出力
+
+
+ ◆ 背景、前提、その他サービスまとめなど
+こちら を参照
+
+ 2. 開発
+
+ ◆ 概説
+今回はEC2のNameタグ、Ownerタグが未付与のリソースの一覧を出力します。
+とりあえず単体では東京リージョンのみを対象としています。
+
+ ◆ コード
+
+check...]]></summary>
+        <author>
+            <name>kangaezaru</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Open3Dでグリッドを表示する(LineSet)]]></title>
+        <id>https://zenn.dev/fastriver/articles/open3d-display-grid</id>
+        <link href="https://zenn.dev/fastriver/articles/open3d-display-grid"/>
+        <updated>2023-03-14T15:07:11.000Z</updated>
+        <summary type="html"><![CDATA[Open3DのVisualizerでは標準にグリッドを表示する機能がありません。しかしセンサ出力点群などの場合はグリッドを表示できたほうが点群の位置などがわかりやすくなると思うので、自分でグリッドを作ってみます。
+
+
+例えばVeloViewでは上のようにXY平面上のグリッドが表示される
+
+
+ Open3Dで線を引く
+Open3DのVisualizer上に線を引くのにはgeometry.LineSetを用います。
+http://www.open3d.org/docs/release/python_api/open3d.geometry.LineSet.html
+import open3d ...]]></summary>
+        <author>
+            <name>fastriver</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonのSeleniumでInstagramの投稿画像をスクレイピングした]]></title>
+        <id>https://zenn.dev/te19oishi/articles/62ddcaadca0849</id>
+        <link href="https://zenn.dev/te19oishi/articles/62ddcaadca0849"/>
+        <updated>2023-03-14T14:21:35.000Z</updated>
+        <summary type="html"><![CDATA[1. 概要
+先日地元で行われたハッカソンでインスタグラムの画像をスクレイピングしてURLのリストとして出力したのでメモとして残しておきます。
+
+ 2. 環境
+
+MacBook Air(M1)
+macOS Ventura version13.1
+
+
+ 3. 結論
+
+ 3.1. コード
+取得したい画像の枚数が2枚以下ならクリックする必要がないのでより早く短いコードになります。
+
+scraping.py
+
+from time import sleep
+from selenium import webdriver
+# seleniumが最新版なら必要
+#from selenium.webdr...]]></summary>
+        <author>
+            <name>Oishi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenAI APIを使用したアプリを構築してみた]]></title>
+        <id>https://zenn.dev/atsushiambo/articles/0563e7fe72afd3</id>
+        <link href="https://zenn.dev/atsushiambo/articles/0563e7fe72afd3"/>
+        <updated>2023-03-14T14:16:33.000Z</updated>
+        <summary type="html"><![CDATA[OpenAIの公式ホームページにAPIの使用方法が書かれていたので、サンプルアプリと共に構築してみました。
+
+ 前提条件
+
+Pythonがインストール済み。インストールしていない人はこちらから。
+
+
+
+ アプリのコードを用意する
+下記のリポジトリをクローンしてアプリファイルをインストールします。または、公式サイトからzipファイルをダウンロードします。
+git clone https://github.com/openai/openai-quickstart-python.git
+
+ APIキーを追加する
+クローンしたリポジトリに移動して、新規の.envファイルを作成します。
+% cd ...]]></summary>
+        <author>
+            <name>安保 睦</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MacでPython3の開発環境を構築する（Command Line Tools for Xcodeによるインストール）]]></title>
+        <id>https://zenn.dev/sexy_fujii/articles/f6ffa615d0e018</id>
+        <link href="https://zenn.dev/sexy_fujii/articles/f6ffa615d0e018"/>
+        <updated>2023-03-14T12:33:27.000Z</updated>
+        <summary type="html"><![CDATA[概要
+Macで Python3 の開発環境を構築する方法を紹介します。
+今回はAppleが提供する Command Line Tools for Xcode をインストールすることで、同梱されているPython3を利用できるようにする方法の紹介です。
+簡単かつ短時間で準備を済ませPython3を体験してみたいという方向けの手順です。本格的に開発したいという方にはお勧めしません。
+
+ 環境
+以下の環境で手順を検証しました。
+
+
+
+項目名
+内容
+
+
+
+
+機器
+MacBook Air (M1, 2020)
+
+
+OS
+macOS Ventura 13.2.1
+
+
+メモリ
+16GB
+
+
+ストレ...]]></summary>
+        <author>
+            <name>セクシー藤井</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-167｜B - Easy Linear Programming]]></title>
+        <id>https://zenn.dev/hyperdb/articles/68ffd8416d9b78</id>
+        <link href="https://zenn.dev/hyperdb/articles/68ffd8416d9b78"/>
+        <updated>2023-03-14T05:04:22.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-167 B - Easy Linear Programming
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b, c, k = getIntMap()
+
+    s = 0
+    if a >= k or a + b >= k:
+        s = a if a <= k else k
+    else:
+        k -= (a + b)
+        s = a - (c if c < k els...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-167｜A - Registration]]></title>
+        <id>https://zenn.dev/hyperdb/articles/5c310c5f593eea</id>
+        <link href="https://zenn.dev/hyperdb/articles/5c310c5f593eea"/>
+        <updated>2023-03-14T05:04:22.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-167 A - Registration
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = getString()
+    t = getString()
+
+    print('Yes' if s == t[:-1] else 'No')
+
+
+if __name__ == "__main__":
+    main()
+    ```]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PlaylistGPT: ChatGPTにSpotifyの曲でプレイリストを作らせる]]></title>
+        <id>https://zenn.dev/qwegat/articles/dced9d104ea0ec</id>
+        <link href="https://zenn.dev/qwegat/articles/dced9d104ea0ec"/>
+        <updated>2023-03-13T14:38:53.000Z</updated>
+        <summary type="html"><![CDATA[初手宣伝
+https://qwegat-chatgptplaylist-main-gyigsk.streamlit.app/
+ここで試せます。
+今回、いろいろなサービス（StreamLit、Spotify API、OpenAI API）を縦断してシステムを構築したのですが、そのすべてに1ドルも払っていないので、おそらく試せるのは数日以内でしょう。裏返せば、試すなら今しかないということです。
+さあ。
+https://qwegat-chatgptplaylist-main-gyigsk.streamlit.app/
+
+ 基本的な理屈
+もう寝たいので、いつもの記事のように丁寧な構成はしませ...]]></summary>
+        <author>
+            <name>qwegat</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【Anaconda】conda createでCondaSSLErrorが発生した際の解決策]]></title>
         <id>https://zenn.dev/yuk6ra/articles/9c24eb70211c2a</id>
@@ -6507,225 +6748,6 @@ import cv2
 import matplotlib.pyplot as pl...]]></summary>
         <author>
             <name>すだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-127｜B - Algae]]></title>
-        <id>https://zenn.dev/hyperdb/articles/a18284ddddaae0</id>
-        <link href="https://zenn.dev/hyperdb/articles/a18284ddddaae0"/>
-        <updated>2023-02-13T10:46:06.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-127 B - Algae
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def weight(r, d, x):
-    return r * x - d
-
-
-def main():
-    r, d, x = getIntMap()
-
-    for i in range(10):
-        x = weight(r, d, x)
-        print(x)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-127｜A - Ferris Wheel]]></title>
-        <id>https://zenn.dev/hyperdb/articles/6ec583eedb2137</id>
-        <link href="https://zenn.dev/hyperdb/articles/6ec583eedb2137"/>
-        <updated>2023-02-13T10:46:06.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-127 A - Ferris Wheel
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b = getIntMap()
-
-    print(0 if a <= 5 else b // 2 if a <= 12 else b)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[チームに知見が残るEKSクラスタバージョンアップ運用]]></title>
-        <id>https://zenn.dev/yktakaha4/articles/steady_update_of_eks</id>
-        <link href="https://zenn.dev/yktakaha4/articles/steady_update_of_eks"/>
-        <updated>2023-02-13T02:11:32.000Z</updated>
-        <summary type="html"><![CDATA[LAPRAS株式会社でSREをしております yktakaha4 と申します 🐧
-https://lapras.com/
-今回は、仕事のひとつとして1年くらい取り組んでいたEKSクラスタのバージョンアップの運用改善について一息つけたので、振り返りを兼ねて備忘録を遺したいと思います ✍
-先にお断りしておくと、この記事で話すのは 運用ノウハウが{ほぼ無い,失われてしまった}EKSクラスタに対して、手順改善やリファクタリングを通じて継続的なバージョンアップ運用を再開する方法 というあまり胸を張れない内容です
-ネットの記事やカンファレンスを見ていると、大規模環境や高トラフィック下における取り組みや...]]></summary>
-        <author>
-            <name>Yuuki Takahashi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Django】Pythonで作るRest API【２６django-cors-headers】]]></title>
-        <id>https://zenn.dev/web_life_ch/articles/71e60d0856bbd7</id>
-        <link href="https://zenn.dev/web_life_ch/articles/71e60d0856bbd7"/>
-        <updated>2023-02-13T02:08:05.000Z</updated>
-        <summary type="html"><![CDATA[【２６django-cors-headers】
-YouTube: https://youtu.be/qjc7-fvHczw
-https://youtu.be/qjc7-fvHczw
-今回は「django-cors-headers」を使用して、
-前回のエラーを解決します。
-https://pypi.org/project/django-cors-headers/
-インストールコマンド
-pip install django-cors-headers
-インストールが済みましたら、
-「myapp」->「settings.py」に設定を追加します。
-「MIDDLEWARE」の追加部分は追...]]></summary>
-        <author>
-            <name>Web Life CH</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[文字列や単語の類似度を測る6つの手法の実装]]></title>
-        <id>https://zenn.dev/kaeru39/articles/3066c0aee27c41</id>
-        <link href="https://zenn.dev/kaeru39/articles/3066c0aee27c41"/>
-        <updated>2023-02-12T16:33:03.000Z</updated>
-        <summary type="html"><![CDATA[単語の類似度を計算するプログラムを書いていたところ、「文字列の類似度」や「単語の類似度」という表現を見て、何が違うんだと感じたので調べた結果をまとめます。
-調べた結果、筆者の認識では「文字列の類似度は(手法は問わず)文字列の一致度」、「単語の類似度は(手法は問わず)文章中の文脈に基づいた意味の一致度」という認識になりました。さらに、単語の類似度だけでなく、文章の類似度を計算する手法も見つけましたので合わせて整理します。自分が知りたかったのは単語ベクトルに変換した後での類似度の計算でしたので後者、加えて文章の類似度であることがわかりました。
-今回調べた言葉の類似度を測る6つの手法を表にまと...]]></summary>
-        <author>
-            <name>kaeru39</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのオブジェクト指向プログラミングを完全理解 (2)]]></title>
-        <id>https://zenn.dev/kaitolucifer/articles/6e2a1e2896de3b</id>
-        <link href="https://zenn.dev/kaitolucifer/articles/6e2a1e2896de3b"/>
-        <updated>2023-02-12T15:51:32.000Z</updated>
-        <summary type="html"><![CDATA[Pythonのオブジェクト指向プログラミングを完全理解 (1)に続き
-
- 5. Pythonのオブジェクト指向の発展
-Pythonのオブジェクト指向プログラミングの基本的な形式を見てきました。実務においても、4. pythonのオブジェクト指向の基本の内容でほぼ事足ります。しかし、高度な機能の実現、モジュールの自作またはデザインパターンに則った綺麗なシステムを作成したいなら、もう少し発展した内容を知る必要があります。
-
- 5-1. 特殊メソッド
-3-14. 演算子オーバーロードで少し触れましたが、Pythonのクラスには__init__のような、前後に2つのアンダースコアの付いた「特殊メ...]]></summary>
-        <author>
-            <name>kaitolucifer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのオブジェクト指向プログラミングを完全理解 (1)]]></title>
-        <id>https://zenn.dev/kaitolucifer/articles/f7d9ea4ef0dc19</id>
-        <link href="https://zenn.dev/kaitolucifer/articles/f7d9ea4ef0dc19"/>
-        <updated>2023-02-12T15:45:28.000Z</updated>
-        <summary type="html"><![CDATA[オブジェクト指向
-
- 1. オブジェクト指向の起源
-2003年チューリング賞の受賞者アラン・ケイさんはよくオブジェクト指向プログラミングの父と称されます。ご本人も憚ることなく、幾度、公の場で発明権を宣言しています。しかし、ケイさんは「C++」や「Java」などの現代のオブジェクト指向言語を蔑ろにしています。これらの言語は「Simula 67」という言語を受け継いだもので、私が作った「Smalltalk」と関係ないのだとケイさんは考えています。
-オブジェクト指向という名称は確かにアラン・ケイさんに由来するものです。しかし、C++とJavaで使われている現代のオブジェクト指向は当初のと結...]]></summary>
-        <author>
-            <name>kaitolucifer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのデバッグを完全理解]]></title>
-        <id>https://zenn.dev/kaitolucifer/articles/5009bba3d20d59</id>
-        <link href="https://zenn.dev/kaitolucifer/articles/5009bba3d20d59"/>
-        <updated>2023-02-12T15:24:40.000Z</updated>
-        <summary type="html"><![CDATA[デバッグ
-デバッグは開発者にとって、とても重要なスキルの1つです。デバッグをすることで、エラーを正確に特定し、プログラムのバグを見つけることができます。Pythonでは、さまざまなデバッグツールやパッケージ（デバッガーとも言う）が提供されています。これらをどう使うかを紹介していきます。
-
- pdbでデバッグ
-「pdb」はPython標準ライブラーのデバッグツールで、Pythonプログラムにインタラクティブなソースコードデバッグ機能を提供しています。使い方はC言語の「gdb」と類似しています。pdbの主な機能として、「ブレークポイント」の設置、「ステップ実行」、「スタックフレーム」のチ...]]></summary>
-        <author>
-            <name>kaitolucifer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonの非同期プログラミングを完全理解]]></title>
-        <id>https://zenn.dev/kaitolucifer/articles/8ac9bff1c3bf2d</id>
-        <link href="https://zenn.dev/kaitolucifer/articles/8ac9bff1c3bf2d"/>
-        <updated>2023-02-12T15:14:40.000Z</updated>
-        <summary type="html"><![CDATA[非同期プログラミング
-非同期プログラミングについて、聞いたことのある人は多いと思います。例えば、フロントエンドで使われているJavaScriptはシングルスレッド言語で、メインスレッドをブロッキングさせないため、様々な関数は非同期処理になるよう実装されています。Node.jsもその性質を受け継ぎ、I/Oバウンドタスクに長けています。しかし、Pythonになると、並列・並行処理に対応しているため、ほとんどの人は自身のプロジェクトで非同期プログラミングを利用した経験がないでしょう。もちろん、Tornado、TwistedやGeventなどの非同期フレームワークが有名で使ったことのある人は...]]></summary>
-        <author>
-            <name>kaitolucifer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのthreadingとmultiprocessingを完全理解]]></title>
-        <id>https://zenn.dev/kaitolucifer/articles/1f0eda0ca1ed52</id>
-        <link href="https://zenn.dev/kaitolucifer/articles/1f0eda0ca1ed52"/>
-        <updated>2023-02-12T15:02:41.000Z</updated>
-        <summary type="html"><![CDATA[threadingとmultiprocessing
-現代の主なOSと言ったら、Mac OS，UNIX，Linux，Windowsなどがあります。これらのOSは「マルチタスク」機能をサポートしています。
-マルチタスクとは？と思うかもしれませんが、例えばブラウザーを立ち上げて、音楽聴きながら、Wordでレポートを書くというシチュエーションでは、少なくとも3つのタスクが同時進行しています。そして、表のタスク以外に、裏ではOS関連の様々なタスクがこっそり動いています。
-マルチコアのCPUで、マルチタスクが処理できるのは理解しやすいですが、シングルコアのCPUでもマルチタスクが可能です。OSは...]]></summary>
-        <author>
-            <name>kaitolucifer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonからWhisper.cppを呼び出す]]></title>
-        <id>https://zenn.dev/k41531/articles/ab1b42c044117b</id>
-        <link href="https://zenn.dev/k41531/articles/ab1b42c044117b"/>
-        <updated>2023-02-12T14:16:49.000Z</updated>
-        <summary type="html"><![CDATA[タイトル通りです。
-PythonでWhisperを使う方法で最も手軽なのは、open-whisperを使うことです。
-https://github.com/openai/whisper#setup
-ただ、私はM1 Mac miniを使用しているので、そこまでパフォーマンスが出ません。
-そこで、以前は次のような記事を書きました。
-https://zenn.dev/k41531/articles/ee46ef1d36a041
-Apple silicon に最適化されているため、open-whisperを使うよりスピードが出るのですが、Pythonに使い慣れた私にとってC++は少々扱いづらいで...]]></summary>
-        <author>
-            <name>kaisei</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[DRF]Serializerを使って、Modelに無い値をレスポンス含める]]></title>
-        <id>https://zenn.dev/nosukey/articles/drf_use_serializer_methods_or_model_property</id>
-        <link href="https://zenn.dev/nosukey/articles/drf_use_serializer_methods_or_model_property"/>
-        <updated>2023-02-12T13:31:47.000Z</updated>
-        <summary type="html"><![CDATA[書くこと
-
-SerializerMethodFieldを使って、モデルに無い値をレスポンスするSerializerの実装
-Modelの@propertyを使って、モデルに無い値をレスポンスするSerializerの実装
-
-
- 利用する技術
-
-Django REST Framework
-rest_framework.generics.RetrieveAPIView
-serializers.SerializerMethodField
-Model.@property
-
-
-
- 想定シチュエーション
-このようなUserモデルが定義されていたとき、
-class User(models.Model...]]></summary>
-        <author>
-            <name>Nosukey</name>
         </author>
     </entry>
 </feed>

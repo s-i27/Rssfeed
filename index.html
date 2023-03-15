@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-03-13 datetime="2023-03-13T11:43:51.000Z">2023-03-13</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-03-13 datetime="2023-03-13T11:43:51.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-03-15 datetime="2023-03-15T01:10:37.000Z">2023-03-15</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-03-15 datetime="2023-03-15T01:10:37.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,393 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kangaezaru/articles/d75970018b8fa8"
+                        open
+                      >
+                        <summary class="article-expander__title">【まとめ編】AWS Boto3 by Pythonで特定タグ未付与のリソース抽出</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kangaezaru/articles/d75970018b8fa8">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--as7KoR6j--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E7%25B7%25A8%25E3%2580%2591AWS%2520Boto3%2520by%2520Python%25E3%2581%25A7%25E7%2589%25B9%25E5%25AE%259A%25E3%2582%25BF%25E3%2582%25B0%25E6%259C%25AA%25E4%25BB%2598%25E4%25B8%258E%25E3%2581%25AE%25E3%2583%25AA%25E3%2582%25BD%25E3%2583%25BC%25E3%2582%25B9%25E6%258A%25BD%25E5%2587%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kangaezaru%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVhODZhZWFlMzEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>1. 本稿の概要
+
+ ◆ ゴール
+以下のような機能を満たすPythonスクリプトを作成しました。
+
+EC2インスタンスで特定タグが付いていないリソースをフィルタリング
+ローカル環境でI/Oが自由なPythonスクリプトとして実行
+その抽出結果はCSVカンマ区切り形式でローカルに出力
+
+それを(弊社の中の)各主要サービスにおいて作成し、連結・自動化して一括自動出力まで目指す
+
+ ◆ 背景
+百人規模のグループのAWSで不特定多数のユーザによりリソースが作られ、ガバナンスも効いていない世界に迷い込んだ。用途不明のサーバが跋扈しコストと責任の追跡ができていない世紀末である。とりあえずA...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kangaezaru/articles/aba89a266df2f4"
+                        open
+                      >
+                        <summary class="article-expander__title">【EC2編】AWS Boto3 by Pythonで特定タグ未付与のリソース抽出</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kangaezaru/articles/aba89a266df2f4">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--JOvNQUzt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590EC2%25E7%25B7%25A8%25E3%2580%2591AWS%2520Boto3%2520by%2520Python%25E3%2581%25A7%25E7%2589%25B9%25E5%25AE%259A%25E3%2582%25BF%25E3%2582%25B0%25E6%259C%25AA%25E4%25BB%2598%25E4%25B8%258E%25E3%2581%25AE%25E3%2583%25AA%25E3%2582%25BD%25E3%2583%25BC%25E3%2582%25B9%25E6%258A%25BD%25E5%2587%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kangaezaru%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVhODZhZWFlMzEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>1. 本稿の概要
+
+ ◆ ゴール
+以下のような機能を満たすPythonスクリプトを作成しました。
+こちらはEC2インスタンス向けです。
+
+EC2インスタンスで特定タグが付いていないリソースをフィルタリング
+ローカル環境でI/Oが自由なPythonスクリプトとして実行
+その抽出結果はCSVカンマ区切り形式でローカルに出力
+
+
+ ◆ 背景、前提、その他サービスまとめなど
+こちら を参照
+
+ 2. 開発
+
+ ◆ 概説
+今回はEC2のNameタグ、Ownerタグが未付与のリソースの一覧を出力します。
+とりあえず単体では東京リージョンのみを対象としています。
+
+ ◆ コード
+
+check...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-03-14 datetime="2023-03-14T15:07:11.000Z">2023-03-14</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-03-14 datetime="2023-03-14T15:07:11.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/fastriver/articles/open3d-display-grid"
+                        open
+                      >
+                        <summary class="article-expander__title">Open3Dでグリッドを表示する(LineSet)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/fastriver/articles/open3d-display-grid">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--vDOcdhIP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Open3D%25E3%2581%25A7%25E3%2582%25B0%25E3%2583%25AA%25E3%2583%2583%25E3%2583%2589%25E3%2582%2592%25E8%25A1%25A8%25E7%25A4%25BA%25E3%2581%2599%25E3%2582%258B%2528LineSet%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:fastriver%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM3OTZiYTczZmMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Open3DのVisualizerでは標準にグリッドを表示する機能がありません。しかしセンサ出力点群などの場合はグリッドを表示できたほうが点群の位置などがわかりやすくなると思うので、自分でグリッドを作ってみます。
+
+
+例えばVeloViewでは上のようにXY平面上のグリッドが表示される
+
+
+ Open3Dで線を引く
+Open3DのVisualizer上に線を引くのにはgeometry.LineSetを用います。
+http://www.open3d.org/docs/release/python_api/open3d.geometry.LineSet.html
+import open3d ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/te19oishi/articles/62ddcaadca0849"
+                        open
+                      >
+                        <summary class="article-expander__title">PythonのSeleniumでInstagramの投稿画像をスクレイピングした</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/te19oishi/articles/62ddcaadca0849">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--TiT4XVIB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AESelenium%25E3%2581%25A7Instagram%25E3%2581%25AE%25E6%258A%2595%25E7%25A8%25BF%25E7%2594%25BB%25E5%2583%258F%25E3%2582%2592%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%2594%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Oishi%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAyYzk2NzZhZWIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>1. 概要
+先日地元で行われたハッカソンでインスタグラムの画像をスクレイピングしてURLのリストとして出力したのでメモとして残しておきます。
+
+ 2. 環境
+
+MacBook Air(M1)
+macOS Ventura version13.1
+
+
+ 3. 結論
+
+ 3.1. コード
+取得したい画像の枚数が2枚以下ならクリックする必要がないのでより早く短いコードになります。
+
+scraping.py
+
+from time import sleep
+from selenium import webdriver
+# seleniumが最新版なら必要
+#from selenium.webdr...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/atsushiambo/articles/0563e7fe72afd3"
+                        open
+                      >
+                        <summary class="article-expander__title">OpenAI APIを使用したアプリを構築してみた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/atsushiambo/articles/0563e7fe72afd3">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--DqJQwW_P--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenAI%2520API%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E5%25AE%2589%25E4%25BF%259D%2520%25E7%259D%25A6%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzcwYTAwMzJlNTMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>OpenAIの公式ホームページにAPIの使用方法が書かれていたので、サンプルアプリと共に構築してみました。
+
+ 前提条件
+
+Pythonがインストール済み。インストールしていない人はこちらから。
+
+
+
+ アプリのコードを用意する
+下記のリポジトリをクローンしてアプリファイルをインストールします。または、公式サイトからzipファイルをダウンロードします。
+git clone https://github.com/openai/openai-quickstart-python.git
+
+ APIキーを追加する
+クローンしたリポジトリに移動して、新規の.envファイルを作成します。
+% cd ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/sexy_fujii/articles/f6ffa615d0e018"
+                        open
+                      >
+                        <summary class="article-expander__title">MacでPython3の開発環境を構築する（Command Line Tools for Xcodeによるインストール）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sexy_fujii/articles/f6ffa615d0e018">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--mE-63sLW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Mac%25E3%2581%25A7Python3%25E3%2581%25AE%25E9%2596%258B%25E7%2599%25BA%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%2599%25E3%2582%258B%25EF%25BC%2588Command%2520Line%2520Tools%2520for%2520Xcode%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25BB%25E3%2582%25AF%25E3%2582%25B7%25E3%2583%25BC%25E8%2597%25A4%25E4%25BA%2595%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YXBpM3E5UVlXcUYzU25TNDV3SzBUMnp3Nm9TWUZGcUk1NUQ5NEM9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+Macで Python3 の開発環境を構築する方法を紹介します。
+今回はAppleが提供する Command Line Tools for Xcode をインストールすることで、同梱されているPython3を利用できるようにする方法の紹介です。
+簡単かつ短時間で準備を済ませPython3を体験してみたいという方向けの手順です。本格的に開発したいという方にはお勧めしません。
+
+ 環境
+以下の環境で手順を検証しました。
+
+
+
+項目名
+内容
+
+
+
+
+機器
+MacBook Air (M1, 2020)
+
+
+OS
+macOS Ventura 13.2.1
+
+
+メモリ
+16GB
+
+
+ストレ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/68ffd8416d9b78"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-167｜B - Easy Linear Programming</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/68ffd8416d9b78">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--uGII2dqL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-167%25EF%25BD%259CB%2520-%2520Easy%2520Linear%2520Programming%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-167 B - Easy Linear Programming
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b, c, k &#x3D; getIntMap()
+
+    s &#x3D; 0
+    if a &gt;&#x3D; k or a + b &gt;&#x3D; k:
+        s &#x3D; a if a &lt;&#x3D; k else k
+    else:
+        k -&#x3D; (a + b)
+        s &#x3D; a - (c if c &lt; k els...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/5c310c5f593eea"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-167｜A - Registration</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/5c310c5f593eea">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--PHz9bwJo--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-167%25EF%25BD%259CA%2520-%2520Registration%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-167 A - Registration
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s &#x3D; getString()
+    t &#x3D; getString()
+
+    print(&#x27;Yes&#x27; if s &#x3D;&#x3D; t[:-1] else &#x27;No&#x27;)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()
+    &#x60;&#x60;&#x60;</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-03-13 datetime="2023-03-13T14:38:53.000Z">2023-03-13</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-03-13 datetime="2023-03-13T14:38:53.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/qwegat/articles/dced9d104ea0ec"
+                        open
+                      >
+                        <summary class="article-expander__title">PlaylistGPT: ChatGPTにSpotifyの曲でプレイリストを作らせる</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/qwegat/articles/dced9d104ea0ec">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--CqDO7zCP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PlaylistGPT%253A%2520ChatGPT%25E3%2581%25ABSpotify%25E3%2581%25AE%25E6%259B%25B2%25E3%2581%25A7%25E3%2583%2597%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E4%25BD%259C%25E3%2582%2589%25E3%2581%259B%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:qwegat%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Y5NzlhNzAzZjMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>初手宣伝
+https://qwegat-chatgptplaylist-main-gyigsk.streamlit.app/
+ここで試せます。
+今回、いろいろなサービス（StreamLit、Spotify API、OpenAI API）を縦断してシステムを構築したのですが、そのすべてに1ドルも払っていないので、おそらく試せるのは数日以内でしょう。裏返せば、試すなら今しかないということです。
+さあ。
+https://qwegat-chatgptplaylist-main-gyigsk.streamlit.app/
+
+ 基本的な理屈
+もう寝たいので、いつもの記事のように丁寧な構成はしませ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -9993,373 +10380,6 @@ import matplotlib.pyplot as pl...</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/a18284ddddaae0"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-127｜B - Algae</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/a18284ddddaae0">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--WNVqx5-Z--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-127%25EF%25BD%259CB%2520-%2520Algae%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-127 B - Algae
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def weight(r, d, x):
-    return r * x - d
-
-
-def main():
-    r, d, x &#x3D; getIntMap()
-
-    for i in range(10):
-        x &#x3D; weight(r, d, x)
-        print(x)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/6ec583eedb2137"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-127｜A - Ferris Wheel</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/6ec583eedb2137">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--S8IlVvLb--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-127%25EF%25BD%259CA%2520-%2520Ferris%2520Wheel%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-127 A - Ferris Wheel
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b &#x3D; getIntMap()
-
-    print(0 if a &lt;&#x3D; 5 else b // 2 if a &lt;&#x3D; 12 else b)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yktakaha4/articles/steady_update_of_eks"
-                        open
-                      >
-                        <summary class="article-expander__title">チームに知見が残るEKSクラスタバージョンアップ運用</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yktakaha4/articles/steady_update_of_eks">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--V5fMMc3H--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Yuuki%2520Takahashi%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E3%2583%2581%25E3%2583%25BC%25E3%2583%25A0%25E3%2581%25AB%25E7%259F%25A5%25E8%25A6%258B%25E3%2581%258C%25E6%25AE%258B%25E3%2582%258BEKS%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%2590%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%2583%25E3%2583%2597%25E9%2581%258B%25E7%2594%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2huMEtJWDdJZzVrRm9aVVlkai1yWDZfYk1UNDhEUXE5WE53YUVsPXM4MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>LAPRAS株式会社でSREをしております yktakaha4 と申します 🐧
-https://lapras.com/
-今回は、仕事のひとつとして1年くらい取り組んでいたEKSクラスタのバージョンアップの運用改善について一息つけたので、振り返りを兼ねて備忘録を遺したいと思います ✍
-先にお断りしておくと、この記事で話すのは 運用ノウハウが{ほぼ無い,失われてしまった}EKSクラスタに対して、手順改善やリファクタリングを通じて継続的なバージョンアップ運用を再開する方法 というあまり胸を張れない内容です
-ネットの記事やカンファレンスを見ていると、大規模環境や高トラフィック下における取り組みや...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/web_life_ch/articles/71e60d0856bbd7"
-                        open
-                      >
-                        <summary class="article-expander__title">【Django】Pythonで作るRest API【２６django-cors-headers】</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/web_life_ch/articles/71e60d0856bbd7">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--M6TE5hCr--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Web%2520Life%2520CH%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590Django%25E3%2580%2591Python%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258BRest%2520API%25E3%2580%2590%25EF%25BC%2592%25EF%25BC%2596django-cors-headers%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUl0YnZtbWNjTWFMM3dyd2x3VE5sVVZjTlhmZHEzZzF2QnJfMUJMSkJrN049czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>【２６django-cors-headers】
-YouTube: https://youtu.be/qjc7-fvHczw
-https://youtu.be/qjc7-fvHczw
-今回は「django-cors-headers」を使用して、
-前回のエラーを解決します。
-https://pypi.org/project/django-cors-headers/
-インストールコマンド
-pip install django-cors-headers
-インストールが済みましたら、
-「myapp」-&gt;「settings.py」に設定を追加します。
-「MIDDLEWARE」の追加部分は追...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-02-12 datetime="2023-02-12T16:33:03.000Z">2023-02-12</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-02-12 datetime="2023-02-12T16:33:03.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kaeru39/articles/3066c0aee27c41"
-                        open
-                      >
-                        <summary class="article-expander__title">文字列や単語の類似度を測る6つの手法の実装</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kaeru39/articles/3066c0aee27c41">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--C39ThIlZ--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kaeru39%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25E6%2596%2587%25E5%25AD%2597%25E5%2588%2597%25E3%2582%2584%25E5%258D%2598%25E8%25AA%259E%25E3%2581%25AE%25E9%25A1%259E%25E4%25BC%25BC%25E5%25BA%25A6%25E3%2582%2592%25E6%25B8%25AC%25E3%2582%258B6%25E3%2581%25A4%25E3%2581%25AE%25E6%2589%258B%25E6%25B3%2595%25E3%2581%25AE%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1vQV90alE5Zi0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2YwMzhiYTUxODcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>単語の類似度を計算するプログラムを書いていたところ、「文字列の類似度」や「単語の類似度」という表現を見て、何が違うんだと感じたので調べた結果をまとめます。
-調べた結果、筆者の認識では「文字列の類似度は(手法は問わず)文字列の一致度」、「単語の類似度は(手法は問わず)文章中の文脈に基づいた意味の一致度」という認識になりました。さらに、単語の類似度だけでなく、文章の類似度を計算する手法も見つけましたので合わせて整理します。自分が知りたかったのは単語ベクトルに変換した後での類似度の計算でしたので後者、加えて文章の類似度であることがわかりました。
-今回調べた言葉の類似度を測る6つの手法を表にまと...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;14
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kaitolucifer/articles/6e2a1e2896de3b"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonのオブジェクト指向プログラミングを完全理解 (2)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kaitolucifer/articles/6e2a1e2896de3b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--L-ta90UL--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kaitolucifer%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AE%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E6%258C%2587%25E5%2590%2591%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E3%2582%2592%25E5%25AE%258C%25E5%2585%25A8%25E7%2590%2586%25E8%25A7%25A3%2520%25282%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvay5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Pythonのオブジェクト指向プログラミングを完全理解 (1)に続き
-
- 5. Pythonのオブジェクト指向の発展
-Pythonのオブジェクト指向プログラミングの基本的な形式を見てきました。実務においても、4. pythonのオブジェクト指向の基本の内容でほぼ事足ります。しかし、高度な機能の実現、モジュールの自作またはデザインパターンに則った綺麗なシステムを作成したいなら、もう少し発展した内容を知る必要があります。
-
- 5-1. 特殊メソッド
-3-14. 演算子オーバーロードで少し触れましたが、Pythonのクラスには__init__のような、前後に2つのアンダースコアの付いた「特殊メ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;62
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kaitolucifer/articles/f7d9ea4ef0dc19"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonのオブジェクト指向プログラミングを完全理解 (1)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kaitolucifer/articles/f7d9ea4ef0dc19">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--nc_nACLK--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kaitolucifer%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AE%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E6%258C%2587%25E5%2590%2591%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E3%2582%2592%25E5%25AE%258C%25E5%2585%25A8%25E7%2590%2586%25E8%25A7%25A3%2520%25281%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvay5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>オブジェクト指向
-
- 1. オブジェクト指向の起源
-2003年チューリング賞の受賞者アラン・ケイさんはよくオブジェクト指向プログラミングの父と称されます。ご本人も憚ることなく、幾度、公の場で発明権を宣言しています。しかし、ケイさんは「C++」や「Java」などの現代のオブジェクト指向言語を蔑ろにしています。これらの言語は「Simula 67」という言語を受け継いだもので、私が作った「Smalltalk」と関係ないのだとケイさんは考えています。
-オブジェクト指向という名称は確かにアラン・ケイさんに由来するものです。しかし、C++とJavaで使われている現代のオブジェクト指向は当初のと結...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;23
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kaitolucifer/articles/5009bba3d20d59"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonのデバッグを完全理解</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kaitolucifer/articles/5009bba3d20d59">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--NQ69pWDu--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kaitolucifer%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80_bold:Python%25E3%2581%25AE%25E3%2583%2587%25E3%2583%2590%25E3%2583%2583%25E3%2582%25B0%25E3%2582%2592%25E5%25AE%258C%25E5%2585%25A8%25E7%2590%2586%25E8%25A7%25A3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvay5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>デバッグ
-デバッグは開発者にとって、とても重要なスキルの1つです。デバッグをすることで、エラーを正確に特定し、プログラムのバグを見つけることができます。Pythonでは、さまざまなデバッグツールやパッケージ（デバッガーとも言う）が提供されています。これらをどう使うかを紹介していきます。
-
- pdbでデバッグ
-「pdb」はPython標準ライブラーのデバッグツールで、Pythonプログラムにインタラクティブなソースコードデバッグ機能を提供しています。使い方はC言語の「gdb」と類似しています。pdbの主な機能として、「ブレークポイント」の設置、「ステップ実行」、「スタックフレーム」のチ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kaitolucifer/articles/8ac9bff1c3bf2d"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonの非同期プログラミングを完全理解</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kaitolucifer/articles/8ac9bff1c3bf2d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--x-N8URyW--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kaitolucifer%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AE%25E9%259D%259E%25E5%2590%258C%25E6%259C%259F%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E3%2582%2592%25E5%25AE%258C%25E5%2585%25A8%25E7%2590%2586%25E8%25A7%25A3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvay5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>非同期プログラミング
-非同期プログラミングについて、聞いたことのある人は多いと思います。例えば、フロントエンドで使われているJavaScriptはシングルスレッド言語で、メインスレッドをブロッキングさせないため、様々な関数は非同期処理になるよう実装されています。Node.jsもその性質を受け継ぎ、I/Oバウンドタスクに長けています。しかし、Pythonになると、並列・並行処理に対応しているため、ほとんどの人は自身のプロジェクトで非同期プログラミングを利用した経験がないでしょう。もちろん、Tornado、TwistedやGeventなどの非同期フレームワークが有名で使ったことのある人は...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;22
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kaitolucifer/articles/1f0eda0ca1ed52"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonのthreadingとmultiprocessingを完全理解</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kaitolucifer/articles/1f0eda0ca1ed52">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--QbxaRHkO--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kaitolucifer%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25AEthreading%25E3%2581%25A8multiprocessing%25E3%2582%2592%25E5%25AE%258C%25E5%2585%25A8%25E7%2590%2586%25E8%25A7%25A3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvay5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>threadingとmultiprocessing
-現代の主なOSと言ったら、Mac OS，UNIX，Linux，Windowsなどがあります。これらのOSは「マルチタスク」機能をサポートしています。
-マルチタスクとは？と思うかもしれませんが、例えばブラウザーを立ち上げて、音楽聴きながら、Wordでレポートを書くというシチュエーションでは、少なくとも3つのタスクが同時進行しています。そして、表のタスク以外に、裏ではOS関連の様々なタスクがこっそり動いています。
-マルチコアのCPUで、マルチタスクが処理できるのは理解しやすいですが、シングルコアのCPUでもマルチタスクが可能です。OSは...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;37
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/k41531/articles/ab1b42c044117b"
-                        open
-                      >
-                        <summary class="article-expander__title">PythonからWhisper.cppを呼び出す</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/k41531/articles/ab1b42c044117b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--QZnI44ew--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:kaisei%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%258B%25E3%2582%2589Whisper.cpp%25E3%2582%2592%25E5%2591%25BC%25E3%2581%25B3%25E5%2587%25BA%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1PVkc5djY2dy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q4ZTJhN2E2NDcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>タイトル通りです。
-PythonでWhisperを使う方法で最も手軽なのは、open-whisperを使うことです。
-https://github.com/openai/whisper#setup
-ただ、私はM1 Mac miniを使用しているので、そこまでパフォーマンスが出ません。
-そこで、以前は次のような記事を書きました。
-https://zenn.dev/k41531/articles/ee46ef1d36a041
-Apple silicon に最適化されているため、open-whisperを使うよりスピードが出るのですが、Pythonに使い慣れた私にとってC++は少々扱いづらいで...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/nosukey/articles/drf_use_serializer_methods_or_model_property"
-                        open
-                      >
-                        <summary class="article-expander__title">[DRF]Serializerを使って、Modelに無い値をレスポンス含める</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nosukey/articles/drf_use_serializer_methods_or_model_property">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--qfNmmM-1--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Nosukey%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%255BDRF%255DSerializer%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2580%2581Model%25E3%2581%25AB%25E7%2584%25A1%25E3%2581%2584%25E5%2580%25A4%25E3%2582%2592%25E3%2583%25AC%25E3%2582%25B9%25E3%2583%259D%25E3%2583%25B3%25E3%2582%25B9%25E5%2590%25AB%25E3%2582%2581%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1iUGRpOGhPeC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5OGI2ZmFjZmEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>書くこと
-
-SerializerMethodFieldを使って、モデルに無い値をレスポンスするSerializerの実装
-Modelの@propertyを使って、モデルに無い値をレスポンスするSerializerの実装
-
-
- 利用する技術
-
-Django REST Framework
-rest_framework.generics.RetrieveAPIView
-serializers.SerializerMethodField
-Model.@property
-
-
-
- 想定シチュエーション
-このようなUserモデルが定義されていたとき、
-class User(models.Model...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -10367,8 +10387,8 @@ class User(models.Model...</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4411193559">
-        <time id="build-timestamp" datetime="2023-03-14T01:21:24.419Z">2023-03-14T01:21:24.419Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4421878091">
+        <time id="build-timestamp" datetime="2023-03-15T01:38:12.708Z">2023-03-15T01:38:12.708Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
