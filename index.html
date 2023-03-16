@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-03-15 datetime="2023-03-15T01:10:37.000Z">2023-03-15</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-03-15 datetime="2023-03-15T01:10:37.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-03-15 datetime="2023-03-15T16:48:32.000Z">2023-03-15</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-03-15 datetime="2023-03-15T16:48:32.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,319 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/junkor/articles/eb42a0aeb231e3"
+                        open
+                      >
+                        <summary class="article-expander__title">システムのPythonと共存させる形でのconda(Mambaforge)の導入方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/junkor/articles/eb42a0aeb231e3">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--xQ3J2uM6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2581%25AEPython%25E3%2581%25A8%25E5%2585%25B1%25E5%25AD%2598%25E3%2581%2595%25E3%2581%259B%25E3%2582%258B%25E5%25BD%25A2%25E3%2581%25A7%25E3%2581%25AEconda%2528Mambaforge%2529%25E3%2581%25AE%25E5%25B0%258E%25E5%2585%25A5%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:7e%252B8%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvai5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>個人的な備忘録。
+Pythonの環境構築方法は無限(?)にあるので、あくまでもいちサンプルとして。
+あと前提としてLinux上での環境構築を想定しています。
+
+ 動機・目的
+condaは何だかんだいって便利である。
+パッケージマネージャーとしてpip並みに貧弱で微妙ではあるが、
+ほぼほぼ任意のバージョンのPythonをインストール出来るし、
+pipではインストール出来ない依存ライブラリ（なんならJavaやnodejsなどまで）も一緒にインストール出来るので、（ディスク容量の消費と引き換えに）どの環境でもちゃんと動作してくれる移植性・再現性の高い環境構築が可能である。
+ライブラリによっては...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/t_katsumoto/articles/2407ae38fa01cb"
+                        open
+                      >
+                        <summary class="article-expander__title">Tableauで計算フィールドの複数ポップアップを実現する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/t_katsumoto/articles/2407ae38fa01cb">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--A05NilaK--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Tableau%25E3%2581%25A7%25E8%25A8%2588%25E7%25AE%2597%25E3%2583%2595%25E3%2582%25A3%25E3%2583%25BC%25E3%2583%25AB%25E3%2583%2589%25E3%2581%25AE%25E8%25A4%2587%25E6%2595%25B0%25E3%2583%259D%25E3%2583%2583%25E3%2583%2597%25E3%2582%25A2%25E3%2583%2583%25E3%2583%2597%25E3%2582%2592%25E5%25AE%259F%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Katsumoto%2520Takashi%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNWZsNDQ2RlNJN0t4SlhhSzUwWm1kSTg0N3oxclZ1Vkp4NDVYT1U9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+Tableauでは計算フィールドを一度に一つしか表示できない。
+
+Tableau経験者ほどその仕様に慣れ過ぎて、特に違和感を感じない方も多いかもしれない。
+だが、恐らく誰もが最低一度は（人によっては数えきれない程！）
+「なんで一つしか表示できないんだ！並べて見たいのに！」
+と思った事があると思う。
+実際周りの人にも聞いてみたが、やはりみんな同じ感情を抱いているようだった。
+次はコミュニティの ideas を見てみる。
+・・・複数ウィンドウを実現してほしいという趣旨の要望で溢れかえっているではないか！
+私がざっと検索した限りではこれだけある。
+Multiple Windows...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nakamura196/articles/e208637977e963"
+                        open
+                      >
+                        <summary class="article-expander__title">nbdevを使用する際の備忘録</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nakamura196/articles/e208637977e963">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--177TFnM4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:nbdev%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2599%25E3%2582%258B%25E9%259A%259B%25E3%2581%25AE%25E5%2582%2599%25E5%25BF%2598%25E9%258C%25B2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nakamura196%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pkd3BpX1gzTWIzV3VqTnVnV2tPTlJlU3VsNFNTN1BNMWlPQm9LRm5JPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+Pythonでパッケージを作成する際、nbdevを使用しています。
+https://nbdev.fast.ai/
+nbdevは以下のように説明されています。
+
+Write, test, document, and distribute software packages and technical articles — all in one place, your notebook.
+
+（機械翻訳） ソフトウェア パッケージや技術記事の作成、テスト、文書化、配布をすべて 1 か所のノートブックで行います。
+本記事では、nbdevを使用する際の備忘録です。
+
+ インストール
+以下...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nekoallergy/articles/stat-basic-central-tendency"
+                        open
+                      >
+                        <summary class="article-expander__title">【図解】統計学の3つの代表値（平均値/中央値/最頻値）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nekoallergy/articles/stat-basic-central-tendency">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Y2lPdOZI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E5%259B%25B3%25E8%25A7%25A3%25E3%2580%2591%25E7%25B5%25B1%25E8%25A8%2588%25E5%25AD%25A6%25E3%2581%25AE3%25E3%2581%25A4%25E3%2581%25AE%25E4%25BB%25A3%25E8%25A1%25A8%25E5%2580%25A4%25EF%25BC%2588%25E5%25B9%25B3%25E5%259D%2587%25E5%2580%25A4%252F%25E4%25B8%25AD%25E5%25A4%25AE%25E5%2580%25A4%252F%25E6%259C%2580%25E9%25A0%25BB%25E5%2580%25A4%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:NekoAllergy%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRkMzhmNmU1YjguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+
+代表値って？
+近年、AI技術の発展に伴って、統計学の重要性が再注目されています。
+今回は、統計学の基本である「代表値（だいひょうち）」について紹介します。代表値は、統計学ではとても重要で基本的な考え方です。
+データを端的に表すための代表値について、基本を押さえましょう。
+
+DeepLearning の基礎を本にまとめています。手に取って頂けるととても喜びます ↓
+https://zenn.dev/nekoallergy/books/904df952389317
+
+皆さんの理解が一歩でも進むと嬉しいです。
+
+
+Created by NekoAllergy
+
+ 代表値って？
+...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kangaezaru/articles/caafc545dce041"
+                        open
+                      >
+                        <summary class="article-expander__title">【検証不十分】【lambda編】AWS Boto3 by Pythonで特定タグ未付与のリソース抽出</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kangaezaru/articles/caafc545dce041">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--XIUjcTyf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E6%25A4%259C%25E8%25A8%25BC%25E4%25B8%258D%25E5%258D%2581%25E5%2588%2586%25E3%2580%2591%25E3%2580%2590lambda%25E7%25B7%25A8%25E3%2580%2591AWS%2520Boto3%2520by%2520Python%25E3%2581%25A7%25E7%2589%25B9%25E5%25AE%259A%25E3%2582%25BF%25E3%2582%25B0%25E6%259C%25AA%25E4%25BB%2598%25E4%25B8%258E%25E3%2581%25AE%25E3%2583%25AA%25E3%2582%25BD%25E3%2583%25BC%25E3%2582%25B9%25E6%258A%25BD%25E5%2587%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kangaezaru%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVhODZhZWFlMzEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>1. 本稿の概要
+
+ ◆ ゴール
+以下のような機能を満たすPythonスクリプトを作成しました。
+こちらはlambda向けです。
+
+LambdaFunctionsで特定タグ(Owner)の付与状況をリスト化
+ローカル環境でI/Oが自由なPythonスクリプトとして実行
+その抽出結果はCSVカンマ区切り形式でローカルに出力
+
+
+ ◆ 背景、前提、その他サービスまとめなど
+全体論はこちら を参照
+※単に見たり付与するだけならタグエディタで見るのが一番楽かとは思います。
+
+ 2. 開発
+
+ ◆ 概説
+lambdaのID、Ownerタグの一覧を出力します。
+とりあえず単体では東京リージ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kangaezaru/articles/864f286ac6a386"
+                        open
+                      >
+                        <summary class="article-expander__title">【cloudfront編】AWS Boto3 by Pythonで特定タグ付与状況のリスト抽出</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kangaezaru/articles/864f286ac6a386">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--XuIaAtlN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590cloudfront%25E7%25B7%25A8%25E3%2580%2591AWS%2520Boto3%2520by%2520Python%25E3%2581%25A7%25E7%2589%25B9%25E5%25AE%259A%25E3%2582%25BF%25E3%2582%25B0%25E4%25BB%2598%25E4%25B8%258E%25E7%258A%25B6%25E6%25B3%2581%25E3%2581%25AE%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%25E6%258A%25BD%25E5%2587%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kangaezaru%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVhODZhZWFlMzEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>1. 本稿の概要
+
+ ◆ ゴール
+以下のような機能を満たすPythonスクリプトを作成しました。
+こちらはcloudfront向けです。
+
+CloudFront Distributionsで特定タグ(Owner)の付与状況をリスト化
+ローカル環境でI/Oが自由なPythonスクリプトとして実行
+その抽出結果はCSVカンマ区切り形式でローカルに出力
+
+
+ ◆ 背景、前提、その他サービスまとめなど
+全体論はこちら を参照
+CloudfrontのBotoというかAPIは少々勝手が違うんですかね・・・もっと簡単にできる方法あれば教えてください
+※単にタグを棚卸したり付与するだけならタグ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/8e9a950b9c027b"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-168｜B - ... (Triple Dots)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/8e9a950b9c027b">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--GUkUqrBJ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-168%25EF%25BD%259CB%2520-%2520...%2520%2528Triple%2520Dots%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-168 B - ... (Triple Dots)
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getString():
+    return input()
+
+
+def main():
+    k &#x3D; getInt()
+    s &#x3D; getString()
+
+    print(s[:k] + (&#x27;...&#x27; if len(s) &gt; k else &#x27;&#x27;))
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/1ef55012bdb667"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-168｜A - ∴ (Therefore)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/1ef55012bdb667">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--nCelJ5Us--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-168%25EF%25BD%259CA%2520-%2520%25E2%2588%25B4%2520%2528Therefore%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-168 A - ∴ (Therefore)
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    n &#x3D; getInt()
+
+    n %&#x3D; 10
+
+    print(&#x27;bon&#x27; if n &#x3D;&#x3D; 3 else &#x27;pon&#x27; if n in [0, 1, 6, 8] else &#x27;hon&#x27;)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/fastriver/articles/open3d-change-background"
+                        open
+                      >
+                        <summary class="article-expander__title">Open3Dで背景色を変える</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/fastriver/articles/open3d-change-background">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--vPwA5yVY--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Open3D%25E3%2581%25A7%25E8%2583%258C%25E6%2599%25AF%25E8%2589%25B2%25E3%2582%2592%25E5%25A4%2589%25E3%2581%2588%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:fastriver%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM3OTZiYTczZmMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Open3DのVisualizer、便利なんですが背景が白いので目に刺さりがち...。背景色を変更して目を保護したいと思います。
+
+ 通常
+import open3d as o3d
+
+bunny &#x3D; o3d.data.BunnyMesh()
+mesh &#x3D; o3d.io.read_triangle_mesh(bunny.path)
+mesh.compute_vertex_normals()
+
+o3d.visualization.draw_geometries([mesh])
+open3d.visualization.draw_geometries()でオブジェクトを表示するのは上記のような...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -9989,406 +10302,10 @@ https://qiita.com/hiratarich/items/5...</span>
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-02-14 datetime="2023-02-14T12:06:29.000Z">2023-02-14</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-02-14 datetime="2023-02-14T12:06:29.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mount_tyo/articles/c4a0c99d4436d6"
-                        open
-                      >
-                        <summary class="article-expander__title">Python3.7系 をM1 Macで動かす</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mount_tyo/articles/c4a0c99d4436d6">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--cF7OXryi--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:mountyo%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python3.7%25E7%25B3%25BB%2520%25E3%2582%2592M1%2520Mac%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1iUFRLQTRLSy0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQzMTZkNDRhMTUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-M1チップが搭載されたMacはPython3.7系がそのままでは動作しない。例えばpyenvを使用してpython3.7系をインストールしても、エラーが発生する。
-プロジェクトによっては、古いPythonのバージョンを使用することもあるため、M1 MacでPython3.7系を動かす方法をまとめた。3.7系よりも過去のバージョンについては確認していない。
-
- 事前準備
-
-pyenvのインストール
-
-
- やること
-
-Install x86 brew
-
-$ arch -x86_64 /bin/bash -c &quot;$(curl -fsSL https://raw.githubuse...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/jizai_labo/articles/35b0e737ddba68"
-                        open
-                      >
-                        <summary class="article-expander__title">Google Colaboratory + MMDetectionで楽してObject Detection - 1.導入編 -</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/jizai_labo/articles/35b0e737ddba68">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--znhI0y3h--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%2599%25E3%2581%25A0%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_57_bold:Google%2520Colaboratory%2520%252B%2520MMDetection%25E3%2581%25A7%25E6%25A5%25BD%25E3%2581%2597%25E3%2581%25A6Object%2520Detection%2520-%25201.%25E5%25B0%258E%25E5%2585%25A5%25E7%25B7%25A8%2520-%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1IMXc4dXZ1RC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5N2ZmNDMxNzguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-こんにちは！すだです！
-私は普段はメーカーで画像認識AIの研究開発を行うエンジニアをしつつ、空き時間にはプログラミングのメンターとして、画像認識AIを中心にDeep Learningを教えています。
-本業をやっていてもメンターをやっていても良く感じるのが、Object Detectionの需要の高さです。
-最近は生成系の技術が流行っていますが、自動運転や医療のように社会実装が近い産業分野では、依然としてObject Detectionのような基本的なタスクが求められているように感じますし、
-Deep Learningを初めたばかりの方にとっては、Classification...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/jizai_labo/articles/230212_mmdet_intro"
-                        open
-                      >
-                        <summary class="article-expander__title">Google Colaboratory + MMDetectionで楽してObject Detection - 1.導入編 -</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/jizai_labo/articles/230212_mmdet_intro">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--BTNq6lLS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%2520Colaboratory%2520%252B%2520MMDetection%25E3%2581%25A7%25E6%25A5%25BD%25E3%2581%2597%25E3%2581%25A6Object%2520Detection%2520-%25201...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2599%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5N2ZmNDMxNzguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-こんにちは！すだです！
-私は普段はメーカーで画像認識AIの研究開発を行うエンジニアをしつつ、空き時間にはプログラミングのメンターとして、画像認識AIを中心にDeep Learningを教えています。
-本業をやっていてもメンターをやっていても良く感じるのが、Object Detectionの需要の高さです。
-最近は生成系の技術が流行っていますが、自動運転や医療のように社会実装が近い産業分野では、依然としてObject Detectionのような基本的なタスクが求められているように感じますし、
-Deep Learningを初めたばかりの方にとっては、Classification...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/sosa/books/50a6f3f2ea5f46"
-                        open
-                      >
-                        <summary class="article-expander__title">【Python】ブログ内検索ツールの作り方</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sosa/books/50a6f3f2ea5f46">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--LSxUBy5Z--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci85NGE2MmQ5Njk1LmpwZWc&#x3D;%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>ブログ内を検索するツールです。検索対象のブログをあらかじめスクレーピングしcsvファイルとして用意しておき、そのcsvファイルに対して検索するプログラムです。
-
-残念なところ
-立ち上がりが遅く、クラッシュするときがある。開発者がRebootしないと復活しない。なのでWEBアプリには向いていません。
-
-今回つくったもの
-イチゲブログ内検索
-https://miyamiko-ichige-search-ichige-search-k1z2l4.streamlit.app/
-
-必要な知識
-Python、ライブラリBeatifulSoup、pandas、JupiterNotebook、Streamlit、公開する場合はGit、GitHubの基本
-
-必要な環境
-Python、エディタ（VSCodeなど）
-私の場合Windows11、PythonはAnacondaをインストールしてJupiterNotebookで開発。エディタとしてVSCodeも併用
-
-JupiterNotebookの用意やライブラリのインストール、GitHub、Streamlitの登録や基本的な操作方法の説明はありません。
-
-コードは、私のブログ用です。あくまでこのコードを参考にして、ご自分でカスタマイズしてください。</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/d6b7a4fe968424"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-128｜A - Apple Pie</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/d6b7a4fe968424">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--I9IBJmP8--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-128%25EF%25BD%259CA%2520-%2520Apple%2520Pie%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-128 A - Apple Pie
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, p &#x3D; getIntMap()
-
-    print((a * 3 + p) // 2)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/282c1d36e12b97"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-128｜B - Guidebook</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/282c1d36e12b97">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--MtPiSQAJ--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-128%25EF%25BD%259CB%2520-%2520Guidebook%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1NSmI5QUFEUS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-128 B - Guidebook
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getStringListRow(N):
-    return [[input().split(), i + 1] for i in range(N)]
-
-
-def main():
-    n &#x3D; getInt()
-    s &#x3D; getStringListRow(n)
-
-    for i in range(len(s)):
-        s[i][0][1] &#x3D; 100 - int(s[i][0][1])
-
-   ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/web_life_ch/articles/ab489161a44568"
-                        open
-                      >
-                        <summary class="article-expander__title">【Django】Pythonで作るRest API【２７Authorization Token】</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/web_life_ch/articles/ab489161a44568">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--qIJ8vAC8--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:Web%2520Life%2520CH%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_65_bold:%25E3%2580%2590Django%25E3%2580%2591Python%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258BRest%2520API%25E3%2580%2590%25EF%25BC%2592%25EF%25BC%2597Authorization%2520Token%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUl0YnZtbWNjTWFMM3dyd2x3VE5sVVZjTlhmZHEzZzF2QnJfMUJMSkJrN049czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>【２７Authorization Token】
-YouTube: https://youtu.be/Qt8RUlOyBKk
-https://youtu.be/Qt8RUlOyBKk
-今回はフロントエンド側でアクセストークンを設定して、
-ユーザーのデータを取得します。
-djangoから取得したアクセストークンは
-「fetch」メソッドの第2引数の「headers」に設定します。
-フロントエンドからログイン処理で
-「http://localhost:8000/api/token/」
-にリクエストを送って取得したトークンは、
-ログイン処理が成功した場合に
-Cookieやローカルストレージに...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/shin1007/articles/d0a1e59d8ca69c"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonで好みの長さのホワイトノイズを作成</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shin1007/articles/d0a1e59d8ca69c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--QriW8a3P--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:shin1007%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Python%25E3%2581%25A7%25E5%25A5%25BD%25E3%2581%25BF%25E3%2581%25AE%25E9%2595%25B7%25E3%2581%2595%25E3%2581%25AE%25E3%2583%259B%25E3%2583%25AF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%258E%25E3%2582%25A4%25E3%2582%25BA%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MUg4dkpGZlgxTi1pQXh2VHRsbUhRZ2g5ekt0ZWRmLWF0NzNXcW09czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>動機
-赤ん坊が生まれたので、ホワイトノイズを流して落ち着かせたくなりました。
-ネットでも拾えるのですが、いかんせん長さが短かったりするので自作するに至りました。
-ダイソーのスピーカーと安いmicroSDを組み合わせて、ずーっとノイズを流しっぱなしにすることができます。
-
- コード
-任意の長さで以下の種類のノイズを生成します。
-
-ホワイトノイズ (white_noise)
-ブルーノイズ (blue_noise)
-バイオレットノイズ (violet_noise)
-ブラウンノイズ (brownian_noise)
-ピンクノイズ (pink_noise)
-
-今日調べたんですが、ブラウンノイズ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/straydog/articles/a5c005cc7cfe22"
-                        open
-                      >
-                        <summary class="article-expander__title">DockerでPythonにてGDALを利用する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/straydog/articles/a5c005cc7cfe22">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--vBVnHfas--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:stray%2520dog%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Docker%25E3%2581%25A7Python%25E3%2581%25AB%25E3%2581%25A6GDAL%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1OTlF4Nm5CbS0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBjYzhmZDAzMGYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>概要
-自分のqiitaの記事をこちらに転記。少し古い記事なので注意。
-geotiffを利用する際に、少しハマったので、備忘録。
-結論から言うと、Pyhonにおける「GDAL」ライブラリと「libgdal-dev」のバージョン対応が間違っていたことが原因でした。
-apt標準リポジトリにおいて管理される安定版「libgdal-dev」はv2.4.0です（2020年11月19日現在）。これにより、pipにて単純に「pip install GDAL」とするとv3.2.0がダウンロードされますが、v3.2.0に対応する「libgdal-dev」はv3.2.0以上必要です。そのため、インストール...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-02-13 datetime="2023-02-13T21:23:27.000Z">2023-02-13</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-02-13 datetime="2023-02-13T21:23:27.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/jizai_labo/articles/e497b57ffbdf7c"
-                        open
-                      >
-                        <summary class="article-expander__title">Jupyter Notebookで画像をサクッと表示をする</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/jizai_labo/articles/e497b57ffbdf7c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--yeM3WH7S--/co_rgb:222%2Cg_south_west%2Cl_text:notosansjp-medium.otf_37_bold:%25E3%2581%2599%25E3%2581%25A0%2Cx_203%2Cy_98/c_fit%2Cco_rgb:222%2Cg_north_west%2Cl_text:notosansjp-medium.otf_70_bold:Jupyter%2520Notebook%25E3%2581%25A7%25E7%2594%25BB%25E5%2583%258F%25E3%2582%2592%25E3%2582%25B5%25E3%2582%25AF%25E3%2583%2583%25E3%2581%25A8%25E8%25A1%25A8%25E7%25A4%25BA%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9yZXMuY2xvdWRpbmFyeS5jb20vemVubi9pbWFnZS9mZXRjaC9zLS1IMXc4dXZ1RC0tL2NfbGltaXQlMkNmX2F1dG8lMkNmbF9wcm9ncmVzc2l2ZSUyQ3FfYXV0byUyQ3dfNzAvaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5N2ZmNDMxNzguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/v1627274783/default/og-base_z4sxah.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-こんにちは！すだです！
-私は普段はメーカーで画像認識AIの研究開発を行うエンジニアをしつつ、空き時間にはプログラミングのメンターとして、画像認識AIを中心にDeep Learningを教えています。
-普段の業務では、Jupyter Notebookがとても使い勝手が良いため、よくお世話になっています。しかし、ちょっとOpenCVの画像処理の処理結果などを確認したい時、cv2.imshow()が使えず少し不便です。
-よくやるやり方は、matplotlibを使って下記のようにする方法があります。
-import cv2
-import matplotlib.pyplot as pl...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/jizai_labo/articles/230214_imshow"
-                        open
-                      >
-                        <summary class="article-expander__title">Jupyter NotebookでOpenCVの画像をサクッと表示をする</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/jizai_labo/articles/230214_imshow">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--XFMZMUUc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Jupyter%2520Notebook%25E3%2581%25A7OpenCV%25E3%2581%25AE%25E7%2594%25BB%25E5%2583%258F%25E3%2582%2592%25E3%2582%25B5%25E3%2582%25AF%25E3%2583%2583%25E3%2581%25A8%25E8%25A1%25A8%25E7%25A4%25BA%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2599%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY5N2ZmNDMxNzguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-こんにちは！すだです！
-私は普段はメーカーで画像認識AIの研究開発を行うエンジニアをしつつ、空き時間にはプログラミングのメンターとして、画像認識AIを中心にDeep Learningを教えています。
-普段の業務では、Jupyter Notebookがとても使い勝手が良いため、よくお世話になっています。しかし、ちょっとOpenCVの画像処理の処理結果などを確認したい時、cv2.imshow()が使えず少し不便です。
-よくやるやり方は、matplotlibを使って下記のようにする方法があります。
-import cv2
-import matplotlib.pyplot as pl...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4421878091">
-        <time id="build-timestamp" datetime="2023-03-15T01:38:12.708Z">2023-03-15T01:38:12.708Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4432651641">
+        <time id="build-timestamp" datetime="2023-03-16T01:38:35.701Z">2023-03-16T01:38:35.701Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
