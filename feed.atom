@@ -2,10 +2,152 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-03-22T01:26:47.311Z</updated>
+    <updated>2023-03-23T01:26:28.233Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Prometheus を Python, Go, Rust で始める]]></title>
+        <id>https://zenn.dev/hkdord/articles/prometheus-python-go-rust</id>
+        <link href="https://zenn.dev/hkdord/articles/prometheus-python-go-rust"/>
+        <updated>2023-03-22T13:54:33.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+去年から Observability に興味がありいくつか記事を書いてきた(Go で書いたアプリから Jaeger や X-Ray にトレースを送る記事とかコンテナでデプロイした AWS Lambda から X-Ray に OpenTelemetry SDK でトレースを送る記事とか)のですが、今まではトレースのことばかりでメトリクスはノータッチでした。Observability 観点だとメトリクスも外せないと考えてメトリクスデビューすることにしました。今回は Prometheus を使ってみます。アプリケーションは Python(Flask), Go (Echo), Ru...]]></summary>
+        <author>
+            <name>Hidekazu Karino</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GPT を使って汎用 OCR を作った]]></title>
+        <id>https://zenn.dev/anieca/articles/230b3451018620</id>
+        <link href="https://zenn.dev/anieca/articles/230b3451018620"/>
+        <updated>2023-03-22T10:41:30.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+GPT を使って画像・テキストから欲しい情報を抽出するライブラリを作りました。
+https://github.com/Anieca/Xtracture
+パッケージを公開済みなので以下のコマンドでインストールできます。
+pip install -U xtracture
+
+ 使い方
+下例のとおりです。
+!
+OpenAI の API キーが適切に設定されている必要があります。
+また OCR に Google Cloud Vision API あるいは Tesseract を使う場合はこれらも適切に設定されている必要があります。
+
+from pathlib import Path
+...]]></summary>
+        <author>
+            <name>Anieca</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新しいライブラリーを作った！]]></title>
+        <id>https://zenn.dev/dms_sub/articles/6aedc87dc258e8</id>
+        <link href="https://zenn.dev/dms_sub/articles/6aedc87dc258e8"/>
+        <updated>2023-03-22T09:12:06.000Z</updated>
+        <summary type="html"><![CDATA[なぜ作ったか
+とある組織が開発しているbotでvoicevoxを使った読み上げを作っていたのですが、あまりにも作るのがめんどくさいので、たくさんの人と協力しながら作りたいと思って、voicevoxって名前でpypiにだしました。
+ただし本家様に名前を変えるよう言われたためvoicevox-clientに名前を変えました。
+
+ PyPIに上げる際のメタデータに使っているもの
+twineとsetup.py、そしてpyproject.tomlを使っています。twineはライブラリーをアップロードするために使っています。
+
+ 使用しているクライアントライブラリー
+httpx、なぜhttpxを...]]></summary>
+        <author>
+            <name>tuna2134</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[あなたのPythonを100倍高速にする技術 / Codon入門]]></title>
+        <id>https://zenn.dev/turing_motors/articles/e23973714c3ecf</id>
+        <link href="https://zenn.dev/turing_motors/articles/e23973714c3ecf"/>
+        <updated>2023-03-22T09:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Pythonは世界的にも人気のあるプログラミング言語ですが、実行速度については課題があります。Pythonの実行速度を高速化したい、という要求は根強く、これまでにも様々なツールや処理系が開発されています。
+この記事ではMITの研究者らが開発したPythonを高速化するツール「Codon」について紹介します。
+この記事を3行でまとめると：
+
+高性能で簡単に扱えるPythonコンパイラ「Codon」
+Pythonとの互換性がありながら、CやC++に匹敵する高速化を実現
+実際にPythonコードが100倍速くなることを検証
+
+
+ Codonとは
+Codonは高性能なPython...]]></summary>
+        <author>
+            <name>ymg_aq</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Blueprint機能を使ってChaliceのapp.pyを分割する]]></title>
+        <id>https://zenn.dev/hirotech/articles/498fcdfdf73a33</id>
+        <link href="https://zenn.dev/hirotech/articles/498fcdfdf73a33"/>
+        <updated>2023-03-22T06:43:33.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+AWSでサーバレスのシステムを開発する場合、コンソールを使って一から手でポチポチするのもしんどいので専用のフレームワークを使うことが多いと思います。代表的なところでいくとSAM、Amplify、Serverless Framework、CDKなどなど。
+この中でも圧倒的な生産性の高さから、私は特にChaliceを好んで使っています。Pythonを使ってサーバレスアプリを組むならChalice一択とさえ思っているのですが、今回はそのChaliceを使ったときに発生しがちな悩みどころの解消方法を書いておきたいと思います。
+そもそもChaliceってなんやねん、という方は以下の記...]]></summary>
+        <author>
+            <name>hiro-tech</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-178｜A - Not]]></title>
+        <id>https://zenn.dev/hyperdb/articles/f3b35bef069f18</id>
+        <link href="https://zenn.dev/hyperdb/articles/f3b35bef069f18"/>
+        <updated>2023-03-22T05:25:43.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-178 A - Not
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    x = getInt()
+
+    print(0 if x == 1 else 1)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-178｜B - Product Max]]></title>
+        <id>https://zenn.dev/hyperdb/articles/b402f2a3db21cd</id>
+        <link href="https://zenn.dev/hyperdb/articles/b402f2a3db21cd"/>
+        <updated>2023-03-22T05:25:42.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-178 B - Product Max
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b, c, d = getIntMap()
+
+    print(max(max(a * c, a * d), max(b * c, b * d)))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[『スッキリわかるPython入門』のレビュー]]></title>
         <id>https://zenn.dev/maco_macoo/articles/10536179963c95</id>
@@ -6357,248 +6499,6 @@ merger.clos...]]></summary>
 与えられ...]]></summary>
         <author>
             <name>FikaStudio</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-139｜B - Power Socket]]></title>
-        <id>https://zenn.dev/hyperdb/articles/ce13c2be08b1cd</id>
-        <link href="https://zenn.dev/hyperdb/articles/ce13c2be08b1cd"/>
-        <updated>2023-02-21T05:36:29.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-139 B - Power Socket
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b = getIntMap()
-
-    c = 1
-    i = 0
-    while c < b:
-        c += a - 1
-        i += 1
-    print(i)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-139｜A - Tenki]]></title>
-        <id>https://zenn.dev/hyperdb/articles/2d491dfe8cc888</id>
-        <link href="https://zenn.dev/hyperdb/articles/2d491dfe8cc888"/>
-        <updated>2023-02-21T05:36:29.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-139 A - Tenki
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s = list(getString())
-    t = list(getString())
-
-    c = 0
-    for i in range(len(s)):
-        if s[i] == t[i]:
-            c += 1
-    print(c)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-138｜B - Resistors in Parallel]]></title>
-        <id>https://zenn.dev/hyperdb/articles/4b8586730b9f9a</id>
-        <link href="https://zenn.dev/hyperdb/articles/4b8586730b9f9a"/>
-        <updated>2023-02-21T04:03:31.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-138 B - Resistors in Parallel
-
-
-
- 提出結果
-import math
-
-
-def getInt():
-    return int(input())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def lcm(l):
-    x = l[0]
-    for i in range(1, len(l)):
-        x = int((x * l[i]) / math.gcd(x, l[i]))
-    return x
-
-
-def main...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-138｜A - Red or Not]]></title>
-        <id>https://zenn.dev/hyperdb/articles/2b2c6357163dee</id>
-        <link href="https://zenn.dev/hyperdb/articles/2b2c6357163dee"/>
-        <updated>2023-02-21T04:03:31.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-138 A - Red or Not
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getString():
-    return input()
-
-
-def main():
-    a = getInt()
-    s = getString()
-
-    print(s if a >= 3200 else 'red')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Django】Pythonで作るRest API【３１Register Test】]]></title>
-        <id>https://zenn.dev/web_life_ch/articles/b515f89067f06e</id>
-        <link href="https://zenn.dev/web_life_ch/articles/b515f89067f06e"/>
-        <updated>2023-02-21T02:11:27.000Z</updated>
-        <summary type="html"><![CDATA[【３１Register Test】
-YouTube: https://youtu.be/-FoaGq9_7nI
-https://youtu.be/-FoaGq9_7nI
-今回は前回作成したregisterのビューのテストを行います。
-ローカルサーバーを起動して
-http://localhost:8000/admin/
-http://localhost:8000/accounts/register/
-こちらをブラウザで表示しておきます。
-{
-	"first_name": "userC",
-	"last_name": "lastC",
-	"email": "userC@mail.com"...]]></summary>
-        <author>
-            <name>Web Life CH</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python + PDM のプロジェクトを IntelliJ IDEA で開発する]]></title>
-        <id>https://zenn.dev/hamakou108/articles/69cf492d280ee1</id>
-        <link href="https://zenn.dev/hamakou108/articles/69cf492d280ee1"/>
-        <updated>2023-02-20T23:57:37.000Z</updated>
-        <summary type="html"><![CDATA[PDM を使って PEP 582 に沿ってパッケージ管理を行っている Python プロジェクトで IntelliJ IDEA を使って開発する機会があったので、設定方法について書く。
-
- 環境
-
-macOS: Ventura 13.0.1
-Python: 3.11.2
-PDM: 2.4.5
-IntelliJ IDEA: IntelliJ IDEA 2022.3.2 (Ultimate Edition)
-
-Build #IU-223.8617.56, built on January 26, 2023
-
-
-
-
- Python と PDM のインストール
-まずは Python をインストー...]]></summary>
-        <author>
-            <name>hamakou108</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[目次] Google Colab + MMDetectionで楽してObject Detection]]></title>
-        <id>https://zenn.dev/jizai_labo/articles/mmdet_outline</id>
-        <link href="https://zenn.dev/jizai_labo/articles/mmdet_outline"/>
-        <updated>2023-02-20T20:47:19.000Z</updated>
-        <summary type="html"><![CDATA[目次
-https://zenn.dev/jizai_labo/articles/230212_mmdet_intro
-https://zenn.dev/jizai_labo/articles/230213_mmdet_exist_model
-https://zenn.dev/jizai_labo/articles/230221_mmdet_evaluate_model]]></summary>
-        <author>
-            <name>すだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Google Colab + MMDetectionで楽してObject Detection - 3. データセットでモデルを評価 -]]></title>
-        <id>https://zenn.dev/jizai_labo/articles/230221_mmdet_evaluate_model</id>
-        <link href="https://zenn.dev/jizai_labo/articles/230221_mmdet_evaluate_model"/>
-        <updated>2023-02-20T20:47:18.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-こんにちは！すだです！
-このシリーズ記事では、MMDetection で行えるいろんな便利な機能を紹介していきます。
-今回は、前回の「2.学習済みモデルを試す」の続きで、メジャーな公開データセットを使って学習済みモデルの性能評価をしてみたい思います！
-過去の記事をまだ読んでいない方は、先にお読みください！
-https://zenn.dev/jizai_labo/articles/mmdet_outline
-今回作成した Colab Notebook はこちらです。
-https://colab.research.google.com/drive/1Z4hbV84l5JcsR6...]]></summary>
-        <author>
-            <name>すだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonからJDBC Driverを利用する(Firebird 2.5編)]]></title>
-        <id>https://zenn.dev/nogu_d626/articles/388ef499e9a1fe</id>
-        <link href="https://zenn.dev/nogu_d626/articles/388ef499e9a1fe"/>
-        <updated>2023-02-20T14:42:54.000Z</updated>
-        <summary type="html"><![CDATA[JDBCのdownloadをする
-Firebirdの公式からJDBC　Driverをダウンロードし、zipファイルを展開したのち今回使用するjaybird-full-4.0.8.java11.jarを任意のフォルダーに移動します。
-
- JDBCを利用するPythonのコード
-JDBCを利用するために今回PythonのJayDeBeApiというライブラリーをインストールします。
-pip install JayDeBeApi
-次にPythonコードを用意します。
-今回はローカルのサーバに/var/lib/firebird/2.5/data/にATHLETE.FDBという名前のデータベース...]]></summary>
-        <author>
-            <name>NOGU.D</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Tableau PrepフローをPythonで自動実行する方法]]></title>
-        <id>https://zenn.dev/t_katsumoto/articles/c7a8897dbe766b</id>
-        <link href="https://zenn.dev/t_katsumoto/articles/c7a8897dbe766b"/>
-        <updated>2023-02-20T14:23:17.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Tableau Prepフローを自動実行する機能は標準では用意されていない為、有料アドオンを購入するか、コマンドラインツールを用いてタスクスケジューラーで起動させるかの二つの選択肢しか現状ありません。
-その二つの特徴についてはKCME Tech Blogさんの記事が分かりやすいです。
-Tableau Prepのワークフロー実行を自動化する
-この場で簡単にまとめると、有料アドオンは機能性は抜群ですが、使用するTableau Serverの登録アカウント数が多ければ多いほど年間コストが跳ね上がるのがデメリットです。
-コマンドラインツールを使った方法は無料ですが、設定方法が煩雑、...]]></summary>
-        <author>
-            <name>Katsumoto Takashi</name>
         </author>
     </entry>
 </feed>
