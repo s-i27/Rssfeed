@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-04-03 datetime="2023-04-03T00:56:45.000Z">2023-04-03</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-04-03 datetime="2023-04-03T00:56:45.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-04-03 datetime="2023-04-03T16:37:36.000Z">2023-04-03</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-04-03 datetime="2023-04-03T16:37:36.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,267 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/junkor/articles/3df5f7ac9751c7"
+                        open
+                      >
+                        <summary class="article-expander__title">pyspark入門</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/junkor/articles/3df5f7ac9751c7">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--0F5bQTAy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_72:pyspark%25E5%2585%25A5%25E9%2596%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:7e%252B8%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvai5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>※Jupyter Notebook形式で実行し、Markdown形式でエクスポートしたものを一部改変して作っているので若干見づらいです。
+
+ 概要
+pandasなどは小規模~中規模くらいのデータセットの処理や分析には有効だが、
+メモリに乗り切らないレベルのデータ量は処理できない。
+また、GILによって基本的に1スレッドでの動作になるため、マシンスペックを最大限活かし切るのは難しい。
+遅延評価、並列分散処理によって所謂ビッグデータといわれるレベルのテーブルデータの処理・分析に使うことができ、
+更にpandasとの連携・併用ができるツールとしてpysparkが存在するため紹介する。
+なお、詳...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/junkratmecha/articles/516e884a3116b6"
+                        open
+                      >
+                        <summary class="article-expander__title">Bounding Boxの自動ラベリングの試み(Detectron2)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/junkratmecha/articles/516e884a3116b6">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--W85iemfm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Bounding%2520Box%25E3%2581%25AE%25E8%2587%25AA%25E5%258B%2595%25E3%2583%25A9%25E3%2583%2599%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25AE%25E8%25A9%25A6%25E3%2581%25BF%2528Detectron2%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Junk%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYxOWNjODdlZmEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>やりたいこと
+
+精度強めのモデルである程度の量でFTしたら、自動ラベリングできないか。
+Bboxのアノテーションは修正も楽だから、一度ラベル済のをツールでパラパラめくって、間違っているものを手動ラベリングすることで効率上がらないか。
+Detecton2を触ってみたい、あ~ツールキットね~って言えるようになりたい!
+※Twitterやコメントなどで諸々は優しくアドバイスやご指摘などください。
+
+
+ Detectron2って
+Detectron2はFacebook AIのオープンソースPJで、PyTorchの物体検出ツールキットです。
+検出できる内容はざっくり以下。
+
+物体検知 Boun...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/sergicalsix/articles/1e6d8fbab66ca9"
+                        open
+                      >
+                        <summary class="article-expander__title">Pythonでclassを使う: 設計編(3) propertyでメンバーの定義</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sergicalsix/articles/1e6d8fbab66ca9">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--HIBqSJE1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7class%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%253A%2520%25E8%25A8%25AD%25E8%25A8%2588%25E7%25B7%25A8%25283%2529%2520property%25E3%2581%25A7%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2590%25E3%2583%25BC%25E3%2581%25AE%25E5%25AE%259A%25E7%25BE%25A9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sergicalsix%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhlODkyZDMzYjUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+本記事ではメンバーの定義におけるpropertyの説明をします。
+基本的に趣味や学部の研究レベルでは、通常のメンバーの定義で事足ります。
+通常のメンバー定義やその意義については以下の記事で解説しています。
+https://zenn.dev/sergicalsix/articles/2c7832353b6afa
+propertyはプログラムの堅牢化やバリデーションで用いられる他、世の中のプログラムで広く使われているため、理解は必須です。
+
+ propertyとは
+クラスのメンバーで変数のように参照することのできる関数のことをプロパティといいます。
+もっともわかりやすい使用例は...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/karamawanu/articles/d1df0d95136b42"
+                        open
+                      >
+                        <summary class="article-expander__title">dataclasses.dataclassの応用例、環境設定を受け取る</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/karamawanu/articles/d1df0d95136b42">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--SDkUfIoZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:dataclasses.dataclass%25E3%2581%25AE%25E5%25BF%259C%25E7%2594%25A8%25E4%25BE%258B%25E3%2580%2581%25E7%2592%25B0%25E5%25A2%2583%25E8%25A8%25AD%25E5%25AE%259A%25E3%2582%2592%25E5%258F%2597%25E3%2581%2591%25E5%258F%2596%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:karamawanu%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2laSzJJYTRGZWZqV2RySzJqdHFlWnBmaE5HZ3BHLWxid2NUX0NLWHF3PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>俗にフルスタックフレームワークと呼ばれるミドルウェアでは設定をハードコーディングする場合が多い。config.py とか config.php がそれである。
+しかしあらゆる案件に限らず文字列定数はソースコードの内外に定義できた方が何かと便利である。
+最近はオワコンとされてる12条項アプリケーションでも同様の主張がある。
+https://12factor.net/ja/config
+12条項アプリケーションでは、環境変数を使うことを主張してるが、それに加えて小生はINIファイルを推したい。
+もともと手書きでの運用を意識しており、セクション／key/valueにより大項目小項目の機能もある...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yutabeee/articles/460683ee113535"
+                        open
+                      >
+                        <summary class="article-expander__title">Pythonで負の数のモジュラス演算を用いてジャンケンを作る</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yutabeee/articles/460683ee113535">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--lU46jfBI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E8%25B2%25A0%25E3%2581%25AE%25E6%2595%25B0%25E3%2581%25AE%25E3%2583%25A2%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25A9%25E3%2582%25B9%25E6%25BC%2594%25E7%25AE%2597%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%25A6%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%25B3%25E3%2582%25B1%25E3%2583%25B3%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Darman%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzEyMWZiZTBhM2IuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>モジュラス演算を学習したので、負の数のモジュラス演算を使ってじゃんけんのプログラムを作成しました。
+https://zenn.dev/yutabeee/articles/7c69c655166532
+
+ コード全体
+以下に、負の数のモジュラス演算を用いたPythonでのジャンケンプログラムのサンプルコードを示します。
+import random
+
+def main():
+    hands &#x3D; {0: &#x27;グー&#x27;, 1: &#x27;チョキ&#x27;, 2: &#x27;パー&#x27;}
+    print(&#x27;ジャンケンを開始します。手を選んでください。&#x27;)
+    print(&#x27;0: グー, 1: チョキ, 2: パー&#x27;)...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/e573a98948a996"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-190｜A - Very Very Primitive Game</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/e573a98948a996">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--SnVjNFxd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-190%25EF%25BD%259CA%2520-%2520Very%2520Very%2520Primitive%2520Game%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-190 A - Very Very Primitive Game
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b, c &#x3D; getIntMap()
+
+    d &#x3D; b - a
+    print(&#x27;Aoki&#x27; if d &gt; 0 else &#x27;Takahashi&#x27; if d &lt; 0 else &#x27;Aoki&#x27; if c &#x3D;&#x3D; 0 else &#x27;Takahashi&#x27;)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    m...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/ae1705b5d701ef"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-190｜B - Magic 3</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/ae1705b5d701ef">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--s93zjZlZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-190%25EF%25BD%259CB%2520-%2520Magic%25203%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-190 B - Magic 3
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntListRow(N):
+    return [list(map(int, input().split())) for _ in range(N)]
+
+
+def main():
+    n, s, d &#x3D; getIntMap()
+    l &#x3D; getIntListRow(n)
+
+    a &#x3D; False
+    for x, y in l:
+        if x &lt; ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yutabeee/articles/decfb4f686b55c"
+                        open
+                      >
+                        <summary class="article-expander__title">Pythonプロジェクトのディレクトリ構成 : Part2</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yutabeee/articles/decfb4f686b55c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--y0tg10p6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E3%2581%25AE%25E3%2583%2587%25E3%2582%25A3%25E3%2583%25AC%25E3%2582%25AF%25E3%2583%2588%25E3%2583%25AA%25E6%25A7%258B%25E6%2588%2590%2520%253A%2520Part2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Darman%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzEyMWZiZTBhM2IuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>単一プロジェクトの場合
+Pythonプロジェクトの理想的なディレクトリ構成はプロジェクトの規模や目的によって異なりますが、一般的な構成を以下に示します。
+project_name/
+│
+├── project_name/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── module1.py
+│   ├── module2.py
+│   └── ...
+│
+├── tests/
+│   ├── __init__.py
+│   ├── test_module1.py
+│   ├── test_module2.py
+│   └── ...
+│
+├──...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -9816,261 +10077,10 @@ https://files.minecraftforge.net/ne...</span>
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-03-05 datetime="2023-03-05T09:35:41.000Z">2023-03-05</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-03-05 datetime="2023-03-05T09:35:41.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kult/articles/344c3af062f593"
-                        open
-                      >
-                        <summary class="article-expander__title">AtCoderの提出コードをGitHubにアップするツールを作りました</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kult/articles/344c3af062f593">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--hI-oNUUN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AtCoder%25E3%2581%25AE%25E6%258F%2590%25E5%2587%25BA%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592GitHub%25E3%2581%25AB%25E3%2582%25A2%25E3%2583%2583%25E3%2583%2597%25E3%2581%2599%25E3%2582%258B%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258A%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kult%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhkZmY1MjcxNzUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>AtCoderに提出したコードはAtCoderサイト内でいつでも確認可能なのですが、自分の全提出をまとめて見るといった場合には少し不便です。そこでAtCoderに提出しているコードを自分のGitHubのレポジトリに自動でアップロードするツールを作成してみました。
-GitHubにアップすることで、GitHubのコントリビューションに草を生やすことができるのでモチベーションの維持にも繋がると思っています！
-使い方はREADMEを参照してください。すべてPython3で実装されているのでPython3が動く環境さえあれば、簡単に実行できます。
-https://github.com/kult09...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/d2a561979f1f42"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-157｜B - Bingo</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/d2a561979f1f42">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--LlZJ3NaY--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-157%25EF%25BD%259CB%2520-%2520Bingo%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-157 B - Bingo
-
-
-
- 提出結果
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def getInt():
-    return int(input())
-
-
-def getIntRow(N):
-    return [int(input()) for _ in range(N)]
-
-
-def check(a):
-    for i in range(3):
-        if sum(a[i]) &#x3D;&#x3D; 0:
-     ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/1d83f12f3560a5"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-157｜A - Duplex Printing</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/1d83f12f3560a5">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--GSFnLqZi--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-157%25EF%25BD%259CA%2520-%2520Duplex%2520Printing%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-157 A - Duplex Printing
-
-
-
- 提出結果
-import math
-
-
-def getInt():
-    return int(input())
-
-
-def main():
-    n &#x3D; getInt()
-
-    print(math.ceil(n / 2))
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/takuowake/articles/103d22a5058470"
-                        open
-                      >
-                        <summary class="article-expander__title">Duplication-divergence ModelをPythonで実装してみました</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takuowake/articles/103d22a5058470">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--48OOgdtv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Duplication-divergence%2520Model%25E3%2582%2592Python%25E3%2581%25A7%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:taku%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ2ZjVmYTIwOTQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Duplication-Divegence Modelとは
-遺伝子やタンパク質の重複（Duplication）とそれに続く異変（Divergence）が進化の基本的なメカニズムの1つであることを示すモデルです。
-このモデルでは、ネットワーク内のノードの複製によって、最初は元のノードと同じである新しいノードが作られると仮定している。その後、新しいノードがランダムな突然変異を起こし、その特性や他のノードとの相互作用が変化するダイバージェンスプロセスを導入したモデルです。
-
- &quot;Duplication-divergence model of protein interaction netw...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/roistaff/articles/f47ad273cb8b30"
-                        open
-                      >
-                        <summary class="article-expander__title">ターミナルで実行できるコマンドをPythonで作る</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/roistaff/articles/f47ad273cb8b30">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--dL_2zSEy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%259F%25E3%2583%258A%25E3%2583%25AB%25E3%2581%25A7%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E3%2582%2592Python%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Staff%2520Roi%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WmdUZURqZjNBbUtMWXN1VVdralB4SzJKVV82MUozMEFSTW9uaVItdz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-ターミナルアプリを作るのに一番欠かせないのが、コマンドです。
-自分で作ったアプリをコマンドでささっと起動できたらかっこいいですよね。
-今回はPythonのパッケージ化に欠かせないsetup.pyを利用してコマンドを作っていきます。
-
- ディレクトリ構成
-hello-app
-├── setup.py　←コマンドなどの設定
-├── hello_app
-│   ├── __init__.py　←インポート用の設定
-│   └── hello_app.py ←メインとなるもの
-├── README.md　←そのパッケージの説明など
-├── LICENSE ←ライセンス（MITが一番...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-03-04 datetime="2023-03-04T14:37:02.000Z">2023-03-04</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-03-04 datetime="2023-03-04T14:37:02.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yuya_morimoto/articles/45f12d104c2587"
-                        open
-                      >
-                        <summary class="article-expander__title">DRF-ImageFieldパフォーマンス悪い時</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yuya_morimoto/articles/45f12d104c2587">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--JAWsJhT8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:DRF-ImageField%25E3%2583%2591%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%259E%25E3%2583%25B3%25E3%2582%25B9%25E6%2582%25AA%25E3%2581%2584%25E6%2599%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuya_morimoto%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2IyOTFmNGZjM2YuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>内容
-DRFのSerializerのImageFieldで定義して画像ファイルへのURLをレスポンスするときになんかパフォーマンス悪いかたのため。
-僕自身同じ問題で2回ほど悩んだので備忘のために記事化
-もしかしたらライブラリのせいかもしれないので言及やめてください。
-使用ライブラリはこちら。2,3年前実装なのでもう古いのかもな。
-https://github.com/matthewwithanm/django-imagekit
-
- 実装
-!
-ModelSerializerではなくSerializer Classを使用しております。
-
-
-models.py
-class Demo(mod...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4591905687">
-        <time id="build-timestamp" datetime="2023-04-03T01:22:34.922Z">2023-04-03T01:22:34.922Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4603009668">
+        <time id="build-timestamp" datetime="2023-04-04T01:34:25.704Z">2023-04-04T01:34:25.704Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
