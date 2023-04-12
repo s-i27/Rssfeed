@@ -2,10 +2,257 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-04-11T01:23:54.441Z</updated>
+    <updated>2023-04-12T01:24:24.286Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[【PostgreSQL】PythonでDBにデータをINSERTする]]></title>
+        <id>https://zenn.dev/u748756h/articles/2bda21dda12f3c</id>
+        <link href="https://zenn.dev/u748756h/articles/2bda21dda12f3c"/>
+        <updated>2023-04-11T23:56:51.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+VScode上でPythonを書きPostgreSQLを操作するまでを、備忘録として残しておきます。
+
+ 目次
+
+ 1.psycopg2,PostgreSQLのインストール
+
+ 2.DB,テーブルの作成
+
+ 3.レコードを挿入する(INSERT)
+
+ 1.psycopg2,PostgreSQLのインストール
+PostgreSQL（ポストグレスキューエル、略称: Postgres）は、オープンソースのRDBMSです。PostgreSQLへは、Pythonからもアクセスでき、Pythonではpsycopg2というパッケージを利用し、PostgreSQLへ接続します。
+
+ psy...]]></summary>
+        <author>
+            <name>Hiroka</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最適化したプロンプトを使って Azure OpenAI Service で OpenAPI と PlantUML からテストコードを生成する]]></title>
+        <id>https://zenn.dev/k14i/articles/0a69cfad7a7642</id>
+        <link href="https://zenn.dev/k14i/articles/0a69cfad7a7642"/>
+        <updated>2023-04-11T23:50:52.000Z</updated>
+        <summary type="html"><![CDATA[PromptGenerator メソッドによって最適化されたプロンプトを使って Azure OpenAI Service で OpenAPI と PlantUML からテストコードを生成する
+前回、Azure OpenAI Service を使って OpenAPI と PlantUML からテストコードを生成する取り組みについて説明しました。
+ここで出来ていなかったことの一つとして、プロンプトのチューニングがあります。
+今回、ChatGPT にプロンプトを生成させる PromptGenerator というメソッドを用いて最適化されたプロンプトを生成し、そのプロンプトを用いて前回同様の...]]></summary>
+        <author>
+            <name>k14i</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows11のGPU環境でPython版のWhisperを使う]]></title>
+        <id>https://zenn.dev/kecy/articles/25838aab2b1927</id>
+        <link href="https://zenn.dev/kecy/articles/25838aab2b1927"/>
+        <updated>2023-04-11T14:31:24.000Z</updated>
+        <summary type="html"><![CDATA[Windows11でPython版のWhisperを使いたかったけどPythonに触るのも久しぶりだったので色々調べながら。備忘録として残しておきます。
+筆者の環境（念のためハードウェアも）
+
+OS：Windows11
+CPU：Intel Core i7 13700K
+グラフィックボード：GeForce RTX 3700 (8GB)
+メモリー：64GB（DDR4 3200MHz 32GB × 2枚）
+マザーボード：ASUS TUF Gaming Z690-Plus WiFi D4
+
+
+ Pythonの準備
+
+ pyenvのインストール
+Whisperが対応しているのはPython 3.8...]]></summary>
+        <author>
+            <name>kecy</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonを使ってDrupalのタクソノミーの登録とコンテンツへの追加]]></title>
+        <id>https://zenn.dev/nakamura196/articles/90a4778e6f0c45</id>
+        <link href="https://zenn.dev/nakamura196/articles/90a4778e6f0c45"/>
+        <updated>2023-04-11T10:09:06.000Z</updated>
+        <summary type="html"><![CDATA[概要
+以下のシリーズの続きです。
+https://zenn.dev/nakamura196/articles/1cc654fc266d17
+今回は、タクソノミーの登録とコンテンツへの追加を行います。
+
+ タクソノミーの登録
+事前に、ne_classというタクソノミーをGUIを通じて作成しました。以下のようなURLで一覧できます。
+/jsonapi/taxonomy_term/ne_class
+以下、新しいタクソノミーを登録するプログラムです。host, username, passwordは適宜設定してください。
+payload = {
+    "data": {
+        "...]]></summary>
+        <author>
+            <name>nakamura196</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonを使ってDrupalのコンテンツを更新・削除する]]></title>
+        <id>https://zenn.dev/nakamura196/articles/80bb8802676f2a</id>
+        <link href="https://zenn.dev/nakamura196/articles/80bb8802676f2a"/>
+        <updated>2023-04-11T09:40:23.000Z</updated>
+        <summary type="html"><![CDATA[概要
+以下の記事で、コンテンツの新規登録の方法を記載しました。
+https://zenn.dev/nakamura196/articles/1cc654fc266d17
+今回は、既存のコンテンツの更新・削除を試みます。
+
+ アイテムの絞り込み
+以下のようなプログラムにより、登録済みのコンテンツを取得することができます。今回は、titleが「更新前のタイトル」のコンテンツを取得しました。res["data"]は配列になります。
+username = "xxx"
+password = "xxx"
+host = "xxx"
+
+query = {
+    "title": "更新前のタイトル...]]></summary>
+        <author>
+            <name>nakamura196</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[有限体の実装5（PythonによるLLVM DSLの紹介）]]></title>
+        <id>https://zenn.dev/herumi/articles/finite-field-05-dsl</id>
+        <link href="https://zenn.dev/herumi/articles/finite-field-05-dsl"/>
+        <updated>2023-04-11T07:53:55.000Z</updated>
+        <summary type="html"><![CDATA[初めに
+今回はPythonで作ったLLVM DSLを実装します。
+記事全体の一覧は有限体の実装一覧参照。
+
+ LLVM DSL
+多倍長整数の実装8（LLVMを用いたasmコード生成）ではC++によるLLVMコード生成の方法を紹介しました。
+あれから同じ機能を持ったPythonによるLLVMコード生成DSLを作ったのでそれを紹介します。
+s_xbyak_llvm.pyはDSLからLLVM IRコード（以下ll）を生成するためのPythonツールです。
+もともとは、C++でJITを実現するためのXbyakを開発していたのですが、JITじゃなくてもDSLでアセンブラを掛けるのが便利であるこ...]]></summary>
+        <author>
+            <name>herumi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python入門⑧～if文～]]></title>
+        <id>https://zenn.dev/tkyk/articles/275cbce979bf76</id>
+        <link href="https://zenn.dev/tkyk/articles/275cbce979bf76"/>
+        <updated>2023-04-11T06:38:25.000Z</updated>
+        <summary type="html"><![CDATA[if文とは
+Excelで関数を扱ったことがあればイメージしやすいと思います。
+Aなら◯◯する、Bなら△△する、というものです。
+基本的なルールは下記の通りです。
+if 条件A:
+	条件A該当時のアクション
+if 条件B:
+	条件B該当時のアクション
+ ・・・
+「90点以上なら"合格です、おめでとう！"、90点未満なら"不合格です、残念！"」が表示されるように書きたいと思います。
+a = 90
+if a >= 90:
+	print ("合格です、おめでとう！")
+if a < 90:
+	print ("不合格です、残念！")
+とすると「合格です、おめでとう！」が表示されます...]]></summary>
+        <author>
+            <name>tkyk</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-198｜B - Palindrome with leading zeros]]></title>
+        <id>https://zenn.dev/hyperdb/articles/b41102c1a521eb</id>
+        <link href="https://zenn.dev/hyperdb/articles/b41102c1a521eb"/>
+        <updated>2023-04-11T04:04:01.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-198 B - Palindrome with leading zeros
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    n = getInt()
+
+    m = str(int(str(n)[::-1]))
+
+    print('Yes' if m == m[::-1] else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-198｜A - Div]]></title>
+        <id>https://zenn.dev/hyperdb/articles/9a276d057874ff</id>
+        <link href="https://zenn.dev/hyperdb/articles/9a276d057874ff"/>
+        <updated>2023-04-11T04:04:00.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-198 A - Div
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    n = getInt()
+
+    print(n - 1)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python入門⑦～リスト～]]></title>
+        <id>https://zenn.dev/tkyk/articles/e26318c15de5ad</id>
+        <link href="https://zenn.dev/tkyk/articles/e26318c15de5ad"/>
+        <updated>2023-04-11T02:49:49.000Z</updated>
+        <summary type="html"><![CDATA[リストとは
+Pythonでは複数の要素（数値や文字列など。混在も可）を1つの変数に入れることができます。
+それが「リスト」です。
+a = ['私は','鈴木','太郎です。']
+print (a)
+とすると['私は','鈴木','太郎です。']と表示されます。
+インデックスやスライシングも使えます。
+a = ['私は','鈴木','太郎です。']
+print (a[1],a[2])
+とすると「鈴木 太郎です。」と表示されます。
+
+ 変更可能体
+文字列は変更不能体でしたが、リストは変更可能体です。
+そのため、リスト内の一部を入れ替えることも可能です。
+a = ['私は','鈴木','太...]]></summary>
+        <author>
+            <name>tkyk</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonを使ってDrupalにコンテンツを追加する]]></title>
+        <id>https://zenn.dev/nakamura196/articles/1cc654fc266d17</id>
+        <link href="https://zenn.dev/nakamura196/articles/1cc654fc266d17"/>
+        <updated>2023-04-11T02:08:17.000Z</updated>
+        <summary type="html"><![CDATA[概要
+Pythonを使ってDrupalにコンテンツを追加する機会がありましたので、その備忘録です。以下の記事を参考にしました。
+https://weimingchenzero.medium.com/use-python-to-call-drupal-9-core-restful-api-to-create-new-content-9f3fa8628ab4
+
+ Drupalの準備
+Amazon Lightsailに作成しました。以下の記事などが参考になります。
+https://annai.co.jp/article/use-aws-lightsail
+
+ モジュール
+以下をインストール...]]></summary>
+        <author>
+            <name>nakamura196</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[因果推論100本ノック(2)回帰分析]]></title>
         <id>https://zenn.dev/s1ok69oo/articles/8b768b45663351</id>
@@ -6338,216 +6585,6 @@ https://qwegat-chatgptplaylist-main-gyigsk.streamlit.app/
 もう寝たいので、いつもの記事のように丁寧な構成はしませ...]]></summary>
         <author>
             <name>qwegat</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Anaconda】conda createでCondaSSLErrorが発生した際の解決策]]></title>
-        <id>https://zenn.dev/yuk6ra/articles/9c24eb70211c2a</id>
-        <link href="https://zenn.dev/yuk6ra/articles/9c24eb70211c2a"/>
-        <updated>2023-03-13T11:43:51.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Anacondaを弄っていたら、condaで仮想環境を構築できなくなってしまいました。CondaSSLErrorというエラーが発生したようで、OpenSSLを導入することで解決しました。
-
- 前提知識
-
-Wndows 10 Home
-Powershell
-Anaconda
-conda 22.9.0
-
-
-terminal
-PS C:\Users\username> conda -V
-conda 22.9.0
-
-
- エラー: CondaSSLError
-
-terminal
-PS C:\Users\username> conda create -n test pyth...]]></summary>
-        <author>
-            <name>yuk6ra</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ARC.158 by Iyaa]]></title>
-        <id>https://zenn.dev/iyamada/articles/8e00792314d74b</id>
-        <link href="https://zenn.dev/iyamada/articles/8e00792314d74b"/>
-        <updated>2023-03-13T10:14:23.000Z</updated>
-        <summary type="html"><![CDATA[概要
-
- コンテスト
-AtCoder Regular Contest 158
-
- 結果
-Iyamada
-1613 位
-300 点 (1)
-110 分 28 秒
-A問題
-300点(1)
-105分28秒
-B問題
-0点(1)
-ー
-C問題以降提出なし
-
-
- 本題
-
- 感想
-
-　今回のARCはかなり苦戦した。
-A問題に時間のほぼすべてを使い、B問題はヤケクソ全探査を提出したのみであった。
-　今回のARCはリアル世界の問題の最適解を求めるものではなく、卓上の数字のみの計算という問題を集めたようなものであった。
-
-
- A問題 +3 +5 +7
-
-
-
-問題
-整数 x_1 , x_2 , x_3が与え...]]></summary>
-        <author>
-            <name>いやぁ...</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[俺のChatGPTがこんなに賢いわけがない。ベクトル検索エンジン]]></title>
-        <id>https://zenn.dev/tfutada/articles/a90e2c83b50356</id>
-        <link href="https://zenn.dev/tfutada/articles/a90e2c83b50356"/>
-        <updated>2023-03-13T07:23:46.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-ChatGPTの問題に、2021年までのデータでしか学習しておらず、最新の情報に答えることができないことがあります。例えば昨日の東京の天気を教えてと、小学生でも分かる質問にすら答えることができません。また、インターネットに公開していない情報、例えば企業の内部情報や個人のプライベートな情報にも無力です。人間もそうですが、人工知能と言えど知らないことは知らないのです。
-その問題の解決策の一つにファインチューンがあります。自社データを持ち込み学習モデルの微調整を行う方法です。つい先日、Azure版のgpt-3.5 turboのファインチューンがサポートされました。ただこの方法はお...]]></summary>
-        <author>
-            <name>TF</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【超簡単手順】低スペックローカルPCで大規模言語モデル「LLaMA」を動かす！]]></title>
-        <id>https://zenn.dev/ozushi/articles/a9ee4ac9c574ab</id>
-        <link href="https://zenn.dev/ozushi/articles/a9ee4ac9c574ab"/>
-        <updated>2023-03-13T06:19:13.000Z</updated>
-        <summary type="html"><![CDATA[ある日、Twitterを巡回していると
-
-え...マジで？となりました。自分の専属AIを作りたい！と思い立ち、実際に動かしてみました。
-
- 目標
-このようにローカルPC上でLLaMAとチャットできるようになります。
-
-ただ、自分が使ったモデルは7Bモデルと言って、パラメータがあまり大きくない＝あまり賢くないモデルだったので出力は変な感じになっています笑
-(明らかにネットの会話を推論に引っ張ってきてますね...)
-なので、今回はとりあえず動かしてみたい人向けです！精度などは気にせずお試しください。
-ちなみに、自分はM1 MacBookAir(8Gメモリ)で動きました！信じられないぐらい遅い...]]></summary>
-        <author>
-            <name>ズシ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-166｜B - Trick or Treat]]></title>
-        <id>https://zenn.dev/hyperdb/articles/b63605b6e0744c</id>
-        <link href="https://zenn.dev/hyperdb/articles/b63605b6e0744c"/>
-        <updated>2023-03-13T04:40:00.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-166 B - Trick or Treat
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getInt():
-    return int(input())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n, k = getIntMap()
-
-    s = [i + 1 for i in range(n)]
-
-    for i in range(k)...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-166｜A - A?C]]></title>
-        <id>https://zenn.dev/hyperdb/articles/165724e35805a5</id>
-        <link href="https://zenn.dev/hyperdb/articles/165724e35805a5"/>
-        <updated>2023-03-13T04:39:59.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-166 A - A?C
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s = getString()
-
-    print('ABC' if s == 'ARC' else 'ARC')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PDM + GitHub Actions でテストとパッケージングを自動化する]]></title>
-        <id>https://zenn.dev/hamakou108/articles/255d7ea55ccd69</id>
-        <link href="https://zenn.dev/hamakou108/articles/255d7ea55ccd69"/>
-        <updated>2023-03-13T00:19:53.000Z</updated>
-        <summary type="html"><![CDATA[PDMを使ってパッケージ管理している Python プロジェクトで GitHub Actions を使ってテストや静的解析、パッケージングを自動化する方法について記述する。
-なお、 PDM のインストールや初期設定については過去に書いた記事があるのでこちらを参照。
-
- 環境
-
-macOS: Ventura 13.0.1
-Python: 3.11.2
-PDM: 2.4.5
-
-
- PDM の GitHub Action
-PDM から提供されている GitHub Action を使用する。
-https://github.com/marketplace/actions/setup-pdm
-以降で...]]></summary>
-        <author>
-            <name>hamakou108</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ChatGPT-APIの出力をプログラムに落としこむ（Text-Embeddings）]]></title>
-        <id>https://zenn.dev/shimokenpi/articles/0831bbf64028ba</id>
-        <link href="https://zenn.dev/shimokenpi/articles/0831bbf64028ba"/>
-        <updated>2023-03-12T17:42:27.000Z</updated>
-        <summary type="html"><![CDATA[目的
-例えばChatGPTに人間同士の議論の審判をさせるというケースを考えます。
-ネット上のバイアスやそもそも意味を理解できているのかという問題がありますが、AIに議論の判定（もしくは進行）をさせるというのは中立性の面からも将来主流になるのではと思います。
-ではChatGPTにAとBの議論の勝敗判定をさせたとして、その出力は当然文章になるわけですが、プログラムで扱うにはAIから得られた文章を
-
-A勝ち
-B勝ち
-引き分け
-
-に分類する必要があります。
-ChatGPTに出力の形式を指定するという方法もあるのですが、安定性に難あり、トークンを余計に使う、などの問題があります。
-そこでOpe...]]></summary>
-        <author>
-            <name>六兵衛</name>
         </author>
     </entry>
 </feed>
