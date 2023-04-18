@@ -2,10 +2,318 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-04-17T01:25:01.419Z</updated>
+    <updated>2023-04-18T01:24:04.853Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Python初心者のための画像認識入門ガイド]]></title>
+        <id>https://zenn.dev/gk12/articles/python-image-recognition</id>
+        <link href="https://zenn.dev/gk12/articles/python-image-recognition"/>
+        <updated>2023-04-18T01:18:27.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは。今回は、Python初心者に向けて、Pythonと画像認識について解説します。Pythonは、シンプルでわかりやすく、初心者でも学びやすいプログラミング言語です。また、近年では画像認識技術が注目されており、Pythonを使った画像認識の実装も可能になっています。本記事では、Pythonと画像認識の基礎から具体的な実装方法までを解説します。
+
+ Pythonとは
+Pythonは、広く使われているプログラミング言語で、シンプルでわかりやすい文法が特徴です。また、多くのライブラリが用意されており、様々な分野で使用されています。Pythonは、データサイエンスや機械学習...]]></summary>
+        <author>
+            <name>gk12</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPIでREST（その２）]]></title>
+        <id>https://zenn.dev/robon/articles/bb17fd07739519</id>
+        <link href="https://zenn.dev/robon/articles/bb17fd07739519"/>
+        <updated>2023-04-18T01:03:49.000Z</updated>
+        <summary type="html"><![CDATA[前回まで
+https://zenn.dev/robon/articles/aa7ba513b3bdb3
+FastAPIも導入すれば、とりあえず動くところまでは簡単でした。
+
+ 設計と実装
+
+ プロジェクトの構造はどうする？
+NestJSはCLIでひな型の自動生成をしてくれたので、それに乗っかることにしました。スキーマ単位の構造は、スキーマ駆動でマイクロサービスな感じで、これからはこういう構造になっていくのかなぁと思いました。
+で、FastAPIです。公式では、どうやらレイヤ構造を推奨しているようです。
+https://fastapi.tiangolo.com/tutorial/big...]]></summary>
+        <author>
+            <name>荒木 岳夫</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NumPyro：NumPyro特有の関数などまとめ]]></title>
+        <id>https://zenn.dev/yoshida0312/articles/3b554cc522788b</id>
+        <link href="https://zenn.dev/yoshida0312/articles/3b554cc522788b"/>
+        <updated>2023-04-17T16:24:10.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+NumPyroを用いてモデリングを実装する上で必要な知識をまとめて説明します。
+
+ ライブラリのインポート
+import os
+
+import jax.numpy as jnp
+from jax import random
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
+
+import numpyro
+from numpyro.diagnostics import hpdi
+import numpyro.distributions as ...]]></summary>
+        <author>
+            <name>よしだ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Queueの解説: 基本概念とPythonでの実装]]></title>
+        <id>https://zenn.dev/yutabeee/articles/d8b105286407b6</id>
+        <link href="https://zenn.dev/yutabeee/articles/d8b105286407b6"/>
+        <updated>2023-04-17T15:30:21.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Queue（キュー）は、データ構造の一つで、要素を先入れ先出し（FIFO: First-In-First-Out）の順序で追加・取り出しを行うことができます。この記事では、Queueの基本概念とPythonでの実装方法について解説します。
+
+ キューの基本概念
+キューは、要素が一列に並んでいて、新しい要素が末尾に追加され、先頭の要素が取り出されるデータ構造です。主な操作は以下の2つです。
+
+
+enqueue: キューの末尾に要素を追加する操作です。
+
+dequeue: キューの先頭の要素を取り出す操作です。
+
+キューは、待ち行列やバッファなど、さまざまなシチュエーションで使...]]></summary>
+        <author>
+            <name>Darman</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RaspberryPiで起動時にPythonスクリプトを実行する]]></title>
+        <id>https://zenn.dev/bonsai_engineer/articles/3cd836a5c649fe</id>
+        <link href="https://zenn.dev/bonsai_engineer/articles/3cd836a5c649fe"/>
+        <updated>2023-04-17T15:21:00.000Z</updated>
+        <summary type="html"><![CDATA[RaspberryPi起動時に自動でPythonを実行する方法を共有します。
+
+
+実行するPythonスクリプトを作成
+vim /home/pi/Desktop/raspberrypi.py
+
+
+systemd/systemフォルダに移動
+
+
+cd /etc/systemd/system/
+
+定義ファイルを作成
+
+sudo vim raspberrypi.service
+※ファイル名は任意
+
+設定を書き込む
+
+[Unit]
+Description=起動テスト
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/Desktop/raspberryp...]]></summary>
+        <author>
+            <name>盆栽エンジニア</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonでの型付けのやり方]]></title>
+        <id>https://zenn.dev/yutabeee/articles/823a5ceb3d76e9</id>
+        <link href="https://zenn.dev/yutabeee/articles/823a5ceb3d76e9"/>
+        <updated>2023-04-17T14:34:00.000Z</updated>
+        <summary type="html"><![CDATA[Pythonの型付けについて
+Pythonは動的型付け言語ですが、型ヒント（type hinting）を使用することで、コードの可読性やエラーの予防に役立ちます。Pythonの型ヒントは、Python 3.5で導入された「PEP 484」という機能で、Pythonの標準ライブラリであるtypingを使って型情報を付与することができます。
+
+ 型ヒントの基本
+型ヒントを使用するには、関数の引数や戻り値に対して型情報を記述します。例えば、以下のように型ヒントを追加することができます。
+def greet(name: str) -> str:
+    return "Hello, "...]]></summary>
+        <author>
+            <name>Darman</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[開発時にモック版OpenAI APIサーバーを使用する]]></title>
+        <id>https://zenn.dev/laiso/articles/fbc5410fd509b7</id>
+        <link href="https://zenn.dev/laiso/articles/fbc5410fd509b7"/>
+        <updated>2023-04-17T12:02:47.000Z</updated>
+        <summary type="html"><![CDATA[開発中にChat completion APIやEmbeddings APIを過渡に呼び出して課金されてしまうことを回避します。
+また自動テスト内でOpenAI APIを呼び出す時も有効です。
+https://github.com/openai/openai-openapi/
+OpenAI公式リポジトリにOpenAPI仕様書が公開されているのでStoplight Prismでモックサーバーを実行します。
+> npm install -g @stoplight/prism-cli
+> prism mock https://raw.githubusercontent.com/op...]]></summary>
+        <author>
+            <name>laiso</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】Gmailサーバを使ってメールを送信する]]></title>
+        <id>https://zenn.dev/daddy_yukio/articles/8c6a15fc09548a</id>
+        <link href="https://zenn.dev/daddy_yukio/articles/8c6a15fc09548a"/>
+        <updated>2023-04-17T06:52:50.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは。Daddy's Officeの市川です。
+今回はGmailサーバーをSMTPサーバーとしてメールを送信するプログラムをPythonで書いてみます。
+Gmailサーバーへのログインは、GoogleアカウントでログインというOAuth認証が基本になっていますが、アカウント設定を行うことで、ユーザ/パスワードの認証でログインすることができます。
+ただ、この方法が最近変更されたりと、いまいちまとまった情報がなかったので、備忘録として記事に残しておこうと思います。
+
+ メール送信の仕組み
+メールは、送った人の端末から受信する人の端末へ直接送られているわけではありません。
+...]]></summary>
+        <author>
+            <name>Yukio Ichikawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-203｜B - AtCoder Condominium]]></title>
+        <id>https://zenn.dev/hyperdb/articles/b11f8ca4de5f6f</id>
+        <link href="https://zenn.dev/hyperdb/articles/b11f8ca4de5f6f"/>
+        <updated>2023-04-17T03:57:15.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-203 B - AtCoder Condominium
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    n, k = getIntMap()
+
+    a = (1 + k) * k // 2
+    b = k * 100
+
+    t = 0
+    for i in range(1, n + 1):
+        t += (a + b * i)
+    print(t)
+
+
+if __name__ == "__main__":
+    m...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-204｜A - Rock-paper-scissors]]></title>
+        <id>https://zenn.dev/hyperdb/articles/537f90229bc800</id>
+        <link href="https://zenn.dev/hyperdb/articles/537f90229bc800"/>
+        <updated>2023-04-17T03:57:15.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-204 A - Rock-paper-scissors
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    x, y = getIntMap()
+
+    print(x if x == y else 3 - (x + y))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-203｜A - Chinchirorin]]></title>
+        <id>https://zenn.dev/hyperdb/articles/331d96ab0d8812</id>
+        <link href="https://zenn.dev/hyperdb/articles/331d96ab0d8812"/>
+        <updated>2023-04-17T03:57:14.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-203 A - Chinchirorin
+
+
+
+ 提出結果
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    l = getIntList()
+
+    l.sort()
+    c = len(set(l))
+
+    if c == 3:
+        print(0)
+    elif c == 1:
+        print(l[0])
+    else:
+        print(l[2] if l[0] == l[1] else l[0...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-204｜B - Nuts]]></title>
+        <id>https://zenn.dev/hyperdb/articles/04ef0ae7d37776</id>
+        <link href="https://zenn.dev/hyperdb/articles/04ef0ae7d37776"/>
+        <updated>2023-04-17T03:57:14.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-204 B - Nuts
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n = getInt()
+    a = getIntList()
+
+    print(sum([i - 10 for i in a if i > 10]))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonでクイックソート完全解説]]></title>
+        <id>https://zenn.dev/yutabeee/articles/e8fb2847cfc980</id>
+        <link href="https://zenn.dev/yutabeee/articles/e8fb2847cfc980"/>
+        <updated>2023-04-17T03:27:00.000Z</updated>
+        <summary type="html"><![CDATA[クイックソートの概要
+クイックソートは、高速な比較ベースのソートアルゴリズムで、データをピボット（基準値）を中心に分割し、再帰的にソートを行います。平均計算時間は O(n log n) で、最悪の場合は O(n^2) ですが、実際には非常に高速で動作することが多いです。
+
+ クイックソートの手順
+
+ピボットを選択する（例：配列の中央値）。
+左側からピボットより大きい要素を探す。
+右側からピボットより小さい要素を探す。
+2 と 3 で見つかった要素を交換する。
+2 から 4 を繰り返し、左側にはピボットより小さい要素、右側にはピボットより大きい要素が集まる。
+再帰的に左側の部分配列と右...]]></summary>
+        <author>
+            <name>Darman</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[FastAPIでREST（その１）]]></title>
         <id>https://zenn.dev/robon/articles/aa7ba513b3bdb3</id>
@@ -6443,438 +6751,6 @@ class Stack:
 ...]]></summary>
         <author>
             <name>yutabeeee</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[OpenAI Python LibraryでChatGPTを使用するときも、timeoutを設定した方が良いという話]]></title>
-        <id>https://zenn.dev/sion_pn/articles/5373a8db399cce</id>
-        <link href="https://zenn.dev/sion_pn/articles/5373a8db399cce"/>
-        <updated>2023-03-19T13:12:44.000Z</updated>
-        <summary type="html"><![CDATA[OpenAI Python Libraryとは
-https://github.com/openai/openai-python
-PythonでOpenAI APIを叩くためのラッパーです。
-pip install openai
-でインストールできます。
-
-main.py
-import openai
-
-openai.api_key = 'API_KEY'
-try:
-    completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"r...]]></summary>
-        <author>
-            <name>SiON</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GitHub Actions上のPythonでexit(1)する時、printの標準出力は表示されない]]></title>
-        <id>https://zenn.dev/meihei/articles/7c4ec330a8ab82</id>
-        <link href="https://zenn.dev/meihei/articles/7c4ec330a8ab82"/>
-        <updated>2023-03-19T11:57:28.000Z</updated>
-        <summary type="html"><![CDATA[TL;DR
-GitHub Actions 上で Python を実行して、入力値のバリデーションが引っかかった場合sys.exit(1)と、その理由を出力しようとした。
-エラーが発生した場合は標準エラー出力に出力されるため、print関数にfile=sys.stderrを指定してあげる必要がある。
-print(f'Error: {message}', file=sys.stderr)
-
- 詳細
-以下のようなPythonコードをGitHub Actions上で実行していた。このコードは、入力されたmakefileが存在しない場合、sys.exit(1)を呼び出してエラー終了するようにな...]]></summary>
-        <author>
-            <name>meihei</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PostgreSQLとFastAPIとStreamlitを使ってTodoリストを作ろう（後編）]]></title>
-        <id>https://zenn.dev/tirimen/articles/a5b196a9395925</id>
-        <link href="https://zenn.dev/tirimen/articles/a5b196a9395925"/>
-        <updated>2023-03-19T11:08:03.000Z</updated>
-        <summary type="html"><![CDATA[本記事の目的
-最近、Todoリストの作り方を学んだので、知識を深化させるために言語化する。プログラミング初心者の筆者でも作れたので、プログラミング初心者のモチベーションを上げるためにも、できるだけ分かりやすく書いていく。今回は後編のフロントエンド編。前編のバックエンドはコチラ。
-https://zenn.dev/tirimen/articles/7b5861c40e8a77
-
- Streamlitとは
-PythonでWebアプリケーションを作成するためのフレームワークの一つ。フロントエンドは正直デザイン性が大事なので、筆者は苦手な部類なのだが、Streamlitは短いプログラムでそれ...]]></summary>
-        <author>
-            <name>tirimen</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[n!を求めるアルゴリズムで再帰関数について考える]]></title>
-        <id>https://zenn.dev/yutabeee/articles/5083365cb79659</id>
-        <link href="https://zenn.dev/yutabeee/articles/5083365cb79659"/>
-        <updated>2023-03-19T11:05:56.000Z</updated>
-        <summary type="html"><![CDATA[階乗とは
-階乗とは、ある自然数nについて、1からnまでの全ての自然数をかけ合わせた値のことを指します。nの階乗はn!と表記されます。
-例えば、5の階乗は以下のように計算されます。
-5! = 5 × 4 × 3 × 2 × 1 = 120
-
- 再帰関数とは
-再帰関数は、自分自身を呼び出す関数のことです。再帰関数を使用することで、複雑な問題を単純化することができます
-
- 再帰関数なしの場合のn!を求める関数
-
-factorial.py
-def factorial(n):
-    result = 1
-    for i in range(n, 0, -1):
-        result...]]></summary>
-        <author>
-            <name>yutabeeee</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[素数を求めるアルゴリズムをPythonで書いてみた]]></title>
-        <id>https://zenn.dev/yutabeee/articles/e431729b8d69b4</id>
-        <link href="https://zenn.dev/yutabeee/articles/e431729b8d69b4"/>
-        <updated>2023-03-19T10:37:24.000Z</updated>
-        <summary type="html"><![CDATA[この関数は、startとendの2つの引数を受け取り、startからendまでの素数を出力します。
-startの引数は省略可能で、省略された場合は自動的に2が設定されます。
-def print_primes(end, start=2):
-    """
-    startからendまでの素数を出力する関数。
-    """
-    # 素数を探す範囲を指定する
-    for number in range(start, end + 1):
-        # numberが素数であるかどうかを判定する
-        is_prime = is_prime_number(number)...]]></summary>
-        <author>
-            <name>yutabeeee</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[標準入出力をパイプにリダイレクト (C++, C#, Python)]]></title>
-        <id>https://zenn.dev/husty/articles/99fe7c252c8d5f</id>
-        <link href="https://zenn.dev/husty/articles/99fe7c252c8d5f"/>
-        <updated>2023-03-19T10:00:36.000Z</updated>
-        <summary type="html"><![CDATA[共有メモリを使った高速な大規模データのプロセス間通信について「なんかシンプルな方法はないかなあ...」と考えているときに見つけたやり方です。
-実装はこちら。
-https://github.com/husty530/subprocess
-基本的な考え方はパイプ通信です。これはマルチプロセスの実装で一般的に使われるものです。
-プロセスは親子の関係が必要です。今回はC++/C#が親プロセスとなり，子プロセスのPythonを呼び出し通信します。
-さらに，子プロセスの実装をシンプルにするため親プロセスでは子プロセスの起動時に，子プロセスの標準入出力を親のパイプに繋ぎかえます(リダイレクト)。
-これ...]]></summary>
-        <author>
-            <name>Takumi Yamashita</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PostgreSQLとFastAPIとStreamlitを使ってTodoリストを作ろう（前編）]]></title>
-        <id>https://zenn.dev/tirimen/articles/7b5861c40e8a77</id>
-        <link href="https://zenn.dev/tirimen/articles/7b5861c40e8a77"/>
-        <updated>2023-03-19T09:43:45.000Z</updated>
-        <summary type="html"><![CDATA[本記事の目的
-最近、Todoリストの作り方を学んだので、知識を深化させるために言語化する。プログラミング初心者の筆者でも作れたので、プログラミング初心者のモチベーションを上げるためにも、できるだけ分かりやすく書いていく。
-
- PostgreSQLとは
-リレーショナルデータベース管理システムの一つ。正直、MySQLやOracle Databaseでも良いが、初心者の自分にとっては、PostgreSQL用のGUI管理ツールのpgAdmin4が使いやすいので、こちらを採用。インストール方法や操作方法については下記の記事を参考にしてほしい。
-https://postgresweb.com/i...]]></summary>
-        <author>
-            <name>tirimen</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[iFacialMocap Puppeteerの通信がWindowsファイアウォールにブロックされる問題の解決方法]]></title>
-        <id>https://zenn.dev/v22uta/articles/6860f779199aad</id>
-        <link href="https://zenn.dev/v22uta/articles/6860f779199aad"/>
-        <updated>2023-03-19T09:33:04.000Z</updated>
-        <summary type="html"><![CDATA[iFacialMocap Puppeteerは、人物の動きをリアルタイムでキャプチャし、アバターに反映させることができるソフトウェアです。しかし、このソフトウェアを使用している際に、Windowsファイアウォールによって通信がブロックされてしまい、表情が動かずに固まってしまう問題が発生することがあります。
-この問題を解決するためには、以下の手順を行います。
-
- 手順
-
-Windowsのスタートメニューを開き、検索欄に「Windows ファイアウォール」と入力します。
-「Windows ファイアウォールによるアプリケーションの許可」を選択します。
-「変更の設定」を選択します。この操作には管...]]></summary>
-        <author>
-            <name>ナツメグ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1からnまで加算するアルゴリズムを用いて効率の良いプログラムについて考える]]></title>
-        <id>https://zenn.dev/yutabeee/articles/3fa8bdedd07e57</id>
-        <link href="https://zenn.dev/yutabeee/articles/3fa8bdedd07e57"/>
-        <updated>2023-03-19T09:32:01.000Z</updated>
-        <summary type="html"><![CDATA[Pythonにおいて、1からnまでの整数を足し合わせる関数を作成することができます。今回は、複数の方法を用いてこの問題を解いていきます。
-
- 方法1：forループを用いた方法
-最も基本的な方法として、forループを用いて1からnまでの整数を順に足し合わせていく方法があります。以下がそのコードです。
-
-sum1.py
-def sum1(n):
-    result = 0
-    for i in range(1, n+1):
-        result += i
-    return result
-
-このコードでは、1からnまでの整数を順にresultに加算していくため、nに比例して処...]]></summary>
-        <author>
-            <name>yutabeeee</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【自分用】Pythonで画像のExifデータを削除する]]></title>
-        <id>https://zenn.dev/reds/articles/2580aa9d2e33ae</id>
-        <link href="https://zenn.dev/reds/articles/2580aa9d2e33ae"/>
-        <updated>2023-03-19T08:08:00.000Z</updated>
-        <summary type="html"><![CDATA[概要
-PILを使って画像のExifデータを削除を実装をする時のためのメモ。（Pythonど素人）
-
- Exif情報が存在する可能性のあるmimeタイプ
-
-image/jpeg
-image/tiff
-image/heif
-image/heic
-image/webp
-などなど
-
-
- サンプルコード
-# 画像のexif情報を削除する
-from PIL import Image
-
-def remove_exif_data(input_path, output_path):
-    with Image.open(input_path) as image:
-        if not ima...]]></summary>
-        <author>
-            <name>ゆーとおじさん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonの統合開発環境IDLEの利用方法]]></title>
-        <id>https://zenn.dev/yutabeee/articles/b25f7a063ecd87</id>
-        <link href="https://zenn.dev/yutabeee/articles/b25f7a063ecd87"/>
-        <updated>2023-03-19T07:39:49.000Z</updated>
-        <summary type="html"><![CDATA[Pythonの統合開発環境であるIDLEは、Python標準ライブラリに含まれており、Pythonの開発やデバッグに役立ちます。以下に、IDLEの基本的な使い方をまとめます。
-
- 1. IDLEの起動
-IDLEは、Pythonをインストールすると一緒にインストールされます。Mac OS Xであれば、アプリケーションフォルダ内にある「Python 3.x」フォルダを開き、「IDLE」をクリックして起動します。ターミナルからは、idle3と入力すれば起動できます。
-
- 2. エディタの起動
-IDLEには、Pythonスクリプトを編集するためのエディタが用意されています。エディタを起動するには...]]></summary>
-        <author>
-            <name>yutabeeee</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-174｜A - Air Conditioner]]></title>
-        <id>https://zenn.dev/hyperdb/articles/e3776a0af11078</id>
-        <link href="https://zenn.dev/hyperdb/articles/e3776a0af11078"/>
-        <updated>2023-03-19T06:35:23.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-174 A - Air Conditioner
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    x = getInt()
-
-    print('Yes' if x >= 30 else 'No')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-173｜B - Judge Status Summary]]></title>
-        <id>https://zenn.dev/hyperdb/articles/62d06ceeb45e25</id>
-        <link href="https://zenn.dev/hyperdb/articles/62d06ceeb45e25"/>
-        <updated>2023-03-19T06:35:22.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-173 B - Judge Status Summary
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getStringRow(N):
-    return [input() for _ in range(N)]
-
-
-def main():
-    n = getInt()
-    s = getStringRow(n)
-
-    a = {'AC': 0, 'WA': 0, 'TLE': 0, 'RE': 0}
-
-    for r in s:
-        a[r] += 1
-
-    for...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-173｜A - Payment]]></title>
-        <id>https://zenn.dev/hyperdb/articles/5cc84727ea7319</id>
-        <link href="https://zenn.dev/hyperdb/articles/5cc84727ea7319"/>
-        <updated>2023-03-19T06:35:22.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-173 A - Payment
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    n = getInt()
-
-    m = n % 1000
-
-    print(0 if m == 0 else 1000 - m)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-174｜B - Distance]]></title>
-        <id>https://zenn.dev/hyperdb/articles/487d0d5b6c476c</id>
-        <link href="https://zenn.dev/hyperdb/articles/487d0d5b6c476c"/>
-        <updated>2023-03-19T06:35:21.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-174 B - Distance
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def main():
-    n, d = getIntMap()
-    l = getIntListRow(n)
-
-    d = d ** 2
-
-    c = 0
-    for x, y in l:
-        ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonでAnkiの拡張機能を作ろう！]]></title>
-        <id>https://zenn.dev/tinyowl/articles/941abcf2e04262</id>
-        <link href="https://zenn.dev/tinyowl/articles/941abcf2e04262"/>
-        <updated>2023-03-19T06:03:53.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Ankiという暗記帳アプリをご存知でしょうか。
-Ankiを一言で表すと、「多機能で自由にカスタマイズ可能な暗記帳アプリ」です。
-僕はこのアプリで英単語などを学習しているのですが、英単語ノートをデッキに追加する作業が面倒で、どうにか楽できないかと悩んでいました。
-そこでPythonを使って簡単に英単語ノートを追加できる拡張機能を作ろうと思い、本記事を作成しました。
-
- 参考にしたサイト
-
-Anki公式ドキュメント(日本語版)
-Ankiのソースコード(Github)
-
-
- 環境
-
-MacOS
-Python 3.9
-Anki 2.1.60
-
-
- 拡張機能の基本
-開発する際の型サポ...]]></summary>
-        <author>
-            <name>Tiny Owl</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【ChatGPT+Python】GPT-4 API を爆速レビュー]]></title>
-        <id>https://zenn.dev/ekusiadadus/articles/youtube_chatgpt_4_api</id>
-        <link href="https://zenn.dev/ekusiadadus/articles/youtube_chatgpt_4_api"/>
-        <updated>2023-03-18T20:25:43.000Z</updated>
-        <summary type="html"><![CDATA[【ChatGPT+Python】GPT-4 API を爆速レビュー
-https://www.youtube.com/watch?v=MZAiNbJxatM
-API 部分
-https://github.com/ekusiadadus/youtube-gpt-4-api
-GPT-4 に作ってもらった Discord BOT
-https://github.com/ekusiadadus/youtube-discord-gpt-4-bot
-
- GPT-4 API が解放された！
-
-2023/03/18 2:29 に OpenAI からメールが来ていて、GPT-4 API が解放されました！
-...]]></summary>
-        <author>
-            <name>ekusiadadus</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[python-twitter-v2を使用するときは、timeoutを設定した方が良いという話]]></title>
-        <id>https://zenn.dev/sion_pn/articles/07c12d1ef2fa7f</id>
-        <link href="https://zenn.dev/sion_pn/articles/07c12d1ef2fa7f"/>
-        <updated>2023-03-18T15:02:30.000Z</updated>
-        <summary type="html"><![CDATA[python-twitter-v2とは
-https://github.com/sns-sdks/python-twitter
-pythonでTwitter API V2を叩くためのラッパーです。
-
-zsh
-pip install python-twitter-v2
-
-でインストールできます。
-
-main.py
-from pytwitter import Api
-api = Api(
-    consumer_key = 'consumer_key',
-    consumer_secret = 'consumer_secret',
-    access_token = 'access...]]></summary>
-        <author>
-            <name>SiON</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PaSoRIとFlaskを使ってICカードで部活の入退室管理をする]]></title>
-        <id>https://zenn.dev/takapc/articles/d69a9bd7a19bb1</id>
-        <link href="https://zenn.dev/takapc/articles/d69a9bd7a19bb1"/>
-        <updated>2023-03-18T14:43:00.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは。Takaと申します。普段は大阪の自称進学校でプログラミングを学んでいます。
-昔、似たようなシステムを作ったのですが利便性が無さすぎて採用されなかったのでリベンジです。
-Pythonを使って本格的にプロジェクトをするのは初めてなので大目に見てください。
-
- PaSoRiって何やねん
-PaSoRiとはソニー株式会社が提供する非接触ICカードリーダーです。FeliCa規格のカードなら何でも読み込めます。僕が700クレジットを溶かしたAimeのカードももちろん読み込めます。ちなみに日本橋で300円で売ってたそうです。動いたからヨシ！
-
- 環境
-
-Python 3.10.8
-Flask...]]></summary>
-        <author>
-            <name>takapc</name>
         </author>
     </entry>
 </feed>
