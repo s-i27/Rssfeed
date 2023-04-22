@@ -22,6 +22,409 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-04-21 datetime="2023-04-21T21:11:06.000Z">2023-04-21</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-04-21 datetime="2023-04-21T21:11:06.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/aithena/articles/7135a728266db8"
+                        open
+                      >
+                        <summary class="article-expander__title">競プロ典型90を言語化する(001/090)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/aithena/articles/7135a728266db8">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--fyMf_E-E--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25AB%25B6%25E3%2583%2597%25E3%2583%25AD%25E5%2585%25B8%25E5%259E%258B90%25E3%2582%2592%25E8%25A8%2580%25E8%25AA%259E%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2528001%252F090%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2581%2584%25E3%2581%259B%25E3%2581%25AA%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E1N2NjMzNmMjIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>問題文
+
+
+ Pythonコードの言語化
+Pythonのコードなら有名な問題なので先人の遺物が沢山あります。
+自分の拙いコードを記事にしたところで有益な情報にはなり得ないと思い、この記事では偉大な先人の解答を一緒に言語化したいと思います。少しでも力になれれば幸いです。
+以下が記事の本題です。
+# 入力
+N,L &#x3D; int(input().split()) # 切れ目の数,羊羹の長さ
+K &#x3D; int(input()) # 選ぶ切れ目の数
+A &#x3D; list(map(int,input().split())) # 切れ目の位置＝左端からの長さ
+
+# 切った全ての羊羹の長さをx以上にすること...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yumax_panda/articles/bot-tutorial-2"
+                        open
+                      >
+                        <summary class="article-expander__title">discord.py入門　その2</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yumax_panda/articles/bot-tutorial-2">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--jpl0fTuj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:discord.py%25E5%2585%25A5%25E9%2596%2580%25E3%2580%2580%25E3%2581%259D%25E3%2581%25AE2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yumax-panda%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YTdVWXY1WUt1MzdodEtHZ1dJZG5IdFRIdjJyZFVkcmZ6UlJkSnFiQT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>おさらい
+前回はbotの準備とイベントについて解説しました。今回はいよいよbotのコマンドを実装していきます。
+前回のコード（再掲）
+from discord.ext import commands
+import discord
+
+intents &#x3D; discord.Intents.default()
+intents.members &#x3D; True # メンバー管理の権限
+intents.message_content &#x3D; True # メッセージの内容を取得する権限
+
+bot &#x3D; commands.Bot(
+    command_prefix&#x3D;&quot;$&quot;, # $コマンド名　でコマンド...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/stfate/articles/2023-04-21--numba-install-error-in-py311"
+                        open
+                      >
+                        <summary class="article-expander__title">Python 3.11でnumbaのインストールに失敗する問題</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/stfate/articles/2023-04-21--numba-install-error-in-py311">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--AsgprY4x--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25203.11%25E3%2581%25A7numba%25E3%2581%25AE%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%25AB%25E5%25A4%25B1%25E6%2595%2597%25E3%2581%2599%25E3%2582%258B%25E5%2595%258F%25E9%25A1%258C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B5%25E3%2581%2587%25E3%2581%2584%25E3%2581%25A8%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc5MGRmZTllYTMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Python 3.11でnumbaのインストールに失敗する問題
+
+ 問題
+Python 3.11系でpip install numbaしたときにインストールに失敗する．
+
+
+ 原因
+numbaの安定版(0.56.4)がPython3.11に対応していないのが原因っぽい．
+numba/numba Python 3.11 #8304
+
+ 対処法
+Python 3.11に対応しているRC版を入れる．
+pip install --pre numba
+
+これでようやく3.11系に移行できる……</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yutohub/articles/4304fd9a25e522"
+                        open
+                      >
+                        <summary class="article-expander__title">BERTベースの句読点モデルによるWhisperの書き起こしの改善</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yutohub/articles/4304fd9a25e522">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--2aL4YNtD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:BERT%25E3%2583%2599%25E3%2583%25BC%25E3%2582%25B9%25E3%2581%25AE%25E5%258F%25A5%25E8%25AA%25AD%25E7%2582%25B9%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258BWhisper%25E3%2581%25AE%25E6%259B%25B8%25E3%2581%258D%25E8%25B5%25B7%25E3%2581%2593%25E3%2581%2597%25E3%2581%25AE%25E6%2594%25B9%25E5%2596%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yutohub%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZhNGVjZDFmYWMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+Whisper は、多言語音声認識システムです。その出力である書き起こしには、句読点が含まれていないことがあるため、自動翻訳の精度に悪影響を与えることがあります。そこで、Whisper の書き起こしに対して、句読点を復元するためのモデルを作りたいと思います。一般的な文章とは異なり、Whisper の書き起こしは文章が途切れていることや、話し言葉が多く含まれているなどの特徴があります。このため、句読点の復元には新しい手法が必要となります。今回は、Whisper が生成した書き起こしの中から句読点が含まれるものを自動的に抽出し、これを訓練データとして用いることで、モデルをトレーニン...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;31
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/watarungurunnn/articles/6e323d1030afcf"
+                        open
+                      >
+                        <summary class="article-expander__title">sudoが使えない場合にHomebrewをlocal directoryにインストールする</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/watarungurunnn/articles/6e323d1030afcf">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--DocgAAjV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:sudo%25E3%2581%258C%25E4%25BD%25BF%25E3%2581%2588%25E3%2581%25AA%25E3%2581%2584%25E5%25A0%25B4%25E5%2590%2588%25E3%2581%25ABHomebrew%25E3%2582%2592local%2520directory%25E3%2581%25AB%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:watarungurunnn%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3JBR185eWVBY1o2VTJIUEFObk5acmtqc0ZhaXpUWVVaWTUwQVpoWFVjPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>root権限がない &#x3D; sudoが使えない、あるいはHomebrewを複数インストールしたい場合にlocal directoryにインストールする方法
+Install homebrew to your local folder: reference
+
+ソースのダウンロード
+下記のコマンドをHomebrewをインストールしたいfolderで実行する。(homebrewを任意のdirに変えるのも可。)
+
+mkdir homebrew &amp;&amp; curl -L [https://github.com/Homebrew/brew/tarball/master](https://g...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yumax_panda/articles/bot-tutorial-1"
+                        open
+                      >
+                        <summary class="article-expander__title">discord.py入門　その1</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yumax_panda/articles/bot-tutorial-1">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s---XRO3Dea--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:discord.py%25E5%2585%25A5%25E9%2596%2580%25E3%2580%2580%25E3%2581%259D%25E3%2581%25AE1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yumax-panda%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YTdVWXY1WUt1MzdodEtHZ1dJZG5IdFRIdjJyZFVkcmZ6UlJkSnFiQT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+本記事では数回に分けて、discord.pyを使ったdiscord botの作り方を解説していきます。
+あくまで筆者の全て独学の知識ですので、参考の一助になれば幸いです。
+対象読者は以下のような方を想定しています。
+
+Pythonである程度コードを書いたことがある
+discord botを作ってみたい
+botの作り方がよくわからない
+Pythonを使ったことはあるが、discord.pyを使ったことがない
+自分で開発したbotを無料で運用したい
+
+
+ 学べること
+
+テキストコマンドの実装
+スラッシュコマンドの実装
+管理機能の実装
+コードを分割して管理する方法　（コグ）
+管理...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/9da6544ade4a73"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-208｜A - Rolling Dice</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/9da6544ade4a73">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--qjb3gJKz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-208%25EF%25BD%259CA%2520-%2520Rolling%2520Dice%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-208 A - Rolling Dice
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b &#x3D; getIntMap()
+
+    print(&#x27;Yes&#x27; if a &lt;&#x3D; b &lt;&#x3D; a * 6 else &#x27;No&#x27;)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/923f10ddc89978"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-207｜A - Repression</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/923f10ddc89978">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--g_VwRsga--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-207%25EF%25BD%259CA%2520-%2520Repression%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-207 A - Repression
+
+
+
+ 提出結果
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    l &#x3D; getIntList()
+
+    l.sort()
+
+    print(l[1] + l[2])
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/3cf990217986ef"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-207｜B - Hydrate</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/3cf990217986ef">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--i11kmyeE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-207%25EF%25BD%259CB%2520-%2520Hydrate%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-207 B - Hydrate
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b, c, d &#x3D; getIntMap()
+
+    r &#x3D; -1
+    for i in range(10 ** 5 + 1):
+        if (a + b * i) &lt;&#x3D; (c * i) * d:
+            r &#x3D; i
+            break
+    print(r)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main_...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/0d54d5f1168984"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-208｜B - Factorial Yen Coin</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/0d54d5f1168984">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--m2RTw2gz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-208%25EF%25BD%259CB%2520-%2520Factorial%2520Yen%2520Coin%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-208 B - Factorial Yen Coin
+
+
+
+ 提出結果
+import math
+
+
+def getInt():
+    return int(input())
+
+
+def main():
+    p &#x3D; getInt()
+
+    f &#x3D; []
+    i &#x3D; 1
+    while True:
+        x &#x3D; math.factorial(i)
+        if x &gt; p:
+            break
+        f.append(x)
+        i +&#x3D; 1
+    f.reverse()
+
+    c...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/gk12/articles/engineer-tool-sphinx"
+                        open
+                      >
+                        <summary class="article-expander__title">ドキュメント生成ツールSphinxを使って技術文書を作成する方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/gk12/articles/engineer-tool-sphinx">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--uosPmj1m--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2589%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588%25E7%2594%259F%25E6%2588%2590%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25ABSphinx%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E6%258A%2580%25E8%25A1%2593%25E6%2596%2587%25E6%259B%25B8%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:gk12%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2prWVpxM3E3NlBxVkRzQ21NMWlpS0ZrRjJqU0pPWDdXOTdUcnBEPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>こんにちは。本記事では、ドキュメント生成ツールのSphinxを使って、技術文書を作成する方法について解説します。Sphinxは、Pythonのドキュメンテーションツールとして開発されたもので、多言語対応やドキュメントの自動生成など、様々な機能を持っています。
+
+ Sphinxのインストール
+Sphinxをインストールするには、以下のコマンドを実行します。
+pip install sphinx
+
+ プロジェクトの初期化
+Sphinxを使って技術文書を作成するには、まずプロジェクトを初期化する必要があります。以下のコマンドを実行すると、プロジェクトの初期化が行われます。
+sphinx-qui...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-04-20 datetime="2023-04-20T18:31:21.000Z">2023-04-20</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-04-20 datetime="2023-04-20T18:31:21.000Z"></time>
           </button>
@@ -10632,269 +11035,6 @@ import sqlite3
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/skwbc/articles/implement_gradient_boosting"
-                        open
-                      >
-                        <summary class="article-expander__title">勾配ブースティングを自分で実装してみる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/skwbc/articles/implement_gradient_boosting">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--4i8ksPc9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%258B%25BE%25E9%2585%258D%25E3%2583%2596%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%2586%25E3%2582%25A3%25E3%2583%25B3%25E3%2582%25B0%25E3%2582%2592%25E8%2587%25AA%25E5%2588%2586%25E3%2581%25A7%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:skwbc%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvcy5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>概要
-勾配ブースティングは、2023年現在最も広く使われている機械学習アルゴリズムの一つです。[1]
-勾配ブースティングを実装したライブラリとしてはXGBoostやLightGBMなどが有名で、これらを使うことで高速かつ高精度な機械学習モデルを簡単に構築することが出来ます。
-実際に自分でもこれらのライブラリを日常的に使っているのですが、よく使うものなので自分でも実装してみることで良い学びが得られるような気がしています。
-そこで、本記事では勾配ブースティングのアルゴリズムを自分で実装してみようと思います。
-実装の方針は以下の通りです。
-
-最もよく使われる弱学習器として決定木を使う手法[...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;25
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kangaezaru/articles/c58c40d9bb8012"
-                        open
-                      >
-                        <summary class="article-expander__title">【ELB】AWS Boto3 by Pythonで特定タグ未付与のリソース抽出</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kangaezaru/articles/c58c40d9bb8012">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--QY6I2WFx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590ELB%25E3%2580%2591AWS%2520Boto3%2520by%2520Python%25E3%2581%25A7%25E7%2589%25B9%25E5%25AE%259A%25E3%2582%25BF%25E3%2582%25B0%25E6%259C%25AA%25E4%25BB%2598%25E4%25B8%258E%25E3%2581%25AE%25E3%2583%25AA%25E3%2582%25BD%25E3%2583%25BC%25E3%2582%25B9%25E6%258A%25BD%25E5%2587%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kangaezaru%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVhODZhZWFlMzEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>1. 本稿の概要
-
- ◆ ゴール
-以下のような機能を満たすPythonスクリプトを作成しました。
-こちらはELBインスタンス向けです。
-
-ELBで特定タグ(Owner)の付与状況をリスト化
-ローカル環境でI/Oが自由なPythonスクリプトとして実行
-その抽出結果はCSVカンマ区切り形式でローカルに出力
-
-
- ◆ 背景、前提、その他サービスまとめなど
-全体論はこちら を参照
-※単にタグを棚卸したり付与するだけならタグエディタで見るのが一番楽かとは思います。
-
- 2. 開発
-
- ◆ 概説
-E+BのOwnerタグが未付与のリソースの一覧を出力します。
-とりあえず単体では東京リージョ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kangaezaru/articles/f978d56e62beae"
-                        open
-                      >
-                        <summary class="article-expander__title">【RDS編】AWS Boto3 by Pythonで特定タグ未付与のリソース抽出</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kangaezaru/articles/f978d56e62beae">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--syNt-tCw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590RDS%25E7%25B7%25A8%25E3%2580%2591AWS%2520Boto3%2520by%2520Python%25E3%2581%25A7%25E7%2589%25B9%25E5%25AE%259A%25E3%2582%25BF%25E3%2582%25B0%25E6%259C%25AA%25E4%25BB%2598%25E4%25B8%258E%25E3%2581%25AE%25E3%2583%25AA%25E3%2582%25BD%25E3%2583%25BC%25E3%2582%25B9%25E6%258A%25BD%25E5%2587%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kangaezaru%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVhODZhZWFlMzEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>1. 本稿の概要
-
- ◆ ゴール
-以下のような機能を満たすPythonスクリプトを作成しました。
-こちらはRDSインスタンス向けです。
-
-RDSインスタンスで特定タグ(Owner)の付与状況をリスト化
-ローカル環境でI/Oが自由なPythonスクリプトとして実行
-その抽出結果はCSVカンマ区切り形式でローカルに出力
-
-
- ◆ 背景、前提、その他サービスまとめなど
-全体論はこちら を参照
-※単にタグを棚卸したり付与するだけならタグエディタで見るのが一番楽かとは思います。
-
- 2. 開発
-
- ◆ 概説
-RDSのOwnerタグが未付与のリソースの一覧を出力します。
-とりあえず単体では...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/c073aea370a601"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-179｜A - Plural Form</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/c073aea370a601">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--MgshOZrr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-179%25EF%25BD%259CA%2520-%2520Plural%2520Form%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-179 A - Plural Form
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s &#x3D; getString()
-
-    print(s + (&#x27;es&#x27; if s[-1] &#x3D;&#x3D; &#x27;s&#x27; else &#x27;s&#x27;))
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/4617a7b2a92d79"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-179｜B - Go to Jail</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/4617a7b2a92d79">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--OE7pWQdE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-179%25EF%25BD%259CB%2520-%2520Go%2520to%2520Jail%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-179 B - Go to Jail
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def main():
-    n &#x3D; getInt()
-    d &#x3D; getIntListRow(n)
-
-    z &#x3D; 0
-    for a in d:
-        if len(set(a)) &#x3D;&#x3D; 1:
-            z +&#x3D; 1...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/harukaeru/articles/c73cdcdd2cd7a8"
-                        open
-                      >
-                        <summary class="article-expander__title">ChatGPTに指示せずゼロからプロダクト（のプロトタイプ）を実装してもらった: AIを用いた革新的なアプローチ</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/harukaeru/articles/c73cdcdd2cd7a8">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--fYUr6J8N--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ChatGPT%25E3%2581%25AB%25E6%258C%2587%25E7%25A4%25BA%25E3%2581%259B%25E3%2581%259A%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589%25E3%2583%2597%25E3%2583%25AD%25E3%2583%2580%25E3%2582%25AF%25E3%2583%2588%25EF%25BC%2588%25E3%2581%25AE%25E3%2583%2597%25E3%2583%25AD%25E3%2583%2588%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2597%25EF%25BC%2589%25E3%2582%2592%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2597%25E3%2581%25A6%25E3%2582%2582%25E3%2582%2589%25E3%2581%25A3%25E3%2581%259F%253A%2520AI%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E9%259D%25A9%25E6%2596%25B0%25E7%259A%2584%25E3%2581%25AA%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%258B%25E3%2581%2588%25E3%2582%258B%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pNbUd4NXlWM3BBZFlIaWpnYXhhTHJwbjBtOUlpTWFLWmE5MkxkcGc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>■ 概要
-※ この文章は人間の文章です。
-よく「ChatGPTに何かを指示して実装してもらったり、支援してもらったりする」という内容のものを見かけます。
-ただ、ぼくとしては「そこまでわかっているのなら、勝手にプロダクトを実装できるのではないか？」と考えて、ぼくからは何も具体的な指示はせずに、プロダクトをChatGPTさんに考えてもらってそれを実装してもらいました。
-プロンプトの出発点は次の文言になります。
-
-最終的な成果物は次のような、簡単な言語学習クイズのプロトタイプになります。
-
-
-なぜ言語学習クイズかというと、ChatGPTさんから提案されたからです。ChatGPTさんは、AI...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-03-22 datetime="2023-03-22T13:54:33.000Z">2023-03-22</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-03-22 datetime="2023-03-22T13:54:33.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hkdord/articles/prometheus-python-go-rust"
-                        open
-                      >
-                        <summary class="article-expander__title">Prometheus を Python, Go, Rust で始める</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hkdord/articles/prometheus-python-go-rust">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--uMoPG45H--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Prometheus%2520%25E3%2582%2592%2520Python%252C%2520Go%252C%2520Rust%2520%25E3%2581%25A7%25E5%25A7%258B%25E3%2582%2581%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Hidekazu%2520Karino%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzljYzE5MWFjMjUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-去年から Observability に興味がありいくつか記事を書いてきた(Go で書いたアプリから Jaeger や X-Ray にトレースを送る記事とかコンテナでデプロイした AWS Lambda から X-Ray に OpenTelemetry SDK でトレースを送る記事とか)のですが、今まではトレースのことばかりでメトリクスはノータッチでした。Observability 観点だとメトリクスも外せないと考えてメトリクスデビューすることにしました。今回は Prometheus を使ってみます。アプリケーションは Python(Flask), Go (Echo), Ru...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -10902,8 +11042,8 @@ def main():
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4760446258">
-        <time id="build-timestamp" datetime="2023-04-21T01:23:37.132Z">2023-04-21T01:23:37.132Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4770164341">
+        <time id="build-timestamp" datetime="2023-04-22T01:25:10.373Z">2023-04-22T01:25:10.373Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
