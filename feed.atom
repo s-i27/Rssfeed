@@ -2,10 +2,211 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-04-26T01:24:51.419Z</updated>
+    <updated>2023-04-27T01:26:01.035Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[NumPyro：欠損値の扱い方]]></title>
+        <id>https://zenn.dev/yoshida0312/articles/d0e4c36d94d26b</id>
+        <link href="https://zenn.dev/yoshida0312/articles/d0e4c36d94d26b"/>
+        <updated>2023-04-26T14:31:58.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+今回は実務でもよくある欠損値がデータにある際の取り扱い方をみていきます。
+
+ ライブラリのインポート
+import os
+
+import jax.numpy as jnp
+from jax import random
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
+
+import numpyro
+from numpyro.diagnostics import hpdi
+import numpyro.distributions as dis...]]></summary>
+        <author>
+            <name>よしだ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[whisper、whisper.cpp、faster-whisperの比較]]></title>
+        <id>https://zenn.dev/piment/articles/24269616aa9c04</id>
+        <link href="https://zenn.dev/piment/articles/24269616aa9c04"/>
+        <updated>2023-04-26T14:30:58.000Z</updated>
+        <summary type="html"><![CDATA[現状のwhisper、whisper.cpp、faster-whiperを比較してみたいと思います。
+openai/whisperに、2022年12月にlarge-v2モデルが追加されたり、色々バージョンアップしていたりと公開からいろいろと進化しているようです。
+https://github.com/openai/whisper
+CPU向けにC/C++で書かれたバージョンです。Core ML supportだそうですので、Mac向け感が強いです。
+https://github.com/ggerganov/whisper.cpp
+CTranslate2でWhisperモデルの書き直して、オ...]]></summary>
+        <author>
+            <name>ぴーまん</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dockerで研究用Python環境構築]]></title>
+        <id>https://zenn.dev/fastsnowy/articles/adc106a4a03dc1</id>
+        <link href="https://zenn.dev/fastsnowy/articles/adc106a4a03dc1"/>
+        <updated>2023-04-26T07:05:01.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+個人的に作った環境構築方法なのでベストプラクティスではない可能性もあります
+今回はUbuntu20.04のイメージを使ってCUDA11.7でPytorchのtorch=1.13.1を構築する
+torch.cuda.is_available()でTrueが返ってきたら成功
+
+Pythonのバージョン管理にはasdfを使う
+venv or Poetryで環境を作る
+
+https://asdf-vm.com/
+
+ 開発環境
+VSCodeを前提
+Docker拡張機能をインストール
+https://marketplace.visualstudio.com/items?itemName...]]></summary>
+        <author>
+            <name>fastsnowy</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SMS認証コードをラズパイでSlackに転送してみた]]></title>
+        <id>https://zenn.dev/systemzeus_blog/articles/sms_forwarding_bot</id>
+        <link href="https://zenn.dev/systemzeus_blog/articles/sms_forwarding_bot"/>
+        <updated>2023-04-26T06:49:38.000Z</updated>
+        <summary type="html"><![CDATA[1. はじめに
+複数人で使用する共通アカウントのSMS認証にて、認証コードが特定の1台の携帯にしか送信されないことによる不便さを解決するためのボットを作成しました。SIM付きRaspberry Pi(ラズパイ)にて認証コードを受信しSlackに転送することで、共通アカウントを使用する全員に認証コードを通知することができます。ここでは認証コードを転送するラズパイをSMS転送ボットと呼び、SMS転送ボットのプログラムをGitHubに公開し、SMS転送ボットの設定方法を説明します。
+
+ 2. デモ
+SMS認証が必要なクラウドにログインし、認証コードをSlackで受信してる様子です。
+
+
+ ...]]></summary>
+        <author>
+            <name>m-minamisaka</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DeepLのAPIをpythonで使う]]></title>
+        <id>https://zenn.dev/masahiro_kaneko/articles/ab0b643bee1654</id>
+        <link href="https://zenn.dev/masahiro_kaneko/articles/ab0b643bee1654"/>
+        <updated>2023-04-26T06:46:34.000Z</updated>
+        <summary type="html"><![CDATA[コマンド
+def translate(text):
+
+    result = requests.get( 
+                "https://api.deepl.com/v2/translate", # 無料版の場合はhttps://api-free.deepl.com/v2/translate
+                params={ 
+                "auth_key": "Your API Key", # サイトで取得した認証キー
+                "target_lang": "JA", # 翻訳先の言語
+      ...]]></summary>
+        <author>
+            <name>MasahiroKaneko</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[apache beamのマネージドサービスdataflowで体験する分散データ処理ETL パイプライン]]></title>
+        <id>https://zenn.dev/nen/books/e7ffc3397dbb67</id>
+        <link href="https://zenn.dev/nen/books/e7ffc3397dbb67"/>
+        <updated>2023-04-26T06:01:54.000Z</updated>
+        <summary type="html"><![CDATA[本書は、Google Cloud Dataflow の基本的な概念から応用的なテクニックまでを網羅した実践的なガイドブックです。Cloud Dataflow  は、分散データ処理を行うためのオープンソースのプラットフォームであり、大規模なデータ処理において高いパフォーマンスを発揮します。本書では、Cloud Dataflow  の特徴やアーキテクチャについて解説し、リアルワールドでの分散データ処理の実装方法について詳しく説明します。
+
+
+
+本書は、分散データ処理に興味があるデータエンジニア、データサイエンティスト、システムアーキテクト、データベース管理者などの技術者を対象としています。また、Cloud Dataflow や Apache Beam についての事前知識は必須ではありませんが、プログラミング経験がある方にはより理解しやすい内容となっています。
+
+
+
+本書を読むことで、以下のようなメリットがあります。
+
+Cloud Dataflow や Apache Beam の基本的な概念を理解することができます。
+大規模なデータ処理におけるパフォーマンス改善に役立つテクニックを学ぶことができます。
+リアルワールドでのデータ処理の実装方法を知ることができます。
+Google Cloud Platform 上での分散データ処理に必要なスキルを習得できます。
+Apache Beam を用いたポータブルなデータ処理の方法を学ぶことができます。
+本書は、Cloud Dataflow と Apache Beam の基礎から実践的なテクニックまでを網羅した実践的なガイドブックであり、Google Cloud Platform 上での分散データ処理に興味のある技術者にとって、非常に役立つリソースとなるでしょう。]]></summary>
+        <author>
+            <name>sre_yoshiya</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-213｜A - Bitwise Exclusive Or]]></title>
+        <id>https://zenn.dev/hyperdb/articles/b95065cc37c735</id>
+        <link href="https://zenn.dev/hyperdb/articles/b95065cc37c735"/>
+        <updated>2023-04-26T03:46:04.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-213 A - Bitwise Exclusive Or
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b = getIntMap()
+
+    print(a ^ b)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-213｜B - Booby Prize]]></title>
+        <id>https://zenn.dev/hyperdb/articles/8c6c3699ca823c</id>
+        <link href="https://zenn.dev/hyperdb/articles/8c6c3699ca823c"/>
+        <updated>2023-04-26T03:46:03.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-213 B - Booby Prize
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n = getInt()
+    a = getIntList()
+
+    b = dict()
+    for i in range(n):
+        b[a[i]] = i + 1
+    c = sorted(b.items())
+
+    print(c...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[初心者エンジニアのためのPythonフリーランス副業入門]]></title>
+        <id>https://zenn.dev/gk12/articles/python-side-business</id>
+        <link href="https://zenn.dev/gk12/articles/python-side-business"/>
+        <updated>2023-04-26T02:29:31.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは。今回は、Pythonについて初心者エンジニア向けて、フリーランスや副業としての活用方法について解説します。
+
+ はじめに
+Pythonは、機械学習やデータ分析、Webアプリケーション開発など、様々な分野で利用されるプログラミング言語です。そのため、Pythonを使ったフリーランスや副業のニーズも高まっています。本記事では、Pythonをフリーランスや副業として活用するための方法について解説します。
+
+ フリーランスとしてのPython活用方法
+フリーランスとしてPythonを活用する方法は、大きく分けて2つあります。1つは、Pythonを使ったWebアプリケーション開発やデー...]]></summary>
+        <author>
+            <name>gk12</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[2023年4月版]TerraformからPythonのCDKへの移行もChatGPTでなんとか]]></title>
         <id>https://zenn.dev/asopitech/articles/20230425-214748_1</id>
@@ -6854,240 +7055,6 @@ update_value(x)
 print("x outside function:...]]></summary>
         <author>
             <name>Darman</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【手順】RWKV-LMがローカルPCで動作するまで]]></title>
-        <id>https://zenn.dev/windvoice/articles/32fb9574fcb5b5</id>
-        <link href="https://zenn.dev/windvoice/articles/32fb9574fcb5b5"/>
-        <updated>2023-03-28T13:12:47.000Z</updated>
-        <summary type="html"><![CDATA[最近話題のRWKV-LMのRWKC-v4neo 14Bモデルを手元のPCで動かしましたので手順を書き残しておきます。とても簡単に書いてありますが、だいたい私が実行した通りです。
-
- スペック
-
-CPU Intel Core i7 12700K
-64GB Memory(16GB x 4)
-NVIDIA GeForce RTX 3070(8GB) ※ただしCPUモードで動かしています
-Windows 11
-Python 3.9.12
-PyTorch 1.13.1+cu117
-
-なお、17Bモデルは64GBメモリでは本来不足なので、swap領域を増やしています。Windows 11の場合、「設...]]></summary>
-        <author>
-            <name>WindVoice</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[M1 MaxでChatRWKVを使いrwkv-4-pile-7bを動かしてみた]]></title>
-        <id>https://zenn.dev/s_ryuuki/articles/79ab112ba32c19</id>
-        <link href="https://zenn.dev/s_ryuuki/articles/79ab112ba32c19"/>
-        <updated>2023-03-28T12:32:20.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-↓の記事を見てMacでもできないかなと思い試してみました。
-https://note.com/ohnuma/n/nad3dec051684
-
- 実行環境
-
- ハード
-% system_profiler SPHardwareDataType
-Hardware:
-
-    Hardware Overview:
-
-      Model Name: Mac Studio
-      Model Identifier: Mac13,1
-      Chip: Apple M1 Max
-      Total Number of Cores: 10 (8 performance an...]]></summary>
-        <author>
-            <name>s_ryuuki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-184｜B - Quizzes]]></title>
-        <id>https://zenn.dev/hyperdb/articles/b2aadee9350e25</id>
-        <link href="https://zenn.dev/hyperdb/articles/b2aadee9350e25"/>
-        <updated>2023-03-28T07:01:05.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-184 B - Quizzes
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getString():
-    return input()
-
-
-def main():
-    n, x = getIntMap()
-    s = list(getString())
-
-    for a in s:
-        x += 1 if a == 'o' else -1
-        x = max(x, 0)
-    print(x)
-
-
-if __name__ ==...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-184｜A - Determinant]]></title>
-        <id>https://zenn.dev/hyperdb/articles/7462c69d3d35d5</id>
-        <link href="https://zenn.dev/hyperdb/articles/7462c69d3d35d5"/>
-        <updated>2023-03-28T07:01:04.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-184 A - Determinant
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b = getIntMap()
-    c, d = getIntMap()
-
-    print(a * d - b * c)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonで簡単な暗号化/復号を行うクラス]]></title>
-        <id>https://zenn.dev/shin1007/articles/3416e44ffe6868</id>
-        <link href="https://zenn.dev/shin1007/articles/3416e44ffe6868"/>
-        <updated>2023-03-28T04:22:00.000Z</updated>
-        <summary type="html"><![CDATA[クラスファイル
-from base64 import b64encode
-import csv
-from tempfile import TemporaryFile
-
-from cryptography.fernet import Fernet # pip install cryptography
-
-# TODO: PyArmorでコード自体を暗号化する
-# https://kyogom.com/tech/pyarmor/
-class Encryption:
-    # 暗号化の参考ページ
-    # https://laboratory.kazuuu.net/encrypting-...]]></summary>
-        <author>
-            <name>shin1007</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[YouTube動画編集のために利用する字幕をOpenAIのwhisper apiを使って生成する]]></title>
-        <id>https://zenn.dev/atakon/articles/youtube-transcript</id>
-        <link href="https://zenn.dev/atakon/articles/youtube-transcript"/>
-        <updated>2023-03-28T03:48:34.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは、日台カップルYouTuberです。
-以前はRailsのバックエンド開発オンリーでしたが、直近半年くらいはSwiftでiOSアプリ開発をしています。個人開発でも最近はSwiftUIを使ってゲームアプリを作っています。今月中にリリース予定なので、そちらの方もまた記事にしたいと考えています。
-
- はじめに
-今回はYouTubeの編集の際に利用する字幕の自動生成と動画編集への適用の仕方についてまとめたいと思います。
-最近OpenAIのwhisper apiが公開されたことがきっかけで調査をはじめました。
-次の一つでも当てはまればに参考になると思います。
-* OpenAIのwhiper...]]></summary>
-        <author>
-            <name>かずお</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Jupyter(matplotlib)でセンサデータの分析をする]]></title>
-        <id>https://zenn.dev/kmasan/articles/c5853d91f6f691</id>
-        <link href="https://zenn.dev/kmasan/articles/c5853d91f6f691"/>
-        <updated>2023-03-28T01:55:00.000Z</updated>
-        <summary type="html"><![CDATA[自分よくセンサを使ったことする人でセンサを扱うにも得られるデータの分析をしないといけない
-今回は自分がよくセンサデータの分析に使っているmatplotlibの使い方について載せておく
-
- matplotlibで何ができるの？
-
- グラフが作れる
-データを見れるだけでなく，データ処理の結果も表示できる
-言語はpythonを使用しているので，JupyterNotebookで実行する以外にもpython単体でも動きます
-なんならvsCodeでJupyter環境構築できます
-というかvsCodeでやるのおすすめです
-
- JupyteNotebookで実行するメリット・デメリット
-
-
-メリット
-
-...]]></summary>
-        <author>
-            <name>kmasan</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Ubuntu22.04でCOEIROINK(GPU)のエンジンを動かしてリリンちゃんと話す]]></title>
-        <id>https://zenn.dev/hojicha/articles/a5663b0b3c524a</id>
-        <link href="https://zenn.dev/hojicha/articles/a5663b0b3c524a"/>
-        <updated>2023-03-28T00:29:41.000Z</updated>
-        <summary type="html"><![CDATA[COEIROINKにリリンちゃんが追加されました。これは試すしかありません。Ubuntuで。しかし、2023/3/28現在、UbuntuはCOEIROINKによりサポートされていません。
-調べると、UbuntuでCOEIROINKのエンジンを動かす試みをされた先駆記事がありましたが、依存関係が変わったせいか私の環境では再現されませんでした。
-その後、修正して私の手元で動かすことができたので、その手順を共有します。
-※今後COEIROINKがLinuxに対応した場合は、そちらに従ってください。また、Google Colabでも動いたので、他環境で依存関係の解決に困っている方にも参考になるか...]]></summary>
-        <author>
-            <name>hojicha</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[blender]Armory3dをMacで稼働させる方法]]></title>
-        <id>https://zenn.dev/kazuma_soon/articles/ff7fffaa7f64cc</id>
-        <link href="https://zenn.dev/kazuma_soon/articles/ff7fffaa7f64cc"/>
-        <updated>2023-03-27T16:26:07.000Z</updated>
-        <summary type="html"><![CDATA[Armory3dとはblenderのゲームエンジンです。
-ゲームエンジンならUEでいいじゃん！と思いましたが、blenderで使用できるものがあるので、そちらを使用してみます。
-しかしながら、こいつ、、、公式通りにインストールしても動かない！
-今回は、MacOSでArmoryを動かすまでです。簡単です。
-
- 環境
-
-Apple M1 Pro, macOS Ventura 13.2.1
-blender 3.3.5LTS（安定版）
-
-
- アドオンのインストール
-こちらの手順で行います。
-これは他のアドオンと同じで、armory.pyをインストールします。
-注意すべきは、GitHubからダウン...]]></summary>
-        <author>
-            <name>kazuma-soon</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[プログラミング経験ゼロの社会人がPython3エンジニア認定データ分析試験に合格するまで]]></title>
-        <id>https://zenn.dev/ykmra/articles/ead0201924866d</id>
-        <link href="https://zenn.dev/ykmra/articles/ead0201924866d"/>
-        <updated>2023-03-27T13:47:37.000Z</updated>
-        <summary type="html"><![CDATA[2022/8にPython3エンジニア認定データ分析試験を受験し、合格した。
-以下に、勉強方法を共有する。
-※試験に合格することではなく、pythonを使いこなせるようになることが目的で勉強したので、最短での合格方法ではない。
-
- 勉強前
-プログラミングを業務で使用した経験なし。
-学生時代のプログラミング経験なし。
-もちろん、文法なども全く知らない状態
-統計検定２級取得済。
-
- 使用教材と勉強方法
-https://www.udemy.com/course/python-ai/
-https://www.udemy.com/course/ds_for_python/
-pythonの基本的な文...]]></summary>
-        <author>
-            <name>ykmra</name>
         </author>
     </entry>
 </feed>
