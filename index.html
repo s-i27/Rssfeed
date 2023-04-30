@@ -22,6 +22,174 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-04-29 datetime="2023-04-29T15:42:19.000Z">2023-04-29</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-04-29 datetime="2023-04-29T15:42:19.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nicktominaga/articles/read_txt_python"
+                        open
+                      >
+                        <summary class="article-expander__title">pythonでのデータ読み込みメモ</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nicktominaga/articles/read_txt_python">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--SDptjzpc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A7%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E8%25AA%25AD%25E3%2581%25BF%25E8%25BE%25BC%25E3%2581%25BF%25E3%2583%25A1%25E3%2583%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Nick%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVhYzcxZTgzYzEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>シンプルに、以下のような時系列データを
+
+
+
+time[s]
+data
+
+
+
+
+1
+5
+
+
+2
+4
+
+
+3
+3
+
+
+4
+4
+
+
+5
+5
+
+
+
+以下のようなスペース区切りのテキストファイルで扱うとする。
+ 1  5  
+ 2  4 
+ 3  3 
+ 4  4 
+ 5  5
+
+コードは以下
+import numpy as np
+
+data &#x3D; np.genfromtxt(&quot;sample.txt&quot;)
+
+data_x &#x3D; data[:,0]
+data_y &#x3D; data[:,1]
+data[:,0]の意味は、行全体（左側の：）に沿って、0列目を取ってくる
+という意味。</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/andoando/articles/60331fc517c17e"
+                        open
+                      >
+                        <summary class="article-expander__title">Pytorchでピザ判定機を作る🍕</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/andoando/articles/60331fc517c17e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--50JxjUBm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Pytorch%25E3%2581%25A7%25E3%2583%2594%25E3%2582%25B6%25E5%2588%25A4%25E5%25AE%259A%25E6%25A9%259F%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2520%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2582%2593%25E3%2581%25A9%25E3%2581%2586%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUwZDQ1ODZkNTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+こんにちは、あんどうです。今回はPytorchでピザの画像を分類する簡単な画像分類モデルを作成していきたいと思います。
+
+ ライブラリ類の準備
+from torch import optim
+from torch import nn # ネットワークや各種レイヤー
+from torch.nn import functional #より詳しいレイヤー
+from torch.utils.data import DataLoader
+from torchvision import datasets # 画像データセットのモジュール
+from torchvision import ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;13
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hodakam/articles/5ed9ca8c7a63db"
+                        open
+                      >
+                        <summary class="article-expander__title">ランク付けバッチ能動学習（Ranked batch-mode active learning）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hodakam/articles/5ed9ca8c7a63db">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--69B9S4TY--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25A9%25E3%2583%25B3%25E3%2582%25AF%25E4%25BB%2598%25E3%2581%2591%25E3%2583%2590%25E3%2583%2583%25E3%2583%2581%25E8%2583%25BD%25E5%258B%2595%25E5%25AD%25A6%25E7%25BF%2592%25EF%25BC%2588Ranked%2520batch-mode%2520active%2520learning%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hodakam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE4MTNmZjhkNjUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>ある程度のまとまりで能動学習をする
+この記事に能動学習の一般的な手法について記載しました。その中で次の学習データを決めるときに1つの候補ではなく、複数の候補をまとめて提案するという方法があると書きました。後者はbatch active learningといいます。特に化学実験を行うようなケースでは、次の学習候補を一つ一つ提案するのではなく、ある程度まとまった単位で学習する方が作業面で効率的なケースもあります。
+また、次に学習すべきデータは予測の不確実性やデータ密度などの指標によって選択され、これらを単独で用いるだけでなく、組み合わせて使うこともあると書きました。
+これらの両者を組み合...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hodakam/articles/dc749aab5b95e7"
+                        open
+                      >
+                        <summary class="article-expander__title">能動学習を雰囲気で理解する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hodakam/articles/dc749aab5b95e7">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--tTaZWseP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%2583%25BD%25E5%258B%2595%25E5%25AD%25A6%25E7%25BF%2592%25E3%2582%2592%25E9%259B%25B0%25E5%259B%25B2%25E6%25B0%2597%25E3%2581%25A7%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hodakam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE4MTNmZjhkNjUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>効率的に学習データを選ぶための戦略
+機械学習をやっていると、&quot;モデルの精度を上げるためにはデータが足りないです。増やしましょう！&quot;的なシチュエーションに遭遇します。このとき、実際どういうデータを増やしたらいいんでしょう？データが少ない場合は、ドメイン知識に明るい人が人力で選ぶという手もありますが、候補データがたくさんある場合は自動でいい感じに選択する必要があります。この”モデルの精度を上げるために自動でいい感じにデータを選択する”ということを実現する手法の一つが能動学習 (active learning)です。
+能動学習は大きく分けて、
+
+次の学習データをどうやって用意するか？(sa...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-04-28 datetime="2023-04-28T18:45:39.000Z">2023-04-28</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-04-28 datetime="2023-04-28T18:45:39.000Z"></time>
           </button>
@@ -10626,282 +10794,6 @@ ht...</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/siganai/articles/20230331_python_delete_target_list"
-                        open
-                      >
-                        <summary class="article-expander__title">【Python】配列から特定の要素を削除する方法について【備忘録】</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/siganai/articles/20230331_python_delete_target_list">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--zFpA3Phe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591%25E9%2585%258D%25E5%2588%2597%25E3%2581%258B%25E3%2582%2589%25E7%2589%25B9%25E5%25AE%259A%25E3%2581%25AE%25E8%25A6%2581%25E7%25B4%25A0%25E3%2582%2592%25E5%2589%258A%25E9%2599%25A4%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2580%2590%25E5%2582%2599%25E5%25BF%2598%25E9%258C%25B2%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:SiganAI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkMycHdUMUEzOWY2TzVOSGd4T3FHTUpqNXZNUHU4RHpwRThBQXU9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>データ分析の際に配列から特定の要素（例えば注目対象ではない要素など）を削除する方法を備忘録としてまとめる．
-使用言語はPython．
-本記事中で例示するために使用したコードとデータは，ここからダウンロード可能．
-
- 方法
-Pythonのremove関数およびpop関数を使用する．
-実際のコードを以下で示す．
-
- 実際の使用例
-ここでは例として，ある配列から任意の要素（1種類）を削除する．
-
-delete_list_target.py
-list1 &#x3D; [1, 2, 3, 4, 5]
-target1 &#x3D; 3
-list1.remove(target1)
-
-print(list1)
-# [1, ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/cfc328a436142f"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-187｜B - Gentle Pairs</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/cfc328a436142f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--TjIuG8Hz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-187%25EF%25BD%259CB%2520-%2520Gentle%2520Pairs%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-187 B - Gentle Pairs
-
-
-
- 提出結果
-import itertools
-
-
-def getInt():
-    return int(input())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def s(x, y):
-    return (y[1] - x[1]) / (y[0] - x[0])
-
-
-def main():
-    n &#x3D; getInt()
-    l &#x3D; getIntListRow(...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/1fc5ee5b3ca47d"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-187｜A - Large Digits</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/1fc5ee5b3ca47d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--c9chjVUB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-187%25EF%25BD%259CA%2520-%2520Large%2520Digits%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-187 A - Large Digits
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def s(x):
-    return sum(map(int, list(str(x))))
-
-
-def main():
-    a, b &#x3D; getIntMap()
-
-    print(max(s(a), s(b)))
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yutakawanaga/articles/d61699fa0a1b13"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonのdictに型付けする</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yutakawanaga/articles/d61699fa0a1b13">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--eX3wTrjG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AEdict%25E3%2581%25AB%25E5%259E%258B%25E4%25BB%2598%25E3%2581%2591%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:YutaKawanaga%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzljNWYwZWJhOTMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>きっかけ
-
-
-request.data[&#x27;hoge&#x27;]みたいに何が何の型で入っているのか分からないのがどうにかならないかと思って
-詳しく知りたい方はこちら
-
-
- 本題
-from typing import TypedDict
-
-class ObjectType(TypedDict):
-    id: int
-    name: str
-
-class RequestType(TypedDict):
-    foo: str
-    bar: ObjectType
-
-def get(self, args: RequestType) -&gt; None:
-    foo &#x3D; args[&#x27;...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/oreilly_ota/articles/235c11c5a67e53"
-                        open
-                      >
-                        <summary class="article-expander__title">【Postoman】PostmanでのGETリクエストが403 Forbiddenエラーを返す一方、ブラウザ上で正常に動作する状況</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/oreilly_ota/articles/235c11c5a67e53">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ju9ZxrhW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Postoman%25E3%2580%2591Postman%25E3%2581%25A7%25E3%2581%25AEGET%25E3%2583%25AA%25E3%2582%25AF%25E3%2582%25A8%25E3%2582%25B9%25E3%2583%2588%25E3%2581%258C403%2520Forbidden%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E3%2582%2592%25E8%25BF%2594%25E3%2581%2599%25E4%25B8%2580%25E6%2596%25B9%25E3%2580%2581%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25A6%25E3%2582%25B6%25E4%25B8%258A%25E3%2581%25A7%25E6%25AD%25A3...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25AA%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25A8%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25BC%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvby5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>概要
-なんとも不可思議なエラーが発生したので記事を作成。どなたかご存知の方がいれば、詳細を教えてほしい。どういったエラーかというと、Flaskアプリケーションを立ち上げた際に、上記エラーが発生した。ローカル立ち上げた後、問題なく下記レスポンスがDBから返却された。
-
-そして、試しにPostmanで同様のローカルURLに対してレスポンスを送ったところ、403エラーが返ってきた。
-
-
- 原因
-一応、上記画像にtokenは記載されているが、tokenを要するわけではない。使用するライブラリがインストールされていない、もしくはCORSの設定がされていない訳でもない。どうすれば良いものか、、と...</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-03-30 datetime="2023-03-30T19:25:22.000Z">2023-03-30</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-03-30 datetime="2023-03-30T19:25:22.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/edojidaipj/articles/da703b617ef778"
-                        open
-                      >
-                        <summary class="article-expander__title">gpt-3.5-turboを使ってチャットの異常を検知する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/edojidaipj/articles/da703b617ef778">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--rJNdNPDx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:gpt-3.5-turbo%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AE%25E7%2595%25B0%25E5%25B8%25B8%25E3%2582%2592%25E6%25A4%259C%25E7%259F%25A5%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%25B1%259F%25E6%2588%25B8%25E6%2599%2582%25E4%25BB%25A3PJ%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRiYzJmOGExYWEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>背景
-「起きたら全て消えていた」　Discordで横行する“サーバー凍結荒らし”、1万人参加サーバーが一夜で消えたその手口
-という記事を読んで、「gpt-3.5-turboに検知させたらいいんじゃなイカ！？」
-って思ったのでやってみようと思います。
-・・・
-できました。
-サーバーを開いてあるのでいろいろ試してみて下さい。
-一応言っておきますが、シークレットトークンは送信しないでくださいね？
-https://discord.gg/DnWFxRAU
-
- 実装のポイント
-以下のような構成で作りました。
-
-以下のようなプロンプトを使用して検知させてみました。
-日本語にではなく英語を使用した理...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/lot36z/articles/1c734bde03677c"
-                        open
-                      >
-                        <summary class="article-expander__title">pyenvをWindowsにインストール</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/lot36z/articles/1c734bde03677c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--n36kRnrE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pyenv%25E3%2582%2592Windows%25E3%2581%25AB%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AE%25E3%2581%25A3%25E3%2581%258B%25E3%2583%25BC%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MzdsN0cxaEFVU3pDX0ZHVktSZTBDRHRfbzRGYmMxNjV3NTZRM1U9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Windows用のpyenvのインストール方法です。
-Windows用のpyenvが以下のサイトに公開されています。
-https://github.com/pyenv-win/pyenv-win
-上記サイトに記載されている手順でインストール可能です。
-Gitコマンドを使用する方法が最新版のpyenvを使用できて便利だと思います。
-pipコマンドを使用する方法だと最新版のpyenvを使用できず、最近リリースされたPythonをpyenvでインストールできないことがありました。
-以下、PowerShellで実行していきます。
-まず以下のコマンドでpyenv-winのソースコードをホームフォル...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -10909,8 +10801,8 @@ pipコマンドを使用する方法だと最新版のpyenvを使用できず、
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4836136466">
-        <time id="build-timestamp" datetime="2023-04-29T01:24:59.756Z">2023-04-29T01:24:59.756Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4841800298">
+        <time id="build-timestamp" datetime="2023-04-30T01:35:01.257Z">2023-04-30T01:35:01.257Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

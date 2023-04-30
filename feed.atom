@@ -2,10 +2,112 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-04-29T01:24:59.806Z</updated>
+    <updated>2023-04-30T01:35:01.289Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[pythonでのデータ読み込みメモ]]></title>
+        <id>https://zenn.dev/nicktominaga/articles/read_txt_python</id>
+        <link href="https://zenn.dev/nicktominaga/articles/read_txt_python"/>
+        <updated>2023-04-29T15:42:19.000Z</updated>
+        <summary type="html"><![CDATA[シンプルに、以下のような時系列データを
+
+
+
+time[s]
+data
+
+
+
+
+1
+5
+
+
+2
+4
+
+
+3
+3
+
+
+4
+4
+
+
+5
+5
+
+
+
+以下のようなスペース区切りのテキストファイルで扱うとする。
+ 1  5  
+ 2  4 
+ 3  3 
+ 4  4 
+ 5  5
+
+コードは以下
+import numpy as np
+
+data = np.genfromtxt("sample.txt")
+
+data_x = data[:,0]
+data_y = data[:,1]
+data[:,0]の意味は、行全体（左側の：）に沿って、0列目を取ってくる
+という意味。]]></summary>
+        <author>
+            <name>Nick</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pytorchでピザ判定機を作る🍕]]></title>
+        <id>https://zenn.dev/andoando/articles/60331fc517c17e</id>
+        <link href="https://zenn.dev/andoando/articles/60331fc517c17e"/>
+        <updated>2023-04-29T09:20:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは、あんどうです。今回はPytorchでピザの画像を分類する簡単な画像分類モデルを作成していきたいと思います。
+
+ ライブラリ類の準備
+from torch import optim
+from torch import nn # ネットワークや各種レイヤー
+from torch.nn import functional #より詳しいレイヤー
+from torch.utils.data import DataLoader
+from torchvision import datasets # 画像データセットのモジュール
+from torchvision import ...]]></summary>
+        <author>
+            <name>あんどう</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ランク付けバッチ能動学習（Ranked batch-mode active learning）]]></title>
+        <id>https://zenn.dev/hodakam/articles/5ed9ca8c7a63db</id>
+        <link href="https://zenn.dev/hodakam/articles/5ed9ca8c7a63db"/>
+        <updated>2023-04-29T07:30:03.000Z</updated>
+        <summary type="html"><![CDATA[ある程度のまとまりで能動学習をする
+この記事に能動学習の一般的な手法について記載しました。その中で次の学習データを決めるときに1つの候補ではなく、複数の候補をまとめて提案するという方法があると書きました。後者はbatch active learningといいます。特に化学実験を行うようなケースでは、次の学習候補を一つ一つ提案するのではなく、ある程度まとまった単位で学習する方が作業面で効率的なケースもあります。
+また、次に学習すべきデータは予測の不確実性やデータ密度などの指標によって選択され、これらを単独で用いるだけでなく、組み合わせて使うこともあると書きました。
+これらの両者を組み合...]]></summary>
+        <author>
+            <name>hodakam</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[能動学習を雰囲気で理解する]]></title>
+        <id>https://zenn.dev/hodakam/articles/dc749aab5b95e7</id>
+        <link href="https://zenn.dev/hodakam/articles/dc749aab5b95e7"/>
+        <updated>2023-04-29T07:25:55.000Z</updated>
+        <summary type="html"><![CDATA[効率的に学習データを選ぶための戦略
+機械学習をやっていると、"モデルの精度を上げるためにはデータが足りないです。増やしましょう！"的なシチュエーションに遭遇します。このとき、実際どういうデータを増やしたらいいんでしょう？データが少ない場合は、ドメイン知識に明るい人が人力で選ぶという手もありますが、候補データがたくさんある場合は自動でいい感じに選択する必要があります。この”モデルの精度を上げるために自動でいい感じにデータを選択する”ということを実現する手法の一つが能動学習 (active learning)です。
+能動学習は大きく分けて、
+
+次の学習データをどうやって用意するか？(sa...]]></summary>
+        <author>
+            <name>hodakam</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[PythonでWindows サービス(SocketServer)を作成]]></title>
         <id>https://zenn.dev/mul/articles/20230429_01_test</id>
@@ -6768,186 +6870,6 @@ The Zen of Python
 ht...]]></summary>
         <author>
             <name>Houser</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】配列から特定の要素を削除する方法について【備忘録】]]></title>
-        <id>https://zenn.dev/siganai/articles/20230331_python_delete_target_list</id>
-        <link href="https://zenn.dev/siganai/articles/20230331_python_delete_target_list"/>
-        <updated>2023-03-31T11:38:07.000Z</updated>
-        <summary type="html"><![CDATA[データ分析の際に配列から特定の要素（例えば注目対象ではない要素など）を削除する方法を備忘録としてまとめる．
-使用言語はPython．
-本記事中で例示するために使用したコードとデータは，ここからダウンロード可能．
-
- 方法
-Pythonのremove関数およびpop関数を使用する．
-実際のコードを以下で示す．
-
- 実際の使用例
-ここでは例として，ある配列から任意の要素（1種類）を削除する．
-
-delete_list_target.py
-list1 = [1, 2, 3, 4, 5]
-target1 = 3
-list1.remove(target1)
-
-print(list1)
-# [1, ...]]></summary>
-        <author>
-            <name>SiganAI</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-187｜B - Gentle Pairs]]></title>
-        <id>https://zenn.dev/hyperdb/articles/cfc328a436142f</id>
-        <link href="https://zenn.dev/hyperdb/articles/cfc328a436142f"/>
-        <updated>2023-03-31T09:22:09.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-187 B - Gentle Pairs
-
-
-
- 提出結果
-import itertools
-
-
-def getInt():
-    return int(input())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def s(x, y):
-    return (y[1] - x[1]) / (y[0] - x[0])
-
-
-def main():
-    n = getInt()
-    l = getIntListRow(...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-187｜A - Large Digits]]></title>
-        <id>https://zenn.dev/hyperdb/articles/1fc5ee5b3ca47d</id>
-        <link href="https://zenn.dev/hyperdb/articles/1fc5ee5b3ca47d"/>
-        <updated>2023-03-31T09:22:09.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-187 A - Large Digits
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def s(x):
-    return sum(map(int, list(str(x))))
-
-
-def main():
-    a, b = getIntMap()
-
-    print(max(s(a), s(b)))
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのdictに型付けする]]></title>
-        <id>https://zenn.dev/yutakawanaga/articles/d61699fa0a1b13</id>
-        <link href="https://zenn.dev/yutakawanaga/articles/d61699fa0a1b13"/>
-        <updated>2023-03-31T01:35:15.000Z</updated>
-        <summary type="html"><![CDATA[きっかけ
-
-
-request.data['hoge']みたいに何が何の型で入っているのか分からないのがどうにかならないかと思って
-詳しく知りたい方はこちら
-
-
- 本題
-from typing import TypedDict
-
-class ObjectType(TypedDict):
-    id: int
-    name: str
-
-class RequestType(TypedDict):
-    foo: str
-    bar: ObjectType
-
-def get(self, args: RequestType) -> None:
-    foo = args['...]]></summary>
-        <author>
-            <name>YutaKawanaga</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Postoman】PostmanでのGETリクエストが403 Forbiddenエラーを返す一方、ブラウザ上で正常に動作する状況]]></title>
-        <id>https://zenn.dev/oreilly_ota/articles/235c11c5a67e53</id>
-        <link href="https://zenn.dev/oreilly_ota/articles/235c11c5a67e53"/>
-        <updated>2023-03-31T00:04:03.000Z</updated>
-        <summary type="html"><![CDATA[概要
-なんとも不可思議なエラーが発生したので記事を作成。どなたかご存知の方がいれば、詳細を教えてほしい。どういったエラーかというと、Flaskアプリケーションを立ち上げた際に、上記エラーが発生した。ローカル立ち上げた後、問題なく下記レスポンスがDBから返却された。
-
-そして、試しにPostmanで同様のローカルURLに対してレスポンスを送ったところ、403エラーが返ってきた。
-
-
- 原因
-一応、上記画像にtokenは記載されているが、tokenを要するわけではない。使用するライブラリがインストールされていない、もしくはCORSの設定がされていない訳でもない。どうすれば良いものか、、と...]]></summary>
-        <author>
-            <name>オライリーヨッシー</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[gpt-3.5-turboを使ってチャットの異常を検知する]]></title>
-        <id>https://zenn.dev/edojidaipj/articles/da703b617ef778</id>
-        <link href="https://zenn.dev/edojidaipj/articles/da703b617ef778"/>
-        <updated>2023-03-30T19:25:22.000Z</updated>
-        <summary type="html"><![CDATA[背景
-「起きたら全て消えていた」　Discordで横行する“サーバー凍結荒らし”、1万人参加サーバーが一夜で消えたその手口
-という記事を読んで、「gpt-3.5-turboに検知させたらいいんじゃなイカ！？」
-って思ったのでやってみようと思います。
-・・・
-できました。
-サーバーを開いてあるのでいろいろ試してみて下さい。
-一応言っておきますが、シークレットトークンは送信しないでくださいね？
-https://discord.gg/DnWFxRAU
-
- 実装のポイント
-以下のような構成で作りました。
-
-以下のようなプロンプトを使用して検知させてみました。
-日本語にではなく英語を使用した理...]]></summary>
-        <author>
-            <name>江戸時代PJ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pyenvをWindowsにインストール]]></title>
-        <id>https://zenn.dev/lot36z/articles/1c734bde03677c</id>
-        <link href="https://zenn.dev/lot36z/articles/1c734bde03677c"/>
-        <updated>2023-03-30T14:14:34.000Z</updated>
-        <summary type="html"><![CDATA[Windows用のpyenvのインストール方法です。
-Windows用のpyenvが以下のサイトに公開されています。
-https://github.com/pyenv-win/pyenv-win
-上記サイトに記載されている手順でインストール可能です。
-Gitコマンドを使用する方法が最新版のpyenvを使用できて便利だと思います。
-pipコマンドを使用する方法だと最新版のpyenvを使用できず、最近リリースされたPythonをpyenvでインストールできないことがありました。
-以下、PowerShellで実行していきます。
-まず以下のコマンドでpyenv-winのソースコードをホームフォル...]]></summary>
-        <author>
-            <name>のっかー</name>
         </author>
     </entry>
 </feed>

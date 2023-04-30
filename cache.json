@@ -12,6 +12,66 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/nicktominaga/articles/read_txt_python",
+          "author": "Nick",
+          "description": "シンプルに、以下のような時系列データを\n\n\n\ntime[s]\ndata\n\n\n\n\n1\n5\n\n\n2\n4\n\n\n3\n3\n\n\n4\n4\n\n\n5\n5\n\n\n\n以下のようなスペース区切りのテキストファイルで扱うとする。\n 1  5  \n 2  4 \n 3  3 \n 4  4 \n 5  5\n\nコードは以下\nimport numpy as np\n\ndata = np.genfromtxt(\"sample.txt\")\n\ndata_x = data[:,0]\ndata_y = data[:,1]\ndata[:,0]の意味は、行全体（左側の：）に沿って、0列目を取ってくる\nという意味。",
+          "link": "https://zenn.dev/nicktominaga/articles/read_txt_python",
+          "publishedOn": "2023-04-29T15:42:19.000Z",
+          "wordCount": 125,
+          "title": "pythonでのデータ読み込みメモ",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--SDptjzpc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A7%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E8%25AA%25AD%25E3%2581%25BF%25E8%25BE%25BC%25E3%2581%25BF%25E3%2583%25A1%25E3%2583%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Nick%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVhYzcxZTgzYzEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--SDptjzpc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A7%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E8%25AA%25AD%25E3%2581%25BF%25E8%25BE%25BC%25E3%2581%25BF%25E3%2583%25A1%25E3%2583%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Nick%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVhYzcxZTgzYzEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/andoando/articles/60331fc517c17e",
+          "author": "あんどう",
+          "description": "はじめに\nこんにちは、あんどうです。今回はPytorchでピザの画像を分類する簡単な画像分類モデルを作成していきたいと思います。\n\n ライブラリ類の準備\nfrom torch import optim\nfrom torch import nn # ネットワークや各種レイヤー\nfrom torch.nn import functional #より詳しいレイヤー\nfrom torch.utils.data import DataLoader\nfrom torchvision import datasets # 画像データセットのモジュール\nfrom torchvision import ...",
+          "link": "https://zenn.dev/andoando/articles/60331fc517c17e",
+          "publishedOn": "2023-04-29T09:20:00.000Z",
+          "wordCount": 3960,
+          "title": "Pytorchでピザ判定機を作る🍕",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--50JxjUBm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Pytorch%25E3%2581%25A7%25E3%2583%2594%25E3%2582%25B6%25E5%2588%25A4%25E5%25AE%259A%25E6%25A9%259F%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2520%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2582%2593%25E3%2581%25A9%25E3%2581%2586%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUwZDQ1ODZkNTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--50JxjUBm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Pytorch%25E3%2581%25A7%25E3%2583%2594%25E3%2582%25B6%25E5%2588%25A4%25E5%25AE%259A%25E6%25A9%259F%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2520%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2582%2593%25E3%2581%25A9%25E3%2581%2586%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUwZDQ1ODZkNTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/hodakam/articles/5ed9ca8c7a63db",
+          "author": "hodakam",
+          "description": "ある程度のまとまりで能動学習をする\nこの記事に能動学習の一般的な手法について記載しました。その中で次の学習データを決めるときに1つの候補ではなく、複数の候補をまとめて提案するという方法があると書きました。後者はbatch active learningといいます。特に化学実験を行うようなケースでは、次の学習候補を一つ一つ提案するのではなく、ある程度まとまった単位で学習する方が作業面で効率的なケースもあります。\nまた、次に学習すべきデータは予測の不確実性やデータ密度などの指標によって選択され、これらを単独で用いるだけでなく、組み合わせて使うこともあると書きました。\nこれらの両者を組み合...",
+          "link": "https://zenn.dev/hodakam/articles/5ed9ca8c7a63db",
+          "publishedOn": "2023-04-29T07:30:03.000Z",
+          "wordCount": 1195,
+          "title": "ランク付けバッチ能動学習（Ranked batch-mode active learning）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--69B9S4TY--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25A9%25E3%2583%25B3%25E3%2582%25AF%25E4%25BB%2598%25E3%2581%2591%25E3%2583%2590%25E3%2583%2583%25E3%2583%2581%25E8%2583%25BD%25E5%258B%2595%25E5%25AD%25A6%25E7%25BF%2592%25EF%25BC%2588Ranked%2520batch-mode%2520active%2520learning%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hodakam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE4MTNmZjhkNjUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--69B9S4TY--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25A9%25E3%2583%25B3%25E3%2582%25AF%25E4%25BB%2598%25E3%2581%2591%25E3%2583%2590%25E3%2583%2583%25E3%2583%2581%25E8%2583%25BD%25E5%258B%2595%25E5%25AD%25A6%25E7%25BF%2592%25EF%25BC%2588Ranked%2520batch-mode%2520active%2520learning%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hodakam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE4MTNmZjhkNjUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/hodakam/articles/dc749aab5b95e7",
+          "author": "hodakam",
+          "description": "効率的に学習データを選ぶための戦略\n機械学習をやっていると、\"モデルの精度を上げるためにはデータが足りないです。増やしましょう！\"的なシチュエーションに遭遇します。このとき、実際どういうデータを増やしたらいいんでしょう？データが少ない場合は、ドメイン知識に明るい人が人力で選ぶという手もありますが、候補データがたくさんある場合は自動でいい感じに選択する必要があります。この”モデルの精度を上げるために自動でいい感じにデータを選択する”ということを実現する手法の一つが能動学習 (active learning)です。\n能動学習は大きく分けて、\n\n次の学習データをどうやって用意するか？(sa...",
+          "link": "https://zenn.dev/hodakam/articles/dc749aab5b95e7",
+          "publishedOn": "2023-04-29T07:25:55.000Z",
+          "wordCount": 309,
+          "title": "能動学習を雰囲気で理解する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--tTaZWseP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%2583%25BD%25E5%258B%2595%25E5%25AD%25A6%25E7%25BF%2592%25E3%2582%2592%25E9%259B%25B0%25E5%259B%25B2%25E6%25B0%2597%25E3%2581%25A7%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hodakam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE4MTNmZjhkNjUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--tTaZWseP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%2583%25BD%25E5%258B%2595%25E5%25AD%25A6%25E7%25BF%2592%25E3%2582%2592%25E9%259B%25B0%25E5%259B%25B2%25E6%25B0%2597%25E3%2581%25A7%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hodakam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE4MTNmZjhkNjUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
           "id": "https://zenn.dev/mul/articles/20230429_01_test",
           "author": "MulciEla",
           "description": "Windows 2019Server(Windows10でも同じ)\nPython 3.7.8\n\n Pythonをインストール\npython-3.7.8.exeを使用してインストール\n今回は諸事情で32bit版をインストールしていますが64bit版でも問題ないはず\n\n ライブラリのインストール\nWindowsサービスということで今回はpywin32を使用する\npip install pywin32\n※もし上記のコマンドで64bit版のpywin32がインストールされてしまう場合は32bit版の.whlファイルを事前に準備し直接指定してインストールを行いましょう\n\n 環境変数\n以下の6つの環...",
@@ -4625,111 +4685,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--eDgGPl3L--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E9%2596%258B%25E7%2599%25BA%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E5%258F%2582%25E8%2580%2583%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Houser%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc4OWMwMzE5MGIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/siganai/articles/20230331_python_delete_target_list",
-          "author": "SiganAI",
-          "description": "データ分析の際に配列から特定の要素（例えば注目対象ではない要素など）を削除する方法を備忘録としてまとめる．\n使用言語はPython．\n本記事中で例示するために使用したコードとデータは，ここからダウンロード可能．\n\n 方法\nPythonのremove関数およびpop関数を使用する．\n実際のコードを以下で示す．\n\n 実際の使用例\nここでは例として，ある配列から任意の要素（1種類）を削除する．\n\ndelete_list_target.py\nlist1 = [1, 2, 3, 4, 5]\ntarget1 = 3\nlist1.remove(target1)\n\nprint(list1)\n# [1, ...",
-          "link": "https://zenn.dev/siganai/articles/20230331_python_delete_target_list",
-          "publishedOn": "2023-03-31T11:38:07.000Z",
-          "wordCount": 947,
-          "title": "【Python】配列から特定の要素を削除する方法について【備忘録】",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--zFpA3Phe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591%25E9%2585%258D%25E5%2588%2597%25E3%2581%258B%25E3%2582%2589%25E7%2589%25B9%25E5%25AE%259A%25E3%2581%25AE%25E8%25A6%2581%25E7%25B4%25A0%25E3%2582%2592%25E5%2589%258A%25E9%2599%25A4%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2580%2590%25E5%2582%2599%25E5%25BF%2598%25E9%258C%25B2%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:SiganAI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkMycHdUMUEzOWY2TzVOSGd4T3FHTUpqNXZNUHU4RHpwRThBQXU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--zFpA3Phe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591%25E9%2585%258D%25E5%2588%2597%25E3%2581%258B%25E3%2582%2589%25E7%2589%25B9%25E5%25AE%259A%25E3%2581%25AE%25E8%25A6%2581%25E7%25B4%25A0%25E3%2582%2592%25E5%2589%258A%25E9%2599%25A4%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2580%2590%25E5%2582%2599%25E5%25BF%2598%25E9%258C%25B2%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:SiganAI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MkMycHdUMUEzOWY2TzVOSGd4T3FHTUpqNXZNUHU4RHpwRThBQXU9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/hyperdb/articles/cfc328a436142f",
-          "author": "はいぱぁ",
-          "description": "設問ページ\n\n🔗ABC-187 B - Gentle Pairs\n\n\n\n 提出結果\nimport itertools\n\n\ndef getInt():\n    return int(input())\n\n\ndef getIntListRow(N):\n    return [list(map(int, input().split())) for _ in range(N)]\n\n\ndef s(x, y):\n    return (y[1] - x[1]) / (y[0] - x[0])\n\n\ndef main():\n    n = getInt()\n    l = getIntListRow(...",
-          "link": "https://zenn.dev/hyperdb/articles/cfc328a436142f",
-          "publishedOn": "2023-03-31T09:22:09.000Z",
-          "wordCount": 510,
-          "title": "［AtCoder］ABC-187｜B - Gentle Pairs",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--TjIuG8Hz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-187%25EF%25BD%259CB%2520-%2520Gentle%2520Pairs%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--TjIuG8Hz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-187%25EF%25BD%259CB%2520-%2520Gentle%2520Pairs%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/hyperdb/articles/1fc5ee5b3ca47d",
-          "author": "はいぱぁ",
-          "description": "設問ページ\n\n🔗ABC-187 A - Large Digits\n\n\n\n 提出結果\ndef getIntMap():\n    return map(int, input().split())\n\n\ndef s(x):\n    return sum(map(int, list(str(x))))\n\n\ndef main():\n    a, b = getIntMap()\n\n    print(max(s(a), s(b)))\n\n\nif __name__ == \"__main__\":\n    main()",
-          "link": "https://zenn.dev/hyperdb/articles/1fc5ee5b3ca47d",
-          "publishedOn": "2023-03-31T09:22:09.000Z",
-          "wordCount": 292,
-          "title": "［AtCoder］ABC-187｜A - Large Digits",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--c9chjVUB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-187%25EF%25BD%259CA%2520-%2520Large%2520Digits%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--c9chjVUB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-187%25EF%25BD%259CA%2520-%2520Large%2520Digits%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/yutakawanaga/articles/d61699fa0a1b13",
-          "author": "YutaKawanaga",
-          "description": "きっかけ\n\n\nrequest.data['hoge']みたいに何が何の型で入っているのか分からないのがどうにかならないかと思って\n詳しく知りたい方はこちら\n\n\n 本題\nfrom typing import TypedDict\n\nclass ObjectType(TypedDict):\n    id: int\n    name: str\n\nclass RequestType(TypedDict):\n    foo: str\n    bar: ObjectType\n\ndef get(self, args: RequestType) -> None:\n    foo = args['...",
-          "link": "https://zenn.dev/yutakawanaga/articles/d61699fa0a1b13",
-          "publishedOn": "2023-03-31T01:35:15.000Z",
-          "wordCount": 263,
-          "title": "Pythonのdictに型付けする",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--eX3wTrjG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AEdict%25E3%2581%25AB%25E5%259E%258B%25E4%25BB%2598%25E3%2581%2591%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:YutaKawanaga%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzljNWYwZWJhOTMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--eX3wTrjG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AEdict%25E3%2581%25AB%25E5%259E%258B%25E4%25BB%2598%25E3%2581%2591%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:YutaKawanaga%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzljNWYwZWJhOTMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/oreilly_ota/articles/235c11c5a67e53",
-          "author": "オライリーヨッシー",
-          "description": "概要\nなんとも不可思議なエラーが発生したので記事を作成。どなたかご存知の方がいれば、詳細を教えてほしい。どういったエラーかというと、Flaskアプリケーションを立ち上げた際に、上記エラーが発生した。ローカル立ち上げた後、問題なく下記レスポンスがDBから返却された。\n\nそして、試しにPostmanで同様のローカルURLに対してレスポンスを送ったところ、403エラーが返ってきた。\n\n\n 原因\n一応、上記画像にtokenは記載されているが、tokenを要するわけではない。使用するライブラリがインストールされていない、もしくはCORSの設定がされていない訳でもない。どうすれば良いものか、、と...",
-          "link": "https://zenn.dev/oreilly_ota/articles/235c11c5a67e53",
-          "publishedOn": "2023-03-31T00:04:03.000Z",
-          "wordCount": 123,
-          "title": "【Postoman】PostmanでのGETリクエストが403 Forbiddenエラーを返す一方、ブラウザ上で正常に動作する状況",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--ju9ZxrhW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Postoman%25E3%2580%2591Postman%25E3%2581%25A7%25E3%2581%25AEGET%25E3%2583%25AA%25E3%2582%25AF%25E3%2582%25A8%25E3%2582%25B9%25E3%2583%2588%25E3%2581%258C403%2520Forbidden%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E3%2582%2592%25E8%25BF%2594%25E3%2581%2599%25E4%25B8%2580%25E6%2596%25B9%25E3%2580%2581%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25A6%25E3%2582%25B6%25E4%25B8%258A%25E3%2581%25A7%25E6%25AD%25A3...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25AA%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25A8%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25BC%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvby5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--ju9ZxrhW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Postoman%25E3%2580%2591Postman%25E3%2581%25A7%25E3%2581%25AEGET%25E3%2583%25AA%25E3%2582%25AF%25E3%2582%25A8%25E3%2582%25B9%25E3%2583%2588%25E3%2581%258C403%2520Forbidden%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E3%2582%2592%25E8%25BF%2594%25E3%2581%2599%25E4%25B8%2580%25E6%2596%25B9%25E3%2580%2581%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25A6%25E3%2582%25B6%25E4%25B8%258A%25E3%2581%25A7%25E6%25AD%25A3...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25AA%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25A8%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25BC%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvby5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/edojidaipj/articles/da703b617ef778",
-          "author": "江戸時代PJ",
-          "description": "背景\n「起きたら全て消えていた」　Discordで横行する“サーバー凍結荒らし”、1万人参加サーバーが一夜で消えたその手口\nという記事を読んで、「gpt-3.5-turboに検知させたらいいんじゃなイカ！？」\nって思ったのでやってみようと思います。\n・・・\nできました。\nサーバーを開いてあるのでいろいろ試してみて下さい。\n一応言っておきますが、シークレットトークンは送信しないでくださいね？\nhttps://discord.gg/DnWFxRAU\n\n 実装のポイント\n以下のような構成で作りました。\n\n以下のようなプロンプトを使用して検知させてみました。\n日本語にではなく英語を使用した理...",
-          "link": "https://zenn.dev/edojidaipj/articles/da703b617ef778",
-          "publishedOn": "2023-03-30T19:25:22.000Z",
-          "wordCount": 393,
-          "title": "gpt-3.5-turboを使ってチャットの異常を検知する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--rJNdNPDx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:gpt-3.5-turbo%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AE%25E7%2595%25B0%25E5%25B8%25B8%25E3%2582%2592%25E6%25A4%259C%25E7%259F%25A5%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%25B1%259F%25E6%2588%25B8%25E6%2599%2582%25E4%25BB%25A3PJ%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRiYzJmOGExYWEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--rJNdNPDx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:gpt-3.5-turbo%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AE%25E7%2595%25B0%25E5%25B8%25B8%25E3%2582%2592%25E6%25A4%259C%25E7%259F%25A5%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%25B1%259F%25E6%2588%25B8%25E6%2599%2582%25E4%25BB%25A3PJ%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRiYzJmOGExYWEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/lot36z/articles/1c734bde03677c",
-          "author": "のっかー",
-          "description": "Windows用のpyenvのインストール方法です。\nWindows用のpyenvが以下のサイトに公開されています。\nhttps://github.com/pyenv-win/pyenv-win\n上記サイトに記載されている手順でインストール可能です。\nGitコマンドを使用する方法が最新版のpyenvを使用できて便利だと思います。\npipコマンドを使用する方法だと最新版のpyenvを使用できず、最近リリースされたPythonをpyenvでインストールできないことがありました。\n以下、PowerShellで実行していきます。\nまず以下のコマンドでpyenv-winのソースコードをホームフォル...",
-          "link": "https://zenn.dev/lot36z/articles/1c734bde03677c",
-          "publishedOn": "2023-03-30T14:14:34.000Z",
-          "wordCount": 267,
-          "title": "pyenvをWindowsにインストール",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--n36kRnrE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pyenv%25E3%2582%2592Windows%25E3%2581%25AB%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AE%25E3%2581%25A3%25E3%2581%258B%25E3%2583%25BC%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MzdsN0cxaEFVU3pDX0ZHVktSZTBDRHRfbzRGYmMxNjV3NTZRM1U9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--n36kRnrE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pyenv%25E3%2582%2592Windows%25E3%2581%25AB%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AE%25E3%2581%25A3%25E3%2581%258B%25E3%2583%25BC%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MzdsN0cxaEFVU3pDX0ZHVktSZTBDRHRfbzRGYmMxNjV3NTZRM1U9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
         }
       ]
     }
