@@ -2,10 +2,258 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-05-02T01:25:37.383Z</updated>
+    <updated>2023-05-03T01:25:59.302Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Djangoで全テーブルのIDの採番状況をチェックする]]></title>
+        <id>https://zenn.dev/yktakaha4/articles/describe_remaining_id_length_in_django</id>
+        <link href="https://zenn.dev/yktakaha4/articles/describe_remaining_id_length_in_django"/>
+        <updated>2023-05-02T14:33:06.000Z</updated>
+        <summary type="html"><![CDATA[小ネタです🍣
+DjangoのModelにデフォルトで存在するidフィールドについて、idをどの程度採番しているか簡単にチェックするためのスクリプトです
+全モデルの全フィールドを走査し、AutoFieldがあったら Model.objects.latest(*fields) を出力します
+https://docs.djangoproject.com/en/4.2/ref/models/querysets/#latest
+本スクリプトはSQLを扱わないため、MySQLでもPostgreSQLでも同様の結果を得ることができるものと思います
+しかしながら、この実装だと最新のidが削除済みの場合に...]]></summary>
+        <author>
+            <name>Yuuki Takahashi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FlaskからHTMLに埋め込んだUnityWebGLを操作する方法]]></title>
+        <id>https://zenn.dev/make_it_happen/articles/758264e7dd8d9c</id>
+        <link href="https://zenn.dev/make_it_happen/articles/758264e7dd8d9c"/>
+        <updated>2023-05-02T08:09:57.000Z</updated>
+        <summary type="html"><![CDATA[前置き
+RaspberryPiに接続したデバイスをプログラミングの出来ない人にプレゼントすることになり、Flaskを使ってブラウザからデバイス操作できるようにしてあげました。
+その際にデバイス状態が視覚的にわかるようにUnityで3Dモデルを作成とWebGLビルドを行い、RaspberryPiからのセンサーデータでUnityのモデル状態が変更するようにしました。
+今回は上記を実現するために使用した技術を忘れないために備忘録的にまとめました。
+
+ 作ったもの
+前置きで書いたプレゼントの品は個人情報を含むので別途サンプルを作成しました。
+今回はボタンを押すとボールの転がる速度が変化するサ...]]></summary>
+        <author>
+            <name>Make It happen</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Anomalib with custom data setup(日本語つき)]]></title>
+        <id>https://zenn.dev/manyan3/articles/c42e3651e9fe8d</id>
+        <link href="https://zenn.dev/manyan3/articles/c42e3651e9fe8d"/>
+        <updated>2023-05-02T08:00:42.000Z</updated>
+        <summary type="html"><![CDATA[Anomalib
+https://github.com/openvinotoolkit/anomalib
+https://openvinotoolkit.github.io/anomalib/
+
+Anomalib is a deep learning library that aims to collect state-of-the-art anomaly detection algorithms for benchmarking on both public and private datasets.
+
+!
+
+公式Gitとページです。
+Anomaly detection、異常検知の...]]></summary>
+        <author>
+            <name>Manyan3</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-217｜B - AtCoder Quiz]]></title>
+        <id>https://zenn.dev/hyperdb/articles/c337cff7ac2197</id>
+        <link href="https://zenn.dev/hyperdb/articles/c337cff7ac2197"/>
+        <updated>2023-05-02T07:33:38.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-217 B - AtCoder Quiz
+
+
+
+ 提出結果
+def getStringRow(N):
+    return [input() for _ in range(N)]
+
+
+def main():
+    s = getStringRow(3)
+    t = ['ABC', 'ARC', 'AGC', 'AHC']
+
+    for w in t:
+        if w in s:
+            continue
+        print(w)
+        break
+
+
+if __name__ == "__main__":
+ ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-217｜A - Lexicographic Order]]></title>
+        <id>https://zenn.dev/hyperdb/articles/bd91eeff631b5f</id>
+        <link href="https://zenn.dev/hyperdb/articles/bd91eeff631b5f"/>
+        <updated>2023-05-02T07:33:37.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-217 A - Lexicographic Order
+
+
+
+ 提出結果
+def getStringList():
+    return list(input().split())
+
+
+def main():
+    s = getStringList()
+    t = sorted(s)
+
+    print('Yes' if s[0] == t[0] else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RDKitで拘束を入れて構造最適化をする]]></title>
+        <id>https://zenn.dev/hodakam/articles/aae7e98b512783</id>
+        <link href="https://zenn.dev/hodakam/articles/aae7e98b512783"/>
+        <updated>2023-05-02T05:13:55.000Z</updated>
+        <summary type="html"><![CDATA[RDKitの構造最適化
+前回の記事で、RDKit上で複数分子を取り扱い、移動や回転を行ってみました。ただし、ここでの分子操作はあくまでも幾何的に行ったものであり化学的に正しいとは限りません。そのため、こういった化学構造を初期構造として量子化学計算を行うとうまく収束しないことが多いです。うまく構造を収束させるために低レベル基底や汎関数での事前の最適化や分子力場による構造最適化を行います。
+RDKitにも分子力場による構造最適化の機能は備わっています。しかし、よくある公式リファレンスのやり方だと構造の拘束がないので、二量体のように特定の原子間の位置関係を制御した状態で最適化することはでき...]]></summary>
+        <author>
+            <name>hodakam</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LangchainとGPTを使ってニュースの自動要約プログラムを作成した]]></title>
+        <id>https://zenn.dev/seiyakitazume/articles/d791a37c73b63d</id>
+        <link href="https://zenn.dev/seiyakitazume/articles/d791a37c73b63d"/>
+        <updated>2023-05-02T05:07:32.000Z</updated>
+        <summary type="html"><![CDATA[LangchainとGPTを使用したニュースの要約しました。
+
+ 主な処理
+
+ニュース記事のスクレイピング（prtimes）
+prtimesの記事の参照元のサイトを要約し、記事を生成
+
+
+ 1. ニュース記事のスクレイピング crawling.py
+対象：prtimes
+
+prtimes
+
+data/prtimes_company.csvにpratimesにおけるcompany_idを一覧で保持する
+保持しているcompany_idの企業の記事は、RSSでtitle、url、intro、updated（更新日）を取得してデータベースのprtimesテーブルに保存する。
+
+
+
+
+ 2. 記...]]></summary>
+        <author>
+            <name>seiyakitazume</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonで気象庁の津波情報(XML電文)をパースする]]></title>
+        <id>https://zenn.dev/zekkn/articles/ed170f977b086c</id>
+        <link href="https://zenn.dev/zekkn/articles/ed170f977b086c"/>
+        <updated>2023-05-02T04:34:39.000Z</updated>
+        <summary type="html"><![CDATA[津波情報のXMLをパースする
+気象庁のサイトには気象庁防災情報XMLフォーマット形式電文が公開されていて、一般の人でも取得することができる。
+ここでは気象全般の情報、地震津波火山情報なども提供されている。
+そこで、Pythonを使ってXML電文をパースしてみた。
+
+ 実際のXML電文の構造
+2022年1月トンガ噴火に伴う地球規模の津波発生により奄美大島、トカラ列島に津波警報が発表されたときの実際の電文が以下のサイトでアーカイブされている。
+http://agora.ex.nii.ac.jp/cgi-bin/cps/report_xml.pl?id=20220115151519_0_V...]]></summary>
+        <author>
+            <name>zekkn</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[すぐに実行できる、最もシンプルなAjaxのサンプル]]></title>
+        <id>https://zenn.dev/amemy/articles/2f90ce384cd180</id>
+        <link href="https://zenn.dev/amemy/articles/2f90ce384cd180"/>
+        <updated>2023-05-02T04:15:41.000Z</updated>
+        <summary type="html"><![CDATA[完成イメージ：
+
+この記事では、ブラウザのボタンを押したら、サーバー内のPythonファイルを実行し、その実行結果をブラウザに表示するプログラムを作成します。
+Ajaxを使用して非同期通信を行い、画面遷移を防ぎます。
+Flaskを使ってPythonのウェブアプリケーションを作成し、JavaScriptと連携させます。
+
+ 前提
+
+pythonがインストールされていて、実行可能なことを前提としています。
+windows11でテストしましたが、他のパソコンでも同様に実行できるはずです。
+
+
+ 準備
+以下のコマンドでFlaskをインストールします。
+pip install Flask
+次に、以...]]></summary>
+        <author>
+            <name>雨宮甲念</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonでHTMLからURLを抜き出す]]></title>
+        <id>https://zenn.dev/nekodamistie/articles/4910ffa201dd9a</id>
+        <link href="https://zenn.dev/nekodamistie/articles/4910ffa201dd9a"/>
+        <updated>2023-05-02T03:06:05.000Z</updated>
+        <summary type="html"><![CDATA[HTMLコードからURLだけ抜き出したい
+URLだけ抜き出したい時には正規表現を使いました。
+
+ URLの形を把握する
+URLの形は、主に以下のようなものが多い。
+・http://....
+・https://...
+別の形式が決まっていればそちらも検討する。
+
+ 使用した正規表現
+url_pattern = "https?://[\w/:%#\$&\?\(\)~\.=\+\-]+"
+
+ 解説
+http  --> httpがある（から始まる）
+s?  --> sは0回か1回繰り返す
+://  --> ://がある
+[] --> 次の文字集合
+\w --&...]]></summary>
+        <author>
+            <name>sacat.neko</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPIで学ぶPythonによるREST API開発の基本]]></title>
+        <id>https://zenn.dev/nameless_sn/articles/fastapi_tutorial_for_rest</id>
+        <link href="https://zenn.dev/nameless_sn/articles/fastapi_tutorial_for_rest"/>
+        <updated>2023-05-02T02:44:46.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+今回の記事では、FastAPIでREST APIを開発する手順を簡潔に解説する。
+
+ 本記事の対象読者
+
+Pythonの基本文法(データ型、条件分岐、繰り返し)を理解している人
+RailsやLaravel等のWebフレームワークで簡単なWebアプリケーションを開発できる人
+FastAPIで簡潔にREST APIを開発したい人
+
+
+ 用語解説
+
+ FastAPI
+FastAPIの公式ドキュメントによると、以下のように説明されている。
+
+FastAPI is a modern, fast (high-performance), web framework for buildin...]]></summary>
+        <author>
+            <name>Shota Nukumizu</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Azure Functionsを vscodeからデプロイする(python,langchain)]]></title>
         <id>https://zenn.dev/hiroshimraz/articles/b65d3d06eebb95</id>
@@ -6624,267 +6872,6 @@ Detectron2はFacebook AIのオープンソースPJで、PyTorchの物体検出�
 物体検知 Boun...]]></summary>
         <author>
             <name>Junk</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonでclassを使う: 設計編(3) propertyでメンバーの定義]]></title>
-        <id>https://zenn.dev/sergicalsix/articles/1e6d8fbab66ca9</id>
-        <link href="https://zenn.dev/sergicalsix/articles/1e6d8fbab66ca9"/>
-        <updated>2023-04-03T12:07:08.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-本記事ではメンバーの定義におけるpropertyの説明をします。
-基本的に趣味や学部の研究レベルでは、通常のメンバーの定義で事足ります。
-通常のメンバー定義やその意義については以下の記事で解説しています。
-https://zenn.dev/sergicalsix/articles/2c7832353b6afa
-propertyはプログラムの堅牢化やバリデーションで用いられる他、世の中のプログラムで広く使われているため、理解は必須です。
-
- propertyとは
-クラスのメンバーで変数のように参照することのできる関数のことをプロパティといいます。
-もっともわかりやすい使用例は...]]></summary>
-        <author>
-            <name>sergicalsix</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[dataclasses.dataclassの応用例、環境設定を受け取る]]></title>
-        <id>https://zenn.dev/karamawanu/articles/d1df0d95136b42</id>
-        <link href="https://zenn.dev/karamawanu/articles/d1df0d95136b42"/>
-        <updated>2023-04-03T08:19:37.000Z</updated>
-        <summary type="html"><![CDATA[俗にフルスタックフレームワークと呼ばれるミドルウェアでは設定をハードコーディングする場合が多い。config.py とか config.php がそれである。
-しかしあらゆる案件に限らず文字列定数はソースコードの内外に定義できた方が何かと便利である。
-最近はオワコンとされてる12条項アプリケーションでも同様の主張がある。
-https://12factor.net/ja/config
-12条項アプリケーションでは、環境変数を使うことを主張してるが、それに加えて小生はINIファイルを推したい。
-もともと手書きでの運用を意識しており、セクション／key/valueにより大項目小項目の機能もある...]]></summary>
-        <author>
-            <name>karamawanu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonで負の数のモジュラス演算を用いてジャンケンを作る]]></title>
-        <id>https://zenn.dev/yutabeee/articles/460683ee113535</id>
-        <link href="https://zenn.dev/yutabeee/articles/460683ee113535"/>
-        <updated>2023-04-03T05:10:30.000Z</updated>
-        <summary type="html"><![CDATA[モジュラス演算を学習したので、負の数のモジュラス演算を使ってじゃんけんのプログラムを作成しました。
-https://zenn.dev/yutabeee/articles/7c69c655166532
-
- コード全体
-以下に、負の数のモジュラス演算を用いたPythonでのジャンケンプログラムのサンプルコードを示します。
-import random
-
-def main():
-    hands = {0: 'グー', 1: 'チョキ', 2: 'パー'}
-    print('ジャンケンを開始します。手を選んでください。')
-    print('0: グー, 1: チョキ, 2: パー')...]]></summary>
-        <author>
-            <name>Darman</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-190｜A - Very Very Primitive Game]]></title>
-        <id>https://zenn.dev/hyperdb/articles/e573a98948a996</id>
-        <link href="https://zenn.dev/hyperdb/articles/e573a98948a996"/>
-        <updated>2023-04-03T03:33:47.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-190 A - Very Very Primitive Game
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b, c = getIntMap()
-
-    d = b - a
-    print('Aoki' if d > 0 else 'Takahashi' if d < 0 else 'Aoki' if c == 0 else 'Takahashi')
-
-
-if __name__ == "__main__":
-    m...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-190｜B - Magic 3]]></title>
-        <id>https://zenn.dev/hyperdb/articles/ae1705b5d701ef</id>
-        <link href="https://zenn.dev/hyperdb/articles/ae1705b5d701ef"/>
-        <updated>2023-04-03T03:33:47.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-190 B - Magic 3
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def main():
-    n, s, d = getIntMap()
-    l = getIntListRow(n)
-
-    a = False
-    for x, y in l:
-        if x < ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonプロジェクトのディレクトリ構成 : Part2]]></title>
-        <id>https://zenn.dev/yutabeee/articles/decfb4f686b55c</id>
-        <link href="https://zenn.dev/yutabeee/articles/decfb4f686b55c"/>
-        <updated>2023-04-03T02:31:40.000Z</updated>
-        <summary type="html"><![CDATA[単一プロジェクトの場合
-Pythonプロジェクトの理想的なディレクトリ構成はプロジェクトの規模や目的によって異なりますが、一般的な構成を以下に示します。
-project_name/
-│
-├── project_name/
-│   ├── __init__.py
-│   ├── main.py
-│   ├── module1.py
-│   ├── module2.py
-│   └── ...
-│
-├── tests/
-│   ├── __init__.py
-│   ├── test_module1.py
-│   ├── test_module2.py
-│   └── ...
-│
-├──...]]></summary>
-        <author>
-            <name>Darman</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ExcelからRDFを作成する]]></title>
-        <id>https://zenn.dev/nakamura196/articles/ba3978ab28aa65</id>
-        <link href="https://zenn.dev/nakamura196/articles/ba3978ab28aa65"/>
-        <updated>2023-04-03T00:56:45.000Z</updated>
-        <summary type="html"><![CDATA[概要
-RDFデータの作成にあたり、Excelで作成したデータから、RDFデータに変換するPythonライブラリを試作しました。まだまだ中途半端な状態ですが、備忘録です。
-
- ノートブック
-以下のノートブックから試用いただけます。
-https://colab.research.google.com/github/nakamura196/ndl_ocr/blob/main/ExcelからRDFデータを作成する.ipynb
-
- 変換元のExcelデータ
-以下のようなExcelファイルを作成します。
-https://docs.google.com/spreadsheets/d/16SufG6...]]></summary>
-        <author>
-            <name>nakamura196</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TensorFlow の使い方練習３：オプティマイザのカスタマイズ]]></title>
-        <id>https://zenn.dev/wsuzume/articles/5cda82c09ac52e</id>
-        <link href="https://zenn.dev/wsuzume/articles/5cda82c09ac52e"/>
-        <updated>2023-04-02T14:26:47.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事は以下の記事の続きです。
-https://zenn.dev/wsuzume/articles/cb1511666e2f99
-今回はオプティマイザをカスタマイズします。大抵は Adam とか既に実装されてるやつを使っておけばいいのですが Riemann 多様体上の最適化、有名どころだと双曲埋め込みとかに使いたい場合はオプティマイザをカスタムする必要があります。そんな必要や欲求に駆られる変態は地球上にそんなにいないと思いますが。
-今回作成したノートブックはこちら。
-
- オプティマイザのカスタマイズ方法
-公式ドキュメントの『Creating a custom optimi...]]></summary>
-        <author>
-            <name>Josh Nobus</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python入門②～変数・代入～]]></title>
-        <id>https://zenn.dev/tkyk/articles/3b942449de9911</id>
-        <link href="https://zenn.dev/tkyk/articles/3b942449de9911"/>
-        <updated>2023-04-02T14:26:34.000Z</updated>
-        <summary type="html"><![CDATA[例文
-まず簡単なコードを記載してみます。
-a = 'test'
-print (a)
-これを実行すると、「test」という文字が出力されます。
-1行目の意味は、「aという箱にtestという文字を格納してね」ということです。
-2行目の意味は、「aに格納されている内容（＝test）を表示してね」ということです。
-プログラミングをする際に、長々とコードを書くのではなく、なるべく省略して行いたいので、こういった処理をします。
-Excelをイメージしてみてください。
-どこかのセルで「=B1」という記載をすると、B1に入力された内容が挿入されますよね？
-これと同じイメージです。
-
- 変数とは
-上記...]]></summary>
-        <author>
-            <name>tkyk</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python入門①～環境構築～]]></title>
-        <id>https://zenn.dev/tkyk/articles/9cf4d0c6668c79</id>
-        <link href="https://zenn.dev/tkyk/articles/9cf4d0c6668c79"/>
-        <updated>2023-04-02T14:26:10.000Z</updated>
-        <summary type="html"><![CDATA[ここではPythonを自身のPCでプログラミングしていく際に必要な環境構築について紹介します。
-
- Pythonのインストール
-こちらからダウンロードできます。
-https://www.python.org/downloads/
-
-
- Anacondaについて
-「Anaconda」というものをダウンロードして環境構築する方法もあります。
-通常のPythonに加えて、ライブラリというオプションもあらかじめ一緒にインストールできます。
-こちらで環境構築を進めてもらっても良いかと思います。
-
- IDE（統合開発環境）について
-様々な言語のプログラミングを同一環境で行えるツールです。
-Pytho...]]></summary>
-        <author>
-            <name>tkyk</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Poetryとmkdocsとsphinxを使ってPythonのプロジェクトを作る]]></title>
-        <id>https://zenn.dev/okojomoeko/articles/python-project-with-mkdocs</id>
-        <link href="https://zenn.dev/okojomoeko/articles/python-project-with-mkdocs"/>
-        <updated>2023-04-02T14:23:30.000Z</updated>
-        <summary type="html"><![CDATA[お仕事でpythonを使うことがあって、その開発環境をどうやって整備しようかと思っていたところでした。
-よくある構成のpyenv+poetryのpython開発環境を作るとともに、ドキュメントもちゃんとやりたいなということで、ユーザー向けのAPIドキュメントに加えて、Pythonコードの設計とかを記述できるように開発者向けドキュメントとしてmkdocsを併用したpythonプロジェクトの環境を作ってみました。
-この記事では作るまでの流れを自分のための備忘録的な感じで残しておこうと思います。
-
- 今回試した環境
-
-Ubuntu 22.04.2 LTS (MacBook Air M1のLim...]]></summary>
-        <author>
-            <name>okojomoeko</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[35歳でプログラミング入門する男の自己紹介]]></title>
-        <id>https://zenn.dev/tkyk/articles/ef2c0f8b567355</id>
-        <link href="https://zenn.dev/tkyk/articles/ef2c0f8b567355"/>
-        <updated>2023-04-02T14:14:58.000Z</updated>
-        <summary type="html"><![CDATA[はじめまして。
-プログラミングのことを色々調べていたらZennに出会いました。
-今後はここに学んだことをアウトプットしていきたいと思っています。
-
- 今まで
-大学時代の専攻は英米文学という、スーパー文系でした。
-更に大学時代、サークルの人間関係の悪化がきっかけで、引きこもり生活を何年か続けていました。
-結局6年半かけて大学を卒業しました。
-社会人になってからは主に営業・企画畑で仕事をしてきました。
-現在はSaaS企業で営業企画の部署にいます。
-30歳で結婚し、現在35歳で、妻と娘（2歳）の3人暮らしです。
-子供が生まれる前は、土日・深夜早朝問わず働けていましたが、子供が生まれてからは、1...]]></summary>
-        <author>
-            <name>tkyk</name>
         </author>
     </entry>
 </feed>
