@@ -2,10 +2,249 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-05-03T01:25:59.302Z</updated>
+    <updated>2023-05-04T01:23:54.061Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Run python3 with 'python' command]]></title>
+        <id>https://zenn.dev/tac519/articles/84a6c73b04dde0</id>
+        <link href="https://zenn.dev/tac519/articles/84a6c73b04dde0"/>
+        <updated>2023-05-04T00:29:20.000Z</updated>
+        <summary type="html"><![CDATA[Edit bashrc
+vi ~/.bashrc
+
+ Append it to the end of file.
+'G' is the jump command to the end.
+alias python="python3" 
+alias pip="pip3" 
+'Esc' and, ':wq!' is the save command.
+
+ Reflect to system
+source ~/.bashrc]]></summary>
+        <author>
+            <name>tac</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AITuberにBERTを使った感情推定を導入する]]></title>
+        <id>https://zenn.dev/kanadadada/articles/5438ce7dda7474</id>
+        <link href="https://zenn.dev/kanadadada/articles/5438ce7dda7474"/>
+        <updated>2023-05-03T23:30:01.000Z</updated>
+        <summary type="html"><![CDATA[今回書くこと
+OpenAIで対話するAIの対話アシスタント（AITuber）にPythonを使った感情推定の機能を導入します。感情が扱えるようになるとモデルの表情を変えたり、発言内容を記憶する際に重み付けを変えたりできそうなので導入をしてみることにしました。
+具体的にはこんな内容を記載していきます。
+
+感情推定はテキストからBERTを使って感情のラベルとスコアを算出するものとしています。
+
+
+ なぜBERT？
+昨今話題の大規模言語モデルで使われるTransformersを使った新しい手法ということで、こちらを試してみることにしました。
+また感情推定というとJanome・日本語評価極性...]]></summary>
+        <author>
+            <name>Yuchiwo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChatGPTを使ったDiscord botを作る]]></title>
+        <id>https://zenn.dev/yofa/articles/0acb3090d73e44</id>
+        <link href="https://zenn.dev/yofa/articles/0acb3090d73e44"/>
+        <updated>2023-05-03T17:54:31.000Z</updated>
+        <summary type="html"><![CDATA[背景
+
+DiscordでChatGPTを使いたい、使ってほしい
+
+
+ ゴール
+
+DiscordでChatGPTが使えるようになっている
+
+
+ 手順
+
+chatGPT-discord-botをcloneする
+Discord botを作る
+OpenAI API keyを作る
+dockerで実行する
+テスト
+
+
+ chatGPT-discord-botをcloneする
+
+https://github.com/Zero6992/chatGPT-discord-bot
+
+git clone https://github.com/Zero6992/chatGPT-discord-bot.git
+...]]></summary>
+        <author>
+            <name>yofa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonでgRPC通信をやってみる]]></title>
+        <id>https://zenn.dev/sugasuga/articles/10e9843263f215</id>
+        <link href="https://zenn.dev/sugasuga/articles/10e9843263f215"/>
+        <updated>2023-05-03T16:54:26.000Z</updated>
+        <summary type="html"><![CDATA[この記事について
+gRPC通信に関して知識と経験がない。とりあえずpythonでやってみる。
+頭の整理も兼ねて、最もシンプルなgRPC通信でhello worldを返すアプリケーションを書いてみる。
+gRPCの利点・詳細・各用語などは他記事などを参考にしてください。
+
+ 流れ
+
+(諸々の環境構築)
+gRPCのAPI定義ファイルであるprotoファイルを作成
+protoファイルをコンパイル
+サーバー側のpythonファイルを作成
+サーバーを叩くクライアント側のpythonファイルを作成
+実行
+
+諸々のコードは下記になる
+.
+├── Dockerfile
+├── README.md
+├─...]]></summary>
+        <author>
+            <name>sugasuga</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NumPyro：ガウス過程]]></title>
+        <id>https://zenn.dev/yoshida0312/articles/f445335b7867c4</id>
+        <link href="https://zenn.dev/yoshida0312/articles/f445335b7867c4"/>
+        <updated>2023-05-03T15:01:15.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+今回はガウス過程を扱います。
+!
+2023年5月現在、NumPyroはデフォルトでガウス過程のためのモジュール/ツールがなくスクラッチで訓練/予測のコードを書く必要があります。tinygpという第三者のライブラリもありますが、予測はサポートしていません。また、MCMCが速いという特徴があるNumPyroでも、ガウス過程回帰は計算が重いです。一方で、ガウス過程回帰を実施する便利なライブラリとしてGPyやGPyTorchが既にあリます。以上の理由から、個人的にはある程度データが多くなった場合、ガウス過程回帰はGPyTorch + Pyroを使用していきたいと思っています。（デー...]]></summary>
+        <author>
+            <name>よしだ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MediaPipe Pose をローカルのPythonで使う[備忘録]]]></title>
+        <id>https://zenn.dev/nadegata_memo/articles/6e9b569c5be845</id>
+        <link href="https://zenn.dev/nadegata_memo/articles/6e9b569c5be845"/>
+        <updated>2023-05-03T13:29:52.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+MediaPipeを用いたポーズ推定を，ローカルでPythonを用いて行う方法．
+下記ページのコードを使用しています．
+https://github.com/google/mediapipe/blob/master/docs/solutions/pose.md#resources
+私が使用した環境やアプリケーションは以下の通りです．
+・windows
+・コマンドプロンプト
+・python3.10.11
+
+ 0.Pythonの保存場所の確認
+
+コマンドプロンプトを起動する．
+
+以下，全てのコードはコマンドプロンプトにて実行します．
+ 
+Pythonの保存場所を確認
+
+wher...]]></summary>
+        <author>
+            <name>nadegata</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】地図上に位置情報（緯度・経度）をプロットする方法]]></title>
+        <id>https://zenn.dev/robes/articles/755e7ee27ce308</id>
+        <link href="https://zenn.dev/robes/articles/755e7ee27ce308"/>
+        <updated>2023-05-03T12:13:10.000Z</updated>
+        <summary type="html"><![CDATA[Pythonを使って、緯度・経度の座標情報を地図上にプロットする方法についてご紹介します。
+サンプルのデータとして、githubに公開されている米国の都市データを使いますので、ここに記載のコードをコピペすることで、お手元のPCでも同じものを見ることができます。
+興味を持たれた方は、ぜひ、一緒にやってみてください。
+地図に位置情報をプロットできるライブラリーとして、foliumとPlotlyの2種類あります。
+それぞれについて、ご紹介していきます。
+
+ データのダウンロード
+まずは、サンプルデータをダウンロードしましょう。
+import pandas as pd
+df =pd.read_...]]></summary>
+        <author>
+            <name>osn_Lofi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-218｜B - qwerty]]></title>
+        <id>https://zenn.dev/hyperdb/articles/cd0ede289c3b28</id>
+        <link href="https://zenn.dev/hyperdb/articles/cd0ede289c3b28"/>
+        <updated>2023-05-03T03:19:55.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-218 B - qwerty
+
+
+
+ 提出結果
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    p = getIntList()
+
+    a = ord('a') - 1
+    s = []
+    for i in p:
+        s.append(chr(a + i))
+    print(''.join(s))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-218｜A - Weather Forecast]]></title>
+        <id>https://zenn.dev/hyperdb/articles/9d2bc146c7073d</id>
+        <link href="https://zenn.dev/hyperdb/articles/9d2bc146c7073d"/>
+        <updated>2023-05-03T03:19:54.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-218 A - Weather Forecast
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getString():
+    return input()
+
+
+def main():
+    n = getInt()
+    s = list(getString())
+
+    print('Yes' if s[n - 1] == 'o' else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WebAppにPython(Flask)を最小構成でVScodeデプロイする]]></title>
+        <id>https://zenn.dev/daphnia/articles/1aa9acfcf14c72</id>
+        <link href="https://zenn.dev/daphnia/articles/1aa9acfcf14c72"/>
+        <updated>2023-05-03T03:04:39.000Z</updated>
+        <summary type="html"><![CDATA[App Service(Webapp)にPython（Flask）を最小構成でVScodeからデプロイします。内容は、ルートページにアクセスした際に、{"status":200}を表示するだけのFlaskとします。App Serviceの構成も基本的にデフォルトで作成します。目的はVSCodeからApp Serviceにデプロイをするということとなります。
+az cliとVScodeはインストールされている前提としています。また、az loginも済みで・・。
+
+ App Serviceの構築
+まず、App Serviceを作成します。今回は簡易的にAz CLIを使用してデプロイを実行し...]]></summary>
+        <author>
+            <name>Daphnia</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Djangoで全テーブルのIDの採番状況をチェックする]]></title>
         <id>https://zenn.dev/yktakaha4/articles/describe_remaining_id_length_in_django</id>
@@ -6705,173 +6944,6 @@ print(x)  # 出力: 10（変更されていない）
 参照...]]></summary>
         <author>
             <name>Darman</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ハッシュアルゴリズムの基礎]]></title>
-        <id>https://zenn.dev/yutabeee/articles/0c4e9f508da48d</id>
-        <link href="https://zenn.dev/yutabeee/articles/0c4e9f508da48d"/>
-        <updated>2023-04-04T12:16:05.000Z</updated>
-        <summary type="html"><![CDATA[ハッシュアルゴリズムとは
-ハッシュアルゴリズムとは、任意の長さのデータを入力として受け取り、一定の長さのハッシュ値（ハッシュコード）を生成するアルゴリズムのことです。ハッシュ関数は、データ構造のハッシュテーブルや、暗号学的ハッシュ関数として使用されます。
-ハッシュアルゴリズムは、次の性質を持っていることが望ましいです。
-
-
-一貫性：同じ入力に対しては、常に同じハッシュ値を生成する。
-
-高速性：ハッシュ値の計算が高速に行われる。
-
-雪崩効果：入力データが少し変化しても、ハッシュ値が大きく変化する。
-
-以下では、ハッシュアルゴリズムの基本的な種類と、それぞれの特徴について説明します。
-
-...]]></summary>
-        <author>
-            <name>Darman</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Twitter API（tweepy）を使用して、画像付きツイートを投稿する]]></title>
-        <id>https://zenn.dev/stucci/articles/195815871110c2</id>
-        <link href="https://zenn.dev/stucci/articles/195815871110c2"/>
-        <updated>2023-04-04T10:15:34.000Z</updated>
-        <summary type="html"><![CDATA[2023年4月4日現在、v2 APIでは画像付きツイートを投稿することができません。
-参考）
-Post Tweet/Media Upload in v2? - Twitter API / Twitter API v2 - Twitter Developers
-そのため、画像付きツイートを投稿するためには、以下のようにv1 APIとv2 APIを組み合わせる必要があります。
-tweepy.APIでv1 APIを使用し、tweepy.Clientでv2 APIを使用しているようです。
-import tweepy
-
-# Twitter API credentials
-consumer_key ...]]></summary>
-        <author>
-            <name>stucci</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【ABC296】AtCoder Beginner Contest 296 A-D 振り返り【Python】]]></title>
-        <id>https://zenn.dev/tmori/articles/ebd628619e6442</id>
-        <link href="https://zenn.dev/tmori/articles/ebd628619e6442"/>
-        <updated>2023-04-04T06:04:04.000Z</updated>
-        <summary type="html"><![CDATA[https://atcoder.jp/contests/abc296
-
- A - Alternately
-文字列Sを1文字ずつ順番に取り出し、前の文字を一致していれば No を出力する。すべて取り出すことに成功したら Yes と出力する。注意点として前の文字を空文字などで初期化する必要がある。
-Pythonn = int(input())
-s = list(input())
-
-pre = ""
-for i, s_str in enumerate(s):
-    if pre == s_str:
-        print("No")
-        exit()
-    pre = s_...]]></summary>
-        <author>
-            <name>tmori</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-191｜A - Vanishing Pitch]]></title>
-        <id>https://zenn.dev/hyperdb/articles/e2ca832d8455fa</id>
-        <link href="https://zenn.dev/hyperdb/articles/e2ca832d8455fa"/>
-        <updated>2023-04-04T04:52:59.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-191 A - Vanishing Pitch
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    v, t, s, d = getIntMap()
-
-    a = d / v
-
-    print('No' if t <= a <= s else 'Yes')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-191｜B - Remove It]]></title>
-        <id>https://zenn.dev/hyperdb/articles/9bfee70fc5b390</id>
-        <link href="https://zenn.dev/hyperdb/articles/9bfee70fc5b390"/>
-        <updated>2023-04-04T04:52:58.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-191 B - Remove It
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n, x = getIntMap()
-    a = getIntList()
-
-    b = [str(i) for i in a if i != x]
-
-    print(" ".join(b))
-
-
-if __name__ == "...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pyspark入門]]></title>
-        <id>https://zenn.dev/junkor/articles/3df5f7ac9751c7</id>
-        <link href="https://zenn.dev/junkor/articles/3df5f7ac9751c7"/>
-        <updated>2023-04-03T16:37:36.000Z</updated>
-        <summary type="html"><![CDATA[※Jupyter Notebook形式で実行し、Markdown形式でエクスポートしたものを一部改変して作っているので若干見づらいです。
-
- 概要
-pandasなどは小規模~中規模くらいのデータセットの処理や分析には有効だが、
-メモリに乗り切らないレベルのデータ量は処理できない。
-また、GILによって基本的に1スレッドでの動作になるため、マシンスペックを最大限活かし切るのは難しい。
-遅延評価、並列分散処理によって所謂ビッグデータといわれるレベルのテーブルデータの処理・分析に使うことができ、
-更にpandasとの連携・併用ができるツールとしてpysparkが存在するため紹介する。
-なお、詳...]]></summary>
-        <author>
-            <name>7e+8</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Bounding Boxの自動ラベリングの試み(Detectron2)]]></title>
-        <id>https://zenn.dev/junkratmecha/articles/516e884a3116b6</id>
-        <link href="https://zenn.dev/junkratmecha/articles/516e884a3116b6"/>
-        <updated>2023-04-03T16:19:39.000Z</updated>
-        <summary type="html"><![CDATA[やりたいこと
-
-精度強めのモデルである程度の量でFTしたら、自動ラベリングできないか。
-Bboxのアノテーションは修正も楽だから、一度ラベル済のをツールでパラパラめくって、間違っているものを手動ラベリングすることで効率上がらないか。
-Detecton2を触ってみたい、あ~ツールキットね~って言えるようになりたい!
-※Twitterやコメントなどで諸々は優しくアドバイスやご指摘などください。
-
-
- Detectron2って
-Detectron2はFacebook AIのオープンソースPJで、PyTorchの物体検出ツールキットです。
-検出できる内容はざっくり以下。
-
-物体検知 Boun...]]></summary>
-        <author>
-            <name>Junk</name>
         </author>
     </entry>
 </feed>
