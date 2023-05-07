@@ -2,10 +2,228 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-05-06T01:20:46.530Z</updated>
+    <updated>2023-05-07T01:37:30.608Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[tensorflow2.xで推論中、メモリ使用量がどんどん増えていく事象への対処]]></title>
+        <id>https://zenn.dev/watarungurunnn/articles/738c63c55a62cc</id>
+        <link href="https://zenn.dev/watarungurunnn/articles/738c63c55a62cc"/>
+        <updated>2023-05-06T18:25:11.000Z</updated>
+        <summary type="html"><![CDATA[tensorflow2.xでModel.predictを実行するたびにメモリ使用量がもりもり増えていく現象が観測されている。
+まず思いつくのはgc.collect()であるが、今回はこれが効かない。
+参考: https://github.com/keras-team/keras/issues/13118
+
+ 1. Sequential APIの場合
+まず、提案されている解決法がModel.predict_on_batch()を用いる方法。
+for x in dataset:
+    y_pred = model.predct_on_batch(x)
+
+ 2. Functional API...]]></summary>
+        <author>
+            <name>watarungurunnn</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LangChainのtext_splitterについて軽く調べた]]></title>
+        <id>https://zenn.dev/seiyakitazume/articles/fa0013f71d04f2</id>
+        <link href="https://zenn.dev/seiyakitazume/articles/fa0013f71d04f2"/>
+        <updated>2023-05-06T17:33:56.000Z</updated>
+        <summary type="html"><![CDATA[text_splitterを使うと、長い文章を分割してくれます。
+以下のように数行のコードで使うことできます。
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+texts = text_splitter.split_documents(documents)
+上記のRecursiveCharacterTextSplitterは、文字単位でテキスト...]]></summary>
+        <author>
+            <name>seiyakitazume</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vertex AI Matching Engineでフィルタ機能を使う]]></title>
+        <id>https://zenn.dev/sugasuga/articles/18a8f352025e3c</id>
+        <link href="https://zenn.dev/sugasuga/articles/18a8f352025e3c"/>
+        <updated>2023-05-06T17:28:39.000Z</updated>
+        <summary type="html"><![CDATA[ベクトルのフィルタ機能
+前回の記事にて、Matching Engineを触ってみました。
+https://zenn.dev/articles/2bdde4e7169eed
+実際に使う場合は、特定のデータにフィルタした上で、近傍探索をしたい場合があると思います。
+例えば、公開・非公開状態の記事がある中で、公開されている記事のみでベクトル検索を行い関連する記事のデータを取得したい場合などです。事前のフィルタができないと、ベクトル検索結果後にフィルタされ十分な検索結果が残らなかったりする可能性があります。
+ElasticSearchは事前のフィルタ機能があります。faissは記事執筆時点の...]]></summary>
+        <author>
+            <name>sugasuga</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【LangChain】chromadbを使ってローカルの文章(PDF・ワード)をembeddingした上で格納する]]></title>
+        <id>https://zenn.dev/seiyakitazume/articles/117048f486f707</id>
+        <link href="https://zenn.dev/seiyakitazume/articles/117048f486f707"/>
+        <updated>2023-05-06T17:22:52.000Z</updated>
+        <summary type="html"><![CDATA[ChromaDBは、文書の埋め込みデータを格納・管理し、文書間の類似性を効率的に検索できるデータベースです。
+LangChainからも使え、以下のコードのように数行のコードでChromaDBの中にembeddingしたPDFやワードなどの文章データを格納することが出来ます。
+from langchain.vectorstores import Chroma
+texts = text_splitter.split_documents(documents)
+embeddings = OpenAIEmbeddings()
+vectordb = Chroma.from_documents(tex...]]></summary>
+        <author>
+            <name>seiyakitazume</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[量子フーリエ変換を眺める]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-qft-numpy</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-qft-numpy"/>
+        <updated>2023-05-06T12:32:04.000Z</updated>
+        <summary type="html"><![CDATA[目的
+Qiskit textbook の 量子フーリエ変換 を見ると、Bloch 球上のアニメーションが掲載されている。そう言えば以前に勉強した時は「ふ〜ん」で流した気がするので、少し真面目に見てみようという企画。
+
+ 量子フーリエ変換とは？
+量子コンピュータの色々な FTQC アルゴリズム、例えば量子位相推定や Shor のアルゴリズムで利用されるモジュールである。形式的には、古典的な離散フーリエ変換と対をなす形で定義される。
+
+ 離散フーリエ変換
+N \in \N に対し x を [0, 1, \cdots, N-1] 上の函数とし、x_j = x(j),\ j \in [0, ...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[troccoで簡易MLOpsをまわしてみる2（Snowflake ver）]]></title>
+        <id>https://zenn.dev/stranglehello/articles/d7567ac87c2d0b</id>
+        <link href="https://zenn.dev/stranglehello/articles/d7567ac87c2d0b"/>
+        <updated>2023-05-06T12:03:35.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+
+この記事は前回のこちらからのちょっとした派生です
+良かったら先に目を通していただければ嬉しいです😁
+
+
+ 今回の利用するサービス
+
+
+Snowflake(DWH)
+
+少し前にpreviewになったPythonのワークシートをメインに使います
+
+
+
+trocco
+
+前回と同じくデータを取得する部分とワークフローで呼び出す部分を担当します
+前回の記事からのUpdateとしてはFreeプランが登場しており、今回はFreeで使える範囲で対応できます
+
+
+
+
+ 対応内容
+
+こちら前回と同じでtitanic問題での利用を想定してみます！（変わり映えがなくてすみません、、）
+
+
+ さっ...]]></summary>
+        <author>
+            <name>stranglehello</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[テキストから3Dアセットを生成するShap-EをColaboratoryで試用]]></title>
+        <id>https://zenn.dev/t_o_d/articles/d3b2ba62989a27</id>
+        <link href="https://zenn.dev/t_o_d/articles/d3b2ba62989a27"/>
+        <updated>2023-05-06T10:47:26.000Z</updated>
+        <summary type="html"><![CDATA[先日OpenAIからテキストや画像の入力から3Dアセットを生成するShap-Eが発表されました。
+そこでGoogle Colaboratoryを利用してShap-Eを試した方法を記録いたします。
+
+
+ 結論
+
+本記事の手順で以下のように「テキストを指定して3Dアセットの作成」がColaboratory上で試すことが可能です。
+
+
+
+ 準備
+
+実行環境を整えるため、Google Colaboratory上にGPU(T4)環境を作成します。
+
+※詳細な作成方法はこちらを参考にしてください。
+
+
+
+
+
+
+
+ 手順
+
+ リポジトリ取得
+
+実行環境の作成後、以下を実行してShap-Eのソースコー...]]></summary>
+        <author>
+            <name>t_o_d</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[TIL] Python&機械学習入門2(完)]]></title>
+        <id>https://zenn.dev/joel/articles/a7d18b4861f550</id>
+        <link href="https://zenn.dev/joel/articles/a7d18b4861f550"/>
+        <updated>2023-05-06T10:06:02.000Z</updated>
+        <summary type="html"><![CDATA[ノート
+本記事は、Kikagakuの無料講座「Python&機械学習入門」の講義ノートの第2回目です。
+以下のリストは当該講座のカリキュラムで、本ノートは「8.導入」から「11.単回帰分析の実装」までの内容を簡単にまとめたものです。
+
+Curriculum (401/548)
+1.導入 (42 min)
+2.微分 (49 min)
+3.線形代数 (55 min)
+4.単回帰分析 (52 min)
+5.重回帰分析 (56 min)
+6.Python属性講義 (101 min)
+7.単回帰分析の実装 (51 min)
+
+
+
+8.重回帰分析の実装 (27 min)
+9. 練習問題 ...]]></summary>
+        <author>
+            <name>Joel Lee</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Dashのdatatableに画像を挿入する]]></title>
+        <id>https://zenn.dev/hodakam/articles/a7d5c8253c9ad5</id>
+        <link href="https://zenn.dev/hodakam/articles/a7d5c8253c9ad5"/>
+        <updated>2023-05-06T09:33:07.000Z</updated>
+        <summary type="html"><![CDATA[datatableに画像を挿入する方法
+Dashという簡単にデータ分析のためのダッシュボードが作れるライブラリがあります。Dashの中にはdatatableという便利なライブラリがあり、これを利用することでソートやページング、フィルターなどのテーブル形式のデータでよく用いられる機能を非常に簡単に実装することができます。
+実際にダッシュボードを作成する場合、フィールドとして数値や文字列だけでなく画像やファイルへのリンクなどを使いたくなることがあります。Dashのdatatableにこれらのオブジェクトを埋め込むには実はそれなりに工夫が必要です。
+
+ 実現方法1：html.ImgでImg...]]></summary>
+        <author>
+            <name>hodakam</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】ZetaChain上のuniswapでswap]]></title>
+        <id>https://zenn.dev/lud/articles/616777396e54a2</id>
+        <link href="https://zenn.dev/lud/articles/616777396e54a2"/>
+        <updated>2023-05-06T07:57:33.000Z</updated>
+        <summary type="html"><![CDATA[この記事では，ZetaChain(testnet)上に実装されたUniswapにPythonでアクセスしてswapする方法を紹介します．
+環境はjupyterlabを想定しています．
+
+ 解説
+privateな情報は.envファイルから環境変数として読み込みます．
+ADDRESS=0x...
+PRIVATE_KEY=0x...
+%load_ext dotenv
+%dotenv .env -o -v
+
+ 各種設定
+ZetaChain上のtokenアドレス等を設定します．(公式リンク)
+from web3 import Web3, HTTPProvider
+import json, os, ...]]></summary>
+        <author>
+            <name>t_nakatani</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[pip ライブラリを一括更新したかった]]></title>
         <id>https://zenn.dev/sho7650/articles/b05b3afc3dda31</id>
@@ -6772,244 +6990,6 @@ https://zenn.dev/tirimen/articles/80248e2caf2d63
 どちらもMCMC法のサンプリング方法であるが、適した場面が異なる。一般的に言われているのが、ギブスサンプリングは条件付き確率が求めやすい形のとき、メトロポリス法は条件付き確率が求めにくい形のときに用いられるということ。ってことはメトロポリス法の方が汎用性があり、ず...]]></summary>
         <author>
             <name>tirimen</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【SwitchBot】温湿度計のデータをPython × InfluxDB × Grafanaでダッシュボード化する]]></title>
-        <id>https://zenn.dev/tanny/articles/a5c0fa5c2230a7</id>
-        <link href="https://zenn.dev/tanny/articles/a5c0fa5c2230a7"/>
-        <updated>2023-04-07T12:08:04.000Z</updated>
-        <summary type="html"><![CDATA[概要
-この記事では、SwitchBot温湿度計のデータをAPI経由で取得し、時系列DBのInfluxDBに保存した上で、Grafanaでダッシュボード化する方法を解説します。
-
-Grafanaで作成したダッシュボード
-
- SwitchBot温湿度計について
-SwitchBot温湿度計は、温度と湿度を計測するセンサーです。温度と湿度をデバイスの画面で確認する以外にも、他のSwitchBotデバイスと連携し、「温度が低下したら暖房をつける」といったトリガー起動に活用できます。
-2023年3月現在は2種類の温湿度計が販売されており、この記事では両方に対応しています。「プラス」の方が液晶を見...]]></summary>
-        <author>
-            <name>Tanny</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Go psutilライブラリの紹介]]></title>
-        <id>https://zenn.dev/roistaff/articles/c78a26dd99e2a5</id>
-        <link href="https://zenn.dev/roistaff/articles/c78a26dd99e2a5"/>
-        <updated>2023-04-07T11:47:39.000Z</updated>
-        <summary type="html"><![CDATA[Pythonでもお馴染みのメモリ使用量などを取得するライブラリ、psutilのGo版gopsutilというライブラリがあったので軽く紹介したいと思います。
-
- 使い方
-
- Get package
-https://github.com/shirou/gopsutil
-以下のコマンドからいけます。
-go get github.com/shirou/gopsutil/v3/mem
-
- Usage
-package main
-import(
-	"github.com/shirou/gopsutil/v3/mem"
-	"fmt"
-	)
-func main(){
-	v, _ := mem.Virtua...]]></summary>
-        <author>
-            <name>Staff Roi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【随時更新】主要プログラミング言語8種チートシート]]></title>
-        <id>https://zenn.dev/mossan_hoshi/articles/20230407_cheatsheep</id>
-        <link href="https://zenn.dev/mossan_hoshi/articles/20230407_cheatsheep"/>
-        <updated>2023-04-07T10:24:41.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-
-個人的に主要言語と思う8言語＆スクリプト（python, JavaScript, Rust, Haskell, C++, C#, bash, PowerShell)のチートシートです
-インデントのために全角空白を含んでます。コピペする場合は気を付けて下さい
-ChatGPT(GPT-4)に書かせたコードなので一部変なコードがあるかもしれません
-動かない場合はChatGPTにコードと一緒に"＜プログラミング名＞で＜大分類名＞の＜小分類名＞をやろうと思うんだけど、このコードを修正して。"的なことを書けば大抵の場合修正してくれます
-
-
- チートシート
-
- スプレッドシート版（こち...]]></summary>
-        <author>
-            <name>mossan_hoshi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Azure OpenAI Service で GPT-4 API を使う]]></title>
-        <id>https://zenn.dev/microsoft/articles/c2cfdda734b61c</id>
-        <link href="https://zenn.dev/microsoft/articles/c2cfdda734b61c"/>
-        <updated>2023-04-07T08:25:37.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-2023 年 3 月 21 日に Azrue OpenAI Service で GPT-4 の登録制プレビューが開始しましたので、情報をまとめました。
-
-Azure OpenAI Service に GPT-4 を導入
-Azure OpenAI Service の新機能 - 2023 年 3 月
-
-ちなみに、本家 OpenAI での GPT-4 の発表と同じタイミングで、実は 新しい Bing の背後には GPT-4 がいたことが公表されました。さらにその直後、Microsoft 365 Copilot や Copilot in Microsoft Power Automa...]]></summary>
-        <author>
-            <name>ryohtaka</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【PyTorch+LSTM】仮想通貨の予測]]></title>
-        <id>https://zenn.dev/dumbled0re/articles/744c783a8b3992</id>
-        <link href="https://zenn.dev/dumbled0re/articles/744c783a8b3992"/>
-        <updated>2023-04-07T07:52:10.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-現在、大学でデータサイエンスを学んでいる大学生です。この記事ではPyTorch+LSTMを使用して、仮想通貨であるXRP(リップル)の予測をしていきたいと思います。
-
- データの準備
-今回はInvesting.comで2015年1月から現在(2023/04/06)まで公開されている8年間のXRPデータを使用します。こちらからcsvファイルをダウンロードしてください。
-
- 実行環境
-
-Google Colaboratory
-Python 3.8.16
-
-
- ライブラリのインポート
-import os
-import datetime
-import math
-import num...]]></summary>
-        <author>
-            <name>dumbled0re</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-194｜A - I Scream]]></title>
-        <id>https://zenn.dev/hyperdb/articles/ee87e1bc84af20</id>
-        <link href="https://zenn.dev/hyperdb/articles/ee87e1bc84af20"/>
-        <updated>2023-04-07T04:48:53.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-194 A - I Scream
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b = getIntMap()
-
-    t = 4
-    if a + b >= 15 and b >= 8:
-        t = 1
-    elif a + b >= 10 and b >= 3:
-        t = 2
-    elif a + b >= 3:
-        t = 3
-    print(t)
-...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-194｜B - Job Assignment]]></title>
-        <id>https://zenn.dev/hyperdb/articles/942476c4519af0</id>
-        <link href="https://zenn.dev/hyperdb/articles/942476c4519af0"/>
-        <updated>2023-04-07T04:48:52.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-194 B - Job Assignment
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def main():
-    n = getInt()
-    l = getIntListRow(n)
-
-    a = [i for i, j in l]
-    b = [j for i, j in l]
-
-    t = max(a) +...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DjangoアプリをHerokuにデプロイしました。]]></title>
-        <id>https://zenn.dev/treefield/articles/f6e8b879387d02</id>
-        <link href="https://zenn.dev/treefield/articles/f6e8b879387d02"/>
-        <updated>2023-04-06T16:16:42.000Z</updated>
-        <summary type="html"><![CDATA[DjangoアプリをHerokuにデプロイしたので手順を記録します。
-環境は、
-macOS 12.6.4
-Python 3.10.10
-Django 4.0.2
-基本的にはこのサイトを参考にさせてもらいました。大変助かりました。
-DjangoアプリをHerokuにデプロイする方法
-
- 1.各種インストール
-まずは各種インストールを実施します。
-
- Heroku CLIインストール
-Heroku Command Line Interface (CLI) を使用すると、Heroku アプリをターミナルから直接、作成および管理できます。ただし、Gitがインストールされていることが前提です。
-%...]]></summary>
-        <author>
-            <name>treefield</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TensofFlowの使い方練習４：サブクラス化]]></title>
-        <id>https://zenn.dev/wsuzume/articles/3b09a42ecdf197</id>
-        <link href="https://zenn.dev/wsuzume/articles/3b09a42ecdf197"/>
-        <updated>2023-04-06T14:51:36.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事は以下の記事の続きである。
-https://zenn.dev/wsuzume/articles/5cda82c09ac52e
-この記事では tensorflow.keras.layers.Layer や tensorflow.keras.Model を継承して新たなレイヤーやモデルを作成する方法を練習する。
-参考にしたドキュメントは以下。
-https://www.tensorflow.org/guide/keras/custom_layers_and_models?hl=ja
-
- 参考文献
-
-
-What are Symbolic and Imperative API...]]></summary>
-        <author>
-            <name>Josh Nobus</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ChatGPTを用いたノーコードプログラム作成例]]></title>
-        <id>https://zenn.dev/shungo_a/articles/e8f2cc02bb4f63</id>
-        <link href="https://zenn.dev/shungo_a/articles/e8f2cc02bb4f63"/>
-        <updated>2023-04-06T14:18:11.000Z</updated>
-        <summary type="html"><![CDATA[本記事の目的
-Pythonの自学自習でChatGPTを使っているのですが、プログラムによって何を実施したいのかさえ記載すれば、プログラムを簡単に実装可能であると実感しています。しかしながら、ミスなく要件を満たすコーディングをするためには。実際のコーディングを決定する質問文の設定が場合によっては難しかったり、回答コードにエラーが出てしまった際にどのような追記質問をすべきかを考える上で、ChatGPTに対する慣れやコーディングに対する素養もある程度必要になる場合もあります。したがって、コーディングという面において、初心者がChatGPTを利用すれば必ず時間削減になると現状は言えないと考え...]]></summary>
-        <author>
-            <name>S.A</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[chatGPTで疾患のお悩み相談を受けてくれるボットを開発]]></title>
-        <id>https://zenn.dev/seiyakitazume/articles/ee80940cdf64b7</id>
-        <link href="https://zenn.dev/seiyakitazume/articles/ee80940cdf64b7"/>
-        <updated>2023-04-06T13:51:35.000Z</updated>
-        <summary type="html"><![CDATA[先日、製薬会社様主催のこちらのイベントに参加してきました。
-https://hemophilia-hackathon-2023.peatix.com/
-血友病の患者さんの助けになるような製品・サービスを考案するというハッカソンでした。
-血友病は遺伝性の疾患なので、彼氏・彼女ができたり、子供を作る際に悩む方がいます。
-医学的な疑問や解決方法はインターネット上に回答があるのですが、「正解がない生活にまつわるお悩み」についてはまとまった情報がありませんでした。
-そこで、このハッカソンにご登壇いただいている医師の知見を入れた、FAQを作成し、chatGPTのAPIを噛ませた「血友病お悩み相談ボッ...]]></summary>
-        <author>
-            <name>seiyakitazume</name>
         </author>
     </entry>
 </feed>

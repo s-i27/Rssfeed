@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-05-06 datetime="2023-05-06T01:06:32.000Z">2023-05-06</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-05-06 datetime="2023-05-06T01:06:32.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-05-06 datetime="2023-05-06T18:25:11.000Z">2023-05-06</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-05-06 datetime="2023-05-06T18:25:11.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,320 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/watarungurunnn/articles/738c63c55a62cc"
+                        open
+                      >
+                        <summary class="article-expander__title">tensorflow2.xで推論中、メモリ使用量がどんどん増えていく事象への対処</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/watarungurunnn/articles/738c63c55a62cc">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--jpgKPrXe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:tensorflow2.x%25E3%2581%25A7%25E6%258E%25A8%25E8%25AB%2596%25E4%25B8%25AD%25E3%2580%2581%25E3%2583%25A1%25E3%2583%25A2%25E3%2583%25AA%25E4%25BD%25BF%25E7%2594%25A8%25E9%2587%258F%25E3%2581%258C%25E3%2581%25A9%25E3%2582%2593%25E3%2581%25A9%25E3%2582%2593%25E5%25A2%2597%25E3%2581%2588%25E3%2581%25A6%25E3%2581%2584%25E3%2581%258F%25E4%25BA%258B%25E8%25B1%25A1%25E3%2581%25B8%25E3%2581%25AE%25E5%25AF%25BE%25E5%2587%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:watarungurunnn%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3JBR185eWVBY1o2VTJIUEFObk5acmtqc0ZhaXpUWVVaWTUwQVpoWFVjPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>tensorflow2.xでModel.predictを実行するたびにメモリ使用量がもりもり増えていく現象が観測されている。
+まず思いつくのはgc.collect()であるが、今回はこれが効かない。
+参考: https://github.com/keras-team/keras/issues/13118
+
+ 1. Sequential APIの場合
+まず、提案されている解決法がModel.predict_on_batch()を用いる方法。
+for x in dataset:
+    y_pred &#x3D; model.predct_on_batch(x)
+
+ 2. Functional API...</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/seiyakitazume/articles/fa0013f71d04f2"
+                        open
+                      >
+                        <summary class="article-expander__title">LangChainのtext_splitterについて軽く調べた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/seiyakitazume/articles/fa0013f71d04f2">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--glwHE27l--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:LangChain%25E3%2581%25AEtext_splitter%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E8%25BB%25BD%25E3%2581%258F%25E8%25AA%25BF%25E3%2581%25B9%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:seiyakitazume%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I3ZjczZjRjZWUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>text_splitterを使うと、長い文章を分割してくれます。
+以下のように数行のコードで使うことできます。
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+text_splitter &#x3D; RecursiveCharacterTextSplitter(chunk_size&#x3D;1000, chunk_overlap&#x3D;0)
+texts &#x3D; text_splitter.split_documents(documents)
+上記のRecursiveCharacterTextSplitterは、文字単位でテキスト...</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/sugasuga/articles/18a8f352025e3c"
+                        open
+                      >
+                        <summary class="article-expander__title">Vertex AI Matching Engineでフィルタ機能を使う</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sugasuga/articles/18a8f352025e3c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--L069u7rT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Vertex%2520AI%2520Matching%2520Engine%25E3%2581%25A7%25E3%2583%2595%25E3%2582%25A3%25E3%2583%25AB%25E3%2582%25BF%25E6%25A9%259F%25E8%2583%25BD%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sugasuga%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3YjRiY2I1MjMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>ベクトルのフィルタ機能
+前回の記事にて、Matching Engineを触ってみました。
+https://zenn.dev/articles/2bdde4e7169eed
+実際に使う場合は、特定のデータにフィルタした上で、近傍探索をしたい場合があると思います。
+例えば、公開・非公開状態の記事がある中で、公開されている記事のみでベクトル検索を行い関連する記事のデータを取得したい場合などです。事前のフィルタができないと、ベクトル検索結果後にフィルタされ十分な検索結果が残らなかったりする可能性があります。
+ElasticSearchは事前のフィルタ機能があります。faissは記事執筆時点の...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/seiyakitazume/articles/117048f486f707"
+                        open
+                      >
+                        <summary class="article-expander__title">【LangChain】chromadbを使ってローカルの文章(PDF・ワード)をembeddingした上で格納する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/seiyakitazume/articles/117048f486f707">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--xQGPA7wv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590LangChain%25E3%2580%2591chromadb%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E3%2581%25AE%25E6%2596%2587%25E7%25AB%25A0%2528PDF%25E3%2583%25BB%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%2529%25E3%2582%2592embedding%25E3%2581%2597%25E3%2581%259F%25E4%25B8%258A%25E3%2581%25A7%25E6%25A0%25BC%25E7%25B4%258D%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:seiyakitazume%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I3ZjczZjRjZWUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>ChromaDBは、文書の埋め込みデータを格納・管理し、文書間の類似性を効率的に検索できるデータベースです。
+LangChainからも使え、以下のコードのように数行のコードでChromaDBの中にembeddingしたPDFやワードなどの文章データを格納することが出来ます。
+from langchain.vectorstores import Chroma
+texts &#x3D; text_splitter.split_documents(documents)
+embeddings &#x3D; OpenAIEmbeddings()
+vectordb &#x3D; Chroma.from_documents(tex...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/derwind/articles/dwd-qft-numpy"
+                        open
+                      >
+                        <summary class="article-expander__title">量子フーリエ変換を眺める</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/derwind/articles/dwd-qft-numpy">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--eeDoaw1E--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E9%2587%258F%25E5%25AD%2590%25E3%2583%2595%25E3%2583%25BC%25E3%2583%25AA%25E3%2582%25A8%25E5%25A4%2589%25E6%258F%259B%25E3%2582%2592%25E7%259C%25BA%25E3%2582%2581%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:derwind%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>目的
+Qiskit textbook の 量子フーリエ変換 を見ると、Bloch 球上のアニメーションが掲載されている。そう言えば以前に勉強した時は「ふ〜ん」で流した気がするので、少し真面目に見てみようという企画。
+
+ 量子フーリエ変換とは？
+量子コンピュータの色々な FTQC アルゴリズム、例えば量子位相推定や Shor のアルゴリズムで利用されるモジュールである。形式的には、古典的な離散フーリエ変換と対をなす形で定義される。
+
+ 離散フーリエ変換
+N \in \N に対し x を [0, 1, \cdots, N-1] 上の函数とし、x_j &#x3D; x(j),\ j \in [0, ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/stranglehello/articles/d7567ac87c2d0b"
+                        open
+                      >
+                        <summary class="article-expander__title">troccoで簡易MLOpsをまわしてみる2（Snowflake ver）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/stranglehello/articles/d7567ac87c2d0b">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Zh0vvQw7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:trocco%25E3%2581%25A7%25E7%25B0%25A1%25E6%2598%2593MLOps%25E3%2582%2592%25E3%2581%25BE%25E3%2582%258F%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B2%25EF%25BC%2588Snowflake%2520ver%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:stranglehello%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzlkNjcyNDhkMWEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+
+この記事は前回のこちらからのちょっとした派生です
+良かったら先に目を通していただければ嬉しいです😁
+
+
+ 今回の利用するサービス
+
+
+Snowflake(DWH)
+
+少し前にpreviewになったPythonのワークシートをメインに使います
+
+
+
+trocco
+
+前回と同じくデータを取得する部分とワークフローで呼び出す部分を担当します
+前回の記事からのUpdateとしてはFreeプランが登場しており、今回はFreeで使える範囲で対応できます
+
+
+
+
+ 対応内容
+
+こちら前回と同じでtitanic問題での利用を想定してみます！（変わり映えがなくてすみません、、）
+
+
+ さっ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/t_o_d/articles/d3b2ba62989a27"
+                        open
+                      >
+                        <summary class="article-expander__title">テキストから3Dアセットを生成するShap-EをColaboratoryで試用</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/t_o_d/articles/d3b2ba62989a27">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--sR1pDCD2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E3%2581%258B%25E3%2582%25893D%25E3%2582%25A2%25E3%2582%25BB%25E3%2583%2583%25E3%2583%2588%25E3%2582%2592%25E7%2594%259F%25E6%2588%2590%25E3%2581%2599%25E3%2582%258BShap-E%25E3%2582%2592Colaboratory%25E3%2581%25A7%25E8%25A9%25A6%25E7%2594%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:t_o_d%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FmYzIwYTUyNTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>先日OpenAIからテキストや画像の入力から3Dアセットを生成するShap-Eが発表されました。
+そこでGoogle Colaboratoryを利用してShap-Eを試した方法を記録いたします。
+
+
+ 結論
+
+本記事の手順で以下のように「テキストを指定して3Dアセットの作成」がColaboratory上で試すことが可能です。
+
+
+
+ 準備
+
+実行環境を整えるため、Google Colaboratory上にGPU(T4)環境を作成します。
+
+※詳細な作成方法はこちらを参考にしてください。
+
+
+
+
+
+
+
+ 手順
+
+ リポジトリ取得
+
+実行環境の作成後、以下を実行してShap-Eのソースコー...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/joel/articles/a7d18b4861f550"
+                        open
+                      >
+                        <summary class="article-expander__title">[TIL] Python&amp;機械学習入門2(完)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/joel/articles/a7d18b4861f550">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--SAFteeX8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BTIL%255D%2520Python%2526%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E5%2585%25A5%25E9%2596%25802%2528%25E5%25AE%258C%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Joel%2520Lee%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc1N2YxOTA5Y2QuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>ノート
+本記事は、Kikagakuの無料講座「Python&amp;機械学習入門」の講義ノートの第2回目です。
+以下のリストは当該講座のカリキュラムで、本ノートは「8.導入」から「11.単回帰分析の実装」までの内容を簡単にまとめたものです。
+
+Curriculum (401/548)
+1.導入 (42 min)
+2.微分 (49 min)
+3.線形代数 (55 min)
+4.単回帰分析 (52 min)
+5.重回帰分析 (56 min)
+6.Python属性講義 (101 min)
+7.単回帰分析の実装 (51 min)
+
+
+
+8.重回帰分析の実装 (27 min)
+9. 練習問題 ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hodakam/articles/a7d5c8253c9ad5"
+                        open
+                      >
+                        <summary class="article-expander__title">Dashのdatatableに画像を挿入する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hodakam/articles/a7d5c8253c9ad5">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--mB1SQEC5--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Dash%25E3%2581%25AEdatatable%25E3%2581%25AB%25E7%2594%25BB%25E5%2583%258F%25E3%2582%2592%25E6%258C%25BF%25E5%2585%25A5%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hodakam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE4MTNmZjhkNjUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>datatableに画像を挿入する方法
+Dashという簡単にデータ分析のためのダッシュボードが作れるライブラリがあります。Dashの中にはdatatableという便利なライブラリがあり、これを利用することでソートやページング、フィルターなどのテーブル形式のデータでよく用いられる機能を非常に簡単に実装することができます。
+実際にダッシュボードを作成する場合、フィールドとして数値や文字列だけでなく画像やファイルへのリンクなどを使いたくなることがあります。Dashのdatatableにこれらのオブジェクトを埋め込むには実はそれなりに工夫が必要です。
+
+ 実現方法1：html.ImgでImg...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/lud/articles/616777396e54a2"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】ZetaChain上のuniswapでswap</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/lud/articles/616777396e54a2">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--qrg_0zoJ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591ZetaChain%25E4%25B8%258A%25E3%2581%25AEuniswap%25E3%2581%25A7swap%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:t_nakatani%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzJkNzQyN2QyNDUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>この記事では，ZetaChain(testnet)上に実装されたUniswapにPythonでアクセスしてswapする方法を紹介します．
+環境はjupyterlabを想定しています．
+
+ 解説
+privateな情報は.envファイルから環境変数として読み込みます．
+ADDRESS&#x3D;0x...
+PRIVATE_KEY&#x3D;0x...
+%load_ext dotenv
+%dotenv .env -o -v
+
+ 各種設定
+ZetaChain上のtokenアドレス等を設定します．(公式リンク)
+from web3 import Web3, HTTPProvider
+import json, os, ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -10669,414 +10983,10 @@ https://zenn.dev/tirimen/articles/80248e2caf2d63
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-04-07 datetime="2023-04-07T12:08:04.000Z">2023-04-07</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-04-07 datetime="2023-04-07T12:08:04.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/tanny/articles/a5c0fa5c2230a7"
-                        open
-                      >
-                        <summary class="article-expander__title">【SwitchBot】温湿度計のデータをPython × InfluxDB × Grafanaでダッシュボード化する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tanny/articles/a5c0fa5c2230a7">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--78KaWucV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590SwitchBot%25E3%2580%2591%25E6%25B8%25A9%25E6%25B9%25BF%25E5%25BA%25A6%25E8%25A8%2588%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592Python%2520%25C3%2597%2520InfluxDB%2520%25C3%2597%2520Grafana%25E3%2581%25A7%25E3%2583%2580%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E3%2583%259C%25E3%2583%25BC%25E3%2583%2589%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Tanny%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ1OGU0Njc0YzUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>概要
-この記事では、SwitchBot温湿度計のデータをAPI経由で取得し、時系列DBのInfluxDBに保存した上で、Grafanaでダッシュボード化する方法を解説します。
-
-Grafanaで作成したダッシュボード
-
- SwitchBot温湿度計について
-SwitchBot温湿度計は、温度と湿度を計測するセンサーです。温度と湿度をデバイスの画面で確認する以外にも、他のSwitchBotデバイスと連携し、「温度が低下したら暖房をつける」といったトリガー起動に活用できます。
-2023年3月現在は2種類の温湿度計が販売されており、この記事では両方に対応しています。「プラス」の方が液晶を見...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/roistaff/articles/c78a26dd99e2a5"
-                        open
-                      >
-                        <summary class="article-expander__title">Go psutilライブラリの紹介</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/roistaff/articles/c78a26dd99e2a5">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--WMOtcN9B--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Go%2520psutil%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2581%25AE%25E7%25B4%25B9%25E4%25BB%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Staff%2520Roi%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WmdUZURqZjNBbUtMWXN1VVdralB4SzJKVV82MUozMEFSTW9uaVItdz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Pythonでもお馴染みのメモリ使用量などを取得するライブラリ、psutilのGo版gopsutilというライブラリがあったので軽く紹介したいと思います。
-
- 使い方
-
- Get package
-https://github.com/shirou/gopsutil
-以下のコマンドからいけます。
-go get github.com/shirou/gopsutil/v3/mem
-
- Usage
-package main
-import(
-	&quot;github.com/shirou/gopsutil/v3/mem&quot;
-	&quot;fmt&quot;
-	)
-func main(){
-	v, _ :&#x3D; mem.Virtua...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mossan_hoshi/articles/20230407_cheatsheep"
-                        open
-                      >
-                        <summary class="article-expander__title">【随時更新】主要プログラミング言語8種チートシート</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mossan_hoshi/articles/20230407_cheatsheep">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--rwPBLxSk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E9%259A%258F%25E6%2599%2582%25E6%259B%25B4%25E6%2596%25B0%25E3%2580%2591%25E4%25B8%25BB%25E8%25A6%2581%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E8%25A8%2580%25E8%25AA%259E8%25E7%25A8%25AE%25E3%2583%2581%25E3%2583%25BC%25E3%2583%2588%25E3%2582%25B7%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:mossan_hoshi%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dfWU0zbjhpS2hvOGtURGlHdGNzYldTQ1lneVNqbHNSd1pRTlVFPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-
-個人的に主要言語と思う8言語＆スクリプト（python, JavaScript, Rust, Haskell, C++, C#, bash, PowerShell)のチートシートです
-インデントのために全角空白を含んでます。コピペする場合は気を付けて下さい
-ChatGPT(GPT-4)に書かせたコードなので一部変なコードがあるかもしれません
-動かない場合はChatGPTにコードと一緒に&quot;＜プログラミング名＞で＜大分類名＞の＜小分類名＞をやろうと思うんだけど、このコードを修正して。&quot;的なことを書けば大抵の場合修正してくれます
-
-
- チートシート
-
- スプレッドシート版（こち...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;26
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/microsoft/articles/c2cfdda734b61c"
-                        open
-                      >
-                        <summary class="article-expander__title">Azure OpenAI Service で GPT-4 API を使う</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/microsoft/articles/c2cfdda734b61c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--463HIYqn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520OpenAI%2520Service%2520%25E3%2581%25A7%2520GPT-4%2520API%2520%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:ryohtaka%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U5NzVkNmI1Y2MuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-2023 年 3 月 21 日に Azrue OpenAI Service で GPT-4 の登録制プレビューが開始しましたので、情報をまとめました。
-
-Azure OpenAI Service に GPT-4 を導入
-Azure OpenAI Service の新機能 - 2023 年 3 月
-
-ちなみに、本家 OpenAI での GPT-4 の発表と同じタイミングで、実は 新しい Bing の背後には GPT-4 がいたことが公表されました。さらにその直後、Microsoft 365 Copilot や Copilot in Microsoft Power Automa...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/dumbled0re/articles/744c783a8b3992"
-                        open
-                      >
-                        <summary class="article-expander__title">【PyTorch+LSTM】仮想通貨の予測</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/dumbled0re/articles/744c783a8b3992">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--xPqGqgvX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590PyTorch%252BLSTM%25E3%2580%2591%25E4%25BB%25AE%25E6%2583%25B3%25E9%2580%259A%25E8%25B2%25A8%25E3%2581%25AE%25E4%25BA%2588%25E6%25B8%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:dumbled0re%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4Ym16Y3poTmRJWlFDZEtDOEx1OUxzdS1yRlVKR3NXU3l5UzZOZWQ9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-現在、大学でデータサイエンスを学んでいる大学生です。この記事ではPyTorch+LSTMを使用して、仮想通貨であるXRP(リップル)の予測をしていきたいと思います。
-
- データの準備
-今回はInvesting.comで2015年1月から現在(2023/04/06)まで公開されている8年間のXRPデータを使用します。こちらからcsvファイルをダウンロードしてください。
-
- 実行環境
-
-Google Colaboratory
-Python 3.8.16
-
-
- ライブラリのインポート
-import os
-import datetime
-import math
-import num...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/ee87e1bc84af20"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-194｜A - I Scream</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/ee87e1bc84af20">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--y8RqFV6F--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-194%25EF%25BD%259CA%2520-%2520I%2520Scream%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-194 A - I Scream
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b &#x3D; getIntMap()
-
-    t &#x3D; 4
-    if a + b &gt;&#x3D; 15 and b &gt;&#x3D; 8:
-        t &#x3D; 1
-    elif a + b &gt;&#x3D; 10 and b &gt;&#x3D; 3:
-        t &#x3D; 2
-    elif a + b &gt;&#x3D; 3:
-        t &#x3D; 3
-    print(t)
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/942476c4519af0"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-194｜B - Job Assignment</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/942476c4519af0">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--fEHgALlt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-194%25EF%25BD%259CB%2520-%2520Job%2520Assignment%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-194 B - Job Assignment
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def main():
-    n &#x3D; getInt()
-    l &#x3D; getIntListRow(n)
-
-    a &#x3D; [i for i, j in l]
-    b &#x3D; [j for i, j in l]
-
-    t &#x3D; max(a) +...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-04-06 datetime="2023-04-06T16:16:42.000Z">2023-04-06</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-04-06 datetime="2023-04-06T16:16:42.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/treefield/articles/f6e8b879387d02"
-                        open
-                      >
-                        <summary class="article-expander__title">DjangoアプリをHerokuにデプロイしました。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/treefield/articles/f6e8b879387d02">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Rimu5VWs--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592Heroku%25E3%2581%25AB%25E3%2583%2587%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25A4%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:treefield%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZmMWQ3M2UxMTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>DjangoアプリをHerokuにデプロイしたので手順を記録します。
-環境は、
-macOS 12.6.4
-Python 3.10.10
-Django 4.0.2
-基本的にはこのサイトを参考にさせてもらいました。大変助かりました。
-DjangoアプリをHerokuにデプロイする方法
-
- 1.各種インストール
-まずは各種インストールを実施します。
-
- Heroku CLIインストール
-Heroku Command Line Interface (CLI) を使用すると、Heroku アプリをターミナルから直接、作成および管理できます。ただし、Gitがインストールされていることが前提です。
-%...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/wsuzume/articles/3b09a42ecdf197"
-                        open
-                      >
-                        <summary class="article-expander__title">TensofFlowの使い方練習４：サブクラス化</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/wsuzume/articles/3b09a42ecdf197">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--N1GzB3_e--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:TensofFlow%25E3%2581%25AE%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%25E7%25B7%25B4%25E7%25BF%2592%25EF%25BC%2594%25EF%25BC%259A%25E3%2582%25B5%25E3%2583%2596%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25B9%25E5%258C%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Josh%2520Nobus%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc3NTk2ODI4YzguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-この記事は以下の記事の続きである。
-https://zenn.dev/wsuzume/articles/5cda82c09ac52e
-この記事では tensorflow.keras.layers.Layer や tensorflow.keras.Model を継承して新たなレイヤーやモデルを作成する方法を練習する。
-参考にしたドキュメントは以下。
-https://www.tensorflow.org/guide/keras/custom_layers_and_models?hl&#x3D;ja
-
- 参考文献
-
-
-What are Symbolic and Imperative API...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/shungo_a/articles/e8f2cc02bb4f63"
-                        open
-                      >
-                        <summary class="article-expander__title">ChatGPTを用いたノーコードプログラム作成例</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shungo_a/articles/e8f2cc02bb4f63">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--BnfafDvn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ChatGPT%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E3%2583%258E%25E3%2583%25BC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%25A0%25E4%25BD%259C%25E6%2588%2590%25E4%25BE%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:S.A%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI5NTg1NmYwNDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>本記事の目的
-Pythonの自学自習でChatGPTを使っているのですが、プログラムによって何を実施したいのかさえ記載すれば、プログラムを簡単に実装可能であると実感しています。しかしながら、ミスなく要件を満たすコーディングをするためには。実際のコーディングを決定する質問文の設定が場合によっては難しかったり、回答コードにエラーが出てしまった際にどのような追記質問をすべきかを考える上で、ChatGPTに対する慣れやコーディングに対する素養もある程度必要になる場合もあります。したがって、コーディングという面において、初心者がChatGPTを利用すれば必ず時間削減になると現状は言えないと考え...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/seiyakitazume/articles/ee80940cdf64b7"
-                        open
-                      >
-                        <summary class="article-expander__title">chatGPTで疾患のお悩み相談を受けてくれるボットを開発</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/seiyakitazume/articles/ee80940cdf64b7">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--mG_zsA1s--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:chatGPT%25E3%2581%25A7%25E7%2596%25BE%25E6%2582%25A3%25E3%2581%25AE%25E3%2581%258A%25E6%2582%25A9%25E3%2581%25BF%25E7%259B%25B8%25E8%25AB%2587%25E3%2582%2592%25E5%258F%2597%25E3%2581%2591%25E3%2581%25A6%25E3%2581%258F%25E3%2582%258C%25E3%2582%258B%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E3%2582%2592%25E9%2596%258B%25E7%2599%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:seiyakitazume%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WjNia3dadzVJczNMZW1IMzlWMHVOeGxlMF9rQmJObkRIbFVCWlo9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>先日、製薬会社様主催のこちらのイベントに参加してきました。
-https://hemophilia-hackathon-2023.peatix.com/
-血友病の患者さんの助けになるような製品・サービスを考案するというハッカソンでした。
-血友病は遺伝性の疾患なので、彼氏・彼女ができたり、子供を作る際に悩む方がいます。
-医学的な疑問や解決方法はインターネット上に回答があるのですが、「正解がない生活にまつわるお悩み」についてはまとまった情報がありませんでした。
-そこで、このハッカソンにご登壇いただいている医師の知見を入れた、FAQを作成し、chatGPTのAPIを噛ませた「血友病お悩み相談ボッ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4898913358">
-        <time id="build-timestamp" datetime="2023-05-06T01:20:46.493Z">2023-05-06T01:20:46.493Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/4904654749">
+        <time id="build-timestamp" datetime="2023-05-07T01:37:30.576Z">2023-05-07T01:37:30.576Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
