@@ -2,10 +2,145 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-05-07T01:37:30.608Z</updated>
+    <updated>2023-05-08T01:23:56.923Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[SQLMeshが提供するVirtual Data Environments(データ環境の仮想化)を体験してみた]]></title>
+        <id>https://zenn.dev/kashira/articles/ad470ce26c5e79</id>
+        <link href="https://zenn.dev/kashira/articles/ad470ce26c5e79"/>
+        <updated>2023-05-07T09:05:16.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+開発・運用のコストを最小限にしつつDev・Staging・Prodをシームレスに切り替える設計思想としてVirtual Data Environments(データ環境の仮想化)という概念があるらしい。
+SQLMeshで実装されており、簡単に試すことが出来るので、どんな感じかさわってみた。
+https://sqlmesh.readthedocs.io/en/stable/
+
+ Virtual Data Environments(データ環境の仮想化)
+
+ TL;DR
+Physical layerにデータのスナップショットを作成して、それをVirtual layerから参照するこ...]]></summary>
+        <author>
+            <name>kashira</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPI で CURD する。]]></title>
+        <id>https://zenn.dev/hasegawasatoshi/articles/648f6c1035282b</id>
+        <link href="https://zenn.dev/hasegawasatoshi/articles/648f6c1035282b"/>
+        <updated>2023-05-07T08:28:23.000Z</updated>
+        <summary type="html"><![CDATA[FastAPI の使い方について学習してみました。とてもシンプルなフレームワークで、公式のチュートリアル も分かりやすかったのですが、最小限の機能を提供しているがゆえに、RDBMS へのアクセスまでやろうとすると、ORM は SQLAlchemy、マイグレーションは Alembic と、その辺の前提知識がないと理解しにくい部分があったので、備忘としてメモをしておきます。
+基本的にはチュートリアルの「 SQL (Relational) Databases 」の写経ですが、同じく、「Bigger Applications - Multiple Files 」を参考に、ファイル分割などをしてい...]]></summary>
+        <author>
+            <name>Satoshi Hasegawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【初心者でもできる】GoogleColaboratoryでStableDiffusionのWebUIを動かす]]></title>
+        <id>https://zenn.dev/robes/articles/555367ebe25196</id>
+        <link href="https://zenn.dev/robes/articles/555367ebe25196"/>
+        <updated>2023-05-07T07:47:49.000Z</updated>
+        <summary type="html"><![CDATA[以前、こちらの記事で、GoogleColaboratory（以下、Googleコラボといいます）上でStableDiffusionを実装する方法についてご紹介しました。
+https://zenn.dev/robes/articles/8ea32494d40f06
+正直、画像の精度はそれほど高くありませんでしたが、テキストを入れるだけで、AIが様々な画像を生成してくれることが大変驚きでした。
+時は過ぎ、今（2023年5月時点）のStableDiffusionは、画像の精度が、ほぼ写真と言っていいくらい、かなり高くなっています。
+また、Googleコラボを操作することに変わりはないのですが、...]]></summary>
+        <author>
+            <name>osn_Lofi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Transformersの'from_pretrained'の使い方とリスクを考察]]></title>
+        <id>https://zenn.dev/yagiyuki/articles/load_pretrained</id>
+        <link href="https://zenn.dev/yagiyuki/articles/load_pretrained"/>
+        <updated>2023-05-07T07:12:59.000Z</updated>
+        <summary type="html"><![CDATA[Transformersの事前学習済みのモデルのロード処理で、こんなコードをよく見かけませんか?
+from transformers import HogeModel
+hoge_model = HogeModel.from_pretrained('hoge_model_name')
+Hugging Face上のモデルロードのサンプルは、だいたい上のような実装になっています。
+これまでなんとなく使っていましたが、少し詳しく挙動を知りたいと思い調査したので、まとめておきます。
+また、上記のコードをそのまま実運用システムへ組み込むのにもリスクを感じたので、そのあたりも書いておきます。
+
+ 'f...]]></summary>
+        <author>
+            <name>yagiyuki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Poisson Image Editing を画像ピラミッドで高速化する]]></title>
+        <id>https://zenn.dev/kymok/articles/593ccf5eb56385</id>
+        <link href="https://zenn.dev/kymok/articles/593ccf5eb56385"/>
+        <updated>2023-05-07T05:20:58.000Z</updated>
+        <summary type="html"><![CDATA[概要
+本稿では， Poisson Image Editing (Perez et al., 2003) を Python で実装してみます．ヤコビ法で高解像度画像を処理すると時間がかかるところ，あらかじめ画像ピラミッドを作成して低解像度側から順に処理することで処理時間を短縮できました．
+考え方はマルチグリッド法と似ているところもあります（マルチグリッド法のほうが洗練されています）が，少しの書き換えだけで実装できるので，小難しいことを考えたくないときには便利です．
+
+ 方法
+
+ Poisson Image Editing
+Poisson Image Editing (Perez et ...]]></summary>
+        <author>
+            <name>kymok</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonコードを35000倍に高速化したい]]></title>
+        <id>https://zenn.dev/turing_motors/articles/8b9a2c4d3e8882</id>
+        <link href="https://zenn.dev/turing_motors/articles/8b9a2c4d3e8882"/>
+        <updated>2023-05-07T05:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Pythonは世界的にも人気のあるプログラミング言語ですが、実行速度については課題があります。Pythonの実行速度を高速化したい、という要求は根強く、これまでにも様々な処理系が開発されています。
+この記事はPythonで書かれたコードを35000倍に高速化するにはどのような方法があるかについてまとめたものです。
+この記事は：
+
+Pythonで書かれたアルゴリズムを35000倍に高速化する
+事前コンパイル、並列化、SIMD演算を駆使する
+最終的に44000倍まで高速化できた
+
+
+ なぜ35000倍？
+2023年5月2日にModular社よりPythonの使いやすさとC言語...]]></summary>
+        <author>
+            <name>ymg_aq</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ROS 2 : Pythonでパッケージ作成するときのチップス]]></title>
+        <id>https://zenn.dev/tasada038/articles/f2f5b500cdc36a</id>
+        <link href="https://zenn.dev/tasada038/articles/f2f5b500cdc36a"/>
+        <updated>2023-05-07T04:24:11.000Z</updated>
+        <summary type="html"><![CDATA[海洋ロボコンをやってた人です。
+今回は久しぶりにPythonでROS 2 パッケージ ping_sonar_ros を作成したので、その備忘録として記載していきます。
+なぜまとめるかは以下です。
+
+C++で慣れるとPython ROS 2の書き方忘れるため
+setup.pyとCMakeLists.txtで(インポートなどの)各依存関係の書き方が違うため（ここ大切）
+
+また、本記事に対するコメントも積極的に募集しますので、よろしくお願いいたします。
+
+ ROS 2 Pythonパッケージ作成のチップス
+ROS 2 Pythonの基本は以下です。
+
+パッケージの作成
+
+cd ~/dev_ws...]]></summary>
+        <author>
+            <name>Takumi Asada</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Clean Architectures in Python」を読み解いてクリーンアーキテクチャを具体的に理解する]]></title>
+        <id>https://zenn.dev/tanny/articles/4820776f992d2f</id>
+        <link href="https://zenn.dev/tanny/articles/4820776f992d2f"/>
+        <updated>2023-05-07T03:02:38.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+ソフトウェアアーキテクチャーの一種として、クリーンアーキテクチャがあります。クリーンアーキテクチャは、Robert C. Martin氏（「ボブおじさん」と呼ばれているらしい）が提唱したもので、以下のブログの説明が有名なようです。
+https://blog.tai2.net/the_clean_architecture.html
+私もこのブログの内容をざっと読んでみたのですが、具体的にはどんな実装になるのかがさっぱりわかりませんでした😇。そこで、いつも利用しているPythonでの実装例を探してみたところ、「Clean Architectures in Python」という英...]]></summary>
+        <author>
+            <name>Tanny</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[tensorflow2.xで推論中、メモリ使用量がどんどん増えていく事象への対処]]></title>
         <id>https://zenn.dev/watarungurunnn/articles/738c63c55a62cc</id>
@@ -6879,117 +7014,6 @@ USGS EarthExplorer にアクセス
 以下のリンクから USGS EarthExplorer...]]></summary>
         <author>
             <name>shun</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[sklearnで統計的機械学習ことはじめ 第1章 ビッグデータの可視化]]></title>
-        <id>https://zenn.dev/tremendous1192/articles/fc7b4a9b87b4e0</id>
-        <link href="https://zenn.dev/tremendous1192/articles/fc7b4a9b87b4e0"/>
-        <updated>2023-04-08T09:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-最近kaggleを始めまして、ただ単にlightgbmにデータを食べさせるだけでは限界があることが分かりました。
-急がば回れ、さらに基礎を固めた方が良いのでしょう。
-この記事では、私が肌感をつかむために学んだsklearnのメソッド等を紹介していきます。
-sklearnを使う理由は、こちらの方が幅広い処理を行うことができるからです。
-
- 書籍
-使用したデータは統計的機械学習ことはじめの購入者特典ダウンロードデータです。
-多数のケーススタディをグラフィカルに紹介しておりますので、初心者向けの本を何冊か読んだ後に読むとちょうどよいかもしれません。
-!
-書籍では密度分布で終わりで...]]></summary>
-        <author>
-            <name>Tremendous1192</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GPTをドーピングする LangChain 基礎編]]></title>
-        <id>https://zenn.dev/takiko/articles/24217eece242e1</id>
-        <link href="https://zenn.dev/takiko/articles/24217eece242e1"/>
-        <updated>2023-04-08T08:00:53.000Z</updated>
-        <summary type="html"><![CDATA[概要
-LLM(大規模言語モデル)の統合的なライブラリである、LangChain の基本的な使い方についての解説記事です。
-LangChain は、Microsoft が提供する Visual ChatGPTなどにも、内部的に使用されており、今後のLLM開発のデファクトスタンダードになり得るライブラリです。
-LangChain は現在、Python と TypeScript の環境でのみ使用可能であり、本記事は TypeScript での解説になります。
-ただ、Pythonでの実装方法も殆ど変わらないため、Pythonでの実装を考えてる方にも参考程度にはなるかと思います。
-
- この記事...]]></summary>
-        <author>
-            <name>takigon</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-195｜B - Many Oranges]]></title>
-        <id>https://zenn.dev/hyperdb/articles/11f1494e1b0a71</id>
-        <link href="https://zenn.dev/hyperdb/articles/11f1494e1b0a71"/>
-        <updated>2023-04-08T06:37:43.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-195 B - Many Oranges
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b, w = getIntMap()
-
-    wg = w * 1000
-
-    c = []
-    for i in range(wg // b, (wg // a) + 1):
-        if i * a <= wg <= i * b:
-            c.append(i)
-
-    print('UNSATISFI...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-195｜A - Health M Death]]></title>
-        <id>https://zenn.dev/hyperdb/articles/0e87e505b892e4</id>
-        <link href="https://zenn.dev/hyperdb/articles/0e87e505b892e4"/>
-        <updated>2023-04-08T06:37:42.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-195 A - Health M Death
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    m, n = getIntMap()
-
-    print('Yes' if n % m == 0 else 'No')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MCMC法のメトロポリス法をやってみよう]]></title>
-        <id>https://zenn.dev/tirimen/articles/7e50cba9988896</id>
-        <link href="https://zenn.dev/tirimen/articles/7e50cba9988896"/>
-        <updated>2023-04-08T01:47:00.000Z</updated>
-        <summary type="html"><![CDATA[本記事の目的
-自分の勉強用。今回はベイズ推定のサンプリング方法の第二弾。第一弾のギブスサンプリングについてはこちらをどうぞ。
-https://zenn.dev/tirimen/articles/80248e2caf2d63
-今回はメトロポリス法についてまとめていく。
-
- ギブスサンプリングとメトロポリス法の使い分けについて
-どちらもMCMC法のサンプリング方法であるが、適した場面が異なる。一般的に言われているのが、ギブスサンプリングは条件付き確率が求めやすい形のとき、メトロポリス法は条件付き確率が求めにくい形のときに用いられるということ。ってことはメトロポリス法の方が汎用性があり、ず...]]></summary>
-        <author>
-            <name>tirimen</name>
         </author>
     </entry>
 </feed>
