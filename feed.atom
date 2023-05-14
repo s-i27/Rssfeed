@@ -2,10 +2,282 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-05-13T01:23:08.471Z</updated>
+    <updated>2023-05-14T01:36:37.907Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[GCP AWS等のクラウドプラットフォームに最新のpythonを入れる]]></title>
+        <id>https://zenn.dev/ashitahonkidasu/articles/36d64bfc4e4bc2</id>
+        <link href="https://zenn.dev/ashitahonkidasu/articles/36d64bfc4e4bc2"/>
+        <updated>2023-05-14T01:14:18.000Z</updated>
+        <summary type="html"><![CDATA[今回試した環境
+ローカル環境: windows 11
+クラウドプラットフォーム: GCP compute engin m2-micro
+OS: ubuntu 22.04lts
+
+ wgetでminiforgeスクリプトをダウンロード
+miniforgeのgithubにアクセスします。
+miniforge
+自分が使うOSに対応したスクリプトを右クリックしてリンク先をコピーします。
+wget "リンク先を貼り付け"
+
+ 実行
+lsでさっきダウンロードしたスクリプト名を確認します。
+ls
+Miniforge〇〇.shを実行します。
+bash "Miniforge-スクリプト名.sh"
+
+ ...]]></summary>
+        <author>
+            <name>shiba</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[TIL] ディープラーニング基礎]]></title>
+        <id>https://zenn.dev/joel/articles/575b7c20aa780c</id>
+        <link href="https://zenn.dev/joel/articles/575b7c20aa780c"/>
+        <updated>2023-05-13T16:00:28.000Z</updated>
+        <summary type="html"><![CDATA[[!Important]+ Goals
+
+基本アルゴリズムの概要
+基本的な実装方法
+チューニング方法
+
+
+
+[!info]+ Subject
+
+機械学習プロジェクトに関わる全ての方
+DL の実装を始めたい方
+
+
+
+[!abstract]+ Curriculum
+1.深層学習の実践
+2.深層学習チューニング
+添削問題
+
+
+
+ ディープラーニング実践
+
+ ディープラーニングの概要
+
+ フレームワーク
+
+TensorFlow by Google
+
+本講義ではtensorflow.kerasを使用します。
+
+
+PyTorch by Facebook
+
+
+ 基本用語
+
+Epoch : トレーニン...]]></summary>
+        <author>
+            <name>Joel Lee</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[（英語解説）LeetCode 27: Remove Element in-Place]]></title>
+        <id>https://zenn.dev/eric233/articles/8781fa03b6359c</id>
+        <link href="https://zenn.dev/eric233/articles/8781fa03b6359c"/>
+        <updated>2023-05-13T15:49:43.000Z</updated>
+        <summary type="html"><![CDATA[Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+Consider the number of elements in nums which are not equal to val be k, to get accepted...]]></summary>
+        <author>
+            <name>Eric</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChatGPTで日英医薬品マスター作成の試み]]></title>
+        <id>https://zenn.dev/parfait/articles/5aebc4523dc52f</id>
+        <link href="https://zenn.dev/parfait/articles/5aebc4523dc52f"/>
+        <updated>2023-05-13T10:55:52.000Z</updated>
+        <summary type="html"><![CDATA[結論
+
+DeepL + GPT3.5である程度日英の医薬品名の名寄せは可能。
+SemanticSimilarityExampleSelector + Few Shotが有効。
+名寄せ補助ツールとして、ChatGPTを使うのはあり。
+
+
+ 背景
+顧客「臨床データベースA(DB)と臨床データベースBを統合して解析してほしい」
+こういった要望は定期的にあるがさて困った。なぜなら2つのDBは同じ臨床データなのだが、言語が異なるのだ。
+またそれぞれ独自の入力ルールが多々見られ、良い結合keyが見つからない。あえて選ぶとしたら医薬品名になるのだが、片方を単純に翻訳しても医薬品名同士で結合できるわ...]]></summary>
+        <author>
+            <name>parfait</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】ハノイの塔の実装]]></title>
+        <id>https://zenn.dev/takuh/articles/8aa97212202951</id>
+        <link href="https://zenn.dev/takuh/articles/8aa97212202951"/>
+        <updated>2023-05-13T09:43:46.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+ハノイの塔の実装コードです。
+
+ 実装
+
+tower_of_hanoi.py
+from typing import List, Tuple
+
+
+def hanoi(disk: int, src: str, dest: str, support: str):
+    if disk < 1:
+        return
+
+    hanoi(disk-1, src, support, dest)
+    print(f'move {disk} from {src} to {dest}')
+    hanoi(disk-1, support, dest, src)
+
+
+...]]></summary>
+        <author>
+            <name>takuh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】スパイラルマトリックスの実装]]></title>
+        <id>https://zenn.dev/takuh/articles/9086178dbfbbec</id>
+        <link href="https://zenn.dev/takuh/articles/9086178dbfbbec"/>
+        <updated>2023-05-13T09:42:18.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+与えられた行列を螺旋状のリスト形式で返すアルゴリズムです。
+
+ 参考図
+
+
+ 実装
+
+spiral_matrix.py
+from typing import List
+
+class Solution:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        # 出力配列を初期化
+        result = []
+        rows, columns = len(matrix), len(matrix[0])
+        # 上、右、下、左の境界をup、right、...]]></summary>
+        <author>
+            <name>takuh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】シーザー暗号の実装]]></title>
+        <id>https://zenn.dev/takuh/articles/b2e50c34b8dad3</id>
+        <link href="https://zenn.dev/takuh/articles/b2e50c34b8dad3"/>
+        <updated>2023-05-13T09:30:34.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+シーザー暗号：入力されたアルファベットを３つシフトさせて暗号化する方法。
+（例）art → duw
+
+ 実装
+
+caesar_cipher(not_use_stringModule)
+# 文字列を暗号化する関数（stringモジュールを使わない場合）
+from typing import Generator, Tuple
+
+def caesar_cipher(text: str, shift: int) -> str:
+    result = ""
+    len_alphabet = ord("Z") - ord("A") + 1
+    for char in ...]]></summary>
+        <author>
+            <name>takuh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】パスカルのトライアングル（実装）]]></title>
+        <id>https://zenn.dev/takuh/articles/b2a7f802f98d43</id>
+        <link href="https://zenn.dev/takuh/articles/b2a7f802f98d43"/>
+        <updated>2023-05-13T09:25:41.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+パスカルのトライアングルをPythonで実装しました。
+
+ 参考図（パスカルのトライアングル）　Wikipediaより引用
+
+
+ 実装
+
+pascal_triangle.py
+from typing import List
+
+# 値を足し合わせる部分のアルゴリズム（出力はリストに入ったままの状態）
+def pascal_triangle(depth: int) -> List[List[int]]:
+    # 各深さ毎のリストを作成する（深くなる毎に1が追加されていく）
+    data = [[1] * (i + 1) for i in range(depth)]...]]></summary>
+        <author>
+            <name>takuh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DataplexのデータリネージAPIを使って、対象のテーブルに依存しているテーブルを自動で列挙する]]></title>
+        <id>https://zenn.dev/kashira/articles/290de0b35836ae</id>
+        <link href="https://zenn.dev/kashira/articles/290de0b35836ae"/>
+        <updated>2023-05-13T06:05:31.000Z</updated>
+        <summary type="html"><![CDATA[なぜこの記事を書くのか？
+DataplexのデータリネージAPIを有効にすることで、BigQueryのテーブル間の依存関係を簡単に可視化することが出来る。
+https://cloud.google.com/data-catalog/docs/concepts/about-data-lineage?hl=ja
+特定のテーブルを参照しているテーブルが少ないうちはGUIを使うだけで問題ないが、よく参照されるテーブルの依存関係を把握する際に辛い部分もある。
+筆者が体験したものとして、テーブルAに問題が発生したので、テーブルAを参照しているテーブルをリストアップして関係者に連絡したいケースがあ...]]></summary>
+        <author>
+            <name>kashira</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[データオーケストレーションツールDagsterの紹介]]></title>
+        <id>https://zenn.dev/datamarket/articles/dagster_cloud</id>
+        <link href="https://zenn.dev/datamarket/articles/dagster_cloud"/>
+        <updated>2023-05-13T03:38:00.000Z</updated>
+        <summary type="html"><![CDATA[データオーケストレーションとは
+
+データオーケストレーションという言葉をご存知でしょうか？日本ではまだ耳慣れない言葉ですが、data orchestrationでgoogle検索すると実に3000万件以上ヒットし、世界的には十分に市民権を得ている言葉です。Databricksではデータオーケストレーションを以下のように説明しています。
+データオーケストレーションとは
+データオーケストレーションとは、複数のストレージからサイロ化したデータを取り出し、組み合わせて整理し、分析に利用できるようにするための自動化されたプロセスです。
+このプロセスでは、レガシーシステム、クラウドベースのツール...]]></summary>
+        <author>
+            <name>datamarket</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[IfcOpenShellで階情報を取得する]]></title>
+        <id>https://zenn.dev/cote2/articles/6459c1c44091da</id>
+        <link href="https://zenn.dev/cote2/articles/6459c1c44091da"/>
+        <updated>2023-05-13T01:24:31.000Z</updated>
+        <summary type="html"><![CDATA[!
+筆者は職業プログラマーではないためおかしな記述が多々あると思いますがご容赦ください。
+
+
+ 対象
+Pythonのごく初歩的な知識があること。
+
+ この記事でできること
+IFCデータ内に含まれる階情報（階名称、レベル）を取得する
+
+ 環境
+
+Python 3.10.6
+ifcopenshell 0.7.0
+ifcファイルは2x3を使用
+
+今回はSolibriのサンプルファイル（Solibriビル.ifc）を使用
+
+
+
+
+ 下準備
+ターミナルから pip install ifcopenshell等でIfcOpenShellライブラリをインストールしておく
+
+ コード
+
+IfcStorey...]]></summary>
+        <author>
+            <name>Kotetsu</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[［AtCoder］ABC-223｜A - Exact Price]]></title>
         <id>https://zenn.dev/hyperdb/articles/c49158fcdeaee2</id>
@@ -6568,146 +6840,6 @@ https://zenn.dev/okojomoeko/articles/python-project-with-mkdocs
 Ubuntu 22.04.2 LT...]]></summary>
         <author>
             <name>okojomoeko</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Redash で Python を使う]]></title>
-        <id>https://zenn.dev/readyfor_blog/articles/bbcbff90944ef3</id>
-        <link href="https://zenn.dev/readyfor_blog/articles/bbcbff90944ef3"/>
-        <updated>2023-04-14T13:26:06.000Z</updated>
-        <summary type="html"><![CDATA[この記事を読んで分かること
-Redash のクエリの代わりに Python を使い、データを集計して表にして出力する方法。その際の注意点
-
- テンプレート
-最終的にテンプレートとして使えるコード。今後はこれを Fork して使っていく。以下、この解説。コードはこの3つの構成に分かれる
-
-
-
-項目
-やっていること
-
-
-
-
-get_columns
-列の定義。列名や型を定義する
-
-
-get_rows
-表示するデータを取得する
-
-
-result
-データを実際に Redsah で表示する
-
-
-
-
-テンプレート
-def get_columns():
-    return [
-        [ ...]]></summary>
-        <author>
-            <name>Shohei Urano</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】MySQLとSQLiteの違いと、始めかた]]></title>
-        <id>https://zenn.dev/unico417/articles/57a92695a901d8</id>
-        <link href="https://zenn.dev/unico417/articles/57a92695a901d8"/>
-        <updated>2023-04-14T10:33:08.000Z</updated>
-        <summary type="html"><![CDATA[SQLite と MySQL って何が違うの？
-まずは、MySQL と SQLite の違いをサックリ紹介します。
-でもあなたの調べごとの目的が「始め方」なら読み飛ばしていいです。
-
- 管理の違い
-MySQL は、データベースを複数作ることができます。
-ユーザ機能もあり、その権限に応じたテーブルやデータベースが閲覧・編集可能になります。
-SQLiteは、一つのデータベースに対して一つのファイルが作成されます。
-ユーザ機能等はなく、全てのテーブルにアクセス・編集することができます。
-
- アクセス方法の違い
-MySQL は、管理するプログラムを起動し、そのプログラムに対して要求を送信する...]]></summary>
-        <author>
-            <name>Unico417</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-201｜B - Do you know the second highest mountain?]]></title>
-        <id>https://zenn.dev/hyperdb/articles/baa664fb624f05</id>
-        <link href="https://zenn.dev/hyperdb/articles/baa664fb624f05"/>
-        <updated>2023-04-14T07:31:25.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-201 B - Do you know the second highest mountain?
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getStringListRow(N):
-    return [list(input().split()) for _ in range(N)]
-
-
-def main():
-    n = getInt()
-    x = getStringListRow(n)
-
-    y = dict()
-    z = []
-    for s, t in x:
-  ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-201｜A - Tiny Arithmetic Sequence]]></title>
-        <id>https://zenn.dev/hyperdb/articles/7a68bbbe94502a</id>
-        <link href="https://zenn.dev/hyperdb/articles/7a68bbbe94502a"/>
-        <updated>2023-04-14T07:31:25.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-201 A - Tiny Arithmetic Sequence
-
-
-
- 提出結果
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    l = getIntList()
-    a, b, c = sorted(l)
-
-    print('Yes' if b * 2 == a + c else 'No')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[今話題のPy Script]]></title>
-        <id>https://zenn.dev/acorn/articles/2de2c42758ff89</id>
-        <link href="https://zenn.dev/acorn/articles/2de2c42758ff89"/>
-        <updated>2023-04-13T14:54:41.000Z</updated>
-        <summary type="html"><![CDATA[今回は今話題のPy Scriptを使ってみます！！
-
- Py Scriptとは
-Py ScriptとはなんとhtmlにPythonを埋め込めるというものなのです！！ある日JavaScriptについて調べていたら出てきたので、以前も紹介した我が友人staff roi君に教えたら「そんなの機能が少ないぜ」と言われました。それからずっと忘れていたのですが、ふと思いついて調べてみたらこれがすごい！！Pythonは本当に少ししかかじっていないので簡単な例を紹介します。
-
- 実際に使ってみた
-なんと結構簡単にこれが使えるんですよ。インストールの必要がなく、headタグ内に
-<link rel=...]]></summary>
-        <author>
-            <name>Mr.Acorn</name>
         </author>
     </entry>
 </feed>
