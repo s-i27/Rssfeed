@@ -2,10 +2,153 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-05-18T01:25:42.536Z</updated>
+    <updated>2023-05-19T01:26:23.720Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Pythonで学ぶデジタル信号処理（目次）]]></title>
+        <id>https://zenn.dev/kazu22/articles/3bb9c8579e962f</id>
+        <link href="https://zenn.dev/kazu22/articles/3bb9c8579e962f"/>
+        <updated>2023-05-18T21:25:48.000Z</updated>
+        <summary type="html"><![CDATA[動機
+業務で加速度センサで測定したデータを振動分析していますが、デジタル信号処理について十分に学んでいないので、勉強してアウトプットすることにしました。以下はChatGPTに作成してもらったカリキュラムです。これに沿って進めていきます。文体にはあまり意識せず、書きやすいように書いたため、読みにくいかもしれません。アウトプットのハードルを下げるためですので、ご了承ください。
+
+ カリキュラム
+
+イントロダクション
+
+デジタル信号処理の概要
+応用分野と重要性
+
+
+離散時間信号とシステム
+
+離散時間信号の表現と性質
+離散時間システムのモデリングと特性
+
+
+離散時間信号の変換
+
+離散時間フー...]]></summary>
+        <author>
+            <name>Kazu22</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Transformerを用いた文章のクラスタリング]]></title>
+        <id>https://zenn.dev/shungo_a/articles/be767f772bc0d8</id>
+        <link href="https://zenn.dev/shungo_a/articles/be767f772bc0d8"/>
+        <updated>2023-05-18T11:23:15.000Z</updated>
+        <summary type="html"><![CDATA[前記事のまとめ、および、本記事の目的
+前記事では、ChatGPTのAPIキーを用いて、指示文を与えることでプログラムを作成可能なのかを確認しました。その結果、下記のような指示文を与えたら、以下のプログラムを作成できました。
+
+
+　このようにAPIを用いることでコメント文を記載しつつ、コーディング可能であることが分かります。ChatGPTは、2023/4/6時点で1000トークンで0.002ドルとかなり安いです。しかしながら、エラーのない正しいプログラムを書くためには、慣れるまで何回もやり直す必要があり、気が付いたら支払金額が多くなるという可能性があります。
+　そこで、指示文と今までで...]]></summary>
+        <author>
+            <name>S.A</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[__init__.py の書き方を永遠に覚えられない私へ]]></title>
+        <id>https://zenn.dev/h_waka/articles/67d0dd45d8dc50</id>
+        <link href="https://zenn.dev/h_waka/articles/67d0dd45d8dc50"/>
+        <updated>2023-05-18T08:23:28.000Z</updated>
+        <summary type="html"><![CDATA[自作スクリプトをパッケージ化するときの書き方
+業務で自作のPythonスクリプトをパッケージ化する必要に迫られたのですが、意外とハマったので備忘録を残しておきます。
+Pythonバージョンは3.9.xです。
+
+ 例示
+
+ 構成
++ hoge/
+    +- __init__.py
+    +- foo.py
+$ cat hoge/__init__.py
+
+from .foo import bar
+
+$ cat hoge/foo.py
+
+def bar(msg :str="Hello World!"):
+    print(msg)
+    return None
+
+if __name...]]></summary>
+        <author>
+            <name>わかまつ＠iCARE</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-227｜A - Last Card]]></title>
+        <id>https://zenn.dev/hyperdb/articles/e1dbcf0f2e8bc6</id>
+        <link href="https://zenn.dev/hyperdb/articles/e1dbcf0f2e8bc6"/>
+        <updated>2023-05-18T04:19:02.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-227 A - Last Card
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def num(i, n):
+    return n if i % n == 0 else i % n
+
+
+def main():
+    n, k, a = getIntMap()
+
+    p = [num(i, n) for i in range(a, a + k)]
+
+    print(p[-1])
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-227｜B - KEYENCE building]]></title>
+        <id>https://zenn.dev/hyperdb/articles/5ac52b584b8b51</id>
+        <link href="https://zenn.dev/hyperdb/articles/5ac52b584b8b51"/>
+        <updated>2023-05-18T04:19:01.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-227 B - KEYENCE building
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def f(a, b):
+    return 4 * a * b + 3 * a + 3 * b
+
+
+def main():
+    n = getInt()
+    s = getIntList()
+
+    a = []
+    l = min(max(s), 1000) + 1
+  ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[captchaモジュールを使った画像認証ボットを作る]]></title>
         <id>https://zenn.dev/luv/articles/cee43ccc05ae20</id>
@@ -6152,202 +6295,6 @@ k基準：M次元の球を考えて、球の半径の中に入る標本の数k�
 
 
 つまり、異常データであれば近傍に正常なデータがないはずなので、半径[tex: \epsi...]]></summary>
-        <author>
-            <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[初心者向け] 再帰関数とは？]]></title>
-        <id>https://zenn.dev/yutabeee/articles/44493cc242e569</id>
-        <link href="https://zenn.dev/yutabeee/articles/44493cc242e569"/>
-        <updated>2023-04-19T08:33:25.000Z</updated>
-        <summary type="html"><![CDATA[再帰関数の概要
-再帰関数とは、自分自身を呼び出す関数のことを指します。再帰関数は、問題を繰り返し処理することで解決する場合に非常に有用です。一般的に、再帰関数は次の2つの要素が必要です。
-
-ベースケース (base case)：再帰を終了させるための条件。再帰が無限に続かないように、ある条件を満たしたら再帰を終了することが重要です。
-再帰ステップ (recursive step)：自分自身を呼び出す部分で、問題を分割して処理します。
-
-以下に、Pythonで記述された再帰関数の例を示します。
-
- 階乗を計算する再帰関数
-def factorial(n: int) -> int:...]]></summary>
-        <author>
-            <name>Darman</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Azure OpenAIのAPIをPythonで呼び出す]]></title>
-        <id>https://zenn.dev/mizti/articles/536147ffc5b249</id>
-        <link href="https://zenn.dev/mizti/articles/536147ffc5b249"/>
-        <updated>2023-04-19T07:41:42.000Z</updated>
-        <summary type="html"><![CDATA[このリポジトリについて
-Azure OpenAIサービスにデプロイしたモデルに対して対話的に応答を取得するAPIリクエストサンプルです。
-
- 前提
-
-Azure OpenAIサービスでアカウントが作られていること
-Public AccessがAllowされていること
-(Azure AD認証を行う場合)認証する主体がAzure OpenAIサービスアカウントに対してCognitive Services OpenAI Userロールを持っていること
-
-
- コード例
-
-openai_apikey_request_sample.py
-
-APIキーで認証する例です。
-#Note: The op...]]></summary>
-        <author>
-            <name>mizti</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-206｜B - Savings]]></title>
-        <id>https://zenn.dev/hyperdb/articles/ab7c66cd64f239</id>
-        <link href="https://zenn.dev/hyperdb/articles/ab7c66cd64f239"/>
-        <updated>2023-04-19T03:52:53.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-206 B - Savings
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    n = getInt()
-
-    s = 1
-    c = 1
-    while s < n:
-        c += 1
-        s += c
-    print(c)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-206｜A - Maxi-Buying]]></title>
-        <id>https://zenn.dev/hyperdb/articles/368e051e268c0c</id>
-        <link href="https://zenn.dev/hyperdb/articles/368e051e268c0c"/>
-        <updated>2023-04-19T03:52:52.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-206 A - Maxi-Buying
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    n = getInt()
-
-    p = (n * 1.08) // 1
-
-    print('Yay!' if p < 206 else ':(' if p > 206 else 'so-so')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Alpaca-LoRAをPubMedQAでファインチューニングしてみる]]></title>
-        <id>https://zenn.dev/carenet/articles/285e6547fbc2f0</id>
-        <link href="https://zenn.dev/carenet/articles/285e6547fbc2f0"/>
-        <updated>2023-04-19T03:33:22.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-こんにちは、CareNetのKaiと申します。
-CareNetは医療従事者向けメディアを運営している上場企業でして、遅ればせながらテックブログを始めようということで、こちらが最初の記事になります。
-最近CareNetでも機械学習チームが立ち上がっており、LLM（大規模言語モデル）を使ったプロダクト開発に取り組んだりしています。
-今回は、LLMのうちでも計算量・VRAMを削減することのできるAlpacaとLoRAの組み合わせに対して、医療分野でのQ&AデータセットであるPubMedQAでファインチューニングしてみましたので、ご参考になれば幸いです。
-
- Alpacaと...]]></summary>
-        <author>
-            <name>Kai</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FastAPIでREST（その３）]]></title>
-        <id>https://zenn.dev/robon/articles/c943cc4740bffb</id>
-        <link href="https://zenn.dev/robon/articles/c943cc4740bffb"/>
-        <updated>2023-04-19T01:02:27.000Z</updated>
-        <summary type="html"><![CDATA[前回まで
-https://zenn.dev/robon/articles/bb17fd07739519
-customerで1 schema = 1 modelの実装ができました。
-
- 仕上げ
-
- productsの追加
-customersと同様に実装できました。
-schema単位のモジュール化も問題ありませんでしたし、こちらの方が凝集度が高く、拡張も容易な気がします。同じような設計思想で開発されているところもありました。
-https://github.com/zhanymkanov/fastapi-best-practices
-https://github.com/Netflix/d...]]></summary>
-        <author>
-            <name>荒木 岳夫</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AppEngineNDB → Python Client for Google Cloud Datastore API 移行まとめ]]></title>
-        <id>https://zenn.dev/ryutaro_h/articles/cd170fcb5d229e</id>
-        <link href="https://zenn.dev/ryutaro_h/articles/cd170fcb5d229e"/>
-        <updated>2023-04-19T00:38:36.000Z</updated>
-        <summary type="html"><![CDATA[初めに
-直近でAppEngine + Pythonの2系から3系への移行を経験しました。その際以前の環境で使用されていたライブラリも移行する必要が出てきており、今回はその中でAppEngineNDBからPython Client for Google Cloud Datastore(以後 Datastore API)の移行について、知っておきたかったことなど簡単に取り上げたいと思います。
-
-
- 前提
-AppEngine + Python2系 → 3系への移行作業は、2系でサポートされていたAppEngine系のライブラリが3系では対応外であることがあるため、言語のバージョンアップと共...]]></summary>
-        <author>
-            <name>Ryutaro</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[JPCOARスキーマ（v1）を用いたxmlファイルのバリデーションツールの試作]]></title>
-        <id>https://zenn.dev/nakamura196/articles/3799c1569768ca</id>
-        <link href="https://zenn.dev/nakamura196/articles/3799c1569768ca"/>
-        <updated>2023-04-18T21:29:24.000Z</updated>
-        <summary type="html"><![CDATA[以前に以下の記事を執筆しました。JPCOARスキーマを用いたxmlファイルのバリデーションを試しました。
-https://zenn.dev/nakamura196/articles/3c91cd443e084c
-今回は、上記の記事での検証を元に、Google Colabを用いた検証ツールを作成しました。以下のURLからお試しいただけます。
-https://colab.research.google.com/github/nakamura196/ndl_ocr/blob/main/JPCOARスキーマ_v1を用いたxmlファイルのバリデーション.ipynb
-公開済みのxmlファイルのURL...]]></summary>
-        <author>
-            <name>nakamura196</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NumPyro：基本のモデル]]></title>
-        <id>https://zenn.dev/yoshida0312/articles/f5579f88e22b22</id>
-        <link href="https://zenn.dev/yoshida0312/articles/f5579f88e22b22"/>
-        <updated>2023-04-18T14:38:06.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-前回までで単回帰やNumPyro特有の内容を見てきたので、それらを少し応用して基本的なモデルを実装していきます。理論的な内容は世の中にある優れた本にお任せし、実装中心の内容です。
-また、前回までで出てきた内容は極力説明を省いて進行します。
-
- ライブラリのインポート
-import os
-
-import jax.numpy as jnp
-from jax import random
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import seaborn as sns
-
-impo...]]></summary>
         <author>
             <name>よしだ</name>
         </author>
