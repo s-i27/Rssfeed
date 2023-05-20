@@ -22,6 +22,239 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-05-19 datetime="2023-05-19T23:57:32.000Z">2023-05-19</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-05-19 datetime="2023-05-19T23:57:32.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/louloutech/articles/f161fdec424c57"
+                        open
+                      >
+                        <summary class="article-expander__title">哲学者名言のスクレイピング</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/louloutech/articles/f161fdec424c57">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--WPfDxwAj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%2593%25B2%25E5%25AD%25A6%25E8%2580%2585%25E5%2590%258D%25E8%25A8%2580%25E3%2581%25AE%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%2594%25E3%2583%25B3%25E3%2582%25B0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:louloutech%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YktVMDI3VzFrR2p0ZzVZcFoxVzRtUHVRcHlrM0hSWkwwS3NWSWo9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>こちらの記事（https://tomo8language.com/quotes-list-philosopher/）を用いて、スクレイピングの練習をしたので、その際の思考整理としてのメモ書きです。
+【目標】
+哲学者の名前とその名言を表示するコードを作成する
+【コード】
+まず広い範囲から、スクレイピングして、徐々に範囲を狭めていく
+from time import sleep
+
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+url &#x3D; &#x27;https://tomo8language.com/quotes-...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/takenokopjt/articles/30ca07eb59abcb"
+                        open
+                      >
+                        <summary class="article-expander__title">Slackのメッセージを一括削除したい</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takenokopjt/articles/30ca07eb59abcb">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--RTtze2-n--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Slack%25E3%2581%25AE%25E3%2583%25A1%25E3%2583%2583%25E3%2582%25BB%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%2592%25E4%25B8%2580%25E6%258B%25AC%25E5%2589%258A%25E9%2599%25A4%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%258F%258D%25E7%25AB%25B9%25E6%259E%2597_%25E5%2585%25AB%25E5%258F%25B7%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVkNzEwNDhhZTMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>いきさつ
+Slackを運営する中で外部の人を招くことになった。#Generalにあまり公開したくない内容があったので、新しいプライベートチャンネルに内容をコピーしたが、メッセージの一括削除機能はないらしい。調べるとSlack APIを使ってまとめて削除するしかないらしい。
+
+ 手順
+
+Slack APIの取得
+Pythonで処理を実行
+
+
+ Slack設定（API_token取得）
+この記事を参考にさせてもらいました。Google Apps Scriptを使う記事ですが、APIの取得のところは参考になります。実は、スクリプトはこの通りにやってもエラーが出たのであきらめた次第です。
+h...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/bee2/articles/e8623a603752ff"
+                        open
+                      >
+                        <summary class="article-expander__title">Pandas → Polars 早見表</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/bee2/articles/e8623a603752ff">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--_2g8RMMD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Pandas%2520%25E2%2586%2592%2520Polars%2520%25E6%2597%25A9%25E8%25A6%258B%25E8%25A1%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:bee2%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNmMDgwYTliNGUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>データサイエンスやデータエンジニアリングの分野において、効率的かつ柔軟なデータ処理を実現するためには、適切なツールの選択が不可欠です。最近では、高速かつ省メモリなデータ操作ライブラリであるPolarsが注目を浴びています。本記事では、この新たなライブラリと既存のデータ処理ツールであるPandasとの対応関係を簡潔にまとめます。特に、Polarsへの移行やトライアルをスムーズに進めるために、両ライブラリの使い方に焦点を当てて解説します。
+
+ 本ブログの見方
+以下のフォーマットでまとめています。
+
+ 
+
+&gt; &lt;P...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tatsuromurata/articles/fb6fbc23849e38"
+                        open
+                      >
+                        <summary class="article-expander__title">Elevenlabsのmultilingual TTSをgoogle colabで試してみた。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tatsuromurata/articles/fb6fbc23849e38">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--FEfkvu7O--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Elevenlabs%25E3%2581%25AEmultilingual%2520TTS%25E3%2582%2592google%2520colab%25E3%2581%25A7%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2581%25B0%2520AI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VlMmM0MmY1MGYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Elevenlabs TTSとは
+Elevenlabs TTSはElevenlabsから提供されたリアルな声を高品質に生成するためのモデルであり、複数の言語をサポートする単一のTTSモデルとなっています。
+https://huggingface.co/spaces/elevenlabs/tts
+clone voicesとかもありますが課金しなきゃできませんでした。
+
+ リンク
+Colab
+github
+
+ 準備
+Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。
+
+ 環境構築
+インストール手順は以下の通りです。
+...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/5727f6b3f44e82"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-228｜B - Takahashi&#x27;s Secret</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/5727f6b3f44e82">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--WfRAIhOT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-228%25EF%25BD%259CB%2520-%2520Takahashi%2527s%2520Secret%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-228 B - Takahashi&#x27;s Secret
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n, x &#x3D; getIntMap()
+    a &#x3D; getIntList()
+    f &#x3D; [False for _ in range(n)]
+
+    i &#x3D; x - 1
+    while f[i] &#x3D;&#x3D; False...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/53c761314aa95e"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-228｜A - On and Off</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/53c761314aa95e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--j5SRV2zV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-228%25EF%25BD%259CA%2520-%2520On%2520and%2520Off%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-228 A - On and Off
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    s, t, x &#x3D; getIntMap()
+
+    if s &lt; t:
+        print(&#x27;Yes&#x27; if s &lt;&#x3D; x &lt; t else &#x27;No&#x27;)
+    else:
+        print(&#x27;No&#x27; if t &lt;&#x3D; x &lt; s else &#x27;Yes&#x27;)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+  ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-05-18 datetime="2023-05-18T21:25:48.000Z">2023-05-18</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-05-18 datetime="2023-05-18T21:25:48.000Z"></time>
           </button>
@@ -9351,502 +9584,6 @@ RVCとはリポジトリにも記載のある通り、Retrieval-based Voice Conv
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/sergicalsix/articles/f261d66bc1773b"
-                        open
-                      >
-                        <summary class="article-expander__title">math.iscloseを使って誤差を許容して数字を比較する方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sergicalsix/articles/f261d66bc1773b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--9_fp61u1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:math.isclose%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E8%25AA%25A4%25E5%25B7%25AE%25E3%2582%2592%25E8%25A8%25B1%25E5%25AE%25B9%25E3%2581%2597%25E3%2581%25A6%25E6%2595%25B0%25E5%25AD%2597%25E3%2582%2592%25E6%25AF%2594%25E8%25BC%2583%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sergicalsix%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhlODkyZDMzYjUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-プログラミングで計算する際には、丸め誤差が生じることがあります。
-丸め誤差を含む数字の比較は、Pythonではmath.iscloseを用いることができます。
-この関数を使うことで、丸め誤差を含む数字の比較を正しく行うことができます。
-
- ダメな例
-&gt;&gt;&gt; a,b &#x3D; 0.1,0.3
-&gt;&gt;&gt; print(a + a + a &#x3D;&#x3D; b)
-False
-上記を実行した場合はFalseが出力されてしまいます。
-理由はa+a+aの計算結果に丸め誤差が生じてしまうからです。(a+a+a&#x3D;0.30000000000000004)
-上記の場合でも正しく比...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/t_katsumoto/articles/8662992add3da2"
-                        open
-                      >
-                        <summary class="article-expander__title">Tableau Server上のジョブIDから詳細情報を取得する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/t_katsumoto/articles/8662992add3da2">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--fzrRpAdb--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Tableau%2520Server%25E4%25B8%258A%25E3%2581%25AE%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%2596ID%25E3%2581%258B%25E3%2582%2589%25E8%25A9%25B3%25E7%25B4%25B0%25E6%2583%2585%25E5%25A0%25B1%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Katsumoto%2520Takashi%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNWZsNDQ2RlNJN0t4SlhhSzUwWm1kSTg0N3oxclZ1Vkp4NDVYT1U9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-例えば、Tableau Server (or Tableau Cloud）上で手動でフローを実行したとしよう。
-そうすると、ジョブのページでそのフロー実行の進捗が分かる。
-
-上記の画像はテスト環境なのでジョブが全然無いが、皆さんの本番環境ではここにジョブIDがずらーっと並んでいるかと思う。それで、「このジョブえらい時間掛かってるな」とか、「これ何で失敗してるんだ？」とか思った時に、そのジョブの詳細情報を知りたい事があるはず。
-そう思った時、自然に一番左側にあるIDのリンクをクリックすると思うが、
-「え・・・情報これだけ？」 と愕然した事はないだろうか？
-
-ジョブ詳細と書かれ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/d0590bc4eaa8f7"
-                        open
-                      >
-                        <summary class="article-expander__title">NumPyro：階層モデル</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/d0590bc4eaa8f7">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--RF1zgo32--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:NumPyro%25EF%25BC%259A%25E9%259A%258E%25E5%25B1%25A4%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-今回は階層モデルを扱います。以前までと同様に本シリーズの記事は実装メインなため、理論的な詳細は省略します。最初に１つの階層のモデルを扱い、次に複数の階層のモデルを扱います。どちらもNumpyの行列計算と今までのexpandやplateの挙動が理解できていればイメージ掴める内容かと思います。
-
- ライブラリのインポート
-import os
-
-import jax.numpy as jnp
-from jax import random
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-i...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/seiyakitazume/articles/36c7f1bb1a639d"
-                        open
-                      >
-                        <summary class="article-expander__title">chatGPTに大量の文章を要約させたい時に使えるLangChainとは</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/seiyakitazume/articles/36c7f1bb1a639d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--W5C04QUH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:chatGPT%25E3%2581%25AB%25E5%25A4%25A7%25E9%2587%258F%25E3%2581%25AE%25E6%2596%2587%25E7%25AB%25A0%25E3%2582%2592%25E8%25A6%2581%25E7%25B4%2584%25E3%2581%2595%25E3%2581%259B%25E3%2581%259F%25E3%2581%2584%25E6%2599%2582%25E3%2581%25AB%25E4%25BD%25BF%25E3%2581%2588%25E3%2582%258BLangChain%25E3%2581%25A8%25E3%2581%25AF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:seiyakitazume%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I3ZjczZjRjZWUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>chatGPTの文章の要約能力は非常に便利ですね。
-この能力は非常に便利なのですが、例えば論文の要約をさせたい時、1つ1つの論文をchatGPTのAPIに投げているとリクエスト数も処理時間もかかってしまいます。
-これをなんとか1度に行うことができないかを調べていた中で、LangChainというフレームワークに出会いました。LangChainを使うことで、上記の問題を解決することができそうです。
-それではLangChainの説明です。
-LangChainは、言語モデルを活用したアプリケーションを開発するためのフレームワークです。LangChainは、以下の6つのメインモジュールに対応してい...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/10d28a325e05f8"
-                        open
-                      >
-                        <summary class="article-expander__title">Django REST Frameworkの基本事項まとめ</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/10d28a325e05f8">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--BlICNLBG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%2520REST%2520Framework%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%25E4%25BA%258B%25E9%25A0%2585%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>最初に
-別記事でアプリを実際に作成する前に調べた内容等をまとめました。
-ハマったポイントもあるので同じ状況の人の参考になればと思います。
-
- コード
-
- 初期構築
-mkdir backend
-cd backend/
-django-admin startproject config .
-python manage.py startapp todo
-python manage.py startapp apiv1
-config/settings.pyの編集
-INSTALLED_APPS &#x3D; [
-    &#x27;django.contrib.admin&#x27;,
-    &#x27;django.contrib....</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/04de791c5e7878"
-                        open
-                      >
-                        <summary class="article-expander__title">Django REST Framework を使用したバックエンド開発</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/04de791c5e7878">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--vfN8Jz9m--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%2520REST%2520Framework%2520%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2589%25E9%2596%258B%25E7%2599%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-最近、DRFとReactの勉強をしていたのですが、基本的なToDoアプリを作成した後に何を作ろうか迷ってました。
-そんな中で以下のURLを見つけて、Mediumのようなアプリを構築するのにいろんなフレームワークで書かれているコードが用意されていました。そのため、似たようなアプリをフロントエンドはReactで、バックエンドはDRFを選択して作っていこうと思います。
-元のRealWorldと異なる点としては、１つ目はダッシュボードも作成したいので値段がついた本を記録するようなアプリに変更したこと、２つ目は練習として最低限の書き方の習得を目指したのでフォローや記事のお気に入りは除...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;14
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/202561570fee02"
-                        open
-                      >
-                        <summary class="article-expander__title">頑健回帰推定（ロバスト回帰推定）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/202561570fee02">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Eyg6nFaU--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E9%25A0%2591%25E5%2581%25A5%25E5%259B%259E%25E5%25B8%25B0%25E6%258E%25A8%25E5%25AE%259A%25EF%25BC%2588%25E3%2583%25AD%25E3%2583%2590%25E3%2582%25B9%25E3%2583%2588%25E5%259B%259E%25E5%25B8%25B0%25E6%258E%25A8%25E5%25AE%259A%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-回帰モデルの回帰係数を最小二乗法で推定すると、最小二乗法は外れ値に敏感に反応してしまい、１個の外れ値が含まれているだけで推定値は全く無意味な値になってしまう可能性があります。そういった外れ値のウェイトを小さくすることで頑健なパラメータを推定するのが頑健回帰（ロバスト回帰）です。
-1960年台に提唱された手法ですが、現在まであまり標準的な手法として知られていません。これは誤差項が正規分布であるととりあえず考えてしまうことやどのデータに対しても最適な手法が確立されていないことがあると思われます。
-また、頑健回帰推定のことを外れ値を無闇にウェイトダウンさせて問題がある定式化を隠蔽...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/6a9c07de7ded3b"
-                        open
-                      >
-                        <summary class="article-expander__title">SELFIESを使用した構造生成アルゴリズム「STONED」</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/6a9c07de7ded3b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--eSR1PNMH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:SELFIES%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E6%25A7%258B%25E9%2580%25A0%25E7%2594%259F%25E6%2588%2590%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25B4%25E3%2583%25AA%25E3%2582%25BA%25E3%2583%25A0%25E3%2580%258CSTONED%25E3%2580%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-前回紹介したSELFIESを使用した構造生成アルゴリズムであるSTONEDを紹介します。
-学習なしで構造生成でき、その結果が学習が必要なモデルと比較しても同程度の精度が出ているという手法になります。
-早く＆精度も良いということで今後も活用が期待されます。
-
- 構造生成アルゴリズム
-アルゴリズムはすごくシンプルです。
-
-SMILESの入力から同じ意味を持つSMILESを複数ランダムに生成する
-生成したSMILESをSELFIESに変換する
-ランダムに変異させる
-SELFIESからSMILESに変換する
-
-[f:id:yamayou_1:20211206160928p:plai...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/20c40275d54026"
-                        open
-                      >
-                        <summary class="article-expander__title">分子表現SELFIESの紹介</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/20c40275d54026">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--4DxzLMNr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%2588%2586%25E5%25AD%2590%25E8%25A1%25A8%25E7%258F%25BESELFIES%25E3%2581%25AE%25E7%25B4%25B9%25E4%25BB%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>SELFIESとは
-[https://iopscience.iop.org/article/10.1088/2632-2153/aba947]で発表された分子表現であるSELFIESを紹介します。
-日本語の解説資料としてはかなり丁寧な
-[https://blacktanktop.hatenablog.com/entry/2021/08/12/115613#Atomic-Symbols:title]
-があるのでここでは使い方のメモだけ残します。
-本当にやりたいSELFIESを使用した構造生成である
-[https://github.com/aspuru-guzik-group/stone...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/5a499999e114e2"
-                        open
-                      >
-                        <summary class="article-expander__title">Trader-Company method</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/5a499999e114e2">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--kO1pUvxV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_72:Trader-Company%2520method%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>tradercompany method
-
-trader-company methodを実装しました。
-より論文実装に近い形で実装していますが、大枠は参考文献のqiita記事を参考にしました。
-実装とチュートリアルはGitに載せました。
-[https://github.com/yoshida-chem/tradercompany/edit/main/README.md]
-
- 参考文献
-
-https://arxiv.org/abs/2012.10215
-https://qiita.com/yotapoon/items/1214218c7459ad69db3e
-
-
- 使い方
-
-ライブラリ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/3ca747d61e17d1"
-                        open
-                      >
-                        <summary class="article-expander__title">pyinstallerを用いたstreamlitのExe化</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/3ca747d61e17d1">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--8hyrZ0Ux--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pyinstaller%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259Fstreamlit%25E3%2581%25AEExe%25E5%258C%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>StreamlitアプリをExe化する
-streamlitは専門的な知識を必要とせずにDashboardなどのアプリを作ることができます。
-その簡易さからプロトタイプとしてPoCなどに使用されることが多いかなと思います。
-しかし、サーバーに立てる時間や余裕がない際に他の方に実行してもらうには個別にPython環境を構築する必要があります。
-あまりないケースかもしれませんが、そのようなケース又は手軽に使える方法としてExe化する方法を紹介します。
-
- ライブラリのインストール
-今回の必須ライブラリとして、exe化するためにpyinstaller、streamlitをインストールします。...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/5c2f4a03f4af9f"
-                        open
-                      >
-                        <summary class="article-expander__title">異常検知手法追加メモ</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/5c2f4a03f4af9f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--HyiNNlWO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%2595%25B0%25E5%25B8%25B8%25E6%25A4%259C%25E7%259F%25A5%25E6%2589%258B%25E6%25B3%2595%25E8%25BF%25BD%25E5%258A%25A0%25E3%2583%25A1%25E3%2583%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>異常検知の問題点
-
-正常と異常のデータが不均衡
-Swamping : 正常データが異常データに近い時にFalse Negativeが発生
-Masking : 異常なデータがたくさんあり、それらが密な集合になり検知できない
-
-
- 手法
-
- Isolation Forest
-正常データとの距離を見る手法と異なり、異常データを分類する手法です。異常データは決定木の根の部分に近い（必要な分割数が少ない）と考えた手法です。scikit-kearnで実装あり。元のデータからサンプリングを行うことで、大量なデータがあるときに生じやすいSwampingとMaskingの影響を抑える。通常なデータセッ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/773738fdce5677"
-                        open
-                      >
-                        <summary class="article-expander__title">異常検知７：不要な次元を含むデータからの異常検知 - PCA, Kernel PCA</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/773738fdce5677">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--wQPxQcdi--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%2595%25B0%25E5%25B8%25B8%25E6%25A4%259C%25E7%259F%25A5%25EF%25BC%2597%25EF%25BC%259A%25E4%25B8%258D%25E8%25A6%2581%25E3%2581%25AA%25E6%25AC%25A1%25E5%2585%2583%25E3%2582%2592%25E5%2590%25AB%25E3%2582%2580%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%258B%25E3%2582%2589%25E3%2581%25AE%25E7%2595%25B0%25E5%25B8%25B8%25E6%25A4%259C%25E7%259F%25A5%2520-%2520PCA%252C%2520Kernel%2520PCA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>不要な次元を含むデータからの異常検知
-多変量のデータがある場合にそのデータセットの変数間で多重共線性があるとホテリング理論を使ってもうまくいきません。これは、共分散行列の逆行列を計算できないためです。このような場合に使われる手法がPCA（/Kernel PCA）を用いた異常検知です。
-
- PCAとは
-正常データもしくは正常データが圧倒的多数なデータからPCAなどから主部分空間（正常部分空間）を求めます。この時、新しいデータ[tex: x&#x27;]が来たときに、異常度は正常部分空間から新しいデータ点がどれだけ離れているかで求めることができます。
-異常度は以下のように表され、主成分のみを使用し...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/d19314ffe4b8e2"
-                        open
-                      >
-                        <summary class="article-expander__title">異常検知６：分布が一山にならない場合 - One-Class SVM</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/d19314ffe4b8e2">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--QvwqzGeB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%2595%25B0%25E5%25B8%25B8%25E6%25A4%259C%25E7%259F%25A5%25EF%25BC%2596%25EF%25BC%259A%25E5%2588%2586%25E5%25B8%2583%25E3%2581%258C%25E4%25B8%2580%25E5%25B1%25B1%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%2589%25E3%2581%25AA%25E3%2581%2584%25E5%25A0%25B4%25E5%2590%2588%2520-%2520One-Class%2520SVM%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>One-Class SVM
-One-Class SVMではデータの主要部分を含む球を考え、その球の外側の点を異常とします。
-異常度は以下のように与えられます。ここで、[tex: R]は球の半径です。SVMと同様にカーネルトリックを行うことで非線形にも対応可能なので、非線形の関係があるデータに対して使われる古典的な手法になっています。
-[tex: \displaystyle
-a(x&#x27;) &#x3D; ||x&#x27; - b^{*}||^{2} - R^{* 2}
-]
-
- コード
-
- データ準備
-# import packages
-import pandas as pd
-import numpy as ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/063f2391a9dbbb"
-                        open
-                      >
-                        <summary class="article-expander__title">異常検知５：分布が一山にならない場合 -GMM</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/063f2391a9dbbb">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--A557QCRb--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%2595%25B0%25E5%25B8%25B8%25E6%25A4%259C%25E7%259F%25A5%25EF%25BC%2595%25EF%25BC%259A%25E5%2588%2586%25E5%25B8%2583%25E3%2581%258C%25E4%25B8%2580%25E5%25B1%25B1%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%2589%25E3%2581%25AA%25E3%2581%2584%25E5%25A0%25B4%25E5%2590%2588%2520-GMM%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>混合正規分布モデル（GMM）とは
-KNNではクラスリングの結果をどれだけ信じれば良いのか不明であり、また一般的にクラスター同士が重なっていない場合ばかりではない。そのため、GMMを用いることでクラスター同士の重なりを表現できます。よく使われている方法であり、かつDLベースの手法でも使われたりします。
-異常度はこれまでの議論と同じように以下のように定義されています。
-[tex: \displaystyle
-a(x&#x27;) &#x3D; -\ln \sum_{k&#x3D;1}^{K} \hat{\pi_k} N(x&#x27;|\hat{\mu_k}, \hat{\Sigma_k})
-]
-
- コード
-
- データ準備
-D...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/a8f173a96ed44d"
-                        open
-                      >
-                        <summary class="article-expander__title">異常検知４：分布が一山にならない場合 - 局所外れ値度</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/a8f173a96ed44d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--7z3_fO9K--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%2595%25B0%25E5%25B8%25B8%25E6%25A4%259C%25E7%259F%25A5%25EF%25BC%2594%25EF%25BC%259A%25E5%2588%2586%25E5%25B8%2583%25E3%2581%258C%25E4%25B8%2580%25E5%25B1%25B1%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%2589%25E3%2581%25AA%25E3%2581%2584%25E5%25A0%25B4%25E5%2590%2588%2520-%2520%25E5%25B1%2580%25E6%2589%2580%25E5%25A4%2596%25E3%2582%258C%25E5%2580%25A4%25E5%25BA%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>局所外れ値度
-以前のKNN法の弱点としてはデータ密度が空間の場所によりばらつきがあると最適なkを決めるのが難しい点です。この課題は以下のような例を見ると分かりやすいです。右上と左下にクラスターのデータ密度に差があるので、右上のクラスターの半径の基準で考えると、左下のクラスターは外れ値のように扱われてしまいます。
-
- コード
-
- データ準備
-# import packages
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-
-from scipy import stats
-from scipy...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/c3520046d7b814"
-                        open
-                      >
-                        <summary class="article-expander__title">異常検知３：分布が一山にならない場合 - KNN法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/c3520046d7b814">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--3-1_sxr---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%2595%25B0%25E5%25B8%25B8%25E6%25A4%259C%25E7%259F%25A5%25EF%25BC%2593%25EF%25BC%259A%25E5%2588%2586%25E5%25B8%2583%25E3%2581%258C%25E4%25B8%2580%25E5%25B1%25B1%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%2589%25E3%2581%25AA%25E3%2581%2584%25E5%25A0%25B4%25E5%2590%2588%2520-%2520KNN%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>KNNにおける異常検知とは
-ホテリング理論やMT法では１つの正規分布を仮定して、そのデータの出現確率が低ければ異常と見なすことができるような異常度を算出しました。
-KNN法ではデータ間の距離を考えることで２つの異常判定基準を考えることができます。
-
-
-k基準：M次元の球を考えて、球の半径の中に入る標本の数kがある基準値以下であれば異常
-
-
-[tex: \epsilon]基準：観測値に近い順にk個の標本を選んだ時、それを囲む球の半径[tex: \epsilon_k]がある基準値以上であれば異常
-
-
-つまり、異常データであれば近傍に正常なデータがないはずなので、半径[tex: \epsi...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -9854,8 +9591,8 @@ k基準：M次元の球を考えて、球の半径の中に入る標本の数k�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5019838728">
-        <time id="build-timestamp" datetime="2023-05-19T01:26:23.675Z">2023-05-19T01:26:23.675Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5029650166">
+        <time id="build-timestamp" datetime="2023-05-20T01:24:23.865Z">2023-05-20T01:24:23.865Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
