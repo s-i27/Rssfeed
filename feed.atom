@@ -2,10 +2,139 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-05-20T01:24:23.904Z</updated>
+    <updated>2023-05-21T01:39:14.553Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[【Python】偶数のリストを返すアルゴリズム]]></title>
+        <id>https://zenn.dev/takuh/articles/c0b74d9aaec8f7</id>
+        <link href="https://zenn.dev/takuh/articles/c0b74d9aaec8f7"/>
+        <updated>2023-05-21T01:08:36.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+偶数のリストを返すアルゴリズムです。
+（例）input: 20, output: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+ 実装
+
+even_numbers.py
+from typing import List
+def func(num: int) -> List[int]:
+  numbers = []
+  for i in range(num+1):
+    if i%2 == 0:
+      numbers.append(i)
+    else:
+      continue
+  return numbers
+
+if ...]]></summary>
+        <author>
+            <name>takuh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】素数のリストを作成するアルゴリズム]]></title>
+        <id>https://zenn.dev/takuh/articles/fd84d5a8047ebb</id>
+        <link href="https://zenn.dev/takuh/articles/fd84d5a8047ebb"/>
+        <updated>2023-05-21T00:05:55.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+与えた数字までに存在する素数を格納したリストを作成するアルゴリズムです。
+（例）input: 20, output: [2, 3, 5, 7, 11, 13, 17, 19]
+
+ 実装
+
+prime_numbers.py
+# 関数に型明示ができるようにする
+from typing import List, Generator
+
+# 素数を抽出する関数（与えた数字までの素数を抽出する）
+def generate_primes_v1(numbers: int) -> List[int]:
+  # 空のリストの作成
+  primes = []
+  # for文を何回回したか...]]></summary>
+        <author>
+            <name>takuh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonで学ぶデジタル信号処理（1イントロダクション）]]></title>
+        <id>https://zenn.dev/kazu22/articles/8c6dbf14185724</id>
+        <link href="https://zenn.dev/kazu22/articles/8c6dbf14185724"/>
+        <updated>2023-05-20T14:33:33.000Z</updated>
+        <summary type="html"><![CDATA[まだPythonは出てこないです。。。
+
+イントロダクション
+
+デジタル信号処理の概要
+応用分野と重要性
+
+
+
+
+ デジタル信号処理の概要
+デジタル信号処理とは、文字通りデジタル化（量子化、離散化）された信号（光、音、加速度など）を処理（フィルタ、周波数解析など）すること。
+
+↑アナログ（青）とデジタル（赤）のイメージ。赤は飛び飛びの値しかない。（実際は細かいだけで青もデジタルなのだが、、、）
+
+ 応用分野と重要性
+応用分野には以下のようなものがある
+
+テレビ
+電話
+音楽再生
+
+デジタル信号処理は情報の再現、保存、伝送を可能にする技術であり、現代の情報技術に欠かせないもの。また、医療画像...]]></summary>
+        <author>
+            <name>Kazu22</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonはPoetryを使用する]]></title>
+        <id>https://zenn.dev/kkj/articles/d14470babe1930</id>
+        <link href="https://zenn.dev/kkj/articles/d14470babe1930"/>
+        <updated>2023-05-20T08:51:27.000Z</updated>
+        <summary type="html"><![CDATA[Poetryは、Pythonのパッケージ管理ツールです。
+今までパッケージ管理せずにコードを書いていたので、Poetryの使い方を学習します。
+学習するメリット
+・共同作業時に環境を合わせることができる
+・個人開発でコードを公開するときも役立ちそう
+
+Poetry は、 Python で依存関係を管理およびパッケージ化するためのツールです。これを使用すると、プロジェクトが依存するライブラリを宣言でき、ライブラリが管理 (インストール/更新) されます。Poetry は、繰り返しインストールを確実にするためのロックファイルを提供し、配布用にプロジェクトを構築できます。
+https://py...]]></summary>
+        <author>
+            <name>kkj</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[エラーハンドリング]No module named 'corsheaders']]></title>
+        <id>https://zenn.dev/misakiishihara/articles/7571fa98b8e2b0</id>
+        <link href="https://zenn.dev/misakiishihara/articles/7571fa98b8e2b0"/>
+        <updated>2023-05-20T03:37:00.000Z</updated>
+        <summary type="html"><![CDATA[venvでmigrateしようとした際にcorsheadesにエラーがあると怒られた際の対処法です。同じ状況の方がいましたら参考にしてください。
+
+ エラー
+$ python3 manage.py makemigrations
+Traceback (most recent call last):
+File "C:\Users\81902\Desktop\Dev\ishiharatech\ishihara-tech-back\manage.py", line 22, in <module>
+main()
+File "C:\Users\81902\Desktop\Dev\ishi...]]></summary>
+        <author>
+            <name>石原岬</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[自社開発メガベンチャーをわずか半年で鬱退職した雑魚エンジニアの話]]></title>
+        <id>https://zenn.dev/joanofarc/articles/depressied_fired_engineer_on_mega_venture</id>
+        <link href="https://zenn.dev/joanofarc/articles/depressied_fired_engineer_on_mega_venture"/>
+        <updated>2023-05-20T01:47:28.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+当記事を開いてくださりありがとうございます。私は表題の通り、私は一般にメガベンチャーと呼ばれる自社開発企業で機械学習エンジニアとして勤務しはじめてからわずか半年で、鬱を発症し退職することになったものです。この会社は待遇も良く、社風としても労働者思いのとても素晴らしい会社であったと私自身振り返って思います。
+　そんな会社に運よく入社することができた私ですが、わずか半年で「鬱状態」と心療内科から診断を受け休職し、会社制度により退職することになりました。「え？そんなに素晴らしい環境なのにメンタル弱すぎでは？」と思われる方もいらっしゃることでしょう。返す言葉が全くありません。おっし...]]></summary>
+        <author>
+            <name>JoanOfArc</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[哲学者名言のスクレイピング]]></title>
         <id>https://zenn.dev/louloutech/articles/f161fdec424c57</id>
@@ -5862,260 +5991,6 @@ pip install --pre numba
 これでようやく3.11系に移行できる……]]></summary>
         <author>
             <name>ふぇいと</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[BERTベースの句読点モデルによるWhisperの書き起こしの改善]]></title>
-        <id>https://zenn.dev/yutohub/articles/4304fd9a25e522</id>
-        <link href="https://zenn.dev/yutohub/articles/4304fd9a25e522"/>
-        <updated>2023-04-21T11:30:00.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Whisper は、多言語音声認識システムです。その出力である書き起こしには、句読点が含まれていないことがあるため、自動翻訳の精度に悪影響を与えることがあります。そこで、Whisper の書き起こしに対して、句読点を復元するためのモデルを作りたいと思います。一般的な文章とは異なり、Whisper の書き起こしは文章が途切れていることや、話し言葉が多く含まれているなどの特徴があります。このため、句読点の復元には新しい手法が必要となります。今回は、Whisper が生成した書き起こしの中から句読点が含まれるものを自動的に抽出し、これを訓練データとして用いることで、モデルをトレーニン...]]></summary>
-        <author>
-            <name>yutohub</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[sudoが使えない場合にHomebrewをlocal directoryにインストールする]]></title>
-        <id>https://zenn.dev/watarungurunnn/articles/6e323d1030afcf</id>
-        <link href="https://zenn.dev/watarungurunnn/articles/6e323d1030afcf"/>
-        <updated>2023-04-21T11:28:06.000Z</updated>
-        <summary type="html"><![CDATA[root権限がない = sudoが使えない、あるいはHomebrewを複数インストールしたい場合にlocal directoryにインストールする方法
-Install homebrew to your local folder: reference
-
-ソースのダウンロード
-下記のコマンドをHomebrewをインストールしたいfolderで実行する。(homebrewを任意のdirに変えるのも可。)
-
-mkdir homebrew && curl -L [https://github.com/Homebrew/brew/tarball/master](https://g...]]></summary>
-        <author>
-            <name>watarungurunnn</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[discord.py入門　その1]]></title>
-        <id>https://zenn.dev/yumax_panda/articles/bot-tutorial-1</id>
-        <link href="https://zenn.dev/yumax_panda/articles/bot-tutorial-1"/>
-        <updated>2023-04-21T07:30:44.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-本記事では数回に分けて、discord.pyを使ったdiscord botの作り方を解説していきます。
-あくまで筆者の全て独学の知識ですので、参考の一助になれば幸いです。
-対象読者は以下のような方を想定しています。
-
-Pythonである程度コードを書いたことがある
-discord botを作ってみたい
-botの作り方がよくわからない
-Pythonを使ったことはあるが、discord.pyを使ったことがない
-自分で開発したbotを無料で運用したい
-
-
- 学べること
-
-テキストコマンドの実装
-スラッシュコマンドの実装
-管理機能の実装
-コードを分割して管理する方法　（コグ）
-管理...]]></summary>
-        <author>
-            <name>Yumax-panda</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-208｜A - Rolling Dice]]></title>
-        <id>https://zenn.dev/hyperdb/articles/9da6544ade4a73</id>
-        <link href="https://zenn.dev/hyperdb/articles/9da6544ade4a73"/>
-        <updated>2023-04-21T03:54:11.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-208 A - Rolling Dice
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b = getIntMap()
-
-    print('Yes' if a <= b <= a * 6 else 'No')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-207｜A - Repression]]></title>
-        <id>https://zenn.dev/hyperdb/articles/923f10ddc89978</id>
-        <link href="https://zenn.dev/hyperdb/articles/923f10ddc89978"/>
-        <updated>2023-04-21T03:54:10.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-207 A - Repression
-
-
-
- 提出結果
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    l = getIntList()
-
-    l.sort()
-
-    print(l[1] + l[2])
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-207｜B - Hydrate]]></title>
-        <id>https://zenn.dev/hyperdb/articles/3cf990217986ef</id>
-        <link href="https://zenn.dev/hyperdb/articles/3cf990217986ef"/>
-        <updated>2023-04-21T03:54:10.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-207 B - Hydrate
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b, c, d = getIntMap()
-
-    r = -1
-    for i in range(10 ** 5 + 1):
-        if (a + b * i) <= (c * i) * d:
-            r = i
-            break
-    print(r)
-
-
-if __name__ == "__main_...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-208｜B - Factorial Yen Coin]]></title>
-        <id>https://zenn.dev/hyperdb/articles/0d54d5f1168984</id>
-        <link href="https://zenn.dev/hyperdb/articles/0d54d5f1168984"/>
-        <updated>2023-04-21T03:54:10.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-208 B - Factorial Yen Coin
-
-
-
- 提出結果
-import math
-
-
-def getInt():
-    return int(input())
-
-
-def main():
-    p = getInt()
-
-    f = []
-    i = 1
-    while True:
-        x = math.factorial(i)
-        if x > p:
-            break
-        f.append(x)
-        i += 1
-    f.reverse()
-
-    c...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ドキュメント生成ツールSphinxを使って技術文書を作成する方法]]></title>
-        <id>https://zenn.dev/gk12/articles/engineer-tool-sphinx</id>
-        <link href="https://zenn.dev/gk12/articles/engineer-tool-sphinx"/>
-        <updated>2023-04-21T02:38:30.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは。本記事では、ドキュメント生成ツールのSphinxを使って、技術文書を作成する方法について解説します。Sphinxは、Pythonのドキュメンテーションツールとして開発されたもので、多言語対応やドキュメントの自動生成など、様々な機能を持っています。
-
- Sphinxのインストール
-Sphinxをインストールするには、以下のコマンドを実行します。
-pip install sphinx
-
- プロジェクトの初期化
-Sphinxを使って技術文書を作成するには、まずプロジェクトを初期化する必要があります。以下のコマンドを実行すると、プロジェクトの初期化が行われます。
-sphinx-qui...]]></summary>
-        <author>
-            <name>gk12</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[faster-whisperを使ってYoutubeを高速に文字起こしする方法]]></title>
-        <id>https://zenn.dev/ryoppippi/articles/b66fa477c1c3af</id>
-        <link href="https://zenn.dev/ryoppippi/articles/b66fa477c1c3af"/>
-        <updated>2023-04-20T18:31:21.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-みなさんは、Whisper を使って文字起こしをしているでしょうか？
-Whisper は OpenAI がリリースした text2speech のモデルです。
-https://openai.com/research/whisper
-このモデルは実装を含めて公開されているので、モデルを軽くしたり、あらゆる環境で動かしたり、といった試みが随所で行われています。
-https://github.com/ggerganov/whisper.cpp
-https://note.com/sangmin/n/na60c017e72d0
-今回は、つい先月にリリースされた、faster-whis...]]></summary>
-        <author>
-            <name>ryoppippi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NumPyro：離散潜在変数の扱い方]]></title>
-        <id>https://zenn.dev/yoshida0312/articles/8858343dcaa244</id>
-        <link href="https://zenn.dev/yoshida0312/articles/8858343dcaa244"/>
-        <updated>2023-04-20T16:08:28.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-今回は離散潜在変数の扱い方を説明します。Stanでは自動で扱うことができないため、基本的に場合の数を数え上げて離散パラメータを消去（周辺化）した形で対数尤度を表現する必要があります。しかし、NumPyroでは一部制限はありますが自動で離散潜在変数も扱うことができます。（アヒル本のLDAはこれらに引っかかりこの機能付きでの実装はできませんでした。もちろんStanと同様に手作業で周辺化すればいいのですが、うまく実装できる方法がもしあれば教えてください。。。）
-!
-
- NumPyroにおける周辺化機能の制限
-1). NumPyroのForumで以下のように言及されているのですが、...]]></summary>
-        <author>
-            <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RVC WebUIで自分で録音した声を変換する]]></title>
-        <id>https://zenn.dev/kaeru39/articles/c13b45726ca668</id>
-        <link href="https://zenn.dev/kaeru39/articles/c13b45726ca668"/>
-        <updated>2023-04-20T16:00:36.000Z</updated>
-        <summary type="html"><![CDATA[自分の音声を特定の話者の声質に変換する技術がWebUI付きで公開されました。使い方をまとめます。また、自身の音声を録音して音声変換した例を共有します。
-
- おことわり
-筆者は音声信号処理は初心者であり、参考書に1冊目を通した程度の理解度のため、説明に誤りが含まれる可能性があります。ご容赦ください。
-
- 動作環境
-
-Ubuntu20.04
-Python3.8.10
-
-
- RVC WebUIとは
-RVCとはリポジトリにも記載のある通り、Retrieval-based Voice Conversionの略です。現状の技術的な情報はgithubに公開されているソースコードがメインになっているかと...]]></summary>
-        <author>
-            <name>kaeru39</name>
         </author>
     </entry>
 </feed>
