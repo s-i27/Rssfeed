@@ -2,10 +2,258 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-05-24T01:36:53.729Z</updated>
+    <updated>2023-05-25T01:26:34.393Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Whisperを使ったYouTubeの文字起こしのスクリプトを書いてみた]]></title>
+        <id>https://zenn.dev/0xyusuke/articles/2be799dff07ffd</id>
+        <link href="https://zenn.dev/0xyusuke/articles/2be799dff07ffd"/>
+        <updated>2023-05-24T21:39:48.000Z</updated>
+        <summary type="html"><![CDATA[前置き
+Whisperを使ったYouTubeの文字起こしのスクリプトを書いてみました。
+理由は、CrowdWorksでYouTubeの文字起こしの案件を請け負って小遣い銭稼ぎをしたくなったからです。
+そこで目を付けたのが、今流行りのOpenAIのWhisperを活用して、効率化することでした。
+ライブラリのインストールのコマンドと、文字起こしのコードを載せます。
+言語はPython、実行環境はGoogle Colaboratoryです。
+
+ ライブラリをインストールするコマンド
+!pip install yt-dlp
+!pip install openai
+!pip install ...]]></summary>
+        <author>
+            <name>0xYusuke</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PDFを章ごとに分けてより効果的なEmbeddingを]]></title>
+        <id>https://zenn.dev/ryoutaros/articles/20a8f6279171e8</id>
+        <link href="https://zenn.dev/ryoutaros/articles/20a8f6279171e8"/>
+        <updated>2023-05-24T12:29:10.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+現在、POCである商品の取り扱い説明書のPDFをEmbeddingしChatGPTのAPIを経由して、ユーザーからの質問を回答するLINE Botを作成しています。
+PDFをEmbeddingする際に、Langchainのドキュメントを読むとPDFからテキストを特定の文字ごとに分割してEmbeddingを行うやり方が記載されています。
+しかし、それでは章が分割され章の後半に記載されていたユーザーからの質問に正しく答えられないケースが発生していました。
+# 実装は以下で記載しているのですが、一部抜粋します。
+# このコードでは、1000文字ずつにPDFを分割しています。
+lo...]]></summary>
+        <author>
+            <name>unochanel</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AirflowからDataformにdata_interval_endなどのcontext変数を渡す方法]]></title>
+        <id>https://zenn.dev/jcc/articles/6fd049d98467bd</id>
+        <link href="https://zenn.dev/jcc/articles/6fd049d98467bd"/>
+        <updated>2023-05-24T12:02:25.000Z</updated>
+        <summary type="html"><![CDATA[先日GCPのDataformがGAリリースされました。
+せっかくなので、まずAirflowにある既存ワークフローの一部をDataformで書き換えようと思いました。
+
+ AirflowからDataformをトリッガーする
+ドキュメントを調べると、AirflowからDataformをトリッガーするoperatorはすでに存在しています。
+https://cloud.google.com/dataform/docs/schedule-executions-composer#create_an_airflow_dag_that_schedules_workflow_invocations
+簡単...]]></summary>
+        <author>
+            <name>jc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenAssistant Llama 13Bをgoogle colabで試してみた。]]></title>
+        <id>https://zenn.dev/tatsuromurata/articles/b090440b87812a</id>
+        <link href="https://zenn.dev/tatsuromurata/articles/b090440b87812a"/>
+        <updated>2023-05-24T11:55:52.000Z</updated>
+        <summary type="html"><![CDATA[OpenAssistantとは
+OpenAssistantは誰でも容易に大規模言語モデルにアクセスし、利用できるようにと開始されたProjectです。
+OpenAssistantの目指しているVisionは誰でも容易に拡張することが可能かつPersonalにカスタマイズされたAI Assistantを構築したいというもののようです。
+OpenAssistantの計画としては以下の３点があります。
+
+高品質な指示-達成サンプルを収集するためのクラウドソーシングプロセスを設計する。
+収集されたデータをランキング化して報酬モデルをトレーニングする。
+トップ貢献者にSwagを贈呈し、コミュニ...]]></summary>
+        <author>
+            <name>しば🐕AI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-231｜B - Election]]></title>
+        <id>https://zenn.dev/hyperdb/articles/eb106af67e8b3c</id>
+        <link href="https://zenn.dev/hyperdb/articles/eb106af67e8b3c"/>
+        <updated>2023-05-24T08:20:48.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-231 B - Election
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getStringRow(N):
+    return [input() for _ in range(N)]
+
+
+def main():
+    n = getInt()
+    s = getStringRow(n)
+    t = list(set(s))
+
+    if len(t) == 1:
+        print(t[0])
+    else:
+        r = {}
+        for p i...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-231｜A - Water Pressure]]></title>
+        <id>https://zenn.dev/hyperdb/articles/7e70684d5462ea</id>
+        <link href="https://zenn.dev/hyperdb/articles/7e70684d5462ea"/>
+        <updated>2023-05-24T08:20:47.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-231 A - Water Pressure
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    x = getInt()
+
+    m = x / 100
+
+    print("%d" % m if m.is_integer() else m)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python Dataclass: A Paradigm Shift in Class Definitions]]></title>
+        <id>https://zenn.dev/dshekhar17/articles/171fc6da3ca73d</id>
+        <link href="https://zenn.dev/dshekhar17/articles/171fc6da3ca73d"/>
+        <updated>2023-05-24T07:47:38.000Z</updated>
+        <summary type="html"><![CDATA[Are you tired of writing endless lines of code to define classes and manage data in Python? Well, worry no more! In this blog, we’ll dive into the exciting world of Python dataclass, where we’ll explore how these nifty tools can simplify your coding life and boost your productivity. So, fasten yo...]]></summary>
+        <author>
+            <name>Divyanshu Shekhar</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[開発環境のセットアップ]]></title>
+        <id>https://zenn.dev/akgcog/articles/082ea94fe00d99</id>
+        <link href="https://zenn.dev/akgcog/articles/082ea94fe00d99"/>
+        <updated>2023-05-24T07:31:08.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+最近PCを変えて開発環境のセットアップをしたのでその時のメモです。
+本環境はWindows10ですので、MacやUbuntuの人は参考程度に。
+
+ セットアップ一覧
+
+Visual Studio Code(VScode)
+Docker
+Git
+
+
+ 1.Visual Studio Code(以下VScode)のセットアップ
+プログラミングのエディターとして一般的に使用されてるソフトになります。
+他にも使い勝手が良いエディターはあるので、自分に合ったものを見つけてみてください。
+下記のリンクからダウンロード
+https://azure.microsoft.com/ja-jp/...]]></summary>
+        <author>
+            <name>akgcog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Firebase Functionsで新たにサポートされたPythonをSetupし、更にTypeScriptと共存させる]]></title>
+        <id>https://zenn.dev/singularity/articles/firebase-functions-python-functions</id>
+        <link href="https://zenn.dev/singularity/articles/firebase-functions-python-functions"/>
+        <updated>2023-05-24T07:15:02.000Z</updated>
+        <summary type="html"><![CDATA[Google I/O 2023でFirebaseの新機能としてFunctionsのPythonのサポートが発表されました。
+https://www.youtube.com/watch?v=emIxn-f9bK0
+早速、試してみたいと思います。
+まず、Pythonを含むFunctionsをデプロイするにはfirebase-toolsのバージョンを上げる必要があります (ChangeLogを追ったが、どのバージョンからPythonをサポートしているかは不明でした。)
+npm install -g firebase-tools
+で最新にupdate.
+続いて、firebaseの初期をします。
+...]]></summary>
+        <author>
+            <name>Isamu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[PyO3]Rustで自作したTOMLパーサーをPythonから呼び出す]]></title>
+        <id>https://zenn.dev/skwbc/articles/pyo3_toml_parser</id>
+        <link href="https://zenn.dev/skwbc/articles/pyo3_toml_parser"/>
+        <updated>2023-05-24T03:08:37.000Z</updated>
+        <summary type="html"><![CDATA[!
+前の記事の続きになりますが、この記事だけで完結するように書いているので前の記事を読んでいる必要はありません。興味がある方は前の記事も読んでみて下さい。
+
+
+ 概要
+最近、RustでTOMLパーサーを実装してみるという記事を書きました。
+この記事では、自作したTOMLパーサーをPythonから呼び出せるようにしてみたいと思います。
+(パーサーに限らず、重い処理やバグを起こしやすそうな処理をRustで実装してPythonから呼び出すというケース[1]を最近よく目にするので個人的に気になっていました。)
+RustとPythonの連携にはPyO3というRustのライブラリを使います。
+このラ...]]></summary>
+        <author>
+            <name>skwbc</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonにasyncioってあるけどよく知らなかったので調べた]]></title>
+        <id>https://zenn.dev/knowhere_imai/articles/ba850780152b01</id>
+        <link href="https://zenn.dev/knowhere_imai/articles/ba850780152b01"/>
+        <updated>2023-05-24T02:18:11.000Z</updated>
+        <summary type="html"><![CDATA[1.はじめに
+Pythonのasyncioは、async・await構文を利用して並行処理を行うため公式ライブラリです。
+筆者はFastAPIやuvicornのドキュメントでasync・awaitまたはasyncioなるキーワードをちらほらと目にしてはいたのですが、FastAPI製のWebアプリを公開するにあたって理解を避けて通れないと考えたため、キャッチアップしてこの記事に情報をまとめました。
+
+まず、asyncioの基本的な使い方を改めて整理しました。
+特に、並行処理のタスク遷移と例外周りについて、パッと検索した範囲ではあまり情報が見つからなかったため、深掘りしてまとめました。
+...]]></summary>
+        <author>
+            <name>今井@Knowhere</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonの環境構築をマスターする（pyenv,venv版）（WSL2,Ubuntu利用）]]></title>
+        <id>https://zenn.dev/tigrebiz/articles/2822fb4de256d8</id>
+        <link href="https://zenn.dev/tigrebiz/articles/2822fb4de256d8"/>
+        <updated>2023-05-24T02:13:01.000Z</updated>
+        <summary type="html"><![CDATA[マスターするとは何か
+完全に理解して、人に説明できることである。
+とりあえずできればいい、ではなく、ちゃんと応用の効く形で理解することである。
+でなければ、忘れてしまうからね。
+
+ 一次情報
+一次情報が一番正確。
+
+ Python環境構築ガイド
+https://www.python.jp/install/install.html
+
+ pyenv
+https://github.com/pyenv/pyenv
+
+ venv
+https://docs.python.org/ja/3/library/venv.html
+あとは構造を理解するためにChatGPTに質問攻めをする。
+
+ Pyth...]]></summary>
+        <author>
+            <name>taiga</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Javascriptとpythonで共通する配列操作関数に関する実装の違い]]></title>
         <id>https://zenn.dev/pypypymi/articles/184e60126fc254</id>
@@ -5797,192 +6045,6 @@ e-Paper
 for Raspb...]]></summary>
         <author>
             <name>盆栽エンジニア</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NumPyro：打ち切りデータの扱い方]]></title>
-        <id>https://zenn.dev/yoshida0312/articles/226a7bc6cec32a</id>
-        <link href="https://zenn.dev/yoshida0312/articles/226a7bc6cec32a"/>
-        <updated>2023-04-25T08:30:12.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-今回は打ち切りデータを扱います。NumPyroには打ち切りデータをいろんな分布に適用できる便利クラスが用意されているので簡単に実装できます。
-
- ライブラリのインポート
-import os
-
-import jax.numpy as jnp
-from jax import random
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import seaborn as sns
-
-import numpyro
-from numpyro.diagnostics import hpdi
-i...]]></summary>
-        <author>
-            <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[リサーチ自動化のauto-GPTの詳細をまとめました]]></title>
-        <id>https://zenn.dev/seiyakitazume/articles/40c9e0cf271c7d</id>
-        <link href="https://zenn.dev/seiyakitazume/articles/40c9e0cf271c7d"/>
-        <updated>2023-04-25T06:19:02.000Z</updated>
-        <summary type="html"><![CDATA[Auto-GPTの特徴
-
-検索、情報収集のためのインターネットアクセス
-（人気のあるウェブサイトやプラットフォームへのアクセス等）
-長期および短期のメモリ管理（例えば、過去に実施した検索を記憶します。）
-調べた内容をドキュメントに保存してくれる
-
-
- 環境要件
-
-Python3.8以降
-
-Welcome to Python.org
-
-OPENAI API key
-PINECONE API key
-
-
- Auto-GPTのインストール
-インストール手順　※Pythonをインストールした上で実施してください。
-下記コードをcmdまたはターミナルで実行します。
-git clone http...]]></summary>
-        <author>
-            <name>seiyakitazume</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-212｜B - Weak Password]]></title>
-        <id>https://zenn.dev/hyperdb/articles/543865c00cea22</id>
-        <link href="https://zenn.dev/hyperdb/articles/543865c00cea22"/>
-        <updated>2023-04-25T04:32:22.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-212 B - Weak Password
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def gap(n, m):
-    return (10 if n == 0 else n) - m
-
-
-def main():
-    x = list(map(int, getString()))
-    y = [gap(x[i + 1], x[i]) for i in range(len(x) - 1)]
-
-    r = 'Strong'
-    if len(set(x)) == 1:
-        r = ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-212｜A - Alloy]]></title>
-        <id>https://zenn.dev/hyperdb/articles/48a034b929c2fd</id>
-        <link href="https://zenn.dev/hyperdb/articles/48a034b929c2fd"/>
-        <updated>2023-04-25T04:32:22.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-212 A - Alloy
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b = getIntMap()
-
-    print('Alloy' if a > 0 and b > 0 else 'Gold' if b == 0 else 'Silver')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Slackで匿名投稿できるbotを作りました]]></title>
-        <id>https://zenn.dev/ryotashona/articles/50070fe569876d</id>
-        <link href="https://zenn.dev/ryotashona/articles/50070fe569876d"/>
-        <updated>2023-04-25T00:13:58.000Z</updated>
-        <summary type="html"><![CDATA[作ったもの
-スラッシュコマンドで下記ができます。
-
-匿名投稿
-匿名スタンプ(リアクション)
-匿名スレッド投稿
-
-https://github.com/ryotashona/slack_tokumeisan
-Slackのアプリ作成/設定をして環境変数を定義、任意のサーバーにデプロイすれば使えると思います。
-
- 背景
-不満、要望や提案をするときに、いわいゆる「言い出しっぺの法則」が嫌いです。これのために、アイデアを思いついても自分の中にしまっている人がいるでしょう。
-ならば、匿名で投稿できる仕組みを作ってしまえば？と思った次第です。チャンスを逃したくない。風通しを良くしたい。
-
- すでに...]]></summary>
-        <author>
-            <name>ryotashona</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AtCoderの問題を分類しました【入出力・演算・代入文・制御構文】]]></title>
-        <id>https://zenn.dev/koyanagihitoshi/books/atcoder-classification-1</id>
-        <link href="https://zenn.dev/koyanagihitoshi/books/atcoder-classification-1"/>
-        <updated>2023-04-24T16:47:06.000Z</updated>
-        <summary type="html"><![CDATA[AtCoderの問題をPythonで解いており、得られた知見をメモとして残しています。]]></summary>
-        <author>
-            <name>小栁 斉</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NumPyro：スパースモデル]]></title>
-        <id>https://zenn.dev/yoshida0312/articles/a00ba56078c76b</id>
-        <link href="https://zenn.dev/yoshida0312/articles/a00ba56078c76b"/>
-        <updated>2023-04-24T15:03:14.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-今回はスパースモデルとして、Bayesian Lasso回帰と馬蹄事前分布を使用した回帰モデル、正則化つき馬蹄事前分布を使用した回帰モデルを扱います。
-
- ライブラリのインポート
-import os
-
-import jax.numpy as jnp
-from jax import random
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import seaborn as sns
-from sklearn.datasets import make_regression
-
-imp...]]></summary>
-        <author>
-            <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DjangoのHeroku環境でCloudinaryを使う]]></title>
-        <id>https://zenn.dev/treefield/articles/012b1f469f750a</id>
-        <link href="https://zenn.dev/treefield/articles/012b1f469f750a"/>
-        <updated>2023-04-24T14:55:21.000Z</updated>
-        <summary type="html"><![CDATA[https://zenn.dev/treefield/articles/f6e8b879387d02
-上記の記事を書いたときに、Heroku で画像のアップロードができませんでした。Heroku では AWS や Cloudinary で別途ストレージを用意しないといけないということで、無料の Cloudinary を使ってみました。
-今回は、モデルのイメージフィールドには、CloudinaryFieldなどは使わず、以下のようにDjangoのImageFieldをそのまま使用します。
-    image = models.ImageField(verbose_name="画像", up...]]></summary>
-        <author>
-            <name>treefield</name>
         </author>
     </entry>
 </feed>
