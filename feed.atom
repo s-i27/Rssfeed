@@ -2,10 +2,204 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-05-25T01:26:34.393Z</updated>
+    <updated>2023-05-26T01:26:35.793Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[IIIFマニフェストファイルからPDFファイルを作成する]]></title>
+        <id>https://zenn.dev/nakamura196/articles/e940e062908b6b</id>
+        <link href="https://zenn.dev/nakamura196/articles/e940e062908b6b"/>
+        <updated>2023-05-25T20:32:44.000Z</updated>
+        <summary type="html"><![CDATA[概要
+IIIFマニフェストファイルからPDFファイルを作成する機会がありました。このソリューションとして、以下のリポジトリが見つかりましたが、うまく動かすことができませんでした。
+https://github.com/jbaiter/pdiiif
+そこで、上記リポジトリはJavaScriptを使用していますが、今回はPythonを用いた変換ツールを作成しました。
+
+ 使い方
+以下のノートブックからお試しいただけます。
+https://colab.research.google.com/github/nakamura196/ndl_ocr/blob/main/iiif2pdf.ipyn...]]></summary>
+        <author>
+            <name>nakamura196</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[QLORAをgoogle colabで試してみた。]]></title>
+        <id>https://zenn.dev/tatsuromurata/articles/30e2dcd1cd5412</id>
+        <link href="https://zenn.dev/tatsuromurata/articles/30e2dcd1cd5412"/>
+        <updated>2023-05-25T12:18:59.000Z</updated>
+        <summary type="html"><![CDATA[QLoRAとは
+QLoRAとは4bitでquantizeすることにより、大幅にLLMモデルのメモリを減らして動かせるようにしたプロジェクトです。
+huggingfaceで4bitが利用できるようになりました。
+https://huggingface.co/blog/4bit-transformers-bitsandbytes
+
+ リンク
+Colab
+github
+
+ 準備
+Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。
+
+ 環境構築
+インストール手順です。
+!pip install -q -U bitsand...]]></summary>
+        <author>
+            <name>しば🐕AI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[2023年5月版]Redis 再入門 その②: Redis Stackお試し]]></title>
+        <id>https://zenn.dev/asopitech/articles/20230518-100535_1</id>
+        <link href="https://zenn.dev/asopitech/articles/20230518-100535_1"/>
+        <updated>2023-05-25T12:07:14.000Z</updated>
+        <summary type="html"><![CDATA[!
+個人ブログでも記事をあげています。こちらもあわせてご覧ください！
+
+
+前回はRedisの基本機能と"Redis Stack"についての紹介でした。
+今回は Python でのクライアント実装のサンプルを…と思いまして。クライアントのリストページを参照してみました。
+
+https://redis.io/docs/clients/
+https://redis.io/docs/stack/get-started/clients/
+
+で、今回は Python OMに挑戦したいと思います。
+
+ Python OM
+Python OM のリポジトリは以下です。
+https://github.co...]]></summary>
+        <author>
+            <name>あそぴテック</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ColaboratoryでBigQueryのクエリ結果をDataFrameにしてqueryメソッドを実行したときのエラー対応]]></title>
+        <id>https://zenn.dev/hagino3000/articles/ffe7ab391edc12</id>
+        <link href="https://zenn.dev/hagino3000/articles/ffe7ab391edc12"/>
+        <updated>2023-05-25T09:53:08.000Z</updated>
+        <summary type="html"><![CDATA[概要
+Google Colaboratory(以下 Colab)ではBigQueryのクエリ結果を直にPandas DataFrameに変換できる。ちょっとした調査でColabを使う事が多いのだが、過去に作成した調査用Colabノートが軒並エラーが出て動かなくなったので対応内容をメモしておく。
+具体的にはPandas DataFrameの query メソッドがそのままでは動作しなくなったのでdtypeを変換する処理を挟んで回避した。
+
+ 再現コード
+%%bigquery df_sample --project xxx
+
+select
+  `DATE` as pub_date,
+  ...]]></summary>
+        <author>
+            <name>Takashi Nishibayashi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FlaskアプリをさくらVPSでデプロイしてみた]]></title>
+        <id>https://zenn.dev/renn/articles/ab0fefcb50491d</id>
+        <link href="https://zenn.dev/renn/articles/ab0fefcb50491d"/>
+        <updated>2023-05-25T08:59:13.000Z</updated>
+        <summary type="html"><![CDATA[ゴール：さくらVPS上のapp.pyを起動し、It Works!と表示させる
+HerokuなどのPaasサービスはいくつも記事がありましたが、VPSサーバーの記事はあまりなかったのでここに書き留めておきます。
+
+ 開発環境
+
+M1Mac(Ventura 13.3.1)
+さくらVPS
+VScode
+既にSSH接続できる
+さくらVPS内にApacheはインストール済
+
+
+ やったこと
+実際にやったことを書いていきます。
+
+ app.pyの中身
+まず今回起動させるFlaskのコードはこちらです。
+
+app.py
+from flask import Flask
+
+# おまじない
+app = ...]]></summary>
+        <author>
+            <name>れん</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonのFirebase FunctionsでRegionを指定する方法]]></title>
+        <id>https://zenn.dev/singularity/articles/deploy_firebase_functions_in_different_resion</id>
+        <link href="https://zenn.dev/singularity/articles/deploy_firebase_functions_in_different_resion"/>
+        <updated>2023-05-25T08:46:17.000Z</updated>
+        <summary type="html"><![CDATA[これは何？
+PythonのFirebase Functionsはbetaということもあり、Regionを指定する方法が2023年5月25日時点では公式ドキュメントに記載されていない。Pythonのfirebase_functionsのソースコードを見て調べる必要があった。
+
+ 方法
+以下のようにして指定できることが分かった。
+options.set_global_options(region=options.SupportedRegion.ASIA_NORTHEAST1)
+以下のようなpythonファイルを作ってデプロイすれば良い:
+from firebase_admin impor...]]></summary>
+        <author>
+            <name>Mai Nakagawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-232｜B - Caesar Cipher]]></title>
+        <id>https://zenn.dev/hyperdb/articles/45a48b94e704af</id>
+        <link href="https://zenn.dev/hyperdb/articles/45a48b94e704af"/>
+        <updated>2023-05-25T04:49:51.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-232 B - Caesar Cipher
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def diff(x, y):
+    a = ord(y) - ord(x)
+    return a if a >= 0 else a + 26
+
+
+def main():
+    s = list(getString())
+    t = list(getString())
+
+    u = [diff(s[i], t[i]) for i in range(len(s))]
+
+    print('Yes' if...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-232｜A - QQ solver]]></title>
+        <id>https://zenn.dev/hyperdb/articles/2944556eba10c9</id>
+        <link href="https://zenn.dev/hyperdb/articles/2944556eba10c9"/>
+        <updated>2023-05-25T04:49:50.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-232 A - QQ solver
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = getString()
+    n = s.split('x')
+
+    print(int(n[0]) * int(n[1]))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Whisperを使ったYouTubeの文字起こしのスクリプトを書いてみた]]></title>
         <id>https://zenn.dev/0xyusuke/articles/2be799dff07ffd</id>
@@ -5840,211 +6034,6 @@ https://github.com/ggerganov/whisper.cpp
 CTranslate2でWhisperモデルの書き直して、オ...]]></summary>
         <author>
             <name>ぴーまん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Dockerで研究用Python環境構築]]></title>
-        <id>https://zenn.dev/fastsnowy/articles/adc106a4a03dc1</id>
-        <link href="https://zenn.dev/fastsnowy/articles/adc106a4a03dc1"/>
-        <updated>2023-04-26T07:05:01.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-個人的に作った環境構築方法なのでベストプラクティスではない可能性もあります
-今回はUbuntu20.04のイメージを使ってCUDA11.7でPytorchのtorch=1.13.1を構築する
-torch.cuda.is_available()でTrueが返ってきたら成功
-
-Pythonのバージョン管理にはasdfを使う
-venv or Poetryで環境を作る
-
-https://asdf-vm.com/
-
- 開発環境
-VSCodeを前提
-Docker拡張機能をインストール
-https://marketplace.visualstudio.com/items?itemName...]]></summary>
-        <author>
-            <name>fastsnowy</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SMS認証コードをラズパイでSlackに転送してみた]]></title>
-        <id>https://zenn.dev/systemzeus_blog/articles/sms_forwarding_bot</id>
-        <link href="https://zenn.dev/systemzeus_blog/articles/sms_forwarding_bot"/>
-        <updated>2023-04-26T06:49:38.000Z</updated>
-        <summary type="html"><![CDATA[1. はじめに
-複数人で使用する共通アカウントのSMS認証にて、認証コードが特定の1台の携帯にしか送信されないことによる不便さを解決するためのボットを作成しました。SIM付きRaspberry Pi(ラズパイ)にて認証コードを受信しSlackに転送することで、共通アカウントを使用する全員に認証コードを通知することができます。ここでは認証コードを転送するラズパイをSMS転送ボットと呼び、SMS転送ボットのプログラムをGitHubに公開し、SMS転送ボットの設定方法を説明します。
-
- 2. デモ
-SMS認証が必要なクラウドにログインし、認証コードをSlackで受信してる様子です。
-
-
- ...]]></summary>
-        <author>
-            <name>m-minamisaka</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DeepLのAPIをpythonで使う]]></title>
-        <id>https://zenn.dev/masahiro_kaneko/articles/ab0b643bee1654</id>
-        <link href="https://zenn.dev/masahiro_kaneko/articles/ab0b643bee1654"/>
-        <updated>2023-04-26T06:46:34.000Z</updated>
-        <summary type="html"><![CDATA[コマンド
-def translate(text):
-
-    result = requests.get( 
-                "https://api.deepl.com/v2/translate", # 無料版の場合はhttps://api-free.deepl.com/v2/translate
-                params={ 
-                "auth_key": "Your API Key", # サイトで取得した認証キー
-                "target_lang": "JA", # 翻訳先の言語
-      ...]]></summary>
-        <author>
-            <name>MasahiroKaneko</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[apache beamのマネージドサービスdataflowで体験する分散データ処理ETL パイプライン]]></title>
-        <id>https://zenn.dev/nen/books/e7ffc3397dbb67</id>
-        <link href="https://zenn.dev/nen/books/e7ffc3397dbb67"/>
-        <updated>2023-04-26T06:01:54.000Z</updated>
-        <summary type="html"><![CDATA[本書は、Google Cloud Dataflow の基本的な概念から応用的なテクニックまでを網羅した実践的なガイドブックです。Cloud Dataflow  は、分散データ処理を行うためのオープンソースのプラットフォームであり、大規模なデータ処理において高いパフォーマンスを発揮します。本書では、Cloud Dataflow  の特徴やアーキテクチャについて解説し、リアルワールドでの分散データ処理の実装方法について詳しく説明します。
-
-
-
-本書は、分散データ処理に興味があるデータエンジニア、データサイエンティスト、システムアーキテクト、データベース管理者などの技術者を対象としています。また、Cloud Dataflow や Apache Beam についての事前知識は必須ではありませんが、プログラミング経験がある方にはより理解しやすい内容となっています。
-
-
-
-本書を読むことで、以下のようなメリットがあります。
-
-Cloud Dataflow や Apache Beam の基本的な概念を理解することができます。
-大規模なデータ処理におけるパフォーマンス改善に役立つテクニックを学ぶことができます。
-リアルワールドでのデータ処理の実装方法を知ることができます。
-Google Cloud Platform 上での分散データ処理に必要なスキルを習得できます。
-Apache Beam を用いたポータブルなデータ処理の方法を学ぶことができます。
-本書は、Cloud Dataflow と Apache Beam の基礎から実践的なテクニックまでを網羅した実践的なガイドブックであり、Google Cloud Platform 上での分散データ処理に興味のある技術者にとって、非常に役立つリソースとなるでしょう。]]></summary>
-        <author>
-            <name>sre_yoshiya</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-213｜A - Bitwise Exclusive Or]]></title>
-        <id>https://zenn.dev/hyperdb/articles/b95065cc37c735</id>
-        <link href="https://zenn.dev/hyperdb/articles/b95065cc37c735"/>
-        <updated>2023-04-26T03:46:04.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-213 A - Bitwise Exclusive Or
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b = getIntMap()
-
-    print(a ^ b)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-213｜B - Booby Prize]]></title>
-        <id>https://zenn.dev/hyperdb/articles/8c6c3699ca823c</id>
-        <link href="https://zenn.dev/hyperdb/articles/8c6c3699ca823c"/>
-        <updated>2023-04-26T03:46:03.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-213 B - Booby Prize
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n = getInt()
-    a = getIntList()
-
-    b = dict()
-    for i in range(n):
-        b[a[i]] = i + 1
-    c = sorted(b.items())
-
-    print(c...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[初心者エンジニアのためのPythonフリーランス副業入門]]></title>
-        <id>https://zenn.dev/gk12/articles/python-side-business</id>
-        <link href="https://zenn.dev/gk12/articles/python-side-business"/>
-        <updated>2023-04-26T02:29:31.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは。今回は、Pythonについて初心者エンジニア向けて、フリーランスや副業としての活用方法について解説します。
-
- はじめに
-Pythonは、機械学習やデータ分析、Webアプリケーション開発など、様々な分野で利用されるプログラミング言語です。そのため、Pythonを使ったフリーランスや副業のニーズも高まっています。本記事では、Pythonをフリーランスや副業として活用するための方法について解説します。
-
- フリーランスとしてのPython活用方法
-フリーランスとしてPythonを活用する方法は、大きく分けて2つあります。1つは、Pythonを使ったWebアプリケーション開発やデー...]]></summary>
-        <author>
-            <name>gk12</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[2023年4月版]TerraformからPythonのCDKへの移行もChatGPTでなんとか]]></title>
-        <id>https://zenn.dev/asopitech/articles/20230425-214748_1</id>
-        <link href="https://zenn.dev/asopitech/articles/20230425-214748_1"/>
-        <updated>2023-04-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[!
-ChatGPT-4 の情報をまとめて本にしました。基本からまとめて学習したい方はぜひ！
-
-
-
- Python の AWS CDK に Terraform のコードを移行させてみた
-Terrformのコード、とっ散らかっておりまして…
-もうちょっと整理したいけどどうしようもないので CDK を試してみたいけどAPIのリファレンス見てみるとめっちゃハードル高そうじゃん…
-と、腰が引けておりましたが、ChatGPTのコード変換、やらせられないか試してみました。
-今回も GPT-4 使っております。
-
- そもそもTerrformとかCDK知ってる？
-そもそもですが、知識があるかちょっと聞いて...]]></summary>
-        <author>
-            <name>あそぴテック</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ChatGPTからの一言をラズパイで表示しよう]]></title>
-        <id>https://zenn.dev/bonsai_engineer/articles/5e642ba35b9696</id>
-        <link href="https://zenn.dev/bonsai_engineer/articles/5e642ba35b9696"/>
-        <updated>2023-04-25T16:02:55.000Z</updated>
-        <summary type="html"><![CDATA[ChatGPTに元気づける一言をもらい、その返答をe-Paperに表示するものをラズパイを使用して作成してみたので作り方を共有します。
-RaspberryPi Zero WHと電子ペーパーモジュール for RaspberryPiを使えば5,000円ほどで作成できます。
-簡単なので試してみてください！
-
- 必要なもの
-
-RasberryPi
-2×20のピンソケットがついているもの、WiFiモジュールがついているものがいい
-Raspberry Pi Zero WH、Raspberry Pi4、Raspberry Pi3など
-私が購入使ったものはこちら
-
-e-Paper
-for Raspb...]]></summary>
-        <author>
-            <name>盆栽エンジニア</name>
         </author>
     </entry>
 </feed>
