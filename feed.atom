@@ -2,10 +2,217 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-05-26T01:26:35.793Z</updated>
+    <updated>2023-05-27T01:27:56.288Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[バイナリーオプションRSIだけで勝てるのか検証する]]></title>
+        <id>https://zenn.dev/harukii/articles/ecc732da544c48</id>
+        <link href="https://zenn.dev/harukii/articles/ecc732da544c48"/>
+        <updated>2023-05-27T00:47:18.000Z</updated>
+        <summary type="html"><![CDATA[テクニカル指標。RSIでバイナリーオプションをしたらどうなる？勝てるのか検証する。
+
+ 方法
+RSIを計算してPythonで勝率をだす。
+始まりはいつもこのコードです。
+import pandas as pd
+import MetaTrader5 as mt5
+from datetime import timedelta
+
+# MT5への接続
+mt5.initialize()
+
+# 読み込む通貨ペアと時間枠、データの件数を指定
+symbol = 'USDJPYm'
+timeframe = mt5.TIMEFRAME_M5
+count = 100000
+
+# データの取得
+rates = ...]]></summary>
+        <author>
+            <name>ホソノP</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[EVA3Dをgoogle colabで試してみた。]]></title>
+        <id>https://zenn.dev/tatsuromurata/articles/b251faefd915d1</id>
+        <link href="https://zenn.dev/tatsuromurata/articles/b251faefd915d1"/>
+        <updated>2023-05-26T12:07:03.000Z</updated>
+        <summary type="html"><![CDATA[EVA3Dとは
+EVA3Dは高品質なHuman 3Dモデルを2D Image collectionから学習させたデータから自動生成するモデルです。Text等で指定することはできないですがかなり綺麗な3Dモデルをランダムに作成し、かつ綺麗なTextureもついてきます。
+https://github.com/hongfz16/EVA3D/tree/main
+
+ リンク
+Colab
+github
+
+ 準備
+Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。
+
+ 環境構築
+(1) EVA3D Install
+インストー...]]></summary>
+        <author>
+            <name>しば🐕AI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[データサイエンス100本ノック（構造化データ加工編）（中級）]]></title>
+        <id>https://zenn.dev/joel/articles/4321b9f3a00020</id>
+        <link href="https://zenn.dev/joel/articles/4321b9f3a00020"/>
+        <updated>2023-05-26T11:59:19.000Z</updated>
+        <summary type="html"><![CDATA[[!Important]+ Goals
+一般社団法人データサイエンス協会が GitHub に公開した「データサイエンス 100 のノック（構造化データ処理編）」の問題演習を行うコースです。
+このコースでは、曖昧な条件、ソート、集計、サンプリングなどについて学ぶことができます。
+ビジネス現場での分析実務では、データのほとんどが構造化データです。構造化データを自由に加工・集計するスキルを磨き、データサイエンスの実践力を高めましょう。
+
+
+[!abstract]+ Curriculum
+1.曖昧な条件
+2.ソート
+3.集計
+4.サブクエリ
+5.サンプリング
+6.減算エラー対応
+7. name...]]></summary>
+        <author>
+            <name>Joel Lee</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Whisper API と COEIROINK でボイスチェンジャーを作ってみた]]></title>
+        <id>https://zenn.dev/comachi/articles/1e5835ff797d51</id>
+        <link href="https://zenn.dev/comachi/articles/1e5835ff797d51"/>
+        <updated>2023-05-26T10:48:21.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事では、Whisper API と COEIROINK でボイスチェンジャーを作る方法について解説します。
+
+
+ 事前準備
+
+
+COEIROINK のダウンロード
+
+OpenAI API key の取得
+
+
+ 処理の流れ
+
+マイクから入力された音声を SpeechRecognition で認識します。
+Whisper API による音声の解析を行います。
+解析した音声を基に、COEIROINK を使用して音声を合成し、再生します。
+
+
+ マイクから入力された音声の認識
+
+Python のモジュールである SpeechRecognition を使用します。
+
+examp...]]></summary>
+        <author>
+            <name>comachi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-233｜A - 10yen Stamp]]></title>
+        <id>https://zenn.dev/hyperdb/articles/8f10aa10e61737</id>
+        <link href="https://zenn.dev/hyperdb/articles/8f10aa10e61737"/>
+        <updated>2023-05-26T05:06:54.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-233 A - 10yen Stamp
+
+
+
+ 提出結果
+import math
+
+
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    x, y = getIntMap()
+
+    print(0 if y <= x else math.ceil((y - x) / 10))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-233｜B - A Reverse]]></title>
+        <id>https://zenn.dev/hyperdb/articles/4e31352c50da20</id>
+        <link href="https://zenn.dev/hyperdb/articles/4e31352c50da20"/>
+        <updated>2023-05-26T05:06:53.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-233 B - A Reverse
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getString():
+    return input()
+
+
+def main():
+    l, r = getIntMap()
+    s = getString()
+
+    print(s[:l - 1] + "".join([x for x in reversed(s[l - 1:r])]) + s[r:])
+
+
+if __name__ == "__main__":
+   ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Cloud FunctionsからSlackへmatplotlibで生成したグラフを投稿する]]></title>
+        <id>https://zenn.dev/spacemarket/articles/441c6d26c79778</id>
+        <link href="https://zenn.dev/spacemarket/articles/441c6d26c79778"/>
+        <updated>2023-05-26T04:56:04.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは、Miotavaです。
+直近で引越しをすることとなり、どんな書斎にしようかなとイメージをStable Diffusionで生成しながら固めているところです。
+今まではPinterestでインテリアの参考画像を探していたのですが、生成AI使えば割とドンピシャ（死語？）のイメージを作ってくれるので、チョベリグ（死語）です。
+
+ 本記事について
+さて、以前BigQueryから抽出したデータを表形式でSlack投稿する方法をまとめてみました。
+https://zenn.dev/spacemarket/articles/c6f99ca8a36b8a
+本記事ではさらにリッチなデータ集計とし...]]></summary>
+        <author>
+            <name>miotava</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonデコレータ入門]]></title>
+        <id>https://zenn.dev/pypypymi/articles/1a21f553f4842f</id>
+        <link href="https://zenn.dev/pypypymi/articles/1a21f553f4842f"/>
+        <updated>2023-05-26T00:39:26.000Z</updated>
+        <summary type="html"><![CDATA[Python のデコレータは、関数やメソッドの振る舞いを変更するために使用される特殊な機能です。
+デコレータは、関数を引数として受け取り、新しい関数を返す関数です。
+デコレータは、@記号を使用して簡単に適用することができます。
+デコレータの例
+例えば、次のようなデコレータがあります。
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something ...]]></summary>
+        <author>
+            <name>tac-tac-go@rm -rf /</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[IIIFマニフェストファイルからPDFファイルを作成する]]></title>
         <id>https://zenn.dev/nakamura196/articles/e940e062908b6b</id>
@@ -5894,146 +6101,6 @@ train = pd.read_csv(BASE+"train.csv")
 test = pd.read_csv(BASE+"test.cs...]]></summary>
         <author>
             <name>あんどう</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Flask】web3.pyで簡単なWeb3アプリを実装する]]></title>
-        <id>https://zenn.dev/tomlab/books/d4df1e3f76a1ba</id>
-        <link href="https://zenn.dev/tomlab/books/d4df1e3f76a1ba"/>
-        <updated>2023-04-27T06:57:29.000Z</updated>
-        <summary type="html"><![CDATA[この本では「web3.py」,「Flask」により、簡単なWebアプリケーションを実装し、Web3を体験します。]]></summary>
-        <author>
-            <name>tomr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NumPyro：ODE]]></title>
-        <id>https://zenn.dev/yoshida0312/articles/84762a9eb3add5</id>
-        <link href="https://zenn.dev/yoshida0312/articles/84762a9eb3add5"/>
-        <updated>2023-04-27T05:08:08.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-今回は、MCMCで常微分方程式のパラメータを推論する方法を見ていきます。MCMCでパラメータ推論することで物理法則などの事前知識の導入や不確実性を考慮しながら、多変数のパラメータ最適化をバランスよく実施できることが期待できます。
-
- ライブラリのインポート
-import os
-
-import jax.numpy as jnp
-from jax import random
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import seaborn as sns
-
-import nu...]]></summary>
-        <author>
-            <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-214｜B - How many?]]></title>
-        <id>https://zenn.dev/hyperdb/articles/e245f9ce297698</id>
-        <link href="https://zenn.dev/hyperdb/articles/e245f9ce297698"/>
-        <updated>2023-04-27T04:06:59.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-214 B - How many?
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    s, t = getIntMap()
-
-    c = 0
-    for i in range(s + 1):
-        for j in range(s + 1 - i):
-            for k in range(s + 1 - i - j):
-                if i * j * k <= t:
-           ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-214｜A - New Generation ABC]]></title>
-        <id>https://zenn.dev/hyperdb/articles/d648bd7fa1fbb5</id>
-        <link href="https://zenn.dev/hyperdb/articles/d648bd7fa1fbb5"/>
-        <updated>2023-04-27T04:06:58.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-214 A - New Generation ABC
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    n = getInt()
-
-    print(4 if n <= 125 else 6 if n <= 211 else 8)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Flask】画像を高解像度化するWebアプリケーションを実装する]]></title>
-        <id>https://zenn.dev/tomlab/books/71f3950b51f319</id>
-        <link href="https://zenn.dev/tomlab/books/71f3950b51f319"/>
-        <updated>2023-04-27T01:58:49.000Z</updated>
-        <summary type="html"><![CDATA[この本では、「Flask」および「Real-ESRGAN」を用いて、画像を高解像度化（画質を向上）するWebアプリケーションを実装します。]]></summary>
-        <author>
-            <name>tomr</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NumPyro：欠損値の扱い方]]></title>
-        <id>https://zenn.dev/yoshida0312/articles/d0e4c36d94d26b</id>
-        <link href="https://zenn.dev/yoshida0312/articles/d0e4c36d94d26b"/>
-        <updated>2023-04-26T14:31:58.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-今回は実務でもよくある欠損値がデータにある際の取り扱い方をみていきます。
-
- ライブラリのインポート
-import os
-
-import jax.numpy as jnp
-from jax import random
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import seaborn as sns
-
-import numpyro
-from numpyro.diagnostics import hpdi
-import numpyro.distributions as dis...]]></summary>
-        <author>
-            <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[whisper、whisper.cpp、faster-whisperの比較]]></title>
-        <id>https://zenn.dev/piment/articles/24269616aa9c04</id>
-        <link href="https://zenn.dev/piment/articles/24269616aa9c04"/>
-        <updated>2023-04-26T14:30:58.000Z</updated>
-        <summary type="html"><![CDATA[現状のwhisper、whisper.cpp、faster-whiperを比較してみたいと思います。
-openai/whisperに、2022年12月にlarge-v2モデルが追加されたり、色々バージョンアップしていたりと公開からいろいろと進化しているようです。
-https://github.com/openai/whisper
-CPU向けにC/C++で書かれたバージョンです。Core ML supportだそうですので、Mac向け感が強いです。
-https://github.com/ggerganov/whisper.cpp
-CTranslate2でWhisperモデルの書き直して、オ...]]></summary>
-        <author>
-            <name>ぴーまん</name>
         </author>
     </entry>
 </feed>
