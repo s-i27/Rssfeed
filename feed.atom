@@ -2,10 +2,316 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-05-29T01:37:29.766Z</updated>
+    <updated>2023-05-30T01:38:09.877Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Ryeでwhisper環境を構築する]]></title>
+        <id>https://zenn.dev/kazuph/articles/00ee4932fb3528</id>
+        <link href="https://zenn.dev/kazuph/articles/00ee4932fb3528"/>
+        <updated>2023-05-30T00:14:50.000Z</updated>
+        <summary type="html"><![CDATA[最近流行りのryeで音声書き起こしのwhisperのための環境を構築してみます。
+https://github.com/mitsuhiko/rye
+
+ ryeのセットアップ
+$ curl -sSf https://rye-up.com/get | bash
+$ vi .bashrc
+source "$HOME/.rye/env" # ← を末尾に追記
+
+ プロジェクトの作成
+mkdir whisper-sample
+cd whisper-sample
+rye init
+rye pin 3.10 # ← 任意
+rye add openai-whisper==20230314
+rye syn...]]></summary>
+        <author>
+            <name>kazuph</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonでエクセルシート編集する]]></title>
+        <id>https://zenn.dev/dokusy/articles/22888ccd34dc6d</id>
+        <link href="https://zenn.dev/dokusy/articles/22888ccd34dc6d"/>
+        <updated>2023-05-29T21:02:06.000Z</updated>
+        <summary type="html"><![CDATA[最近、初歩的なpythonエクセル操作を覚えたので備忘録として残します。
+
+ 環境
+
+OS MacOS Ventura 13.0
+CPU Apple M2
+
+
+ pythonバージョン
+
+python 3.9
+
+
+ まずは必要物の準備
+PC買い替えてからまさかのpythonを自分のPCに入れる事がなかったので久しぶりにインストールしましたw
+とりあえず「openpyxl」というものが必要なのでpipインストールしていきます。
+pip install openpyxl
+必要最低限の解説にしたいので3つのファイルを作っていきます。
+あとプログラムを各行確認したいのでjupyter lab使い...]]></summary>
+        <author>
+            <name>どぅくし</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pytestで特定のメッセージを含むWarningを無視する]]></title>
+        <id>https://zenn.dev/k_h_k/articles/f88e6a0ad78e3b</id>
+        <link href="https://zenn.dev/k_h_k/articles/f88e6a0ad78e3b"/>
+        <updated>2023-05-29T13:15:10.000Z</updated>
+        <summary type="html"><![CDATA[結論
+
+
+@pytest.mark.filterwarnings("ignore:{Warning文}")を関数の頭に付ける
+「Warning文」には正規表現が使える
+
+
+ 例
+import pytest
+
+def test_hoge():
+    ### 処理 ###
+    assert result = "test"
+というテストで
+/usr/local/lib/python3.6/site-packages/pymysql/cursors.py:329: Warning: (1292, "Truncated incorrect INTEGER value: '100.0'")...]]></summary>
+        <author>
+            <name>k.h</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python/Ubuntu22.04/pyenv/fish環境をDockerで構築する方法]]></title>
+        <id>https://zenn.dev/efficientyk/articles/0fde4dcd4a9520</id>
+        <link href="https://zenn.dev/efficientyk/articles/0fde4dcd4a9520"/>
+        <updated>2023-05-29T12:37:31.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+前半は共通ですが、後半ではGPUなし、ありの2通りを書いてありますのでお手元の環境によって見る場所を変えてください。また、今回はUbuntu22.04上で動かしています。
+
+ 1. Dockerをインストール
+まずdockerをインストールします。
+# 依存パッケージインストール
+sudo apt update
+sudo apt install \
+  ca-certificates curl gnupg lsb-release
+
+# Dockerの公式GPGキーを追加
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://d...]]></summary>
+        <author>
+            <name>YK</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[google Secret Managerの値を登録してpythonで取得してみる]]></title>
+        <id>https://zenn.dev/ushknn/articles/aae542a72f2881</id>
+        <link href="https://zenn.dev/ushknn/articles/aae542a72f2881"/>
+        <updated>2023-05-29T11:49:42.000Z</updated>
+        <summary type="html"><![CDATA[手順
+
+Secret Managerの有効化
+シークレットの登録
+サービスアカウントの作成と権限追加
+pythonで呼び出し
+
+※本記事の内容は2023/05/29時点で動作を確認しました。
+
+ 1. Secret managerの有効化
+GCPのsecret managerに行ってAPIを有効化します。
+権限あればボタン押すだけで終わります。
+https://console.cloud.google.com/security/secret-manager
+
+ 2. secretの登録
+今回はコンソールで設定します。
+secret manager画面の上の方に作成ボタンがあるので押し...]]></summary>
+        <author>
+            <name>植木しょくにん</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[画像間の類似度評価指標：FCNスコア（pixel-level-accuracy score）]]></title>
+        <id>https://zenn.dev/gkchop/articles/b10bba8919ea54</id>
+        <link href="https://zenn.dev/gkchop/articles/b10bba8919ea54"/>
+        <updated>2023-05-29T11:44:55.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+GAN（Generative Adversarial Network）を勉強していて、「生成した画像がGround Truthの画像と似ているかどうかってどう定量的に評価するんだ？」と疑問に思いまして、自身の理解を確かめるために実装してみます。
+
+ FCN-Score
+pix2pixやCycleGANの論文で評価指標の一つとして使われた指標です。SemanticSegmentation向けに学習されたFCN（Fully Connected Networks）アーキテクチャを持つモデルに対して、Ground Truthの画像（y）および生成された画像（\hat{y}）でSeg...]]></summary>
+        <author>
+            <name>TangeDanpei</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[UniControlnetをgoogle colabで試してみた。]]></title>
+        <id>https://zenn.dev/tatsuromurata/articles/4d5d43c8605516</id>
+        <link href="https://zenn.dev/tatsuromurata/articles/4d5d43c8605516"/>
+        <updated>2023-05-29T10:04:01.000Z</updated>
+        <summary type="html"><![CDATA[UniControlNetとは
+UniControlNetはControlNetで出来る画像変換を一度にやってしまえる、multiControlNetの拡張版のControlNetです。それぞれの画像(人間、動物、背景等)はControlNetのどの前処理を利用するかで大きくクオリティが変化しましたが、その強みを活かせるモデルが降臨しました。
+https://github.com/ShihaoZhaoZSH/Uni-ControlNet
+
+ リンク
+Colab
+github
+
+ 準備
+Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「...]]></summary>
+        <author>
+            <name>しば🐕AI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonのFirebase Functionsで複数Pythonファイルを利用する方法]]></title>
+        <id>https://zenn.dev/singularity/articles/multiple_files_of_python_firebase_functions</id>
+        <link href="https://zenn.dev/singularity/articles/multiple_files_of_python_firebase_functions"/>
+        <updated>2023-05-29T09:04:22.000Z</updated>
+        <summary type="html"><![CDATA[これは何？
+Python版のFirebase Functionsで、複数のPythonファイルを利用する方法。
+
+ 現象
+以下のようなディレクトリ構成になっているとする:
+myproject
++- .firebaserc
+|
+|
++- firebase.json
+|
++- functions/
+      |
+      +- main.py
+      |
+      +- import_me.py  # このpythonファイルをmain.pyからimportしたい
+      |
+      +- requirements.txt
+      |
+      +- venv/
+...]]></summary>
+        <author>
+            <name>Mai Nakagawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Redis integration with Python]]></title>
+        <id>https://zenn.dev/dshekhar17/articles/2a19521ac567c2</id>
+        <link href="https://zenn.dev/dshekhar17/articles/2a19521ac567c2"/>
+        <updated>2023-05-29T09:02:12.000Z</updated>
+        <summary type="html"><![CDATA[Python and Redis together form a powerful duo for developers seeking efficient database solutions. This blog will walk you through the integration of Python with Redis, covering both the basics and advanced techniques. By the end of this blog, you’ll have a solid foundation for leveraging the ful...]]></summary>
+        <author>
+            <name>Divyanshu Shekhar</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[numpyの階層・テンソルについて]]></title>
+        <id>https://zenn.dev/waiwawaiwai/articles/5f02e124bc5119</id>
+        <link href="https://zenn.dev/waiwawaiwai/articles/5f02e124bc5119"/>
+        <updated>2023-05-29T08:34:56.000Z</updated>
+        <summary type="html"><![CDATA[Numpyの演算
+こんにちは！わいわわです！
+環境構築を終え、ライブラリをガンガン使ってみるフェーズへ入っています。
+今回はNumpyを実際に使用し、テンソルについて学習していきます！
+
+ numpyとは（おさらい）
+数値計算の際に利用されるライブラリ
+np.array()で「ndarray」を作成し、独自のデータ構造で
+高速な処理で計算をする（高速な処理を可能する配列のイメージ）
+scipy「計算ライブラリ」、scikit-learn「機械学習ライブラリ」
+openCV「画像処理ライブラリ」はnumpyにより実装されている
+データ分析や機械学習にはベクトルや行列の計算が不可欠です。...]]></summary>
+        <author>
+            <name>わいわわ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-234｜B - Longest Segment]]></title>
+        <id>https://zenn.dev/hyperdb/articles/d3aad5cc668019</id>
+        <link href="https://zenn.dev/hyperdb/articles/d3aad5cc668019"/>
+        <updated>2023-05-29T04:40:22.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-234 B - Longest Segment
+
+
+
+ 提出結果
+import math
+import itertools
+
+def getInt():
+    return int(input())
+
+def getIntListRow(N):
+    return [list(map(int, input().split())) for _ in range(N)]
+
+def d(x, y):
+    return math.sqrt((y[0] - x[0]) ** 2 + (y[1] - x[1]) ** 2)
+
+def main():
+    n =...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-234｜A - Weird Function]]></title>
+        <id>https://zenn.dev/hyperdb/articles/6942333e77d7eb</id>
+        <link href="https://zenn.dev/hyperdb/articles/6942333e77d7eb"/>
+        <updated>2023-05-29T04:40:21.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-234 A - Weird Function
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+def fx(n):
+    return n ** 2 + 2 * n + 3
+
+def main():
+    t = getInt()
+
+    print(fx(fx(fx(t) + t) + fx(fx(t))))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】dict.copy()したのに中身が上書きされてしまった！]]></title>
+        <id>https://zenn.dev/tk_tech/articles/2f8e56b3e6aad7</id>
+        <link href="https://zenn.dev/tk_tech/articles/2f8e56b3e6aad7"/>
+        <updated>2023-05-29T03:17:04.000Z</updated>
+        <summary type="html"><![CDATA[概要
+SlackのAPIを利用して2種類の情報をそれぞれ別のチャンネルに通知するためのプログラムで両方のチャンネルに同じ情報が出てしまった。
+通知したい内容の部分以外はSlackAPIのためのデータの構成は同一であるため、以下のように記載。
+
+ バージョン情報
+今回の知見にバージョンはあまり関係はないが、念のため。
+
+Python3.9
+AWS Lambda
+
+
+ スクリプト
+default = {
+    'username': '',
+    'blocks': [
+        {
+            'type': 'section',
+	    'text': {
+	...]]></summary>
+        <author>
+            <name>TKTK</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[現在最強のText-to-3Dモデル"ProlificDreamer"をちゃんと理解する]]></title>
         <id>https://zenn.dev/kamata1729/articles/55fda1a884bdfe</id>
@@ -5919,235 +6225,6 @@ http://mouapp.com/
  リアルタイムプレビュー...]]></summary>
         <author>
             <name>あみふぃま</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Google Colabでpyopenjtalkがインストールできない]]></title>
-        <id>https://zenn.dev/tukiakaritabane/articles/google-colab-pyopenjtalk-error</id>
-        <link href="https://zenn.dev/tukiakaritabane/articles/google-colab-pyopenjtalk-error"/>
-        <updated>2023-04-30T13:21:34.000Z</updated>
-        <summary type="html"><![CDATA[pyopenjtalkのpip installでエラー
-
-セル
-!pip install pyopenjtalk
-
-Google Colabでpyopenjtalkのpip installが失敗する。
-pyopenjtalkは、PythonからOpenJtalkが使用できるライブラリである。
-hts_engine_API、open_jtalkというC/C++のライブラリを参照していて、pip installの際、この２つのライブラリのビルドに失敗している。
-
-出力
-Looking in indexes: https://pypi.org/simple, https://us-pyth...]]></summary>
-        <author>
-            <name>月明たばね</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Flaskでwebsocketを試してみる]]></title>
-        <id>https://zenn.dev/daphnia/articles/4d0574f75bbede</id>
-        <link href="https://zenn.dev/daphnia/articles/4d0574f75bbede"/>
-        <updated>2023-04-30T11:40:01.000Z</updated>
-        <summary type="html"><![CDATA[FlaskでWebsocketを構築してみる。目的はPythonでWebsocketを使用してみるということで、サーバーサイドで完結する構成で組んでみます。
-
- 完成
-
-
- 環境
-
- ライブラリ
-
-flask
-flask_socketio
-
-
- 構築
-
- まずはFlaskでHello World
-venv 環境を使用して、簡単に構築します。
-
-
-app.pyファイル作成
-
-from flask import Flask, render_template
-
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secret!'
-
-@app.ge...]]></summary>
-        <author>
-            <name>Daphnia</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[因果推論100本ノック(4)RDD（回帰不連続デザイン）]]></title>
-        <id>https://zenn.dev/s1ok69oo/articles/fb86aeacfba310</id>
-        <link href="https://zenn.dev/s1ok69oo/articles/fb86aeacfba310"/>
-        <updated>2023-04-30T10:48:48.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-因果推論100ノック（自作）31本目~40本目の問題とPythonのサンプルコードです．
-RDDに関する問題です．問題の不備や内容の誤り等ありましたら，ご指摘いただけますと幸いです．
-
- 設定
-コンビニアプリでクーポンを配布するケースを考えます．
-過去の購買が多いほどアプリ内の累計ポイントが高いとし，累計ポイントが100以上のユーザーにクーポンを配布した結果，クーポン配布期間のユーザーの売上がどれほど増加したかという効果を推定します．
-利用するデータは，下記のファイルです．
-https://github.com/s1ok69oo/causal_inference_100kn...]]></summary>
-        <author>
-            <name>Shingo Uto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[chatGPTを使って、文章からSQLを生成する方法を試しました]]></title>
-        <id>https://zenn.dev/seiyakitazume/articles/7c0714539ded87</id>
-        <link href="https://zenn.dev/seiyakitazume/articles/7c0714539ded87"/>
-        <updated>2023-04-30T09:14:10.000Z</updated>
-        <summary type="html"><![CDATA[株式会社piponではこのような病院検索のサイトを提供しています。
-厚生労働省のデータをグラフ化して、病院ごとの症例数をグラフ化しています。
-https://hospital-search.net/index.html
-このサイトを作った理由としては、こんなエピソードを聞いたからです。
-ある方が、舌がんになり、自分の出身大学の附属病院へ行きました。
-しかし、その附属病院には、舌がんの症例数が少なく最適な治療をするまでに時間を要してしまいました。
-結果的にその方は亡くなってしまいました。もし、最適な治療を最初から受けられたら結果はどうなっていたか・・・どうしても考えてしまいます。
-しかし、...]]></summary>
-        <author>
-            <name>seiyakitazume</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonでQPS上限を指定して画像をダウンロードする]]></title>
-        <id>https://zenn.dev/yagiyuki/articles/download_img_python</id>
-        <link href="https://zenn.dev/yagiyuki/articles/download_img_python"/>
-        <updated>2023-04-30T03:35:07.000Z</updated>
-        <summary type="html"><![CDATA[Pythonで指定QPS範囲で画像をダウンロードするプログラムを書きました。
-QPSはQueries Per Secondのことです。
-今回の場合、1秒間にダウンロードする画像件数のことを指します。
-たとえば、10QPSならば1秒間に10枚の画像をダウンロードするという意味になります。
-クロール先のサイトの負荷を軽減するためにQPS上限を指定することは重要です。
-以下がコード例となります。
-import os
-import time
-import requests
-
-def download_image(url, save_path):
-    try:
-        response...]]></summary>
-        <author>
-            <name>yagiyuki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Twitter APIの無償枠をtweepyからなんとか使う]]></title>
-        <id>https://zenn.dev/yj_szk/articles/c049bad009550f</id>
-        <link href="https://zenn.dev/yj_szk/articles/c049bad009550f"/>
-        <updated>2023-04-30T03:31:56.000Z</updated>
-        <summary type="html"><![CDATA[何が変わったのか
-
-
-これしかできなくなった
-
-1日50投稿(メディア含む)
-1日50ツイ消し
-1日自分のツイートに対しての取得25回
-
-
-
-
-検索とか色々全滅した
-インスタとか顔本は投稿用のAPIないし今までのTwitterが異常だったのかもしれない
-
- ただツイートするだけの方法
-
- 準備
-pip install tweepy==4.14.0
-
- 認証
-設定ファイル
-
-hoge.ini
-[hoge]
-consumer_key = 
-consumer_secret = 
-access_key = 
-access_secret = 
-bearer_token = 
-
-ツイート用のv2...]]></summary>
-        <author>
-            <name>モケケ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[野獣先輩は抗うつ剤となりうるか。（電気羊はアンドロイドの夢を見るか）]]></title>
-        <id>https://zenn.dev/kaedeee/articles/bf3573cf96f8ba</id>
-        <link href="https://zenn.dev/kaedeee/articles/bf3573cf96f8ba"/>
-        <updated>2023-04-30T01:45:37.000Z</updated>
-        <summary type="html"><![CDATA[エピローグ
-「やりますねぇ！」
-初めて彼の声を聞いたのは、大学一年の夏休み。別大学に進学した、高校の親友の家だった。
-小綺麗な家の中で響き渡る、「イキスギィ！！」僕にとっては、何が「行き過ぎ」ているのかさっぱりだったし、久しぶりに会った友人の代わり様に、驚くばかりだった。
-そんな無垢なワイであったが、変化というものは恐ろしい。なんと現在は、迫真クリエイターとして野獣先輩シリーズを筆頭に数々の大人気アプリ（これもうわかんねぇな）を手がけているのだ。
-ほら、見ろよ見ろよ👇
-🍎 AppStore
-https://bit.ly/kaedapple
-🍏 GooglePlay
-https://b...]]></summary>
-        <author>
-            <name>Kaede Games</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pythonでのデータ読み込みメモ]]></title>
-        <id>https://zenn.dev/nicktominaga/articles/read_txt_python</id>
-        <link href="https://zenn.dev/nicktominaga/articles/read_txt_python"/>
-        <updated>2023-04-29T15:42:19.000Z</updated>
-        <summary type="html"><![CDATA[シンプルに、以下のような時系列データを
-
-
-
-time[s]
-data
-
-
-
-
-1
-5
-
-
-2
-4
-
-
-3
-3
-
-
-4
-4
-
-
-5
-5
-
-
-
-以下のようなスペース区切りのテキストファイルで扱うとする。
- 1  5  
- 2  4 
- 3  3 
- 4  4 
- 5  5
-
-コードは以下
-import numpy as np
-
-data = np.genfromtxt("sample.txt")
-
-data_x = data[:,0]
-data_y = data[:,1]
-data[:,0]の意味は、行全体（左側の：）に沿って、0列目を取ってくる
-という意味。]]></summary>
-        <author>
-            <name>Nick</name>
         </author>
     </entry>
 </feed>
