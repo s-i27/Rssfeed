@@ -2,10 +2,304 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-06-01T02:07:30.979Z</updated>
+    <updated>2023-06-02T01:50:10.979Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Pythonでファイル名を一括置換]]></title>
+        <id>https://zenn.dev/yuriemori/articles/ab5a7d261c07ea</id>
+        <link href="https://zenn.dev/yuriemori/articles/ab5a7d261c07ea"/>
+        <updated>2023-06-02T00:23:39.000Z</updated>
+        <summary type="html"><![CDATA[特定のフォルダ配下にあるファイル名を一括置換するScriptです。
+「やば！微妙にファイル名に付与するID間違えた！」みたいなときに使えます。
+import os
+
+folder_path = r'C:\path\to\folder'  # 置換対象のファイルが存在するフォルダのパス
+old_text = 'Replace前のファイル名'  # 置換前のテキスト
+new_text = 'Replace後のファイル名'  # 置換後のテキスト
+
+for filename in os.listdir(folder_path):
+    if old_text in filename:
+   ...]]></summary>
+        <author>
+            <name>yuriemori</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lambda Python3.10に入っている標準モジュール]]></title>
+        <id>https://zenn.dev/shimo_s3/articles/f67f522816b870</id>
+        <link href="https://zenn.dev/shimo_s3/articles/f67f522816b870"/>
+        <updated>2023-06-01T22:45:07.000Z</updated>
+        <summary type="html"><![CDATA[先にまとめ
+
+AWS Lambda Python3.10にデフォルトで入っているモジュールについて調べました
+特に3.9から目立つ変化はなし
+
+(参考)3.8 -> 3.9ではPython標準のZoneInfoが使えるようになって個人的には嬉しかったのですが
+
+
+
+
+ 2023年4月に対応
+
+Apr 18, 2023
+AWS Lambda は、マネージドランタイムおよびコンテナベースイメージの両方として Python 3.10 に対応しました。
+
+https://aws.amazon.com/jp/about-aws/whats-new/2023/04/aws-lambda-p...]]></summary>
+        <author>
+            <name>shimo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ぼくのかんがえたさいきょうの必殺技の名前を叫びたい!!  　　　　　　　～スクレイピング&要約編～]]></title>
+        <id>https://zenn.dev/shungo_a/articles/104c8fbad30301</id>
+        <link href="https://zenn.dev/shungo_a/articles/104c8fbad30301"/>
+        <updated>2023-06-01T22:18:06.000Z</updated>
+        <summary type="html"><![CDATA[本記事の動機
+私には中学生頃から夢があります。それはカッコイイ技を考えて、それを自分の技として叫びながら発動することです。発動は無理なんですが、技名くらいは考えつきたいものでした。しかし、語彙力がない、センスもない私ではカッコイイ技名なんて思いつきもしないのです。。
+　そして時は過ぎていき、ChatGPTの出現&前記事でTransformerを学ぶ中で、
+あれ、これってカッコイイ技名とその能力を多量に学ばせれば、自分の考えた能力の説明文→カッコいい技名の出力
+できるのでは?と考えたのが本記事の動機です。
+　まとめると、Transformerを用いた学習をしつつ、分からなければ...]]></summary>
+        <author>
+            <name>S.A</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[さくらレンタルサーバー　PythonでHello World]]></title>
+        <id>https://zenn.dev/nekomimimi/articles/7297824cb9a3c0</id>
+        <link href="https://zenn.dev/nekomimimi/articles/7297824cb9a3c0"/>
+        <updated>2023-06-01T13:07:13.000Z</updated>
+        <summary type="html"><![CDATA[さくらレンタルサーバー PythonでHello World
+以下のエラーに半日ぐらいはまった記念に。
+AH01215: suexec policy violation: see suexec log for more details: /home/your_folder/www/index.cgi
+End of script output before headers: index.cgi
+以下、動作したHello Worldのプログラム
+
+index.cgi
+#!/usr/local/bin/python -- 
+print('Content-Type: text/html; c...]]></summary>
+        <author>
+            <name>nekomimimi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pydantic の BaseModel を継承したクラスに AsyncMock を渡す]]></title>
+        <id>https://zenn.dev/codehex/articles/dcf4abd05093c8</id>
+        <link href="https://zenn.dev/codehex/articles/dcf4abd05093c8"/>
+        <updated>2023-06-01T12:31:16.000Z</updated>
+        <summary type="html"><![CDATA[例えば Pydantic を使ってこんな感じでクラスを定義します。
+from pydantic import BaseModel
+
+
+class Hello(BaseModel):
+    async def say():
+        print("hello")
+
+class Greeter(BaseModel):
+    hello: Hello
+    
+    async def greet(self):
+        self.hello.say()
+Greeter を初期化するときに Greeter(hello=Hello()) のようなコードを書きますが、テストで H...]]></summary>
+        <author>
+            <name>codehex</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[4dhumansをgoogle colabで試してみた]]></title>
+        <id>https://zenn.dev/tatsuromurata/articles/9b880fcfb415b2</id>
+        <link href="https://zenn.dev/tatsuromurata/articles/9b880fcfb415b2"/>
+        <updated>2023-06-01T08:41:51.000Z</updated>
+        <summary type="html"><![CDATA[4dhumansとは
+4dhumansは画像や動画から姿勢を含めた人間の3Dモデルを推定することができる4Dモデルです。
+https://shubham-goel.github.io/4dhumans/
+
+ リンク
+Colab
+github
+
+ 準備
+Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。
+
+ 環境構築
+インストール手順です。
+%%capture
+HMR2_ROOT="HMR2"
+! git clone https://github.com/shubham-goel/4D-Humans.git $HM...]]></summary>
+        <author>
+            <name>しば🐕AI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Matpotlibで棒・円グラフ・散布図]]></title>
+        <id>https://zenn.dev/waiwawaiwai/articles/09b64dbd67dfb8</id>
+        <link href="https://zenn.dev/waiwawaiwai/articles/09b64dbd67dfb8"/>
+        <updated>2023-06-01T07:26:54.000Z</updated>
+        <summary type="html"><![CDATA[Matplotlibを動かす２
+こんにちは、わいわわです！
+前回はまずシンプルなグラフをMatplotlibで作成しました。
+https://zenn.dev/waiwawaiwai/articles/d4210fbf37e4d3
+今回は少し発展して、
+・散布図
+・棒グラフ
+・円グラフ
+を作成していきます、どれも実用的！
+
+ 散布図
+plot()の引数としてmarkerオプションで指定できます。
+x値とy値が交わるところ（交点）にマーカーを表示できます。
+
+
+axis()...散布図を作成する際にx軸とy軸のスケールを指定することで、
+データの分布をグラフ中心部に集中させたり、
+逆に...]]></summary>
+        <author>
+            <name>わいわわ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonで全てのキーボード入力を無効化 (keyboardライブラリ)]]></title>
+        <id>https://zenn.dev/dimebag29/articles/9b12d844a5a502</id>
+        <link href="https://zenn.dev/dimebag29/articles/9b12d844a5a502"/>
+        <updated>2023-06-01T07:18:01.000Z</updated>
+        <summary type="html"><![CDATA[まえがき
+検索しても出てこなかったので、地道にひとつずつキーを押して調べました。
+入力されたキー名はkeyboard.read_key()でわかります。
+
+ 環境
+・Windows10 64bit
+・Python 3.7.5
+・keyboard 0.13.5
+
+ コード
+import keyboard
+import time
+
+AllKeySet = {
+    'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+    'A'...]]></summary>
+        <author>
+            <name>dimebag29</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[26進数を使って列番号をExcelの列コードに変換する【C & Python】]]></title>
+        <id>https://zenn.dev/dimebag29/articles/fbd4d70d46a60d</id>
+        <link href="https://zenn.dev/dimebag29/articles/fbd4d70d46a60d"/>
+        <updated>2023-06-01T06:14:36.000Z</updated>
+        <summary type="html"><![CDATA[Excelの列コードのような数え方の名前
+Excelの列コードのようにA~Zまで行ったらAA~AZ, BA~BZ, ZA~ZZその次はAAA~みたいに増えていく数え方は「辞書式配列法」と呼ぶらしいです。
+
+ 考え方
+
+
+ C言語
+以下のサイトで実際に実行できます
+https://paiza.io/projects/firg2mv7z1eQphs3gzIpIA?language=c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+ 
+int main(void)
+{
+    int...]]></summary>
+        <author>
+            <name>dimebag29</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Poetryを辞めてryeを使ってみる]]></title>
+        <id>https://zenn.dev/nahco3/articles/a4a566abb140a9</id>
+        <link href="https://zenn.dev/nahco3/articles/a4a566abb140a9"/>
+        <updated>2023-06-01T05:26:04.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+僕は普段Pythonを書いていて、PythonパッケージマネージャとしてPoetryを使っていました。
+Poetryは普通に便利なんですが、Pythonインタプリタ自体の管理ができないこととたまーに動作が怪しいことが少し不満でした。そんなときにTwitterでryeという新しいPythonパッケージマネージャが出たらしいというのを見かけて使ってみることにしました。結果としてかなり感触が良かったので、今後もryeを使い続けると思います。
+公式リポジトリ: https://github.com/mitsuhiko/rye
+公式ドキュメント: https://rye-up.com...]]></summary>
+        <author>
+            <name>nahco314</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-237｜B - Matrix Transposition]]></title>
+        <id>https://zenn.dev/hyperdb/articles/b687ce5a9cabf5</id>
+        <link href="https://zenn.dev/hyperdb/articles/b687ce5a9cabf5"/>
+        <updated>2023-06-01T04:38:03.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-237 B - Matrix Transposition
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntListRow(N):
+    return [list(map(int, input().split())) for _ in range(N)]
+
+def main():
+    h, w = getIntMap()
+    a = getIntListRow(h)
+
+    for x in range(w):
+        print(' '.j...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-237｜A - Not Overflow]]></title>
+        <id>https://zenn.dev/hyperdb/articles/7813c4b452e247</id>
+        <link href="https://zenn.dev/hyperdb/articles/7813c4b452e247"/>
+        <updated>2023-06-01T04:38:03.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-237 A - Not Overflow
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+def main():
+    n = getInt()
+
+    print('Yes' if -2 ** 31 <= n < 2 ** 31 else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonでゼロ交差数を求める]]></title>
+        <id>https://zenn.dev/sergicalsix/articles/749858bc01d8a0</id>
+        <link href="https://zenn.dev/sergicalsix/articles/749858bc01d8a0"/>
+        <updated>2023-06-01T03:15:52.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+ゼロ交差数は、信号の振幅の正負が何回入れ替わるかを表す値です。
+信号の周波数が大きいデータや雑音が多いデータだと大きくなります。
+
+ ゼロ交差数の求め方
+pythonのfor文は用いずにnumpyで計算します。
+信号データの形式が1次元配列の場合は、以下のように記述すればゼロ交差数を求められます。
+import numpy as np
+
+x = [1,-1,-2,1,2,3,0] 　#信号データ
+x = np.array(x) #numpyの配列へ
+sign_count = np.where(x * np.roll(x, shift=1) < 0, 1, 0)[1:]...]]></summary>
+        <author>
+            <name>sergicalsix</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[GenAI-Tutorial]]></title>
         <id>https://zenn.dev/urakawa_jinsei/articles/b71fe621d9f6b0</id>
@@ -5901,146 +6195,6 @@ protoファイルをコンパイル
 2023年5月現在、NumPyroはデフォルトでガウス過程のためのモジュール/ツールがなくスクラッチで訓練/予測のコードを書く必要があります。tinygpという第三者のライブラリもありますが、予測はサポートしていません。また、MCMCが速いという特徴があるNumPyroでも、ガウス過程回帰は計算が重いです。一方で、ガウス過程回帰を実施する便利なライブラリとしてGPyやGPyTorchが既にあリます。以上の理由から、個人的にはある程度データが多くなった場合、ガウス過程回帰はGPyTorch + Pyroを使用していきたいと思っています。（デー...]]></summary>
         <author>
             <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MediaPipe Pose をローカルのPythonで使う[備忘録]]]></title>
-        <id>https://zenn.dev/nadegata_memo/articles/6e9b569c5be845</id>
-        <link href="https://zenn.dev/nadegata_memo/articles/6e9b569c5be845"/>
-        <updated>2023-05-03T13:29:52.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-MediaPipeを用いたポーズ推定を，ローカルでPythonを用いて行う方法．
-下記ページのコードを使用しています．
-https://github.com/google/mediapipe/blob/master/docs/solutions/pose.md#resources
-私が使用した環境やアプリケーションは以下の通りです．
-・windows
-・コマンドプロンプト
-・python3.10.11
-
- 0.Pythonの保存場所の確認
-
-コマンドプロンプトを起動する．
-
-以下，全てのコードはコマンドプロンプトにて実行します．
- 
-Pythonの保存場所を確認
-
-wher...]]></summary>
-        <author>
-            <name>nadegata</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】地図上に位置情報（緯度・経度）をプロットする方法]]></title>
-        <id>https://zenn.dev/robes/articles/755e7ee27ce308</id>
-        <link href="https://zenn.dev/robes/articles/755e7ee27ce308"/>
-        <updated>2023-05-03T12:13:10.000Z</updated>
-        <summary type="html"><![CDATA[Pythonを使って、緯度・経度の座標情報を地図上にプロットする方法についてご紹介します。
-サンプルのデータとして、githubに公開されている米国の都市データを使いますので、ここに記載のコードをコピペすることで、お手元のPCでも同じものを見ることができます。
-興味を持たれた方は、ぜひ、一緒にやってみてください。
-地図に位置情報をプロットできるライブラリーとして、foliumとPlotlyの2種類あります。
-それぞれについて、ご紹介していきます。
-
- データのダウンロード
-まずは、サンプルデータをダウンロードしましょう。
-import pandas as pd
-df =pd.read_...]]></summary>
-        <author>
-            <name>osn_Lofi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-218｜B - qwerty]]></title>
-        <id>https://zenn.dev/hyperdb/articles/cd0ede289c3b28</id>
-        <link href="https://zenn.dev/hyperdb/articles/cd0ede289c3b28"/>
-        <updated>2023-05-03T03:19:55.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-218 B - qwerty
-
-
-
- 提出結果
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    p = getIntList()
-
-    a = ord('a') - 1
-    s = []
-    for i in p:
-        s.append(chr(a + i))
-    print(''.join(s))
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-218｜A - Weather Forecast]]></title>
-        <id>https://zenn.dev/hyperdb/articles/9d2bc146c7073d</id>
-        <link href="https://zenn.dev/hyperdb/articles/9d2bc146c7073d"/>
-        <updated>2023-05-03T03:19:54.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-218 A - Weather Forecast
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getString():
-    return input()
-
-
-def main():
-    n = getInt()
-    s = list(getString())
-
-    print('Yes' if s[n - 1] == 'o' else 'No')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[WebAppにPython(Flask)を最小構成でVScodeデプロイする]]></title>
-        <id>https://zenn.dev/daphnia/articles/1aa9acfcf14c72</id>
-        <link href="https://zenn.dev/daphnia/articles/1aa9acfcf14c72"/>
-        <updated>2023-05-03T03:04:39.000Z</updated>
-        <summary type="html"><![CDATA[App Service(Webapp)にPython（Flask）を最小構成でVScodeからデプロイします。内容は、ルートページにアクセスした際に、{"status":200}を表示するだけのFlaskとします。App Serviceの構成も基本的にデフォルトで作成します。目的はVSCodeからApp Serviceにデプロイをするということとなります。
-az cliとVScodeはインストールされている前提としています。また、az loginも済みで・・。
-
- App Serviceの構築
-まず、App Serviceを作成します。今回は簡易的にAz CLIを使用してデプロイを実行し...]]></summary>
-        <author>
-            <name>Daphnia</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Djangoで全テーブルのIDの採番状況をチェックする]]></title>
-        <id>https://zenn.dev/yktakaha4/articles/describe_remaining_id_length_in_django</id>
-        <link href="https://zenn.dev/yktakaha4/articles/describe_remaining_id_length_in_django"/>
-        <updated>2023-05-02T14:33:06.000Z</updated>
-        <summary type="html"><![CDATA[小ネタです🍣
-DjangoのModelにデフォルトで存在するidフィールドについて、idをどの程度採番しているか簡単にチェックするためのスクリプトです
-全モデルの全フィールドを走査し、AutoFieldがあったら Model.objects.latest(*fields) を出力します
-https://docs.djangoproject.com/en/4.2/ref/models/querysets/#latest
-本スクリプトはSQLを扱わないため、MySQLでもPostgreSQLでも同様の結果を得ることができるものと思います
-しかしながら、この実装だと最新のidが削除済みの場合に...]]></summary>
-        <author>
-            <name>Yuuki Takahashi</name>
         </author>
     </entry>
 </feed>
