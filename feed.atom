@@ -2,10 +2,284 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-06-08T01:50:18.551Z</updated>
+    <updated>2023-06-09T01:51:17.995Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[GitHub PRをChatGPTにレビューしてもらおう]]></title>
+        <id>https://zenn.dev/kentakozuka/articles/cc59574a5ca5ba</id>
+        <link href="https://zenn.dev/kentakozuka/articles/cc59574a5ca5ba"/>
+        <updated>2023-06-09T01:10:27.000Z</updated>
+        <summary type="html"><![CDATA[tl;dr
+GitHub PRをChatGPTにレビューしてもらうGithub Actionを作ってみました。
+https://github.com/kentakozuka/github-ai-review
+
+ 使用方法
+
+ インストール方法
+
+リポジトリのルートディレクトリに、.github/workflowsディレクトリを作成します。その中に、ワークフローファイル（例: main.yaml）を作成します。中身はこちらを参考（コピペでも）してください。
+リポジトリ設定からActions > New repository secretで OPENAI_API_KEY と PER...]]></summary>
+        <author>
+            <name>Kenta Kozuka</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ラズパイにオムロンの環境センサーを繋いでCosmos DBにセンサーデータをストアする]]></title>
+        <id>https://zenn.dev/kdl_iotblog/articles/9d6697e6e785c6</id>
+        <link href="https://zenn.dev/kdl_iotblog/articles/9d6697e6e785c6"/>
+        <updated>2023-06-09T00:31:01.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+以前の記事にて温度センサーから取得したデータを IoT Hub と Stream Analytics を使って、Cosmos DB にストアする方法を紹介しましたが、今回は温度だけでなく湿度、照度、気圧、騒音、3軸加速度、eTVOC 等も取得可能なオムロンの環境センサー(2JCIE-BU)を新たに購入しましたので、このセンサーを使って様々なデータを取得して、Cosmos DB にストアしたいと思います。
+また、昨年の11月頃に、IoT Hub から Cosmos DB へ直接データを送るカスタムエンドポイントがパブリックプレビューになったと発表がありましたので、今回はこちら...]]></summary>
+        <author>
+            <name>kdl-iotblog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Drupal Key authを用いたコンテンツの登録と多言語対応]]></title>
+        <id>https://zenn.dev/nakamura196/articles/8aa4e4e83f56bd</id>
+        <link href="https://zenn.dev/nakamura196/articles/8aa4e4e83f56bd"/>
+        <updated>2023-06-08T23:09:16.000Z</updated>
+        <summary type="html"><![CDATA[概要
+以下の記事で、Basic認証を使ったPythonによるコンテンツ登録を行いました。
+https://zenn.dev/nakamura196/articles/1cc654fc266d17
+今回は、以下の記事を参考に、API Key Authenticationを試しました。
+https://designkojo.com/post-drupal-using-jsonapi-vuejs-front-end
+
+ API Key Authentication
+以下のモジュールを使用しました。
+https://www.drupal.org/project/key_auth
+ユーザの編集...]]></summary>
+        <author>
+            <name>nakamura196</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Wagtailを試す]]></title>
+        <id>https://zenn.dev/nakamura196/articles/732315a7e6d006</id>
+        <link href="https://zenn.dev/nakamura196/articles/732315a7e6d006"/>
+        <updated>2023-06-08T23:08:43.000Z</updated>
+        <summary type="html"><![CDATA[概要
+Wagtailを試してみましたので、躓いた点などの備忘録です。
+基本的には、以下のチュートリアルを参考に進めました。
+https://docs.wagtail.org/en/v5.0.1/getting_started/tutorial.html
+
+ 検索機能
+「はじめての記事」という日本語のタイトルを持つページを追加した際、以下ではヒットしませんでした。
+http://localhost:8000/admin/pages/search/?q=はじめて
+一方、以下ではヒットしました。日本語の部分一致検索はデフォルトではできないようでした。
+http://localhost:80...]]></summary>
+        <author>
+            <name>nakamura196</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[endoflife.dateとLambdaを使ってSlackに自動でプロダクトのEOLを通知する]]></title>
+        <id>https://zenn.dev/danishi/articles/endoflife-date-notify</id>
+        <link href="https://zenn.dev/danishi/articles/endoflife-date-notify"/>
+        <updated>2023-06-08T12:58:13.000Z</updated>
+        <summary type="html"><![CDATA[やりたいこと
+endoflife.dateにはさまざまなプロダクトのEOL情報がまとめられています。
+また、その情報を取得できるAPIも用意されています。
+普段よく使うプロダクトのEOLが気づいたら間近に迫って大慌てで対応することにならないように、毎日自動チェックを行いその結果をSlack通知できるようにしてみようと思いました。
+
+ 手順
+
+ 事前準備
+通知用のSlackチャンネルとSlack Appを作ってIncoming Webhooks URLを作っておきます。
+
+
+ Lambdaを作成
+以下のコードでPython Lambdaを作ります。
+
+lambda_function.p...]]></summary>
+        <author>
+            <name>danishi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIが世界を救う理由]]></title>
+        <id>https://zenn.dev/raio/articles/34a2cbfabf5cf3</id>
+        <link href="https://zenn.dev/raio/articles/34a2cbfabf5cf3"/>
+        <updated>2023-06-08T11:46:38.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+高校生エンジニアのRaioです🙌
+学生をしながら、放課後や休日はIT企業のエンジニアとしてアルバイトしています。
+https://zenn.dev/raio/articles/2478a66537c685
+
+ 本を出版しました
+【個人開発で稼ごう】 という本をAmazonに出版しました！
+ご興味ある方は、読んでみてください👀
+https://amzn.to/3NjT5AC
+
+ AIの定義とその可能性
+AIは、数学とソフトウェアコードを用いて、人間が知識を理解、合成、生成する方法をコンピュータに教えることです。AIは他の技術と同様に、人間によって所有・制御されています。AIが...]]></summary>
+        <author>
+            <name>Raio14f</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ViCoをgoogle colabで試してみた。]]></title>
+        <id>https://zenn.dev/tatsuromurata/articles/838d9d102b7355</id>
+        <link href="https://zenn.dev/tatsuromurata/articles/838d9d102b7355"/>
+        <updated>2023-06-08T10:31:29.000Z</updated>
+        <summary type="html"><![CDATA[ViCoとは
+ViCoは対象物の画像を高い一貫性を持って画像内に埋め込むことができるtext-to-imageのfinetuned型のdiffusion modelです。DreamBoothとかと同種な感じですね。
+https://github.com/haoosz/ViCo
+
+ リンク
+Colab
+github
+
+ 準備
+Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。
+
+ 環境構築
+インストール手順です。
+!git clone https://github.com/haoosz/ViCo.git
+%cd /...]]></summary>
+        <author>
+            <name>しば🐕AI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pandasを使ってデータの列を取得する　python: pandasの基礎知識]]></title>
+        <id>https://zenn.dev/takasmerio/articles/84175dac2275bd</id>
+        <link href="https://zenn.dev/takasmerio/articles/84175dac2275bd"/>
+        <updated>2023-06-08T05:06:03.000Z</updated>
+        <summary type="html"><![CDATA[データの先頭を取得するには
+データ分析では、生データを眺めてみることが重要です。数行見るだけでおかしなデータに気づくことがあります。今回はデータの先頭を取得する記事を書きます。
+今回は以下のコードを扱います。
+import numpy as np
+import pandas as pd
+
+df = pd.DataFrame(
+    [
+        ["Alice", "国語", 87],
+        ["Alice", "数学", np.nan],
+        ["Bob", "国語", 65],
+        ["Bob", "数学", 92],
+    ],
+  ...]]></summary>
+        <author>
+            <name>akimo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-241｜B - Pasta]]></title>
+        <id>https://zenn.dev/hyperdb/articles/d5ecf4cdb7b236</id>
+        <link href="https://zenn.dev/hyperdb/articles/d5ecf4cdb7b236"/>
+        <updated>2023-06-08T04:06:37.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-241 B - Pasta
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+def getIntList():
+    return list(map(int, input().split()))
+
+def main():
+    n, m = getIntMap()
+    a = getIntList()
+    b = getIntList()
+
+    c = {}
+    for x in a:
+        if not x in c:
+            c.s...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-241｜A - Digit Machine]]></title>
+        <id>https://zenn.dev/hyperdb/articles/8fb4920b86cc6f</id>
+        <link href="https://zenn.dev/hyperdb/articles/8fb4920b86cc6f"/>
+        <updated>2023-06-08T04:06:37.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-241 A - Digit Machine
+
+
+
+ 提出結果
+def getIntList():
+    return list(map(int, input().split()))
+
+def main():
+    a = getIntList()
+
+    n = 0
+    for i in range(3):
+        n = a[n]
+    print(n)
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】venv仮想環境管理とバージョン確認]]></title>
+        <id>https://zenn.dev/yoshida12/articles/68ef5241b5a425</id>
+        <link href="https://zenn.dev/yoshida12/articles/68ef5241b5a425"/>
+        <updated>2023-06-08T03:16:50.000Z</updated>
+        <summary type="html"><![CDATA[Pythonバージョン確認
+Linux
+python系
+
+コマンド
+python --version
+Python 2.7.10
+
+python3系
+
+コマンド
+python3 --version
+Python 3.6.8
+
+
+ venv 仮想環境管理
+venvを使うと pip によるパッケージの導入状態をプロジェクトごとに独立させることができる
+venvはPython3.3から標準機能として取り込まれたもの。最も手軽に仮想環境を管理する方法の一つと言える。スクリプトがなぜか動作しない時に仮想環境で動作確認し原因を探す事にも使える。
+新しい仮想環境の作成
+
+コマンド
+cd [proj...]]></summary>
+        <author>
+            <name>yoshida</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[データの概要を確認する python: pandasの基礎知識]]></title>
+        <id>https://zenn.dev/takasmerio/articles/41999ae554f052</id>
+        <link href="https://zenn.dev/takasmerio/articles/41999ae554f052"/>
+        <updated>2023-06-08T01:52:00.000Z</updated>
+        <summary type="html"><![CDATA[データの概要を確認するには
+データ分析では、対象となるデータの概要を調べ、傾向や外れ値などを確認することが重要です。本記事では、DataFrameの統計量を確認する簡単な方法を紹介します。
+以下のコードを扱ってみます。
+import numpy as np
+import pandas as pd
+
+df = pd.DataFrame(
+    [
+        ["Alice", "国語", 87],
+        ["Alice", "数学", np.nan],
+        ["Bob", "国語", 65],
+        ["Bob", "数学", 92],
+    ...]]></summary>
+        <author>
+            <name>akimo</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[この記事で解決！ python: pandasの基本]]></title>
         <id>https://zenn.dev/takasmerio/articles/6a1c550ab860be</id>
@@ -5776,270 +6050,6 @@ Matplotlibの使い方
 ...]]></summary>
         <author>
             <name>Joel Lee</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[TIL]【新】ライブラリ「pandas」基礎（表計算）]]></title>
-        <id>https://zenn.dev/joel/articles/339736cf136996</id>
-        <link href="https://zenn.dev/joel/articles/339736cf136996"/>
-        <updated>2023-05-10T13:27:02.000Z</updated>
-        <summary type="html"><![CDATA[本記事はAidemyの【新】ライブラリ「pandas」基礎（表計算）の講義ノートです。
-
-
-[!abstract]+ Curriculum
-
-pandas とは
-pandas の操作方法
-複数の DataFrame の利用
-
-
-添削問題
-
-
-
-
- Pandas とは
-テーブルデータを扱うことに特化したライブラリ。
-
-
-
- Pandas 操作
-
- データの読み書き
-#pd/リード #pd/セーブ
-
-pd.read_csv() : sep, header, names, encodinng
-pd.read_excel() : 'Sheet1'.
-.to_csv(˶´꒳˵), .to_exce...]]></summary>
-        <author>
-            <name>Joel Lee</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[吹奏楽の楽譜から、ピアノ連弾用の楽譜を作る話]]></title>
-        <id>https://zenn.dev/kthrlab_blog/articles/cbde0ff0aa6e7f</id>
-        <link href="https://zenn.dev/kthrlab_blog/articles/cbde0ff0aa6e7f"/>
-        <updated>2023-05-10T07:26:45.000Z</updated>
-        <summary type="html"><![CDATA[研究紹介
-吹奏楽やオーケストラなどの多人数演奏用の楽譜から、ピアノ連弾用の楽譜を生成するプログラムを紹介します。当研究室卒業生の島村さんが研究開発しました。
-
-合奏はオーケストラや吹奏楽など多人数で演奏するため、和音などの魅力がある一方で、演奏者や楽器、場所の確保など課題があり、気軽に楽しむことができません。一方、ピアノソロは一人で演奏できるため手軽ですが、演奏の厚みに限界があり、合奏の楽しみを味わうことができません。
-合奏とピアノソロの中間的な演奏形態の一つに「ピアノ連弾」があります。2人の演奏者と1台のピアノがあれば演奏が可能であり、合奏の楽しみを味わいつつも手軽に演奏ができます...]]></summary>
-        <author>
-            <name>Junko Fujii</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-221｜B - typo]]></title>
-        <id>https://zenn.dev/hyperdb/articles/f70c0091460393</id>
-        <link href="https://zenn.dev/hyperdb/articles/f70c0091460393"/>
-        <updated>2023-05-10T05:47:27.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-221 B - typo
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s = list(getString())
-    t = list(getString())
-    x = []
-    y = []
-
-    for i in range(len(s) - 1):
-        if s[i] != t[i]:
-            x.append(s[i])
-            x.append(s[i + 1])
-            y.append(...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-221｜A - Seismic magnitude scales]]></title>
-        <id>https://zenn.dev/hyperdb/articles/da8e0ad4e6c188</id>
-        <link href="https://zenn.dev/hyperdb/articles/da8e0ad4e6c188"/>
-        <updated>2023-05-10T05:47:27.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-221 A - Seismic magnitude scales
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b = getIntMap()
-
-    print(32 ** (a - b))
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[シンボリック回帰向けPySRのインストール]]></title>
-        <id>https://zenn.dev/gkchop/articles/9fc05fd286d124</id>
-        <link href="https://zenn.dev/gkchop/articles/9fc05fd286d124"/>
-        <updated>2023-05-10T05:28:28.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-データサイエンスにおいてしばしばデータの裏側で起こっている事象の解釈性が求められることがあります。ドメインの原理原則に則った数式をデータから推測することができたらドメインの理解や新たな知見を得ることに役立つだけでなく、原理原則という汎用性をモデル化できている可能性があるため外挿予測性の向上も期待できます。
-この記事ではJuliaをバックエンドとしたPythonライブラリPySRをインストールするための手順を示します。
-
-元論文
-Github
-
-
- 環境
-
-Ubuntu 20.04.1
-Python 3.9.15
-pysr 0.12.3
-
-
- 手順
-
- Juliaのインストー...]]></summary>
-        <author>
-            <name>TangeDanpei</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Dockerを使ってStreamlitのwebアプリを動かそう]]></title>
-        <id>https://zenn.dev/kthrlab_blog/articles/2250b74ec16206</id>
-        <link href="https://zenn.dev/kthrlab_blog/articles/2250b74ec16206"/>
-        <updated>2023-05-10T05:19:47.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事では、Streamlitで作成したwebアプリをDockerでコンテナを立てて動かすことを目標とします。
-尚、この記事は身内向けのチュートリアルなので若干いい加減に書いていますが、ご容赦ください。
-
- Dockerとは
-
-Dockerは、コンテナ仮想化という技術を用いてアプリを開発・実行することが出来るプラットフォームです。開発したアプリをDockerを使ってコンテナ化すれば、別の環境でも同じように動作させることができます。
-Dockerは2013年にDocker社から登場し、今ではVirtualBoxなどの仮想マシンなどに取って変わる仮想環境として世界中で利用され...]]></summary>
-        <author>
-            <name>Justin Wulf</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[TIL] Python基礎]]></title>
-        <id>https://zenn.dev/joel/articles/b742c79462b6bc</id>
-        <link href="https://zenn.dev/joel/articles/b742c79462b6bc"/>
-        <updated>2023-05-09T15:00:50.000Z</updated>
-        <summary type="html"><![CDATA[[!Important]+ Goals
-
-複数の値を持つタイプ、関数、クラスについて理解する。
-効果的なコードが記述できる
-
-
-
-[!abstract]+ Curriculum
-
-はじめに
-複数の値を持つタイプ
-リストタイプ
-辞書タイプ
-for 文によるループ処理
-for 文
-for 文の応用例
-関数
-関数とは
-関数を作って理解しよう (独自関数) > 3.
-内蔵関数
-クラス
-1.クラス
-2.クラスを作って理解しよう
-よく使うメソッド
-ライブラリ
-添削問題
-
-
-
-
- はじめに
-
- 複数の値を持つタイプ
-
- リストタイプ
-
-del list[index] : 要素の削除
-list....]]></summary>
-        <author>
-            <name>Joel Lee</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[TIL] ライブラリ「NumPy」基礎（数値計算）]]></title>
-        <id>https://zenn.dev/joel/articles/5ee50809a18ed5</id>
-        <link href="https://zenn.dev/joel/articles/5ee50809a18ed5"/>
-        <updated>2023-05-09T14:47:51.000Z</updated>
-        <summary type="html"><![CDATA[[!abstract]+ Curriculum
-
-NumPyとは
-データ操作
-NumPyとメモリ
-Numpyによる統計解析
-今後の学習の進め方
-添削問題
-
-
-
-
- NumPyとは
-
-NumPy配列と四則演算
-
-ブロードキャスト：演算前にNumPy配列の shape を合わせること。
-
-
-データの読み込み : delimiter, skiprows, usecols
-
-import numpy as np
-
-arr_1 = np.loadtxt("./4002_new_numpy/csv_example.csv",
-				   delimiter=",", # 区切り文字をカンマに指定...]]></summary>
-        <author>
-            <name>Joel Lee</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのライブラリで「お気に入りのショートカットキー作ってみる」]]></title>
-        <id>https://zenn.dev/timoneko/articles/7612a5972297b1</id>
-        <link href="https://zenn.dev/timoneko/articles/7612a5972297b1"/>
-        <updated>2023-05-09T14:17:35.000Z</updated>
-        <summary type="html"><![CDATA[下記のライブラリを利用してみます。
-https://github.com/boppreh/keyboard
-pip install keyboard
-
- キーボードの押した内容を記録する。
-
-escapeを押すまで記録する。
-import keyboard
-
-record_list = keyboard.record(until='escape')
-
-for i in record_list:
-    print(i)
-
-
-実行結果
-KeyboardEvent(w down)
-KeyboardEvent(w up)
-KeyboardEvent(e down)
-KeyboardEvent(...]]></summary>
-        <author>
-            <name>timoneko</name>
         </author>
     </entry>
 </feed>
