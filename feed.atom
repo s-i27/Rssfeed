@@ -2,10 +2,315 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-06-13T01:43:44.126Z</updated>
+    <updated>2023-06-14T01:42:10.467Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[パスを扱う時はpathlibモジュールを使おう  ~os.pathからの脱却~]]></title>
+        <id>https://zenn.dev/giba/articles/28c66c0d8a0ad1</id>
+        <link href="https://zenn.dev/giba/articles/28c66c0d8a0ad1"/>
+        <updated>2023-06-13T23:50:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+最近先輩から、「パスを扱う時はos.pathじゃなく、pathlibを使え」とのご指導がありました。何で？と思ったのでpathlibについてしっかり調べてみました。
+
+ pathlibとは
+pathlibはPython 3.4以降で利用可能な標準ライブラリで、ファイルシステムのパスをオブジェクト指向の形式で操作するためのモジュールです。
+
+ pathlibのメリット
+osとos.pathモジュールと比較して、以下のようなメリットがあります。
+
+
+オブジェクト指向: pathlibはパスをオブジェクトとして扱うため、メソッドチェインや属性アクセスが容易です。これに対して、os...]]></summary>
+        <author>
+            <name>GIBA</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[OpenPyXLなしでPythonでExcelファイルをいじり倒す（セル編集編）]]></title>
+        <id>https://zenn.dev/hodakam/articles/f79a2686e2d5ce</id>
+        <link href="https://zenn.dev/hodakam/articles/f79a2686e2d5ce"/>
+        <updated>2023-06-13T13:00:07.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事の続きです。
+今回は、3のセルへの値追加です。
+
+
+既存の excel ファイルをテキストボックスや罫線などを破壊せずに読み込む
+読み込んだシートに新しいシートを追加できる
+シート上のセルに値を追加できる
+読み込んだシートにテキストボックスなどの新しい要素を追加できる
+Linux 上で動作する
+
+
+
+ 解決方法：セルに値を追加するメソッド
+前回のWorkbookクラスに以下のメソッドを追加すればOKです。
+    def add_cellvalue(self, sheet_name, row, col, value):
+        # add new share...]]></summary>
+        <author>
+            <name>hodakam</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[主成分分析について]]></title>
+        <id>https://zenn.dev/satsuk/articles/cbc982d2f65967</id>
+        <link href="https://zenn.dev/satsuk/articles/cbc982d2f65967"/>
+        <updated>2023-06-13T09:42:10.000Z</updated>
+        <summary type="html"><![CDATA[次元削減とは
+次元削減とは多次元のデータを要約することにより次元数を減らすことです。
+次元削減をすることによるメリットは主に以下の2点です。
+・計算資源の節約
+・データの可視化ができるようになる場合がある
+例えば、身長、体重、ベンチプレス、デッドリフト、スクワットの記録のデータを与えられたとします。（ベンチプレス、デットリフト、スクワットはウエイトトレーニングの種目）
+このままこのデータを扱うと、5次元のデータになってしまうので可視化できません。そこで、身長と体重を合わせて体格として、ベンチプレス、デッドリフト、スクワットの記録をまとめてBIG3（一般的に単純に３種目の記録を合算した...]]></summary>
+        <author>
+            <name>sat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonのEDAツールについてのまとめ]]></title>
+        <id>https://zenn.dev/satsuk/articles/00b4615425af6e</id>
+        <link href="https://zenn.dev/satsuk/articles/00b4615425af6e"/>
+        <updated>2023-06-13T09:36:55.000Z</updated>
+        <summary type="html"><![CDATA[EDAとは
+探索的データ分析（Explanatory Data Analysis）とは、データサイエンティストがデータに対する理解を深めるために用いる手法です。主にデータの可視化を通して各種統計量や欠損値、外れ値などを見つけます。
+今回はEDAに関するツールで便利なものがあったのでまとめます。
+
+ pandas-profiling
+今回はkaggleのtitanicのデータを使います。
+インストールに関してはこちらを参照
+import pandas as pd
+import pandas_profiling as pp
+train_df = pd.read_csv('train.cs...]]></summary>
+        <author>
+            <name>sat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[多腕バンディット問題を試す(ジャグラーに挑む)]]></title>
+        <id>https://zenn.dev/voicy/articles/15cbbc1e1a16d4</id>
+        <link href="https://zenn.dev/voicy/articles/15cbbc1e1a16d4"/>
+        <updated>2023-06-13T09:28:13.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Voicyでデータチームに所属しているいしけんです。
+業務では放送のレコメンドなどに注力しています。
+自身の勉強を目的に多腕バンディット問題について学習をおこなったので、そのアウトプットができればと思い記事を執筆しています。
+基本的にはありきたりな内容になるかと思いますが、読んでいただけると嬉しいです！！
+
+ 多腕バンディットってなんぞ？？
+多腕バンディット問題についての説明の前に、次のような状況を考えてみます。
+
+あるカジノに3台のスロットマシンが置いてあります。
+各マシンはあたり/ハズレのどちらかを出力する。
+あたる確率はマシンごとによって異なる。
+これらのマシンを10...]]></summary>
+        <author>
+            <name>kenta</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonで可視化するデータのばらつきの指標]]></title>
+        <id>https://zenn.dev/satsuk/articles/1a6fabc5b84926</id>
+        <link href="https://zenn.dev/satsuk/articles/1a6fabc5b84926"/>
+        <updated>2023-06-13T09:27:56.000Z</updated>
+        <summary type="html"><![CDATA[データのばらつきを表す指標について
+データを分析する中で、データがどのくらいばらついているのかを調査する機会がありました。その際に、ばらつきの指標がたくさんありどれが適切な指標なのか分からず調べたので備忘録として以下に記録します。
+
+ 標準偏差(Standard Deviation):
+データが平均値からどれだけ散らばっているかを表す統計指標で、データのばらつきの尺度としてよく使われます。各データ点と平均値との差（偏差）を二乗して平均したもの（分散）の平方根です。数式は以下の通りです。
+
+Standard Deviation = sqrt(Σ(x_i - μ)^2 / N)
+
+ここで...]]></summary>
+        <author>
+            <name>sat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonでPostgreSQLとやりとりする]]></title>
+        <id>https://zenn.dev/collabostyle/articles/36e822520182d3</id>
+        <link href="https://zenn.dev/collabostyle/articles/36e822520182d3"/>
+        <updated>2023-06-13T09:24:36.000Z</updated>
+        <summary type="html"><![CDATA[PythonでPostgreSQLデータベースに接続してデータのやりとりをするには、psycopg2ライブラリがよく使われているようです。
+簡単に使い方を説明していきます。
+
+ ライブラリのインストール
+まずは、このライブラリを利用するために、pipでインストールしましょう！
+pip install psycopg2
+ただし、この方法ではpsycopg2そのもののビルドが必要です。
+psycopg2そのものはlibpqのラッパーとして、C言語で実装されています。つまり、ビルドにはCのコンパイラなどが必要になります。
+それら依存関係なく利用するには次のようにインストールします。
+pip i...]]></summary>
+        <author>
+            <name>なるお</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VLPartをgoogle colabで試してみた]]></title>
+        <id>https://zenn.dev/tatsuromurata/articles/3181ff41694ad6</id>
+        <link href="https://zenn.dev/tatsuromurata/articles/3181ff41694ad6"/>
+        <updated>2023-06-13T09:17:36.000Z</updated>
+        <summary type="html"><![CDATA[VLPartとは
+VLPartとはMetaAIから出された新しいsemantic segmentationのアルゴリズムです。
+https://github.com/facebookresearch/VLPart
+Semantic Segmentation Anythingでも同じことやっていましたが、それよりも精度高いことが小メモリでできてしまうという衝撃。。
+
+ リンク
+Colab
+github
+
+ 準備
+Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。
+
+ 環境構築
+インストール手順です。
+!git cl...]]></summary>
+        <author>
+            <name>しば🐕AI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonで可視化する推定量]]></title>
+        <id>https://zenn.dev/satsuk/articles/c6432b801378cd</id>
+        <link href="https://zenn.dev/satsuk/articles/c6432b801378cd"/>
+        <updated>2023-06-13T08:26:16.000Z</updated>
+        <summary type="html"><![CDATA[最小二乗推定
+通常の最小二乗推定（OLSE）は、線形回帰において、残差の二乗和を最小化する回帰線のパラメータを推定するための方法です。
+従属変数Yと独立変数Xを持つ単純な線形回帰モデルを考えてみましょう。YとXの関係を見つけたいとします。ノイズがない完全な世界では、YはXの3倍かもしれません。しかし、現実には常にノイズや誤差項が存在します。したがって、観測されるYは3Xにランダムなノイズを加えたものです。
+この関係を推定するためにOLSEを使用することができます。Pythonでは、ランダムなX値を生成し、真のY値（3X）を計算し、ランダムなノイズを加えて観測されるY値を得ることができ...]]></summary>
+        <author>
+            <name>sat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】ModbusTCP通信環境を構築する]]></title>
+        <id>https://zenn.dev/aew2sbee/articles/python-pymodbustcp</id>
+        <link href="https://zenn.dev/aew2sbee/articles/python-pymodbustcp"/>
+        <updated>2023-06-13T07:22:11.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+PythonプロジェクトでModbusTCP通信環境が必要であり、
+実現した経験があります。
+その時にpyModbusTCPライブラリーに関する情報が少なく、大変でした。
+今回実装方法を紹介して、今後の誰かの開発の役に立てば良いなと思います。
+
+ 対象読者
+
+Pythonの基本文法を理解している方
+pyModbusTCPでModbusTCP通信環境を構築したい方
+サーバー/クライアント等の単語を理解している方
+
+
+ この記事でわかること
+
+pyModbusTCPの基本的な使い方
+
+
+ 前提条件
+
+Python 3.9.10
+pyModbusTCP 0.2.0
+
+
+ 手順解説...]]></summary>
+        <author>
+            <name>ふるた なおき🥝</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-243｜B - Hit and Blow]]></title>
+        <id>https://zenn.dev/hyperdb/articles/d37328d0c5ca4d</id>
+        <link href="https://zenn.dev/hyperdb/articles/d37328d0c5ca4d"/>
+        <updated>2023-06-13T04:57:16.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-243 B - Hit and Blow
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+def getIntList():
+    return list(map(int, input().split()))
+
+def main():
+    n = getInt()
+    a = getIntList()
+    b = getIntList()
+
+    c1 = len([a[i] for i in range(len(a)) if a[i] == b[i]])
+    c2 = len([a[i] f...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-243｜A - Shampoo]]></title>
+        <id>https://zenn.dev/hyperdb/articles/6eaf4ac9c2401c</id>
+        <link href="https://zenn.dev/hyperdb/articles/6eaf4ac9c2401c"/>
+        <updated>2023-06-13T04:57:15.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-243 A - Shampoo
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+def main():
+    v, a, b, c = getIntMap()
+
+    v %= (a + b + c)
+
+    print('F' if a > v else 'M' if a + b > v else 'T')
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】APIで郵便番号から住所を取得する方法]]></title>
+        <id>https://zenn.dev/aew2sbee/articles/python-zipcode</id>
+        <link href="https://zenn.dev/aew2sbee/articles/python-zipcode"/>
+        <updated>2023-06-13T01:51:09.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+先日、APIで郵便番号から住所を取得する方法を学習しました。
+より自分の理解が深めるために執筆します。
+また、ユーザー登録の住所登録の処理等で使えると思います。
+
+ 対象読者
+
+APIで郵便番号から住所を取得する方法が分からない方
+
+
+ この記事でわかること
+
+APIで郵便番号から住所を取得する方法が分かる
+
+
+ 前提条件
+
+Python 3.9.10
+requests 2.28.2
+
+
+ 手順解説
+
+ 1. requestsライブラリーをインストールする
+下記コマンドでインストールする
+pip install requests
+
+ 2. requestsライブラリーを確認...]]></summary>
+        <author>
+            <name>ふるた なおき🥝</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[暗号化ライブラリを使ってみる]]></title>
         <id>https://zenn.dev/shinji0000/articles/de43c8d287ecb0</id>
@@ -5698,105 +6003,6 @@ def main():
     bucket = client.bucket("[bucke...]]></summary>
         <author>
             <name>きくち</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C++でアルゴ (幅優先探索 キューorデキューを使って) 迷路の最短路を解く]]></title>
-        <id>https://zenn.dev/noneprogrammer/articles/f163941f4ecdd3</id>
-        <link href="https://zenn.dev/noneprogrammer/articles/f163941f4ecdd3"/>
-        <updated>2023-05-15T07:06:25.000Z</updated>
-        <summary type="html"><![CDATA[C++でアルゴ (幅優先探索 キューorデキューを使って) 迷路の最短路を解く
-(S-->Gへの最短経路を探して移動回数を返す)
-#include <iostream>
-#include <vector>
-#include <queue>
-#include <iomanip>
-#include <string>
-
-using namespace std;
-
-void printMaze(const vector<vector<string>>& maze) {
-    /*地図を表示する...]]></summary>
-        <author>
-            <name>none_programmer</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Xbyakライクなx64用静的ASM生成ツールs_xbyak]]></title>
-        <id>https://zenn.dev/herumi/articles/s_xbyak-assembler-1</id>
-        <link href="https://zenn.dev/herumi/articles/s_xbyak-assembler-1"/>
-        <updated>2023-05-15T05:40:30.000Z</updated>
-        <summary type="html"><![CDATA[初めに
-これはx64用JITアセンブラXbyakに慣れてしまい、JITでなく静的なアセンブリ言語（以下ASM）もXbyakライクに書きたいという人（つまり私）がPython上で似た開発体験を求めて作ったツールです。
-s_xbyakの"s_"は静的(static)からつけました。
-
- s_xbyakの特徴
-
-Pythonで作られたASMコードジェネレータ
-gas (GNU Assembler), Netwide Assembler (NASM), Microsoft Macro Assemblerに対応
-Win64 ABIとAMD64 (Linux)に（一部）対応
-XbyakライクなD...]]></summary>
-        <author>
-            <name>herumi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-224｜A - Tires]]></title>
-        <id>https://zenn.dev/hyperdb/articles/e3722c9af92207</id>
-        <link href="https://zenn.dev/hyperdb/articles/e3722c9af92207"/>
-        <updated>2023-05-15T04:20:04.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-224 A - Tires
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s = getString()
-
-    print('er' if s.endswith('er') else 'ist')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-224｜B - Mongeness]]></title>
-        <id>https://zenn.dev/hyperdb/articles/7c8269e598d801</id>
-        <link href="https://zenn.dev/hyperdb/articles/7c8269e598d801"/>
-        <updated>2023-05-15T04:20:03.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-224 B - Mongeness
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def main():
-    h, w = getIntMap()
-    a = getIntListRow(h)
-
-    f = True
-    for y in range(h - 1):
-        for ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
         </author>
     </entry>
 </feed>
