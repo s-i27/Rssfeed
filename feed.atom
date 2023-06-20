@@ -2,10 +2,335 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-06-19T01:42:42.383Z</updated>
+    <updated>2023-06-20T01:37:38.914Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[ネストを深くしないための工夫 ~綺麗なコードを書くために~]]></title>
+        <id>https://zenn.dev/giba/articles/253c153dc86628</id>
+        <link href="https://zenn.dev/giba/articles/253c153dc86628"/>
+        <updated>2023-06-20T01:05:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Pythonにおいて、ネストが深くなるとコードが読みづらくなり、またバグが生じやすくなる可能性もあります(forやif文を多用するとすぐに深くなってしまう)。以下にネストを深くしないための工夫点を纏めてみました。
+
+ ネストを深くしないためにすること
+早期リターン
+関数内で条件によって処理を分岐する場合、if文のネストが深くなることがあります。このような場合には、条件を満たさないときにすぐにリターンする「早期リターン」を用いると、ネストを浅く保つことができます。
+例えば次のようなコード：
+def do_something(x):
+    if x > 0:
+     ...]]></summary>
+        <author>
+            <name>GIBA</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pytesseract(OCR)で不要なスクリーンショットを判別した]]></title>
+        <id>https://zenn.dev/shimo_s3/articles/417175e0644251</id>
+        <link href="https://zenn.dev/shimo_s3/articles/417175e0644251"/>
+        <updated>2023-06-19T22:13:03.000Z</updated>
+        <summary type="html"><![CDATA[macOS Venrura 13.3
+Python3.9
+tesseract　5.3.1
+pytesseract　0.3.10
+!
+OCR = Optical character recognition:光学的文字認識
+
+
+ やりたいこと
+以前、MacでWeb画面のスクリーンショットを自動で撮り続けたいという記事を書きました。順調にスクショを取り続けています。ただ、データが1日で1.5GBくらい増えてしまうので整理したいです。また、失敗している画像がけっこうあります。
+
+毎分取得していて、3ヶ月分くらいある。1日1440ファイルx90日くらい
+明らかに意図外の画面を別フォルダ移動させる(...]]></summary>
+        <author>
+            <name>shimo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[bagit-pythonを試す]]></title>
+        <id>https://zenn.dev/nakamura196/articles/ae211a6b33ef9a</id>
+        <link href="https://zenn.dev/nakamura196/articles/ae211a6b33ef9a"/>
+        <updated>2023-06-19T22:12:40.000Z</updated>
+        <summary type="html"><![CDATA[bagitは以下のように説明されています。
+
+bagit is a Python library and command line utility for working with BagIt style packages.
+
+本ライブラリを試すGoogle Colabのノートブックを作成しました。
+https://colab.research.google.com/github/nakamura196/ndl_ocr/blob/main/bagit_python.ipynb
+bagitの利用にあたり、参考になりましたら幸いです。]]></summary>
+        <author>
+            <name>nakamura196</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python Lambda Function]]></title>
+        <id>https://zenn.dev/dshekhar17/articles/06821f3006ae4a</id>
+        <link href="https://zenn.dev/dshekhar17/articles/06821f3006ae4a"/>
+        <updated>2023-06-19T15:42:16.000Z</updated>
+        <summary type="html"><![CDATA[In Python, developers use lambda functions as anonymous, inline functions that can be defined and called on the fly without needing a separate function. Programmers commonly use lambda functions to pass functions as arguments to higher-order functions or to define simple, one-time-use functions.
+...]]></summary>
+        <author>
+            <name>Divyanshu Shekhar</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python Classmethod]]></title>
+        <id>https://zenn.dev/dshekhar17/articles/e9631736ff0bbd</id>
+        <link href="https://zenn.dev/dshekhar17/articles/e9631736ff0bbd"/>
+        <updated>2023-06-19T15:30:57.000Z</updated>
+        <summary type="html"><![CDATA[Python’s classmethod is a special type of method that is bound to the class rather than an instance of the class. This means that you can call a classmethod on the class itself, rather than on an instance of the class. In this guide, we will explore the ins and outs of Python classmethod, includi...]]></summary>
+        <author>
+            <name>Divyanshu Shekhar</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WSL+VenvでPythonコードをWindows側から自動実行するメモ]]></title>
+        <id>https://zenn.dev/ryo_tan/articles/6edb0ba5064325</id>
+        <link href="https://zenn.dev/ryo_tan/articles/6edb0ba5064325"/>
+        <updated>2023-06-19T15:29:19.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+WSL状ので作ったPythonコードをVenvを使ってWindows上で定期的に実行するためのメモを書いたのでおいておきます
+今回は例としてipynbでやる(.pyでやる場合もほぼ同じ)
+
+ 環境
+必要か分からんが一応記載
+
+Windows10
+WSL2 (Ubuntu 20.04 LTS)
+Python3.10.11(venv)
+
+
+ 1. 動かしたいコードを作る
+# /home/username/my_script.ipynb
+print("Hello, World!")
+
+ 2. Cronジョブの設定(WSL側)
+地味に自分はここでハマった
+
+Terminalでcro...]]></summary>
+        <author>
+            <name>ryosan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python Enumerate]]></title>
+        <id>https://zenn.dev/dshekhar17/articles/44387c89fa9928</id>
+        <link href="https://zenn.dev/dshekhar17/articles/44387c89fa9928"/>
+        <updated>2023-06-19T15:00:49.000Z</updated>
+        <summary type="html"><![CDATA[Are you tired of writing complex loops in Python just to access both the index and value of each element? Say goodbye to manual indexing and welcome Python Enumerate! In this blog, we’ll show you how Enumerate simplifies iterations, improves code readability, and pairs each element with its index...]]></summary>
+        <author>
+            <name>Divyanshu Shekhar</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TeXでソースコードを"Zennっぽく"貼り付ける.]]></title>
+        <id>https://zenn.dev/cyber_hacnosuke/articles/41275710b8f594</id>
+        <link href="https://zenn.dev/cyber_hacnosuke/articles/41275710b8f594"/>
+        <updated>2023-06-19T14:17:29.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+みなさん.\TeXしてますか？
+\TeXしてるよってかた,\TeXにソースコードは載せたことがありますでしょうか.
+ソースコードを載せる際によく使われるlstlistingですが,そのままだと殺風景ですし,色も見にくかったり今の時代にそぐわない形になってます.また,シンタックスハイライトが意図したとおりについてくれない場合もあります.
+そこでソースコードを"Zenn"っぽく貼り付けて見ようと思います.
+こちらを元にして書かせていただきました.非常にお世話になりました.ありがとうございます.
+https://zenn.dev/kyaon/articles/68867e2657...]]></summary>
+        <author>
+            <name>博ノ助</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NCBIのAPI経由でPubMedから症例報告を取得する]]></title>
+        <id>https://zenn.dev/hagino3000/articles/d73434868409fd</id>
+        <link href="https://zenn.dev/hagino3000/articles/d73434868409fd"/>
+        <updated>2023-06-19T13:50:59.000Z</updated>
+        <summary type="html"><![CDATA[Entrez Programming Utilitiesについて。
+PubMedのフィルタ条件指定の方法などが公式ドキュメントに書いてなかったので。
+https://www.ncbi.nlm.nih.gov/books/NBK25500/
+なんらかの病名を指定してcase reportを取得する場面を想定します。
+
+ API Keyの取得 (Optional)
+アカウント作成後のページ で。
+何度も叩かないのであれば無くて良い。
+
+ PubMed IDの取得
+こんな感じのコードを書いて ESearch API を叩く。自分はPythonにしたけどHTTPがしゃべれてXMLがパースできれば...]]></summary>
+        <author>
+            <name>Takashi Nishibayashi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Matting Anythingをgoogle colabで試してみた]]></title>
+        <id>https://zenn.dev/tatsuromurata/articles/bae41111fbcfee</id>
+        <link href="https://zenn.dev/tatsuromurata/articles/bae41111fbcfee"/>
+        <updated>2023-06-19T10:40:06.000Z</updated>
+        <summary type="html"><![CDATA[Matting Anythingとは
+Matting AnythingとはSegmentationとInpaintingを両立させたAnything modelです。
+https://github.com/SHI-Labs/Matting-Anything
+
+ リンク
+Colab
+github
+
+ 準備
+Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。
+
+ 環境構築
+インストール手順です。
+!git clone https://github.com/SHI-Labs/Matting-Anything
+%cd M...]]></summary>
+        <author>
+            <name>しば🐕AI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】ルンゲクッタ法で化学反応の速度論シミュレーション]]></title>
+        <id>https://zenn.dev/unyanyamine/articles/c4965b672a2ddb</id>
+        <link href="https://zenn.dev/unyanyamine/articles/c4965b672a2ddb"/>
+        <updated>2023-06-19T10:24:53.000Z</updated>
+        <summary type="html"><![CDATA[ルンゲ＝クッタ法
+ルンゲ＝クッタ法（4th order runge kutta method）は微分方程式を数値的に解く手法の一つで、そのプログラムの実装の容易さから時間発展追跡の簡便法として知られています。特に4次のルンゲ＝クッタ法（RK4法）は計算コストと計算精度の兼ね合いから広く用いられています。RK4法は時刻 t の関数 x = x(t) の常微分方程式
+\dfrac{dx}{dt}=f(x,t) \tag{1}
+について、以下の式を用いて時間 \Delta t だけ進んだときの方程式(1)の解 x=x(t+\Delta t) を求めます。
+x_{n+1}=x_n+\frac...]]></summary>
+        <author>
+            <name>unyanyamine</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[conoha VPSでDjangoをデプロイする]]></title>
+        <id>https://zenn.dev/ytksato/articles/6d795458cc9f69</id>
+        <link href="https://zenn.dev/ytksato/articles/6d795458cc9f69"/>
+        <updated>2023-06-19T09:26:02.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+このセクションは全てインストールした後に書いています。
+結果的には以下のバージョンになりました。
+以降に登場するアプリのバージョンは全て下記を参照してください。
+Ubuntu 22.04.2 LTS
+nginx version: nginx/1.18.0 (Ubuntu)
+gunicorn (version 20.1.0)
+Python 3.10.6
+django 4.2.1
+以下の構成になるように進めていく
+[Client]
+　　　　　　　　　↓　(HTTPS/HTTP)
+[Nginx]
+　　　　　　　　　↓　(HTTP)
+[Gunicorn]
+　　　　　　　　　↓　(W...]]></summary>
+        <author>
+            <name>Yutaka Sato</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-247｜A - Move Right]]></title>
+        <id>https://zenn.dev/hyperdb/articles/acdfbcab16029a</id>
+        <link href="https://zenn.dev/hyperdb/articles/acdfbcab16029a"/>
+        <updated>2023-06-19T04:30:22.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-247 A - Move Right
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = getString()
+
+    print(('0' + s)[0:4])
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-247｜B - Unique Nicknames]]></title>
+        <id>https://zenn.dev/hyperdb/articles/4fa1fe673729e7</id>
+        <link href="https://zenn.dev/hyperdb/articles/4fa1fe673729e7"/>
+        <updated>2023-06-19T04:30:22.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-247 B - Unique Nicknames
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getStringListRow(N):
+    return [list(input().split()) for _ in range(N)]
+
+
+def chk(member, n):
+    l = []
+    for i in range(len(member)):
+        if i == n:
+            continue
+        l.append(member[i...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ネットが使えないサーバー上でpip installをする方法]]></title>
+        <id>https://zenn.dev/efficientyk/articles/c8d8aba29df3d4</id>
+        <link href="https://zenn.dev/efficientyk/articles/c8d8aba29df3d4"/>
+        <updated>2023-06-19T03:23:37.000Z</updated>
+        <summary type="html"><![CDATA[ここでは、Pythonの仮想環境でパッケージを管理していると仮定します。まず、ローカル環境でパッケージをダウンロードし、それをサーバーに転送してインストールします。
+
+ 1. ローカル環境でパッケージをダウンロードします。
+以下の手順では、pipの-dオプションを使用して、指定したディレクトリにパッケージをダウンロードします。
+mkdir packages
+pip download -d ./packages -r requirements.txt
+この操作で、requirements.txtにリストされたすべてのパッケージがpackagesディレクトリにダウンロードされます。
+
+ 2....]]></summary>
+        <author>
+            <name>YK</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[chatGPT API + Whisper API +NLP(MeCab)で音声レコメンド機能を作ってみる]]></title>
+        <id>https://zenn.dev/voicy/articles/a36c662eced6f0</id>
+        <link href="https://zenn.dev/voicy/articles/a36c662eced6f0"/>
+        <updated>2023-06-19T02:45:35.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは！5月から株式会社Voicyにエンジニアとして入社しました！うおくんです！
+VoicyではWebフロント、バックエンド、iOS、Androidなどなんでもするマンとして日々勉強しています！(現在メインはWebフロント)
+そんななんでもしたいマンの自分ですが、AIの領域ではChatGPTの表面的なことしか勉強していなかったので、今回は音声の会社に入社したということもあり
+
+ 質問から対応する音声データをおすすめしてくれるレコメンド機能
+を実装してみたいと思います！
+
+ 準備
+まず実装をするにあたって音声データが必要なので色々と作ってみようと思います
+ネットに転がって...]]></summary>
+        <author>
+            <name>うおくん</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[時計を用いないサウナ滞在時間推定法の検討と実践]]></title>
+        <id>https://zenn.dev/zenkigen/articles/2023-06-atsushi</id>
+        <link href="https://zenn.dev/zenkigen/articles/2023-06-atsushi"/>
+        <updated>2023-06-19T01:59:53.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+初めまして。ZENKIGENデータサイエンスチーム所属の廣田です。原籍はオムロンソーシアルソリューションズ株式会社 技術創造センタ[1]ですが、社外出向でZENKIGENに所属しており、数理最適化や機械学習を用いたデータの分析業務をしております。今回が初執筆で張り切っています！
+いきなりですが、先日私がサウナに行った時の話をさせてください。
+最近はサウナを趣味にしている人が周りに増え始め、遅ればせながら私も「整って」[2]みたいと思い、サウナに行くことにしました。サウナ初心者の私は、「整う」ための方法を事前にインターネットで調べ、例えばサウナ浴を5~10分→水風呂を30秒→...]]></summary>
+        <author>
+            <name>株式会社ZENKIGEN</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Python 3.12主な新機能をまとめてみた]]></title>
         <id>https://zenn.dev/the_exile/articles/0f6e426173ce75</id>
@@ -5967,313 +6292,6 @@ ChatGPTの登場によって、ここ数カ月、生成系AIが非常に盛り�
 ...]]></summary>
         <author>
             <name>raku</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FlaskアプリケーションのHerokuデプロイ：'Procfile'名前エラーの解決]]></title>
-        <id>https://zenn.dev/keisuke_05410/articles/bf589deea27876</id>
-        <link href="https://zenn.dev/keisuke_05410/articles/bf589deea27876"/>
-        <updated>2023-05-21T13:29:38.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-こんにちは、今回はFlaskのアプリケーションをHerokuにデプロイしようとした際に遭遇した問題とその解決方法について話したいと思います。特に、'Procfile'の名前に関連する問題で、私の経験が同じ問題に直面している方々の助けになればと思います。
-
- エラー内容
-私の目標は、作成したFlaskアプリケーションをHerokuにデプロイすることでした。しかし、デプロイプロセスを開始したところで、私はエラーに直面しました。
-at=error code=H14 desc=”No web processes running” method=GET path=”/” host=x...]]></summary>
-        <author>
-            <name>Keisuke_Kaji</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AtCoder Beginner Contest 301 C問題]]></title>
-        <id>https://zenn.dev/lia/articles/7f0a1af230bbfb</id>
-        <link href="https://zenn.dev/lia/articles/7f0a1af230bbfb"/>
-        <updated>2023-05-21T11:51:17.000Z</updated>
-        <summary type="html"><![CDATA[最近プログラミングコンテストに興味を持ちまして，まぁこれが難しい．
-てことで備忘録として躓いた問題を復習したいと思います．
-ちなみに言語はPython3です
-今回は，AtCoder Beginner Contest 301のC問題
-
- 問題文
-AtCoder社ではカードを使った 1 人ゲームが流行っています。
-ゲームで使う各カードには、英小文字 1 文字または @ の文字が書かれており、いずれのカードも十分多く存在します。
-ゲームは以下の手順で行います。
-
-カードを同じ枚数ずつ 2 列に並べる。
-@ のカードを、それぞれ a, t, c, o, d, e, r のいずれかのカードと置き換...]]></summary>
-        <author>
-            <name>りあ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】pandas の apply系関数まとめ]]></title>
-        <id>https://zenn.dev/shiro46/articles/fdd474403f6554</id>
-        <link href="https://zenn.dev/shiro46/articles/fdd474403f6554"/>
-        <updated>2023-05-21T09:36:47.000Z</updated>
-        <summary type="html"><![CDATA[使用するライブラリ
-import pandas as pd
-
- (備考) 列指定の方法
-df['a'] と指定すれば Series になる。
-df[['a']] と指定すれば DataFrame になる。
-
- apply系の関数の選択チートシート
-新しい列を追加する処理を実装したい場面を想定。
-
-
-
-input
-output
-functions
-func in apply
-
-
-
-
-
-pd.Series
-pd.Series
-
-pd.Series.map  pd.Series.apply
-
-スカラー → スカラー
-
-
-pd.Series
-pd.DataFrame
-pd.Series.ap...]]></summary>
-        <author>
-            <name>SHIRO</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】バイナリサーチの実装]]></title>
-        <id>https://zenn.dev/takuh/articles/122ee1611f6a6c</id>
-        <link href="https://zenn.dev/takuh/articles/122ee1611f6a6c"/>
-        <updated>2023-05-21T08:14:25.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-与えられた数字のインデックス番号を返すアルゴリズムです（binary_search）。
-
- 実装
-
-binary_search.py
-from typing import List, NewType
-
-IndexNum = NewType("IndexNum", int)
-
-def linear_search(numbers: List[int], value: int) -> IndexNum:
-  for i in range(0, len(numbers)):
-    if numbers[i] == value:
-      return i
-  return...]]></summary>
-        <author>
-            <name>takuh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】カウントソートの実装]]></title>
-        <id>https://zenn.dev/takuh/articles/5c0c0e56ac3541</id>
-        <link href="https://zenn.dev/takuh/articles/5c0c0e56ac3541"/>
-        <updated>2023-05-21T06:10:41.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-カウントソートの実装例です。
-
- 実装
-
-counting_sort.py
-from typing import List
-
-def counting_sort(numbers: List) -> List[int]:
-  max_num = max(numbers)
-  counts = [0] * (max_num + 1)
-  result = [0] * len(numbers)
-  
-  for num in numbers:
-    counts[num] += 1
-  
-  # 各数字の個数を調べる
-  for i in range(1, len(cou...]]></summary>
-        <author>
-            <name>takuh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ナンピンマーチンの通貨ペアはAUDCADとXAUUSDと、どちらが良いのか？]]></title>
-        <id>https://zenn.dev/harukii/articles/eb07ea9a1d1c07</id>
-        <link href="https://zenn.dev/harukii/articles/eb07ea9a1d1c07"/>
-        <updated>2023-05-21T04:34:03.000Z</updated>
-        <summary type="html"><![CDATA[ナンピンマーチンはもうすでにご存知のように一定期間は無敵の手法です。
-どの通貨ペアを選択すればいいかを考えてみます。
-事前にTwitterで調査したところ、
-
-AUDCAD
-XAUUSD
-その他なんでもヨシ
-
-とのことです。
-
- 日足チャートの値動き率でボラティリティを確認する
-Trading Viewの日足チャートの値動き率ご覧ください。
-
-紫 USDJPY
-水 XAUUSD
-黄 AUDCAD
-オレンジ AUDNZD
-見えてるレンジでオレンジの線が一番値動きがおとなしいです。
-では オレンジ色の通貨ペア「AUDCAD」が最良なのでしょうか？
-これはどうですか？
-
-これを見ると水色の「X...]]></summary>
-        <author>
-            <name>ホソノP</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】データ可視化に使えるseabornまとめ]]></title>
-        <id>https://zenn.dev/shiro46/articles/5653a2905328a4</id>
-        <link href="https://zenn.dev/shiro46/articles/5653a2905328a4"/>
-        <updated>2023-05-21T03:37:56.000Z</updated>
-        <summary type="html"><![CDATA[使用するライブラリ
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-データはすべて long-form の pd.DataFrame とする。
-
- (おまけ) よく使う設定
-!
-完全に個人の趣味です。
-
-sns.set_style('whitegrid') # darkgrid, whitegrid, dark, white
-sns.set_context('talk') # paper < notebook < talk < poster
-sns.set_palet...]]></summary>
-        <author>
-            <name>SHIRO</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonの基礎的な問題を解く]]></title>
-        <id>https://zenn.dev/waiwawaiwai/articles/96c53787491f80</id>
-        <link href="https://zenn.dev/waiwawaiwai/articles/96c53787491f80"/>
-        <updated>2023-05-21T03:18:30.000Z</updated>
-        <summary type="html"><![CDATA[pythonでりんごの会計を出すコードを作る
-こんにちは！pythonの勉強に励んでおります、わいわわです！
-progateさんのカリキュラムを学習していたら
-最後に問題が出てきましたのでアウトプットとしてまとめます。
-
- りんごの個数を入力し、合計金額が出るコード
-apple_price = 200
-money = 1000
-
-input_count = input('購入するりんごの個数を入力してください：')
-count = int(input_count)
-total_price = apple_price * count
-
-print('購入するりんごの個数は' + str...]]></summary>
-        <author>
-            <name>わいわわ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PandasとSnowpark for pythonの対応表]]></title>
-        <id>https://zenn.dev/parfait/articles/2349f015addbaf</id>
-        <link href="https://zenn.dev/parfait/articles/2349f015addbaf"/>
-        <updated>2023-05-21T03:15:53.000Z</updated>
-        <summary type="html"><![CDATA[この記事の対象ユーザー
-
-Snowflakeユーザー
-Pandasはわかるけど，Snowpark for pythonは不慣れな方
-Snowpark for pythonのチートシートを探している方
-
-
- 背景
-「Snowpark for python，書きにくい・・・」
-同じ感想を持った方は同士だ．是非，この記事を最後まで読んだうえで「私が知ってるTips」をコメントで残してほしい．
-なぜ，Snowpark for python(以下，Snowpark)を書きにくいと感じるのか？理由はいくつかあるが，一番の理由は「Pandas likeなコードでsnowflakeを操作できる」と勘...]]></summary>
-        <author>
-            <name>parfait</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】偶数のリストを返すアルゴリズム]]></title>
-        <id>https://zenn.dev/takuh/articles/c0b74d9aaec8f7</id>
-        <link href="https://zenn.dev/takuh/articles/c0b74d9aaec8f7"/>
-        <updated>2023-05-21T01:08:36.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-偶数のリストを返すアルゴリズムです。
-（例）input: 20, output: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
-
- 実装
-
-even_numbers.py
-from typing import List
-def func(num: int) -> List[int]:
-  numbers = []
-  for i in range(num+1):
-    if i%2 == 0:
-      numbers.append(i)
-    else:
-      continue
-  return numbers
-
-if ...]]></summary>
-        <author>
-            <name>takuh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】素数のリストを作成するアルゴリズム]]></title>
-        <id>https://zenn.dev/takuh/articles/fd84d5a8047ebb</id>
-        <link href="https://zenn.dev/takuh/articles/fd84d5a8047ebb"/>
-        <updated>2023-05-21T00:05:55.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-与えた数字までに存在する素数を格納したリストを作成するアルゴリズムです。
-（例）input: 20, output: [2, 3, 5, 7, 11, 13, 17, 19]
-
- 実装
-
-prime_numbers.py
-# 関数に型明示ができるようにする
-from typing import List, Generator
-
-# 素数を抽出する関数（与えた数字までの素数を抽出する）
-def generate_primes_v1(numbers: int) -> List[int]:
-  # 空のリストの作成
-  primes = []
-  # for文を何回回したか...]]></summary>
-        <author>
-            <name>takuh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonで学ぶデジタル信号処理（1イントロダクション）]]></title>
-        <id>https://zenn.dev/kazu22/articles/8c6dbf14185724</id>
-        <link href="https://zenn.dev/kazu22/articles/8c6dbf14185724"/>
-        <updated>2023-05-20T14:33:33.000Z</updated>
-        <summary type="html"><![CDATA[まだPythonは出てこないです。。。
-
-イントロダクション
-
-デジタル信号処理の概要
-応用分野と重要性
-
-
-
-
- デジタル信号処理の概要
-デジタル信号処理とは、文字通りデジタル化（量子化、離散化）された信号（光、音、加速度など）を処理（フィルタ、周波数解析など）すること。
-
-↑アナログ（青）とデジタル（赤）のイメージ。赤は飛び飛びの値しかない。（実際は細かいだけで青もデジタルなのだが、、、）
-
- 応用分野と重要性
-応用分野には以下のようなものがある
-
-テレビ
-電話
-音楽再生
-
-デジタル信号処理は情報の再現、保存、伝送を可能にする技術であり、現代の情報技術に欠かせないもの。また、医療画像...]]></summary>
-        <author>
-            <name>Kazu22</name>
         </author>
     </entry>
 </feed>
