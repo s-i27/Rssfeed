@@ -2,10 +2,296 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-06-27T01:55:43.615Z</updated>
+    <updated>2023-06-28T01:54:40.769Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Python デスクトップアプリ開発に挑戦してみた！]]></title>
+        <id>https://zenn.dev/akibaburari/articles/32a89b19fcf889</id>
+        <link href="https://zenn.dev/akibaburari/articles/32a89b19fcf889"/>
+        <updated>2023-06-27T14:09:02.000Z</updated>
+        <summary type="html"><![CDATA[Pythonプログラミングを使ったデスクトップアプリ開発に挑戦してみました。
+
+ 作成するアプリ
+ボタンを押すだけで勝手にブラウザが開き、
+Amazon、楽天市場、ヤフーショッピングのサイトを同時に開く、
+そんなアプリを作りたいです。
+Chromeの拡張機能やWebサービスでできそうですが、外部の拡張機能を使わずに、しかもネットを利用しないローカル環境で使いたいです。
+※Chromeの拡張機能はセキュリティ的に不安な要素があり、しかもブラウザの速度を低下させる要因にもなります。
+
+ 作成方法
+本のサンプルコードをコピペして、必要な個所を書き換える。
+使用する本はこちら。
+Pythonでは...]]></summary>
+        <author>
+            <name>秋葉原ぶらり+</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DreamSimをgoogle colabで試してみた]]></title>
+        <id>https://zenn.dev/tatsuromurata/articles/f38d7b80cce4ef</id>
+        <link href="https://zenn.dev/tatsuromurata/articles/f38d7b80cce4ef"/>
+        <updated>2023-06-27T09:52:03.000Z</updated>
+        <summary type="html"><![CDATA[DreamSimとは
+DreamSimは新しいVisual similarityの基盤モデルです。
+https://github.com/ssundaram21/dreamsim
+
+ リンク
+Colab
+github
+
+ 準備
+Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。
+
+ 環境構築
+インストール手順です。
+!pip install dreamsim
+比較モデルのダウンロードもします。
+!mkdir models/
+!wget -O models/open_clip_vitb32_pretrain.pth...]]></summary>
+        <author>
+            <name>しば🐕AI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-253｜B - Distance Between Tokens]]></title>
+        <id>https://zenn.dev/hyperdb/articles/fefccde6ea7fd6</id>
+        <link href="https://zenn.dev/hyperdb/articles/fefccde6ea7fd6"/>
+        <updated>2023-06-27T07:16:01.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-253 B - Distance Between Tokens
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getStringListRow(N):
+    return [list(input()) for _ in range(N)]
+
+
+def main():
+    h, w = getIntMap()
+    s = getStringListRow(h)
+
+    p = []
+    for y in range(h):
+        for x in...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-253｜A - Median?]]></title>
+        <id>https://zenn.dev/hyperdb/articles/5fc9ec36197196</id>
+        <link href="https://zenn.dev/hyperdb/articles/5fc9ec36197196"/>
+        <updated>2023-06-27T07:16:00.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-253 A - Median?
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b, c = getIntMap()
+
+    l = [a, b, c]
+    l.sort()
+
+    print('Yes' if l[1] == b else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】pandasで範囲内のデータ数を求める]]></title>
+        <id>https://zenn.dev/aew2sbee/articles/python-pandas-value_counts</id>
+        <link href="https://zenn.dev/aew2sbee/articles/python-pandas-value_counts"/>
+        <updated>2023-06-27T07:06:57.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Pythonのデータ分析の学習を始めたいと思い、
+Python2年生 データ分析のしくみ 体験してわかる！会話でまなべる！を購入しました。
+そこでpandasの使い方を学びました。
+学習した内容を執筆します。
+
+
+
+項目
+内容
+
+
+
+
+対象者
+・pandasで範囲内のデータ数を求める方法を知りたい方・Python微経験者
+
+
+伝えたい内容
+・pandasで範囲内のデータ数を求める方法
+
+
+前提条件
+・Python 3.9.10・pandas 1.5.2
+
+
+
+
+ 範囲内のデータ数を求めるサンプルコード
+
+ 1. pandasインストール
+下記コマンドでインストールします。
+...]]></summary>
+        <author>
+            <name>ふるた なおき🥝</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】pandasで中央値を求める]]></title>
+        <id>https://zenn.dev/aew2sbee/articles/python-pandas-median</id>
+        <link href="https://zenn.dev/aew2sbee/articles/python-pandas-median"/>
+        <updated>2023-06-27T07:06:56.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Pythonのデータ分析の学習を始めたいと思い、
+Python2年生 データ分析のしくみ 体験してわかる！会話でまなべる！を購入しました。
+そこでpandasの使い方を学びました。
+学習した内容を執筆します。
+
+
+
+項目
+内容
+
+
+
+
+対象者
+・pandasで中央値を求める方法を知りたい方・Python微経験者
+
+
+伝えたい内容
+・pandasで中央値を求める方法
+
+
+前提条件
+・Python 3.9.10・pandas 1.5.2
+
+
+
+
+ 中央値を求めるサンプルコード
+
+ 1. pandasインストール
+下記コマンドでインストールします。
+pip install pan...]]></summary>
+        <author>
+            <name>ふるた なおき🥝</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】pandasで平均値を求める]]></title>
+        <id>https://zenn.dev/aew2sbee/articles/python-pandas-mean</id>
+        <link href="https://zenn.dev/aew2sbee/articles/python-pandas-mean"/>
+        <updated>2023-06-27T06:59:42.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Pythonのデータ分析の学習を始めたいと思い、
+Python2年生 データ分析のしくみ 体験してわかる！会話でまなべる！を購入しました。
+そこでpandasの使い方を学びました。
+学習した内容を執筆します。
+
+
+
+項目
+内容
+
+
+
+
+対象者
+・pandasで平均値を求める方法を知りたい方・Python微経験者
+
+
+伝えたい内容
+・pandasで平均値を求める方法
+
+
+前提条件
+・Python 3.9.10・pandas 1.5.2
+
+
+
+
+ 平均値を求めるサンプルコード
+
+ 1. pandasインストール
+下記コマンドでインストールします。
+pip install pan...]]></summary>
+        <author>
+            <name>ふるた なおき🥝</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[music21を用いてMIDIファイルから音高を取得する]]></title>
+        <id>https://zenn.dev/nek0n0mimi/articles/b108ca8d73c951</id>
+        <link href="https://zenn.dev/nek0n0mimi/articles/b108ca8d73c951"/>
+        <updated>2023-06-27T06:54:58.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+ここでは、music21という音楽情報処理ライブラリを使用して、MIDIファイルから音高を取得する。
+
+ 実行環境
+
+macOS M1
+Python 3.9.6
+
+
+ music21のインストール
+sudo pip3 install music21
+
+以下を実行すると、色々と聞かれるが適宜回答して進める
+
+python3 -m music21.configure
+http://web.mit.edu/music21/doc/installing/installMac.html
+
+ データを取得する
+midi_path = "data.mid"
+score = convert...]]></summary>
+        <author>
+            <name>calcifer</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python + Kivy で作ってみた【Ⅳ】]]></title>
+        <id>https://zenn.dev/pseudo_shocker/articles/3ed95075127b94</id>
+        <link href="https://zenn.dev/pseudo_shocker/articles/3ed95075127b94"/>
+        <updated>2023-06-27T02:28:11.000Z</updated>
+        <summary type="html"><![CDATA[付加機能
+付加機能として真っ先に浮かんだのが、ズーム機能
+現在は等倍表示だが、0.1～10倍の表示を行いたい
+でも、表示部のど真ん中を中心に拡大縮小するだけでは面白くない…
+任意のポイントを中心に拡大縮小を行いたいが、どうやって指定するか？
+ぱっと思いついたのがクロスゲージ、照準器のような十字線を表示する方式
+ただ、十字線を動かすためにマウスでつかむのが大変そう…
+そこで箱形の十字線、漢字の「井」のようにゲージ線を4本引き、
+囲まれた四角形の部分をマウスでつかんで動かす
+そして、その四角形の中心を中心に拡大縮小を行う
+このように四角形で囲むとその部分を強調表示しているようにも見える
+...]]></summary>
+        <author>
+            <name>猫の足跡</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Omeka Classicでコレクションを一括削除する方法]]></title>
         <id>https://zenn.dev/nakamura196/articles/67ca4257f269b0</id>
@@ -5993,371 +6279,6 @@ pip install openpyxl
 あとプログラムを各行確認したいのでjupyter lab使い...]]></summary>
         <author>
             <name>どぅくし</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pytestで特定のメッセージを含むWarningを無視する]]></title>
-        <id>https://zenn.dev/k_h_k/articles/f88e6a0ad78e3b</id>
-        <link href="https://zenn.dev/k_h_k/articles/f88e6a0ad78e3b"/>
-        <updated>2023-05-29T13:15:10.000Z</updated>
-        <summary type="html"><![CDATA[結論
-
-
-@pytest.mark.filterwarnings("ignore:{Warning文}")を関数の頭に付ける
-「Warning文」には正規表現が使える
-
-
- 例
-import pytest
-
-def test_hoge():
-    ### 処理 ###
-    assert result = "test"
-というテストで
-/usr/local/lib/python3.6/site-packages/pymysql/cursors.py:329: Warning: (1292, "Truncated incorrect INTEGER value: '100.0'")...]]></summary>
-        <author>
-            <name>k.h</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python/Ubuntu22.04/pyenv/fish環境をDockerで構築する方法]]></title>
-        <id>https://zenn.dev/efficientyk/articles/0fde4dcd4a9520</id>
-        <link href="https://zenn.dev/efficientyk/articles/0fde4dcd4a9520"/>
-        <updated>2023-05-29T12:37:31.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-前半は共通ですが、後半ではGPUなし、ありの2通りを書いてありますのでお手元の環境によって見る場所を変えてください。また、今回はUbuntu22.04上で動かしています。
-
- 1. Dockerをインストール
-まずdockerをインストールします。
-# 依存パッケージインストール
-sudo apt update
-sudo apt install \
-  ca-certificates curl gnupg lsb-release
-
-# Dockerの公式GPGキーを追加
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://d...]]></summary>
-        <author>
-            <name>YK</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[google Secret Managerの値を登録してpythonで取得してみる]]></title>
-        <id>https://zenn.dev/ushknn/articles/aae542a72f2881</id>
-        <link href="https://zenn.dev/ushknn/articles/aae542a72f2881"/>
-        <updated>2023-05-29T11:49:42.000Z</updated>
-        <summary type="html"><![CDATA[手順
-
-Secret Managerの有効化
-シークレットの登録
-サービスアカウントの作成と権限追加
-pythonで呼び出し
-
-※本記事の内容は2023/05/29時点で動作を確認しました。
-
- 1. Secret managerの有効化
-GCPのsecret managerに行ってAPIを有効化します。
-権限あればボタン押すだけで終わります。
-https://console.cloud.google.com/security/secret-manager
-
- 2. secretの登録
-今回はコンソールで設定します。
-secret manager画面の上の方に作成ボタンがあるので押し...]]></summary>
-        <author>
-            <name>植木しょくにん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[画像間の類似度評価指標：FCNスコア（pixel-level-accuracy score）]]></title>
-        <id>https://zenn.dev/gkchop/articles/b10bba8919ea54</id>
-        <link href="https://zenn.dev/gkchop/articles/b10bba8919ea54"/>
-        <updated>2023-05-29T11:44:55.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-GAN（Generative Adversarial Network）を勉強していて、「生成した画像がGround Truthの画像と似ているかどうかってどう定量的に評価するんだ？」と疑問に思いまして、自身の理解を確かめるために実装してみます。
-
- FCN-Score
-pix2pixやCycleGANの論文で評価指標の一つとして使われた指標です。SemanticSegmentation向けに学習されたFCN（Fully Connected Networks）アーキテクチャを持つモデルに対して、Ground Truthの画像（y）および生成された画像（\hat{y}）でSeg...]]></summary>
-        <author>
-            <name>TangeDanpei</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[UniControlnetをgoogle colabで試してみた。]]></title>
-        <id>https://zenn.dev/tatsuromurata/articles/4d5d43c8605516</id>
-        <link href="https://zenn.dev/tatsuromurata/articles/4d5d43c8605516"/>
-        <updated>2023-05-29T10:04:01.000Z</updated>
-        <summary type="html"><![CDATA[UniControlNetとは
-UniControlNetはControlNetで出来る画像変換を一度にやってしまえる、multiControlNetの拡張版のControlNetです。それぞれの画像(人間、動物、背景等)はControlNetのどの前処理を利用するかで大きくクオリティが変化しましたが、その強みを活かせるモデルが降臨しました。
-https://github.com/ShihaoZhaoZSH/Uni-ControlNet
-
- リンク
-Colab
-github
-
- 準備
-Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「...]]></summary>
-        <author>
-            <name>しば🐕AI</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonのFirebase Functionsで複数Pythonファイルを利用する方法]]></title>
-        <id>https://zenn.dev/singularity/articles/multiple_files_of_python_firebase_functions</id>
-        <link href="https://zenn.dev/singularity/articles/multiple_files_of_python_firebase_functions"/>
-        <updated>2023-05-29T09:04:22.000Z</updated>
-        <summary type="html"><![CDATA[これは何？
-Python版のFirebase Functionsで、複数のPythonファイルを利用する方法。
-
- 現象
-以下のようなディレクトリ構成になっているとする:
-myproject
-+- .firebaserc
-|
-|
-+- firebase.json
-|
-+- functions/
-      |
-      +- main.py
-      |
-      +- import_me.py  # このpythonファイルをmain.pyからimportしたい
-      |
-      +- requirements.txt
-      |
-      +- venv/
-...]]></summary>
-        <author>
-            <name>Mai Nakagawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Redis integration with Python]]></title>
-        <id>https://zenn.dev/dshekhar17/articles/2a19521ac567c2</id>
-        <link href="https://zenn.dev/dshekhar17/articles/2a19521ac567c2"/>
-        <updated>2023-05-29T09:02:12.000Z</updated>
-        <summary type="html"><![CDATA[Python and Redis together form a powerful duo for developers seeking efficient database solutions. This blog will walk you through the integration of Python with Redis, covering both the basics and advanced techniques. By the end of this blog, you’ll have a solid foundation for leveraging the ful...]]></summary>
-        <author>
-            <name>Divyanshu Shekhar</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[numpyの階層・テンソルについて]]></title>
-        <id>https://zenn.dev/waiwawaiwai/articles/5f02e124bc5119</id>
-        <link href="https://zenn.dev/waiwawaiwai/articles/5f02e124bc5119"/>
-        <updated>2023-05-29T08:34:56.000Z</updated>
-        <summary type="html"><![CDATA[Numpyの演算
-こんにちは！わいわわです！
-環境構築を終え、ライブラリをガンガン使ってみるフェーズへ入っています。
-今回はNumpyを実際に使用し、テンソルについて学習していきます！
-
- numpyとは（おさらい）
-数値計算の際に利用されるライブラリ
-np.array()で「ndarray」を作成し、独自のデータ構造で
-高速な処理で計算をする（高速な処理を可能する配列のイメージ）
-scipy「計算ライブラリ」、scikit-learn「機械学習ライブラリ」
-openCV「画像処理ライブラリ」はnumpyにより実装されている
-データ分析や機械学習にはベクトルや行列の計算が不可欠です。...]]></summary>
-        <author>
-            <name>わいわわ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-234｜B - Longest Segment]]></title>
-        <id>https://zenn.dev/hyperdb/articles/d3aad5cc668019</id>
-        <link href="https://zenn.dev/hyperdb/articles/d3aad5cc668019"/>
-        <updated>2023-05-29T04:40:22.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-234 B - Longest Segment
-
-
-
- 提出結果
-import math
-import itertools
-
-def getInt():
-    return int(input())
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-def d(x, y):
-    return math.sqrt((y[0] - x[0]) ** 2 + (y[1] - x[1]) ** 2)
-
-def main():
-    n =...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-234｜A - Weird Function]]></title>
-        <id>https://zenn.dev/hyperdb/articles/6942333e77d7eb</id>
-        <link href="https://zenn.dev/hyperdb/articles/6942333e77d7eb"/>
-        <updated>2023-05-29T04:40:21.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-234 A - Weird Function
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-def fx(n):
-    return n ** 2 + 2 * n + 3
-
-def main():
-    t = getInt()
-
-    print(fx(fx(fx(t) + t) + fx(fx(t))))
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】dict.copy()したのに中身が上書きされてしまった！]]></title>
-        <id>https://zenn.dev/tk_tech/articles/2f8e56b3e6aad7</id>
-        <link href="https://zenn.dev/tk_tech/articles/2f8e56b3e6aad7"/>
-        <updated>2023-05-29T03:17:04.000Z</updated>
-        <summary type="html"><![CDATA[概要
-SlackのAPIを利用して2種類の情報をそれぞれ別のチャンネルに通知するためのプログラムで両方のチャンネルに同じ情報が出てしまった。
-通知したい内容の部分以外はSlackAPIのためのデータの構成は同一であるため、以下のように記載。
-
- バージョン情報
-今回の知見にバージョンはあまり関係はないが、念のため。
-
-Python3.9
-AWS Lambda
-
-
- スクリプト
-default = {
-    'username': '',
-    'blocks': [
-        {
-            'type': 'section',
-	    'text': {
-	...]]></summary>
-        <author>
-            <name>TKTK</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[現在最強のText-to-3Dモデル"ProlificDreamer"をちゃんと理解する]]></title>
-        <id>https://zenn.dev/kamata1729/articles/55fda1a884bdfe</id>
-        <link href="https://zenn.dev/kamata1729/articles/55fda1a884bdfe"/>
-        <updated>2023-05-28T23:46:16.000Z</updated>
-        <summary type="html"><![CDATA[Text-to-3Dがアツい
-最近かなりText-to-3Dモデルがアツくなってきました。昨年9月末に発表されたDreamFusionから急速に発展し、11月にはMagic3DやLatent-NeRF, 12月にはSJCやDream3D, 今年に入って3月にはFantasia3DやText2Room, 今月5月にはOpenAIのShap-E, Text2NeRFが発表されるなど、ちょうど1年ほど前のText-to-Imageモデルの盛り上がり方を彷彿とさせます。
-※この記事は2023/5/29に執筆したものです
-その中で、5/25に発表された ProlificDreamerが強すぎる...]]></summary>
-        <author>
-            <name>kamata1729</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LangChain の Vectorstore として Azure Cache for Redis を使ってベクトルの格納と検索を行う]]></title>
-        <id>https://zenn.dev/microsoft/articles/6d4a04a6f45d4d</id>
-        <link href="https://zenn.dev/microsoft/articles/6d4a04a6f45d4d"/>
-        <updated>2023-05-28T22:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-LangChain の Vectorestore として Azure Cache for Redis を使おうとしたときに LangChain のドキュメントを読むだけでは一筋縄ではいかなかったため、一連の手順と参考情報へのリンクをまとめました。
-全体として以下の絵のようなことを行います。
-
-
- 方法
-
- 1. Python
-以下のパッケージを Pyhton 実行環境にインストールします。バージョンは執筆時点での最新版です。tensorflow-datasets は今回使用するサンプルデータの準備に使います。
-
-
-langchain 0.0.181
-
-
-openai 0.2...]]></summary>
-        <author>
-            <name>ryohtaka</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Nuke Python Script]]></title>
-        <id>https://zenn.dev/omakazu/articles/1ae66c0960a2f2</id>
-        <link href="https://zenn.dev/omakazu/articles/1ae66c0960a2f2"/>
-        <updated>2023-05-28T16:28:18.000Z</updated>
-        <summary type="html"><![CDATA[メモです。
-随時更新
-最終更新 : 2023/05/29
-
- まとめられているサイト
-Welcome to NUKE Python Developer’s Guide — Nuke Python API Reference
-https://learn.foundry.com/nuke/developers/latest/pythonreference/index.html
-http://mukaimame.blog111.fc2.com/blog-entry-1228.html
-Welcome to NUKE Python Developers Guide — NUKE Python D...]]></summary>
-        <author>
-            <name>omakazu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[torchのviewメモ]]></title>
-        <id>https://zenn.dev/curry/articles/295138b0ff64cb</id>
-        <link href="https://zenn.dev/curry/articles/295138b0ff64cb"/>
-        <updated>2023-05-28T15:51:38.000Z</updated>
-        <summary type="html"><![CDATA[torchのviewによる変化がしりたかったのでちょっと試してみた。
-a = torch.tensor([[[0,1,2,3,4,5], 
-              [6,7,8,9,10,11]],
-             [[12,13,14,15,16,17], 
-              [18,19,20,21,22,23]],
-             ])
-	    
-## torch.Size([2, 2, 6])
-これを 2,4,3　に変えてみる。
-一番最後の軸が分割されて、dim=1に移動した。
-b = a.view((2,4,3))
-tensor([[[ 0,...]]></summary>
-        <author>
-            <name>imori no shippo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pyenvとpipenvの導入方法をまとめる(Windows版)]]></title>
-        <id>https://zenn.dev/tikita/articles/f7a5bc16c36101</id>
-        <link href="https://zenn.dev/tikita/articles/f7a5bc16c36101"/>
-        <updated>2023-05-28T14:47:41.000Z</updated>
-        <summary type="html"><![CDATA[概要
-
-Dockerを使用しないといけないレベルではないが、Python関連の環境を管理したい、またはすぐに共有したい場合にpyenvとpipenvが便利なので導入方法をまとめる。
-
-
- 前提
-
-OS:Windows
-状態:Pythonをインストール済み, cmdでpipが使用できる
-
-
- 目次
-
-pyenv, pipenvとは？
-pyenv, pipenv導入方法（Windows版）
-実際にpyenvとpipenvを使ってみる
-pipenvの応用
-pyenv,pipenvのリセット
-参考文献
-
-
- 1. pyenvとpipenvとは？
-
- pyenvとpyenv-winについて
-
-...]]></summary>
-        <author>
-            <name>masa</name>
         </author>
     </entry>
 </feed>
