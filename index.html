@@ -22,6 +22,321 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-06-28 datetime="2023-06-28T23:58:02.000Z">2023-06-28</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-06-28 datetime="2023-06-28T23:58:02.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/derwind/articles/dwd-tytansdk01"
+                        open
+                      >
+                        <summary class="article-expander__title">TYTAN SDK で遊んでみる (1) — 入門の入門</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/derwind/articles/dwd-tytansdk01">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--JDPMhVvV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:TYTAN%2520SDK%2520%25E3%2581%25A7%25E9%2581%258A%25E3%2582%2593%25E3%2581%25A7%25E3%2581%25BF%25E3%2582%258B%2520%25281%2529%2520%25E2%2580%2594%2520%25E5%2585%25A5%25E9%2596%2580%25E3%2581%25AE%25E5%2585%25A5%25E9%2596%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:derwind%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>目的
+詳しくないので用語や言い回しは適切ではないかもしれないが、QUBO (Quadratic Unconstrained Binary Optimization) という概念があって、これをソルバで最適化して組合せ最適化問題を解きたい、ということがある (らしい)。
+今回、この QUBO の最適化を通じた組合せ最適化について、基本的なところを押さえておきたいという理由でつらつらと記事を書いてみようかと思って、最初の記事を書いてみることにした。今回は、SDK の使いかたを最低限見る程度をゴールとする。
+
+ はじめに
+QUBO による組合せ最適化が何かということは後に回すとして、そうい...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/sonyakun/articles/jishaku_discord_bot"
+                        open
+                      >
+                        <summary class="article-expander__title">【jishaku】discord botでpythonのコマンドを実行する方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sonyakun/articles/jishaku_discord_bot">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--voKepFd0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590jishaku%25E3%2580%2591discord%2520bot%25E3%2581%25A7python%25E3%2581%25AE%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259D%25E3%2581%25AB%25E3%2582%2583%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RiNTI4NjQxY2QuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>今回は、discord.pyのbotで、pythonのコマンドやコードを動かす方法を紹介していきます！
+!
+おそらくスラッシュコマンドでは動作しません。
+
+では、まず、以下のコマンドを実行してください。
+pip install jishaku
+できない場合は
+py -m pip install jishaku
+を実行してください。
+discord.pyは以下のコマンドで入れられます。
+py -m pip install discord.py
+そしたら、メモ帳などを開いてください。(僕は今VScode持ってないのでIDLEを使います。)
+
+ botを作成する方法
+https://dis...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/sonyakun/articles/p2pquake_eewbot"
+                        open
+                      >
+                        <summary class="article-expander__title">【Websockets】P2P地震速報のWebsocketとMisskey.pyを使って地震botを作ろう！</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sonyakun/articles/p2pquake_eewbot">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--TPw9LRb---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Websockets%25E3%2580%2591P2P%25E5%259C%25B0%25E9%259C%2587%25E9%2580%259F%25E5%25A0%25B1%25E3%2581%25AEWebsocket%25E3%2581%25A8Misskey.py%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E5%259C%25B0%25E9%259C%2587bot%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258D%25E3%2581%2586%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259D%25E3%2581%25AB%25E3%2582%2583%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RiNTI4NjQxY2QuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>!
+現在この記事は古くなっています。
+
+
+ はじめに
+ほぼ1年間記事が思いつかずに投稿してなかった人です。
+今回は、QuakeWatchというMisskey/Discordの地震情報Botを作ってみたので備忘録程度に書いていきます。
+
+ 動作環境
+Windows11 22H2
+Python 3.11.3
+
+ ライブラリ
+
+folium
+fastapi
+discord-webhook
+misskey.py
+websockets
+httpx
+uvicorn[standard]
+playwright
+
+
+ 完成形
+
+
+ 簡単なmapを生成してみる
+まず、foliumをimportします。
+im...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;35
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tossy21/articles/aff33be88e752e"
+                        open
+                      >
+                        <summary class="article-expander__title">OpenCALM-7BをM2 Macで動かす</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tossy21/articles/aff33be88e752e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--JuNJUnbL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenCALM-7B%25E3%2582%2592M2%2520Mac%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tossy%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdkYTdiNWJkY2IuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+この記事では、CyberAgent社が公開したLLMであるOpenCALM-7BのモデルをM2 Macのローカル環境で実行したTipsを記載します。
+
+ OpenCALMとは
+OpenCALMはCyberAgent社が開発したデコーダ型の事前学習済みモデルです。
+商用利用可能なライセンスとなっており、このモデルをベースにチューニングを行うことが可能です。
+https://www.cyberagent.co.jp/news/detail/id&#x3D;28817
+OpenCALM-7BモデルはHuggingFaceで公開されています。
+https://huggingface.co/c...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/noneprogrammer/articles/5cdc3c0261522e"
+                        open
+                      >
+                        <summary class="article-expander__title">命名に困ったら日本人に戻ろう</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/noneprogrammer/articles/5cdc3c0261522e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--qvU4Fh2O--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%2591%25BD%25E5%2590%258D%25E3%2581%25AB%25E5%259B%25B0%25E3%2581%25A3%25E3%2581%259F%25E3%2582%2589%25E6%2597%25A5%25E6%259C%25AC%25E4%25BA%25BA%25E3%2581%25AB%25E6%2588%25BB%25E3%2582%258D%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:none_programmer%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4Yi1FSlJ6TTFSc0pRcDZLM3llSFNpVkQ4aDJjTDMyQm5MWTNHcFI9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>①意図が明確な名前にする
+
+ ①要約
+
+ 意図を与える。
+変数名i --&gt; 変数名『サイコロ出目』
+関数名get_int() --&gt; 関数名『出力_サイコロ出目』()
+
+ pythonの例
+import random
+
+# before
+def get_int():
+    i &#x3D; random.randint(1, 6)
+    print(i)
+
+# after
+def 『出力_サイコロ出目』():
+    『サイコロ出目』 &#x3D; random.randint(1, 6)
+    print(『サイコロ出目』)
+
+def main():
+    # before
+   ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;13
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/9959685dd9e862"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-254｜A - Last Two Digits</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/9959685dd9e862">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--jGd3-4lN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-254%25EF%25BD%259CA%2520-%2520Last%2520Two%2520Digits%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-254 A - Last Two Digits
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    n &#x3D; getInt()
+
+    print(&#x27;%02d&#x27; % (n % 100))
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/334786dd3084ed"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-254｜B - Practical Computing</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/334786dd3084ed">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--IT2lQ_74--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-254%25EF%25BD%259CB%2520-%2520Practical%2520Computing%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-254 B - Practical Computing
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    n &#x3D; getInt()
+
+    r &#x3D; []
+    for j in range(n):
+        c &#x3D; []
+        for i in range(j + 1):
+            if 0 &lt; i &lt; j:
+                c.append(r[j - 1][i - 1] + r[j - 1][i])
+        ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/pseudo_shocker/articles/862d1205663a21"
+                        open
+                      >
+                        <summary class="article-expander__title">Python + Kivy で作ってみた【Ⅴ】</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/pseudo_shocker/articles/862d1205663a21">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--YVgzBR26--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520%252B%2520Kivy%2520%25E3%2581%25A7%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2590%25E2%2585%25A4%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%258C%25AB%25E3%2581%25AE%25E8%25B6%25B3%25E8%25B7%25A1%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZlU1Tm50TWJVazV5TFR6TzdRZF9STHI1dFBqcm5DbXNqQXUwZ1Q9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>ファイル選択
+任意のPDFファイルを表示できなければ、ビューワーとはいえないな
+確かに、基本機能だな💦
+ヘッダー部にファイル選択のボタンを配置する
+Button:
+    id:                 filechoose_btn
+    text:               &#x27;変更&#x27;
+    color:              [ 0, 0, 0, 1 ]
+    background_color:   [ 0.3, 0.9, 0.7, 1 ]
+    background_normal:  &#x27;&#x27;
+    on_press:           viewer.cha...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-06-27 datetime="2023-06-27T14:09:02.000Z">2023-06-27</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-06-27 datetime="2023-06-27T14:09:02.000Z"></time>
           </button>
@@ -9522,331 +9837,6 @@ torchとかでも実装の説明サイトがあった気がしたが、それを
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/tatsuromurata/articles/8d4f19466b11bd"
-                        open
-                      >
-                        <summary class="article-expander__title">LLM As a Chatbotをgoogle colabで試してみた。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tatsuromurata/articles/8d4f19466b11bd">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--oOPMvq6t--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:LLM%2520As%2520a%2520Chatbot%25E3%2582%2592google%2520colab%25E3%2581%25A7%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2581%25B0%2520AI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VlMmM0MmY1MGYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>LLM As a Chatbotとは
-LLM as a chatbotとは色々なLLMをWebUIツールの上で試せるOSSのツールです。
-https://github.com/deep-diver/LLM-As-Chatbot
-モデルのロードや使い方等も綺麗にまとめられていていい感じですね。
-ただgoogle colabだとllamaのalpaca loraモデルしか使えるものがなさそうです。。
-強強なマシンをお持ちの方、pro, pro+に加入されている方は結構いろんなモデル試せそうなのでぜひに
-
- リンク
-Colab
-github
-
- 準備
-Google Colabを開き、メニュ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/waiwawaiwai/articles/04500fb7d8f211"
-                        open
-                      >
-                        <summary class="article-expander__title">numpyによるベクトル演算・行列演算</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/waiwawaiwai/articles/04500fb7d8f211">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--po2Zaj2Q--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:numpy%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E3%2583%2599%25E3%2582%25AF%25E3%2583%2588%25E3%2583%25AB%25E6%25BC%2594%25E7%25AE%2597%25E3%2583%25BB%25E8%25A1%258C%25E5%2588%2597%25E6%25BC%2594%25E7%25AE%2597%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%258F%25E3%2581%2584%25E3%2582%258F%25E3%2582%258F%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBlYzc2NzgwMTguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>numpyによるベクトルと行列の演算を学習
-今回はnumpyを使用し、ベクトルや行列の演算を
-動かしながら学習していきます。
-
- numpyのベクトル（１次元配列）の算術演算
-import numpy as np
-x &#x3D; np.array([1,2,3])
-y &#x3D; np.array([4,5,6])
-x + y
-出力結果　→　array([5,7,9])
-+, -,*,/すべて同じ表記でOK！
-
- スカラー演算
-数値を１つしか含んでいない０階テンソル（スカラー）を
-ベクトルに対して四則演算を行うとすべての成分に対して演算が行われる！
-処理のイメージはfor文のような感じ！
-x &#x3D; n...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/f01fb47ce8a007"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-235｜B - Climbing Takahashi</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/f01fb47ce8a007">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--4OR277FF--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-235%25EF%25BD%259CB%2520-%2520Climbing%2520Takahashi%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-235 B - Climbing Takahashi
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-def getIntList():
-    return list(map(int, input().split()))
-
-def main():
-    n &#x3D; getInt()
-    h &#x3D; getIntList()
-
-    x &#x3D; 0
-    for i in range(n):
-        x &#x3D; max(x, h[i])
-        if i + 1 ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/57e8d074118513"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-235｜A - Rotate</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/57e8d074118513">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--7uy0f6g2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-235%25EF%25BD%259CA%2520-%2520Rotate%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-235 A - Rotate
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    abc &#x3D; list(map(int, list(getString())))
-
-    print(111 * sum(abc))
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yonamine/articles/c410050147c8c1"
-                        open
-                      >
-                        <summary class="article-expander__title">ローカルのアプリをCloud Runにデプロイする方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yonamine/articles/c410050147c8c1">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--sGsTRQgD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E3%2581%25AE%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592Cloud%2520Run%25E3%2581%25AB%25E3%2583%2587%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25A4%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E4%25B8%258E%25E9%2582%25A3%25E5%25B6%25BA%25E3%2581%2582%25E3%2581%258D%25E3%2581%258A%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNy1TRmNfV2J6MUhsaE1jSEM2YTN6WUxTSzVjSVNVZUkzSUhVMG09czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>この記事について
-この記事では、ローカルで開発しているアプリを※Cloud Runにデプロイする方法を解説します。
-デプロイする前にアプリをdockerを用いてコンテナ化してからデプロイします。
-※Cloud Runとはコンテナ化しているアプリを直接実行できる。コンピューティングサービスです。
-
- 前提
-この記事では以下を前提としています。
-
-
-Docker Desktopがインストール済み
-APIまたは簡易アプリがローカルに存在
-
-もしDocker Desktopが未インストールの場合はこちらからインストールしてください。
-Docker Desktop
-
- 目次
-
-Dockerfi...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yonamine/articles/9b7edc3786a844"
-                        open
-                      >
-                        <summary class="article-expander__title">Cloud RunからCloud SQLに接続する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yonamine/articles/9b7edc3786a844">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--bXtV7mQd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloud%2520Run%25E3%2581%258B%25E3%2582%2589Cloud%2520SQL%25E3%2581%25AB%25E6%258E%25A5%25E7%25B6%259A%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E4%25B8%258E%25E9%2582%25A3%25E5%25B6%25BA%25E3%2581%2582%25E3%2581%258D%25E3%2581%258A%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNy1TRmNfV2J6MUhsaE1jSEM2YTN6WUxTSzVjSVNVZUkzSUhVMG09czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>この記事について
-この記事ではCloud Run上の簡易APIをCloud SQLに接続する方法を解説していきます。
-Cloud SQLはGCPで使用できるリレーショナルデータベースサービスです。
-
- 前提
-
-Docker Desktopがインストール済み。
-Cloud SQLのMySQLを使用する。
-モジュール管理はpoetryを使用。
-
-
- 目次
-
-プロジェクト、ファイル構成
-イメージのビルド、プッシュ
-Cloud Run上のAPIからCLOUD SQLに接続
-
-
- プロジェクト・ファイル構成
-以下、プロジェクト構成です。
-.
-├── Dockerfile
-├── app
-│  ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kazuph/articles/00ee4932fb3528"
-                        open
-                      >
-                        <summary class="article-expander__title">Ryeでwhisper環境を構築する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kazuph/articles/00ee4932fb3528">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--BbMA6P5l--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Rye%25E3%2581%25A7whisper%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kazuph%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFjNmY3ODBlZDYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>最近流行りのryeで音声書き起こしのwhisperのための環境を構築してみます。
-https://github.com/mitsuhiko/rye
-
- ryeのセットアップ
-$ curl -sSf https://rye-up.com/get | bash
-$ vi .bashrc
-source &quot;$HOME/.rye/env&quot; # ← を末尾に追記
-
- プロジェクトの作成
-mkdir whisper-sample
-cd whisper-sample
-rye init
-rye pin 3.10 # ← 任意
-rye add openai-whisper&#x3D;&#x3D;20230314
-rye syn...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-05-29 datetime="2023-05-29T21:02:06.000Z">2023-05-29</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-05-29 datetime="2023-05-29T21:02:06.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/dokusy/articles/22888ccd34dc6d"
-                        open
-                      >
-                        <summary class="article-expander__title">pythonでエクセルシート編集する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/dokusy/articles/22888ccd34dc6d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--wqi2dYxv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A7%25E3%2582%25A8%25E3%2582%25AF%25E3%2582%25BB%25E3%2583%25AB%25E3%2582%25B7%25E3%2583%25BC%25E3%2583%2588%25E7%25B7%25A8%25E9%259B%2586%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A9%25E3%2581%2585%25E3%2581%258F%25E3%2581%2597%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M4NWEyYjJkNmYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>最近、初歩的なpythonエクセル操作を覚えたので備忘録として残します。
-
- 環境
-
-OS MacOS Ventura 13.0
-CPU Apple M2
-
-
- pythonバージョン
-
-python 3.9
-
-
- まずは必要物の準備
-PC買い替えてからまさかのpythonを自分のPCに入れる事がなかったので久しぶりにインストールしましたw
-とりあえず「openpyxl」というものが必要なのでpipインストールしていきます。
-pip install openpyxl
-必要最低限の解説にしたいので3つのファイルを作っていきます。
-あとプログラムを各行確認したいのでjupyter lab使い...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -9854,8 +9844,8 @@ pip install openpyxl
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5396392064">
-        <time id="build-timestamp" datetime="2023-06-28T01:54:40.739Z">2023-06-28T01:54:40.739Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5407629166">
+        <time id="build-timestamp" datetime="2023-06-29T01:50:22.379Z">2023-06-29T01:50:22.379Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
