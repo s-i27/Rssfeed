@@ -22,6 +22,436 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-06-30 datetime="2023-06-30T01:36:36.000Z">2023-06-30</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-06-30 datetime="2023-06-30T01:36:36.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/aew2sbee/articles/python-csv-2pattern"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】CSVファイルを読み込む2パターン</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/aew2sbee/articles/python-csv-2pattern">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--zwva8mrg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591CSV%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E8%25AA%25AD%25E3%2581%25BF%25E8%25BE%25BC%25E3%2582%25802%25E3%2583%2591%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25B3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B5%25E3%2582%258B%25E3%2581%259F%2520%25E3%2581%25AA%25E3%2581%258A%25E3%2581%258D%2520%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YTFYdHhmWGZPVmpKek9sTnQ0cDZmaWQyeENLMTlKOEl0akpQczZiZz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+CSVファイルを読み込む処理を一度書いたらその関数を使いまわすので、
+忘れがちなので、備忘録として執筆します。
+
+
+
+項目
+内容
+
+
+
+
+対象者
+・Python初学者
+
+
+伝えたい内容
+・PythonでCSVファイルを読み込む方法
+
+
+前提条件
+・Python 3.9.10・pandas 1.5.2
+
+
+
+
+ 対象のCSVファイル
+
+ sample.csv
+No,name,age,gender
+1,ito,15,male
+2,suzuki,14,female
+3,sakai,18,male
+
+
+
+
+No
+name
+age
+gender
+
+
+
+
+1
+ito
+15
+male
+
+...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/karunru/articles/a19f57653ad075"
+                        open
+                      >
+                        <summary class="article-expander__title">PoetryでRAPIDSをインストールする</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/karunru/articles/a19f57653ad075">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ydvr3MZg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Poetry%25E3%2581%25A7RAPIDS%25E3%2582%2592%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2584%25E3%2581%25BE%25E3%2581%25B4%25E3%2583%25BC%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvay5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>RAPIDSのversionは23.06, cudaのversionは11.0を想定
+pyproject.tomlのdepondenciesに以下を記述する
+[tool.poetry.dependencies]
+cudf-cu11 &#x3D; { version&#x3D;&quot;^23.06&quot;, source&#x3D;&quot;rapids&quot; }
+dask-cudf-cu11 &#x3D; { version&#x3D;&quot;^23.06&quot;, source&#x3D;&quot;rapids&quot; }
+cuml-cu11 &#x3D; { version&#x3D;&quot;^23.06&quot;, source&#x3D;&quot;rapids&quot; }
+ptxcompiler-cu11 &#x3D; { version&#x3D;&quot;^0.7&quot;,...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-06-29 datetime="2023-06-29T12:40:51.000Z">2023-06-29</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-06-29 datetime="2023-06-29T12:40:51.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/ryder472/articles/86e4c7c3f06221"
+                        open
+                      >
+                        <summary class="article-expander__title">BRAVIAをコントロールしよう</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ryder472/articles/86e4c7c3f06221">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--i2KQAFpN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:BRAVIA%25E3%2582%2592%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2588%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25BF%25E3%2581%25A9%25E3%2582%258A%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNjNDMxYTY1ZDYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>リモコンが遠い
+リモコンって必要なときには見つからない｡あるあるですよね｡
+うちのTVはソニーのBRAVIAなのでVideo &amp; TV SideView: Remoteなるアプリケーションが使えます｡iOSとAndroidどちらにも対応してるアプリケーションです｡
+公式アプリなのでもちろん使えるんですがiPhoneはリモコンとして使うにはちょっと操作しにくい部分があって使いにくいんですよね｡
+例えば
+
+iPhoneの画面で操作するので触覚的にフィードバックがないから押したかわからない
+他のアプリを使ってるときにいちいち切り替えないといけない
+バックグラウンドで放置すると再接続...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/omochimaru/articles/ce050eb1fe1add"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】seabornのpenguins datasetを使って分類問題をとく</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/omochimaru/articles/ce050eb1fe1add">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--vkvEhi1V--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591seaborn%25E3%2581%25AEpenguins%2520dataset%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E5%2588%2586%25E9%25A1%259E%25E5%2595%258F%25E9%25A1%258C%25E3%2582%2592%25E3%2581%25A8%25E3%2581%258F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:omochimaru%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAzMDUxN2Q2YzIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>seabornには様々な公開データがあります。今回はその中の「prnguins dataset」を使って単回帰分析や重回帰分析をしてみます。
+目次[clickで開く/閉じる]
+
+データの概要
+データの中身の確認
+分類問題を解く
+ソースコード
+まとめ
+
+
+
+ データの概要
+
+seabornはPythonデータ視覚化ライブラリでいくつかデータセットが用意されています。今回はその中でも「Paalmer Penguins」というペンギンの測定データを含んでいる「penguins dataset」(ペンギンデータセット)を用いて分類問題を解きます。
+では、実際のデータの中身についてみていきましょ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tatsuromurata/articles/c2bb10113622a4"
+                        open
+                      >
+                        <summary class="article-expander__title">GeneCISをgoogle colabで試してみた。</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tatsuromurata/articles/c2bb10113622a4">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--l2dyWPag--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GeneCIS%25E3%2582%2592google%2520colab%25E3%2581%25A7%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2581%25B0%2520AI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VlMmM0MmY1MGYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>GeneCISとは
+GeneCISは、facebookresearchが出したさまざまなテキストプロンプトが与えられた場合に、モデルがさまざまな視覚的「類似性」の概念に適応する能力を測定するためのゼロショット評価ベンチマークです。
+https://github.com/facebookresearch/genecis
+
+ リンク
+Colab
+github
+
+ 準備
+Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。
+
+ 環境構築
+インストール手順です。
+!pip install git+https://githu...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/e3b2d71b198a01"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-255｜B - Light It Up</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/e3b2d71b198a01">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--GAw0RN_d--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-255%25EF%25BD%259CB%2520-%2520Light%2520It%2520Up%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-255 B - Light It Up
+
+
+
+ 提出結果
+import math
+
+
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def getIntListRow(N):
+    return [list(map(int, input().split())) for _ in range(N)]
+
+
+def main():
+    n, k &#x3D; getIntMap()...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/5ea8b9cbe99d60"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-255｜A - You should output ARC, though this is ABC.</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/5ea8b9cbe99d60">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--fZYueJa8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-255%25EF%25BD%259CA%2520-%2520You%2520should%2520output%2520ARC%252C%2520though%2520this%2520i...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-255 A - You should output ARC, though this is ABC.
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntListRow(N):
+    return [list(map(int, input().split())) for _ in range(N)]
+
+
+def main():
+    r, c &#x3D; getIntMap()
+    a &#x3D; getIntListRow(2)
+
+    print(a[r - 1][...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/turing_motors/articles/04c1328bf6095a"
+                        open
+                      >
+                        <summary class="article-expander__title">大規模言語モデル(LLM)の作り方 Megatron-DeepSpeed編</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/turing_motors/articles/04c1328bf6095a">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--OpOXOTxX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%25A4%25A7%25E8%25A6%258F%25E6%25A8%25A1%25E8%25A8%2580%25E8%25AA%259E%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%2528LLM%2529%25E3%2581%25AE%25E4%25BD%259C%25E3%2582%258A%25E6%2596%25B9%2520Megatron-DeepSpeed%25E7%25B7%25A8%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Tech%2520Blog%2520-%2520Turing%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kazuki%2520Fujii%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhNjYyMDc4ZDMuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NiYTAwZDNmYWIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+Turing 株式会社のリサーチチームでインターンをしている東京工業大学 B4 横田研究室の藤井(@okoge_kaz)です。
+大規模言語モデル(Large Language Model: LLM)への注目がGPT-4のリリース以降高まっていますが、LLMを作るための知見は十分に共有されているとは言い難いと個人的に感じています。
+Turingでは、Vision and Language, Video and Languageなどのマルチモーダルなモデルの研究開発を行っている一環として、Megatron-DeepSpeed, GPT-NeoXなどを用いて数十Bのモデルの学習を...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;40
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/zao_sdk/articles/zaosdk_serial_tunnel_socat"
+                        open
+                      >
+                        <summary class="article-expander__title">ZaoSDKを使ってPythonでシリアルデータを扱う方法：Socatを活用</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/zao_sdk/articles/zaosdk_serial_tunnel_socat">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--qIIeSTJG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ZaoSDK%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6Python%25E3%2581%25A7%25E3%2582%25B7%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E6%2589%25B1%25E3%2581%2586%25E6%2596%25B9%25E6%25B3%2595%25EF%25BC%259ASocat%25E3%2582%2592%25E6%25B4%25BB%25E7%2594%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25BD%25E3%2583%25AA%25E3%2583%2588%25E3%2583%25B3%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2582%25BA%2520%252F%2520Zao...%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzkzNGVlYzQxOWUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに 🚀
+シリアル通信 (UART, RS232C) はPC間の通信だけでなく各種電子機器との通信やセンサーデータを収集したりする際に幅広く利用されています。
+Zao SDKでは、映像信号だけでなくシリアルデータを送受信することができます。
+基本的にはJetson側、PC側それぞれに動作確認済みのUSBシリアルケーブルを接続するだけで、Zao SDKが仮想的なクロスケーブルとなり、遠隔の機器とシリアル通信が可能となります。
+この記事では、USBシリアルケーブルを通じて通信をするのではなく、Zas SDK for Jetsonが動作しているJetson上のPythonスクリプトでZ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/naoki0103/articles/pyclone-20230629"
+                        open
+                      >
+                        <summary class="article-expander__title">PyCloneの紹介と使い方</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/naoki0103/articles/pyclone-20230629">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--_Hvc7cEE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PyClone%25E3%2581%25AE%25E7%25B4%25B9%25E4%25BB%258B%25E3%2581%25A8%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Naoki%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKeWxCWERuLXJiTnA3UzRCb0gzQldFTGh6RlNWQkxhcTIyelQzYW89czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+PyCloneは、my-python-templateを効率的に利用するために私が作成したコマンドラインユーティリティです。このツールを使用すると、プロジェクトのクローン、セットアップ、GitHubへの初期バージョンのコミットを素早く行うことができます。my-python-templateに関するZennの記事はこちらをご覧ください。
+
+ セットアップ
+PyCloneを使用するためには、まずpyclone関数をシェルの設定ファイルにコピーする必要があります。Bashユーザーの場合は.bashrc、ZSHユーザーの場合は.zshrcとなります。
+関数の宣言は以下のようになりま...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/naoki0103/articles/my-python-template-20230629"
+                        open
+                      >
+                        <summary class="article-expander__title">Pythonプロジェクトのためのテンプレート: my-python-templateの紹介</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/naoki0103/articles/my-python-template-20230629">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--4uXARqcI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E3%2583%2586%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%2588%253A%2520my-python-template%25E3%2581%25AE%25E7%25B4%25B9%25E4%25BB%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Naoki%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKeWxCWERuLXJiTnA3UzRCb0gzQldFTGh6RlNWQkxhcTIyelQzYW89czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+Pythonプロジェクトを始める際には、プロジェクトの構造や依存関係の管理、コードの品質を保つためのツールなど、設定すべき項目が多くあります。そこで今回は、これらの設定を一元化したPythonプロジェクトのテンプレート、my-python-templateを作成しました。こちらについて今回は紹介いたします。
+
+ my-python-templateの内容
+このテンプレートには以下のファイルとフォルダが含まれています。
+
+
+pyproject.toml: プロジェクトの設定と依存関係を管理するためのファイルです。
+
+.pre-commit-config.yaml: pre-c...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-06-28 datetime="2023-06-28T23:58:02.000Z">2023-06-28</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-06-28 datetime="2023-06-28T23:58:02.000Z"></time>
           </button>
@@ -110,7 +540,7 @@ https://dis...</span>
                               <img src="https://res.cloudinary.com/zenn/image/upload/s--TPw9LRb---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Websockets%25E3%2580%2591P2P%25E5%259C%25B0%25E9%259C%2587%25E9%2580%259F%25E5%25A0%25B1%25E3%2581%25AEWebsocket%25E3%2581%25A8Misskey.py%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E5%259C%25B0%25E9%259C%2587bot%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258D%25E3%2581%2586%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259D%25E3%2581%25AB%25E3%2582%2583%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RiNTI4NjQxY2QuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
                             <span class="media-object__text">
                               <span>!
-現在この記事は古くなっています。
+最新のコードはリポジトリをご覧ください。
 
 
  はじめに
@@ -137,8 +567,7 @@ playwright
 
 
  簡単なmapを生成してみる
-まず、foliumをimportします。
-im...</span>
+まず、foliumをimportします...</span>
                                 &ensp;<span class="article-reading-time">(&hairsp;35
                                   min&hairsp;)</span>
                             </span>
@@ -9563,289 +9992,10 @@ google-colab 1.0.0 requires...</span>
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-05-31 datetime="2023-05-31T11:07:06.000Z">2023-05-31</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-05-31 datetime="2023-05-31T11:07:06.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/tatsuromurata/articles/5e13ae296651bc"
-                        open
-                      >
-                        <summary class="article-expander__title">3DOIをgoogle colabで試してみた。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tatsuromurata/articles/5e13ae296651bc">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--YZCnGMrW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:3DOI%25E3%2582%2592google%2520colab%25E3%2581%25A7%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2581%25B0%2520AI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VlMmM0MmY1MGYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>3DOIとは
-3DOIとは画像内で指定したポイントにあるObjectに対して人間がどのようなアクションを起こせるのかを推薦する3D Object InteractionのAIモデルです。
-https://jasonqsy.github.io/3DOI/
-
- リンク
-Colab
-github
-
- 準備
-Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。
-
- 環境構築
-huggingfaceにDemoが紹介されているので試したい方はそちらでも大丈夫です。今回は実際に自分のgoogle colabでも動かしてみます。
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/waiwawaiwai/articles/d4210fbf37e4d3"
-                        open
-                      >
-                        <summary class="article-expander__title">Matpotlibを動かしてみる（基礎）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/waiwawaiwai/articles/d4210fbf37e4d3">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--PUT4jLk---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Matpotlib%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25EF%25BC%2588%25E5%259F%25BA%25E7%25A4%258E%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%258F%25E3%2581%2584%25E3%2582%258F%25E3%2582%258F%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBlYzc2NzgwMTguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Matplotlibを動かす
-こんにちは、わいわわです！
-今日は実際にMatplotlibを動かしながら、
-グラフの描画の流れを学習していきます。
-
- Matplotlibとは
-pythonのためのグラフ描画ライブラリ。
-一般的な折れ線グラフ、円グラフ、棒グラフや散布図など
-データ分析に書くことのできないグラフを描画することができる！
-以前、こちらでまとめましたね！
-https://zenn.dev/waiwawaiwai/articles/d687bd390ca2b9
-
- 実演
-まず、まだインストールされてない場合はターミナルで
-pip install matplotlib
-で環境...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/dshekhar17/articles/aa5b67ba53f1b4"
-                        open
-                      >
-                        <summary class="article-expander__title">Python Decorator</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/dshekhar17/articles/aa5b67ba53f1b4">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--rcHfKuAk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:Python%2520Decorator%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Divyanshu%2520Shekhar%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YUpFOFdQVEI5RkJWSlhhaG5nem1lTVloSHBFMC1MUk5ObHpITVpESEk9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Python decorator is a powerful feature that can elevate your code to new heights. They allow you to modify the behavior of functions or classes without directly altering their source code. In this blog, we’ll dive into the world of decorators, covering their purpose, syntax, and practical use cas...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/393e1ed8089ca1"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-236｜A - chukodai</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/393e1ed8089ca1">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--iQ_wOpnN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-236%25EF%25BD%259CA%2520-%2520chukodai%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-236 A - chukodai
-
-
-
- 提出結果
-def getString():
-    return input()
-
-def getIntMap():
-    return map(int, input().split())
-
-def main():
-    s &#x3D; list(getString())
-    a, b &#x3D; getIntMap()
-
-    s[a - 1], s[b - 1] &#x3D; s[b - 1], s[a - 1]
-
-    print(&quot;&quot;.join(s))
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    mai...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/004e159c3e8d8c"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-236｜B - Who is missing?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/004e159c3e8d8c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--IC5iNzaY--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-236%25EF%25BD%259CB%2520-%2520Who%2520is%2520missing%253F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-236 B - Who is missing?
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-def getIntList():
-    return list(map(int, input().split()))
-
-def main():
-    n &#x3D; getInt()
-    a &#x3D; getIntList()
-
-    b &#x3D; {}
-    for x in a:
-        b.setdefault(x, 0)
-        b[x] +&#x3D; 1
-
-    r &#x3D; [k for k, v in b....</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/codehex/articles/81f6eb63f2942a"
-                        open
-                      >
-                        <summary class="article-expander__title">Python 初心者が始める AI 時代の Docker を使ったアプリ開発</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/codehex/articles/81f6eb63f2942a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--XFXLOmMq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520%25E5%2588%259D%25E5%25BF%2583%25E8%2580%2585%25E3%2581%258C%25E5%25A7%258B%25E3%2582%2581%25E3%2582%258B%2520AI%2520%25E6%2599%2582%25E4%25BB%25A3%25E3%2581%25AE%2520Docker%2520%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E9%2596%258B%25E7%2599%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:codehex%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ1ZWY0NmIwNWMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>最近の AI 技術の進歩は目覚ましく、OpenAI による ChatGPT などの API の提供は沢山のアプリケーション開発者にとって Python を使った開発を始めるきっかけになったのではないでしょうか。筆者もそのうちの 1 人です。
-効率的かつ再現性の高い開発環境は必要不可欠であり、それを実現するためのツールの一つが Docker です。Docker はアプリケーションを容易に再現可能なコンテナ内で動作させることができ、開発から本番環境まで一貫した環境を提供します。これで「僕の環境では動いているんですけどねぇ...」といった問題[1]を避けることができます。
-本記事では、AI 時...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-05-30 datetime="2023-05-30T14:06:26.000Z">2023-05-30</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-05-30 datetime="2023-05-30T14:06:26.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/curry/articles/95fe24c34839ba"
-                        open
-                      >
-                        <summary class="article-expander__title">いまさらTransformerをスクラッチ実装してAttentionとかの中身についていろいろ試してみる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/curry/articles/95fe24c34839ba">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--LggmNpR0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%2584%25E3%2581%25BE%25E3%2581%2595%25E3%2582%2589Transformer%25E3%2582%2592%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25A9%25E3%2583%2583%25E3%2583%2581%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2597%25E3%2581%25A6Attention%25E3%2581%25A8%25E3%2581%258B%25E3%2581%25AE%25E4%25B8%25AD%25E8%25BA%25AB%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258D%25E3%2581%2584%25E3%2582%258D%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:imori%2520no%2520shippo%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzgyZWM1NTgyMjcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Transformerがすごい時代だが、Transformerの中身のはたらきについて、ちゃんと知りたいなと思った。
-torchとかでも実装の説明サイトがあった気がしたが、それを写経してもつまらんなと思い、自分でスクラッチ実装してみた。
-無駄な時間を、、、と言われる気もするが。
-いつかLLMもつくっていきたいなあ、、
-実装のための論文はこれ　https://arxiv.org/abs/1706.03762
--- 注意 --
-
-オレオレ実装なので、多少の間違いが含まれる可能性もあるので注意。
-今回は、学習データ数が400くらいで、valid lossは全く減っていないのでかなりの過学習であ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5407629166">
-        <time id="build-timestamp" datetime="2023-06-29T01:50:22.379Z">2023-06-29T01:50:22.379Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5418440085">
+        <time id="build-timestamp" datetime="2023-06-30T01:48:55.153Z">2023-06-30T01:48:55.153Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
