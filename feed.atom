@@ -2,10 +2,217 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-07-03T01:53:55.109Z</updated>
+    <updated>2023-07-04T01:55:14.961Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[mpt-7b-chatとmpt-30b-chatを試す]]></title>
+        <id>https://zenn.dev/tossy21/articles/463bff0ec30748</id>
+        <link href="https://zenn.dev/tossy21/articles/463bff0ec30748"/>
+        <updated>2023-07-04T00:41:49.000Z</updated>
+        <summary type="html"><![CDATA[mpt-7b-chatとは
+mpt-7b-chatは、チャットボットのようなモデルです。
+ShareGPT-Vicuna、HC3、Alpaca、HH-RLHF、Evol-Instructの各データセットでMPT-7Bをファインチューニングしています。
+https://huggingface.co/mosaicml/mpt-7b-chat
+
+ mpt-7b-chatを動かす(Google Colab)
+Google Colab上で動かしてみます。
+GPUのタイプは「A100」としました。
+
+ 各種インストール
+!pip install transformers
+!pip install...]]></summary>
+        <author>
+            <name>tossy</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Python]便利な組み込み関数チートシート]]></title>
+        <id>https://zenn.dev/giba/articles/8ca97ae2c355c5</id>
+        <link href="https://zenn.dev/giba/articles/8ca97ae2c355c5"/>
+        <updated>2023-07-04T00:21:14.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Pythonには様々な組み込み関数が用意されており、これらを活用することで様々な処理を効率的に行うことができます。以下に便利な組み込み関数一覧を纏めました。
+※随時更新中
+
+ 組み込み関数一覧
+
+
+len(): シーケンス（リストや文字列など）の要素数を返します。
+list_data = [1, 2, 3, 4, 5]
+print(len(list_data))  # 5
+
+
+
+type(): 引数の型を返します。
+print(type(123))  # <class 'int'>
+print(type('hello'))  # <class 'str'&...]]></summary>
+        <author>
+            <name>GIBA</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WebカメラでYOLOv8を動かす【スニペット有】]]></title>
+        <id>https://zenn.dev/straydog/articles/4965a62e6fbb97</id>
+        <link href="https://zenn.dev/straydog/articles/4965a62e6fbb97"/>
+        <updated>2023-07-03T14:38:43.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+久々に YOLO を動かしてみた。しばらく見ないうちに色んなタイプのモデルが出ていてびっくりしました。自分が真面目に動かしていたのは yolov3 くらいだったので。今回は yolov8 を動かしてみました。
+今回の環境は windows です。
+
+ ライブラリのインストール
+pip install opencv-python ultralytics
+
+ 物体検出
+以下、スニペットです。ほとんど公式のコードをそのまま使っています。いくつかのモデルは実行時にダウンロードされるみたいですが、基本的には、Github にあるモデルをダウンロードしてきた方が迷わないと思います。
+見...]]></summary>
+        <author>
+            <name>stray dog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Intel one API利用時のpybind11]]></title>
+        <id>https://zenn.dev/satoeu/articles/b9169ae672a83e</id>
+        <link href="https://zenn.dev/satoeu/articles/b9169ae672a83e"/>
+        <updated>2023-07-03T11:25:33.000Z</updated>
+        <summary type="html"><![CDATA[Intel one API利用時のpybind11
+C++とPythonを連携させる方法は色々あります。ちょっとしたC++プログラムなら、普通にdllにしてctypesを使えばいいと思いますが、C++オブジェクトと連携させたい場合は面倒です。そういう場合は、個人的には、現状だとpybind11が一番良いのではないかと思っています。ですが、pybind11をIntelコンパイラ環境下で使う場合はどうすればいいのか、というのが情報が少ないようです。そこで調べてみたので、まとめて報告します。
+
+ 下準備
+
+ 下準備１～ソースコードの取得
+色々な方法はあると思いますが、手っ取り早く、ソースを...]]></summary>
+        <author>
+            <name>satoeu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Poetry1.5.1からGPU版のPytorchのインストールが簡単になりました]]></title>
+        <id>https://zenn.dev/zerebom/articles/b338784c8ac76a</id>
+        <link href="https://zenn.dev/zerebom/articles/b338784c8ac76a"/>
+        <updated>2023-07-03T11:11:09.000Z</updated>
+        <summary type="html"><![CDATA[結論
+GPU版PytorchのようなPyPIに存在しないパッケージにおいて、Poetry1.5.1からインストールがより簡単になりました🎉
+例えば自分の環境では下記の2行でインストールできます。
+poetry source add torch_cu118 --priority=explicit https://download.pytorch.org/whl/cu118
+poetry add torch torchvision torchaudio --source torch_cu118
+具体的には下記の手順できます。
+
+公式サイトから、インストールコマンドをコピーする。
+
+htt...]]></summary>
+        <author>
+            <name>zerebom</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[orcaLLM13Bをgoogle colabで試してみた]]></title>
+        <id>https://zenn.dev/tatsuromurata/articles/86f859bd717712</id>
+        <link href="https://zenn.dev/tatsuromurata/articles/86f859bd717712"/>
+        <updated>2023-07-03T10:13:37.000Z</updated>
+        <summary type="html"><![CDATA[OrcaLLMとは
+orcaLLMは、chatGPTの論理プロセスをシュミレートさせて作成されたfinetuned型のLLMです。
+https://www.kdnuggets.com/2023/06/orca-llm-reasoning-processes-chatgpt.html
+
+ リンク
+Colab
+github
+
+ 準備
+Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。
+
+ 環境構築
+インストール手順です。
+!pip install -q auto-gptq
+
+ 推論
+(1)モデルのロード
+from t...]]></summary>
+        <author>
+            <name>しば🐕AI</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Djangoのエラーメッセージについて気づいたこと]]></title>
+        <id>https://zenn.dev/gensha5/articles/f300f6e4697b77</id>
+        <link href="https://zenn.dev/gensha5/articles/f300f6e4697b77"/>
+        <updated>2023-07-03T06:55:44.000Z</updated>
+        <summary type="html"><![CDATA[本記事ではDjangoが出すエラーについて気づいたことがあるのでそれについて書きます。
+端的に言うと、「開始タグ」を間違えると「閉じタグ」はそれに対応したタグにすること、をエラーメッセージでは提案される、ということです。
+
+ 発生した状況
+下にbase.htmlでは{% block content %}{% endblock content %}でページごとに異なる部分を指定しています。
+
+base.html
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags...]]></summary>
+        <author>
+            <name>gensha5</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-257｜B - 1D Pawn]]></title>
+        <id>https://zenn.dev/hyperdb/articles/28888942bbb745</id>
+        <link href="https://zenn.dev/hyperdb/articles/28888942bbb745"/>
+        <updated>2023-07-03T04:53:10.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-257 B - 1D Pawn
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n, k, q = getIntMap()
+    a = getIntList()
+    l = getIntList()
+
+    for x in l:
+        p = a[x - 1]
+        if p == n or ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-257｜A - A to Z String 2]]></title>
+        <id>https://zenn.dev/hyperdb/articles/0f457f6354eda2</id>
+        <link href="https://zenn.dev/hyperdb/articles/0f457f6354eda2"/>
+        <updated>2023-07-03T04:53:09.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-257 A - A to Z String 2
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    n, x = getIntMap()
+
+    print(chr(ord('A') + (x - 1) // n))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[VoicyやYoutubeのリンクを入力して、OpenAI APIを使用して内容を要約するアプリを作ってみよう！]]></title>
         <id>https://zenn.dev/heku/articles/1a1c1c7b59e8ef</id>
@@ -6343,127 +6550,6 @@ https://django-rest-framework-json-api.readthedocs.io/en/stable/getting-started.
 git clone https://github.com/djang...]]></summary>
         <author>
             <name>nakamura196</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonで学ぶデジタル信号処理（2離散時間信号とシステム①）]]></title>
-        <id>https://zenn.dev/kazu22/articles/1828651bed378c</id>
-        <link href="https://zenn.dev/kazu22/articles/1828651bed378c"/>
-        <updated>2023-06-04T13:30:36.000Z</updated>
-        <summary type="html"><![CDATA[離散時間信号の表現と性質
-離散時間信号は、ディジタル信号処理において非常に重要な役割を果たします。この記事では、離散時間信号の表現と性質について詳しく説明します。
-
- 離散時間信号とは
-離散時間信号は、時間が離散的な値を取る信号です。つまり、時間が連続的ではなく、一定の時間間隔で値がサンプリングされたものです。離散時間信号は、アナログ信号をディジタル化する際に生成されます。離散時間信号は、離散時間インデックスと信号値のペアの集合として以下のように表現されます。離散時間インデックスはサンプリング周波数で正規化された時間を表します。
-
-..., f[-1], f[0], f[1], .....]]></summary>
-        <author>
-            <name>Kazu22</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ArchicadでMVOと連動し工区境をスパン間に設定できるステップビュー作成手法～概要編～]]></title>
-        <id>https://zenn.dev/cote2/articles/e4b16d1d22f20a</id>
-        <link href="https://zenn.dev/cote2/articles/e4b16d1d22f20a"/>
-        <updated>2023-06-04T11:59:25.000Z</updated>
-        <summary type="html"><![CDATA[Archicadで施工ステップや4Dシミュレーションを行う時みなさんどうやっているでしょうか。
-概ね「レイヤーで分割する」「プロパティにステップを入れてCtrl+Fで選択→F5」「リノベーションステータス」のいずれかで実施しているのでは無いでしょうか。
-今回私は上記と異なる、MVO（モデル表示オプション）を利用した第4の手法を開発しました！
-まずは30秒の動画をご覧ください。
-https://youtu.be/JjVQ9UvnnPM
-GDLとPython（ArchciadのPythonパレットではなく、出力したGSMファイルの書き換えに使用）、ソリッド編集によって実現しています。
-
- 特...]]></summary>
-        <author>
-            <name>Kotetsu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Vision Transformerをスクラッチ実装して、Attentionとか調べてみる]]></title>
-        <id>https://zenn.dev/curry/articles/db239673f09e01</id>
-        <link href="https://zenn.dev/curry/articles/db239673f09e01"/>
-        <updated>2023-06-04T06:09:31.000Z</updated>
-        <summary type="html"><![CDATA[Transformer系をスクラッチ実装して、今回はViT（VisionTransformer）を実装する。
-参考論文はこちら　https://arxiv.org/abs/2010.11929
-中身はかんたんで、入力画像を固定サイズにパッチ化して、各パッチをシーケンス形式のshapeに変えてTransformerのEncoderに入れるだけ。
-
- Patch
-torchのunfold を使うとかんたんにパッチ可できる。
-１回のunfoldで1つの次元に対してパッチ化するので、画像（2次元）なら、unfoldを2回適用する必要がある。
-unfoldしたら、（バッチサイズ、パッチ数、特徴量次...]]></summary>
-        <author>
-            <name>imori no shippo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[線形単回帰分析について]]></title>
-        <id>https://zenn.dev/waiwawaiwai/articles/c6673eafe5343e</id>
-        <link href="https://zenn.dev/waiwawaiwai/articles/c6673eafe5343e"/>
-        <updated>2023-06-04T06:04:29.000Z</updated>
-        <summary type="html"><![CDATA[線形単回帰分析
-こんにちは！わいわわです！
-前回は相関係数を学習し2つのデータの関係性を求めていきました。
-今回のテーマは「回帰分析によって数値を予測する」です！
-頑張っていきましょう！
-
- 線形回帰分析
-回帰分析とは、数値を予測する分析です。
-回帰は「あることが行われて、また元と同じ状態に戻ること」を言います。
-線形回帰...説明変数に対して、目的変数が線形に近い値で表される状態のこと
-この線形回帰を用いて回帰分析を行うことを線形回帰分析という！
-
- モデリング
-データ分析や機械学習の根底にあるのは「統計的なモデリング」の考え方です。
-モデリング...具体的なデータを数式や数理的な...]]></summary>
-        <author>
-            <name>わいわわ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Situs Slot Kakek Petir Slot Zeus Pragmaticplay Gampang Menang]]></title>
-        <id>https://zenn.dev/slotgacor/articles/73a4e2f529d321</id>
-        <link href="https://zenn.dev/slotgacor/articles/73a4e2f529d321"/>
-        <updated>2023-06-03T22:33:02.000Z</updated>
-        <summary type="html"><![CDATA[Situs Slot Kakek Petir Slot Zeus Pragmaticplay Gampang Menang
-
-Apakah anda mencari situs Slot Zeus provider pragmaticplay online tentu saja bukan lah yang sulit. Pada umumnya agen slot gacor terbaik hanya menyediakan taruhan dengan menggunakan uang asli namun zeus slot juga menyediakan demo slo...]]></summary>
-        <author>
-            <name>slotgacor</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python List Comprehension]]></title>
-        <id>https://zenn.dev/dshekhar17/articles/c840bb337392b9</id>
-        <link href="https://zenn.dev/dshekhar17/articles/c840bb337392b9"/>
-        <updated>2023-06-03T17:53:48.000Z</updated>
-        <summary type="html"><![CDATA[##List Creation
-The below code is the normal way of creating a list in python and using the append function to append an element at the end of the list.
-Python List
-num_list = []
-num_list2 = ['Hello', 'world']
-num_list.append(1)
-num_list.append(2)
-num_list.append(3)
-num_list.append(4)
-num_list.ap...]]></summary>
-        <author>
-            <name>Divyanshu Shekhar</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[プログラマーのための数学講義（1）フラクタル]]></title>
-        <id>https://zenn.dev/acorn/articles/a846853385a194</id>
-        <link href="https://zenn.dev/acorn/articles/a846853385a194"/>
-        <updated>2023-06-03T14:30:48.000Z</updated>
-        <summary type="html"><![CDATA[ネタが最近なくなってきたので、これからは私が得意な数学の記事を書いていきたいと思います。第一回目はフラクタルについてです
-
- フラクタルについて
-フラクタルは幾何学の概念の一つ。簡単に説明すると図形の中におんなじ形（相似）な図形があるという図形。身近な例としてよく言われるのは海岸線です。海岸線は遠くから見ると直線のように見えるのですが、だんだん近づいてみると細かい凹凸があります。つまりフラクタルの図形というのは長さを測定することができない（無限に続く）のです。より近づいてみても凹凸が途切れることはないからです。今回は面白いフラクタルの図形をいくつか紹介します。
-
- コッホ雪片
-一つ目はコ...]]></summary>
-        <author>
-            <name>Mr.Acorn</name>
         </author>
     </entry>
 </feed>
