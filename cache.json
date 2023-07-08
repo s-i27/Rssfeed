@@ -12,6 +12,156 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/johndoe/articles/9a5b38973562dc",
+          "author": "John",
+          "description": "概要\n\n仕事の中で以下の一連の流れを50フォルダ以上はするという場面に遭遇しました。\n\ntemplateフォルダからファイルをコピーして特定の名前にして作成\nそのファイル全てにおいて特定の文字列の置換作業を行う\nWinmergeを用いてtemplateの差分比較をフォルダの全ファイル行う\n\n自分は飽き性なので脳が弱いので同じことをすると目が滑って訳分からなくなりますし、\n1フォルダに少なくとも8ファイルはあるので400ファイル以上WinMergeでの比較を行わなければならないと考えたら手が震えてきたので機械に任せることにしました。\n\n\n 方針\n\n1,2に関してはフォルダをコピーしてフ...",
+          "link": "https://zenn.dev/johndoe/articles/9a5b38973562dc",
+          "publishedOn": "2023-07-07T17:50:51.000Z",
+          "wordCount": 1411,
+          "title": "(手動は目が滑る)pythonでフォルダ複製から変換、差分比較結果作成まで自動で行うTIPS",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--y-VXKCuw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%2528%25E6%2589%258B%25E5%258B%2595%25E3%2581%25AF%25E7%259B%25AE%25E3%2581%258C%25E6%25BB%2591%25E3%2582%258B%2529python%25E3%2581%25A7%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25AB%25E3%2583%2580%25E8%25A4%2587%25E8%25A3%25BD%25E3%2581%258B%25E3%2582%2589%25E5%25A4%2589%25E6%258F%259B%25E3%2580%2581%25E5%25B7%25AE%25E5%2588%2586%25E6%25AF%2594%25E8%25BC%2583%25E7%25B5%2590%25E6%259E%259C%25E4%25BD%259C%25E6%2588%2590%25E3%2581%25BE%25E3%2581%25A7%25E8%2587%25AA%25E5%258B%2595%25E3%2581%25A7%25E8%25A1%258C%25E3%2581%2586TIPS%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:John%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNjMGQ4N2M1ZTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--y-VXKCuw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%2528%25E6%2589%258B%25E5%258B%2595%25E3%2581%25AF%25E7%259B%25AE%25E3%2581%258C%25E6%25BB%2591%25E3%2582%258B%2529python%25E3%2581%25A7%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25AB%25E3%2583%2580%25E8%25A4%2587%25E8%25A3%25BD%25E3%2581%258B%25E3%2582%2589%25E5%25A4%2589%25E6%258F%259B%25E3%2580%2581%25E5%25B7%25AE%25E5%2588%2586%25E6%25AF%2594%25E8%25BC%2583%25E7%25B5%2590%25E6%259E%259C%25E4%25BD%259C%25E6%2588%2590%25E3%2581%25BE%25E3%2581%25A7%25E8%2587%25AA%25E5%258B%2595%25E3%2581%25A7%25E8%25A1%258C%25E3%2581%2586TIPS%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:John%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNjMGQ4N2M1ZTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/weekdevs/articles/d98b7f30c5a9f5",
+          "author": "weekdevs",
+          "description": "序論\n\n某ロンマスクによるツイッターAPIの有料化により多くの有益botへ被害がでた。\nSeleniumを用いればそんな被害を受けずに自動ツイートが可能だ。Seleniumはブラウザを操作するpythonライブラリーである。Seleniumはブラウザを操作するため、通常はPC一台を常時稼働させる必要がある。Seleniumによるツイッター投稿をHerokuなどのリモートサーバーで実行できればとても嬉しい。\n\nこの記事は、\nSeleniumを用いてツイッターに\n1.　ローカルで投稿する方法\n2.　Herokuで投稿する方法\nを解説する。\n!\n当記事は2023/07/08現在の情報です。...",
+          "link": "https://zenn.dev/weekdevs/articles/d98b7f30c5a9f5",
+          "publishedOn": "2023-07-07T17:18:37.000Z",
+          "wordCount": 2353,
+          "title": "Selenium x Heroku でTwitter自動投稿",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--jcJTIKjP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Selenium%2520x%2520Heroku%2520%25E3%2581%25A7Twitter%25E8%2587%25AA%25E5%258B%2595%25E6%258A%2595%25E7%25A8%25BF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:weekdevs%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VmYTM5NmM5ODcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--jcJTIKjP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Selenium%2520x%2520Heroku%2520%25E3%2581%25A7Twitter%25E8%2587%25AA%25E5%258B%2595%25E6%258A%2595%25E7%25A8%25BF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:weekdevs%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VmYTM5NmM5ODcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/torachi0401/articles/poppler_install",
+          "author": "Torachi0401",
+          "description": "PythonでPDFを画像に変換したい！\n画像認識やOCR認識を行うための準備\n\npdf2image を使用するには poppler のインストールが必要。\n正確にはインストールではなく PATH を通すという表現が正しい。\n\n\n ダウンロード\n\nGitHub_poppler_windows\n\n解凍し、フォルダーをpopplerにリネーム\n使用したいディレクトリに上記フォルダーをおく\n\n\n Path を通す\nimport os\nfrom pathlib import Path\n\npoppler_dir = Path(__file__).parent.absolute() / \"pop...",
+          "link": "https://zenn.dev/torachi0401/articles/poppler_install",
+          "publishedOn": "2023-07-07T15:44:05.000Z",
+          "wordCount": 171,
+          "title": "PythonでPDFをimage画像に変換する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--8yEHfIgT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7PDF%25E3%2582%2592image%25E7%2594%25BB%25E5%2583%258F%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Torachi0401%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzMjdjNjRiN2MuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--8yEHfIgT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7PDF%25E3%2582%2592image%25E7%2594%25BB%25E5%2583%258F%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Torachi0401%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzMjdjNjRiN2MuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/yoshida0312/articles/8f10d1380b4d98",
+          "author": "よしだ",
+          "description": "はじめに\n今回は階層モデルとモデルの比較方法についてみていきます。\n\n ライブラリのインポート\nimport os\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\nimport seaborn as sns\nimport arviz as az\n\nimport pymc as pm\nimport pytensor.tensor as pt\n\n\n# Initialize random number generator\nRANDOM_SEED = 8927\nrng = np.random.def...",
+          "link": "https://zenn.dev/yoshida0312/articles/8f10d1380b4d98",
+          "publishedOn": "2023-07-07T15:22:32.000Z",
+          "wordCount": 1800,
+          "title": "PyMC：階層モデルとモデルの比較",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--e7w27TgB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PyMC%25EF%25BC%259A%25E9%259A%258E%25E5%25B1%25A4%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25A8%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AE%25E6%25AF%2594%25E8%25BC%2583%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--e7w27TgB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PyMC%25EF%25BC%259A%25E9%259A%258E%25E5%25B1%25A4%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25A8%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AE%25E6%25AF%2594%25E8%25BC%2583%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/yoshida0312/articles/bbd246d3da42b3",
+          "author": "よしだ",
+          "description": "はじめに\n今回は重回帰を題材として私がStanやNumPyroと比べても便利だと感じた点を中心にPyMCの様々な機能を紹介していきます。\n\n ライブラリのインポート\nimport os\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\nimport seaborn as sns\nimport arviz as az\n\nimport pymc as pm\nimport pytensor.tensor as pt\n\n\n# Initialize random number generator\nRAN...",
+          "link": "https://zenn.dev/yoshida0312/articles/bbd246d3da42b3",
+          "publishedOn": "2023-07-07T09:03:42.000Z",
+          "wordCount": 3861,
+          "title": "PyMC：重回帰を題材にしたPyMCの紹介",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--Pgvgd4Qq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PyMC%25EF%25BC%259A%25E9%2587%258D%25E5%259B%259E%25E5%25B8%25B0%25E3%2582%2592%25E9%25A1%258C%25E6%259D%2590%25E3%2581%25AB%25E3%2581%2597%25E3%2581%259FPyMC%25E3%2581%25AE%25E7%25B4%25B9%25E4%25BB%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Pgvgd4Qq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PyMC%25EF%25BC%259A%25E9%2587%258D%25E5%259B%259E%25E5%25B8%25B0%25E3%2582%2592%25E9%25A1%258C%25E6%259D%2590%25E3%2581%25AB%25E3%2581%2597%25E3%2581%259FPyMC%25E3%2581%25AE%25E7%25B4%25B9%25E4%25BB%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/pseudo_shocker/articles/a2e452dcf74fb4",
+          "author": "猫の足跡",
+          "description": "ズーム機能\nフッター部分にスライダーコントロールを設置しズーミングを行う\nズーミングの中心点は、ゲージ線のボックス部分の中心とする\n\n ズーム率\nkvファイルにおいて、FooterWidgetにスライダーコントロールを追加する\nFooterWidget:\n    FloatLayout:\n        pos:            self.parent.pos\n        size:           self.parent.size\n\n        Slider:\n            canvas.before:\n                Color:\n  ...",
+          "link": "https://zenn.dev/pseudo_shocker/articles/a2e452dcf74fb4",
+          "publishedOn": "2023-07-07T08:14:56.000Z",
+          "wordCount": 393,
+          "title": "Python + Kivy で作ってみた【Ⅶ】",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--PFsjF_1f--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520%252B%2520Kivy%2520%25E3%2581%25A7%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2590%25E2%2585%25A6%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%258C%25AB%25E3%2581%25AE%25E8%25B6%25B3%25E8%25B7%25A1%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZlU1Tm50TWJVazV5TFR6TzdRZF9STHI1dFBqcm5DbXNqQXUwZ1Q9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--PFsjF_1f--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520%252B%2520Kivy%2520%25E3%2581%25A7%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2590%25E2%2585%25A6%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%258C%25AB%25E3%2581%25AE%25E8%25B6%25B3%25E8%25B7%25A1%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZlU1Tm50TWJVazV5TFR6TzdRZF9STHI1dFBqcm5DbXNqQXUwZ1Q9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/aew2sbee/articles/docker-react-env",
+          "author": "ふるた なおき🥝",
+          "description": "はじめに\n以前、DockerコマンドでReactを立ち上げる方法の勉強をしたので、執筆します。\n下記の画面が表示されるまでを解説したいと思います。\n\n\n\n\n項目\n内容\n\n\n\n\n対象者\n・Docker初学者\n\n\n伝えたい内容\n・DockerコマンドでReactを立ち上げる方法\n\n\n前提条件\n・node:14.17.0\n\n\n\n\n Docker DeskTopのインストール\n\n 1. インストーラーのダウンロード\n下記URLをクリックし、Docker Desktopのインストーラーをダウンロードします。\n\n\n\n 2. インストール開始\nデフォルトのままのチェック状態でOKをクリックしてくだ...",
+          "link": "https://zenn.dev/aew2sbee/articles/docker-react-env",
+          "publishedOn": "2023-07-07T05:45:03.000Z",
+          "wordCount": 702,
+          "title": "【Docker】Reactの環境構築",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--1i2171NP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Docker%25E3%2580%2591React%25E3%2581%25AE%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B5%25E3%2582%258B%25E3%2581%259F%2520%25E3%2581%25AA%25E3%2581%258A%25E3%2581%258D%2520%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YTFYdHhmWGZPVmpKek9sTnQ0cDZmaWQyeENLMTlKOEl0akpQczZiZz1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--1i2171NP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Docker%25E3%2580%2591React%25E3%2581%25AE%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B5%25E3%2582%258B%25E3%2581%259F%2520%25E3%2581%25AA%25E3%2581%258A%25E3%2581%258D%2520%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YTFYdHhmWGZPVmpKek9sTnQ0cDZmaWQyeENLMTlKOEl0akpQczZiZz1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/adamof/articles/31560332ba1442",
+          "author": "adamof",
+          "description": "ここに2つのDockerコンテナ、AとBがあったとします。Aコンテナでデータを処理したあと、Bコンテナにデータを送ります。受け取ったBコンテナは、また別の処理をし、Aコンテナへデータを返却します。この一連の流れを実現するにはどうすればいいか、実例で説明します。\n説明の前に重要なポイントを洗い出します。\n\n\nBコンテナにアクセスするためのアドレスの指定を間違えずに行う。最重要です。\n\n\ndocker-compose.yml ファイルで2つのコンテナを起動すると、同一のネットワークが割り当てられます。\n\n\n同じネットワーク内のコンテナは、お互いのサービス名とネットワーク内のポート番号を使って...",
+          "link": "https://zenn.dev/adamof/articles/31560332ba1442",
+          "publishedOn": "2023-07-07T04:49:55.000Z",
+          "wordCount": 1179,
+          "title": "2つのDockerコンテナ同士にお話させる",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--n-9DFSWX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:2%25E3%2581%25A4%25E3%2581%25AEDocker%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2586%25E3%2583%258A%25E5%2590%258C%25E5%25A3%25AB%25E3%2581%25AB%25E3%2581%258A%25E8%25A9%25B1%25E3%2581%2595%25E3%2581%259B%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:adamof%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk5OGM3ODJmNGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--n-9DFSWX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:2%25E3%2581%25A4%25E3%2581%25AEDocker%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2586%25E3%2583%258A%25E5%2590%258C%25E5%25A3%25AB%25E3%2581%25AB%25E3%2581%258A%25E8%25A9%25B1%25E3%2581%2595%25E3%2581%259B%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:adamof%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk5OGM3ODJmNGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/9982e0e7e440b2",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-261 B - Tournament Result\n\n\n\n 提出結果\ndef getInt():\n    return int(input())\n\n\ndef getStringListRow(N):\n    return [list(input()) for _ in range(N)]\n\n\ndef rotate(x, n):\n    b = []\n    for i in range(n):\n        t = []\n        for j in range(n):\n            t.append(x[j][i])\n        b.ap...",
+          "link": "https://zenn.dev/hyperdb/articles/9982e0e7e440b2",
+          "publishedOn": "2023-07-07T04:31:29.000Z",
+          "wordCount": 638,
+          "title": "［AtCoder］ABC-261｜B - Tournament Result",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--n1IX4LEV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-261%25EF%25BD%259CB%2520-%2520Tournament%2520Result%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--n1IX4LEV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-261%25EF%25BD%259CB%2520-%2520Tournament%2520Result%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/57eea2edf555b8",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-261 A - Intersection\n\n\n\n 提出結果\ndef getIntMap():\n    return map(int, input().split())\n\n\ndef main():\n    l1, r1, l2, r2 = getIntMap()\n\n    ln = min(r1, r2) - max(l1, l2)\n\n    print(ln if ln >= 0 else 0)\n\n\nif __name__ == \"__main__\":\n    main()",
+          "link": "https://zenn.dev/hyperdb/articles/57eea2edf555b8",
+          "publishedOn": "2023-07-07T04:31:29.000Z",
+          "wordCount": 277,
+          "title": "［AtCoder］ABC-261｜A - Intersection",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--vvGbBpXE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-261%25EF%25BD%259CA%2520-%2520Intersection%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--vvGbBpXE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-261%25EF%25BD%259CA%2520-%2520Intersection%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
           "id": "https://zenn.dev/dxtend/articles/cdd70d8833453d",
           "author": "DXtend",
           "description": "venv を使うと、プロジェクトごとに分離された Python の実行環境を作ることができる。\n\n 仮想環境の構築\n\n 1. ディレクトリに移動\n\nプロジェクトを配置しているディレクトリに移動\n\ncd ディレクトリパス\n\n 2. 環境の作成\npython3 -m venv venv\n\n 3. 環境を有効化\n. venv/bin/activate\n\n上記(2)(3)を .zshrc のエイリアスに pyv などで登録しておくと楽。\n\nalias pyv='python3 -m venv venv && . venv/bin/activate'\n\n\n\n\n 4. VS Code...",
@@ -4075,141 +4225,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--vBRUqXb3--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_68:Wagtail%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nakamura196%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pkd3BpX1gzTWIzV3VqTnVnV2tPTlJlU3VsNFNTN1BNMWlPQm9LRm5JPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/danishi/articles/endoflife-date-notify",
-          "author": "danishi",
-          "description": "やりたいこと\nendoflife.dateにはさまざまなプロダクトのEOL情報がまとめられています。\nまた、その情報を取得できるAPIも用意されています。\n普段よく使うプロダクトのEOLが気づいたら間近に迫って大慌てで対応することにならないように、毎日自動チェックを行いその結果をSlack通知できるようにしてみようと思いました。\n\n 手順\n\n 事前準備\n通知用のSlackチャンネルとSlack Appを作ってIncoming Webhooks URLを作っておきます。\n\n\n Lambdaを作成\n以下のコードでPython Lambdaを作ります。\n\nlambda_function.p...",
-          "link": "https://zenn.dev/danishi/articles/endoflife-date-notify",
-          "publishedOn": "2023-06-08T12:58:13.000Z",
-          "wordCount": 1272,
-          "title": "endoflife.dateとLambdaを使ってSlackに自動でプロダクトのEOLを通知する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--s-XaonvP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:endoflife.date%25E3%2581%25A8Lambda%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6Slack%25E3%2581%25AB%25E8%2587%25AA%25E5%258B%2595%25E3%2581%25A7%25E3%2583%2597%25E3%2583%25AD%25E3%2583%2580%25E3%2582%25AF%25E3%2583%2588%25E3%2581%25AEEOL%25E3%2582%2592%25E9%2580%259A%25E7%259F%25A5%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:danishi%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI2NDcyYzY4NDIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--s-XaonvP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:endoflife.date%25E3%2581%25A8Lambda%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6Slack%25E3%2581%25AB%25E8%2587%25AA%25E5%258B%2595%25E3%2581%25A7%25E3%2583%2597%25E3%2583%25AD%25E3%2583%2580%25E3%2582%25AF%25E3%2583%2588%25E3%2581%25AEEOL%25E3%2582%2592%25E9%2580%259A%25E7%259F%25A5%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:danishi%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI2NDcyYzY4NDIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/raio/articles/34a2cbfabf5cf3",
-          "author": "Raio14f",
-          "description": "はじめに\n高校生エンジニアのRaioです🙌\n学生をしながら、放課後や休日はIT企業のエンジニアとしてアルバイトしています。\nhttps://zenn.dev/raio/articles/2478a66537c685\n\n 本を出版しました\n【個人開発で稼ごう】 という本をAmazonに出版しました！\nご興味ある方は、読んでみてください👀\nhttps://amzn.to/3NjT5AC\n\n AIの定義とその可能性\nAIは、数学とソフトウェアコードを用いて、人間が知識を理解、合成、生成する方法をコンピュータに教えることです。AIは他の技術と同様に、人間によって所有・制御されています。AIが...",
-          "link": "https://zenn.dev/raio/articles/34a2cbfabf5cf3",
-          "publishedOn": "2023-06-08T11:46:38.000Z",
-          "wordCount": 146,
-          "title": "AIが世界を救う理由",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--jiI60feH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2581%258C%25E4%25B8%2596%25E7%2595%258C%25E3%2582%2592%25E6%2595%2591%25E3%2581%2586%25E7%2590%2586%25E7%2594%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Raio14f%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdjOGJiMmU3N2YuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--jiI60feH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2581%258C%25E4%25B8%2596%25E7%2595%258C%25E3%2582%2592%25E6%2595%2591%25E3%2581%2586%25E7%2590%2586%25E7%2594%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Raio14f%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdjOGJiMmU3N2YuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/tatsuromurata/articles/838d9d102b7355",
-          "author": "しば🐕AI",
-          "description": "ViCoとは\nViCoは対象物の画像を高い一貫性を持って画像内に埋め込むことができるtext-to-imageのfinetuned型のdiffusion modelです。DreamBoothとかと同種な感じですね。\nhttps://github.com/haoosz/ViCo\n\n リンク\nColab\ngithub\n\n 準備\nGoogle Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。\n\n 環境構築\nインストール手順です。\n!git clone https://github.com/haoosz/ViCo.git\n%cd /...",
-          "link": "https://zenn.dev/tatsuromurata/articles/838d9d102b7355",
-          "publishedOn": "2023-06-08T10:31:29.000Z",
-          "wordCount": 420,
-          "title": "ViCoをgoogle colabで試してみた。",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--uZVJEBVp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ViCo%25E3%2582%2592google%2520colab%25E3%2581%25A7%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2581%25B0%2520AI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VlMmM0MmY1MGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--uZVJEBVp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ViCo%25E3%2582%2592google%2520colab%25E3%2581%25A7%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2581%25B0%2520AI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VlMmM0MmY1MGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/takasmerio/articles/84175dac2275bd",
-          "author": "akimo",
-          "description": "データの先頭を取得するには\nデータ分析では、生データを眺めてみることが重要です。数行見るだけでおかしなデータに気づくことがあります。今回はデータの先頭を取得する記事を書きます。\n今回は以下のコードを扱います。\nimport numpy as np\nimport pandas as pd\n\ndf = pd.DataFrame(\n    [\n        [\"Alice\", \"国語\", 87],\n        [\"Alice\", \"数学\", np.nan],\n        [\"Bob\", \"国語\", 65],\n        [\"Bob\", \"数学\", 92],\n    ],\n  ...",
-          "link": "https://zenn.dev/takasmerio/articles/84175dac2275bd",
-          "publishedOn": "2023-06-08T05:06:03.000Z",
-          "wordCount": 783,
-          "title": "pandasを使ってデータの列を取得する　python: pandasの基礎知識",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--j8aqJnCc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pandas%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E5%2588%2597%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%25E3%2580%2580python%253A%2520pandas%25E3%2581%25AE%25E5%259F%25BA%25E7%25A4%258E%25E7%259F%25A5%25E8%25AD%2598%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:akimo%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNFZRX1ptUjhqa0lvQUZCeDlFV2wyYTN6dUZwaDQ2VEpjZXB0RXoyUT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--j8aqJnCc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pandas%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E5%2588%2597%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%25E3%2580%2580python%253A%2520pandas%25E3%2581%25AE%25E5%259F%25BA%25E7%25A4%258E%25E7%259F%25A5%25E8%25AD%2598%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:akimo%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNFZRX1ptUjhqa0lvQUZCeDlFV2wyYTN6dUZwaDQ2VEpjZXB0RXoyUT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/hyperdb/articles/d5ecf4cdb7b236",
-          "author": "はいぱぁ",
-          "description": "設問ページ\n\n🔗ABC-241 B - Pasta\n\n\n\n 提出結果\ndef getIntMap():\n    return map(int, input().split())\n\ndef getIntList():\n    return list(map(int, input().split()))\n\ndef main():\n    n, m = getIntMap()\n    a = getIntList()\n    b = getIntList()\n\n    c = {}\n    for x in a:\n        if not x in c:\n            c.s...",
-          "link": "https://zenn.dev/hyperdb/articles/d5ecf4cdb7b236",
-          "publishedOn": "2023-06-08T04:06:37.000Z",
-          "wordCount": 456,
-          "title": "［AtCoder］ABC-241｜B - Pasta",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s---xgOqwC6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-241%25EF%25BD%259CB%2520-%2520Pasta%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s---xgOqwC6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-241%25EF%25BD%259CB%2520-%2520Pasta%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/hyperdb/articles/8fb4920b86cc6f",
-          "author": "はいぱぁ",
-          "description": "設問ページ\n\n🔗ABC-241 A - Digit Machine\n\n\n\n 提出結果\ndef getIntList():\n    return list(map(int, input().split()))\n\ndef main():\n    a = getIntList()\n\n    n = 0\n    for i in range(3):\n        n = a[n]\n    print(n)\n\nif __name__ == \"__main__\":\n    main()",
-          "link": "https://zenn.dev/hyperdb/articles/8fb4920b86cc6f",
-          "publishedOn": "2023-06-08T04:06:37.000Z",
-          "wordCount": 266,
-          "title": "［AtCoder］ABC-241｜A - Digit Machine",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--qIr5tQyd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-241%25EF%25BD%259CA%2520-%2520Digit%2520Machine%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--qIr5tQyd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-241%25EF%25BD%259CA%2520-%2520Digit%2520Machine%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/yoshida12/articles/68ef5241b5a425",
-          "author": "yoshida",
-          "description": "Pythonバージョン確認\nLinux\npython系\n\nコマンド\npython --version\nPython 2.7.10\n\npython3系\n\nコマンド\npython3 --version\nPython 3.6.8\n\n\n venv 仮想環境管理\nvenvを使うと pip によるパッケージの導入状態をプロジェクトごとに独立させることができる\nvenvはPython3.3から標準機能として取り込まれたもの。最も手軽に仮想環境を管理する方法の一つと言える。スクリプトがなぜか動作しない時に仮想環境で動作確認し原因を探す事にも使える。\n新しい仮想環境の作成\n\nコマンド\ncd [proj...",
-          "link": "https://zenn.dev/yoshida12/articles/68ef5241b5a425",
-          "publishedOn": "2023-06-08T03:16:50.000Z",
-          "wordCount": 181,
-          "title": "【Python】venv仮想環境管理とバージョン確認",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--Rox0CfJd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591venv%25E4%25BB%25AE%25E6%2583%25B3%25E7%2592%25B0%25E5%25A2%2583%25E7%25AE%25A1%25E7%2590%2586%25E3%2581%25A8%25E3%2583%2590%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%25B3%25E7%25A2%25BA%25E8%25AA%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yoshida%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRmZmNkNWY1ZjguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Rox0CfJd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591venv%25E4%25BB%25AE%25E6%2583%25B3%25E7%2592%25B0%25E5%25A2%2583%25E7%25AE%25A1%25E7%2590%2586%25E3%2581%25A8%25E3%2583%2590%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%25B3%25E7%25A2%25BA%25E8%25AA%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yoshida%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRmZmNkNWY1ZjguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/takasmerio/articles/41999ae554f052",
-          "author": "akimo",
-          "description": "データの概要を確認するには\nデータ分析では、対象となるデータの概要を調べ、傾向や外れ値などを確認することが重要です。本記事では、DataFrameの統計量を確認する簡単な方法を紹介します。\n以下のコードを扱ってみます。\nimport numpy as np\nimport pandas as pd\n\ndf = pd.DataFrame(\n    [\n        [\"Alice\", \"国語\", 87],\n        [\"Alice\", \"数学\", np.nan],\n        [\"Bob\", \"国語\", 65],\n        [\"Bob\", \"数学\", 92],\n    ...",
-          "link": "https://zenn.dev/takasmerio/articles/41999ae554f052",
-          "publishedOn": "2023-06-08T01:52:00.000Z",
-          "wordCount": 514,
-          "title": "データの概要を確認する python: pandasの基礎知識",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--SVebod8S--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E6%25A6%2582%25E8%25A6%2581%25E3%2582%2592%25E7%25A2%25BA%25E8%25AA%258D%25E3%2581%2599%25E3%2582%258B%2520python%253A%2520pandas%25E3%2581%25AE%25E5%259F%25BA%25E7%25A4%258E%25E7%259F%25A5%25E8%25AD%2598%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:akimo%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNFZRX1ptUjhqa0lvQUZCeDlFV2wyYTN6dUZwaDQ2VEpjZXB0RXoyUT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--SVebod8S--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E6%25A6%2582%25E8%25A6%2581%25E3%2582%2592%25E7%25A2%25BA%25E8%25AA%258D%25E3%2581%2599%25E3%2582%258B%2520python%253A%2520pandas%25E3%2581%25AE%25E5%259F%25BA%25E7%25A4%258E%25E7%259F%25A5%25E8%25AD%2598%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:akimo%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNFZRX1ptUjhqa0lvQUZCeDlFV2wyYTN6dUZwaDQ2VEpjZXB0RXoyUT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/takasmerio/articles/6a1c550ab860be",
-          "author": "akimo",
-          "description": "※pandadを学習するにあたり、Pythonの基礎知識が必要です。変数、データ型、制御構造（条件分岐やループ）、関数、クラスなどについての理解がある前提として書いています。\n\n pandasとは\npandasは、データ操作や分析において非常に便利なライブラリです。2次元の表形式データの処理に長けており、財務、統計、その他多くの分野で使えます。\n\n pandasによるデータ処理機能\n\n\nデータの入出力\nCSVやExcel、DBなど、さまざまな形式のデータソースから表形式のデータを読み込めます。また、pandasで処理したデータを、各形式のファイルに書き込めます。\n\n\nデータの絞り込み\n「...",
-          "link": "https://zenn.dev/takasmerio/articles/6a1c550ab860be",
-          "publishedOn": "2023-06-08T00:53:12.000Z",
-          "wordCount": 359,
-          "title": "この記事で解決！ python: pandasの基本",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--YEMGrg32--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%2593%25E3%2581%25AE%25E8%25A8%2598%25E4%25BA%258B%25E3%2581%25A7%25E8%25A7%25A3%25E6%25B1%25BA%25EF%25BC%2581%2520python%253A%2520pandas%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:akimo%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNFZRX1ptUjhqa0lvQUZCeDlFV2wyYTN6dUZwaDQ2VEpjZXB0RXoyUT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--YEMGrg32--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%2593%25E3%2581%25AE%25E8%25A8%2598%25E4%25BA%258B%25E3%2581%25A7%25E8%25A7%25A3%25E6%25B1%25BA%25EF%25BC%2581%2520python%253A%2520pandas%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:akimo%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNFZRX1ptUjhqa0lvQUZCeDlFV2wyYTN6dUZwaDQ2VEpjZXB0RXoyUT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
         }
       ]
     }
