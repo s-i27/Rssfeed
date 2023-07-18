@@ -2,10 +2,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-07-17T01:59:51.288Z</updated>
+    <updated>2023-07-18T02:04:13.772Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[pytest+sqlalchemy+mysqlでループ内で失敗させてロールバックのテストをする]]></title>
+        <id>https://zenn.dev/shimo_s3/articles/aef94a9ca2216c</id>
+        <link href="https://zenn.dev/shimo_s3/articles/aef94a9ca2216c"/>
+        <updated>2023-07-17T09:43:00.000Z</updated>
+        <summary type="html"><![CDATA[やりたいこと
+ループ途中でDB処理が失敗したときのロールバック挙動をテストする
+
+ 準備
+(my環境)
+Python 3.9.13
+sqlalchemy  2.0.17
+mysql 8.0.33
+
+ MySQLのインストール、準備
+インストール
+sudo apt-get install mysql-server
+sudo mysql_secure_installation
+ログイン
+sudo mysql -u root -p
+dbnameというデータベース、 username, passwordでユーザを作成する。
+CREATE DATABASE dbname;
+
+CREATE US...]]></summary>
+        <author>
+            <name>shimo</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[小ネタ]pipenvのvenvとPipfileの対応を確認して不要なものを消したい]]></title>
         <id>https://zenn.dev/shimo_s3/articles/6a0a2901454bd0</id>
@@ -5954,234 +5982,6 @@ https://testdriven.io/blog/django-drf-elasticsearch/#elasticsearch-set...]]></su
         <summary type="html"><![CDATA[Have you ever thought about how you can make your custom Python objects more readable and easy to understand? Well, that’s where the Python str and repr methods come into the picture. It’s like a magical method that gives us the ability to decide how our objects should appear when we convert them...]]></summary>
         <author>
             <name>Divyanshu Shekhar</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[cuQuantum で遊んでみる (5) — VQE その 2]]></title>
-        <id>https://zenn.dev/derwind/articles/dwd-cuquantum05</id>
-        <link href="https://zenn.dev/derwind/articles/dwd-cuquantum05"/>
-        <updated>2023-06-18T13:35:59.000Z</updated>
-        <summary type="html"><![CDATA[目的
-cuQuantum で遊んでみる (4) — VQE で無理やり VQE をしてみたが、もうちょっと小綺麗なことがしたいので、cuQuantum の API で期待値計算をさせたい。
-一応前回の無理やり版も実行して比較したい。
-
- お題
-\mathcal{H} = Z \otimes X の期待値計算を最小化したい。要するに、\ket{\psi} = \ket{1} \otimes \ket{+} = \frac{1}{\sqrt{2}}(\ket{10} + \ket{11}) 或は \ket{\psi^\prime} = \ket{0} \otimes \ket{-} = ...]]></summary>
-        <author>
-            <name>derwind</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python Classmethod]]></title>
-        <id>https://zenn.dev/dshekhar17/articles/f4406045e5fb7f</id>
-        <link href="https://zenn.dev/dshekhar17/articles/f4406045e5fb7f"/>
-        <updated>2023-06-18T12:21:03.000Z</updated>
-        <summary type="html"><![CDATA[Python’s classmethod is a special type of method that is bound to the class rather than an instance of the class. This means that you can call a classmethod on the class itself, rather than on an instance of the class. In this guide, we will explore the ins and outs of Python classmethod, includi...]]></summary>
-        <author>
-            <name>Divyanshu Shekhar</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python Generator: The Art of Lazily Generated Data]]></title>
-        <id>https://zenn.dev/dshekhar17/articles/f6cabf39d444d6</id>
-        <link href="https://zenn.dev/dshekhar17/articles/f6cabf39d444d6"/>
-        <updated>2023-06-18T12:11:46.000Z</updated>
-        <summary type="html"><![CDATA[Are you looking to handle large datasets efficiently in Python? Enter the world of Python generators! They allow you to generate data on the fly, overcoming memory limitations. In this blog, we’ll explore everything about the Python generator, from basics to advanced usage. By the end, you’ll be ...]]></summary>
-        <author>
-            <name>Divyanshu Shekhar</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】パスカルの三角形]]></title>
-        <id>https://zenn.dev/xurenjun/articles/cbadbf95ec359f</id>
-        <link href="https://zenn.dev/xurenjun/articles/cbadbf95ec359f"/>
-        <updated>2023-06-18T12:01:30.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-ブループロトコルサービス開始日はログインできませんでした。キョです。
-今回は「フィボナッチ数列」の続きに、
-「パスカルの三角形」の実装を行いたいと思います。
-
- パスカルの三角形とは？
-以下の画像のような三角形がパスカルの三角形になります。
-
-ルールはシンプルで、三角形の数値は
-
-各行の一番左の数値は1
-各行の一番右の数値は1
-各行の他の数値 = 自分の左上の数値 + 自分の右上の数値
-
-です。
-以下のサイトから引用したgif図を見ればイメージやすいと思います。
-
-https://contest.japias.jp/tqj20/200170F/pascul-nature.h...]]></summary>
-        <author>
-            <name>キョ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[boto3のclientでDynamoDBを操作してみた]]></title>
-        <id>https://zenn.dev/saya9875/articles/6d78966da3c39b</id>
-        <link href="https://zenn.dev/saya9875/articles/6d78966da3c39b"/>
-        <updated>2023-06-18T07:10:07.000Z</updated>
-        <summary type="html"><![CDATA[boto3は、Amazon Web Services (AWS)をPythonから操作するためのライブラリです。
-PythonでDynamoDBを操作したい際にboto3のclientを使う方法を下記にまとめます。
-
- DynamoDBクライアントの作成
-以下のコードでDynamoDBのクライアントを作成します。
-import boto3
-
-client = boto3.client('dynamodb')
-
- テーブルの作成
-
- create_table
-以下のコードでDynamoDBのテーブルを作成します。
-今回は、your_tableというテーブルに areaとnameで一意になる...]]></summary>
-        <author>
-            <name>Saya</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Unreal EngineとCRI ADX(LE)]]></title>
-        <id>https://zenn.dev/hiehie/books/172cc1ddd1d3c3</id>
-        <link href="https://zenn.dev/hiehie/books/172cc1ddd1d3c3"/>
-        <updated>2023-06-18T07:01:55.000Z</updated>
-        <summary type="html"><![CDATA[記事とかブログに書いてたTipsだったり、学習して学んだ情報を備忘録としてまとめています。
-あくまで自分用のため、まとめることに力をかけたくないのでそれなりに雑です。
-常に勉強中のため、随時更新します。]]></summary>
-        <author>
-            <name>ひえひえ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyCloneの紹介と使い方]]></title>
-        <id>https://zenn.dev/naoki0103/articles/8a34243ff86854</id>
-        <link href="https://zenn.dev/naoki0103/articles/8a34243ff86854"/>
-        <updated>2023-06-18T01:11:08.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-PyCloneは、my-python-templateを効率的に利用するために私が作成したコマンドラインユーティリティです。このツールを使用すると、プロジェクトのクローン、セットアップ、GitHubへの初期バージョンのコミットを素早く行うことができます。my-python-templateに関するZennの記事はこちらをご覧ください。
-
- セットアップ
-PyCloneを使用するためには、まずpyclone関数をシェルの設定ファイルにコピーする必要があります。Bashユーザーの場合は.bashrc、ZSHユーザーの場合は.zshrcとなります。
-関数の宣言は以下のようになりま...]]></summary>
-        <author>
-            <name>Naoki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AtCoder Beginner Contest 306に参加したので冒頭4問を振り返ります]]></title>
-        <id>https://zenn.dev/bun913/articles/enjoy_abc306_a_to_d</id>
-        <link href="https://zenn.dev/bun913/articles/enjoy_abc306_a_to_d"/>
-        <updated>2023-06-18T00:50:52.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは。
-ダイの大冒険という漫画のガチ勢のbun913といいます。
-皆さんはAtCoderという競技プログラミングを楽しめるサービスをご存知でしょうか？
-https://atcoder.jp/?lang=ja
-私は以前よりちょくちょく趣味でコンテストに参加しているのですが、先日の2023年6月18日（土）に開催されたトヨタ自動車プログラミングコンテスト2023#3(AtCoder Beginner Contest 306)にも参加していました！
-今回はA問題、B問題、C問題、D問題を正解することができたので正解に至った思考の整理や類似の問題なんかを軽く紹介いたします。
-
- 解いた問題...]]></summary>
-        <author>
-            <name>bun913</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[BERTを使った類似したテキストメッセージの検索]]></title>
-        <id>https://zenn.dev/yutoo89/articles/6f353c3c15b5fc</id>
-        <link href="https://zenn.dev/yutoo89/articles/6f353c3c15b5fc"/>
-        <updated>2023-06-18T00:42:17.000Z</updated>
-        <summary type="html"><![CDATA[自然言語処理（NLP）技術であるBERT（Bidirectional Encoder Representations from Transformers）を使い、入力された文章と似た意味をもつレコードをデータベースから取得するアプリケーションを作ってみました。
-自然言語処理が未経験の状態から、完成までにかかった期間、結果の評価、今後に向けた反省をまとめています。
-
- 類似テキスト検索の原理
-自然言語処理には、埋め込み（Embedding）という技術があります。これは、テキストメッセージの意味をベクトル表現（具体的には実数の配列）に変換する技術です。
-ベクトル表現への変換は、コンピュータが...]]></summary>
-        <author>
-            <name>yutoo89</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonプロジェクトのためのテンプレート: my-python-templateの紹介]]></title>
-        <id>https://zenn.dev/naoki0103/articles/d42add8501f370</id>
-        <link href="https://zenn.dev/naoki0103/articles/d42add8501f370"/>
-        <updated>2023-06-18T00:32:57.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Pythonプロジェクトを始める際には、プロジェクトの構造や依存関係の管理、コードの品質を保つためのツールなど、設定すべき項目が多くあります。そこで今回は、これらの設定を一元化したPythonプロジェクトのテンプレート、my-python-templateを作成しました。こちらについて今回は紹介いたします。
-
- my-python-templateの内容
-このテンプレートには以下のファイルとフォルダが含まれています。
-
-
-pyproject.toml: プロジェクトの設定と依存関係を管理するためのファイルです。
-
-.gitattributes: Gitの挙動を制御するための...]]></summary>
-        <author>
-            <name>Naoki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[CharGPT]ランダムな整数を生成するプログラム(Python)]]></title>
-        <id>https://zenn.dev/isi00141/articles/79bec414740081</id>
-        <link href="https://zenn.dev/isi00141/articles/79bec414740081"/>
-        <updated>2023-06-17T22:26:17.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-ChatGPTに、ランダムな整数を生成するプログラムを書いてもらいました。
-
- 質問の内容
-
-質問
-1から9999999999までの数字をランダムに５個作成するプログラムを書いてください。
-条件は以下です。
-Pythonで書く。
-プログラムの意味をコメントに追加する。
-
-
-ChatGPT
-以下は、Pythonで1から9999999999までの数字をランダムに5つ生成するプログラムです。
-それぞれの行にコメントを追加しています。
-
-
-randomtest.py
-import random
-
-# 生成されたランダムな数値を格納するリスト
-random_numbers = []
-...]]></summary>
-        <author>
-            <name>ISI</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[cuQuantum で遊んでみる (4) — VQE]]></title>
-        <id>https://zenn.dev/derwind/articles/dwd-cuquantum04</id>
-        <link href="https://zenn.dev/derwind/articles/dwd-cuquantum04"/>
-        <updated>2023-06-17T17:58:26.000Z</updated>
-        <summary type="html"><![CDATA[目的
-cuQuantum で遊んでみる (2) — グローバー探索アルゴリズム でさらっと cuQuantum の cuTensorNet に触って、cuQuantum で遊んでみる (3) — 期待値計算 で比較的低レベルの cuStateVec の API で期待値計算を行った。
-今回は、cuTensorNet で VQE を実行してみたいと思う。公式のサンプル qiskit_advanced.ipynb では QAOA を解説しているが、ちょっと今回は頑張って、参考にしながら VQE をしてみる形だ。
-
- お題
-あまりちゃんとした VQE の知識がないので、Qiskit におけ...]]></summary>
-        <author>
-            <name>derwind</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AtProtocolを使ってBlueskyにPythonからPostする]]></title>
-        <id>https://zenn.dev/sion_pn/articles/afe598bdbfebf9</id>
-        <link href="https://zenn.dev/sion_pn/articles/afe598bdbfebf9"/>
-        <updated>2023-06-17T15:14:00.000Z</updated>
-        <summary type="html"><![CDATA[AT Protocol SDKのPythonラッパーであるThe At Protocol SDK for Pythonを使って、BlueskyへのPythonによるPost投稿を試してみました。
-https://github.com/MarshalX/atproto
-過去に公開した、分散型SNSへの投稿を試す記事は以下
-Mastodon.pyを使ってPythonからトゥートする
-Misskey.pyを使ってPythonからノートする
-
- 注意点
-At Protocolとは、Blueskyによって現在開発中の、大規模分散型ソーシャルアプリケーションのためのプロトコルです。
-まだ既存の分散型...]]></summary>
-        <author>
-            <name>SiON</name>
         </author>
     </entry>
 </feed>
