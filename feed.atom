@@ -2,10 +2,168 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-07-21T01:36:44.348Z</updated>
+    <updated>2023-07-22T01:34:40.320Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Sentinel-2の画像から筆ポリゴンを使って圃場ポリゴンの領域の画像を切り取る]]></title>
+        <id>https://zenn.dev/fusic/articles/6807ccf192eda0</id>
+        <link href="https://zenn.dev/fusic/articles/6807ccf192eda0"/>
+        <updated>2023-07-21T12:03:18.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは
+福岡に来て4年目になりますが夏の暑さはやっぱりこたえる北海道出身の石橋です。
+今回はSentinel-2の画像から筆ポリゴンを使って圃場ポリゴンの領域の画像を切り取る方法をメモしておきます
+
+ 準備
+準備するデータは
+
+筆ポリゴン
+衛星画像（Sentinel-2）
+
+です。
+筆ポリゴンについてはこちら
+https://www.maff.go.jp/j/tokei/porigon/
+ダウンロードの度にアンケートみたいなのに回答する必要があって面倒なので自分は全データダウンロードしました。
+Sentinel-2の画像については適宜open access hubやAPIなどからダウ...]]></summary>
+        <author>
+            <name>石橋　龍</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[運搬経路問題（配送最適化問題，Vehicle Routing Problem) をPuLPで解く]]></title>
+        <id>https://zenn.dev/r_nsd/articles/89e329570687c2</id>
+        <link href="https://zenn.dev/r_nsd/articles/89e329570687c2"/>
+        <updated>2023-07-21T07:07:50.000Z</updated>
+        <summary type="html"><![CDATA[※ https://qiita.com/r_nsd/items/19dcb30f5478384f90d3 と同じものです
+巡回セールスマン問題を一般化した問題である「運搬経路問題」を，最適化問題を簡単に実装できるライブラリであるPythonの「PuLP」を使って解いてみました．
+運搬経路問題(VRP)を解く　混合整数計画編 を参考にさせて頂きました．
+
+ 運搬経路問題 (VRP)とは
+運搬経路問題は，複数の車両で複数の顧客のいる場所に訪れ，荷物の集荷or配達をするときに，その移動コストを最小化するような経路を求める問題です．  Vehicle Routing Problem (VRP)や...]]></summary>
+        <author>
+            <name>r_nsd</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-270｜A - 1-2-4 Test]]></title>
+        <id>https://zenn.dev/hyperdb/articles/97bd1b0daf96f5</id>
+        <link href="https://zenn.dev/hyperdb/articles/97bd1b0daf96f5"/>
+        <updated>2023-07-21T05:38:04.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-270 A - 1-2-4 Test
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def q(n):
+    r = []
+    if n in [1, 2, 4]:
+        r += [n]
+    elif n == 3:
+        r += [1, 2]
+    elif n == 5:
+        r += [1, 4]
+    elif n == 6:
+        r += [2, 4]
+    elif n == 7:
+        r ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-270｜B - Hammer]]></title>
+        <id>https://zenn.dev/hyperdb/articles/62453f2b3ae522</id>
+        <link href="https://zenn.dev/hyperdb/articles/62453f2b3ae522"/>
+        <updated>2023-07-21T05:38:04.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-270 B - Hammer
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    x, y, z = getIntMap()
+
+    if x < 0:
+        x *= -1
+        y *= -1
+        z *= -1
+
+    # 0 x y z
+    if x < y < z:
+        print(x)
+        exit
+    # 0 x z y
+    elif x < ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Code Interpreter で自動運転レースのデータ解析をしてみた (1)]]></title>
+        <id>https://zenn.dev/danchinocto/articles/code-interpreter-for-data-analysis-1</id>
+        <link href="https://zenn.dev/danchinocto/articles/code-interpreter-for-data-analysis-1"/>
+        <updated>2023-07-21T02:58:14.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Virtual Motorsport Lab Inc. (VML) でプロダクト開発をしている @danchinocto です。この記事は、第2回 Generative AI 勉強会 関西での発表内容をまとめ直したものです。
+
+ Code Interpreter とは
+OpenAI ChatGPT の Plus ユーザが使える公式プラグインで、2023年7月上旬にリリースされました。
+https://openai.com/blog/chatgpt-plugins#code-interpreter
+
+ VML選手権シーズンα
+現在、 VML で試験的に運営している自動運転レー...]]></summary>
+        <author>
+            <name>団地のCTO</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SQLパーサーを使用してみた]]></title>
+        <id>https://zenn.dev/carenet/articles/d42b236ae69bc5</id>
+        <link href="https://zenn.dev/carenet/articles/d42b236ae69bc5"/>
+        <updated>2023-07-21T02:44:07.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事ではいくつかのプログラミング言語でSQLパーサーを利用する方法について解説します。
+SQLパーサーを使用することでSQLクエリを構成要素に分割したり、構文解析したり、クエリの改変・整形が可能になります。
+具体的には以下のようなことが行えるようになります。
+
+SQLクエリのフォーマッタ：SQLパーサーを使用してSQLクエリの整形を行います。一定のルールでSQLを整形することで可読性を向上させることができます。
+クエリの検証：SQLパーサーを利用して実際にSQLを実行せずに構文的にSQLが正しいかを検証できます。
+テーブルやカラムの調査：SQLパーサーを利用することで、...]]></summary>
+        <author>
+            <name>Kaz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChatGPTと一緒に爆速開発を進めるためのTips]]></title>
+        <id>https://zenn.dev/shogo/articles/c3515d82e014f8</id>
+        <link href="https://zenn.dev/shogo/articles/c3515d82e014f8"/>
+        <updated>2023-07-21T01:50:41.000Z</updated>
+        <summary type="html"><![CDATA[ここ数日、Androidエンジニアの自分がPythonを勉強したくなってChatGPTと共に開発をしてきたので、その際の効率のいいポイントについて書いていきたいと思います。
+ChatGPTを活用することで誰でも短期間でプログラマーになれそうと感じています。
+
+ Tips1 「できるだけ小さな単位で質問する」
+ChatGPTには「トークンの制限」があったり「嘘を返してくる」みたいな性質があります。
+このことから長いコードを1回で書かせようとすると、動かないコードを返事してくる場合が多いです。
+
+ ダメな質問
+「https://hogehoge というサイトの<a>タグとそのリン...]]></summary>
+        <author>
+            <name>shogo.yamada</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[GCE Ubuntu20.04でCOEIROINK(CPU)のエンジンを動かしてリリンちゃんと話す]]></title>
         <id>https://zenn.dev/char/articles/6668adddee303f</id>
@@ -5664,215 +5822,6 @@ Pythonのデータ分析や可視化作業において、グラフ描画ライ�
 matplotlib...]]></summary>
         <author>
             <name>botamotch</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[初めて学ぶnp.random.rand()]]></title>
-        <id>https://zenn.dev/yuto_mo/articles/4cba5b41c01367</id>
-        <link href="https://zenn.dev/yuto_mo/articles/4cba5b41c01367"/>
-        <updated>2023-06-22T11:51:40.000Z</updated>
-        <summary type="html"><![CDATA[何度調べても覚えられないnp.random.rand()について解説します。
-【np.random.rand()】
-randomと名のつく通り、0~1の範囲からランダムに数を返します。
-全ての数は同じ確率で選ばれます。(一様分布)
-()の中の引数は、出力する個数を表します。
-import numpy as np
-print(np.random.rand(1))
->>[0.18431186]
-出力は、numpyの配列であるshape属性で返ってきます。
-出力が配列なので当然、2次元、3次元配列なども可能です。
-2行3列の2次元配列
-import numpy as np
-prin...]]></summary>
-        <author>
-            <name>yuto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Glyphcontrolをgoogle colabで試してみた。]]></title>
-        <id>https://zenn.dev/tatsuromurata/articles/93b771e301272f</id>
-        <link href="https://zenn.dev/tatsuromurata/articles/93b771e301272f"/>
-        <updated>2023-06-22T10:01:42.000Z</updated>
-        <summary type="html"><![CDATA[GlyphControlとは
-GlyphControlはText-guidedなdiffusion modelであり、画像の中に任意の文字を埋め込むことが可能です。
-https://github.com/AIGText/GlyphControl-release
-huggingfaceでデモも公開されているので是非に
-
- リンク
-Colab
-github
-
- 準備
-Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。
-
- 環境構築
-インストール手順です。
-!git clone https://github.com/A...]]></summary>
-        <author>
-            <name>しば🐕AI</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CAEのためのPython（Nastranファイルの読み書き）]]></title>
-        <id>https://zenn.dev/cae_taka/articles/18a6efb9582427</id>
-        <link href="https://zenn.dev/cae_taka/articles/18a6efb9582427"/>
-        <updated>2023-06-22T07:46:36.000Z</updated>
-        <summary type="html"><![CDATA[動機
-どうも,CAE専任者として派遣先に行ったらなぜか、C#とPythonをやってるものです。
-解析で使うメッシュモデルの部分的な自動作成やポスト処理なんかをやってます。
-CAEに携わっている方で同じような作業を何回もやっていてめんどくさいなぁ～と
-思っている方へ何か参考になればいいなと考えています。
-
- 今回やること
-何らかのPreソフト（HyperMeshとかANSA）で作ったNastranファイルを
-後で加工しやすいように整理して読み取る、加工し終わったら書き出す
-ことをしたいです。
-今回は、節点、要素（三角形、四角形のシェル要素のみ）と
-PSHELLだけを対象にして作成してい...]]></summary>
-        <author>
-            <name>Taka</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pythonで大きなファイルをgzipする]]></title>
-        <id>https://zenn.dev/arimawiki/articles/python_tips_to_gzip_</id>
-        <link href="https://zenn.dev/arimawiki/articles/python_tips_to_gzip_"/>
-        <updated>2023-06-22T06:37:33.000Z</updated>
-        <summary type="html"><![CDATA[pythonを使ってファイルをgzipする方法
-
- うまくいった処理
-import gzip
-path = "xxx.csv"
-out_path = "yyy.csv"
-with open(path, "r", encoding='utf-8') as f_in, gzip.open(out_path, mode='wt',encoding='utf-8') as f_out:
-	while True:
-		data = f_in.read(1000000)
-		if not data:
-			break
-
-		f_out.write(date)
-
- たまにエラーが出る処理
-import...]]></summary>
-        <author>
-            <name>arimawiki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】クラウド録画サービスを作る！   [その１]システム構成の検討]]></title>
-        <id>https://zenn.dev/daddy_yukio/articles/3b8f53b839cfd4</id>
-        <link href="https://zenn.dev/daddy_yukio/articles/3b8f53b839cfd4"/>
-        <updated>2023-06-22T06:36:55.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-こんにちは。Daddy's Officeの市川です。
-近年、防犯カメラの映像をクラウドサーバー上に24時間録画するサービスが増えてきています。
-
-サービス構成概要図
-今回は、こうしたサービスを作ってみようと思います。
-記事は複数回に分けて説明していく予定です。
-作成するサービスは、最低限必要な以下の機能を実現したいと思います。
-
-防犯カメラの映像を24時間クラウドサーバーに録画する
-録画された映像を見たいときに、必要な区間を切り出して視聴する
-現在の映像をリアルタイムにライブで見る
-
-こうした機能を実現するサービスをどのような構成で作成するか？
-今回は、作成するシステムの構...]]></summary>
-        <author>
-            <name>Yukio Ichikawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python + Kivy で作ってみた【Ⅱ】]]></title>
-        <id>https://zenn.dev/pseudo_shocker/articles/f11bfc24367435</id>
-        <link href="https://zenn.dev/pseudo_shocker/articles/f11bfc24367435"/>
-        <updated>2023-06-22T06:21:44.000Z</updated>
-        <summary type="html"><![CDATA[canvasの謎
-ヘッダーに画像がはみ出して表示される問題を考えていて
-canvasの認識が違うのではないかと思い始めた
-なぜかというと、画像の表示位置をを指定できるようにプロパティを追加して
-表示位置をいろいろと設定してみると、フッターにはみ出して表示されることがない
-widgetの範囲だけcanvasの内容が見えるものだと考えていたが、
-どうやら違うようだ⚡
-各widgetのcanvasはwindow全体が見える範囲となっている
-ただし、widgetの階層構造に従って各widgetのcanvasの見える範囲が変わる
-今、widgetの階層構造は下からヘッダー、表示部、フッターの順...]]></summary>
-        <author>
-            <name>猫の足跡</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-250｜B - Enlarged Checker Board]]></title>
-        <id>https://zenn.dev/hyperdb/articles/de32278828344a</id>
-        <link href="https://zenn.dev/hyperdb/articles/de32278828344a"/>
-        <updated>2023-06-22T05:14:14.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-250 B - Enlarged Checker Board
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def mkLine(n, w, adj):
-    c = ['.', '#']
-    l = ''
-    for i in range(n):
-        l += (c[(i + adj) % 2] * w)
-    return l
-
-
-def main():
-    n, a, b = getIntMap()
-
-    for h in range(n)...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-250｜A - Adjacent Squares]]></title>
-        <id>https://zenn.dev/hyperdb/articles/3aa1cd8fc54066</id>
-        <link href="https://zenn.dev/hyperdb/articles/3aa1cd8fc54066"/>
-        <updated>2023-06-22T05:14:13.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-250 A - Adjacent Squares
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    h, w = getIntMap()
-    r, c = getIntMap()
-
-    s = 0
-    s += 1 if 1 < r <= h else 0
-    s += 1 if 1 <= r < h else 0
-    s += 1 if 1 < c <= w else 0
-    s += 1...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CDK Pipelineを導入する時に「aws:cdk:path」にハマった話]]></title>
-        <id>https://zenn.dev/d2c_mtech_blog/articles/4decc4dc8cb70a</id>
-        <link href="https://zenn.dev/d2c_mtech_blog/articles/4decc4dc8cb70a"/>
-        <updated>2023-06-22T04:47:59.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-D2Cでエンジニアをしている、閃（セン）と申します。
-私の所属するチームでは、AWS上でシステムを構築しており、AWS CDKをIaCツールとして採用しています。最近はCI/CDツールの導入を検討し、その際にAWS Code Pipelineを選定しました。Code Pipelineを構築するには、Code Pipelineのコンストラクトを使うのも可能ですが、それと別にCDK Pipelineのコンストラクトがあります。
-CDK Pipelineというのは、CDKプロジェクトをデプロイするCode Pipelineを容易に構築できるコンストラクトです。今回はCDK Pip...]]></summary>
-        <author>
-            <name>D2C m-tech</name>
         </author>
     </entry>
 </feed>
