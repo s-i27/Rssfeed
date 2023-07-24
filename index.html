@@ -22,6 +22,124 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-23 datetime="2023-07-23T22:25:00.000Z">2023-07-23</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-23 datetime="2023-07-23T22:25:00.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nowa0402/articles/c0395b56fcffa8"
+                        open
+                      >
+                        <summary class="article-expander__title">gunicornをsystemdで永続化してみる</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nowa0402/articles/c0395b56fcffa8">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--zdk3q5lb--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:gunicorn%25E3%2582%2592systemd%25E3%2581%25A7%25E6%25B0%25B8%25E7%25B6%259A%25E5%258C%2596%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nowa%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M0OWMwNThkZGQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>FastAPIをsystemdで制御したい
+筆者はFastAPIを業務で使用し
+実運用時はgunicornでプロセス管理を行います。
+ただ、毎度作業するときにgunicornを直接キルしていて
+いつかミスしそうな気がしたのでsystemdで動かしたいなあ…って思っていました。
+今回は検証環境をサクッと準備して、systemdによる永続化を試してみます。
+
+ 検証環境
+検証環境は以下の通り
+
+ サーバ
+dockerを使用。
+イメージはredhat/ubi8
+Red Hat社提供のコンテナイメージです。
+https://access.redhat.com/ja/articles/5632...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yuto_mo/articles/d3a9422b0a3ecf"
+                        open
+                      >
+                        <summary class="article-expander__title">特殊メソッド__X__について</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yuto_mo/articles/d3a9422b0a3ecf">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--UjZo6ZuU--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%2589%25B9%25E6%25AE%258A%25E3%2583%25A1%25E3%2582%25BD%25E3%2583%2583%25E3%2583%2589__X__%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:pomu%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y1VrTExkd1N5ZlVzTndSLW1vRzNmdmRBZXZCMmlmdXBwdjRkbEk9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>今回はpyhtonの特殊メソッドについて解説します。
+pyhtonの特殊メソッドとは __ と __ によって囲まれている関数を指します。
+主な用途は、class内の要素に対してstrやlenなど、元々存在するメソッドを変更することです。
+class MyClass:
+    def __init__(self, data):
+        self.data &#x3D; data
+    
+    def __str__(self):
+        return f&quot;MyClass instance with data: {self.data}&quot;
+    
+    def __len__(...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/r_nsd/articles/2938c356eba355"
+                        open
+                      >
+                        <summary class="article-expander__title">GPS軌跡データをマップにマッチングする「Fast Map Matching」とは？</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/r_nsd/articles/2938c356eba355">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--eBnIB_JO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GPS%25E8%25BB%258C%25E8%25B7%25A1%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E3%2583%259E%25E3%2583%2583%25E3%2583%2597%25E3%2581%25AB%25E3%2583%259E%25E3%2583%2583%25E3%2583%2581%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%2599%25E3%2582%258B%25E3%2580%258CFast%2520Map%2520Matching%25E3%2580%258D%25E3%2581%25A8%25E3%2581%25AF%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:r_nsd%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZFFmZlprUjRKeWdYQU03OWhsVS1YZGx1NEVta25Ka1FWdjhJbEhqQVpoNDM0PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Map Matching とは
+基本的にはGPSのデータ点を道路上に移動させることをMap Matching と呼びます．
+これにより緯度経度の系列から車両がどの経路を走ったかを判定できます．
+白い点がGPSデータ，赤線が道路上にマッチングしたあとの経路
+本記事では，いくつかあるマップマッチング手法の中でも，GPSデータを使った論文でよく見るFast Map Matching (FMM) の解説と使い方について書いています．
+なお，ほかの方法としては，MapboxがMap Matching API を出しているみたいです．
+https://qiita.com/keijipoon/it...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-22 datetime="2023-07-22T17:55:45.000Z">2023-07-22</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-22 datetime="2023-07-22T17:55:45.000Z"></time>
           </button>
@@ -8538,378 +8656,6 @@ sudo apt-get upgrade
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yuto_mo/articles/7e7dd89d609f39"
-                        open
-                      >
-                        <summary class="article-expander__title">【忘れがち】axisについて</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yuto_mo/articles/7e7dd89d609f39">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--_1KZijDq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E5%25BF%2598%25E3%2582%258C%25E3%2581%258C%25E3%2581%25A1%25E3%2580%2591axis%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuto%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y1VrTExkd1N5ZlVzTndSLW1vRzNmdmRBZXZCMmlmdXBwdjRkbEk9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>max関数などに使用されるaxisについて解説します。
-axisとは、英語で「軸」という意味であり、プログラミングでもそのまま軸の意味を持ちます。
-そのため行列などが使われる場面でよく出てきます。
-例文です
-import numpy as np
-
-x &#x3D; np.array(
-[[1, 2, 3], 
-[4, 5, 6], 
-[7, 8, 9]]
-)
-print(np.max(x, axis&#x3D;None))
-print(np.max(x, axis&#x3D;0))
-print(np.max(x, axis&#x3D;1))
-9       # 行列の最大値を出力
-[7 8 9] # 各列の最大値を出力
-[3 ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kat/articles/b04f8973a23ac1"
-                        open
-                      >
-                        <summary class="article-expander__title">gpt-engineer試してみた</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kat/articles/b04f8973a23ac1">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--kmtd0OM9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:gpt-engineer%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kat%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzljZjY1MjdmMzMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>OpenAIのGPTを使ったすごいのができたということで早速試してみました。
-
- 使用ツール
-
-VS Code
-Docker (Docker for Desktop)
-Dev Containers (VS Code拡張機能)
-gpt-engineer
-
-https://github.com/AntonOsika/gpt-engineer
-
- Dev Containers
-入れ間違いはないと思いますが念のため。立方体のアイコンです。
-
-事前準備として、上記のツールはインストールしておく必要があります。
-
- コンテナ起動
-gpt-engineerはpythonで作られているので、python...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yukitezuka/articles/885ab465c79658"
-                        open
-                      >
-                        <summary class="article-expander__title">【DIY】Zoomを自動入退出して、授業スライドを自動スクショするプログラムを作りたい。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yukitezuka/articles/885ab465c79658">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--dAKK_BlP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590DIY%25E3%2580%2591Zoom%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E5%2585%25A5%25E9%2580%2580%25E5%2587%25BA%25E3%2581%2597%25E3%2581%25A6%25E3%2580%2581%25E6%258E%2588%25E6%25A5%25AD%25E3%2582%25B9%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2589%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E3%2582%25B9%25E3%2582%25AF%25E3%2582%25B7%25E3%2583%25A7%25E3%2581%2599%25E3%2582%258B%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%25A0%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258A%25E3%2581%259F%25E3%2581%2584%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%2589%258B%25E5%25A1%259A%25E8%25A3%2595%25E8%25B2%25B4%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WkJhTUUwalNXVUJXOE5aU0hBM3pTTVdxbmZUbjRsZWQxMEdqVXkzQT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-この記事は、【Python】朝風呂に入りながらZoomを自動入退出 の続きです。
-前回は、指定した時間に入室して、一定時間後にzoomを退出するプログラムを実現した。これにより、朝の準備をしながらでも、zoomの退出ボタンを押し忘れることなく、授業に参加することができるようになった。
-今回はこれに、授業スライドを自動スクショする機能を追加したい。理由は、期末試験が近づいてきたので、教授の手書きのメモを保管しておきたいと思ったから。
-
- 手法
-2通りの方法を思いついた。
-まず一つ目は、画面を監視していて一定以上の変化があった場合にスクショする。
-具体的には、OpenCVで動体...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/delacroix/articles/8783488fcf36bf"
-                        open
-                      >
-                        <summary class="article-expander__title">[Pandas] Seriesの使い方</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/delacroix/articles/8783488fcf36bf">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--C6YS0QC---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BPandas%255D%2520Series%25E3%2581%25AE%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:taro-u%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk0MDMxNDY3ODIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Seriesとは
-Pandasでは1次元のデータを扱うSeries
-2次元のデータを扱うDataFrameを用いてデータ加工をしていきます。
-今回はこのSeriesの扱い方について勉強したので、整理していきたいと思います。
-Seriesは2種類のデータ型を扱うことができます。
-・辞書型
-・配列型
-これらのデータ型のデータをSeriesとして扱うことができます。
-
- 辞書型のデータをSeriesで扱ってみる
-PandasではSeries関数で辞書型のデータを扱うことができます。
-import pandas as pd
-
-fruits &#x3D; {&quot;snack&quot;: 200, &quot;orange&quot;:...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/megeton/articles/33e46f78a073bf"
-                        open
-                      >
-                        <summary class="article-expander__title">『プログラミング文体練習』の演習問題「他言語で実装せよ」をRubyでやる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/megeton/articles/33e46f78a073bf">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--J3v3dccF--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258E%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E6%2596%2587%25E4%25BD%2593%25E7%25B7%25B4%25E7%25BF%2592%25E3%2580%258F%25E3%2581%25AE%25E6%25BC%2594%25E7%25BF%2592%25E5%2595%258F%25E9%25A1%258C%25E3%2580%258C%25E4%25BB%2596%25E8%25A8%2580%25E8%25AA%259E%25E3%2581%25A7%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%259B%25E3%2582%2588%25E3%2580%258D%25E3%2582%2592Ruby%25E3%2581%25A7%25E3%2582%2584%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:megeton%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2IyMGRmNGE4NjAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>こちらの本では「単語の出現頻度をカウントして多いものから出力する」を40のスタイルで実装・解説している。
-https://www.amazon.co.jp/dp/4814400225
-各章の演習問題には「他言語で実装せよ」がだいたい含まれているので Ruby で実装してみる。
-
- 歴史的スタイル
-
- 1. 古き良き時代 - アセンブリ言語
-限られたメモリしかなく、メモリはアドレスでのみで指定する
-f &#x3D; File.open(&quot;../stop_words.txt&quot;, &quot;r&quot;)
-stop_words &#x3D; f.read(1024).split(&quot;,&quot;)
-f.close
-
-data &#x3D; []
-d...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;85
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/delacroix/articles/8c5fa0c0a62a0f"
-                        open
-                      >
-                        <summary class="article-expander__title">ライブラリ【Pandas】について</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/delacroix/articles/8c5fa0c0a62a0f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--JyC7Pasw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2580%2590Pandas%25E3%2580%2591%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:taro-u%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk0MDMxNDY3ODIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>PandasとNumpyの違い
-表にまとめると以下のようになります。
-
-
-
-
-データ加工のしやすさ
-処理の速さ
-得意な処理
-
-
-
-
-Pandas
-比較的簡単、SQLライクにデータ加工が可能
-Numpyと比較して遅い
-欠損値処理、データ整形、他のデータベースとのアクセス、時系列データの扱い
-
-
-Numpy
-比較的難しい、headerが設定されていない配列のため
-Pandasと比較して高速
-数値演算、特に行列演算
-
-
-
-
- Pandasの使い方
-Pandasはimportすることで利用することができるライブラリです。
-import pandas as pd
-importとはモジュール、パ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yonda/articles/18033fb007882b"
-                        open
-                      >
-                        <summary class="article-expander__title">手軽に Vision Transformer で二値分類をする</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yonda/articles/18033fb007882b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--_fU5zSDU--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2589%258B%25E8%25BB%25BD%25E3%2581%25AB%2520Vision%2520Transformer%2520%25E3%2581%25A7%25E4%25BA%258C%25E5%2580%25A4%25E5%2588%2586%25E9%25A1%259E%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yonda%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q4ZmM1MDUwZGMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>基本的にはvit_pytorchのサンプルや
-https://farml1.com/vit/
-https://meditech-ai.com/pytorch-vision-transformer/
-を参考にさせてもらってます。
-
- 前準備
-from __future__ import print_function
-
-import glob
-from itertools import chain
-import os
-import random
-import zipfile
-import pickle
-
-import matplotlib.pyplot as plt
-import numpy...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/nowa0402/articles/38c40f41ee6631"
-                        open
-                      >
-                        <summary class="article-expander__title">FastAPIで404エラーを自在にカスタムする</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nowa0402/articles/38c40f41ee6631">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--6rfolPnn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%25E3%2581%25A7404%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E3%2582%2592%25E8%2587%25AA%25E5%259C%25A8%25E3%2581%25AB%25E3%2582%25AB%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25A0%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nowa%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M0OWMwNThkZGQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>エラーハンドリングしたい
-FastAPIは存在しないURLにリクエストすると
-{&quot;detail&quot;:&quot;Not Found&quot;}
-がデフォルトで返却される。
-これを好きなレスポンスに整形して返却してみる。
-
- 実装方法
-
- 実装前
-とりあえず検証コードを作成。
-ここからハンドリングを実装していく。
-
-main.py
-import uvicorn
-from fastapi import FastAPI
-
-app &#x3D; FastAPI()
-
-
-@app.get(&quot;/hello&quot;)
-def hello_world() -&gt; dict[str, str]:
-    return {&quot;hello...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-06-23 datetime="2023-06-23T22:00:01.000Z">2023-06-23</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-06-23 datetime="2023-06-23T22:00:01.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/tkrk/articles/a043ff16e99502"
-                        open
-                      >
-                        <summary class="article-expander__title">Re: Pydanticから始める異世界Data Platform</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tkrk/articles/a043ff16e99502">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--uR6Or3QA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Re%253A%2520Pydantic%25E3%2581%258B%25E3%2582%2589%25E5%25A7%258B%25E3%2582%2581%25E3%2582%258B%25E7%2595%25B0%25E4%25B8%2596%25E7%2595%258CData%2520Platform%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tkrk%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hFNWVfSFpxd1pBYXhNT05wODhfdk1XZDR0cUE1bWRuX1lsZWFqNFE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-こんにちは。Acompanyの田中(@tkrk_p)です。本記事はAcompany5周年アドベントカレンダー24日目の記事となります。
-https://recruit.acompany.tech/b6d945cfebca4be0876128af68dd5d8b
-昨日の記事はこちら↓
-https://note.com/reiji_sato/n/ne4bbda256a14
-今月Pydantic V2のベータ版がリリースされ、Pydantic V1から約17倍高速化されたとのニュースがありました。FastAPIも即座に追従し、先日Pydantic V2をサポートしたv0.100....</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/giba/articles/c5b266b6776220"
-                        open
-                      >
-                        <summary class="article-expander__title">[システム設計]疎結合にするための工夫4選</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/giba/articles/c5b266b6776220">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--x6Nw43tr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255B%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E8%25A8%25AD%25E8%25A8%2588%255D%25E7%2596%258E%25E7%25B5%2590%25E5%2590%2588%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E5%25B7%25A5%25E5%25A4%25AB4%25E9%2581%25B8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:GIBA%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Y5MmM4MjdhMmEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-システム開発系の仕事をしている方なら分かると思いますが、見やすい・保守のしやすいコードを書きたくなりますよね。そもそも、チーム開発をしていると汚いコードを書くこと自体ギルティになってきます(汚いコード書くとめっちゃ怒られます)。
-そこで、見やすい・保守性の高いコードを書く上で大切な&quot;疎結合&quot;という考え方(および具体例)について纏めてみました。
-
- 疎結合とは
-システム開発における「疎結合」（Loose Coupling）とは、システムの各部分が他の部分に対して最小限の依存性を持つ設計のことを指します。これは、各部分がそれぞれ独立して機能し、他の部分の変更に対して影響を受けに...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -8917,8 +8663,8 @@ https://note.com/reiji_sato/n/ne4bbda256a14
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5633820536">
-        <time id="build-timestamp" datetime="2023-07-23T01:41:39.035Z">2023-07-23T01:41:39.035Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5639832067">
+        <time id="build-timestamp" datetime="2023-07-24T01:36:39.969Z">2023-07-24T01:36:39.969Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

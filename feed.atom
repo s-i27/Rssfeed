@@ -2,10 +2,70 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-07-23T01:41:39.064Z</updated>
+    <updated>2023-07-24T01:36:40.010Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[gunicornをsystemdで永続化してみる]]></title>
+        <id>https://zenn.dev/nowa0402/articles/c0395b56fcffa8</id>
+        <link href="https://zenn.dev/nowa0402/articles/c0395b56fcffa8"/>
+        <updated>2023-07-23T22:25:00.000Z</updated>
+        <summary type="html"><![CDATA[FastAPIをsystemdで制御したい
+筆者はFastAPIを業務で使用し
+実運用時はgunicornでプロセス管理を行います。
+ただ、毎度作業するときにgunicornを直接キルしていて
+いつかミスしそうな気がしたのでsystemdで動かしたいなあ…って思っていました。
+今回は検証環境をサクッと準備して、systemdによる永続化を試してみます。
+
+ 検証環境
+検証環境は以下の通り
+
+ サーバ
+dockerを使用。
+イメージはredhat/ubi8
+Red Hat社提供のコンテナイメージです。
+https://access.redhat.com/ja/articles/5632...]]></summary>
+        <author>
+            <name>nowa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[特殊メソッド__X__について]]></title>
+        <id>https://zenn.dev/yuto_mo/articles/d3a9422b0a3ecf</id>
+        <link href="https://zenn.dev/yuto_mo/articles/d3a9422b0a3ecf"/>
+        <updated>2023-07-23T09:37:57.000Z</updated>
+        <summary type="html"><![CDATA[今回はpyhtonの特殊メソッドについて解説します。
+pyhtonの特殊メソッドとは __ と __ によって囲まれている関数を指します。
+主な用途は、class内の要素に対してstrやlenなど、元々存在するメソッドを変更することです。
+class MyClass:
+    def __init__(self, data):
+        self.data = data
+    
+    def __str__(self):
+        return f"MyClass instance with data: {self.data}"
+    
+    def __len__(...]]></summary>
+        <author>
+            <name>pomu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GPS軌跡データをマップにマッチングする「Fast Map Matching」とは？]]></title>
+        <id>https://zenn.dev/r_nsd/articles/2938c356eba355</id>
+        <link href="https://zenn.dev/r_nsd/articles/2938c356eba355"/>
+        <updated>2023-07-23T02:54:58.000Z</updated>
+        <summary type="html"><![CDATA[Map Matching とは
+基本的にはGPSのデータ点を道路上に移動させることをMap Matching と呼びます．
+これにより緯度経度の系列から車両がどの経路を走ったかを判定できます．
+白い点がGPSデータ，赤線が道路上にマッチングしたあとの経路
+本記事では，いくつかあるマップマッチング手法の中でも，GPSデータを使った論文でよく見るFast Map Matching (FMM) の解説と使い方について書いています．
+なお，ほかの方法としては，MapboxがMap Matching API を出しているみたいです．
+https://qiita.com/keijipoon/it...]]></summary>
+        <author>
+            <name>r_nsd</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[WSL2を使っていて、Chrome WebDriverがエラーになる。]]></title>
         <id>https://zenn.dev/shogo/articles/a0a49f9f976165</id>
@@ -5488,250 +5548,6 @@ sudo apt-get upgrade
 最初のsudo時はパスワードを聞かれますので、先ほど入力したパスワ...]]></summary>
         <author>
             <name>momiji777</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【忘れがち】axisについて]]></title>
-        <id>https://zenn.dev/yuto_mo/articles/7e7dd89d609f39</id>
-        <link href="https://zenn.dev/yuto_mo/articles/7e7dd89d609f39"/>
-        <updated>2023-06-24T12:52:33.000Z</updated>
-        <summary type="html"><![CDATA[max関数などに使用されるaxisについて解説します。
-axisとは、英語で「軸」という意味であり、プログラミングでもそのまま軸の意味を持ちます。
-そのため行列などが使われる場面でよく出てきます。
-例文です
-import numpy as np
-
-x = np.array(
-[[1, 2, 3], 
-[4, 5, 6], 
-[7, 8, 9]]
-)
-print(np.max(x, axis=None))
-print(np.max(x, axis=0))
-print(np.max(x, axis=1))
-9       # 行列の最大値を出力
-[7 8 9] # 各列の最大値を出力
-[3 ...]]></summary>
-        <author>
-            <name>yuto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[gpt-engineer試してみた]]></title>
-        <id>https://zenn.dev/kat/articles/b04f8973a23ac1</id>
-        <link href="https://zenn.dev/kat/articles/b04f8973a23ac1"/>
-        <updated>2023-06-24T10:12:01.000Z</updated>
-        <summary type="html"><![CDATA[OpenAIのGPTを使ったすごいのができたということで早速試してみました。
-
- 使用ツール
-
-VS Code
-Docker (Docker for Desktop)
-Dev Containers (VS Code拡張機能)
-gpt-engineer
-
-https://github.com/AntonOsika/gpt-engineer
-
- Dev Containers
-入れ間違いはないと思いますが念のため。立方体のアイコンです。
-
-事前準備として、上記のツールはインストールしておく必要があります。
-
- コンテナ起動
-gpt-engineerはpythonで作られているので、python...]]></summary>
-        <author>
-            <name>kat</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【DIY】Zoomを自動入退出して、授業スライドを自動スクショするプログラムを作りたい。]]></title>
-        <id>https://zenn.dev/yukitezuka/articles/885ab465c79658</id>
-        <link href="https://zenn.dev/yukitezuka/articles/885ab465c79658"/>
-        <updated>2023-06-24T07:24:47.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事は、【Python】朝風呂に入りながらZoomを自動入退出 の続きです。
-前回は、指定した時間に入室して、一定時間後にzoomを退出するプログラムを実現した。これにより、朝の準備をしながらでも、zoomの退出ボタンを押し忘れることなく、授業に参加することができるようになった。
-今回はこれに、授業スライドを自動スクショする機能を追加したい。理由は、期末試験が近づいてきたので、教授の手書きのメモを保管しておきたいと思ったから。
-
- 手法
-2通りの方法を思いついた。
-まず一つ目は、画面を監視していて一定以上の変化があった場合にスクショする。
-具体的には、OpenCVで動体...]]></summary>
-        <author>
-            <name>手塚裕貴</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Pandas] Seriesの使い方]]></title>
-        <id>https://zenn.dev/delacroix/articles/8783488fcf36bf</id>
-        <link href="https://zenn.dev/delacroix/articles/8783488fcf36bf"/>
-        <updated>2023-06-24T06:57:12.000Z</updated>
-        <summary type="html"><![CDATA[Seriesとは
-Pandasでは1次元のデータを扱うSeries
-2次元のデータを扱うDataFrameを用いてデータ加工をしていきます。
-今回はこのSeriesの扱い方について勉強したので、整理していきたいと思います。
-Seriesは2種類のデータ型を扱うことができます。
-・辞書型
-・配列型
-これらのデータ型のデータをSeriesとして扱うことができます。
-
- 辞書型のデータをSeriesで扱ってみる
-PandasではSeries関数で辞書型のデータを扱うことができます。
-import pandas as pd
-
-fruits = {"snack": 200, "orange":...]]></summary>
-        <author>
-            <name>taro-u</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[『プログラミング文体練習』の演習問題「他言語で実装せよ」をRubyでやる]]></title>
-        <id>https://zenn.dev/megeton/articles/33e46f78a073bf</id>
-        <link href="https://zenn.dev/megeton/articles/33e46f78a073bf"/>
-        <updated>2023-06-24T06:26:57.000Z</updated>
-        <summary type="html"><![CDATA[こちらの本では「単語の出現頻度をカウントして多いものから出力する」を40のスタイルで実装・解説している。
-https://www.amazon.co.jp/dp/4814400225
-各章の演習問題には「他言語で実装せよ」がだいたい含まれているので Ruby で実装してみる。
-
- 歴史的スタイル
-
- 1. 古き良き時代 - アセンブリ言語
-限られたメモリしかなく、メモリはアドレスでのみで指定する
-f = File.open("../stop_words.txt", "r")
-stop_words = f.read(1024).split(",")
-f.close
-
-data = []
-d...]]></summary>
-        <author>
-            <name>megeton</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ライブラリ【Pandas】について]]></title>
-        <id>https://zenn.dev/delacroix/articles/8c5fa0c0a62a0f</id>
-        <link href="https://zenn.dev/delacroix/articles/8c5fa0c0a62a0f"/>
-        <updated>2023-06-24T04:13:21.000Z</updated>
-        <summary type="html"><![CDATA[PandasとNumpyの違い
-表にまとめると以下のようになります。
-
-
-
-
-データ加工のしやすさ
-処理の速さ
-得意な処理
-
-
-
-
-Pandas
-比較的簡単、SQLライクにデータ加工が可能
-Numpyと比較して遅い
-欠損値処理、データ整形、他のデータベースとのアクセス、時系列データの扱い
-
-
-Numpy
-比較的難しい、headerが設定されていない配列のため
-Pandasと比較して高速
-数値演算、特に行列演算
-
-
-
-
- Pandasの使い方
-Pandasはimportすることで利用することができるライブラリです。
-import pandas as pd
-importとはモジュール、パ...]]></summary>
-        <author>
-            <name>taro-u</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[手軽に Vision Transformer で二値分類をする]]></title>
-        <id>https://zenn.dev/yonda/articles/18033fb007882b</id>
-        <link href="https://zenn.dev/yonda/articles/18033fb007882b"/>
-        <updated>2023-06-24T03:42:06.000Z</updated>
-        <summary type="html"><![CDATA[基本的にはvit_pytorchのサンプルや
-https://farml1.com/vit/
-https://meditech-ai.com/pytorch-vision-transformer/
-を参考にさせてもらってます。
-
- 前準備
-from __future__ import print_function
-
-import glob
-from itertools import chain
-import os
-import random
-import zipfile
-import pickle
-
-import matplotlib.pyplot as plt
-import numpy...]]></summary>
-        <author>
-            <name>yonda</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FastAPIで404エラーを自在にカスタムする]]></title>
-        <id>https://zenn.dev/nowa0402/articles/38c40f41ee6631</id>
-        <link href="https://zenn.dev/nowa0402/articles/38c40f41ee6631"/>
-        <updated>2023-06-24T03:00:00.000Z</updated>
-        <summary type="html"><![CDATA[エラーハンドリングしたい
-FastAPIは存在しないURLにリクエストすると
-{"detail":"Not Found"}
-がデフォルトで返却される。
-これを好きなレスポンスに整形して返却してみる。
-
- 実装方法
-
- 実装前
-とりあえず検証コードを作成。
-ここからハンドリングを実装していく。
-
-main.py
-import uvicorn
-from fastapi import FastAPI
-
-app = FastAPI()
-
-
-@app.get("/hello")
-def hello_world() -> dict[str, str]:
-    return {"hello...]]></summary>
-        <author>
-            <name>nowa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Re: Pydanticから始める異世界Data Platform]]></title>
-        <id>https://zenn.dev/tkrk/articles/a043ff16e99502</id>
-        <link href="https://zenn.dev/tkrk/articles/a043ff16e99502"/>
-        <updated>2023-06-23T22:00:01.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-こんにちは。Acompanyの田中(@tkrk_p)です。本記事はAcompany5周年アドベントカレンダー24日目の記事となります。
-https://recruit.acompany.tech/b6d945cfebca4be0876128af68dd5d8b
-昨日の記事はこちら↓
-https://note.com/reiji_sato/n/ne4bbda256a14
-今月Pydantic V2のベータ版がリリースされ、Pydantic V1から約17倍高速化されたとのニュースがありました。FastAPIも即座に追従し、先日Pydantic V2をサポートしたv0.100....]]></summary>
-        <author>
-            <name>tkrk</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[システム設計]疎結合にするための工夫4選]]></title>
-        <id>https://zenn.dev/giba/articles/c5b266b6776220</id>
-        <link href="https://zenn.dev/giba/articles/c5b266b6776220"/>
-        <updated>2023-06-23T13:45:58.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-システム開発系の仕事をしている方なら分かると思いますが、見やすい・保守のしやすいコードを書きたくなりますよね。そもそも、チーム開発をしていると汚いコードを書くこと自体ギルティになってきます(汚いコード書くとめっちゃ怒られます)。
-そこで、見やすい・保守性の高いコードを書く上で大切な"疎結合"という考え方(および具体例)について纏めてみました。
-
- 疎結合とは
-システム開発における「疎結合」（Loose Coupling）とは、システムの各部分が他の部分に対して最小限の依存性を持つ設計のことを指します。これは、各部分がそれぞれ独立して機能し、他の部分の変更に対して影響を受けに...]]></summary>
-        <author>
-            <name>GIBA</name>
         </author>
     </entry>
 </feed>
