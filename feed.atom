@@ -2,10 +2,136 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-07-28T01:21:17.308Z</updated>
+    <updated>2023-07-29T01:21:48.627Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[GitHubリポジトリをChatGPTに学習させる方法【Python / LangChain / FAQ】]]></title>
+        <id>https://zenn.dev/umi_mori/articles/langchain-indexes-git</id>
+        <link href="https://zenn.dev/umi_mori/articles/langchain-indexes-git"/>
+        <updated>2023-07-29T01:16:53.000Z</updated>
+        <summary type="html"><![CDATA[はじめまして、ますみです！
+
+この記事では、「LangChain」というライブラリを使って、「GitHubリポジトリのソースコードを学習したChatGPTの実装方法」を解説します。
+この記事を読むことで、「ソースコードを一行一行読む」作業を減らすことができます。
+ChatGPTやLangChainについてまだ詳しくない方は、こちらを先にご覧ください◎
+https://zenn.dev/umi_mori/books/chatbot-chatgpt
+https://zenn.dev/umi_mori/books/prompt-engineer
+!
+文字よりも「動画の方が理解しやすい」という方...]]></summary>
+        <author>
+            <name>ますみ@エンジニア</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ソフトマックス関数について]]></title>
+        <id>https://zenn.dev/yuto_mo/articles/b0d294992c050a</id>
+        <link href="https://zenn.dev/yuto_mo/articles/b0d294992c050a"/>
+        <updated>2023-07-28T11:36:12.000Z</updated>
+        <summary type="html"><![CDATA[今回はソフトマックス関数について解説します。
+
+ ソフトマックス関数とは
+y_k=\dfrac{e^{a_k}}{\sum\limits_{i=1}^n e^{a_i}}
+で表される関数です。
+難しそうに見えますが、実は簡単な割合計算です。
+理解するための例として、{a_1,a_2,a_3}の中で{a_1}の割合を求めたい場合、\dfrac{a_1}{a_1+a_2+a_3}と計算すると思います。
+ソフトマックス関数はこの数値を、e^{a_1}のようにeの指数にaを当てはめたものに変えただけです。上記の例では
+・y_1=\dfrac{e^{a_1}}{e^{a_1}+e^{a_2}+e^...]]></summary>
+        <author>
+            <name>pomu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[plotlyで描画するときはmodeを明示しよう（戒め）]]></title>
+        <id>https://zenn.dev/nowa0402/articles/5eeb1366286856</id>
+        <link href="https://zenn.dev/nowa0402/articles/5eeb1366286856"/>
+        <updated>2023-07-28T11:00:02.000Z</updated>
+        <summary type="html"><![CDATA[タイトル通り。2時間くらいハマった。
+公式を読まなかった自身への戒めを込めて記事にします。
+◎本記事の結論
+折れ線グラフを作るときはmode="lines"かmode="line+markers"を明示する。
+理由: modeはデータ数によってデフォルト値が変化するため
+
+20個未満: mode="lines+markers"
+
+20個以上: mode="lines"
+
+
+
+ plotlyとは
+グラフ描画を行うライブラリ
+https://plotly.com/python/
+pythonだとmatplotlibもよく使われます。
+https://matplotlib.org/
+私の用途で...]]></summary>
+        <author>
+            <name>nowa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-274｜A - Batting Average]]></title>
+        <id>https://zenn.dev/hyperdb/articles/e91c7834a02f29</id>
+        <link href="https://zenn.dev/hyperdb/articles/e91c7834a02f29"/>
+        <updated>2023-07-28T04:46:08.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-274 A - Batting Average
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def r(x):
+    return '1.000' if x == 1.0 else "0.%03d" % ((x * 10000 + 5) // 10)
+
+
+def main():
+    a, b = getIntMap()
+
+    print(r(b / a))
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-274｜B - Line Sensor]]></title>
+        <id>https://zenn.dev/hyperdb/articles/37fa09df54473d</id>
+        <link href="https://zenn.dev/hyperdb/articles/37fa09df54473d"/>
+        <updated>2023-07-28T04:46:08.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-274 B - Line Sensor
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getStringListRow(N):
+    return [list(list(input())) for _ in range(N)]
+
+
+def main():
+    h, w = getIntMap()
+    c = getStringListRow(h)
+
+    a = []
+    for i in range(len(c[0])):
+        tmp = ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Dockerでnltkを使いたい]]></title>
         <id>https://zenn.dev/kazuph/articles/9cf3aa31ac3fb0</id>
@@ -5294,289 +5420,6 @@ cuml-cu11 = { version="^23.06", source="rapids" }
 ptxcompiler-cu11 = { version="^0.7",...]]></summary>
         <author>
             <name>やまぴー</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[BRAVIAをコントロールしよう]]></title>
-        <id>https://zenn.dev/ryder472/articles/86e4c7c3f06221</id>
-        <link href="https://zenn.dev/ryder472/articles/86e4c7c3f06221"/>
-        <updated>2023-06-29T12:40:51.000Z</updated>
-        <summary type="html"><![CDATA[リモコンが遠い
-リモコンって必要なときには見つからない｡あるあるですよね｡
-うちのTVはソニーのBRAVIAなのでVideo & TV SideView: Remoteなるアプリケーションが使えます｡iOSとAndroidどちらにも対応してるアプリケーションです｡
-公式アプリなのでもちろん使えるんですがiPhoneはリモコンとして使うにはちょっと操作しにくい部分があって使いにくいんですよね｡
-例えば
-
-iPhoneの画面で操作するので触覚的にフィードバックがないから押したかわからない
-他のアプリを使ってるときにいちいち切り替えないといけない
-バックグラウンドで放置すると再接続...]]></summary>
-        <author>
-            <name>みどり</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】seabornのpenguins datasetを使って分類問題をとく]]></title>
-        <id>https://zenn.dev/omochimaru/articles/ce050eb1fe1add</id>
-        <link href="https://zenn.dev/omochimaru/articles/ce050eb1fe1add"/>
-        <updated>2023-06-29T11:02:29.000Z</updated>
-        <summary type="html"><![CDATA[seabornには様々な公開データがあります。今回はその中の「prnguins dataset」を使って単回帰分析や重回帰分析をしてみます。
-目次[clickで開く/閉じる]
-
-データの概要
-データの中身の確認
-分類問題を解く
-ソースコード
-まとめ
-
-
-
- データの概要
-
-seabornはPythonデータ視覚化ライブラリでいくつかデータセットが用意されています。今回はその中でも「Paalmer Penguins」というペンギンの測定データを含んでいる「penguins dataset」(ペンギンデータセット)を用いて分類問題を解きます。
-では、実際のデータの中身についてみていきましょ...]]></summary>
-        <author>
-            <name>omochimaru</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GeneCISをgoogle colabで試してみた。]]></title>
-        <id>https://zenn.dev/tatsuromurata/articles/c2bb10113622a4</id>
-        <link href="https://zenn.dev/tatsuromurata/articles/c2bb10113622a4"/>
-        <updated>2023-06-29T10:02:33.000Z</updated>
-        <summary type="html"><![CDATA[GeneCISとは
-GeneCISは、facebookresearchが出したさまざまなテキストプロンプトが与えられた場合に、モデルがさまざまな視覚的「類似性」の概念に適応する能力を測定するためのゼロショット評価ベンチマークです。
-https://github.com/facebookresearch/genecis
-
- リンク
-Colab
-github
-
- 準備
-Google Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。
-
- 環境構築
-インストール手順です。
-!pip install git+https://githu...]]></summary>
-        <author>
-            <name>しば🐕AI</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-255｜B - Light It Up]]></title>
-        <id>https://zenn.dev/hyperdb/articles/e3b2d71b198a01</id>
-        <link href="https://zenn.dev/hyperdb/articles/e3b2d71b198a01"/>
-        <updated>2023-06-29T09:35:47.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-255 B - Light It Up
-
-
-
- 提出結果
-import math
-
-
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def main():
-    n, k = getIntMap()...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-255｜A - You should output ARC, though this is ABC.]]></title>
-        <id>https://zenn.dev/hyperdb/articles/5ea8b9cbe99d60</id>
-        <link href="https://zenn.dev/hyperdb/articles/5ea8b9cbe99d60"/>
-        <updated>2023-06-29T09:35:47.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-255 A - You should output ARC, though this is ABC.
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def main():
-    r, c = getIntMap()
-    a = getIntListRow(2)
-
-    print(a[r - 1][...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[大規模言語モデル(LLM)の作り方 Megatron-DeepSpeed編]]></title>
-        <id>https://zenn.dev/turing_motors/articles/04c1328bf6095a</id>
-        <link href="https://zenn.dev/turing_motors/articles/04c1328bf6095a"/>
-        <updated>2023-06-29T09:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Turing 株式会社のリサーチチームでインターンをしている東京工業大学 B4 横田研究室の藤井(@okoge_kaz)です。
-大規模言語モデル(Large Language Model: LLM)への注目がGPT-4のリリース以降高まっていますが、LLMを作るための知見は十分に共有されているとは言い難いと個人的に感じています。
-Turingでは、Vision and Language, Video and Languageなどのマルチモーダルなモデルの研究開発を行っている一環として、Megatron-DeepSpeed, GPT-NeoXなどを用いて数十Bのモデルの学習を...]]></summary>
-        <author>
-            <name>Kazuki Fujii</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ZaoSDKを使ってPythonでシリアルデータを扱う方法：Socatを活用]]></title>
-        <id>https://zenn.dev/zao_sdk/articles/zaosdk_serial_tunnel_socat</id>
-        <link href="https://zenn.dev/zao_sdk/articles/zaosdk_serial_tunnel_socat"/>
-        <updated>2023-06-29T08:01:09.000Z</updated>
-        <summary type="html"><![CDATA[はじめに 🚀
-シリアル通信 (UART, RS232C) はPC間の通信だけでなく各種電子機器との通信やセンサーデータを収集したりする際に幅広く利用されています。
-Zao SDKでは、映像信号だけでなくシリアルデータを送受信することができます。
-基本的にはJetson側、PC側それぞれに動作確認済みのUSBシリアルケーブルを接続するだけで、Zao SDKが仮想的なクロスケーブルとなり、遠隔の機器とシリアル通信が可能となります。
-この記事では、USBシリアルケーブルを通じて通信をするのではなく、Zas SDK for Jetsonが動作しているJetson上のPythonスクリプトでZ...]]></summary>
-        <author>
-            <name>ソリトンシステムズ / Zao SDK チーム</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyCloneの紹介と使い方]]></title>
-        <id>https://zenn.dev/naoki0103/articles/pyclone-20230629</id>
-        <link href="https://zenn.dev/naoki0103/articles/pyclone-20230629"/>
-        <updated>2023-06-29T06:52:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-PyCloneは、my-python-templateを効率的に利用するために私が作成したコマンドラインユーティリティです。このツールを使用すると、プロジェクトのクローン、セットアップ、GitHubへの初期バージョンのコミットを素早く行うことができます。my-python-templateに関するZennの記事はこちらをご覧ください。
-
- セットアップ
-PyCloneを使用するためには、まずpyclone関数をシェルの設定ファイルにコピーする必要があります。Bashユーザーの場合は.bashrc、ZSHユーザーの場合は.zshrcとなります。
-関数の宣言は以下のようになりま...]]></summary>
-        <author>
-            <name>Naoki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonプロジェクトのためのテンプレート: my-python-templateの紹介]]></title>
-        <id>https://zenn.dev/naoki0103/articles/my-python-template-20230629</id>
-        <link href="https://zenn.dev/naoki0103/articles/my-python-template-20230629"/>
-        <updated>2023-06-29T06:52:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Pythonプロジェクトを始める際には、プロジェクトの構造や依存関係の管理、コードの品質を保つためのツールなど、設定すべき項目が多くあります。そこで今回は、これらの設定を一元化したPythonプロジェクトのテンプレート、my-python-templateを作成しました。こちらについて今回は紹介いたします。
-
- my-python-templateの内容
-このテンプレートには以下のファイルとフォルダが含まれています。
-
-
-pyproject.toml: プロジェクトの設定と依存関係を管理するためのファイルです。
-
-.pre-commit-config.yaml: pre-c...]]></summary>
-        <author>
-            <name>Naoki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TYTAN SDK で遊んでみる (1) — 入門の入門]]></title>
-        <id>https://zenn.dev/derwind/articles/dwd-tytansdk01</id>
-        <link href="https://zenn.dev/derwind/articles/dwd-tytansdk01"/>
-        <updated>2023-06-28T23:58:02.000Z</updated>
-        <summary type="html"><![CDATA[目的
-詳しくないので用語や言い回しは適切ではないかもしれないが、QUBO (Quadratic Unconstrained Binary Optimization) という概念があって、これをソルバで最適化して組合せ最適化問題を解きたい、ということがある (らしい)。
-今回、この QUBO の最適化を通じた組合せ最適化について、基本的なところを押さえておきたいという理由でつらつらと記事を書いてみようかと思って、最初の記事を書いてみることにした。今回は、SDK の使いかたを最低限見る程度をゴールとする。
-
- はじめに
-QUBO による組合せ最適化が何かということは後に回すとして、そうい...]]></summary>
-        <author>
-            <name>derwind</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【jishaku】discord botでpythonのコマンドを実行する方法]]></title>
-        <id>https://zenn.dev/sonyakun/articles/jishaku_discord_bot</id>
-        <link href="https://zenn.dev/sonyakun/articles/jishaku_discord_bot"/>
-        <updated>2023-06-28T14:36:06.000Z</updated>
-        <summary type="html"><![CDATA[今回は、discord.pyのbotで、pythonのコマンドやコードを動かす方法を紹介していきます！
-!
-おそらくスラッシュコマンドでは動作しません。
-
-では、まず、以下のコマンドを実行してください。
-pip install jishaku
-できない場合は
-py -m pip install jishaku
-を実行してください。
-discord.pyは以下のコマンドで入れられます。
-py -m pip install discord.py
-そしたら、メモ帳などを開いてください。(僕は今VScode持ってないのでIDLEを使います。)
-
- botを作成する方法
-https://dis...]]></summary>
-        <author>
-            <name>そにゃ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Websockets】P2P地震速報のWebsocketとMisskey.pyを使って地震botを作ろう！]]></title>
-        <id>https://zenn.dev/sonyakun/articles/p2pquake_eewbot</id>
-        <link href="https://zenn.dev/sonyakun/articles/p2pquake_eewbot"/>
-        <updated>2023-06-28T14:35:36.000Z</updated>
-        <summary type="html"><![CDATA[!
-最新のコードはリポジトリをご覧ください。
-
-
- はじめに
-ほぼ1年間記事が思いつかずに投稿してなかった人です。
-今回は、QuakeWatchというMisskey/Discordの地震情報Botを作ってみたので備忘録程度に書いていきます。
-
- 動作環境
-Windows11 22H2
-Python 3.11.3
-
- ライブラリ
-
-folium
-fastapi
-discord-webhook
-misskey.py
-websockets
-httpx
-uvicorn[standard]
-playwright
-
-
- 完成形
-
-
- 簡単なmapを生成してみる
-まず、foliumをimportします...]]></summary>
-        <author>
-            <name>そにゃ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[OpenCALM-7BをM2 Macで動かす]]></title>
-        <id>https://zenn.dev/tossy21/articles/aff33be88e752e</id>
-        <link href="https://zenn.dev/tossy21/articles/aff33be88e752e"/>
-        <updated>2023-06-28T13:53:10.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事では、CyberAgent社が公開したLLMであるOpenCALM-7BのモデルをM2 Macのローカル環境で実行したTipsを記載します。
-
- OpenCALMとは
-OpenCALMはCyberAgent社が開発したデコーダ型の事前学習済みモデルです。
-商用利用可能なライセンスとなっており、このモデルをベースにチューニングを行うことが可能です。
-https://www.cyberagent.co.jp/news/detail/id=28817
-OpenCALM-7BモデルはHuggingFaceで公開されています。
-https://huggingface.co/c...]]></summary>
-        <author>
-            <name>tossy</name>
         </author>
     </entry>
 </feed>
