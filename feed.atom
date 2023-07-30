@@ -2,10 +2,244 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-07-29T01:21:48.627Z</updated>
+    <updated>2023-07-30T01:26:10.636Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[SynologyのNASに公式の手段でPython3.9をインストールしてpipも使えるようにする]]></title>
+        <id>https://zenn.dev/kn1cht/articles/synology-python-39</id>
+        <link href="https://zenn.dev/kn1cht/articles/synology-python-39"/>
+        <updated>2023-07-29T23:36:23.000Z</updated>
+        <summary type="html"><![CDATA[TL;DR
+
+現在のSynology NASでは標準機能でPython3.9をインストールできます
+pipを使うには、ensurepipパッケージでpipをインストールする、またはvenvで仮想環境を作成するとよいです
+
+
+ 背景
+Synology製のNAS（Network Attached Storage）では、様々な自作のプログラムを動かすことができます。特に、Pythonを使うことでWebサイトの監視、IoT、バックアップなど幅広い処理が可能です。筆者は、GitHubの自分のリポジトリを自動でNASに反映させるプログラムを定期実行しています。
+https://zenn.dev/...]]></summary>
+        <author>
+            <name>kn1cht</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[pydantic V2] model_configという名前のフィールドを作るには？]]></title>
+        <id>https://zenn.dev/shimat/articles/125dbd4874a8e0</id>
+        <link href="https://zenn.dev/shimat/articles/125dbd4874a8e0"/>
+        <updated>2023-07-29T21:57:00.000Z</updated>
+        <summary type="html"><![CDATA[背景
+pydantic V1では、BaseModelを継承したモデルの各種設定のために Config という名前の内部クラスを定義する仕様でした。これがV2では、model_config = pydantic.ConfigDict(...) の要領でフィールドとして定義するように改められています（V1の方法もまだ使えますが非推奨）。
+https://docs.pydantic.dev/2.1/usage/model_config/
+class MyModel(BaseModel):
+    name: str
+    model_config = ConfigDict(str_to_...]]></summary>
+        <author>
+            <name>shimat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【時系列予測 - 実践編】LSTMを使用したマグニチュード予測]]></title>
+        <id>https://zenn.dev/zaki_varlaw/articles/f0a32f3962d210</id>
+        <link href="https://zenn.dev/zaki_varlaw/articles/f0a32f3962d210"/>
+        <updated>2023-07-29T19:44:34.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+地震の加速度波形を利用して、何か地学的な情報を推測することはできないか。
+ということで、今回はLSTMを利用した地震波形の学習とマグニチュードの一の位を予測する方法について解説します。
+今後はより多くの説明変数を地学的視点で探っていき、他の機械学習モデルなども組み合わせて精度を高めていくことを検討しています。
+最終的には気象庁のデータを組み合わせて津波の遡上高を推測することが目標です。
+また、今回は一連の実装方法の解説と動作確認がメインのため、深層学習において必要な細かい概念については別の記事で紹介します。
+
+ 開発環境
+Google Colabを使用します。
+
+ データ作...]]></summary>
+        <author>
+            <name>zaki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【時系列予測 - 基礎編】Vol.3 Transformerから派生したGPT]]></title>
+        <id>https://zenn.dev/zaki_varlaw/articles/d74a5c8156ad30</id>
+        <link href="https://zenn.dev/zaki_varlaw/articles/d74a5c8156ad30"/>
+        <updated>2023-07-29T19:43:13.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+【時系列予測 - 基礎編】Vol.1 ニューラルネットワーク 基本事項まとめ
+【時系列予測 - 基礎編】Vol.2 Encoder-Decoderモデル 基本事項まとめ
+から来た方はようこそ。
+今回はGoogle社のBERTなどと共にTransformerから派生した「GPT」について触れていきます。
+その前に、「事前学習」「ファインチューニング」という基本事項を押さえておきましょう。
+
+ 事前学習(pre-training)
+事前学習とは、大量のデータを使用してモデルを事前に訓練するプロセスです。
+通常、事前学習は非常に大規模なデータセットで行われます。
+例えば、大量のテ...]]></summary>
+        <author>
+            <name>zaki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【時系列予測 - 基礎編】Vol.2 Encoder-Decoderモデル]]></title>
+        <id>https://zenn.dev/zaki_varlaw/articles/8755c8909cf16f</id>
+        <link href="https://zenn.dev/zaki_varlaw/articles/8755c8909cf16f"/>
+        <updated>2023-07-29T19:41:44.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+【時系列予測 - 基礎編】Vol.1 ニューラルネットワーク
+を読んでいない方はまずそちらを読むことをおすすめします。
+とりあえず先に開発作業に触れてみたいという方は、こちらを読んでみてください。
+【時系列予測 - 実践編】LSTMを使用したマグニチュード予測
+今回の記事では、文章生成モデルの革命児Transformerに関する内容がメインになります。
+画像認識AIとかをやっていると、学習データのかさ増しにtransformというものを使用しますが全く別物です。
+
+ 時系列予測のEncoder-Decoderモデル 基本事項まとめ
+
+
+Encoder
+入力を何かしらの固定長...]]></summary>
+        <author>
+            <name>zaki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【時系列予測 - 基礎編】Vol.1 回帰結合型ニューラルネットワーク]]></title>
+        <id>https://zenn.dev/zaki_varlaw/articles/d69797ffba1ff5</id>
+        <link href="https://zenn.dev/zaki_varlaw/articles/d69797ffba1ff5"/>
+        <updated>2023-07-29T19:39:29.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+今回の【時系列予測 - 基礎編】ではVol.1~3に渡って、
+時系列予測の基礎知識について紹介していきます。
+【時系列予測 - 基礎編】Vol.2 Encoder-Decoderモデル
+【時系列予測 - 基礎編】Vol.3 Transformerから派生したGPT
+とりあえず先に開発作業に触れてみたいという方は、こちらを読んでみてください。
+【時系列予測 - 実践編】LSTMを使用したマグニチュード予測
+
+ 対象読者
+・(できれば)pythonに少しでも触ったことがある方
+・ニューラルネットワークの基本構造（入出力層、隠れ層や重み、バイアスといった概念）を理解している方
+
+...]]></summary>
+        <author>
+            <name>zaki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Django】django rest framework環境構築/インストール]]></title>
+        <id>https://zenn.dev/aew2sbee/articles/django-rest-framework-install</id>
+        <link href="https://zenn.dev/aew2sbee/articles/django-rest-framework-install"/>
+        <updated>2023-07-29T12:26:15.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+社内の有志メンバーの活動でDRFを使用したので、導入方法を記録として残しておきます。
+http://127.0.0.1:8000/books/list/にアクセスして
+下記の画面が表示されるまでを解説します
+
+
+ 0. ファイル構成の確認
+下記のようなファイル構成で始めます
+src
+└─ backend
+
+ 1. ライブラリーのインストール
+
+
+djangoとdjango rest frameworkを下記コマンドでインストールする
+
+pip install django
+pip install djangorestframework
+
+djangoのVersionを確認す...]]></summary>
+        <author>
+            <name>ふるた なおき🥝</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPI+PoetryなDocker環境を作る！]]></title>
+        <id>https://zenn.dev/yamiii/articles/c7c7fa66aedf3f</id>
+        <link href="https://zenn.dev/yamiii/articles/c7c7fa66aedf3f"/>
+        <updated>2023-07-29T06:54:10.000Z</updated>
+        <summary type="html"><![CDATA[概要
+FastAPI in Containers - Dockerを読んでいて、Poetryでライブラリ管理したいと思ったので、作ってみた！
+
+ できたもの
+https://github.com/r-eiyama/fast-api-docker
+リポジトリをクローンして、docker compose up -dを実行すれば環境が作れてしまう！！
+作れた人はこの記事にいいねを頼む。
+
+ 解説
+ディレクトリ構成は下記のようにシンプルである。
+Simple is the Bestとはまさにこのことを言うのではなかろうか。
+.
+├── Dockerfile
+├── Taskfile.yml ...]]></summary>
+        <author>
+            <name>yamii</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[作りたいものがない。]]></title>
+        <id>https://zenn.dev/fix/articles/d571d2867fb1d9</id>
+        <link href="https://zenn.dev/fix/articles/d571d2867fb1d9"/>
+        <updated>2023-07-29T05:18:15.000Z</updated>
+        <summary type="html"><![CDATA[Flutter(Dart)学習 停滞
+Flutter(Dart)学習あまりできてないです。
+理由はタイトル通り。
+Flutter大学に入ったのを機に、コミュニティ内の記事＆動画をラジオ替わりに聞くなどは合間で情報収集は継続。
+それだけでも、月額料金を払った価値があるので十分ですが…。
+
+ 停滞する理由
+最初の自己紹介の記事でも色々書きましたが、小学校の頃から趣味でプログラミング学習と、アプリ開発をやってるので、いい加減、作りたいアプリの制作アイデア的な物はもう枯れてきてます。
+同じように、小・中学生時代から趣味でプログラミングをはじめてプライベートでも開発してる人がいれば、どんなソフ...]]></summary>
+        <author>
+            <name>fix</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonでZabbixのxmlから情報を抽出する]]></title>
+        <id>https://zenn.dev/malwarekiddy/articles/dd6e5d8a243a69</id>
+        <link href="https://zenn.dev/malwarekiddy/articles/dd6e5d8a243a69"/>
+        <updated>2023-07-29T02:04:16.000Z</updated>
+        <summary type="html"><![CDATA[Zabbixの数万行に及ぶ設定内容を、パラメーターシートとして提出しなければいけない事があります。
+人力では無理ですので、Pythonにやってもらいます。
+
+ 前提
+目的は、Zabbixから出力されたxml形式のファイルから、指定の情報を抽出することです。
+zabbixから出力されるxmlは、データの内容によってDOM構造が異なりますが、スクリプト内のパスを書き換えれば、どのようなxmlでも処理できます。
+
+ xml
+今回は長文にしたくないのでお手軽に、ホスト情報のxmlから「ホスト名」「テンプレート名」「グループ名」「ホストのIPアドレス」を取得してみます。
+今回処理するxmlは次のよ...]]></summary>
+        <author>
+            <name>kaka</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[30分でFastAPIでGraphQL APIを開発するチュートリアル]]></title>
+        <id>https://zenn.dev/nameless_sn/articles/gql_fastapi_tutorial</id>
+        <link href="https://zenn.dev/nameless_sn/articles/gql_fastapi_tutorial"/>
+        <updated>2023-07-29T01:45:04.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+今回の記事ではデータベースを使わずに、1時間でFastAPIでGraphQL APIを開発する方法を解説する。
+!
+注意：今回の記事では、GraphQL APIやFastAPIに関する知識を理解している前提で説明をする。本記事でも簡潔に解説するが、詳細に理解したいならばこちらの記事を参照するといい。FastAPIの場合はこちら。
+
+
+ 対象とする読者
+
+FastAPIを使っているひと
+これからPythonでGraphQL APIを開発したいひと
+タイトルを見て気になったひと
+
+
+ 開発環境
+
+Windows 11
+Python 3.10.2
+FastAPI
+Strawber...]]></summary>
+        <author>
+            <name>Shota Nukumizu</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[GitHubリポジトリをChatGPTに学習させる方法【Python / LangChain / FAQ】]]></title>
         <id>https://zenn.dev/umi_mori/articles/langchain-indexes-git</id>
@@ -5264,162 +5498,6 @@ https://norari-kurari-way.com/python-lesson/
 リファレン...]]></summary>
         <author>
             <name>F sh ee</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[jail に Python パッケージをインストールする]]></title>
-        <id>https://zenn.dev/fikastudio/articles/71efceed7083a4</id>
-        <link href="https://zenn.dev/fikastudio/articles/71efceed7083a4"/>
-        <updated>2023-06-30T09:00:00.000Z</updated>
-        <summary type="html"><![CDATA[この記事では、jail にパッケージをインストールしていきます。
-前回[1] は、VITOTHON[2][3] を使用して jail を簡単に構築する環境を用意しました。
-前回作成した test.py を使用して jail を用意します。
-[root@vitothon /jails/bin]# python3 test.py 
-I'll do your job
-ipfw: getsockopt(IP_FW_XADD): Protocol not available
-Setup node server01 done!
-epair0a is connected to server01
-epa...]]></summary>
-        <author>
-            <name>情報工学入門チャンネル</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-256｜B - Batters]]></title>
-        <id>https://zenn.dev/hyperdb/articles/e53b87442800d1</id>
-        <link href="https://zenn.dev/hyperdb/articles/e53b87442800d1"/>
-        <updated>2023-06-30T05:43:05.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-256 B - Batters
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def shift_one(x):
-    y = [0 for _ in range(len(x))]
-    for i in range(len(x) - 1):
-        y[i + 1] = x[i]
-    return y
-
-
-def main():
-    n = getInt()
-  ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-256｜A - 2^N]]></title>
-        <id>https://zenn.dev/hyperdb/articles/6361434b566dd3</id>
-        <link href="https://zenn.dev/hyperdb/articles/6361434b566dd3"/>
-        <updated>2023-06-30T05:43:04.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-256 A - 2^N
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    n = getInt()
-
-    print(2 ** n)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】CSVファイルを読み込む2パターン]]></title>
-        <id>https://zenn.dev/aew2sbee/articles/python-csv-2pattern</id>
-        <link href="https://zenn.dev/aew2sbee/articles/python-csv-2pattern"/>
-        <updated>2023-06-30T01:36:36.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-CSVファイルを読み込む処理を一度書いたらその関数を使いまわすので、
-忘れがちなので、備忘録として執筆します。
-
-
-
-項目
-内容
-
-
-
-
-対象者
-・Python初学者
-
-
-伝えたい内容
-・PythonでCSVファイルを読み込む方法
-
-
-前提条件
-・Python 3.9.10・pandas 1.5.2
-
-
-
-
- 対象のCSVファイル
-
- sample.csv
-No,name,age,gender
-1,ito,15,male
-2,suzuki,14,female
-3,sakai,18,male
-
-
-
-
-No
-name
-age
-gender
-
-
-
-
-1
-ito
-15
-male
-
-...]]></summary>
-        <author>
-            <name>ふるた なおき🥝</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PoetryでRAPIDSをインストールする]]></title>
-        <id>https://zenn.dev/karunru/articles/a19f57653ad075</id>
-        <link href="https://zenn.dev/karunru/articles/a19f57653ad075"/>
-        <updated>2023-06-30T01:21:29.000Z</updated>
-        <summary type="html"><![CDATA[RAPIDSのversionは23.06, cudaのversionは11.0を想定
-pyproject.tomlのdepondenciesに以下を記述する
-[tool.poetry.dependencies]
-cudf-cu11 = { version="^23.06", source="rapids" }
-dask-cudf-cu11 = { version="^23.06", source="rapids" }
-cuml-cu11 = { version="^23.06", source="rapids" }
-ptxcompiler-cu11 = { version="^0.7",...]]></summary>
-        <author>
-            <name>やまぴー</name>
         </author>
     </entry>
 </feed>
