@@ -12,6 +12,111 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/esm/articles/617c02f0cc41ef",
+          "author": "sfjwr",
+          "description": "この記事は、「おしゃべりクマちゃん🧸」シリーズの記事になります。\nChatGPTのAPIを利用して、おしゃべりクマちゃんの心臓部、雑談会話の文章を生成する機能(以降、発言生成機能と呼称)を作成しました。\nその機能についての紹介を、何回かに分けて行なっていきます。\n今回は、ChatGPTのAPIの使い方の解説になります😀\n\n ChatGPTのAPIについて\nChatGPTのAPIは、引数にプロンプト(と必要なら会話の履歴)を与えて呼び出すことで、そのプロンプトに対する回答を生成させることができます。\nプロンプトとはChatGPTに与える指示のようなもので、日本語や英語などの自然言語で記述し...",
+          "link": "https://zenn.dev/esm/articles/617c02f0cc41ef",
+          "publishedOn": "2023-08-02T01:00:01.000Z",
+          "wordCount": 437,
+          "title": "【FDO43】【会話文章生成 その1】ChatGPTのAPIを利用したアプリケーションの実装",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--tzNBv4b7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590FDO43%25E3%2580%2591%25E3%2580%2590%25E4%25BC%259A%25E8%25A9%25B1%25E6%2596%2587%25E7%25AB%25A0%25E7%2594%259F%25E6%2588%2590%2520%25E3%2581%259D%25E3%2581%25AE1%25E3%2580%2591ChatGPT%25E3%2581%25AEAPI%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2581%25AE%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25B0%25B8%25E5%2592%258C%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2583%259E%25E3%2583%258D%25E3%2582%25B8%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588%2520Tech%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:sfjwr%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2UxYzlhYmNlZjEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WU00VG5xR2pzRl9UYS10V0xrYVpzVy1YT2pDb1NOTmZ3LXRTVk89czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--tzNBv4b7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590FDO43%25E3%2580%2591%25E3%2580%2590%25E4%25BC%259A%25E8%25A9%25B1%25E6%2596%2587%25E7%25AB%25A0%25E7%2594%259F%25E6%2588%2590%2520%25E3%2581%259D%25E3%2581%25AE1%25E3%2580%2591ChatGPT%25E3%2581%25AEAPI%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2581%25AE%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25B0%25B8%25E5%2592%258C%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2583%259E%25E3%2583%258D%25E3%2582%25B8%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588%2520Tech%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:sfjwr%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2UxYzlhYmNlZjEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WU00VG5xR2pzRl9UYS10V0xrYVpzVy1YT2pDb1NOTmZ3LXRTVk89czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/libra189/articles/a37d90688a0442",
+          "author": "リブラ",
+          "description": "ご閲覧ありがとうございます。\nFlaskのJinjaテンプレートでFlask側で定義した自作関数を呼び出したいと思ったのですが、少し面倒だったので記録として残しておきます。\n\n 検証環境\n\n\n\n環境\nバージョン\n\n\n\n\nOS\nMacOS 12.3\n\n\nPython\n3.9.6\n\n\nFlask\n2.0.2\n\n\nJinja\n3.1.1\n\n\n\n\n 解決したい問題\n例えば、Flaskで動的に画面に値を表示したい時、Jinjaにはそのような関数は用意されていないため、一般的にはテンプレート呼び出し時に結果を引き渡す必要があります\nコード例\n\napp.py\nfrom flask import Fla...",
+          "link": "https://zenn.dev/libra189/articles/a37d90688a0442",
+          "publishedOn": "2023-08-02T00:01:31.000Z",
+          "wordCount": 547,
+          "title": "Jinjaテンプレートから自作関数を呼び出す",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--GFowhuqe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Jinja%25E3%2583%2586%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%2588%25E3%2581%258B%25E3%2582%2589%25E8%2587%25AA%25E4%25BD%259C%25E9%2596%25A2%25E6%2595%25B0%25E3%2582%2592%25E5%2591%25BC%25E3%2581%25B3%25E5%2587%25BA%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%25AA%25E3%2583%2596%25E3%2583%25A9%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVjODVkMzFkM2UuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--GFowhuqe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Jinja%25E3%2583%2586%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%2588%25E3%2581%258B%25E3%2582%2589%25E8%2587%25AA%25E4%25BD%259C%25E9%2596%25A2%25E6%2595%25B0%25E3%2582%2592%25E5%2591%25BC%25E3%2581%25B3%25E5%2587%25BA%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%25AA%25E3%2583%2596%25E3%2583%25A9%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVjODVkMzFkM2UuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/aew2sbee/articles/django-rest-framework-models",
+          "author": "ふるた なおき🥝",
+          "description": "はじめに\n社内の有志メンバーの活動でDjangoを利用するので、modelsについて理解する必要があったので、\n下記の公式ドキュメントを読み、本記事にまとめます。\n\n\n Field(フィールド)一覧\n\n\n\nFieldの種類\nフィールドの説明\n\n\n\n\nBooleanField\nboolean値 (True/False)\n\n\nCharField\n文字列\n\n\nTextField\n長い文字列（テキスト）\n\n\nSlugField\n文字列(アルファベット、数字、アンダーバー、ハイフンのみ)\n\n\nJSONField\nJSONエンコードされたデータ\n\n\nIntegerField\n整数\n\n\nFloat...",
+          "link": "https://zenn.dev/aew2sbee/articles/django-rest-framework-models",
+          "publishedOn": "2023-08-01T12:04:11.000Z",
+          "wordCount": 1496,
+          "title": "【Django】modelsのField一覧",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--YHarrMea--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Django%25E3%2580%2591models%25E3%2581%25AEField%25E4%25B8%2580%25E8%25A6%25A7%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B5%25E3%2582%258B%25E3%2581%259F%2520%25E3%2581%25AA%25E3%2581%258A%25E3%2581%258D%2520%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YTFYdHhmWGZPVmpKek9sTnQ0cDZmaWQyeENLMTlKOEl0akpQczZiZz1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--YHarrMea--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Django%25E3%2580%2591models%25E3%2581%25AEField%25E4%25B8%2580%25E8%25A6%25A7%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B5%25E3%2582%258B%25E3%2581%259F%2520%25E3%2581%25AA%25E3%2581%258A%25E3%2581%258D%2520%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YTFYdHhmWGZPVmpKek9sTnQ0cDZmaWQyeENLMTlKOEl0akpQczZiZz1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/tatsuromurata/articles/558299f3b80f16",
+          "author": "しば🐕AI",
+          "description": "exllamaとは\nexllamaはローダーのライブラリであり、Llamaベースの大規模言語モデルの推論が早くなる模様\nhttps://github.com/turboderp/exllama/tree/master\n\n リンク\nColab\ngithub\n\n 準備\nGoogle Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。\n\n 環境構築\nインストール手順です。\n!git clone https://github.com/oobabooga/text-generation-webui\n%cd text-generation...",
+          "link": "https://zenn.dev/tatsuromurata/articles/558299f3b80f16",
+          "publishedOn": "2023-08-01T09:32:07.000Z",
+          "wordCount": 811,
+          "title": "exllama+GPTQをgoogle colabで試してみた",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--6Js1RyOU--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:exllama%252BGPTQ%25E3%2582%2592google%2520colab%25E3%2581%25A7%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2581%25B0%2520AI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VlMmM0MmY1MGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--6Js1RyOU--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:exllama%252BGPTQ%25E3%2582%2592google%2520colab%25E3%2581%25A7%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2581%25B0%2520AI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VlMmM0MmY1MGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/8e3c4f5eeabf8d",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-276 B - Adjacency List\n\n\n\n 提出結果\ndef getIntMap():\n    return map(int, input().split())\n\n\ndef getIntListRow(N):\n    return [list(map(int, input().split())) for _ in range(N)]\n\n\ndef main():\n    n, m = getIntMap()\n    ab = getIntListRow(m)\n\n    r = [[] for _ in range(n + 1)]\n\n    for a,...",
+          "link": "https://zenn.dev/hyperdb/articles/8e3c4f5eeabf8d",
+          "publishedOn": "2023-08-01T04:40:54.000Z",
+          "wordCount": 497,
+          "title": "［AtCoder］ABC-276｜B - Adjacency List",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--tpEm5un9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-276%25EF%25BD%259CB%2520-%2520Adjacency%2520List%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--tpEm5un9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-276%25EF%25BD%259CB%2520-%2520Adjacency%2520List%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/65567fc9f436fc",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-276 A - Rightmost\n\n\n\n 提出結果\ndef getString():\n    return input()\n\n\ndef main():\n    s = list(getString())\n\n    s.reverse()\n\n    print(len(s) - s.index('a') if 'a' in s else -1)\n\n\nif __name__ == \"__main__\":\n    main()",
+          "link": "https://zenn.dev/hyperdb/articles/65567fc9f436fc",
+          "publishedOn": "2023-08-01T04:40:53.000Z",
+          "wordCount": 249,
+          "title": "［AtCoder］ABC-276｜A - Rightmost",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--2VW0Wz7i--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-276%25EF%25BD%259CA%2520-%2520Rightmost%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--2VW0Wz7i--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-276%25EF%25BD%259CA%2520-%2520Rightmost%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/trecodea/articles/3bb3a54237a1ac",
+          "author": "シオムラ サキ",
+          "description": "Python3.5で導入された型ヒントとは\nPythonでは、引数や戻り値・リストの要素には型指定を行わず、自由なIN/OUTが基本というのが元々の考え方だった。\nしかし、大規模なシステムなどで複数の開発者により分担してプログラムを作成するにあたり、型の指定がないことで開発の遅れや不具合が起こるといった問題が発生しがちである。\nそこで、型ヒントを用いて引数や戻り値の型を明確にし、開発における意思疎通を図ろうという仕組みが生まれた。\n実際のプログラムをpythonコマンドで実行する際には影響はないが、mypyコマンドによる型のチェック機能を行うことでそれぞれの関数やオブジェクトの受け渡...",
+          "link": "https://zenn.dev/trecodea/articles/3bb3a54237a1ac",
+          "publishedOn": "2023-08-01T04:18:26.000Z",
+          "wordCount": 1471,
+          "title": "Python3.11での型ヒントを用いた基本文法",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--iNkInzTP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python3.11%25E3%2581%25A7%25E3%2581%25AE%25E5%259E%258B%25E3%2583%2592%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E5%259F%25BA%25E6%259C%25AC%25E6%2596%2587%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25B7%25E3%2582%25AA%25E3%2583%25A0%25E3%2583%25A9%2520%25E3%2582%25B5%25E3%2582%25AD%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk0MTQ1OWU5MTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--iNkInzTP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python3.11%25E3%2581%25A7%25E3%2581%25AE%25E5%259E%258B%25E3%2583%2592%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E5%259F%25BA%25E6%259C%25AC%25E6%2596%2587%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25B7%25E3%2582%25AA%25E3%2583%25A0%25E3%2583%25A9%2520%25E3%2582%25B5%25E3%2582%25AD%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk0MTQ1OWU5MTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
           "id": "https://zenn.dev/rchiji/articles/92690f26968e9b",
           "author": "Ryota Chijimatsu",
           "description": "Cellposeは機械学習を用いて細胞などの小単位を1つずつセグメンテーションするツールである。\nhttps://www.cellpose.org/\nこの記事ではCellposeのインストールから学習済みモデルでのセグメンテーション、自身のデータに合わせた再学習を紹介する。\nなおWindows 11での検証となる。\nAnacondaを事前にインストールしておき、Anaconda Promptを使える環境を用意しておく必要がある。\n\nhttps://www.anaconda.com/download\n\n\n インストール\n以下の公式ページを参考にCellpose version 2.0のイン...",
@@ -3280,111 +3385,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--eoobuaC0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Web%25E3%2582%25AB%25E3%2583%25A1%25E3%2583%25A9%25E3%2581%25A7YOLOv8%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%2599%25E3%2580%2590%25E3%2582%25B9%25E3%2583%258B%25E3%2583%259A%25E3%2583%2583%25E3%2583%2588%25E6%259C%2589%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:stray%2520dog%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBjYzhmZDAzMGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/satoeu/articles/b9169ae672a83e",
-          "author": "satoeu",
-          "description": "Intel one API利用時のpybind11\nC++とPythonを連携させる方法は色々あります。ちょっとしたC++プログラムなら、普通にdllにしてctypesを使えばいいと思いますが、C++オブジェクトと連携させたい場合は面倒です。そういう場合は、個人的には、現状だとpybind11が一番良いのではないかと思っています。ですが、pybind11をIntelコンパイラ環境下で使う場合はどうすればいいのか、というのが情報が少ないようです。そこで調べてみたので、まとめて報告します。\n\n 下準備\n\n 下準備１～ソースコードの取得\n色々な方法はあると思いますが、手っ取り早く、ソースを...",
-          "link": "https://zenn.dev/satoeu/articles/b9169ae672a83e",
-          "publishedOn": "2023-07-03T11:25:33.000Z",
-          "wordCount": 2613,
-          "title": "Intel one API利用時のpybind11",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--NnvlZ0P9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Intel%2520one%2520API%25E5%2588%25A9%25E7%2594%25A8%25E6%2599%2582%25E3%2581%25AEpybind11%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:satoeu%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZmpCSE9TN1Q5elBvbWcxdll1NUs2OVBNelBoay1YdVVWR3Y4OXhveHRSPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--NnvlZ0P9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Intel%2520one%2520API%25E5%2588%25A9%25E7%2594%25A8%25E6%2599%2582%25E3%2581%25AEpybind11%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:satoeu%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZmpCSE9TN1Q5elBvbWcxdll1NUs2OVBNelBoay1YdVVWR3Y4OXhveHRSPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/zerebom/articles/b338784c8ac76a",
-          "author": "zerebom",
-          "description": "結論\nGPU版PytorchのようなPyPIに存在しないパッケージにおいて、Poetry1.5.1からインストールがより簡単になりました🎉\n例えば自分の環境では下記の2行でインストールできます。\npoetry source add torch_cu118 --priority=explicit https://download.pytorch.org/whl/cu118\npoetry add torch torchvision torchaudio --source torch_cu118\n具体的には下記の手順できます。\n\n公式サイトから、インストールコマンドをコピーする。\n\nhtt...",
-          "link": "https://zenn.dev/zerebom/articles/b338784c8ac76a",
-          "publishedOn": "2023-07-03T11:11:09.000Z",
-          "wordCount": 628,
-          "title": "Poetry1.5.1からGPU版のPytorchのインストールが簡単になりました",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--PFxxjNIa--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Poetry1.5.1%25E3%2581%258B%25E3%2582%2589GPU%25E7%2589%2588%25E3%2581%25AEPytorch%25E3%2581%25AE%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%258C%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258A%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:zerebom%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUwN2FmMmVhNDMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--PFxxjNIa--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Poetry1.5.1%25E3%2581%258B%25E3%2582%2589GPU%25E7%2589%2588%25E3%2581%25AEPytorch%25E3%2581%25AE%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%258C%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258A%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:zerebom%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUwN2FmMmVhNDMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/tatsuromurata/articles/86f859bd717712",
-          "author": "しば🐕AI",
-          "description": "OrcaLLMとは\norcaLLMは、chatGPTの論理プロセスをシュミレートさせて作成されたfinetuned型のLLMです。\nhttps://www.kdnuggets.com/2023/06/orca-llm-reasoning-processes-chatgpt.html\n\n リンク\nColab\ngithub\n\n 準備\nGoogle Colabを開き、メニューから「ランタイム→ランタイムのタイプを変更」でランタイムを「GPU」に変更します。\n\n 環境構築\nインストール手順です。\n!pip install -q auto-gptq\n\n 推論\n(1)モデルのロード\nfrom t...",
-          "link": "https://zenn.dev/tatsuromurata/articles/86f859bd717712",
-          "publishedOn": "2023-07-03T10:13:37.000Z",
-          "wordCount": 1253,
-          "title": "orcaLLM13Bをgoogle colabで試してみた",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--YPx7p--W--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:orcaLLM13B%25E3%2582%2592google%2520colab%25E3%2581%25A7%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2581%25B0%2520AI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VlMmM0MmY1MGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--YPx7p--W--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:orcaLLM13B%25E3%2582%2592google%2520colab%25E3%2581%25A7%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2581%25B0%2520AI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VlMmM0MmY1MGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/gensha5/articles/f300f6e4697b77",
-          "author": "gensha5",
-          "description": "本記事ではDjangoが出すエラーについて気づいたことがあるのでそれについて書きます。\n端的に言うと、「開始タグ」を間違えると「閉じタグ」はそれに対応したタグにすること、をエラーメッセージでは提案される、ということです。\n\n 発生した状況\n下にbase.htmlでは{% block content %}{% endblock content %}でページごとに異なる部分を指定しています。\n\nbase.html\n<!doctype html>\n<html lang=\"en\">\n  <head>\n    <!-- Required meta tags...",
-          "link": "https://zenn.dev/gensha5/articles/f300f6e4697b77",
-          "publishedOn": "2023-07-03T06:55:44.000Z",
-          "wordCount": 501,
-          "title": "Djangoのエラーメッセージについて気づいたこと",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--F7Ju76mW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%25E3%2581%25AE%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E3%2583%25A1%25E3%2583%2583%25E3%2582%25BB%25E3%2583%25BC%25E3%2582%25B8%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E6%25B0%2597%25E3%2581%25A5%25E3%2581%2584%25E3%2581%259F%25E3%2581%2593%25E3%2581%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:gensha5%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZjMyT3dpc3B6Y1FmWnNsa2F4aHRvUUxnQ0ZEOGZ0ZDloMGRmZW1zWmhGPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--F7Ju76mW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%25E3%2581%25AE%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E3%2583%25A1%25E3%2583%2583%25E3%2582%25BB%25E3%2583%25BC%25E3%2582%25B8%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E6%25B0%2597%25E3%2581%25A5%25E3%2581%2584%25E3%2581%259F%25E3%2581%2593%25E3%2581%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:gensha5%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZjMyT3dpc3B6Y1FmWnNsa2F4aHRvUUxnQ0ZEOGZ0ZDloMGRmZW1zWmhGPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/hyperdb/articles/28888942bbb745",
-          "author": "はいぱぁ",
-          "description": "設問ページ\n\n🔗ABC-257 B - 1D Pawn\n\n\n\n 提出結果\ndef getIntMap():\n    return map(int, input().split())\n\n\ndef getIntList():\n    return list(map(int, input().split()))\n\n\ndef main():\n    n, k, q = getIntMap()\n    a = getIntList()\n    l = getIntList()\n\n    for x in l:\n        p = a[x - 1]\n        if p == n or ...",
-          "link": "https://zenn.dev/hyperdb/articles/28888942bbb745",
-          "publishedOn": "2023-07-03T04:53:10.000Z",
-          "wordCount": 417,
-          "title": "［AtCoder］ABC-257｜B - 1D Pawn",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--TvKRy5vt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-257%25EF%25BD%259CB%2520-%25201D%2520Pawn%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--TvKRy5vt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-257%25EF%25BD%259CB%2520-%25201D%2520Pawn%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/hyperdb/articles/0f457f6354eda2",
-          "author": "はいぱぁ",
-          "description": "設問ページ\n\n🔗ABC-257 A - A to Z String 2\n\n\n\n 提出結果\ndef getIntMap():\n    return map(int, input().split())\n\n\ndef main():\n    n, x = getIntMap()\n\n    print(chr(ord('A') + (x - 1) // n))\n\n\nif __name__ == \"__main__\":\n    main()",
-          "link": "https://zenn.dev/hyperdb/articles/0f457f6354eda2",
-          "publishedOn": "2023-07-03T04:53:09.000Z",
-          "wordCount": 271,
-          "title": "［AtCoder］ABC-257｜A - A to Z String 2",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--_F4UCfNk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-257%25EF%25BD%259CA%2520-%2520A%2520to%2520Z%2520String%25202%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--_F4UCfNk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-257%25EF%25BD%259CA%2520-%2520A%2520to%2520Z%2520String%25202%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/heku/articles/1a1c1c7b59e8ef",
-          "author": "かるでね",
-          "description": "はじめに\n初めまして。\nCryptoGamesというブロックチェーンゲーム企業でエンジニアをしている cardene（かるでね） です！\nスマートコントラクトを書いたり、フロントエンド・バックエンド・インフラと幅広く触れています。\nhttps://cryptogames.co.jp/\n代表的なゲームはクリプトスペルズというブロックチェーンゲームです。\nhttps://cryptospells.jp/\n今回の記事では、OpenAI APIを使用して、「VoicyやYoutubeなどのリンクを入力すると、その内容を要約してくれるアプリ」を作成する手順を紹介していきます。\n実際に僕が作った...",
-          "link": "https://zenn.dev/heku/articles/1a1c1c7b59e8ef",
-          "publishedOn": "2023-07-02T22:09:43.000Z",
-          "wordCount": 3077,
-          "title": "VoicyやYoutubeのリンクを入力して、OpenAI APIを使用して内容を要約するアプリを作ってみよう！",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--wQvpvMCp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Voicy%25E3%2582%2584Youtube%25E3%2581%25AE%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25AF%25E3%2582%2592%25E5%2585%25A5%25E5%258A%259B%25E3%2581%2597%25E3%2581%25A6%25E3%2580%2581OpenAI%2520API%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E5%2586%2585%25E5%25AE%25B9%25E3%2582%2592%25E8%25A6%2581%25E7%25B4%2584%25E3%2581%2599%25E3%2582%258B%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%2588%25E3%2581%2586%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%258B%25E3%2582%258B%25E3%2581%25A7%25E3%2581%25AD%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MzOTcyYmM1M2QuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--wQvpvMCp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Voicy%25E3%2582%2584Youtube%25E3%2581%25AE%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25AF%25E3%2582%2592%25E5%2585%25A5%25E5%258A%259B%25E3%2581%2597%25E3%2581%25A6%25E3%2580%2581OpenAI%2520API%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E5%2586%2585%25E5%25AE%25B9%25E3%2582%2592%25E8%25A6%2581%25E7%25B4%2584%25E3%2581%2599%25E3%2582%258B%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%2588%25E3%2581%2586%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%258B%25E3%2582%258B%25E3%2581%25A7%25E3%2581%25AD%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MzOTcyYmM1M2QuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
         }
       ]
     }
