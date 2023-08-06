@@ -2,10 +2,104 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-08-05T01:20:35.478Z</updated>
+    <updated>2023-08-06T01:18:11.321Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[OptunaのLightGBMTunerの探索範囲を追う]]></title>
+        <id>https://zenn.dev/nishimoto/articles/086508291c8a25</id>
+        <link href="https://zenn.dev/nishimoto/articles/086508291c8a25"/>
+        <updated>2023-08-05T23:59:25.000Z</updated>
+        <summary type="html"><![CDATA[とても便利なLightGBMTunerですが、探索範囲がソースコードにしか書いてなかったのでメモ
+
+ 結論
+param = {
+    "lambda_l1": trial.suggest_float("lambda_l1", 1e-8, 10.0, log=True)
+    "lambda_l2": trial.suggest_float("lambda_l2", 1e-8, 10.0, log=True)
+    "num_leaves": trial.suggest_int("num_leaves", 2, 256)
+    "feature_fraction": trial.s...]]></summary>
+        <author>
+            <name>nishimoto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[文献参照をするChatGPTの作り方【LangChain / Python】]]></title>
+        <id>https://zenn.dev/umi_mori/articles/langchain-cite-source</id>
+        <link href="https://zenn.dev/umi_mori/articles/langchain-cite-source"/>
+        <updated>2023-08-05T22:55:40.000Z</updated>
+        <summary type="html"><![CDATA[はじめまして、ますみです！
+
+この記事では、「LangChain」というライブラリを使って、「文献参照をする方法」を解説します。
+普段、ChatGPT APIを使った開発をしているときに、Bingチャットのように参照した情報元を見たい時ってありますよね。
+また、ウェブ検索の参照元を知りたいだけでなく、社内ドキュメントを読み込んだシステムにおいてどのドキュメントのどの文章を参照したかを確認したい時もあるかと思います。
+そんな時に役立つのが、LangChainのcreate_citation_fuzzy_match_chainです！
+このChainを使うと、プロンプト内に学習させたい文章を入...]]></summary>
+        <author>
+            <name>ますみ@エンジニア</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Qiskit で遊んでみる (16) — Quantum Machine Learning その 2]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-qiskit16</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-qiskit16"/>
+        <updated>2023-08-05T13:39:08.000Z</updated>
+        <summary type="html"><![CDATA[目的
+Qiskit で遊んでみる (15) — Quantum Machine Learning では、状態ベクトルシミュレータを用いて厳密な期待値計算による、Iris データセットの分類問題を扱った。
+今回は、ノイズのあるケースを扱ってみたい。但し、実機を用いると時間がかかることが予想されるので、AerEstimator にノイズモデルを設定する場合を扱う。併せてエラー緩和についても考察を行い、IBM Quantum 上で T-REx によるエラー緩和の適用を試みる。
+
+ エラーのあるシミュレーション
+VQE with Qiskit Aer Primitives の内容を利用する。...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Qiskit で遊んでみる (15) — Quantum Machine Learning]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-qiskit15</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-qiskit15"/>
+        <updated>2023-08-05T12:00:51.000Z</updated>
+        <summary type="html"><![CDATA[目的
+Edward Grant et al. の Hierarchical quantum classifiers (arXiv:1804.03680) という論文があって、面白そうなので実装して試してみようという内容。
+今回はその中の予備実験にあたる？ Iris データセットでの Tree TensorNetwork Classifier を試す[1]。
+
+ 概要
+少々読み違えているところもあるかもしれないが、以下の設定とした。
+
+Iris データセット (4 次元)、或は MNIST (784 次元) を量子回路に振幅エンコーディングする。MNIST の場合は次元が大きいので、主...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[openpyxlでタイトル行だけ書式を変える]]></title>
+        <id>https://zenn.dev/ssfuno/articles/1e472244d72127</id>
+        <link href="https://zenn.dev/ssfuno/articles/1e472244d72127"/>
+        <updated>2023-08-05T09:03:30.000Z</updated>
+        <summary type="html"><![CDATA[イントロダクション
+PythonでExcelを扱えるopenpyxlライブラリを使用して、シートの先頭行だけ書式を変える方法を説明します。
+
+ 動作環境
+
+Windows 11
+Python 3.11.2
+openpyxl 3.1.2
+
+
+ コードと実行結果
+from openpyxl import Workbook
+from openpyxl.styles import PatternFill
+
+wb = Workbook()
+ws = wb.active
+
+# サンプル内容の書き込み
+content = [['1A', '1B', '1C'],
+           ['2A',...]]></summary>
+        <author>
+            <name>すふー</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【Python】ソートされた二乗配列]]></title>
         <id>https://zenn.dev/takuh/articles/64772de060ea6c</id>
@@ -5150,307 +5244,6 @@ RANDOM_SEED = 8927
 rng = np.random.def...]]></summary>
         <author>
             <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyMC：重回帰を題材にしたPyMCの紹介]]></title>
-        <id>https://zenn.dev/yoshida0312/articles/bbd246d3da42b3</id>
-        <link href="https://zenn.dev/yoshida0312/articles/bbd246d3da42b3"/>
-        <updated>2023-07-07T09:03:42.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-今回は重回帰を題材として私がStanやNumPyroと比べても便利だと感じた点を中心にPyMCの様々な機能を紹介していきます。
-
- ライブラリのインポート
-import os
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import arviz as az
-
-import pymc as pm
-import pytensor.tensor as pt
-
-
-# Initialize random number generator
-RAN...]]></summary>
-        <author>
-            <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python + Kivy で作ってみた【Ⅶ】]]></title>
-        <id>https://zenn.dev/pseudo_shocker/articles/a2e452dcf74fb4</id>
-        <link href="https://zenn.dev/pseudo_shocker/articles/a2e452dcf74fb4"/>
-        <updated>2023-07-07T08:14:56.000Z</updated>
-        <summary type="html"><![CDATA[ズーム機能
-フッター部分にスライダーコントロールを設置しズーミングを行う
-ズーミングの中心点は、ゲージ線のボックス部分の中心とする
-
- ズーム率
-kvファイルにおいて、FooterWidgetにスライダーコントロールを追加する
-FooterWidget:
-    FloatLayout:
-        pos:            self.parent.pos
-        size:           self.parent.size
-
-        Slider:
-            canvas.before:
-                Color:
-  ...]]></summary>
-        <author>
-            <name>猫の足跡</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Docker】Reactの環境構築]]></title>
-        <id>https://zenn.dev/aew2sbee/articles/docker-react-env</id>
-        <link href="https://zenn.dev/aew2sbee/articles/docker-react-env"/>
-        <updated>2023-07-07T05:45:03.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-以前、DockerコマンドでReactを立ち上げる方法の勉強をしたので、執筆します。
-下記の画面が表示されるまでを解説したいと思います。
-
-
-
-
-項目
-内容
-
-
-
-
-対象者
-・Docker初学者
-
-
-伝えたい内容
-・DockerコマンドでReactを立ち上げる方法
-
-
-前提条件
-・node:14.17.0
-
-
-
-
- Docker DeskTopのインストール
-
- 1. インストーラーのダウンロード
-下記URLをクリックし、Docker Desktopのインストーラーをダウンロードします。
-
-
-
- 2. インストール開始
-デフォルトのままのチェック状態でOKをクリックしてくだ...]]></summary>
-        <author>
-            <name>ふるた なおき🥝</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2つのDockerコンテナ同士にお話させる]]></title>
-        <id>https://zenn.dev/adamof/articles/31560332ba1442</id>
-        <link href="https://zenn.dev/adamof/articles/31560332ba1442"/>
-        <updated>2023-07-07T04:49:55.000Z</updated>
-        <summary type="html"><![CDATA[ここに2つのDockerコンテナ、AとBがあったとします。Aコンテナでデータを処理したあと、Bコンテナにデータを送ります。受け取ったBコンテナは、また別の処理をし、Aコンテナへデータを返却します。この一連の流れを実現するにはどうすればいいか、実例で説明します。
-説明の前に重要なポイントを洗い出します。
-
-
-Bコンテナにアクセスするためのアドレスの指定を間違えずに行う。最重要です。
-
-
-docker-compose.yml ファイルで2つのコンテナを起動すると、同一のネットワークが割り当てられます。
-
-
-同じネットワーク内のコンテナは、お互いのサービス名とネットワーク内のポート番号を使って...]]></summary>
-        <author>
-            <name>adamof</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-261｜B - Tournament Result]]></title>
-        <id>https://zenn.dev/hyperdb/articles/9982e0e7e440b2</id>
-        <link href="https://zenn.dev/hyperdb/articles/9982e0e7e440b2"/>
-        <updated>2023-07-07T04:31:29.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-261 B - Tournament Result
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getStringListRow(N):
-    return [list(input()) for _ in range(N)]
-
-
-def rotate(x, n):
-    b = []
-    for i in range(n):
-        t = []
-        for j in range(n):
-            t.append(x[j][i])
-        b.ap...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-261｜A - Intersection]]></title>
-        <id>https://zenn.dev/hyperdb/articles/57eea2edf555b8</id>
-        <link href="https://zenn.dev/hyperdb/articles/57eea2edf555b8"/>
-        <updated>2023-07-07T04:31:29.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-261 A - Intersection
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    l1, r1, l2, r2 = getIntMap()
-
-    ln = min(r1, r2) - max(l1, l2)
-
-    print(ln if ln >= 0 else 0)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[venvでPythonの仮想環境を構築する]]></title>
-        <id>https://zenn.dev/dxtend/articles/cdd70d8833453d</id>
-        <link href="https://zenn.dev/dxtend/articles/cdd70d8833453d"/>
-        <updated>2023-07-06T15:43:25.000Z</updated>
-        <summary type="html"><![CDATA[venv を使うと、プロジェクトごとに分離された Python の実行環境を作ることができる。
-
- 仮想環境の構築
-
- 1. ディレクトリに移動
-
-プロジェクトを配置しているディレクトリに移動
-
-cd ディレクトリパス
-
- 2. 環境の作成
-python3 -m venv venv
-
- 3. 環境を有効化
-. venv/bin/activate
-
-上記(2)(3)を .zshrc のエイリアスに pyv などで登録しておくと楽。
-
-alias pyv='python3 -m venv venv && . venv/bin/activate'
-
-
-
-
- 4. VS Code...]]></summary>
-        <author>
-            <name>DXtend</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Serverless FrameworkでLambdaをコンテナデプロイ]]></title>
-        <id>https://zenn.dev/takahiro0224/articles/12111b7f3a5f52</id>
-        <link href="https://zenn.dev/takahiro0224/articles/12111b7f3a5f52"/>
-        <updated>2023-07-06T14:54:17.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-terraformでAWS Lambdaのコンテナデプロイしてるのを、Serverless Frameworkを使うともっといい感じにできそうなので試してみたメモ
-
- Serverless Frameworkとは
-https://www.serverless.com/framework/docs
-
-Develop, deploy, troubleshoot and secure your serverless applications with radically less overhead and cost by using the Serverless Framewor...]]></summary>
-        <author>
-            <name>takahahiro0224</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyMC：PyMCでのDistributionとShape]]></title>
-        <id>https://zenn.dev/yoshida0312/articles/bcb20384c4218c</id>
-        <link href="https://zenn.dev/yoshida0312/articles/bcb20384c4218c"/>
-        <updated>2023-07-06T14:21:03.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-モデルを構築する上で基本となる確率分布の使い方を見ていきます。
-
- インポート
-import os
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import arviz as az
-
-import pymc as pm
-import pytensor.tensor as pt
-
-
-# Initialize random number generator
-RANDOM_SEED = 8927
-rng = np.random.defaul...]]></summary>
-        <author>
-            <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyMC : 予定記事]]></title>
-        <id>https://zenn.dev/yoshida0312/articles/790f87af7c2be8</id>
-        <link href="https://zenn.dev/yoshida0312/articles/790f87af7c2be8"/>
-        <updated>2023-07-06T13:34:41.000Z</updated>
-        <summary type="html"><![CDATA[今後の計画
-
-PyMCでのDistributionとShape
-重回帰を題材にしたPyMCの紹介
-階層モデルとモデルの比較
-(Generalized) Linear and Hierarchical Linear Models
-Case Studies（離散潜在変数、欠損値、、、、）
-Gaussian Processes
-・・・
-
-
- 便利リンク
-
-Examples：https://www.pymc.io/projects/examples/en/latest/gallery.html
-
-APIクイックリファレンス：https://www.pymc.io/projects/examp...]]></summary>
-        <author>
-            <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[単回帰分析をわかりやすく説明してみる]]></title>
-        <id>https://zenn.dev/omizunomitaro/articles/0bce5759324373</id>
-        <link href="https://zenn.dev/omizunomitaro/articles/0bce5759324373"/>
-        <updated>2023-07-06T13:30:50.000Z</updated>
-        <summary type="html"><![CDATA[✅目的
-
-数学ダメダメの自分が回帰分析を学んだのでまとめておこうと思います。
-詳細を忘れたときに見返せるようメモします。
-可能な限り平易に説明することを目指します。私のように完全独学で勉強している人の助けになればうれしいです。
-最大限注意をして、この記事を作成していますが、誤りがありましたらご指摘いただけると幸いです。
-
-
- 📃回帰分析(かいきぶんせき)とは
-
-回帰分析は結果となる数値と要因となる数値の関係を調べる分析手法です。
-回帰分析は単回帰分析や重回帰分析など複数種類が存在する回帰分析の総称です。
-
-1つの変数から結果との関係を導き出す回帰分析を単回帰分析と呼びます。
-複数変数...]]></summary>
-        <author>
-            <name>おみずのみ太郎</name>
         </author>
     </entry>
 </feed>

@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-05 datetime="2023-08-05T00:50:48.000Z">2023-08-05</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-05 datetime="2023-08-05T00:50:48.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-05 datetime="2023-08-05T23:59:25.000Z">2023-08-05</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-05 datetime="2023-08-05T23:59:25.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,150 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nishimoto/articles/086508291c8a25"
+                        open
+                      >
+                        <summary class="article-expander__title">OptunaのLightGBMTunerの探索範囲を追う</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nishimoto/articles/086508291c8a25">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--22wp4H_s--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Optuna%25E3%2581%25AELightGBMTuner%25E3%2581%25AE%25E6%258E%25A2%25E7%25B4%25A2%25E7%25AF%2584%25E5%259B%25B2%25E3%2582%2592%25E8%25BF%25BD%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nishimoto%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjZWNmNDMwYWMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>とても便利なLightGBMTunerですが、探索範囲がソースコードにしか書いてなかったのでメモ
+
+ 結論
+param &#x3D; {
+    &quot;lambda_l1&quot;: trial.suggest_float(&quot;lambda_l1&quot;, 1e-8, 10.0, log&#x3D;True)
+    &quot;lambda_l2&quot;: trial.suggest_float(&quot;lambda_l2&quot;, 1e-8, 10.0, log&#x3D;True)
+    &quot;num_leaves&quot;: trial.suggest_int(&quot;num_leaves&quot;, 2, 256)
+    &quot;feature_fraction&quot;: trial.s...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/umi_mori/articles/langchain-cite-source"
+                        open
+                      >
+                        <summary class="article-expander__title">文献参照をするChatGPTの作り方【LangChain / Python】</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/umi_mori/articles/langchain-cite-source">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--8eQVVcyG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2596%2587%25E7%258C%25AE%25E5%258F%2582%25E7%2585%25A7%25E3%2582%2592%25E3%2581%2599%25E3%2582%258BChatGPT%25E3%2581%25AE%25E4%25BD%259C%25E3%2582%258A%25E6%2596%25B9%25E3%2580%2590LangChain%2520%252F%2520Python%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25BE%25E3%2581%2599%25E3%2581%25BF%2540%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M5ZDA3ZmI1ZGEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめまして、ますみです！
+
+この記事では、「LangChain」というライブラリを使って、「文献参照をする方法」を解説します。
+普段、ChatGPT APIを使った開発をしているときに、Bingチャットのように参照した情報元を見たい時ってありますよね。
+また、ウェブ検索の参照元を知りたいだけでなく、社内ドキュメントを読み込んだシステムにおいてどのドキュメントのどの文章を参照したかを確認したい時もあるかと思います。
+そんな時に役立つのが、LangChainのcreate_citation_fuzzy_match_chainです！
+このChainを使うと、プロンプト内に学習させたい文章を入...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/derwind/articles/dwd-qiskit16"
+                        open
+                      >
+                        <summary class="article-expander__title">Qiskit で遊んでみる (16) — Quantum Machine Learning その 2</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/derwind/articles/dwd-qiskit16">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--OKtXQz0G--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Qiskit%2520%25E3%2581%25A7%25E9%2581%258A%25E3%2582%2593%25E3%2581%25A7%25E3%2581%25BF%25E3%2582%258B%2520%252816%2529%2520%25E2%2580%2594%2520Quantum%2520Machine%2520Learning%2520%25E3%2581%259D%25E3%2581%25AE%25202%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:derwind%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>目的
+Qiskit で遊んでみる (15) — Quantum Machine Learning では、状態ベクトルシミュレータを用いて厳密な期待値計算による、Iris データセットの分類問題を扱った。
+今回は、ノイズのあるケースを扱ってみたい。但し、実機を用いると時間がかかることが予想されるので、AerEstimator にノイズモデルを設定する場合を扱う。併せてエラー緩和についても考察を行い、IBM Quantum 上で T-REx によるエラー緩和の適用を試みる。
+
+ エラーのあるシミュレーション
+VQE with Qiskit Aer Primitives の内容を利用する。...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/derwind/articles/dwd-qiskit15"
+                        open
+                      >
+                        <summary class="article-expander__title">Qiskit で遊んでみる (15) — Quantum Machine Learning</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/derwind/articles/dwd-qiskit15">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Z4mLva7C--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Qiskit%2520%25E3%2581%25A7%25E9%2581%258A%25E3%2582%2593%25E3%2581%25A7%25E3%2581%25BF%25E3%2582%258B%2520%252815%2529%2520%25E2%2580%2594%2520Quantum%2520Machine%2520Learning%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:derwind%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>目的
+Edward Grant et al. の Hierarchical quantum classifiers (arXiv:1804.03680) という論文があって、面白そうなので実装して試してみようという内容。
+今回はその中の予備実験にあたる？ Iris データセットでの Tree TensorNetwork Classifier を試す[1]。
+
+ 概要
+少々読み違えているところもあるかもしれないが、以下の設定とした。
+
+Iris データセット (4 次元)、或は MNIST (784 次元) を量子回路に振幅エンコーディングする。MNIST の場合は次元が大きいので、主...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;19
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/ssfuno/articles/1e472244d72127"
+                        open
+                      >
+                        <summary class="article-expander__title">openpyxlでタイトル行だけ書式を変える</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ssfuno/articles/1e472244d72127">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--jDuIVcMr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:openpyxl%25E3%2581%25A7%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25AB%25E8%25A1%258C%25E3%2581%25A0%25E3%2581%2591%25E6%259B%25B8%25E5%25BC%258F%25E3%2582%2592%25E5%25A4%2589%25E3%2581%2588%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2599%25E3%2581%25B5%25E3%2583%25BC%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I2ZmY3ZDJhMDQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>イントロダクション
+PythonでExcelを扱えるopenpyxlライブラリを使用して、シートの先頭行だけ書式を変える方法を説明します。
+
+ 動作環境
+
+Windows 11
+Python 3.11.2
+openpyxl 3.1.2
+
+
+ コードと実行結果
+from openpyxl import Workbook
+from openpyxl.styles import PatternFill
+
+wb &#x3D; Workbook()
+ws &#x3D; wb.active
+
+# サンプル内容の書き込み
+content &#x3D; [[&#x27;1A&#x27;, &#x27;1B&#x27;, &#x27;1C&#x27;],
+           [&#x27;2A&#x27;,...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -8180,445 +8324,6 @@ rng &#x3D; np.random.def...</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/bbd246d3da42b3"
-                        open
-                      >
-                        <summary class="article-expander__title">PyMC：重回帰を題材にしたPyMCの紹介</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/bbd246d3da42b3">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Pgvgd4Qq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PyMC%25EF%25BC%259A%25E9%2587%258D%25E5%259B%259E%25E5%25B8%25B0%25E3%2582%2592%25E9%25A1%258C%25E6%259D%2590%25E3%2581%25AB%25E3%2581%2597%25E3%2581%259FPyMC%25E3%2581%25AE%25E7%25B4%25B9%25E4%25BB%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-今回は重回帰を題材として私がStanやNumPyroと比べても便利だと感じた点を中心にPyMCの様々な機能を紹介していきます。
-
- ライブラリのインポート
-import os
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import arviz as az
-
-import pymc as pm
-import pytensor.tensor as pt
-
-
-# Initialize random number generator
-RAN...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;13
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/pseudo_shocker/articles/a2e452dcf74fb4"
-                        open
-                      >
-                        <summary class="article-expander__title">Python + Kivy で作ってみた【Ⅶ】</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/pseudo_shocker/articles/a2e452dcf74fb4">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--PFsjF_1f--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520%252B%2520Kivy%2520%25E3%2581%25A7%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2590%25E2%2585%25A6%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%258C%25AB%25E3%2581%25AE%25E8%25B6%25B3%25E8%25B7%25A1%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZlU1Tm50TWJVazV5TFR6TzdRZF9STHI1dFBqcm5DbXNqQXUwZ1Q9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>ズーム機能
-フッター部分にスライダーコントロールを設置しズーミングを行う
-ズーミングの中心点は、ゲージ線のボックス部分の中心とする
-
- ズーム率
-kvファイルにおいて、FooterWidgetにスライダーコントロールを追加する
-FooterWidget:
-    FloatLayout:
-        pos:            self.parent.pos
-        size:           self.parent.size
-
-        Slider:
-            canvas.before:
-                Color:
-  ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/aew2sbee/articles/docker-react-env"
-                        open
-                      >
-                        <summary class="article-expander__title">【Docker】Reactの環境構築</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/aew2sbee/articles/docker-react-env">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--1i2171NP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Docker%25E3%2580%2591React%25E3%2581%25AE%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B5%25E3%2582%258B%25E3%2581%259F%2520%25E3%2581%25AA%25E3%2581%258A%25E3%2581%258D%2520%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YTFYdHhmWGZPVmpKek9sTnQ0cDZmaWQyeENLMTlKOEl0akpQczZiZz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-以前、DockerコマンドでReactを立ち上げる方法の勉強をしたので、執筆します。
-下記の画面が表示されるまでを解説したいと思います。
-
-
-
-
-項目
-内容
-
-
-
-
-対象者
-・Docker初学者
-
-
-伝えたい内容
-・DockerコマンドでReactを立ち上げる方法
-
-
-前提条件
-・node:14.17.0
-
-
-
-
- Docker DeskTopのインストール
-
- 1. インストーラーのダウンロード
-下記URLをクリックし、Docker Desktopのインストーラーをダウンロードします。
-
-
-
- 2. インストール開始
-デフォルトのままのチェック状態でOKをクリックしてくだ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/adamof/articles/31560332ba1442"
-                        open
-                      >
-                        <summary class="article-expander__title">2つのDockerコンテナ同士にお話させる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/adamof/articles/31560332ba1442">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--n-9DFSWX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:2%25E3%2581%25A4%25E3%2581%25AEDocker%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2586%25E3%2583%258A%25E5%2590%258C%25E5%25A3%25AB%25E3%2581%25AB%25E3%2581%258A%25E8%25A9%25B1%25E3%2581%2595%25E3%2581%259B%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:adamof%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk5OGM3ODJmNGYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>ここに2つのDockerコンテナ、AとBがあったとします。Aコンテナでデータを処理したあと、Bコンテナにデータを送ります。受け取ったBコンテナは、また別の処理をし、Aコンテナへデータを返却します。この一連の流れを実現するにはどうすればいいか、実例で説明します。
-説明の前に重要なポイントを洗い出します。
-
-
-Bコンテナにアクセスするためのアドレスの指定を間違えずに行う。最重要です。
-
-
-docker-compose.yml ファイルで2つのコンテナを起動すると、同一のネットワークが割り当てられます。
-
-
-同じネットワーク内のコンテナは、お互いのサービス名とネットワーク内のポート番号を使って...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/9982e0e7e440b2"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-261｜B - Tournament Result</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/9982e0e7e440b2">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--n1IX4LEV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-261%25EF%25BD%259CB%2520-%2520Tournament%2520Result%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-261 B - Tournament Result
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getStringListRow(N):
-    return [list(input()) for _ in range(N)]
-
-
-def rotate(x, n):
-    b &#x3D; []
-    for i in range(n):
-        t &#x3D; []
-        for j in range(n):
-            t.append(x[j][i])
-        b.ap...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/57eea2edf555b8"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-261｜A - Intersection</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/57eea2edf555b8">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--vvGbBpXE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-261%25EF%25BD%259CA%2520-%2520Intersection%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-261 A - Intersection
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    l1, r1, l2, r2 &#x3D; getIntMap()
-
-    ln &#x3D; min(r1, r2) - max(l1, l2)
-
-    print(ln if ln &gt;&#x3D; 0 else 0)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-06 datetime="2023-07-06T15:43:25.000Z">2023-07-06</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-06 datetime="2023-07-06T15:43:25.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/dxtend/articles/cdd70d8833453d"
-                        open
-                      >
-                        <summary class="article-expander__title">venvでPythonの仮想環境を構築する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/dxtend/articles/cdd70d8833453d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--1O3kTAoS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:venv%25E3%2581%25A7Python%25E3%2581%25AE%25E4%25BB%25AE%25E6%2583%25B3%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:DXtend%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NiY2ZlNTRlYjYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>venv を使うと、プロジェクトごとに分離された Python の実行環境を作ることができる。
-
- 仮想環境の構築
-
- 1. ディレクトリに移動
-
-プロジェクトを配置しているディレクトリに移動
-
-cd ディレクトリパス
-
- 2. 環境の作成
-python3 -m venv venv
-
- 3. 環境を有効化
-. venv/bin/activate
-
-上記(2)(3)を .zshrc のエイリアスに pyv などで登録しておくと楽。
-
-alias pyv&#x3D;&#x27;python3 -m venv venv &amp;&amp; . venv/bin/activate&#x27;
-
-
-
-
- 4. VS Code...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/takahiro0224/articles/12111b7f3a5f52"
-                        open
-                      >
-                        <summary class="article-expander__title">Serverless FrameworkでLambdaをコンテナデプロイ</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takahiro0224/articles/12111b7f3a5f52">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Dnd7losX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Serverless%2520Framework%25E3%2581%25A7Lambda%25E3%2582%2592%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2586%25E3%2583%258A%25E3%2583%2587%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25A4%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takahahiro0224%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E0ZDlmN2U0ZDQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-terraformでAWS Lambdaのコンテナデプロイしてるのを、Serverless Frameworkを使うともっといい感じにできそうなので試してみたメモ
-
- Serverless Frameworkとは
-https://www.serverless.com/framework/docs
-
-Develop, deploy, troubleshoot and secure your serverless applications with radically less overhead and cost by using the Serverless Framewor...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/bcb20384c4218c"
-                        open
-                      >
-                        <summary class="article-expander__title">PyMC：PyMCでのDistributionとShape</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/bcb20384c4218c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--jAflQj1p--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PyMC%25EF%25BC%259APyMC%25E3%2581%25A7%25E3%2581%25AEDistribution%25E3%2581%25A8Shape%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-モデルを構築する上で基本となる確率分布の使い方を見ていきます。
-
- インポート
-import os
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import arviz as az
-
-import pymc as pm
-import pytensor.tensor as pt
-
-
-# Initialize random number generator
-RANDOM_SEED &#x3D; 8927
-rng &#x3D; np.random.defaul...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yoshida0312/articles/790f87af7c2be8"
-                        open
-                      >
-                        <summary class="article-expander__title">PyMC : 予定記事</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yoshida0312/articles/790f87af7c2be8">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--QWbjHgDA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_64:PyMC%2520%253A%2520%25E4%25BA%2588%25E5%25AE%259A%25E8%25A8%2598%25E4%25BA%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2588%25E3%2581%2597%25E3%2581%25A0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwYjhjZjgyOTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>今後の計画
-
-PyMCでのDistributionとShape
-重回帰を題材にしたPyMCの紹介
-階層モデルとモデルの比較
-(Generalized) Linear and Hierarchical Linear Models
-Case Studies（離散潜在変数、欠損値、、、、）
-Gaussian Processes
-・・・
-
-
- 便利リンク
-
-Examples：https://www.pymc.io/projects/examples/en/latest/gallery.html
-
-APIクイックリファレンス：https://www.pymc.io/projects/examp...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/omizunomitaro/articles/0bce5759324373"
-                        open
-                      >
-                        <summary class="article-expander__title">単回帰分析をわかりやすく説明してみる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/omizunomitaro/articles/0bce5759324373">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--b6pL5Fcq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%258D%2598%25E5%259B%259E%25E5%25B8%25B0%25E5%2588%2586%25E6%259E%2590%25E3%2582%2592%25E3%2582%258F%25E3%2581%258B%25E3%2582%258A%25E3%2582%2584%25E3%2581%2599%25E3%2581%258F%25E8%25AA%25AC%25E6%2598%258E%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%258A%25E3%2581%25BF%25E3%2581%259A%25E3%2581%25AE%25E3%2581%25BF%25E5%25A4%25AA%25E9%2583%258E%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE2ZjhjMTA2ODUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>✅目的
-
-数学ダメダメの自分が回帰分析を学んだのでまとめておこうと思います。
-詳細を忘れたときに見返せるようメモします。
-可能な限り平易に説明することを目指します。私のように完全独学で勉強している人の助けになればうれしいです。
-最大限注意をして、この記事を作成していますが、誤りがありましたらご指摘いただけると幸いです。
-
-
- 📃回帰分析(かいきぶんせき)とは
-
-回帰分析は結果となる数値と要因となる数値の関係を調べる分析手法です。
-回帰分析は単回帰分析や重回帰分析など複数種類が存在する回帰分析の総称です。
-
-1つの変数から結果との関係を導き出す回帰分析を単回帰分析と呼びます。
-複数変数...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -8626,8 +8331,8 @@ APIクイックリファレンス：https://www.pymc.io/projects/examp...</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5767966479">
-        <time id="build-timestamp" datetime="2023-08-05T01:20:35.448Z">2023-08-05T01:20:35.448Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5773820098">
+        <time id="build-timestamp" datetime="2023-08-06T01:18:11.288Z">2023-08-06T01:18:11.288Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
