@@ -2,10 +2,183 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-08-07T01:23:38.532Z</updated>
+    <updated>2023-08-08T01:21:20.687Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[SlackとChatGPT APIでチャットボットを作る パート2（会話履歴管理編）]]></title>
+        <id>https://zenn.dev/techflagcorp/articles/ebbec52ed11ff9</id>
+        <link href="https://zenn.dev/techflagcorp/articles/ebbec52ed11ff9"/>
+        <updated>2023-08-08T00:40:20.000Z</updated>
+        <summary type="html"><![CDATA[SlackとChatGPT APIでチャットボットを作る パート2（ function calling編 会話履歴管理編）
+パート1ではチャットボットの骨組み部分を作りました。パート2ではfunction callingを使って自分のデータベースにアクセスする機能を実装 しようと思いますが、 するつもりだったのですが、その前にまずチャットの履歴管理を強化しようとしたらそこそこ長くなったので今回は会話履歴管理編とします。
+
+ 履歴管理の強化
+パート1のutilsモジュールを再掲します。
+
+utils.py
+from typing import List, Dict, Tuple, Op...]]></summary>
+        <author>
+            <name>dagger1</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[YouTubeを学習したChatGPTの実装方法【Python / LangChain】]]></title>
+        <id>https://zenn.dev/umi_mori/articles/langchain-indexes-youtube</id>
+        <link href="https://zenn.dev/umi_mori/articles/langchain-indexes-youtube"/>
+        <updated>2023-08-07T23:55:31.000Z</updated>
+        <summary type="html"><![CDATA[はじめまして、ますみです！
+
+この記事では、「LangChain」というライブラリを使って、「特定のYouTube動画を学習したChatGPTの実装方法」を解説します。
+ChatGPTやLangChainについてまだ詳しくない方は、こちらを先にご覧ください◎
+https://zenn.dev/umi_mori/books/chatbot-chatgpt
+https://zenn.dev/umi_mori/books/prompt-engineer
+!
+文字よりも「動画の方が理解しやすい」という方はこちらをご覧ください◎
+YouTubeを学習したChatGPTの実装方法【Python / ...]]></summary>
+        <author>
+            <name>ますみ@エンジニア</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[画像に枠線をつけてくれるWEBアプリを作る]]></title>
+        <id>https://zenn.dev/not75743/articles/7074e1b4dbbcbf</id>
+        <link href="https://zenn.dev/not75743/articles/7074e1b4dbbcbf"/>
+        <updated>2023-08-07T14:31:52.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+昨日はpythonのpillowを使って画像に外枠を追加しました。
+https://zenn.dev/not75743/articles/718e72a20453ff
+今回はこれをWebアプリにして使いやすくしてみました。
+環境はDocker(compose)、フレームワークはFlaskです。
+
+ どんなアプリ？
+このようなアクセスして枠線をつけたい画像をアップロードすると
+
+枠線をつけたものをダウンロードすることができます。
+
+
+ 環境
+$ cat /etc/lsb-release 
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=20.04
+DIST...]]></summary>
+        <author>
+            <name>not75743</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】トーナメント優勝者]]></title>
+        <id>https://zenn.dev/takuh/articles/d13bdf5c862680</id>
+        <link href="https://zenn.dev/takuh/articles/d13bdf5c862680"/>
+        <updated>2023-08-07T14:17:27.000Z</updated>
+        <summary type="html"><![CDATA[作るもの
+対戦カード（competitions）と結果（results）を与えて、最終的なトーナメントの勝者であるチーム名を返す関数。
+
+ 実装
+
+tournament_winner.py
+def tournamentWinner(competitions, results):
+    dict = {}  # 勝利回数をカウントするための空の辞書を作成
+
+    # 各競技の結果とその対戦を順番に処理
+    for i, comp in enumerate(competitions):
+        if results[i]:  # もしi番目の競技の結果がTrue（チーム1...]]></summary>
+        <author>
+            <name>takuh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[並列処理による高速化の方法【ChatGPT / LangChain / Python】]]></title>
+        <id>https://zenn.dev/umi_mori/articles/langchain-async-run</id>
+        <link href="https://zenn.dev/umi_mori/articles/langchain-async-run"/>
+        <updated>2023-08-07T11:47:12.000Z</updated>
+        <summary type="html"><![CDATA[はじめまして、ますみです！
+
+この記事では、「LangChain」というライブラリを使って、「複数のプロンプト処理を高速化する方法」を解説します。
+ChatGPT APIを使ったシステムを作った時に、処理時間がかかりすぎて、高速化したい時ってありますよね。
+そんな時に、LangChainのAgentとasyncioライブラリを組み合わせることで、処理を同時に実行することで高速化することができます！
+ChatGPTやLangChainについてまだ詳しくない方は、こちらを先にご覧ください◎
+https://zenn.dev/umi_mori/books/chatbot-chatgpt
+htt...]]></summary>
+        <author>
+            <name>ますみ@エンジニア</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ウェブページをChatGPTに学習させる方法【Python / LangChain / FAQ】]]></title>
+        <id>https://zenn.dev/umi_mori/articles/langchain-indexes-webpage</id>
+        <link href="https://zenn.dev/umi_mori/articles/langchain-indexes-webpage"/>
+        <updated>2023-08-07T06:18:11.000Z</updated>
+        <summary type="html"><![CDATA[はじめまして、ますみです！
+
+この記事では、「LangChain」というライブラリを使って、「特定のウェブページを学習したChatGPTの実装方法」を解説します。
+この記事を読むことで、企業や商品の紹介サイト、あるいはプログラミングの難解なドキュメンテーションを元にしたチャットボットの作成が可能になります。
+ChatGPTやLangChainについてまだ詳しくない方は、こちらを先にご覧ください◎
+https://zenn.dev/umi_mori/books/chatbot-chatgpt
+https://zenn.dev/umi_mori/books/prompt-engineer
+!...]]></summary>
+        <author>
+            <name>ますみ@エンジニア</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-279｜A - wwwvvvvvv]]></title>
+        <id>https://zenn.dev/hyperdb/articles/91367b290f84eb</id>
+        <link href="https://zenn.dev/hyperdb/articles/91367b290f84eb"/>
+        <updated>2023-08-07T03:53:07.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-279 A - wwwvvvvvv
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = list(getString())
+
+    print(s.count('v') + s.count('w') * 2)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-279｜B - LOOKUP]]></title>
+        <id>https://zenn.dev/hyperdb/articles/31e47fc7e2f34e</id>
+        <link href="https://zenn.dev/hyperdb/articles/31e47fc7e2f34e"/>
+        <updated>2023-08-07T03:53:07.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-279 B - LOOKUP
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = getString()
+    t = getString()
+
+    print('Yes' if s.find(t) >= 0 else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[備忘録] - macのVSCodeで作成したpythonのvenv環境が利用できるインタプリタ一覧に出てこなかった時の設定方法]]></title>
         <id>https://zenn.dev/kazh/articles/00003_mac_vscode_python_venv_enviroment</id>
@@ -4846,277 +5019,6 @@ https://www.fenet.jp/dotnet/column/language/7263/
  __init__を記述するときは、第一引数に必ずselfを記入]]></summary>
         <author>
             <name>tiga_aws</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[rye+FastAPIでHello World!する方法]]></title>
-        <id>https://zenn.dev/nem35/articles/1c2c697188fc49</id>
-        <link href="https://zenn.dev/nem35/articles/1c2c697188fc49"/>
-        <updated>2023-07-09T12:38:29.000Z</updated>
-        <summary type="html"><![CDATA[Pythonのパッケージ管理ライブラリryeを使ってFastAPIを起動する方法
-
- 各ライブラリのドキュメント
-
-rye：https://rye-up.com/
-
-FastAPI：https://fastapi.tiangolo.com/ja/
-
-
-
- 手順
-
- ryeのインストール
-
-
-ryeのインストール
-
-
-bash
-$ curl -sSf https://rye-up.com/get | bash
-
-
-
-ryeコマンドに環境変数を設定
-
-
-bash 
-$ echo 'source "$HOME/.rye/env"' >> ~/.bashrc
-
-上記実施後、以下コマン...]]></summary>
-        <author>
-            <name>nem35</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Azure Cognitive Search のベクトル検索を Python で行う]]></title>
-        <id>https://zenn.dev/microsoft/articles/34fdf03208b932</id>
-        <link href="https://zenn.dev/microsoft/articles/34fdf03208b932"/>
-        <updated>2023-07-09T10:28:55.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-2023 年 7 月 に Azure Cognitive Search のベクトル検索のパブリックプレビューが開始しました。これに合わせて Azrue Cognitive Search のドキュメントにベクトル検索のクイックスタートが追加されましたが、執筆時点で REST API のサンプルしか記載されていませんでした。そこで、Pythonista のために同じことを Python で行うための一連の方法をまとめました。
-https://learn.microsoft.com/en-us/azure/search/whats-new#june-2023
-なお、本記事の内容は...]]></summary>
-        <author>
-            <name>ryohtaka</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Streamlitによるユーザー間のチャット簡単実装]]></title>
-        <id>https://zenn.dev/nishijima13/articles/f183471e8093f7</id>
-        <link href="https://zenn.dev/nishijima13/articles/f183471e8093f7"/>
-        <updated>2023-07-09T09:46:46.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-StreamlitによってチャットUIがサポートされたため、ユーザー間でチャットを行えるようなローカルのデモアプリを作成してみました。
-先に今回作成したデモアプリの動画を共有しようと思います。
-画面左がユーザー1でログインしたデモ画面、画面右がユーザー2でログインしたデモ画面になります。
-お互いのチャット内容がお互いの画面に反映されていますね！
-
-Streamlit チャットUIに関しては以前記事を作成したため、そちらもぜひご覧ください。
-https://zenn.dev/nishijima13/articles/3b1a50b8728261
-
- デモアプリ内容
-今回作成し...]]></summary>
-        <author>
-            <name>ニシジマ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyMC：カウントデータに対する回帰]]></title>
-        <id>https://zenn.dev/yoshida0312/articles/d1d439fda7af99</id>
-        <link href="https://zenn.dev/yoshida0312/articles/d1d439fda7af99"/>
-        <updated>2023-07-09T09:08:08.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-今回はカウントデータに対する回帰を紹介します。
-
- ライブラリのインポート
-import os
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import arviz as az
-from copy import copy
-from scipy import stats
-
-import pymc as pm
-import pytensor.tensor as pt
-
-
-# Initialize random number generat...]]></summary>
-        <author>
-            <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ServerlessFrameworkチュートリアル]]></title>
-        <id>https://zenn.dev/ktamido/articles/82fb315b66a145</id>
-        <link href="https://zenn.dev/ktamido/articles/82fb315b66a145"/>
-        <updated>2023-07-09T05:25:02.000Z</updated>
-        <summary type="html"><![CDATA[参考
-
-Tutorial | Serverless Framework
-FastAPI
-
-
- node.jsのインストール
-# nvm インストール
-# https://github.com/nvm-sh/nvm#installing-and-updating
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-
-# v16系のLTSをインストール
-nvm install --lts=gallium
-
-# v16系のLTSをデフォルトに設定
-nvm alias default ...]]></summary>
-        <author>
-            <name>ktamido</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Django REST FrameworkでAPIを作ってdocker-composeで動かす]]></title>
-        <id>https://zenn.dev/not75743/articles/2071f43bfc176e</id>
-        <link href="https://zenn.dev/not75743/articles/2071f43bfc176e"/>
-        <updated>2023-07-09T04:07:39.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-ECSの練習をするためのコンテナがほしかったので、とりあえず動くものを作成しました。
-使用したフレームワークはpythonのDjangoで、簡単にAPIを作成するためにDjango REST Frameworkも活用しています。
-https://www.django-rest-framework.org/
-
- 注意
-とりあえず動かすことに注力しました。
-セキュリティ等はまったく考慮できていません。
-
- 環境
-ubuntu 22.04.2
-docker 24.0.4
-docker compose 2.19.1
-requirements.txt
-
-requirements.tx...]]></summary>
-        <author>
-            <name>not75743</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Quivrを試す]]></title>
-        <id>https://zenn.dev/tossy21/articles/13a6e2f49841fe</id>
-        <link href="https://zenn.dev/tossy21/articles/13a6e2f49841fe"/>
-        <updated>2023-07-09T02:53:32.000Z</updated>
-        <summary type="html"><![CDATA[Quivrとは
-
-Quivr, your second brain, utilizes the power of GenerativeAI to store and retrieve unstructured information. Think of it as Obsidian, but turbocharged with AI capabilities.
-
-Quivrとは、生成AIを活用し、非構造化情報を検索可能にできます。
-Obsidianというメモツールがありますが、これをAI機能で強化したものとのことです。
-https://github.com/StanGirard/qu...]]></summary>
-        <author>
-            <name>tossy</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[コサイン類似度を用いた文章の類似性比較、および、キーセンテンス抽出方法の一考察]]></title>
-        <id>https://zenn.dev/shungo_a/articles/1657658234e633</id>
-        <link href="https://zenn.dev/shungo_a/articles/1657658234e633"/>
-        <updated>2023-07-09T02:31:44.000Z</updated>
-        <summary type="html"><![CDATA[目次
-
-本記事の目的
-前記事の課題の詳細、および、本記事の目的との関係性の整理
-今回の学習データセット、および、学習内容
-実装の流れ
-ステップ1 スクレイピング
-ステップ2以降のプログラムコード
-ステップ2 文章の分割
-ステップ3 コサイン類似度の算出
-ステップ4 類似キーセンテンスの抽出
-ステップ5 キーセンテンスを利用した文章の抽出
-
-評価
-
-青は藍より出でて藍より青し
-市に虎あり
-漁夫の利
-背水の陣
-
-
-本記事のまとめ
-参考文献
-
-
- 本記事の目的
-2つの文章を比較する際、その類似性を判断し後続の分析に利用することが必要になることがあると思います。例えば、プログラミングを指示す...]]></summary>
-        <author>
-            <name>S.A</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FastAPIがPydantic v2対応したので、V2移行のポイントを紹介する(意外と簡単)]]></title>
-        <id>https://zenn.dev/tk_resilie/articles/fastapi0100_pydanticv2</id>
-        <link href="https://zenn.dev/tk_resilie/articles/fastapi0100_pydanticv2"/>
-        <updated>2023-07-08T21:16:55.000Z</updated>
-        <summary type="html"><![CDATA[概要
-先日、PydanticV2に対応したFastAPI 0.100.0が正式にリリースされました。
-PydanticV2は大部分をRustで書き直したことで高速化を実現している他
-使い勝手向上のためにAPIが多少変更になっているので、移行作業が必要になる場合があります。
-本記事では、V1->V2への移行のポイントについて紹介します。
-
- 速度向上について
-Rust化による速度向上も重要なポイントです。
-参考までに、私がPydantic部分のみで試した際は、5~6倍高速化されていました。
-以下のクラウドカメラのSafie社のブログで、FastAPIで使用した場合の速度向上につい...]]></summary>
-        <author>
-            <name>米谷 昂(Python/FastAPIプロフェッショナル)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Bard-APIを使ってpythonで回答を得る方法]]></title>
-        <id>https://zenn.dev/00/articles/de99d0f10c5493</id>
-        <link href="https://zenn.dev/00/articles/de99d0f10c5493"/>
-        <updated>2023-07-08T19:40:02.000Z</updated>
-        <summary type="html"><![CDATA[Bard-APIとは
-Cookieの値を渡すことで、Bardに質問を投げて、その回答を得るコードを10行くらいで可能にしてくれるパッケージです。
-https://github.com/dsdanielpark/Bard-API
-
- 必要なパッケージ
-cookieの値をコードに直に書く場合はpython-dotenvは不要です。
-pip install bardapi python-dotenv
-
- Cooke - _Secure-1PSIDの値を取得
-Chrome/FirefoxでBardにアクセスします。
-https://bard.google.com/
-アクセスしたら、Dev T...]]></summary>
-        <author>
-            <name>00</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Qiskit で遊んでみる (14) — Qiskit Aer GPU その 2]]></title>
-        <id>https://zenn.dev/derwind/articles/dwd-qiskit14</id>
-        <link href="https://zenn.dev/derwind/articles/dwd-qiskit14"/>
-        <updated>2023-07-08T14:39:23.000Z</updated>
-        <summary type="html"><![CDATA[目的
-Qiskit で遊んでみる (7) — Qiskit Aer GPU が古くなってきたので更新したい。
-
- Docker を使う
-この方針は変わらない。ビルド環境を作るのが手間だし、再現性の観点からもどんどん汚れていく環境をビルド環境に選択するのは望ましくない。
-今回は Ubuntu 22.04 + Python 3.11 + CUDA 11.8 環境向けに Qiskit Aer 0.12.1 の GPU 対応ビルドを試みる。以下では FROM nvidia/cuda:11.8.0-devel-ubuntu22.04 としたが FROM nvidia/cuda:11.8.0-d...]]></summary>
-        <author>
-            <name>derwind</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[デンソークリエイトプログラミングコンテスト2023に参加したので冒頭4問を振り返ります]]></title>
-        <id>https://zenn.dev/bun913/articles/enjoy_abc309_a_to_d</id>
-        <link href="https://zenn.dev/bun913/articles/enjoy_abc309_a_to_d"/>
-        <updated>2023-07-08T14:25:15.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは。
-ダイの大冒険という漫画のガチ勢のbun913といいます。
-皆さんはAtCoderという競技プログラミングを楽しめるサービスをご存知でしょうか？
-https://atcoder.jp/?lang=ja
-私は以前よりちょくちょく趣味でコンテストに参加しているのですが、先日の2023年7月8日（土）に開催されたデンソークリエイトプログラミングコンテスト2023（AtCoder Beginner Contest 309） - AtCoderにも参加していました！
-私は現在C問題までをほぼ確実に解ききるマンを目指しているのですが、今回はA〜Dの4問を回答することができました！（嬉しい...]]></summary>
-        <author>
-            <name>bun913</name>
         </author>
     </entry>
 </feed>
