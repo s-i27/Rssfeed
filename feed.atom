@@ -2,10 +2,209 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-08-09T01:25:00.950Z</updated>
+    <updated>2023-08-10T01:25:16.279Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Plotlyで出力したSVGの読み書きをするTips]]></title>
+        <id>https://zenn.dev/nowa0402/articles/985da2f250ae1b</id>
+        <link href="https://zenn.dev/nowa0402/articles/985da2f250ae1b"/>
+        <updated>2023-08-09T23:40:16.000Z</updated>
+        <summary type="html"><![CDATA[SVG 出力したグラフから凡例を切り取りたい…
+前回の記事でデータ個数によるグラフの違いを解説しました。
+今回はSVG出力された画像から凡例とグラフを分けるTipsを紹介します。
+SVGの操作はPython標準搭載のxmlライブラリを使用しました。
+https://docs.python.org/ja/3/library/xml.etree.elementtree.html
+
+ 前段: 前回出力したグラフ
+今回は以下コード（前回記事）で出力した画像を基に分割作業を行います。
+import numpy as np
+import plotly.graph_objects as go
+im...]]></summary>
+        <author>
+            <name>nowa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】行列の転置]]></title>
+        <id>https://zenn.dev/takuh/articles/5b8ea4aab9bc95</id>
+        <link href="https://zenn.dev/takuh/articles/5b8ea4aab9bc95"/>
+        <updated>2023-08-09T21:56:16.000Z</updated>
+        <summary type="html"><![CDATA[作るもの
+行列を転置する関数。
+
+ 実装
+
+transpose_matrix.py
+def transposeMatrix(matrix):
+    return list(zip(*matrix))
+
+# テスト
+if __name__ == "__main__":
+    matrix = [[1, 2, 3], [4, 5, 6]]
+    print(transposeMatrix(matrix))
+
+
+出力
+[(1, 4), (2, 5), (3, 6)]
+
+
+ 補足
+
+zip関数の使用例
+
+
+zip.py
+names = ['Alice', 'Bob', 'Charlie...]]></summary>
+        <author>
+            <name>takuh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Docker】Docker DeskTopのインストール]]></title>
+        <id>https://zenn.dev/aew2sbee/articles/docker-desktop-install</id>
+        <link href="https://zenn.dev/aew2sbee/articles/docker-desktop-install"/>
+        <updated>2023-08-09T12:06:40.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+社内の有志メンバーの向けにDocker DeskTopのインストールの方法を解説します。
+
+ Docker DeskTopのインストール
+
+ 1. インストーラーのダウンロード
+下記URLをクリックし、Docker Desktopのインストーラーをダウンロードします。
+
+
+
+ 2. インストール開始
+デフォルトのままのチェック状態でOKをクリックしてください。
+
+インストールに少し時間がかかります。
+
+
+ 3. PCの再起動
+!
+Close and restartをクリックすると、 PCが再起動します。注意してください！
+※WSL2を有効化する為に、PCの再起動が必要です。...]]></summary>
+        <author>
+            <name>ふるた なおき🥝</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-281｜A - Count Down]]></title>
+        <id>https://zenn.dev/hyperdb/articles/dec79f345830b2</id>
+        <link href="https://zenn.dev/hyperdb/articles/dec79f345830b2"/>
+        <updated>2023-08-09T10:50:43.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-281 A - Count Down
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    n = getInt()
+
+    while n >= 0:
+        print(n)
+        n -= 1
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-281｜B - Sandwich Number]]></title>
+        <id>https://zenn.dev/hyperdb/articles/30543d974f34dc</id>
+        <link href="https://zenn.dev/hyperdb/articles/30543d974f34dc"/>
+        <updated>2023-08-09T10:50:43.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-281 B - Sandwich Number
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = getString()
+
+    r = True
+    if not ('A' <= s[0] <= 'Z'):
+        r = False
+    elif not ('A' <= s[-1] <= 'Z'):
+        r = False
+    elif not s[1:-1].isdigit():
+        r = False...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Docker buildでError: Can't Find Rust Compilerに困ったら]]></title>
+        <id>https://zenn.dev/analog_technica/articles/cc5ba8535052de</id>
+        <link href="https://zenn.dev/analog_technica/articles/cc5ba8535052de"/>
+        <updated>2023-08-09T07:41:09.000Z</updated>
+        <summary type="html"><![CDATA[結論
+
+Dockerfile
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+ENV PATH="/root/.cargo/bin:$PATH"
+
+
+ 背景
+深層学習モデルを含むアプリケーションを作るため、DockerにTransformersをインストールしようとしたところ↓のエラーでハマりました。
+Error: Can't Find Rust Compiler
+Transformersと依存関係のあるSafetensorsというライブラリのインストールにRustのコンパイラが必...]]></summary>
+        <author>
+            <name>analog_technica</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】構築不可能なお金]]></title>
+        <id>https://zenn.dev/takuh/articles/6d12ec6a82db7f</id>
+        <link href="https://zenn.dev/takuh/articles/6d12ec6a82db7f"/>
+        <updated>2023-08-09T03:27:45.000Z</updated>
+        <summary type="html"><![CDATA[作るもの
+与えられた整数のリスト（コインの額面）を使用して作成できない最小のお金の額を計算する関数。
+
+ 実装
+def nonConstructibleChange(coins):
+    # コインの額面を昇順にソートする
+    coins.sort()
+
+    # コインを使って作成できる最小のお金の額を表す変数を初期化
+    minimum_change = 0
+
+    # ソートされたコインのリストを順に走査
+    for coin in coins:
+        # 現在のコインの額面が、最小のお金の額に1を加えたものよりも大きい場合、ループを終了
+     ...]]></summary>
+        <author>
+            <name>takuh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C++とPythonでオンラインランキングシステムを一から作る]]></title>
+        <id>https://zenn.dev/kd_gamegikenblg/articles/bf7c2af3a395d2</id>
+        <link href="https://zenn.dev/kd_gamegikenblg/articles/bf7c2af3a395d2"/>
+        <updated>2023-08-09T03:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+昨今のゲームはMobile/Pc/etc...とPlatform関わらず、オンラインユーザーデータ/ランキング/リアルタイム対戦/etc...と何らかの方法でネットワークにアクセスしています。今や繋がっていることが当たり前になっていますが、いざゲーム制作に実装しようとなった際にどう実装したら良いか分からない人も多いと思います。最近は情報も増えてきており、UnityやUnrealEngineならNetcode for GameObjectsやMultiplayerが公式からリリースされており、公式リファレンスやプロダクトで使った実例の技術ブログ等日本語でもかなりの量の情報があ...]]></summary>
+        <author>
+            <name>shirokuma1101</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【FDO43】【会話文章生成 その2】発言生成機能のプロンプトについて]]></title>
         <id>https://zenn.dev/esm/articles/7ad6983e5893c2</id>
@@ -4959,157 +5158,6 @@ DATABASES = {
             "passfil...]]></summary>
         <author>
             <name>not75743</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[はじめての Python]]></title>
-        <id>https://zenn.dev/collabostyle/articles/441af1023f5095</id>
-        <link href="https://zenn.dev/collabostyle/articles/441af1023f5095"/>
-        <updated>2023-07-11T13:08:50.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは。
-Pythonのコードを触る機会があるため、
-事前準備として基本構文などをインプットしました。
-かんたんな内容ですが、アウトプットします🗿
-
- Pythonって？
-https://www.python.org/
-型定義や文末セミコロンがなく、
-初級者の方にも触れやすい言語です。
-インデントされたまとまりを1つの仲間として扱うため、
-ありがちなネストがごちゃってて分かりづらい問題も回避できます！
-※インデント間違ってるとエラーになり、デバッグできません
-
- インストール
-公式サイトからダウンロード可能です。
-https://www.python.org/downloads/
-イ...]]></summary>
-        <author>
-            <name>なな</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【2023年版】現役エンジニアが解説！個人開発で月10万稼ぐ4ステップ]]></title>
-        <id>https://zenn.dev/raio/articles/fee98c2b6e877a</id>
-        <link href="https://zenn.dev/raio/articles/fee98c2b6e877a"/>
-        <updated>2023-07-11T11:07:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-『Web開発で稼ぎたい』
-『プログラミングで副業したい』
-このような方の為に、今回の記事では個人開発で月10万稼ぐ4ステップを解説します🙌
-こちらの記事では、開発だけでなくマーケティングや収益化についても詳しく書いていますので最後までご覧ください😊
-↓筆者についてはこちら↓
-https://qiita.com/Raio14f/items/ef0fb67685b36298bcb0
-
- Step1. UdemyでWeb開発の基礎を学ぶ
-↓画像をクリックするとUdemyにアクセスします↓
-
-
- 何故、Udemyで勉強するのか？
-1.アクセスしやすさ: Udemyは完全にオンライン...]]></summary>
-        <author>
-            <name>Raio｜高校生エンジニア</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-263｜B - Ancestor]]></title>
-        <id>https://zenn.dev/hyperdb/articles/610741ee3541e8</id>
-        <link href="https://zenn.dev/hyperdb/articles/610741ee3541e8"/>
-        <updated>2023-07-11T07:51:27.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-263 B - Ancestor
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n = getInt()
-    p = [0, 0] + getIntList()
-
-    i = p[n]
-    c = 1
-    while i > 1:
-        i = p[i]
-        c += 1
-    print(c)
-
-
-if _...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-263｜A - Full House]]></title>
-        <id>https://zenn.dev/hyperdb/articles/05f7f07943065f</id>
-        <link href="https://zenn.dev/hyperdb/articles/05f7f07943065f"/>
-        <updated>2023-07-11T07:51:27.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-263 A - Full House
-
-
-
- 提出結果
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    a = getIntList()
-    b = list(set(a))
-
-    print('Yes' if len(b) == 2 and 2 <= a.count(b[0]) <= 3 else 'No')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python触ってみた】仮想環境で必要な依存パッケージはrequirements.txt で管理]]></title>
-        <id>https://zenn.dev/tiga_aws/articles/639f0ed536828a</id>
-        <link href="https://zenn.dev/tiga_aws/articles/639f0ed536828a"/>
-        <updated>2023-07-10T22:25:24.000Z</updated>
-        <summary type="html"><![CDATA[今回参考にしたブログ
-https://maku77.github.io/p/wozpogm/
-https://camp.trainocate.co.jp/magazine/venv-python/
-
- 感想
-
- 今まで何も考えずにpip install を繰り返していた。これからは開発ごとに仮想環境を作成して開発していこう
-
- 仮想環境ディレクトリは他のユーザーと共有する仕組みにはなっていない
-
-.gitignoreに仮想環境ディレクトリは記載しておく
-プロジェクトの依存パッケージを requirements.txt で管理することで共有しやすい]]></summary>
-        <author>
-            <name>tiga_aws</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[タイピングゲームの入力の正誤判定の簡単な方法]]></title>
-        <id>https://zenn.dev/tomori_k/articles/eaae10eec9ad8a</id>
-        <link href="https://zenn.dev/tomori_k/articles/eaae10eec9ad8a"/>
-        <updated>2023-07-10T16:19:57.000Z</updated>
-        <summary type="html"><![CDATA[こちらの記事。
-https://zenn.dev/yasse/articles/2663c35919c78d
-タイピングゲーム昔作ったなー、正誤判定難しいよねー、と思いながら読んでいると、正誤判定の部分は別記事↓を参考に実装したそうで、こちらも読んでみました。
-https://qiita.com/Arthur_Lugh/items/43b61877819e402c50d6
-いやーわかるなー、入力パターンが次から次へ出てきて頭壊れるんですよ。
-と、共感の嵐だったわけですが、読んでる途中に突然簡単な実装方法を思いつきました。とても単純なので、誰か記事書いてるだろと思ったのですが、意外にもちょ...]]></summary>
-        <author>
-            <name>tomori_k</name>
         </author>
     </entry>
 </feed>

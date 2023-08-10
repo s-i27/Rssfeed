@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-09 datetime="2023-08-09T01:00:00.000Z">2023-08-09</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-09 datetime="2023-08-09T01:00:00.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-09 datetime="2023-08-09T23:40:16.000Z">2023-08-09</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-09 datetime="2023-08-09T23:40:16.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,285 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nowa0402/articles/985da2f250ae1b"
+                        open
+                      >
+                        <summary class="article-expander__title">Plotlyで出力したSVGの読み書きをするTips</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nowa0402/articles/985da2f250ae1b">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--mYDJ8Dbx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Plotly%25E3%2581%25A7%25E5%2587%25BA%25E5%258A%259B%25E3%2581%2597%25E3%2581%259FSVG%25E3%2581%25AE%25E8%25AA%25AD%25E3%2581%25BF%25E6%259B%25B8%25E3%2581%258D%25E3%2582%2592%25E3%2581%2599%25E3%2582%258BTips%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nowa%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M0OWMwNThkZGQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>SVG 出力したグラフから凡例を切り取りたい…
+前回の記事でデータ個数によるグラフの違いを解説しました。
+今回はSVG出力された画像から凡例とグラフを分けるTipsを紹介します。
+SVGの操作はPython標準搭載のxmlライブラリを使用しました。
+https://docs.python.org/ja/3/library/xml.etree.elementtree.html
+
+ 前段: 前回出力したグラフ
+今回は以下コード（前回記事）で出力した画像を基に分割作業を行います。
+import numpy as np
+import plotly.graph_objects as go
+im...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/takuh/articles/5b8ea4aab9bc95"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】行列の転置</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takuh/articles/5b8ea4aab9bc95">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--3SfPNAOs--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591%25E8%25A1%258C%25E5%2588%2597%25E3%2581%25AE%25E8%25BB%25A2%25E7%25BD%25AE%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takuh%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MFZDMlpZSlp1TVJEQ1AtYkxabmNzRnlkU3RZQ2FGNU4wUTNwVWhGUT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>作るもの
+行列を転置する関数。
+
+ 実装
+
+transpose_matrix.py
+def transposeMatrix(matrix):
+    return list(zip(*matrix))
+
+# テスト
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    matrix &#x3D; [[1, 2, 3], [4, 5, 6]]
+    print(transposeMatrix(matrix))
+
+
+出力
+[(1, 4), (2, 5), (3, 6)]
+
+
+ 補足
+
+zip関数の使用例
+
+
+zip.py
+names &#x3D; [&#x27;Alice&#x27;, &#x27;Bob&#x27;, &#x27;Charlie...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/aew2sbee/articles/docker-desktop-install"
+                        open
+                      >
+                        <summary class="article-expander__title">【Docker】Docker DeskTopのインストール</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/aew2sbee/articles/docker-desktop-install">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--B9jxvj8I--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Docker%25E3%2580%2591Docker%2520DeskTop%25E3%2581%25AE%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B5%25E3%2582%258B%25E3%2581%259F%2520%25E3%2581%25AA%25E3%2581%258A%25E3%2581%258D%2520%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YTFYdHhmWGZPVmpKek9sTnQ0cDZmaWQyeENLMTlKOEl0akpQczZiZz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+社内の有志メンバーの向けにDocker DeskTopのインストールの方法を解説します。
+
+ Docker DeskTopのインストール
+
+ 1. インストーラーのダウンロード
+下記URLをクリックし、Docker Desktopのインストーラーをダウンロードします。
+
+
+
+ 2. インストール開始
+デフォルトのままのチェック状態でOKをクリックしてください。
+
+インストールに少し時間がかかります。
+
+
+ 3. PCの再起動
+!
+Close and restartをクリックすると、 PCが再起動します。注意してください！
+※WSL2を有効化する為に、PCの再起動が必要です。...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/dec79f345830b2"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-281｜A - Count Down</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/dec79f345830b2">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--CJzulHik--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-281%25EF%25BD%259CA%2520-%2520Count%2520Down%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-281 A - Count Down
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    n &#x3D; getInt()
+
+    while n &gt;&#x3D; 0:
+        print(n)
+        n -&#x3D; 1
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/30543d974f34dc"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-281｜B - Sandwich Number</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/30543d974f34dc">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--RjKzLKPE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-281%25EF%25BD%259CB%2520-%2520Sandwich%2520Number%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-281 B - Sandwich Number
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s &#x3D; getString()
+
+    r &#x3D; True
+    if not (&#x27;A&#x27; &lt;&#x3D; s[0] &lt;&#x3D; &#x27;Z&#x27;):
+        r &#x3D; False
+    elif not (&#x27;A&#x27; &lt;&#x3D; s[-1] &lt;&#x3D; &#x27;Z&#x27;):
+        r &#x3D; False
+    elif not s[1:-1].isdigit():
+        r &#x3D; False...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/analog_technica/articles/cc5ba8535052de"
+                        open
+                      >
+                        <summary class="article-expander__title">Docker buildでError: Can&#x27;t Find Rust Compilerに困ったら</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/analog_technica/articles/cc5ba8535052de">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--tOWZvv_w--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Docker%2520build%25E3%2581%25A7Error%253A%2520Can%2527t%2520Find%2520Rust%2520Compiler%25E3%2581%25AB%25E5%259B%25B0%25E3%2581%25A3%25E3%2581%259F%25E3%2582%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:analog_technica%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNhZTdkYmRiYzUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>結論
+
+Dockerfile
+RUN curl --proto &#x27;&#x3D;https&#x27; --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+ENV PATH&#x3D;&quot;/root/.cargo/bin:$PATH&quot;
+
+
+ 背景
+深層学習モデルを含むアプリケーションを作るため、DockerにTransformersをインストールしようとしたところ↓のエラーでハマりました。
+Error: Can&#x27;t Find Rust Compiler
+Transformersと依存関係のあるSafetensorsというライブラリのインストールにRustのコンパイラが必...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/takuh/articles/6d12ec6a82db7f"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】構築不可能なお金</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takuh/articles/6d12ec6a82db7f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--enf9t78W--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591%25E6%25A7%258B%25E7%25AF%2589%25E4%25B8%258D%25E5%258F%25AF%25E8%2583%25BD%25E3%2581%25AA%25E3%2581%258A%25E9%2587%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takuh%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MFZDMlpZSlp1TVJEQ1AtYkxabmNzRnlkU3RZQ2FGNU4wUTNwVWhGUT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>作るもの
+与えられた整数のリスト（コインの額面）を使用して作成できない最小のお金の額を計算する関数。
+
+ 実装
+def nonConstructibleChange(coins):
+    # コインの額面を昇順にソートする
+    coins.sort()
+
+    # コインを使って作成できる最小のお金の額を表す変数を初期化
+    minimum_change &#x3D; 0
+
+    # ソートされたコインのリストを順に走査
+    for coin in coins:
+        # 現在のコインの額面が、最小のお金の額に1を加えたものよりも大きい場合、ループを終了
+     ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kd_gamegikenblg/articles/bf7c2af3a395d2"
+                        open
+                      >
+                        <summary class="article-expander__title">C++とPythonでオンラインランキングシステムを一から作る</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kd_gamegikenblg/articles/bf7c2af3a395d2">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--yG1s1Db5--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:C%252B%252B%25E3%2581%25A8Python%25E3%2581%25A7%25E3%2582%25AA%25E3%2583%25B3%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%25A9%25E3%2583%25B3%25E3%2582%25AD%25E3%2583%25B3%25E3%2582%25B0%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2582%2592%25E4%25B8%2580%25E3%2581%258B%25E3%2582%2589%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E7%25A5%259E%25E6%2588%25B8%25E9%259B%25BB%25E5%25AD%2590%25E5%25B0%2582%25E9%2596%2580%25E5%25AD%25A6%25E6%25A0%25A1%25E3%2582%25B2%25E3%2583%25BC%25E3%2583%25A0%25E6%258A%2580%25E8%25A1%2593%25E7%25A0%2594%25E7%25A9%25B6%25E9%2583%25A8%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:shirokuma1101%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLmRldi9pbWFnZXMvZGVmYXVsdC1wdWJsaWNhdGlvbi1hdmF0YXIucG5n%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M4MTBiZjVlYjMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+昨今のゲームはMobile/Pc/etc...とPlatform関わらず、オンラインユーザーデータ/ランキング/リアルタイム対戦/etc...と何らかの方法でネットワークにアクセスしています。今や繋がっていることが当たり前になっていますが、いざゲーム制作に実装しようとなった際にどう実装したら良いか分からない人も多いと思います。最近は情報も増えてきており、UnityやUnrealEngineならNetcode for GameObjectsやMultiplayerが公式からリリースされており、公式リファレンスやプロダクトで使った実例の技術ブログ等日本語でもかなりの量の情報があ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;41
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -7941,243 +8220,6 @@ DATABASES &#x3D; {
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/collabostyle/articles/441af1023f5095"
-                        open
-                      >
-                        <summary class="article-expander__title">はじめての Python</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/collabostyle/articles/441af1023f5095">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--RNCHi6lk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%25AF%25E3%2581%2598%25E3%2582%2581%25E3%2581%25A6%25E3%2581%25AE%2520Python%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25B3%25E3%2583%25A9%25E3%2583%259C%25E3%2582%25B9%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%25AB%2520Developers%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%25AA%25E3%2581%25AA%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MxOTFmZDljMTIuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WnpYeU1pZnJRRzFSSk85XzBlWlluTkRNdTV4Q09KLVhyM1l3YjE9czk2LWM&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>こんにちは。
-Pythonのコードを触る機会があるため、
-事前準備として基本構文などをインプットしました。
-かんたんな内容ですが、アウトプットします🗿
-
- Pythonって？
-https://www.python.org/
-型定義や文末セミコロンがなく、
-初級者の方にも触れやすい言語です。
-インデントされたまとまりを1つの仲間として扱うため、
-ありがちなネストがごちゃってて分かりづらい問題も回避できます！
-※インデント間違ってるとエラーになり、デバッグできません
-
- インストール
-公式サイトからダウンロード可能です。
-https://www.python.org/downloads/
-イ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/raio/articles/fee98c2b6e877a"
-                        open
-                      >
-                        <summary class="article-expander__title">【2023年版】現役エンジニアが解説！個人開発で月10万稼ぐ4ステップ</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/raio/articles/fee98c2b6e877a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--zpiSK9ut--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%25902023%25E5%25B9%25B4%25E7%2589%2588%25E3%2580%2591%25E7%258F%25BE%25E5%25BD%25B9%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2581%258C%25E8%25A7%25A3%25E8%25AA%25AC%25EF%25BC%2581%25E5%2580%258B%25E4%25BA%25BA%25E9%2596%258B%25E7%2599%25BA%25E3%2581%25A7%25E6%259C%258810%25E4%25B8%2587%25E7%25A8%25BC%25E3%2581%25904%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2583%2597%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Raio%25EF%25BD%259C%25E9%25AB%2598%25E6%25A0%25A1%25E7%2594%259F%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdjOGJiMmU3N2YuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-『Web開発で稼ぎたい』
-『プログラミングで副業したい』
-このような方の為に、今回の記事では個人開発で月10万稼ぐ4ステップを解説します🙌
-こちらの記事では、開発だけでなくマーケティングや収益化についても詳しく書いていますので最後までご覧ください😊
-↓筆者についてはこちら↓
-https://qiita.com/Raio14f/items/ef0fb67685b36298bcb0
-
- Step1. UdemyでWeb開発の基礎を学ぶ
-↓画像をクリックするとUdemyにアクセスします↓
-
-
- 何故、Udemyで勉強するのか？
-1.アクセスしやすさ: Udemyは完全にオンライン...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/610741ee3541e8"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-263｜B - Ancestor</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/610741ee3541e8">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--BMf_0gm0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-263%25EF%25BD%259CB%2520-%2520Ancestor%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-263 B - Ancestor
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n &#x3D; getInt()
-    p &#x3D; [0, 0] + getIntList()
-
-    i &#x3D; p[n]
-    c &#x3D; 1
-    while i &gt; 1:
-        i &#x3D; p[i]
-        c +&#x3D; 1
-    print(c)
-
-
-if _...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/05f7f07943065f"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-263｜A - Full House</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/05f7f07943065f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--gDfhSB3_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-263%25EF%25BD%259CA%2520-%2520Full%2520House%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-263 A - Full House
-
-
-
- 提出結果
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    a &#x3D; getIntList()
-    b &#x3D; list(set(a))
-
-    print(&#x27;Yes&#x27; if len(b) &#x3D;&#x3D; 2 and 2 &lt;&#x3D; a.count(b[0]) &lt;&#x3D; 3 else &#x27;No&#x27;)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-10 datetime="2023-07-10T22:25:24.000Z">2023-07-10</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-10 datetime="2023-07-10T22:25:24.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/tiga_aws/articles/639f0ed536828a"
-                        open
-                      >
-                        <summary class="article-expander__title">【Python触ってみた】仮想環境で必要な依存パッケージはrequirements.txt で管理</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tiga_aws/articles/639f0ed536828a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ltkUWNqF--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E8%25A7%25A6%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2591%25E4%25BB%25AE%25E6%2583%25B3%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A7%25E5%25BF%2585%25E8%25A6%2581%25E3%2581%25AA%25E4%25BE%259D%25E5%25AD%2598%25E3%2583%2591%25E3%2583%2583%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B8%25E3%2581%25AFrequirements.txt%2520%25E3%2581%25A7%25E7%25AE%25A1%25E7%2590%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tiga_aws%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RlNjhjYjY4MTQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>今回参考にしたブログ
-https://maku77.github.io/p/wozpogm/
-https://camp.trainocate.co.jp/magazine/venv-python/
-
- 感想
-
- 今まで何も考えずにpip install を繰り返していた。これからは開発ごとに仮想環境を作成して開発していこう
-
- 仮想環境ディレクトリは他のユーザーと共有する仕組みにはなっていない
-
-.gitignoreに仮想環境ディレクトリは記載しておく
-プロジェクトの依存パッケージを requirements.txt で管理することで共有しやすい</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/tomori_k/articles/eaae10eec9ad8a"
-                        open
-                      >
-                        <summary class="article-expander__title">タイピングゲームの入力の正誤判定の簡単な方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tomori_k/articles/eaae10eec9ad8a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Q3KEfpnE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2594%25E3%2583%25B3%25E3%2582%25B0%25E3%2582%25B2%25E3%2583%25BC%25E3%2583%25A0%25E3%2581%25AE%25E5%2585%25A5%25E5%258A%259B%25E3%2581%25AE%25E6%25AD%25A3%25E8%25AA%25A4%25E5%2588%25A4%25E5%25AE%259A%25E3%2581%25AE%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25AA%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tomori_k%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk5NjlkZjYzOTQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>こちらの記事。
-https://zenn.dev/yasse/articles/2663c35919c78d
-タイピングゲーム昔作ったなー、正誤判定難しいよねー、と思いながら読んでいると、正誤判定の部分は別記事↓を参考に実装したそうで、こちらも読んでみました。
-https://qiita.com/Arthur_Lugh/items/43b61877819e402c50d6
-いやーわかるなー、入力パターンが次から次へ出てきて頭壊れるんですよ。
-と、共感の嵐だったわけですが、読んでる途中に突然簡単な実装方法を思いつきました。とても単純なので、誰か記事書いてるだろと思ったのですが、意外にもちょ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -8185,8 +8227,8 @@ https://qiita.com/Arthur_Lugh/items/43b61877819e402c50d6
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5803765899">
-        <time id="build-timestamp" datetime="2023-08-09T01:25:00.921Z">2023-08-09T01:25:00.921Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5815842362">
+        <time id="build-timestamp" datetime="2023-08-10T01:25:16.250Z">2023-08-10T01:25:16.250Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
