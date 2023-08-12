@@ -2,10 +2,340 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-08-11T01:10:02.768Z</updated>
+    <updated>2023-08-12T01:09:15.114Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[【Python】欠落番号]]></title>
+        <id>https://zenn.dev/takuh/articles/fc6377950117ca</id>
+        <link href="https://zenn.dev/takuh/articles/fc6377950117ca"/>
+        <updated>2023-08-11T23:48:53.000Z</updated>
+        <summary type="html"><![CDATA[作るもの
+与えられた整数リスト nums から欠けている整数を見つける関数。
+
+ 実装
+
+missing_numbers.py
+def missingNumbers(nums):
+    # 正の無限大の値を2つリストに追加しておくことで、ループ処理を簡略化する
+    nums += [float("inf"), float("inf")]
+
+    # 数値を変換して欠けている整数の位置を示す
+    for index in range(len(nums) - 2):
+        visited_index = abs(nums[index]) - 1  # 数値の絶対値か...]]></summary>
+        <author>
+            <name>takuh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Alexaスキル用のチャットボットを8秒以内に応答させたい]]></title>
+        <id>https://zenn.dev/sikkim/articles/a3f6633428998e</id>
+        <link href="https://zenn.dev/sikkim/articles/a3f6633428998e"/>
+        <updated>2023-08-11T23:20:40.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+ChatGPTと会話できるAlexaスキルを作って遊んでいるのですが、ときどき「スキルがリクエストに正しく応答できませんでした」と言われて止まってしまうことがあります。
+
+これは、Alexaスキルの仕様で、8秒以内に応答しないとエラーになってしまうためです。応答に時間がかかるのは、OpenAIのAPIが原因です。どうにかしたいと思っていたのですが、ひとつ解決方法を思いついたので紹介します。
+
+ 解決方法の概要
+OpenAIのCreate chat completion API（いわゆるChatGPTのAPI）にはstreamというオプションがあります。これをtrueにすると...]]></summary>
+        <author>
+            <name>TAKAHASHI Taro</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Snowflakeアプリ開発環境をDockerで構築]]></title>
+        <id>https://zenn.dev/al_everywhere/articles/snowflake-app-with-docker</id>
+        <link href="https://zenn.dev/al_everywhere/articles/snowflake-app-with-docker"/>
+        <updated>2023-08-11T19:50:25.000Z</updated>
+        <summary type="html"><![CDATA[概要
+この記事は、ローカルの環境を汚さずにSnowflake上のデータや大規模言語モデル(LLM)を活用したアプリ開発を行えるよう、Streamlit+Snowpark+LangChainといったPythonのライブラリを活用できる環境を、Dockerで構築することを目的に書いています。
+私のGitHub上でもコードなど公開していますので、良ければ参照やgit cloneしてください。
+あくまでも目的は開発環境構築ですが、後半では動作確認のためのこれらのライブラリを用いた単純なアプリについても紹介します。
+
+アプリの外観
+
+ 前提条件
+構築する上での条件は下記の通りです。
+
+Dock...]]></summary>
+        <author>
+            <name>almost_everywhere</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonでPDFをバイナリーで結合する方法]]></title>
+        <id>https://zenn.dev/torachi0401/articles/combine_pdf_binary</id>
+        <link href="https://zenn.dev/torachi0401/articles/combine_pdf_binary"/>
+        <updated>2023-08-11T15:34:24.000Z</updated>
+        <summary type="html"><![CDATA[Pythonでバイナリー形式のPDFファイルとローカルのPDFファイルを結合する方法
+画像やテキストなどの情報を含むPDFファイルは、重要な文書を扱う際に広く使用されます。特定の状況では、WebからAPI等でダウンロードしたバイナリー形式のPDFファイルとローカルにあるPDFファイルを結合させる必要が生じることがあります。この記事では、PythonのPyPDF2とbase64モジュールを使用して、バイナリー形式のPDFファイルとローカルのPDFファイルを効果的に結合する方法を詳しく解説します。
+
+ コードの意味と使い方
+以下のコードは、ダウンロードしたバイナリー形式のPDFファイルと...]]></summary>
+        <author>
+            <name>Torachi0401</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonでファイルをbase64で開く]]></title>
+        <id>https://zenn.dev/torachi0401/articles/howto_encode_base64</id>
+        <link href="https://zenn.dev/torachi0401/articles/howto_encode_base64"/>
+        <updated>2023-08-11T15:34:05.000Z</updated>
+        <summary type="html"><![CDATA[PythonでファイルをBase64エンコードする方法
+ファイルのデータをエンコードする際に、Base64はよく使用されるエンコーディングの一つです。Base64エンコードはバイナリデータをASCIIテキストに変換する方法で、データをテキスト形式で扱えるようにするための手段です。Pythonのbase64モジュールを使用して、ファイルをBase64エンコードする方法を解説します。
+
+ Base64エンコードとは？
+Base64エンコードは、8ビットバイナリデータをASCII文字列に変換する手法です。バイナリデータは、文字コードによって扱いにくいことがありますが、Base64エンコード...]]></summary>
+        <author>
+            <name>Torachi0401</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonで画像処理する際のエッジ検出]]></title>
+        <id>https://zenn.dev/torachi0401/articles/howto_python_canny</id>
+        <link href="https://zenn.dev/torachi0401/articles/howto_python_canny"/>
+        <updated>2023-08-11T15:33:49.000Z</updated>
+        <summary type="html"><![CDATA[画像のエッジ検出を簡単に行う方法：Cannyアルゴリズムとは？
+画像処理をする際に、エッジ検出は重要なタスクの一つです。エッジは画像内の物体の境界を表し、それを検出することで物体の形状や位置を特定することができます。PythonのOpenCVとNumPyライブラリを使用して、画像のエッジ検出を簡単に行う方法をご紹介します。この記事では、以下のコードを通じてその詳細を解説します。
+import numpy as np
+import cv2
+
+med_val = np.median(img_blur)
+sigma = 0.33  # 0.33
+min_val = int(max(0, (...]]></summary>
+        <author>
+            <name>Torachi0401</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonでPDFファイルを画像に変換する方法]]></title>
+        <id>https://zenn.dev/torachi0401/articles/change_pdf_to_image</id>
+        <link href="https://zenn.dev/torachi0401/articles/change_pdf_to_image"/>
+        <updated>2023-08-11T15:32:59.000Z</updated>
+        <summary type="html"><![CDATA[PythonでPDFファイルを画像に変換する方法
+PDFファイルを画像ファイルに変換することは、文書を共有する際やウェブ上で表示する際に便利な手法です。Pythonのpdf2imageモジュールを使用して、PDFファイルを画像に変換する方法を解説します。さらに、変換時に使用するツールpopplerを環境変数に追加する手順も詳しく説明します。
+
+ コードの意味と使い方
+以下のコードは、PDFファイルを画像に変換する方法を示しています。
+import os
+from pathlib import Path
+from pdf2image import convert_from_path
+
+...]]></summary>
+        <author>
+            <name>Torachi0401</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python[pyinstaller]で実行ファイル（exe）の作成]]></title>
+        <id>https://zenn.dev/torachi0401/articles/howto_pyinstaller</id>
+        <link href="https://zenn.dev/torachi0401/articles/howto_pyinstaller"/>
+        <updated>2023-08-11T15:08:27.000Z</updated>
+        <summary type="html"><![CDATA[PyInstallerを使ってPythonアプリを独立した実行ファイルにしよう！
+Pythonで素晴らしいアプリを作成したら、他の人にも使ってもらいたいと思いませんか？そんなときに便利なのが「PyInstaller」です。このツールを使えば、Pythonスクリプトを独立した実行ファイルに変換することができます。この記事では、PyInstallerの基本的な使い方から応用まで、詳細に解説します。
+
+ PyInstallerとは？
+PyInstallerは、Pythonスクリプトをコンパイルされた実行ファイルに変換するツールです。これによって、Pythonのインタプリタが不要な状態でアプ...]]></summary>
+        <author>
+            <name>Torachi0401</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python[PySimpleGui]でUI画面を作成する]]></title>
+        <id>https://zenn.dev/torachi0401/articles/howto_pysimplegui</id>
+        <link href="https://zenn.dev/torachi0401/articles/howto_pysimplegui"/>
+        <updated>2023-08-11T15:02:26.000Z</updated>
+        <summary type="html"><![CDATA[PySimpleGUIを使ってPython GUIアプリを簡単に作成しよう！
+Pythonを使ってGUIアプリケーションを作成すると聞いて、難しそうだし大変そう…と思ったことはありませんか？しかし、そんな不安を解消するのが「PySimpleGUI」です。この素晴らしいライブラリを使えば、誰でも簡単にPython GUIアプリを作成することができます。この記事では、PySimpleGUIの基本的な使い方と共に、実際のコード例を通じてその魅力をご紹介します。
+
+ PySimpleGUIって何？
+PySimpleGUIは、PythonでGUIアプリケーションを作成するためのライブラリです。...]]></summary>
+        <author>
+            <name>Torachi0401</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】レーベンシュタイン距離]]></title>
+        <id>https://zenn.dev/takuh/articles/a1dc69c9a2ad8c</id>
+        <link href="https://zenn.dev/takuh/articles/a1dc69c9a2ad8c"/>
+        <updated>2023-08-11T13:44:16.000Z</updated>
+        <summary type="html"><![CDATA[作るもの
+2つの文字列間のLevenshtein距離を計算するアルゴリズム。
+
+ 補足
+
+レーベンシュタイン距離とは？
+2つの文字列間の類似度や差異を測る指標
+
+例）
+元の文字列: "kitten"
+目標文字列: "sitting"
+この場合、元の文字列を目標文字列に変換するためには次の操作が必要。
+"k" を "s" に置換
+"e" を "i" に置換
+"n" を "t" に置換
+合計で3回の置換操作が必要。したがって、この2つの文字列間のLevenshtein距離は3となる。
+
+ 実装
+
+levenshtein_distance.py
+def levenshteinDistanc...]]></summary>
+        <author>
+            <name>takuh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonからGoへ：参照渡しと値渡しを整理してスムーズな移行をする]]></title>
+        <id>https://zenn.dev/shibata/articles/67a25654171980</id>
+        <link href="https://zenn.dev/shibata/articles/67a25654171980"/>
+        <updated>2023-08-11T08:18:42.000Z</updated>
+        <summary type="html"><![CDATA[背景
+いざGoを書くにあたり参照渡しと値渡しが曖昧だったので再整理しました。
+
+ 本文
+例えば、次のGoのコードを見てみましょう。
+showName 関数の引数は①user Userとするのか、それとも②user *Userとするのか、どちらが適切なのでしょうか？
+package main
+
+import (
+    "fmt"
+)
+
+type User struct {
+    Name string
+    Age  int
+}
+
+func showName(user *User) {
+    fmt.Println(user.Name)
+}
+
+func main() {
+   ...]]></summary>
+        <author>
+            <name>Shibata</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】逆ポーランド記法]]></title>
+        <id>https://zenn.dev/takuh/articles/15ee93dfd0771c</id>
+        <link href="https://zenn.dev/takuh/articles/15ee93dfd0771c"/>
+        <updated>2023-08-11T07:52:59.000Z</updated>
+        <summary type="html"><![CDATA[作るもの
+逆ポーランド記法（Reverse Polish Notation、RPN）を使用して表現された数式を計算する関数。
+中置記法で表現された式「3 + 4」を逆ポーランド記法に変換すると「3 4 +」となる。この式をRPNで解釈すると、最初に「3」と「4」をスタックに積み、次に「+」演算子が来たときにスタックから2つの数値を取り出して演算し、計算結果をスタックに戻すという手順が続く。
+
+ 実装
+
+rpn.py
+def evaluate_rpn(expression):
+    stack = []  # 演算対象の数値や中間結果を保持するスタック
+
+    # RPN式の各トー...]]></summary>
+        <author>
+            <name>takuh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python(pytest)でテスト書くならfixture,conftest,parametrizeを理解すると世界が一気に変わる]]></title>
+        <id>https://zenn.dev/tk_resilie/articles/python_test_template</id>
+        <link href="https://zenn.dev/tk_resilie/articles/python_test_template"/>
+        <updated>2023-08-11T06:53:06.000Z</updated>
+        <summary type="html"><![CDATA[概要
+Pythonのテストライブラリといえばpytestが一般的です。
+Python標準のuniitestとは異なり、クラスベースではなく関数ベースでテストコードを記述することが一般的ですが、fixture,conftest,parametrizeを理解すると一気に世界が変わり、テスト体験が圧倒的に向上するため、これらの実装方法を紹介します。
+
+ リポジトリ
+本記事の説明に使用しているサンプルのテスト実装は、以下のリポジトリです。
+https://github.com/takashi-yoneya/python-test-template
+
+ 想定読者
+PythonやGitの基本的な...]]></summary>
+        <author>
+            <name>米谷 昂(Python/FastAPIプロフェッショナル)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】パターンマッチャー]]></title>
+        <id>https://zenn.dev/takuh/articles/d49963a0ffa5fd</id>
+        <link href="https://zenn.dev/takuh/articles/d49963a0ffa5fd"/>
+        <updated>2023-08-11T06:37:58.000Z</updated>
+        <summary type="html"><![CDATA[作るもの
+与えられたパターンに対して、文字列内の部分文字列の組み合わせを探し、一致する場合にその組み合わせを返す関数。
+
+ 実装
+
+pattern_matcher.py
+def patternMatcher(pattern, string):
+    # パターンが空または文字列よりも長い場合は、マッチング不可能なので空のリストを返す
+    if len(pattern) == 0 or len(pattern) > len(string):
+        return []
+
+    # パターンの最初の文字を取得
+    firstLetterA = pattern[0...]]></summary>
+        <author>
+            <name>takuh</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[StreamlitでChatGPTアプリを作成しよう!]]></title>
+        <id>https://zenn.dev/tsuzukia/articles/bc0564a7a7f427</id>
+        <link href="https://zenn.dev/tsuzukia/articles/bc0564a7a7f427"/>
+        <updated>2023-08-11T05:20:41.000Z</updated>
+        <summary type="html"><![CDATA[StreamlitでChatGPTアプリが作れちゃうんです。
+しかもstreaming機能ありで結構本家に近いですよ！
+
+
+ Streamlitとは？
+Streamlitは、PythonでWebアプリケーションを素早く作成するためのオープンソースライブラリです。データ分析、可視化、機械学習モデルのデモなどに特に適しており、コーディングの専門知識がなくても使いやすいツールです。
+https://streamlit.io/
+
+ ChatGPTとは？
+ChatGPTについてはご存じですよね？ChatGPTはOpenAIによって開発された自然言語処理のモデルで、人間のような文章の生成が可能です。...]]></summary>
+        <author>
+            <name>TAKEZO</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【2023年度最新版】Twitter API 取得方法]]></title>
+        <id>https://zenn.dev/eito_blog/articles/a982fdb073493a</id>
+        <link href="https://zenn.dev/eito_blog/articles/a982fdb073493a"/>
+        <updated>2023-08-11T05:04:04.000Z</updated>
+        <summary type="html"><![CDATA[Twitter APIを利用することでツイート処理を自動化することができます。
+本記事ではTwitter APIの取得方法について解説していきます。
+※電話番号、メールアドレスが登録されているTwitterアカウントを所持していることが前提となります。
+
+ Twitter Developersにアクセス
+以下のURLにアクセスします。Twitterアカウントのログインが求められることもあるのでその際はログインをします。
+https://developer.twitter.com/en/apps
+
+ Create an appをクリック
+その後Create an appをクリックします。...]]></summary>
+        <author>
+            <name>エイト</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】カレンダーマッチング]]></title>
+        <id>https://zenn.dev/takuh/articles/4b591ffb605b9f</id>
+        <link href="https://zenn.dev/takuh/articles/4b591ffb605b9f"/>
+        <updated>2023-08-11T04:18:51.000Z</updated>
+        <summary type="html"><![CDATA[作るもの
+2人のカレンダースケジュールを比較し、共通の空き時間（会議を開催できる時間帯）を見つけるための関数。
+
+ 実装
+
+calendar_matching_py
+# ２つのカレンダーのスケジュールを比較し、共通の空き時間を見つける関数
+def calendarMatching(calendar1, dailyBounds1, calendar2, dailyBounds2, meetingDuration):
+    # 両カレンダーの営業開始と終了の最大・最小時間を取得
+    earlyBound = max(timeToMinutes(dailyBounds1[0]), t...]]></summary>
+        <author>
+            <name>takuh</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【Python】ナップサック問題]]></title>
         <id>https://zenn.dev/takuh/articles/7f58d455ca30ce</id>
@@ -5047,115 +5377,6 @@ if __name__ == "__main__":
 今回の記事ではその際に試したことをま...]]></summary>
         <author>
             <name>FORCIA Tech Blog 運営チーム</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[こんにちは]]></title>
-        <id>https://zenn.dev/ecomire/books/cc9a171f5045cf</id>
-        <link href="https://zenn.dev/ecomire/books/cc9a171f5045cf"/>
-        <updated>2023-07-13T07:03:55.000Z</updated>
-        <summary type="html"><![CDATA[hello]]></summary>
-        <author>
-            <name>エコミル</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-265｜B - Explore]]></title>
-        <id>https://zenn.dev/hyperdb/articles/be5f15d75a99c7</id>
-        <link href="https://zenn.dev/hyperdb/articles/be5f15d75a99c7"/>
-        <updated>2023-07-13T05:08:19.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-265 B - Explore
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def main():
-    n, m, t = getIntMap()
-    a = [0] + ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-265｜A - Apple]]></title>
-        <id>https://zenn.dev/hyperdb/articles/6fb70cab678636</id>
-        <link href="https://zenn.dev/hyperdb/articles/6fb70cab678636"/>
-        <updated>2023-07-13T05:08:18.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-265 A - Apple
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    x, y, n = getIntMap()
-
-    if y < x * 3:
-        s = n // 3 * y + n % 3 * x
-    else:
-        s = n * x
-
-    print(s)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonとpipパッケージのバージョン確認 & 一括アップデート方法]]></title>
-        <id>https://zenn.dev/haretokidoki/articles/8836fecf6b4cfc</id>
-        <link href="https://zenn.dev/haretokidoki/articles/8836fecf6b4cfc"/>
-        <updated>2023-07-13T02:03:35.000Z</updated>
-        <summary type="html"><![CDATA[概要
-仮想環境の開発環境を久しぶりに立ち上げてpip listでインストール済みのパッケージ一覧を確認した結果、
-pip自体が更新可能な状態でした。
-pip以外のパッケージについても一括でアップデートしたいと思い調べた内容を紹介します。
-
- この記事のターゲット
-
-Python 初級者・初学者の方
-Pythonのパッケージ管理システム「pip」で一括アップデートしたい方
-
-
- 環境
-
- ホスト（物理）OSのスペック
-Windows 10 Pro 環境にOracle VM VirtualBoxをインストール。
-
-
-
-種類
-内容
-
-
-
-
-CPU
-Intel(R) Core(TM) i3-...]]></summary>
-        <author>
-            <name>akiGAMEBOY@はれときどきZenn</name>
         </author>
     </entry>
 </feed>

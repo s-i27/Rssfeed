@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-11 datetime="2023-08-11T00:30:36.000Z">2023-08-11</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-11 datetime="2023-08-11T00:30:36.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-11 datetime="2023-08-11T23:48:53.000Z">2023-08-11</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-11 datetime="2023-08-11T23:48:53.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,506 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/takuh/articles/fc6377950117ca"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】欠落番号</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takuh/articles/fc6377950117ca">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Ju-312p3--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591%25E6%25AC%25A0%25E8%2590%25BD%25E7%2595%25AA%25E5%258F%25B7%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takuh%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MFZDMlpZSlp1TVJEQ1AtYkxabmNzRnlkU3RZQ2FGNU4wUTNwVWhGUT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>作るもの
+与えられた整数リスト nums から欠けている整数を見つける関数。
+
+ 実装
+
+missing_numbers.py
+def missingNumbers(nums):
+    # 正の無限大の値を2つリストに追加しておくことで、ループ処理を簡略化する
+    nums +&#x3D; [float(&quot;inf&quot;), float(&quot;inf&quot;)]
+
+    # 数値を変換して欠けている整数の位置を示す
+    for index in range(len(nums) - 2):
+        visited_index &#x3D; abs(nums[index]) - 1  # 数値の絶対値か...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/sikkim/articles/a3f6633428998e"
+                        open
+                      >
+                        <summary class="article-expander__title">Alexaスキル用のチャットボットを8秒以内に応答させたい</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sikkim/articles/a3f6633428998e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--vUi4ts6Q--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Alexa%25E3%2582%25B9%25E3%2582%25AD%25E3%2583%25AB%25E7%2594%25A8%25E3%2581%25AE%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E3%2582%25928%25E7%25A7%2592%25E4%25BB%25A5%25E5%2586%2585%25E3%2581%25AB%25E5%25BF%259C%25E7%25AD%2594%25E3%2581%2595%25E3%2581%259B%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:TAKAHASHI%2520Taro%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRhMWVmZDc1ODkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+ChatGPTと会話できるAlexaスキルを作って遊んでいるのですが、ときどき「スキルがリクエストに正しく応答できませんでした」と言われて止まってしまうことがあります。
+
+これは、Alexaスキルの仕様で、8秒以内に応答しないとエラーになってしまうためです。応答に時間がかかるのは、OpenAIのAPIが原因です。どうにかしたいと思っていたのですが、ひとつ解決方法を思いついたので紹介します。
+
+ 解決方法の概要
+OpenAIのCreate chat completion API（いわゆるChatGPTのAPI）にはstreamというオプションがあります。これをtrueにすると...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/al_everywhere/articles/snowflake-app-with-docker"
+                        open
+                      >
+                        <summary class="article-expander__title">Snowflakeアプリ開発環境をDockerで構築</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/al_everywhere/articles/snowflake-app-with-docker">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--p8hyjSb4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Snowflake%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E9%2596%258B%25E7%2599%25BA%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592Docker%25E3%2581%25A7%25E6%25A7%258B%25E7%25AF%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:almost_everywhere%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ1OTRkMGM2MGEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+この記事は、ローカルの環境を汚さずにSnowflake上のデータや大規模言語モデル(LLM)を活用したアプリ開発を行えるよう、Streamlit+Snowpark+LangChainといったPythonのライブラリを活用できる環境を、Dockerで構築することを目的に書いています。
+私のGitHub上でもコードなど公開していますので、良ければ参照やgit cloneしてください。
+あくまでも目的は開発環境構築ですが、後半では動作確認のためのこれらのライブラリを用いた単純なアプリについても紹介します。
+
+アプリの外観
+
+ 前提条件
+構築する上での条件は下記の通りです。
+
+Dock...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/torachi0401/articles/combine_pdf_binary"
+                        open
+                      >
+                        <summary class="article-expander__title">pythonでPDFをバイナリーで結合する方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/torachi0401/articles/combine_pdf_binary">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--uXZlYARP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A7PDF%25E3%2582%2592%25E3%2583%2590%25E3%2582%25A4%25E3%2583%258A%25E3%2583%25AA%25E3%2583%25BC%25E3%2581%25A7%25E7%25B5%2590%25E5%2590%2588%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Torachi0401%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzMjdjNjRiN2MuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Pythonでバイナリー形式のPDFファイルとローカルのPDFファイルを結合する方法
+画像やテキストなどの情報を含むPDFファイルは、重要な文書を扱う際に広く使用されます。特定の状況では、WebからAPI等でダウンロードしたバイナリー形式のPDFファイルとローカルにあるPDFファイルを結合させる必要が生じることがあります。この記事では、PythonのPyPDF2とbase64モジュールを使用して、バイナリー形式のPDFファイルとローカルのPDFファイルを効果的に結合する方法を詳しく解説します。
+
+ コードの意味と使い方
+以下のコードは、ダウンロードしたバイナリー形式のPDFファイルと...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/torachi0401/articles/howto_encode_base64"
+                        open
+                      >
+                        <summary class="article-expander__title">pythonでファイルをbase64で開く</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/torachi0401/articles/howto_encode_base64">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--MxNJnhVw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A7%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592base64%25E3%2581%25A7%25E9%2596%258B%25E3%2581%258F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Torachi0401%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzMjdjNjRiN2MuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>PythonでファイルをBase64エンコードする方法
+ファイルのデータをエンコードする際に、Base64はよく使用されるエンコーディングの一つです。Base64エンコードはバイナリデータをASCIIテキストに変換する方法で、データをテキスト形式で扱えるようにするための手段です。Pythonのbase64モジュールを使用して、ファイルをBase64エンコードする方法を解説します。
+
+ Base64エンコードとは？
+Base64エンコードは、8ビットバイナリデータをASCII文字列に変換する手法です。バイナリデータは、文字コードによって扱いにくいことがありますが、Base64エンコード...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/torachi0401/articles/howto_python_canny"
+                        open
+                      >
+                        <summary class="article-expander__title">pythonで画像処理する際のエッジ検出</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/torachi0401/articles/howto_python_canny">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Ztl5HFkS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A7%25E7%2594%25BB%25E5%2583%258F%25E5%2587%25A6%25E7%2590%2586%25E3%2581%2599%25E3%2582%258B%25E9%259A%259B%25E3%2581%25AE%25E3%2582%25A8%25E3%2583%2583%25E3%2582%25B8%25E6%25A4%259C%25E5%2587%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Torachi0401%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzMjdjNjRiN2MuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>画像のエッジ検出を簡単に行う方法：Cannyアルゴリズムとは？
+画像処理をする際に、エッジ検出は重要なタスクの一つです。エッジは画像内の物体の境界を表し、それを検出することで物体の形状や位置を特定することができます。PythonのOpenCVとNumPyライブラリを使用して、画像のエッジ検出を簡単に行う方法をご紹介します。この記事では、以下のコードを通じてその詳細を解説します。
+import numpy as np
+import cv2
+
+med_val &#x3D; np.median(img_blur)
+sigma &#x3D; 0.33  # 0.33
+min_val &#x3D; int(max(0, (...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/torachi0401/articles/change_pdf_to_image"
+                        open
+                      >
+                        <summary class="article-expander__title">PythonでPDFファイルを画像に変換する方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/torachi0401/articles/change_pdf_to_image">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--vCGorxd7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7PDF%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E7%2594%25BB%25E5%2583%258F%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Torachi0401%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzMjdjNjRiN2MuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>PythonでPDFファイルを画像に変換する方法
+PDFファイルを画像ファイルに変換することは、文書を共有する際やウェブ上で表示する際に便利な手法です。Pythonのpdf2imageモジュールを使用して、PDFファイルを画像に変換する方法を解説します。さらに、変換時に使用するツールpopplerを環境変数に追加する手順も詳しく説明します。
+
+ コードの意味と使い方
+以下のコードは、PDFファイルを画像に変換する方法を示しています。
+import os
+from pathlib import Path
+from pdf2image import convert_from_path
+
+...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/torachi0401/articles/howto_pyinstaller"
+                        open
+                      >
+                        <summary class="article-expander__title">Python[pyinstaller]で実行ファイル（exe）の作成</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/torachi0401/articles/howto_pyinstaller">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--I125YYsp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%255Bpyinstaller%255D%25E3%2581%25A7%25E5%25AE%259F%25E8%25A1%258C%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25EF%25BC%2588exe%25EF%25BC%2589%25E3%2581%25AE%25E4%25BD%259C%25E6%2588%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Torachi0401%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzMjdjNjRiN2MuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>PyInstallerを使ってPythonアプリを独立した実行ファイルにしよう！
+Pythonで素晴らしいアプリを作成したら、他の人にも使ってもらいたいと思いませんか？そんなときに便利なのが「PyInstaller」です。このツールを使えば、Pythonスクリプトを独立した実行ファイルに変換することができます。この記事では、PyInstallerの基本的な使い方から応用まで、詳細に解説します。
+
+ PyInstallerとは？
+PyInstallerは、Pythonスクリプトをコンパイルされた実行ファイルに変換するツールです。これによって、Pythonのインタプリタが不要な状態でアプ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/torachi0401/articles/howto_pysimplegui"
+                        open
+                      >
+                        <summary class="article-expander__title">Python[PySimpleGui]でUI画面を作成する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/torachi0401/articles/howto_pysimplegui">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Q48lZq4S--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%255BPySimpleGui%255D%25E3%2581%25A7UI%25E7%2594%25BB%25E9%259D%25A2%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Torachi0401%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzMjdjNjRiN2MuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>PySimpleGUIを使ってPython GUIアプリを簡単に作成しよう！
+Pythonを使ってGUIアプリケーションを作成すると聞いて、難しそうだし大変そう…と思ったことはありませんか？しかし、そんな不安を解消するのが「PySimpleGUI」です。この素晴らしいライブラリを使えば、誰でも簡単にPython GUIアプリを作成することができます。この記事では、PySimpleGUIの基本的な使い方と共に、実際のコード例を通じてその魅力をご紹介します。
+
+ PySimpleGUIって何？
+PySimpleGUIは、PythonでGUIアプリケーションを作成するためのライブラリです。...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/takuh/articles/a1dc69c9a2ad8c"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】レーベンシュタイン距離</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takuh/articles/a1dc69c9a2ad8c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--_YsohaLG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%2599%25E3%2583%25B3%25E3%2582%25B7%25E3%2583%25A5%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%25B3%25E8%25B7%259D%25E9%259B%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takuh%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MFZDMlpZSlp1TVJEQ1AtYkxabmNzRnlkU3RZQ2FGNU4wUTNwVWhGUT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>作るもの
+2つの文字列間のLevenshtein距離を計算するアルゴリズム。
+
+ 補足
+
+レーベンシュタイン距離とは？
+2つの文字列間の類似度や差異を測る指標
+
+例）
+元の文字列: &quot;kitten&quot;
+目標文字列: &quot;sitting&quot;
+この場合、元の文字列を目標文字列に変換するためには次の操作が必要。
+&quot;k&quot; を &quot;s&quot; に置換
+&quot;e&quot; を &quot;i&quot; に置換
+&quot;n&quot; を &quot;t&quot; に置換
+合計で3回の置換操作が必要。したがって、この2つの文字列間のLevenshtein距離は3となる。
+
+ 実装
+
+levenshtein_distance.py
+def levenshteinDistanc...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/shibata/articles/67a25654171980"
+                        open
+                      >
+                        <summary class="article-expander__title">PythonからGoへ：参照渡しと値渡しを整理してスムーズな移行をする</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shibata/articles/67a25654171980">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--C8YVL2R_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%258B%25E3%2582%2589Go%25E3%2581%25B8%25EF%25BC%259A%25E5%258F%2582%25E7%2585%25A7%25E6%25B8%25A1%25E3%2581%2597%25E3%2581%25A8%25E5%2580%25A4%25E6%25B8%25A1%25E3%2581%2597%25E3%2582%2592%25E6%2595%25B4%25E7%2590%2586%25E3%2581%2597%25E3%2581%25A6%25E3%2582%25B9%25E3%2583%25A0%25E3%2583%25BC%25E3%2582%25BA%25E3%2581%25AA%25E7%25A7%25BB%25E8%25A1%258C%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shibata%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RhNGQ0YzA3NzcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>背景
+いざGoを書くにあたり参照渡しと値渡しが曖昧だったので再整理しました。
+
+ 本文
+例えば、次のGoのコードを見てみましょう。
+showName 関数の引数は①user Userとするのか、それとも②user *Userとするのか、どちらが適切なのでしょうか？
+package main
+
+import (
+    &quot;fmt&quot;
+)
+
+type User struct {
+    Name string
+    Age  int
+}
+
+func showName(user *User) {
+    fmt.Println(user.Name)
+}
+
+func main() {
+   ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/takuh/articles/15ee93dfd0771c"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】逆ポーランド記法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takuh/articles/15ee93dfd0771c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--E-wwT_K7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591%25E9%2580%2586%25E3%2583%259D%25E3%2583%25BC%25E3%2583%25A9%25E3%2583%25B3%25E3%2583%2589%25E8%25A8%2598%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takuh%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MFZDMlpZSlp1TVJEQ1AtYkxabmNzRnlkU3RZQ2FGNU4wUTNwVWhGUT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>作るもの
+逆ポーランド記法（Reverse Polish Notation、RPN）を使用して表現された数式を計算する関数。
+中置記法で表現された式「3 + 4」を逆ポーランド記法に変換すると「3 4 +」となる。この式をRPNで解釈すると、最初に「3」と「4」をスタックに積み、次に「+」演算子が来たときにスタックから2つの数値を取り出して演算し、計算結果をスタックに戻すという手順が続く。
+
+ 実装
+
+rpn.py
+def evaluate_rpn(expression):
+    stack &#x3D; []  # 演算対象の数値や中間結果を保持するスタック
+
+    # RPN式の各トー...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tk_resilie/articles/python_test_template"
+                        open
+                      >
+                        <summary class="article-expander__title">Python(pytest)でテスト書くならfixture,conftest,parametrizeを理解すると世界が一気に変わる</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tk_resilie/articles/python_test_template">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--L8VY5hFy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2528pytest%2529%25E3%2581%25A7%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E6%259B%25B8%25E3%2581%258F%25E3%2581%25AA%25E3%2582%2589fixture%252Cconftest%252Cparametrize%25E3%2582%2592%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%25E3%2581%25A8%25E4%25B8%2596...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%25B1%25B3%25E8%25B0%25B7%2520%25E6%2598%2582%2528Python%252FFas...%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzExMzNhYjJkZjUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+Pythonのテストライブラリといえばpytestが一般的です。
+Python標準のuniitestとは異なり、クラスベースではなく関数ベースでテストコードを記述することが一般的ですが、fixture,conftest,parametrizeを理解すると一気に世界が変わり、テスト体験が圧倒的に向上するため、これらの実装方法を紹介します。
+
+ リポジトリ
+本記事の説明に使用しているサンプルのテスト実装は、以下のリポジトリです。
+https://github.com/takashi-yoneya/python-test-template
+
+ 想定読者
+PythonやGitの基本的な...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/takuh/articles/d49963a0ffa5fd"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】パターンマッチャー</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takuh/articles/d49963a0ffa5fd">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--d3drOaMt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591%25E3%2583%2591%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25B3%25E3%2583%259E%25E3%2583%2583%25E3%2583%2581%25E3%2583%25A3%25E3%2583%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takuh%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MFZDMlpZSlp1TVJEQ1AtYkxabmNzRnlkU3RZQ2FGNU4wUTNwVWhGUT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>作るもの
+与えられたパターンに対して、文字列内の部分文字列の組み合わせを探し、一致する場合にその組み合わせを返す関数。
+
+ 実装
+
+pattern_matcher.py
+def patternMatcher(pattern, string):
+    # パターンが空または文字列よりも長い場合は、マッチング不可能なので空のリストを返す
+    if len(pattern) &#x3D;&#x3D; 0 or len(pattern) &gt; len(string):
+        return []
+
+    # パターンの最初の文字を取得
+    firstLetterA &#x3D; pattern[0...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tsuzukia/articles/bc0564a7a7f427"
+                        open
+                      >
+                        <summary class="article-expander__title">StreamlitでChatGPTアプリを作成しよう!</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tsuzukia/articles/bc0564a7a7f427">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--lGjzslXW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Streamlit%25E3%2581%25A7ChatGPT%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%2521%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:TAKEZO%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBjZmRmNmRhYmEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>StreamlitでChatGPTアプリが作れちゃうんです。
+しかもstreaming機能ありで結構本家に近いですよ！
+
+
+ Streamlitとは？
+Streamlitは、PythonでWebアプリケーションを素早く作成するためのオープンソースライブラリです。データ分析、可視化、機械学習モデルのデモなどに特に適しており、コーディングの専門知識がなくても使いやすいツールです。
+https://streamlit.io/
+
+ ChatGPTとは？
+ChatGPTについてはご存じですよね？ChatGPTはOpenAIによって開発された自然言語処理のモデルで、人間のような文章の生成が可能です。...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/eito_blog/articles/a982fdb073493a"
+                        open
+                      >
+                        <summary class="article-expander__title">【2023年度最新版】Twitter API 取得方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/eito_blog/articles/a982fdb073493a">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--aoypr71K--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%25902023%25E5%25B9%25B4%25E5%25BA%25A6%25E6%259C%2580%25E6%2596%25B0%25E7%2589%2588%25E3%2580%2591Twitter%2520API%2520%25E5%258F%2596%25E5%25BE%2597%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25A8%25E3%2582%25A4%25E3%2583%2588%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E1ZTg3MmJkZDUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Twitter APIを利用することでツイート処理を自動化することができます。
+本記事ではTwitter APIの取得方法について解説していきます。
+※電話番号、メールアドレスが登録されているTwitterアカウントを所持していることが前提となります。
+
+ Twitter Developersにアクセス
+以下のURLにアクセスします。Twitterアカウントのログインが求められることもあるのでその際はログインをします。
+https://developer.twitter.com/en/apps
+
+ Create an appをクリック
+その後Create an appをクリックします。...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/takuh/articles/4b591ffb605b9f"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】カレンダーマッチング</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takuh/articles/4b591ffb605b9f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--5iANHZsA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591%25E3%2582%25AB%25E3%2583%25AC%25E3%2583%25B3%25E3%2583%2580%25E3%2583%25BC%25E3%2583%259E%25E3%2583%2583%25E3%2583%2581%25E3%2583%25B3%25E3%2582%25B0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takuh%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MFZDMlpZSlp1TVJEQ1AtYkxabmNzRnlkU3RZQ2FGNU4wUTNwVWhGUT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>作るもの
+2人のカレンダースケジュールを比較し、共通の空き時間（会議を開催できる時間帯）を見つけるための関数。
+
+ 実装
+
+calendar_matching_py
+# ２つのカレンダーのスケジュールを比較し、共通の空き時間を見つける関数
+def calendarMatching(calendar1, dailyBounds1, calendar2, dailyBounds2, meetingDuration):
+    # 両カレンダーの営業開始と終了の最大・最小時間を取得
+    earlyBound &#x3D; max(timeToMinutes(dailyBounds1[0]), t...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -8078,185 +8578,10 @@ if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-13 datetime="2023-07-13T07:03:55.000Z">2023-07-13</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-13 datetime="2023-07-13T07:03:55.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/ecomire/books/cc9a171f5045cf"
-                        open
-                      >
-                        <summary class="article-expander__title">こんにちは</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ecomire/books/cc9a171f5045cf">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--QBqN4Emj--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci80ZDNjYzg2OWYzLmpwZWc&#x3D;%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>hello</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/be5f15d75a99c7"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-265｜B - Explore</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/be5f15d75a99c7">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--AvH8qAwe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-265%25EF%25BD%259CB%2520-%2520Explore%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-265 B - Explore
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def main():
-    n, m, t &#x3D; getIntMap()
-    a &#x3D; [0] + ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/6fb70cab678636"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-265｜A - Apple</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/6fb70cab678636">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--eunTPR4H--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-265%25EF%25BD%259CA%2520-%2520Apple%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-265 A - Apple
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    x, y, n &#x3D; getIntMap()
-
-    if y &lt; x * 3:
-        s &#x3D; n // 3 * y + n % 3 * x
-    else:
-        s &#x3D; n * x
-
-    print(s)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/haretokidoki/articles/8836fecf6b4cfc"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonとpipパッケージのバージョン確認 &amp; 一括アップデート方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/haretokidoki/articles/8836fecf6b4cfc">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--qG1vOfjz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A8pip%25E3%2583%2591%25E3%2583%2583%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B8%25E3%2581%25AE%25E3%2583%2590%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%25B3%25E7%25A2%25BA%25E8%25AA%258D%2520%2526%2520%25E4%25B8%2580%25E6%258B%25AC%25E3%2582%25A2%25E3%2583%2583%25E3%2583%2597%25E3%2583%2587%25E3%2583%25BC%25E3%2583%2588%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:akiGAMEBOY%2540%25E3%2581%25AF%25E3%2582%258C%25E3%2581%25A8%25E3%2581%258D...%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwN0RJRkhZQUtMWk5JV1pWOENZYUhBRDZIMTVnc0JYeUJPbk9RUm09czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>概要
-仮想環境の開発環境を久しぶりに立ち上げてpip listでインストール済みのパッケージ一覧を確認した結果、
-pip自体が更新可能な状態でした。
-pip以外のパッケージについても一括でアップデートしたいと思い調べた内容を紹介します。
-
- この記事のターゲット
-
-Python 初級者・初学者の方
-Pythonのパッケージ管理システム「pip」で一括アップデートしたい方
-
-
- 環境
-
- ホスト（物理）OSのスペック
-Windows 10 Pro 環境にOracle VM VirtualBoxをインストール。
-
-
-
-種類
-内容
-
-
-
-
-CPU
-Intel(R) Core(TM) i3-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;40
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5827791820">
-        <time id="build-timestamp" datetime="2023-08-11T01:10:02.719Z">2023-08-11T01:10:02.719Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5838480880">
+        <time id="build-timestamp" datetime="2023-08-12T01:09:15.063Z">2023-08-12T01:09:15.063Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
