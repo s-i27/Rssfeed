@@ -2,10 +2,226 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-08-12T01:09:15.114Z</updated>
+    <updated>2023-08-13T01:14:07.233Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Pythonのコーディング規約を調査しました]]></title>
+        <id>https://zenn.dev/yamaden/articles/9469cbe0bca86e</id>
+        <link href="https://zenn.dev/yamaden/articles/9469cbe0bca86e"/>
+        <updated>2023-08-12T14:59:36.000Z</updated>
+        <summary type="html"><![CDATA[各言語には必ずある「コーディング規約」ですが、Python にはどの様なものがあるのでしょうか。
+Python のコーディング規約として「PEP 8」があります。
+これを全て読み解くのは大変なので基本的なことだけをピックアップします。
+
+ 始めに総論
+
+インデントは 4 スペースを利用する
+関数の引数が複数ある場合は統一された方法で折り返す
+
+関数の開きカッコに揃える
+関数の 1 行目に引数を書き、その位置に 2 行目以降を合わせる
+1 行目には引数を置かず、追加のインデントを含める
+
+
+波括弧/ブラケット/括弧の位置は統一された方法でおく
+
+リストの最後の要素が置かれた行の、はじめの文...]]></summary>
+        <author>
+            <name>naoki matsuzaki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonのLinterとFormatter設定]]></title>
+        <id>https://zenn.dev/yamaden/articles/23d3805fc85d99</id>
+        <link href="https://zenn.dev/yamaden/articles/23d3805fc85d99"/>
+        <updated>2023-08-12T14:59:35.000Z</updated>
+        <summary type="html"><![CDATA[Python の Linter や Formatter といってもさまざまな種類があります。
+今回は、Linter に「flake8」、Formatter に「black」を VSCode で利用するための設定方法をまとめました。
+その前に、その他パッケージについても簡単にですがまとめておきます。
+
+ Linter
+
+ pycodestyle
+pycodestyle は、Python のコードが PEP8 に準拠しているかをチェックするための linter です。以前は pep8 という名前でしたが、文書の方の PEP8 と名前が同じでややこしいので、pycodestyle という名前に...]]></summary>
+        <author>
+            <name>naoki matsuzaki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VS CodeでAWS SAMのローカルデバッグをやってみる]]></title>
+        <id>https://zenn.dev/danishi/articles/aws-sam-local-debug</id>
+        <link href="https://zenn.dev/danishi/articles/aws-sam-local-debug"/>
+        <updated>2023-08-12T14:28:03.000Z</updated>
+        <summary type="html"><![CDATA[準備
+既にAWS SAMアプリがある場合は不要ですが、ない場合はまずは事前準備。
+
+ 適当なAWS SAMアプリを用意する
+こちらのHello Worldアプリを作りましょう（デプロイは必要ありません）。
+https://docs.aws.amazon.com/ja_jp/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html
+手順に従ってsam initが終わったら、ターミナルで以下を実行。
+sam local start-api
+別のターミナルから...]]></summary>
+        <author>
+            <name>danishi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Albumentations で XYZ軸回転のデータ拡張をするメモ]]></title>
+        <id>https://zenn.dev/kazuhito/articles/404bad30fbbf73</id>
+        <link href="https://zenn.dev/kazuhito/articles/404bad30fbbf73"/>
+        <updated>2023-08-12T09:23:02.000Z</updated>
+        <summary type="html"><![CDATA[Albumentations で XYZ軸回転のデータ拡張をするメモです🦔
+と言っても、Albumentations.Lambda()と自作のcv_rotate_3dを組み合わせただけの覚書です。
+Google Colaboratory で動くサンプルノートブックを用意しているので、興味がある方は動かしてみてください。
+
+以下、使い方メモ👀
+サンプル画像は、ぱくたそ様の食後のケーキを利用しています。
+
+ cv_rotate_3dスクリプトダウンロード
+!wget https://raw.githubusercontent.com/Kazuhito00/cv_rotate_3d/main/...]]></summary>
+        <author>
+            <name>kazuhito</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS SAMで構築したLambdaをDynamoDB Localに接続する]]></title>
+        <id>https://zenn.dev/k1e1n04/articles/597c564c58af44</id>
+        <link href="https://zenn.dev/k1e1n04/articles/597c564c58af44"/>
+        <updated>2023-08-12T07:18:50.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+ローカルのDynamoDBとAWS SAMで構築したLambdaを接続するのに少し苦戦したので、メモを残します。
+
+ 前提
+
+Dockerがインストールされている
+AWS CLIがインストールされている
+LambdaのRuntimeはPython3.9
+AWS SAM CLIがインストールされている
+SAMによるプロジェクトは作成済
+venvでもanacondaでも良いが環境構築をし、boto3とulid-pyがインストールされていること
+
+
+ 実装
+
+ テンプレート
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS...]]></summary>
+        <author>
+            <name>Ken</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【情報符号理論】Pythonで実装して理解する情報源、符号化、通信路、誤り訂正【実装】]]></title>
+        <id>https://zenn.dev/mirrorrabbit/articles/e9d9c07e35bb20</id>
+        <link href="https://zenn.dev/mirrorrabbit/articles/e9d9c07e35bb20"/>
+        <updated>2023-08-12T07:13:04.000Z</updated>
+        <summary type="html"><![CDATA[概要
+情報学の一分野である情報符号理論に登場する「情報源」「符号化」「通信路」「誤り訂正」について、それに相当するクラスを実際にPythonで実装することで理解を深めることを目的とした記事です。
+情報源の定義など、情報符号理論の基礎的な内容について詳しく説明することはしませんので予めご了承ください。
+
+ 想定する読者像
+
+計算機科学を学習している人
+Pythonにある程度慣れている人
+
+
+ 前提する知識
+
+情報符号理論の基礎的な理解
+Pythonの初級的な内容（クラスの継承等まで）
+
+
+ この記事の内容
+
+情報符号理論の各種内容（ハフマン符号化、加法的通信路、ハミング符号等）をシミュ...]]></summary>
+        <author>
+            <name>mira</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-282｜B - Let's Get a Perfect Score]]></title>
+        <id>https://zenn.dev/hyperdb/articles/8d0d9e8035461e</id>
+        <link href="https://zenn.dev/hyperdb/articles/8d0d9e8035461e"/>
+        <updated>2023-08-12T03:54:23.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-282 B - Let's Get a Perfect Score
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getStringListRow(N):
+    return [list(input()) for _ in range(N)]
+
+
+def chk(a1, a2):
+    r = True
+    for i in range(len(a1)):
+        if a1[i] == 'x' and a2[i] == 'x':
+           ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-282｜A - Generalized ABC]]></title>
+        <id>https://zenn.dev/hyperdb/articles/3892c3b453b3f9</id>
+        <link href="https://zenn.dev/hyperdb/articles/3892c3b453b3f9"/>
+        <updated>2023-08-12T03:54:22.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-282 A - Generalized ABC
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    n = getInt()
+    a = ord('A')
+
+    s = ''
+    for i in range(n):
+        s += chr(a + i)
+    print(s)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Python] GIFを合成する方法]]></title>
+        <id>https://zenn.dev/techstart/articles/059616f6272696</id>
+        <link href="https://zenn.dev/techstart/articles/059616f6272696"/>
+        <updated>2023-08-12T01:35:54.000Z</updated>
+        <summary type="html"><![CDATA[複数のGIFを組み合わせて1つのGIFにする方法をメモとしてまとめておきます。
+きっかけはNFTで、GIFのジェネラティブ画像を大量に作成する方法を模索していたことでした。
+
+ 前提
+私はPythonは全く書いたことがありませんが、調べたところライブラリも充実しているようだったので、見よう見まねでコードを書きました。
+最初はGoで挑戦していましたが、ライブラリも十分になく、コードもかなり複雑になってきた上に完成したGIFのチラつきがすごく、満足したものが出せなかったためPythonを選びました。
+※Goの書き方、ライブラリを知っている人は教えてください。
+
+ ディレクトリ構成
+
+
+ 実装...]]></summary>
+        <author>
+            <name>Totsumaru</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【Python】欠落番号]]></title>
         <id>https://zenn.dev/takuh/articles/fc6377950117ca</id>
@@ -5248,135 +5464,6 @@ API reference https://pola-rs.github.io/polars/py-polars/html/reference/
 Polarsはテーブルデータを...]]></summary>
         <author>
             <name>ohke</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【入門】１次元セルラー・オートマトンの概要からPythonによる作成まで]]></title>
-        <id>https://zenn.dev/static_final_nt/articles/celler-automaton-1</id>
-        <link href="https://zenn.dev/static_final_nt/articles/celler-automaton-1"/>
-        <updated>2023-07-14T09:24:26.000Z</updated>
-        <summary type="html"><![CDATA[「セルラー・オートマトン」表記について
-セルラー・オートマトンは「セル・オートマトン」や「セルラ・オートマトン」とも表記されることがありますが、本記事では参考にした「作って動かすALife」(オライリージャパン)に準拠しセルラー・オートマトンと表記します。
-
- 1. 前置き
-
- 1.1 セルラー・オートマトンとは
-セルラー・オートマトンの概要を理解している人は読み飛ばしても大丈夫です。
-セルラー・オートマトンは格子状に敷き詰められた「セル」が、周囲のセルの「状態」によって自身の状態を時間変化させる計算モデルです。
-オートマトンについて簡単に説明すると、状態と入力をもとに結果を出力する計算...]]></summary>
-        <author>
-            <name>nt</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Kivyを使ってアプリを作ってみた]]></title>
-        <id>https://zenn.dev/nka21/articles/a0e3840c2e16c3</id>
-        <link href="https://zenn.dev/nka21/articles/a0e3840c2e16c3"/>
-        <updated>2023-07-14T07:55:02.000Z</updated>
-        <summary type="html"><![CDATA[Kivyとは
-
-簡単にUIをいじって、アプリケーションを実行できる
-
-
- 環境
-今回はPython 3.11 を使用しました
-https://youtu.be/usbEwmOIhwo
-こちらの動画を参照しながら作りました
-
- 軽く自己紹介
-プログラミングを触り始めて、5日ほどです。
-勉強がてらアプリ制作しながら、コードの使い方勉強できるかなと今回Kivyを触ってみた
-
- 感想? アウトプット?
-なんとなく、ライブラリ参照の仕方は分かったのかなーと。
-動画での説明を自分なりに、コメントとして残すようにしてみてる
-
-main.py
-from kivy.config import Con...]]></summary>
-        <author>
-            <name>ねぎ塩豚定食</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DockerでPythonの開発環境を作る]]></title>
-        <id>https://zenn.dev/agdm/articles/0f82ea448e38b8</id>
-        <link href="https://zenn.dev/agdm/articles/0f82ea448e38b8"/>
-        <updated>2023-07-14T06:39:55.000Z</updated>
-        <summary type="html"><![CDATA[突然、チャットbotを作る遊びをしたくなった。
-最終的にはドキュメントをベクトルデータベースに突っ込んで、そこの情報を踏まえつつ、ChatGPT様にお話をうかがってありがたいお言葉をいただく、というようなものを作りたいのだけど、そもそもわたしはOpenAI APIというものを触ったことがない。
-そこでまずはOpenAI APIを扱えるようにすべく、DockerでPythonを書けるようにするための開発環境を整えることにした。開発環境をローカルではなくDockerで建てる理由はなんかかっこいいからであり、コードをPythonで書く理由はなんとなくみんなが使ってる気がするからである。加えて、...]]></summary>
-        <author>
-            <name>揚げ玉</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-266｜B - Modulo Number]]></title>
-        <id>https://zenn.dev/hyperdb/articles/c981b2fe1ce0c9</id>
-        <link href="https://zenn.dev/hyperdb/articles/c981b2fe1ce0c9"/>
-        <updated>2023-07-14T05:19:44.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-266 B - Modulo Number
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    n = getInt()
-
-    print(n % 998244353)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-266｜A - Middle Letter]]></title>
-        <id>https://zenn.dev/hyperdb/articles/06b758b35e9ce5</id>
-        <link href="https://zenn.dev/hyperdb/articles/06b758b35e9ce5"/>
-        <updated>2023-07-14T05:19:43.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-266 A - Middle Letter
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s = getString()
-
-    print(s[len(s) // 2])
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Rustを中心に世界は回る ~Rustで実装したモジュールを異なる言語から呼び出してみた~]]></title>
-        <id>https://zenn.dev/forcia_tech/articles/202307_rust_node_python</id>
-        <link href="https://zenn.dev/forcia_tech/articles/202307_rust_node_python"/>
-        <updated>2023-07-14T04:00:00.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは、エンジニアの籏野です。
-フォルシアでは数年前からRustに関連したイベント(Shinjuku.rs)を開催したり、本の執筆を行ったりとRustに関する活動が行われてきました。
-さらにここ最近はRustをよりコアな部分に活用していけないかという議論も活発に行われており、Rustは今後の開発でより重要な役割を担っていくのではないかと感じています。
-私自身はこれまでRustにしっかりと触れる機会がなかったのですが、先日プロダクトの検討の一部としてRustを利用できないかという話が出たので、実際にRustを使った処理を実装してみることにしました。
-今回の記事ではその際に試したことをま...]]></summary>
-        <author>
-            <name>FORCIA Tech Blog 運営チーム</name>
         </author>
     </entry>
 </feed>
