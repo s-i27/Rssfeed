@@ -22,6 +22,414 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-16 datetime="2023-08-16T01:05:07.000Z">2023-08-16</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-16 datetime="2023-08-16T01:05:07.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/watarungurunnn/articles/3c8deeff7ab772"
+                        open
+                      >
+                        <summary class="article-expander__title">numpyで移動平均・移動標準偏差をとり、時系列データを逐次的に標準化する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/watarungurunnn/articles/3c8deeff7ab772">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--0U9wcBHB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:numpy%25E3%2581%25A7%25E7%25A7%25BB%25E5%258B%2595%25E5%25B9%25B3%25E5%259D%2587%25E3%2583%25BB%25E7%25A7%25BB%25E5%258B%2595%25E6%25A8%2599%25E6%25BA%2596%25E5%2581%258F%25E5%25B7%25AE%25E3%2582%2592%25E3%2581%25A8%25E3%2582%258A%25E3%2580%2581%25E6%2599%2582%25E7%25B3%25BB%25E5%2588%2597%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E9%2580%2590%25E6%25AC%25A1%25E7%259A%2584%25E3%2581%25AB%25E6%25A8%2599%25E6%25BA%2596%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:watarungurunnn%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3JBR185eWVBY1o2VTJIUEFObk5acmtqc0ZhaXpUWVVaWTUwQVpoWFVjPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>以下の記事を拡張し、移動標準偏差を作成する。
+https://zenn.dev/bluepost/articles/1b7b580ab54e95
+実現したいこと:
+オンライン異常検知のようなケースで、新たなデータ(以下、testデータ)の直前n個のデータ(以下、trainデータ)の移動平均・移動標準偏差を算出し、testデータを標準化する。
+# dataの移動平均
+def moving_average(data, size):
+    &quot;&quot;&quot;
+    data: (n, d)
+    size: 移動平均のサイズ
+
+    return: data[i-size:i]のデータの平均。i ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/esm/articles/60e953c162d05e"
+                        open
+                      >
+                        <summary class="article-expander__title">【FDO43】【会話文章生成 その3】プロンプト外の機能について</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/esm/articles/60e953c162d05e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--oOlL9DAR--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590FDO43%25E3%2580%2591%25E3%2580%2590%25E4%25BC%259A%25E8%25A9%25B1%25E6%2596%2587%25E7%25AB%25A0%25E7%2594%259F%25E6%2588%2590%2520%25E3%2581%259D%25E3%2581%25AE3%25E3%2580%2591%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2597%25E3%2583%2588%25E5%25A4%2596%25E3%2581%25AE%25E6%25A9%259F%25E8%2583%25BD%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25B0%25B8%25E5%2592%258C%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2583%259E%25E3%2583%258D%25E3%2582%25B8%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588%2520Tech%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:sfjwr%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2UxYzlhYmNlZjEuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WU00VG5xR2pzRl9UYS10V0xrYVpzVy1YT2pDb1NOTmZ3LXRTVk89czk2LWM&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>この記事は「おしゃべりクマちゃん🧸」シリーズの記事になります。インデックスはコチラ。前回の記事はコチラ。
+今回はChatGPTのプロンプトの外で、通常のプログラミングによって作成した機能について紹介します😀
+
+ 概要
+発言生成機能は、基本的にプロンプトエンジニアリングによって実現していますが、一部それを補うために通常のプログラミングによって行っている処理があります。
+行った処理のうち主要なものは、以下のものになります。
+
+文章の正規化
+変化するプロンプト
+会話の履歴の管理
+会話の要約
+
+
+ 文章の正規化
+前回までの記事の通り、ChatGPTのAPIにはプロンプトを通じて指示を出し、回答を...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-15 datetime="2023-08-15T15:15:15.000Z">2023-08-15</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-15 datetime="2023-08-15T15:15:15.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/torachi0401/articles/pysimplegui_articles"
+                        open
+                      >
+                        <summary class="article-expander__title">PysimpleGui入門</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/torachi0401/articles/pysimplegui_articles">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--_bAGYQIf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_72:PysimpleGui%25E5%2585%25A5%25E9%2596%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Torachi0401%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzMjdjNjRiN2MuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>PySimpleGUI使い方ガイド
+
+ 目次- PySimpleGUI使い方ガイド
+
+
+
+PySimpleGUI使い方ガイド
+
+目次- PySimpleGUI使い方ガイド
+
+1. はじめに
+
+1.1 PySimpleGUIとは？
+1.2 本記事の目的
+
+
+
+2. 導入
+
+
+2.1 使用方法の概要
+
+2.1.1 ウィジェットの配置
+
+2.1.2 イベントループ
+
+イベントとは？
+イベントループの動作
+イベントハンドリングの重要性
+
+
+
+2.1.3 GUIプログラムの終了
+
+ウィンドウのクローズイベント
+特定のアクションによる終了
+
+
+
+
+
+2.1.4 サンプルに沿った説明
+
+2.1.4...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;29
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/putch/books/2562fe9182b780"
+                        open
+                      >
+                        <summary class="article-expander__title">Pythonメモ</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/putch/books/2562fe9182b780">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://zenn.dev/images/logo-only-dark.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Pythonに関するエラーや、テクニックを備忘録として書き留めています。</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/techmadot/articles/python-tminiwebserver"
+                        open
+                      >
+                        <summary class="article-expander__title">【MicroPython】Raspberry Pi Pico W向けWebサーバー</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/techmadot/articles/python-tminiwebserver">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--rEbBxLlc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590MicroPython%25E3%2580%2591Raspberry%2520Pi%2520Pico%2520W%25E5%2590%2591%25E3%2581%2591Web%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A6%25E3%2581%25A3%25E3%2581%258F%25E3%2581%25BE.%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNlpxVEo0c3J4M01zWWVnbzM3V3VBMEN5bmRrTkpOMGk4MExIeFk9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Raspberry Pi Pico WでWebサーバーを！
+Raspberry Pi Pico W (以下PicoW)で、Webサーバーを動かしたいことあると思います。いくつかの方法があると思いますが、MicroPythonの上で動く手軽なものが欲しかったので自作しました。
+自作したWebサーバーはこちらのリポジトリで公開しています。
+https://github.com/techmadot/TMiniWebServer
+ちなみにPicoWで動くWebサーバーは他にも選択可能です。
+
+microdot
+
+https://github.com/miguelgrinberg/microd...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hodakam/articles/4df0554f229abb"
+                        open
+                      >
+                        <summary class="article-expander__title">OpenPyXLなしでPythonでExcelファイルをいじり倒す（テキストボックス、画像、矢印の追加)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hodakam/articles/4df0554f229abb">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--PThfRztB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenPyXL%25E3%2581%25AA%25E3%2581%2597%25E3%2581%25A7Python%25E3%2581%25A7Excel%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E3%2581%2584%25E3%2581%2598%25E3%2582%258A%25E5%2580%2592%25E3%2581%2599%25EF%25BC%2588%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%25E3%2583%259C%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25B9%25E3%2580%2581%25E7%2594%25BB%25E5%2583%258F%25E3%2580%2581%25E7%259F%25A2%25E5%258D%25B0%25E3%2581%25AE%25E8%25BF%25BD%25E5%258A%25A0%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hodakam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE4MTNmZjhkNjUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+この記事の続きです。
+今回は、4のセルへの値追加です。今回が最後です！
+
+
+既存の excel ファイルをテキストボックスや罫線などを破壊せずに読み込む
+読み込んだシートに新しいシートを追加できる
+シート上のセルに値を追加できる
+読み込んだシートにテキストボックスなどの新しい要素を追加できる
+Linux 上で動作する
+
+
+
+ 解決方法1：シートに画像を追加するメソッド
+前回のWorkbookクラスに以下のメソッドを追加すればOKです。
+    def _update_draw_rels(self, drawing_rel_path, image_name, draw_rel...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;14
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/torachi0401/articles/recommend_books"
+                        open
+                      >
+                        <summary class="article-expander__title">Pythonの独学におすすめの書籍</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/torachi0401/articles/recommend_books">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--v01GBnw2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AE%25E7%258B%25AC%25E5%25AD%25A6%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2599%25E3%2581%2599%25E3%2582%2581%25E3%2581%25AE%25E6%259B%25B8%25E7%25B1%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Torachi0401%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzMjdjNjRiN2MuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>みなさん、こんにちは！今回は、プログラミングの世界に少しでも興味を持っている方に、Pythonの学習に役立つ素晴らしい書籍をご紹介します。Pythonは、初めてプログラミングを学ぶ方から経験豊富な開発者まで、幅広い層に愛されている言語です。もしもプログラミングの道を歩みたいと考えている方、あるいは既にスキルアップを図っている方にも、この記事が少しでもお役に立てれば嬉しいです。
+技術の世界は、多様性が重# 書籍紹介
+みなさん、こんにちは！今回は、プログラミングの世界に少しでも興味を持っている方に、Pythonの学習に役立つ素晴らしい書籍をご紹介します。Pythonは、初めてプログラミングを...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/b5e79f26954c32"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-284｜B - Multi Test Cases</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/b5e79f26954c32">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Sz5pWdGN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-284%25EF%25BD%259CB%2520-%2520Multi%2520Test%2520Cases%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-284 B - Multi Test Cases
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    t &#x3D; getInt()
+    o &#x3D; []
+    for i in range(t):
+        n &#x3D; getInt()
+        a &#x3D; getIntList()
+        m &#x3D; [x % 2 for x in a]
+      ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/526538c9f9885e"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-284｜A - Sequence of Strings</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/526538c9f9885e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--1pGajmIm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-284%25EF%25BD%259CA%2520-%2520Sequence%2520of%2520Strings%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-284 A - Sequence of Strings
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getStringRow(N):
+    return [input() for _ in range(N)]
+
+
+def main():
+    n &#x3D; getInt()
+    s &#x3D; getStringRow(n)
+
+    s.reverse()
+
+    for w in s:
+        print(w)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/wwwave/articles/8c92528fee1693"
+                        open
+                      >
+                        <summary class="article-expander__title">サイト内画像をwebpに移行し始めました</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/wwwave/articles/8c92528fee1693">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--qgKssf2q--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%2588%25E5%2586%2585%25E7%2594%25BB%25E5%2583%258F%25E3%2582%2592webp%25E3%2581%25AB%25E7%25A7%25BB%25E8%25A1%258C%25E3%2581%2597%25E5%25A7%258B%25E3%2582%2581%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:wwwave%2527s%2520Techblog%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:yhfs%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzA0OTU3ZTVkYWIuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I0MmVjMmQyMTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+株式会社ウェイブでCoolmicのエンジニアをしている布施です。
+Coolmicは日本のコミックを海外向けに配信するWEBサービスです。
+先日サイトパフォーマンス改善のために、サイト内で表示する画像のwebp化を始めました。
+その中で実際に行った作業をご紹介します。
+https://developers.google.com/speed/webp?hl&#x3D;ja
+
+ 要件
+今回の要件は大きく分けて以下の２つでした。
+
+サイト内で表示する画像（jpg/png）をwebpに差し替える
+webpの表示に対応していないブラウザでは、従来通りjpg/png画像を表示する
+
+
+ 画像をwe...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-14 datetime="2023-08-14T13:44:14.000Z">2023-08-14</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-14 datetime="2023-08-14T13:44:14.000Z"></time>
           </button>
@@ -8559,114 +8967,10 @@ def col(p):
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-17 datetime="2023-07-17T09:43:00.000Z">2023-07-17</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-17 datetime="2023-07-17T09:43:00.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/shimo_s3/articles/aef94a9ca2216c"
-                        open
-                      >
-                        <summary class="article-expander__title">pytest+sqlalchemy+mysqlでループ内で失敗させてロールバックのテストをする</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shimo_s3/articles/aef94a9ca2216c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--VKbjEgn3--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pytest%252Bsqlalchemy%252Bmysql%25E3%2581%25A7%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E5%2586%2585%25E3%2581%25A7%25E5%25A4%25B1%25E6%2595%2597%25E3%2581%2595%25E3%2581%259B%25E3%2581%25A6%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%25AB%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2581%25AE%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:shimo%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAyMjI2YjdhZjguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>やりたいこと
-ループ途中でDB処理が失敗したときのロールバック挙動をテストする
-
- 準備
-(my環境)
-Python 3.9.13
-sqlalchemy  2.0.17
-mysql 8.0.33
-
- MySQLのインストール、準備
-インストール
-sudo apt-get install mysql-server
-sudo mysql_secure_installation
-ログイン
-sudo mysql -u root -p
-dbnameというデータベース、 username, passwordでユーザを作成する。
-CREATE DATABASE dbname;
-
-CREATE US...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/shimo_s3/articles/6a0a2901454bd0"
-                        open
-                      >
-                        <summary class="article-expander__title">[小ネタ]pipenvのvenvとPipfileの対応を確認して不要なものを消したい</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shimo_s3/articles/6a0a2901454bd0">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--_mkdtDcb--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255B%25E5%25B0%258F%25E3%2583%258D%25E3%2582%25BF%255Dpipenv%25E3%2581%25AEvenv%25E3%2581%25A8Pipfile%25E3%2581%25AE%25E5%25AF%25BE%25E5%25BF%259C%25E3%2582%2592%25E7%25A2%25BA%25E8%25AA%258D%25E3%2581%2597%25E3%2581%25A6%25E4%25B8%258D%25E8%25A6%2581%25E3%2581%25AA%25E3%2582%2582%25E3%2581%25AE%25E3%2582%2592%25E6%25B6%2588%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:shimo%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAyMjI2YjdhZjguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>やりたいこと
-
-pipenvの操作を失敗して、不要なvirtualenvsが沢山できていたので掃除しました。
-念のためPipfileとの関連を確認しながら消しました。
-
-!
-環境を消すときは慎重にしてください。
-
-
- 課題
-VSCodeでPythonインタプリタを選択しようとしたら、、あら？みたいな大量の環境が。これを消して整理したいです。(pyenvでPythonを複数インストールしているのも原因なのですが、ここでは扱いません)
-
-
- やったこと
-
- 確認が必要な場所
-
-venvの場所(~/.local/share/virtualenvs/)
-Pipfileの場所(各プロジェクトの...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5862418866">
-        <time id="build-timestamp" datetime="2023-08-15T01:10:38.089Z">2023-08-15T01:10:38.089Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5873463463">
+        <time id="build-timestamp" datetime="2023-08-16T01:10:18.439Z">2023-08-16T01:10:18.439Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
