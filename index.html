@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-16 datetime="2023-08-16T01:05:07.000Z">2023-08-16</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-16 datetime="2023-08-16T01:05:07.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-16 datetime="2023-08-16T15:01:15.000Z">2023-08-16</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-16 datetime="2023-08-16T15:01:15.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,243 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/torachi0401/articles/python_log_text"
+                        open
+                      >
+                        <summary class="article-expander__title">Pythonでログ処理をやってみた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/torachi0401/articles/python_log_text">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--A3Pp_ggT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E3%2583%25AD%25E3%2582%25B0%25E5%2587%25A6%25E7%2590%2586%25E3%2582%2592%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Torachi0401%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFhMzU4YjlmMmUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Pythonでログ処理をやってみた
+
+ コード全文
+とりあえず、作成したコード全文
+# utf-8
+import os
+import sys
+
+from CONST import *
+
+
+def set_log() -&gt; None:
+	&quot;&quot;&quot;
+	ログの設定
+	* 標準ログとエラーログの2種類を設定している
+	:return: None
+	&quot;&quot;&quot;
+	if not os.path.exists(LOG_PATH):  # ログフォルダがなかったら作成
+		os.mkdir(LOG_PATH)
+	info_handler &#x3D; logging.FileHandler(filename&#x3D;...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/pejpo/articles/7eb632183fd38b"
+                        open
+                      >
+                        <summary class="article-expander__title">Python クラスのメソッドをデータフレームに適用する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/pejpo/articles/7eb632183fd38b">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--2w2ABt3X--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25B9%25E3%2581%25AE%25E3%2583%25A1%25E3%2582%25BD%25E3%2583%2583%25E3%2583%2589%25E3%2582%2592%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2595%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%25A0%25E3%2581%25AB%25E9%2581%25A9%25E7%2594%25A8%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Dr_O%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2IyZGEzYWJiZTkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+Pythonのクラスの中に書いた関数を、pandasのデータフレームにapplyで適用しようとして悩んだので、備忘的に記事にします。lambda関数でインスタンス化、続いてメソッドを呼び出せば良い、でした。
+
+ 概要
+こんな感じ。
+df[&#x27;result&#x27;] &#x3D; df[&#x27;source&#x27;].apply(lambda x: Myclass(x).mymethod())
+
+ 内容
+
+ 1.  例
+作成したクラス（Myclass）の中のメソッド（関数）myaddを、pandasのデータフレームの列に適用したい。関数myaddは、xとyを入力すると、その和を返す。今回は、yは定数とする...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/cbcloud_blog/articles/4f2898abb4c396"
+                        open
+                      >
+                        <summary class="article-expander__title">Colaboratory &amp; Seleniumを使った自動化ツールが定期的に動かなくなるので動くようにする</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/cbcloud_blog/articles/4f2898abb4c396">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--LYlBFJPw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Colaboratory%2520%2526%2520Selenium%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%258C%25E5%25AE%259A%25E6%259C%259F%25E7%259A%2584%25E3%2581%25AB%25E5%258B%2595%25E3%2581%258B%25E3%2581%25AA%25E3%2581%258F%25E3%2581%25AA%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258F%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:CBcloud%2520Tech%2520Blog%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:aipacommander%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JmM2U0Y2NhYzkuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhkZGZjNDc2ZjguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>東屋慶名(隠語)の魂(プロダクトの想い)、具現化(Seleniumを使った自動化ツールの開発)！
+更に突き進み時代(Chrome)は進化(Version up)！
+間近に迫る世紀末眼下(ツールは壊れる)行こうか次の時代目指し(メンテ)さあ進もうか！！
+はい
+プロダクトを改善するほうがトータル良いのですが、色々リリースのスケジュールが重なってたり、QAリソースを直近確保できなかったり、そもそも開発者アサインが難しかったり、ラジバンダリ（？）すると、なかなか現場の負荷というのが下がりません
+とあるチームへの支援の担当にアサインされた時がありまして、色々ヒアリングしてタスクを並べた結果、工数削...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/knao124/articles/230816-streamlit"
+                        open
+                      >
+                        <summary class="article-expander__title">streamlitの調査</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/knao124/articles/230816-streamlit">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--7SC3iwLH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_68:streamlit%25E3%2581%25AE%25E8%25AA%25BF%25E6%259F%25BB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:knao124%2Cx_90%2Cy_98/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>streamlitでできること
+
+ ログイン認証
+
+通常のログイン機能
+
+Streamlit-Authenticator：Streamlitアプリでユーザー認証を安全にする方法 – Kanaries
+
+
+auth0（SSO）
+
+Streamlit Next.js Component, Auth0 Authentication, Bi-Directional Messaging &amp; Serverless APIs - 🧩 Streamlit Components - Streamlit
+
+
+
+
+ データベースと接続
+
+
+Connect to data sources - Str...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/techflagcorp/articles/d5b28087abdf47"
+                        open
+                      >
+                        <summary class="article-expander__title">SlackとChatGPT APIでチャットボットを作る パート4（code interpreterぽい編）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/techflagcorp/articles/d5b28087abdf47">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--daL7vj0N--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Slack%25E3%2581%25A8ChatGPT%2520API%25E3%2581%25A7%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2520%25E3%2583%2591%25E3%2583%25BC%25E3%2583%25884%25EF%25BC%2588code%2520interpreter%25E3%2581%25BD%25E3%2581%2584%25E7%25B7%25A8%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2595%25E3%2583%25A9%25E3%2583%2583%25E3%2582%25B0%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:dagger1%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M4NDU5Y2E2OTguanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzgxN2U5ZWU4MzAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>SlackとChatGPT APIでチャットボットを作る パート4（code interpreterぽい編）
+パート1（基礎編）、パート2（会話履歴管理編）、パート3（function calling編）と来て、パート4ではfunction callingを使ってcode interpreterぽいことをしてみたいと思います。
+
+ どういうこと？
+Pythonコードを実行する「関数」を作ります。これを使ってChatGPTが計算したりグラフを作ってくれたりします。実際のcode interpreterではウェブにデータをアップロードしますが、このパートで紹介するやり方では自前のデータベ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;22
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/cce1a3f76f31fb"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-285｜B - Longest Uncommon Prefix</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/cce1a3f76f31fb">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--DJHw8M2X--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-285%25EF%25BD%259CB%2520-%2520Longest%2520Uncommon%2520Prefix%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-285 B - Longest Uncommon Prefix
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getString():
+    return input()
+
+
+def main():
+    n &#x3D; getInt()
+    s &#x3D; list(getString())
+
+    for i in range(1, len(s)):
+        l &#x3D; 0
+        for j in range(len(s) - i):
+            if s[j] &#x3D;&#x3D; s[j ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/c17cfaded6ee93"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-285｜A - Edge Checker 2</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/c17cfaded6ee93">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--OUspwy-1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-285%25EF%25BD%259CA%2520-%2520Edge%2520Checker%25202%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-285 A - Edge Checker 2
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b &#x3D; getIntMap()
+
+    print(&#x27;Yes&#x27; if b // 2 &#x3D;&#x3D; a else &#x27;No&#x27;)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -8722,246 +8959,6 @@ URLは以下になって...</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/enechange_blog/articles/2c9d4f4cce995a"
-                        open
-                      >
-                        <summary class="article-expander__title">AWS LambdaのPythonコードでBugsnagを使う際は「asynchronous&#x3D;False」にする</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/enechange_blog/articles/2c9d4f4cce995a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--1mkOzN8n--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AWS%2520Lambda%25E3%2581%25AEPython%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25A7Bugsnag%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E9%259A%259B%25E3%2581%25AF%25E3%2580%258Casynchronous%253DFalse%25E3%2580%258D%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:ENECHANGE%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:Takashi%2520Iwamoto%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk5YThmZmY3MzEuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk0MWIwYTMwOTQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>AWS LambdaのPythonコードでBugsnagを使う際、デフォルトの「asynchronous&#x3D;True」のままだと、通知が飛びませんでした。深く追ってはいませんが、非同期的な通知より先にLambda関数が終了してしまうのでしょう。
-「asynchronous&#x3D;False」を指定したところ、意図どおり通知が飛ぶようになりました。
-以下、参考リソースです。
-
-By default, requests are sent asynchronously to BugSnag. If you would like to block until the request is done, y...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hodakam/articles/d5fdc92042d933"
-                        open
-                      >
-                        <summary class="article-expander__title">Code interpreterを使ってプロンプトのみで機械学習を行う</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hodakam/articles/d5fdc92042d933">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--DluDLcdU--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Code%2520interpreter%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2597%25E3%2583%2588%25E3%2581%25AE%25E3%2581%25BF%25E3%2581%25A7%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hodakam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE4MTNmZjhkNjUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>TL; DR
-Code Interpreterを使うと、次の二つのプロンプトとデータセットをアップロードするだけで、EDA、欠損値処理、分布の変換、カテゴリ変数の変換、データの分割、学習、評価と一通りの機械学習を解説付きでやってくれた。
-
-このデータは機械学習の練習によく用いられるカリフォルニアの住宅価格データセットです。このデータセットから住宅価格を予測するモデルを構築し、住宅の条件に合わせた適切な住宅価格を設定したいと思っています。では、まず何を始めたらいいでしょうか？
-
-
-では次に何をしたらいいですか？
-
-
- はじめに
-先日、ChatGPTの新機能としてCode Interpr...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/takilog/articles/84ff504c6673ee"
-                        open
-                      >
-                        <summary class="article-expander__title">東京都の月別平均気温を Climate Spiral っぽく可視化した</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takilog/articles/84ff504c6673ee">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--w0YIxJAm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259D%25B1%25E4%25BA%25AC%25E9%2583%25BD%25E3%2581%25AE%25E6%259C%2588%25E5%2588%25A5%25E5%25B9%25B3%25E5%259D%2587%25E6%25B0%2597%25E6%25B8%25A9%25E3%2582%2592%2520Climate%2520Spiral%2520%25E3%2581%25A3%25E3%2581%25BD%25E3%2581%258F%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259F%25E3%2581%258D%25E3%2582%258D%25E3%2581%2590%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzgzY2JlMWNiYTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-最近暑いですね。猛暑日が続いたり、早朝から30℃超えたり、梅雨明けを待たず厳しい季節が続きます。この時期になると、地球温暖化の話がインターネットで毎年見られます。
-地球温暖化の真偽は置いておくとして、以前NASAが作った Climate Spriral という可視化はよく出来ているなと感じます。
-https://www.youtube.com/watch?v&#x3D;jWoCXLuTIkI&amp;ab_channel&#x3D;NASAClimateChange
-今回の記事では、東京都のデータを使って、似たような作図をmatplotlibで行うことを目指します。
-
- 作ったもの
-先に作った...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/shiro_toy_box/articles/8d58aa5a2bdc98"
-                        open
-                      >
-                        <summary class="article-expander__title">stable diffusion webuiのAPIを使う方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shiro_toy_box/articles/8d58aa5a2bdc98">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--gy964rDp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:stable%2520diffusion%2520webui%25E3%2581%25AEAPI%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2582%258D%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyNzY5NDdhMzAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>AUTOMATIC1111のstable diffusion webuiのAPIを使います。
-以下のものの使い方がわかります。
-
-webuiのAPIの起動方法
-APIを使ってt2i、i2iの使い方
-
-!
-noteにシンプルにまとめてあります。
-
-
- webuiのAPI起動
-webui-user.batのset COMMANDLINE_ARGSにコマンドライン引数を追加します。
-set COMMANDLINE_ARGS&#x3D;--api
-!
-APIが起動しなければ--nowebuiを付け加えてください
-
-起動したらhttp://127.0.0.1:7861/docs（もしくは起動時のwebuiの...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/sweetsoundstory/articles/cc0c4f344c07e7"
-                        open
-                      >
-                        <summary class="article-expander__title">Python + Motor で操作する MongoDB チュートリアル (WIP)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sweetsoundstory/articles/cc0c4f344c07e7">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--_VMPC4cD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520%252B%2520Motor%2520%25E3%2581%25A7%25E6%2593%258D%25E4%25BD%259C%25E3%2581%2599%25E3%2582%258B%2520MongoDB%2520%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%2588%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%2520%2528WIP%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shun%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M0NDY4MTI0OTcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>基本用語説明
-
-
-
-用語
-説明
-
-
-
-
-データベース (Database)
-MongoDB内のデータのコンテナであり、複数のコレクションを含むことができます。
-
-
-コレクション (Collection)
-ドキュメントのグループであり、MongoDB内のデータの構造を定義します。テーブルに相当します。
-
-
-ドキュメント (Document)
-MongoDB内のデータの基本単位であり、キーと値のペアの集合です。JSON形式のデータです。レコードに相当します。
-
-
-フィールド (Field)
-ドキュメント内の個々のデータ項目であり、キーと値のペアです。列に相当します。
-
-
-ドキュメントID...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/913ef1d7591e3b"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-267｜A - Saturday</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/913ef1d7591e3b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--YrZqHfGh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-267%25EF%25BD%259CA%2520-%2520Saturday%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-267 A - Saturday
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s &#x3D; getString()
-    d &#x3D; [&#x27;Monday&#x27;, &#x27;Tuesday&#x27;, &#x27;Wednesday&#x27;, &#x27;Thursday&#x27;, &#x27;Friday&#x27;]
-
-    print(5 - d.index(s))
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/07b09b5d3cc8d6"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-267｜B - Split?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/07b09b5d3cc8d6">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--UgTUiNak--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-267%25EF%25BD%259CB%2520-%2520Split%253F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-267 B - Split?
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def col(p):
-    c &#x3D; []
-    c.append(0)
-    c.append(p[7])
-    c.append(p[4])
-    c.append(1 if sum([p[2], p[8]]) &gt; 0 else 0)
-    c.append(1 if sum([p[1], p[5]]) &gt; 0 else 0)
-    c.append(1 if sum([p[3], p[9]]) &gt; 0...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -8969,8 +8966,8 @@ def col(p):
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5873463463">
-        <time id="build-timestamp" datetime="2023-08-16T01:10:18.439Z">2023-08-16T01:10:18.439Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5885555127">
+        <time id="build-timestamp" datetime="2023-08-17T01:09:21.784Z">2023-08-17T01:09:21.784Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

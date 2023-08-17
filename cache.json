@@ -12,6 +12,111 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/torachi0401/articles/python_log_text",
+          "author": "Torachi0401",
+          "description": "Pythonでログ処理をやってみた\n\n コード全文\nとりあえず、作成したコード全文\n# utf-8\nimport os\nimport sys\n\nfrom CONST import *\n\n\ndef set_log() -> None:\n\t\"\"\"\n\tログの設定\n\t* 標準ログとエラーログの2種類を設定している\n\t:return: None\n\t\"\"\"\n\tif not os.path.exists(LOG_PATH):  # ログフォルダがなかったら作成\n\t\tos.mkdir(LOG_PATH)\n\tinfo_handler = logging.FileHandler(filename=...",
+          "link": "https://zenn.dev/torachi0401/articles/python_log_text",
+          "publishedOn": "2023-08-16T15:01:15.000Z",
+          "wordCount": 738,
+          "title": "Pythonでログ処理をやってみた",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--A3Pp_ggT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E3%2583%25AD%25E3%2582%25B0%25E5%2587%25A6%25E7%2590%2586%25E3%2582%2592%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Torachi0401%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFhMzU4YjlmMmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--A3Pp_ggT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E3%2583%25AD%25E3%2582%25B0%25E5%2587%25A6%25E7%2590%2586%25E3%2582%2592%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Torachi0401%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFhMzU4YjlmMmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/pejpo/articles/7eb632183fd38b",
+          "author": "Dr_O",
+          "description": "はじめに\nPythonのクラスの中に書いた関数を、pandasのデータフレームにapplyで適用しようとして悩んだので、備忘的に記事にします。lambda関数でインスタンス化、続いてメソッドを呼び出せば良い、でした。\n\n 概要\nこんな感じ。\ndf['result'] = df['source'].apply(lambda x: Myclass(x).mymethod())\n\n 内容\n\n 1.  例\n作成したクラス（Myclass）の中のメソッド（関数）myaddを、pandasのデータフレームの列に適用したい。関数myaddは、xとyを入力すると、その和を返す。今回は、yは定数とする...",
+          "link": "https://zenn.dev/pejpo/articles/7eb632183fd38b",
+          "publishedOn": "2023-08-16T10:35:35.000Z",
+          "wordCount": 363,
+          "title": "Python クラスのメソッドをデータフレームに適用する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--2w2ABt3X--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25B9%25E3%2581%25AE%25E3%2583%25A1%25E3%2582%25BD%25E3%2583%2583%25E3%2583%2589%25E3%2582%2592%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2595%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%25A0%25E3%2581%25AB%25E9%2581%25A9%25E7%2594%25A8%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Dr_O%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2IyZGEzYWJiZTkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--2w2ABt3X--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25B9%25E3%2581%25AE%25E3%2583%25A1%25E3%2582%25BD%25E3%2583%2583%25E3%2583%2589%25E3%2582%2592%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2595%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%25A0%25E3%2581%25AB%25E9%2581%25A9%25E7%2594%25A8%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Dr_O%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2IyZGEzYWJiZTkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/cbcloud_blog/articles/4f2898abb4c396",
+          "author": "aipacommander",
+          "description": "東屋慶名(隠語)の魂(プロダクトの想い)、具現化(Seleniumを使った自動化ツールの開発)！\n更に突き進み時代(Chrome)は進化(Version up)！\n間近に迫る世紀末眼下(ツールは壊れる)行こうか次の時代目指し(メンテ)さあ進もうか！！\nはい\nプロダクトを改善するほうがトータル良いのですが、色々リリースのスケジュールが重なってたり、QAリソースを直近確保できなかったり、そもそも開発者アサインが難しかったり、ラジバンダリ（？）すると、なかなか現場の負荷というのが下がりません\nとあるチームへの支援の担当にアサインされた時がありまして、色々ヒアリングしてタスクを並べた結果、工数削...",
+          "link": "https://zenn.dev/cbcloud_blog/articles/4f2898abb4c396",
+          "publishedOn": "2023-08-16T10:29:06.000Z",
+          "wordCount": 460,
+          "title": "Colaboratory & Seleniumを使った自動化ツールが定期的に動かなくなるので動くようにする",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--LYlBFJPw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Colaboratory%2520%2526%2520Selenium%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%258C%25E5%25AE%259A%25E6%259C%259F%25E7%259A%2584%25E3%2581%25AB%25E5%258B%2595%25E3%2581%258B%25E3%2581%25AA%25E3%2581%258F%25E3%2581%25AA%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258F%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:CBcloud%2520Tech%2520Blog%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:aipacommander%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JmM2U0Y2NhYzkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhkZGZjNDc2ZjguanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--LYlBFJPw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Colaboratory%2520%2526%2520Selenium%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%258C%25E5%25AE%259A%25E6%259C%259F%25E7%259A%2584%25E3%2581%25AB%25E5%258B%2595%25E3%2581%258B%25E3%2581%25AA%25E3%2581%258F%25E3%2581%25AA%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258F%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:CBcloud%2520Tech%2520Blog%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:aipacommander%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JmM2U0Y2NhYzkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhkZGZjNDc2ZjguanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/knao124/articles/230816-streamlit",
+          "author": "knao124",
+          "description": "streamlitでできること\n\n ログイン認証\n\n通常のログイン機能\n\nStreamlit-Authenticator：Streamlitアプリでユーザー認証を安全にする方法 – Kanaries\n\n\nauth0（SSO）\n\nStreamlit Next.js Component, Auth0 Authentication, Bi-Directional Messaging & Serverless APIs - 🧩 Streamlit Components - Streamlit\n\n\n\n\n データベースと接続\n\n\nConnect to data sources - Str...",
+          "link": "https://zenn.dev/knao124/articles/230816-streamlit",
+          "publishedOn": "2023-08-16T06:56:31.000Z",
+          "wordCount": 360,
+          "title": "streamlitの調査",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--7SC3iwLH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_68:streamlit%25E3%2581%25AE%25E8%25AA%25BF%25E6%259F%25BB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:knao124%2Cx_90%2Cy_98/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--7SC3iwLH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_68:streamlit%25E3%2581%25AE%25E8%25AA%25BF%25E6%259F%25BB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:knao124%2Cx_90%2Cy_98/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/techflagcorp/articles/d5b28087abdf47",
+          "author": "dagger1",
+          "description": "SlackとChatGPT APIでチャットボットを作る パート4（code interpreterぽい編）\nパート1（基礎編）、パート2（会話履歴管理編）、パート3（function calling編）と来て、パート4ではfunction callingを使ってcode interpreterぽいことをしてみたいと思います。\n\n どういうこと？\nPythonコードを実行する「関数」を作ります。これを使ってChatGPTが計算したりグラフを作ってくれたりします。実際のcode interpreterではウェブにデータをアップロードしますが、このパートで紹介するやり方では自前のデータベ...",
+          "link": "https://zenn.dev/techflagcorp/articles/d5b28087abdf47",
+          "publishedOn": "2023-08-16T05:14:34.000Z",
+          "wordCount": 6453,
+          "title": "SlackとChatGPT APIでチャットボットを作る パート4（code interpreterぽい編）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--daL7vj0N--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Slack%25E3%2581%25A8ChatGPT%2520API%25E3%2581%25A7%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2520%25E3%2583%2591%25E3%2583%25BC%25E3%2583%25884%25EF%25BC%2588code%2520interpreter%25E3%2581%25BD%25E3%2581%2584%25E7%25B7%25A8%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2595%25E3%2583%25A9%25E3%2583%2583%25E3%2582%25B0%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:dagger1%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M4NDU5Y2E2OTguanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzgxN2U5ZWU4MzAuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--daL7vj0N--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Slack%25E3%2581%25A8ChatGPT%2520API%25E3%2581%25A7%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2520%25E3%2583%2591%25E3%2583%25BC%25E3%2583%25884%25EF%25BC%2588code%2520interpreter%25E3%2581%25BD%25E3%2581%2584%25E7%25B7%25A8%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2595%25E3%2583%25A9%25E3%2583%2583%25E3%2582%25B0%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:dagger1%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M4NDU5Y2E2OTguanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzgxN2U5ZWU4MzAuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/cce1a3f76f31fb",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-285 B - Longest Uncommon Prefix\n\n\n\n 提出結果\ndef getInt():\n    return int(input())\n\n\ndef getString():\n    return input()\n\n\ndef main():\n    n = getInt()\n    s = list(getString())\n\n    for i in range(1, len(s)):\n        l = 0\n        for j in range(len(s) - i):\n            if s[j] == s[j ...",
+          "link": "https://zenn.dev/hyperdb/articles/cce1a3f76f31fb",
+          "publishedOn": "2023-08-16T04:35:41.000Z",
+          "wordCount": 366,
+          "title": "［AtCoder］ABC-285｜B - Longest Uncommon Prefix",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--DJHw8M2X--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-285%25EF%25BD%259CB%2520-%2520Longest%2520Uncommon%2520Prefix%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--DJHw8M2X--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-285%25EF%25BD%259CB%2520-%2520Longest%2520Uncommon%2520Prefix%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/c17cfaded6ee93",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-285 A - Edge Checker 2\n\n\n\n 提出結果\ndef getIntMap():\n    return map(int, input().split())\n\n\ndef main():\n    a, b = getIntMap()\n\n    print('Yes' if b // 2 == a else 'No')\n\n\nif __name__ == \"__main__\":\n    main()",
+          "link": "https://zenn.dev/hyperdb/articles/c17cfaded6ee93",
+          "publishedOn": "2023-08-16T04:35:40.000Z",
+          "wordCount": 253,
+          "title": "［AtCoder］ABC-285｜A - Edge Checker 2",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--OUspwy-1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-285%25EF%25BD%259CA%2520-%2520Edge%2520Checker%25202%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--OUspwy-1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-285%25EF%25BD%259CA%2520-%2520Edge%2520Checker%25202%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
+        },
+        {
           "id": "https://zenn.dev/watarungurunnn/articles/3c8deeff7ab772",
           "author": "watarungurunnn",
           "description": "以下の記事を拡張し、移動標準偏差を作成する。\nhttps://zenn.dev/bluepost/articles/1b7b580ab54e95\n実現したいこと:\nオンライン異常検知のようなケースで、新たなデータ(以下、testデータ)の直前n個のデータ(以下、trainデータ)の移動平均・移動標準偏差を算出し、testデータを標準化する。\n# dataの移動平均\ndef moving_average(data, size):\n    \"\"\"\n    data: (n, d)\n    size: 移動平均のサイズ\n\n    return: data[i-size:i]のデータの平均。i ...",
@@ -3650,111 +3755,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--fvfr_9hq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_68:Dataverse%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nakamura196%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pkd3BpX1gzTWIzV3VqTnVnV2tPTlJlU3VsNFNTN1BNMWlPQm9LRm5JPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/enechange_blog/articles/2c9d4f4cce995a",
-          "author": "Takashi Iwamoto",
-          "description": "AWS LambdaのPythonコードでBugsnagを使う際、デフォルトの「asynchronous=True」のままだと、通知が飛びませんでした。深く追ってはいませんが、非同期的な通知より先にLambda関数が終了してしまうのでしょう。\n「asynchronous=False」を指定したところ、意図どおり通知が飛ぶようになりました。\n以下、参考リソースです。\n\nBy default, requests are sent asynchronously to BugSnag. If you would like to block until the request is done, y...",
-          "link": "https://zenn.dev/enechange_blog/articles/2c9d4f4cce995a",
-          "publishedOn": "2023-07-18T12:01:17.000Z",
-          "wordCount": 239,
-          "title": "AWS LambdaのPythonコードでBugsnagを使う際は「asynchronous=False」にする",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--1mkOzN8n--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AWS%2520Lambda%25E3%2581%25AEPython%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25A7Bugsnag%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E9%259A%259B%25E3%2581%25AF%25E3%2580%258Casynchronous%253DFalse%25E3%2580%258D%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:ENECHANGE%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:Takashi%2520Iwamoto%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk5YThmZmY3MzEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk0MWIwYTMwOTQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--1mkOzN8n--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AWS%2520Lambda%25E3%2581%25AEPython%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25A7Bugsnag%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E9%259A%259B%25E3%2581%25AF%25E3%2580%258Casynchronous%253DFalse%25E3%2580%258D%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:ENECHANGE%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:Takashi%2520Iwamoto%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk5YThmZmY3MzEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk0MWIwYTMwOTQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/hodakam/articles/d5fdc92042d933",
-          "author": "hodakam",
-          "description": "TL; DR\nCode Interpreterを使うと、次の二つのプロンプトとデータセットをアップロードするだけで、EDA、欠損値処理、分布の変換、カテゴリ変数の変換、データの分割、学習、評価と一通りの機械学習を解説付きでやってくれた。\n\nこのデータは機械学習の練習によく用いられるカリフォルニアの住宅価格データセットです。このデータセットから住宅価格を予測するモデルを構築し、住宅の条件に合わせた適切な住宅価格を設定したいと思っています。では、まず何を始めたらいいでしょうか？\n\n\nでは次に何をしたらいいですか？\n\n\n はじめに\n先日、ChatGPTの新機能としてCode Interpr...",
-          "link": "https://zenn.dev/hodakam/articles/d5fdc92042d933",
-          "publishedOn": "2023-07-18T11:46:33.000Z",
-          "wordCount": 513,
-          "title": "Code interpreterを使ってプロンプトのみで機械学習を行う",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--DluDLcdU--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Code%2520interpreter%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2597%25E3%2583%2588%25E3%2581%25AE%25E3%2581%25BF%25E3%2581%25A7%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hodakam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE4MTNmZjhkNjUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--DluDLcdU--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Code%2520interpreter%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2597%25E3%2583%2588%25E3%2581%25AE%25E3%2581%25BF%25E3%2581%25A7%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hodakam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE4MTNmZjhkNjUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/takilog/articles/84ff504c6673ee",
-          "author": "たきろぐ",
-          "description": "はじめに\n最近暑いですね。猛暑日が続いたり、早朝から30℃超えたり、梅雨明けを待たず厳しい季節が続きます。この時期になると、地球温暖化の話がインターネットで毎年見られます。\n地球温暖化の真偽は置いておくとして、以前NASAが作った Climate Spriral という可視化はよく出来ているなと感じます。\nhttps://www.youtube.com/watch?v=jWoCXLuTIkI&ab_channel=NASAClimateChange\n今回の記事では、東京都のデータを使って、似たような作図をmatplotlibで行うことを目指します。\n\n 作ったもの\n先に作った...",
-          "link": "https://zenn.dev/takilog/articles/84ff504c6673ee",
-          "publishedOn": "2023-07-18T10:29:29.000Z",
-          "wordCount": 1154,
-          "title": "東京都の月別平均気温を Climate Spiral っぽく可視化した",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--w0YIxJAm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259D%25B1%25E4%25BA%25AC%25E9%2583%25BD%25E3%2581%25AE%25E6%259C%2588%25E5%2588%25A5%25E5%25B9%25B3%25E5%259D%2587%25E6%25B0%2597%25E6%25B8%25A9%25E3%2582%2592%2520Climate%2520Spiral%2520%25E3%2581%25A3%25E3%2581%25BD%25E3%2581%258F%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259F%25E3%2581%258D%25E3%2582%258D%25E3%2581%2590%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzgzY2JlMWNiYTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--w0YIxJAm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259D%25B1%25E4%25BA%25AC%25E9%2583%25BD%25E3%2581%25AE%25E6%259C%2588%25E5%2588%25A5%25E5%25B9%25B3%25E5%259D%2587%25E6%25B0%2597%25E6%25B8%25A9%25E3%2582%2592%2520Climate%2520Spiral%2520%25E3%2581%25A3%25E3%2581%25BD%25E3%2581%258F%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259F%25E3%2581%258D%25E3%2582%258D%25E3%2581%2590%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzgzY2JlMWNiYTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/shiro_toy_box/articles/8d58aa5a2bdc98",
-          "author": "しろ",
-          "description": "AUTOMATIC1111のstable diffusion webuiのAPIを使います。\n以下のものの使い方がわかります。\n\nwebuiのAPIの起動方法\nAPIを使ってt2i、i2iの使い方\n\n!\nnoteにシンプルにまとめてあります。\n\n\n webuiのAPI起動\nwebui-user.batのset COMMANDLINE_ARGSにコマンドライン引数を追加します。\nset COMMANDLINE_ARGS=--api\n!\nAPIが起動しなければ--nowebuiを付け加えてください\n\n起動したらhttp://127.0.0.1:7861/docs（もしくは起動時のwebuiの...",
-          "link": "https://zenn.dev/shiro_toy_box/articles/8d58aa5a2bdc98",
-          "publishedOn": "2023-07-18T09:06:18.000Z",
-          "wordCount": 2806,
-          "title": "stable diffusion webuiのAPIを使う方法",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--gy964rDp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:stable%2520diffusion%2520webui%25E3%2581%25AEAPI%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2582%258D%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyNzY5NDdhMzAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--gy964rDp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:stable%2520diffusion%2520webui%25E3%2581%25AEAPI%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2582%258D%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyNzY5NDdhMzAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/sweetsoundstory/articles/cc0c4f344c07e7",
-          "author": "Shun",
-          "description": "基本用語説明\n\n\n\n用語\n説明\n\n\n\n\nデータベース (Database)\nMongoDB内のデータのコンテナであり、複数のコレクションを含むことができます。\n\n\nコレクション (Collection)\nドキュメントのグループであり、MongoDB内のデータの構造を定義します。テーブルに相当します。\n\n\nドキュメント (Document)\nMongoDB内のデータの基本単位であり、キーと値のペアの集合です。JSON形式のデータです。レコードに相当します。\n\n\nフィールド (Field)\nドキュメント内の個々のデータ項目であり、キーと値のペアです。列に相当します。\n\n\nドキュメントID...",
-          "link": "https://zenn.dev/sweetsoundstory/articles/cc0c4f344c07e7",
-          "publishedOn": "2023-07-18T08:03:44.000Z",
-          "wordCount": 1067,
-          "title": "Python + Motor で操作する MongoDB チュートリアル (WIP)",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--_VMPC4cD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520%252B%2520Motor%2520%25E3%2581%25A7%25E6%2593%258D%25E4%25BD%259C%25E3%2581%2599%25E3%2582%258B%2520MongoDB%2520%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%2588%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%2520%2528WIP%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shun%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M0NDY4MTI0OTcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--_VMPC4cD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520%252B%2520Motor%2520%25E3%2581%25A7%25E6%2593%258D%25E4%25BD%259C%25E3%2581%2599%25E3%2582%258B%2520MongoDB%2520%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%2588%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%2520%2528WIP%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shun%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M0NDY4MTI0OTcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/hyperdb/articles/913ef1d7591e3b",
-          "author": "はいぱぁ",
-          "description": "設問ページ\n\n🔗ABC-267 A - Saturday\n\n\n\n 提出結果\ndef getString():\n    return input()\n\n\ndef main():\n    s = getString()\n    d = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']\n\n    print(5 - d.index(s))\n\n\nif __name__ == \"__main__\":\n    main()",
-          "link": "https://zenn.dev/hyperdb/articles/913ef1d7591e3b",
-          "publishedOn": "2023-07-18T07:33:33.000Z",
-          "wordCount": 243,
-          "title": "［AtCoder］ABC-267｜A - Saturday",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--YrZqHfGh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-267%25EF%25BD%259CA%2520-%2520Saturday%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--YrZqHfGh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-267%25EF%25BD%259CA%2520-%2520Saturday%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/hyperdb/articles/07b09b5d3cc8d6",
-          "author": "はいぱぁ",
-          "description": "設問ページ\n\n🔗ABC-267 B - Split?\n\n\n\n 提出結果\ndef getString():\n    return input()\n\n\ndef col(p):\n    c = []\n    c.append(0)\n    c.append(p[7])\n    c.append(p[4])\n    c.append(1 if sum([p[2], p[8]]) > 0 else 0)\n    c.append(1 if sum([p[1], p[5]]) > 0 else 0)\n    c.append(1 if sum([p[3], p[9]]) > 0...",
-          "link": "https://zenn.dev/hyperdb/articles/07b09b5d3cc8d6",
-          "publishedOn": "2023-07-18T07:33:32.000Z",
-          "wordCount": 672,
-          "title": "［AtCoder］ABC-267｜B - Split?",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--UgTUiNak--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-267%25EF%25BD%259CB%2520-%2520Split%253F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--UgTUiNak--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-267%25EF%25BD%259CB%2520-%2520Split%253F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
         }
       ]
     }
