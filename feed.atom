@@ -2,10 +2,228 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-08-23T01:10:34.473Z</updated>
+    <updated>2023-08-24T01:10:21.660Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[chatGPT(gpt3.5-turbo)をファインチューニングしてみた]]></title>
+        <id>https://zenn.dev/nano_sudo/articles/eaf0d77646d7b8</id>
+        <link href="https://zenn.dev/nano_sudo/articles/eaf0d77646d7b8"/>
+        <updated>2023-08-23T16:30:46.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+こんにちは、@nano_sudoです！
+ついに、皆様ご待望のgpt3.5-turboのファインチューニングができるようになりました！
+ということで、今回は、chatGPT(gpt-3.5-turbo)をファインチューニングする方法を紹介します。
+
+ ファインチューニングのメリット
+
+ファインチューニングを行うことで、APIを通じて利用可能なモデルをさらに活用することができます:
+
+プロンプトよりも高品質な結果
+プロンプトに収まりきらないほどの例でトレーニングできる能力
+短いプロンプトによるトークンの節約
+
+低レイテンシーのリクエスト
+(OpenAI公式ドキュメント)[Fin...]]></summary>
+        <author>
+            <name>須藤ナノ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TorchVision (MobileNetV3 Large) -> ONNX -> TFLite (シグネチャ推論)]]></title>
+        <id>https://zenn.dev/pinto0309/articles/216488def0c00b</id>
+        <link href="https://zenn.dev/pinto0309/articles/216488def0c00b"/>
+        <updated>2023-08-23T15:17:05.000Z</updated>
+        <summary type="html"><![CDATA[1. 環境
+
+Intel Corei9 Gen.10
+Ubuntu 22.04
+TorchVision
+ONNX
+TensorFlow
+
+
+ 2. パッケージのインストール
+sudo apt-get update \
+&& sudo apt-get install -y flatbuffers-compiler
+
+pip install -U onnx==1.14.0 \
+&& python -m pip install onnx_graphsurgeon \
+    --index-url https://pypi.ngc.nvidia.com \
+...]]></summary>
+        <author>
+            <name>PINTO</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[lambrollでサブディレクトリにある関数を指定する]]></title>
+        <id>https://zenn.dev/thaim/articles/2023-08-lambroll-subdir</id>
+        <link href="https://zenn.dev/thaim/articles/2023-08-lambroll-subdir"/>
+        <updated>2023-08-23T14:39:53.000Z</updated>
+        <summary type="html"><![CDATA[lambrollでlambda関数を構築する
+pythonでlambda関数を構築する。そのデプロイにlambrollを利用したい。対象のディレクトリ構成に応じてどのようにデプロイ設定をすればよいか。
+
+ ルートディレクトリにハンドラー関数がある場合
+ルートディレクトリに lambda_function.py があり、そこで定義されている関数 lambda_handler を呼び出したい場合。
+この場合はlambrollのREADMEにある通り、単に lambroll deploy すればよい。
+$ ls
+function.json  lambda_function.py
+
+$ ca...]]></summary>
+        <author>
+            <name>thaim</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[文字列やセル内容をPythonで実行するワークシート関数をVBAで再現する]]></title>
+        <id>https://zenn.dev/u1f992/articles/3924f969958853</id>
+        <link href="https://zenn.dev/u1f992/articles/3924f969958853"/>
+        <updated>2023-08-23T12:16:02.000Z</updated>
+        <summary type="html"><![CDATA[https://techcommunity.microsoft.com/t5/excel-blog/announcing-python-in-excel-combining-the-power-of-python-and-the/ba-p/3893439
+こんな話を見かけたのでVBAで再現する回です。
+
+ 実装
+https://twitter.com/u1F992/status/1694321103873933632
+標準入力に1行書いて出力を読むだけ、かんたんですね！他の言語でもできると思います。久しぶりにVBAを書いたので、ベストプラクティスからは外れているかもしれません。
+Opti...]]></summary>
+        <author>
+            <name>Koutaro Mukai</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[flask db upgradeすると「password authentication failed for user」が出る]]></title>
+        <id>https://zenn.dev/straydog/articles/1724190bd5b31d</id>
+        <link href="https://zenn.dev/straydog/articles/1724190bd5b31d"/>
+        <updated>2023-08-23T09:09:18.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+沼ったのでメモ。2023 年 8 月 23 日時点での情報です。
+heroku の console 上で flask db upgrade をしたら「password authentication failed for user」が出ました。今まで特に問題なく DB と接続できていたのに、なぜか急に出るようになったので、原因を調べてみました。
+
+ 原因
+同じ原因で接続できなかった人が以下の issue にいました。SQLAlchemy のバグ対応でリリースされたバージョンに移行すると起こる様子。古い Flask-Migrate の「flask db init」で生成された ...]]></summary>
+        <author>
+            <name>stray dog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-290｜B - Qual B]]></title>
+        <id>https://zenn.dev/hyperdb/articles/c9734bf6ad7c0a</id>
+        <link href="https://zenn.dev/hyperdb/articles/c9734bf6ad7c0a"/>
+        <updated>2023-08-23T07:41:41.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-290 B - Qual B
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getString():
+    return input()
+
+
+def main():
+    n, k = getIntMap()
+    s = list(getString())
+
+    j = 0
+    for i in range(k):
+        j = s.index('o', j)
+        j += 1
+    print("".join(s[0: j] +...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-290｜A - Contest Result]]></title>
+        <id>https://zenn.dev/hyperdb/articles/67aa7c83eb6068</id>
+        <link href="https://zenn.dev/hyperdb/articles/67aa7c83eb6068"/>
+        <updated>2023-08-23T07:41:41.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-290 A - Contest Result
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n, m = getIntMap()
+    a = [0] + getIntList()
+    b = getIntList()
+
+    c = 0
+    for i in b:
+        c += a[i]
+    ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[読んでた記事 230822~]]></title>
+        <id>https://zenn.dev/knao124/articles/230822-weekly-scrapbox</id>
+        <link href="https://zenn.dev/knao124/articles/230822-weekly-scrapbox"/>
+        <updated>2023-08-23T03:46:19.000Z</updated>
+        <summary type="html"><![CDATA[開発生産性 Four Keys を簡単に可視化する
+DORAというチームが研究した成果らしい
+
+計測と現状把握｜開発生産性 実践入門
+エリート DevOps チームであることを Four Keys プロジェクトで確認する | Google Cloud 公式ブログ
+
+Four Keys
+
+(リリース)
+
+デプロイの頻度
+変更のリードタイム
+
+
+(バグ対応)
+
+変更障害率
+サービス復元時間
+
+
+
+GCPでインスタンスを立てて、Githubのデータを取り込むことで簡易に計測できるとのこと
+
+dora-team/fourkeys: Platform for monitoring the fo...]]></summary>
+        <author>
+            <name>knao124</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【FDO43】【会話文章生成 その4】AIキャラクタ同士で会話させる]]></title>
+        <id>https://zenn.dev/esm/articles/d2d5ba20c5863b</id>
+        <link href="https://zenn.dev/esm/articles/d2d5ba20c5863b"/>
+        <updated>2023-08-23T01:00:00.000Z</updated>
+        <summary type="html"><![CDATA[この記事は「おしゃべりクマちゃん🧸」シリーズの記事になります。インデックスはコチラ。前回の記事はコチラ。
+今回は、発言生成機能に直接は関係ないのですが、これまでに紹介した機能を利用して複数人のキャラクタを作成し、キャラクタ同士の会話を試みた時のことを紹介します😀
+
+ 概要
+これまでに紹介してきた仕組みを利用して、複数のキャラクタを生成し、会話させるアプリケーションを作成しました。
+キャラクタは、前々回紹介したプロンプトの「プロフィール」の部分だけを差し替える形で、複数用意しました。
+アプリケーションの仕組みとしては、
+
+ユーザーからの発言を取得
+どのキャラクタが発言するのかを決定(全員が...]]></summary>
+        <author>
+            <name>sfjwr</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ついにExcelにPythonが搭載されるらしいのでまとめてみた]]></title>
         <id>https://zenn.dev/masswork/articles/a14d7f4c7b9664</id>
@@ -5631,254 +5849,6 @@ https://docs.aws.amazon.com/ja_jp/cdk/v2/guide/home.html
 AWS Cloud Development Kit (AWS CDK) 開発者ガイドへようこそ。このドキュメントではAWS CDK、コードでクラウドインフラストラクチャを定義し、を通じてプロビジョニングするためのフレームワークについて説明しますAWS Clo...]]></summary>
         <author>
             <name>なな</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[geojsonからハイライト機能のあるKMLを作成する。]]></title>
-        <id>https://zenn.dev/daidai_daitai/articles/a89a6477720f2f</id>
-        <link href="https://zenn.dev/daidai_daitai/articles/a89a6477720f2f"/>
-        <updated>2023-07-25T11:52:41.000Z</updated>
-        <summary type="html"><![CDATA[何をするのか
-pythonを使用して、geojsonに入力されているPolygonのデータを、GoogleEarthProで表示できるKMLファイルに変換します。
-しかし、ただ変換するだけでは面白くないので、マウスカーソルを当てたPolygonがハイライトされる様に変更します。
-
- はじめに
-私の職場ではArcGIS系のサービスを使用しているので、GISのデータはArcGIS系のWebアプリで可視化しています。業務の内容もあり季節ごとの衛星画像が好まれる様で
-「GoogleEarthでも見れるようにしてくれ」
-といつも言われているため、geojsonのデータをKMLに変換する作業をす...]]></summary>
-        <author>
-            <name>橙。</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CAEのためのPython2(要素の移動)]]></title>
-        <id>https://zenn.dev/cae_taka/articles/bda3e0404e3d2f</id>
-        <link href="https://zenn.dev/cae_taka/articles/bda3e0404e3d2f"/>
-        <updated>2023-07-25T06:00:47.000Z</updated>
-        <summary type="html"><![CDATA[動機
-前回の記事でNastranファイルを読み込めたのでデータの加工に取り組んでいきます。
-メッシュの作成をやっていると要素の移動をすることはよくあると思うので
-今回はこの辺りに取り組んでいきます。
-
- 今回やること
-指定したPIDのメッシュモデルを移動します。
-
- プログラムの説明
-
-pipで以下をインストール（回転移動で使用する四元数のライブラリ）
-
-pip install pyquaternion
-
-以下をインポート
-
-import CAE_File_Read_Write as RW #前回作成したNastranファイルの入出力ファイル
-
-指定したPID(PIDが2以上5以下な...]]></summary>
-        <author>
-            <name>Taka</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-271｜B - Maintain Multiple Sequences]]></title>
-        <id>https://zenn.dev/hyperdb/articles/b0937269e64815</id>
-        <link href="https://zenn.dev/hyperdb/articles/b0937269e64815"/>
-        <updated>2023-07-25T04:54:40.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-271 B - Maintain Multiple Sequences
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def main():
-    n, q = getIntMap()
-    l = getIntListRow(n)
-    st = getIntListRow(q)
-
-    for ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-271｜A - 484558]]></title>
-        <id>https://zenn.dev/hyperdb/articles/42c11236a8604e</id>
-        <link href="https://zenn.dev/hyperdb/articles/42c11236a8604e"/>
-        <updated>2023-07-25T04:54:39.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-271 A - 484558
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    n = getInt()
-    h = ['0', '1', '2', '3', '4', '5', '6',
-         '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
-
-    print(h[n // 16] + h[n % 16])
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[重箱の隅をつつくクラスのあれこれ]]></title>
-        <id>https://zenn.dev/yumax_panda/articles/31f833ea220ca9</id>
-        <link href="https://zenn.dev/yumax_panda/articles/31f833ea220ca9"/>
-        <updated>2023-07-25T03:53:38.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-本記事は筆者がPythonの学習をするうえで得た知識の備忘録です。明示的にも暗黙的にも全てが正しいとは保証できないのでご容赦ください（間違いの指摘は大歓迎です）。今回はクラスとその周りについて触れます。クラスの基礎は分かっている前提で、知っていると少しお得かもって程度の内容です。
-
- 基本的な特殊メソッド
-自分の定義したクラスに足し算や引き算等を定義できます。アンダースコア二つで名前が囲まれています(ex: __add__, __sub__, ...)。以下は複素数を簡易的に実装したものです。実部と虚部をインスタンス変数に持ちます。
-from typing import U...]]></summary>
-        <author>
-            <name>Yumax-panda</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】関数についてまとめた]]></title>
-        <id>https://zenn.dev/miya_akari/articles/6ee0f113d6efc4</id>
-        <link href="https://zenn.dev/miya_akari/articles/6ee0f113d6efc4"/>
-        <updated>2023-07-25T03:33:52.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Pythonの関数についてまとめました。
-前回の記事(条件分岐と繰り返し処理)は、こちら！👇
-https://zenn.dev/miya_akari/articles/73464786beecb9
-今回は少し短いかも〜💦
-
- 関数の定義
-
-関数を定義するときは、defキーワードを使用する
-
-
-sample.py
-def my_func():
-  print('これは関数です')
-
-
- 関数の実行
-
-関数を実行するには、関数名に()をつけて呼び出す
-
-
-sample.py
-def my_func():
-  print('これは関数です')
-
-# 関数の実行
-my_func()...]]></summary>
-        <author>
-            <name>akari</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】条件分岐と繰り返し処理]]></title>
-        <id>https://zenn.dev/miya_akari/articles/73464786beecb9</id>
-        <link href="https://zenn.dev/miya_akari/articles/73464786beecb9"/>
-        <updated>2023-07-25T03:32:54.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Pythonの条件分岐と繰り返し処理についてまとめました。
-前回の記事(変数とデータ型)は、こちら！👇
-https://zenn.dev/miya_akari/articles/8c82cee5f43c04
-
- 条件分岐
-
-条件分岐をおこなうときは、if文を使用する
-
-
- if文
-
-「もしxxならXXをおこなう」というような条件分岐ができる
-条件文の中では、比較演算子を使用する
-
-
-sample.py
-a = 40
-b = 100
-
-if b > a:
- print('bはaより大きい') # bはaより大きい
-
-!
-条件のあとに、「:(コロン)」を忘れないように注意...]]></summary>
-        <author>
-            <name>akari</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】変数とデータ型]]></title>
-        <id>https://zenn.dev/miya_akari/articles/8c82cee5f43c04</id>
-        <link href="https://zenn.dev/miya_akari/articles/8c82cee5f43c04"/>
-        <updated>2023-07-25T03:31:47.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-2月~6月までJavaScriptの現場だったのですが、7月からPythonを扱う現場に異動になりました…！
-「えっ{}不要なの！？慣れない…！😨」と思いながら1ヶ月勉強したので、学んだことをまとめていきたいと思います！
-
- Pythonとは
-
-動的型付け(プログラマが型を指定しなくても良い)
-オブジェクト指向
-英語に似た単純な構文
-セミコロンが不要
-中括弧{}も不要で、インデントによってスコープを定義する
-
-
- インデントについて
-
-インデントの数が異なると、別のブロックとみなされる
-
-ifとelseなどのインデント数は揃える必要があるので注意！(一致していないとエラーに...]]></summary>
-        <author>
-            <name>akari</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】paizaラーニング レベルアップ問題集「特殊な探索」【線形探索】後編]]></title>
-        <id>https://zenn.dev/amuharai_san/articles/db31885348bf04</id>
-        <link href="https://zenn.dev/amuharai_san/articles/db31885348bf04"/>
-        <updated>2023-07-25T01:57:12.000Z</updated>
-        <summary type="html"><![CDATA[こちらの続きです。
-https://zenn.dev/amuharai_san/articles/cb39445b621591
-今回はコード全体を掲載します。
-ローカルでコーディングし、標準入出力は使いません。テストケースは外部テキストファイルで準備しておき、プログラムから読み込みます。ジャッジ提出ではimportからファイル読み込み部までを削除する他、f.readline()をinput()に置き換えます。
-
- 点と点の距離
-名前と点数をメンバ変数とした構造体…を模したクラスPointを作成します。
-manhattan()は、自身ともう一つのPointオブジェクトとのマンハッタン距離（...]]></summary>
-        <author>
-            <name>アムハライさん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[VSCodeでPythonフォーマッターを設定してみた]]></title>
-        <id>https://zenn.dev/bellstone/articles/ff5aac74455cbf</id>
-        <link href="https://zenn.dev/bellstone/articles/ff5aac74455cbf"/>
-        <updated>2023-07-24T14:01:16.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-VSCodeの拡張機能のBlack Formatterを利用してPythonのコードにフォーマットをかけることができます。拡張機能と設定方法は作成しないとすぐ忘れるため、今回はBlack Formatterと設定方法について共有したいと思います。
-私はVSCodeでは主にHTML、CSS、JavaScript関連修正をしますので、フォーマッターはPrettierを使ってます。最近、Pythonで簡単なスクリプトを作成する時にVSCodeを使ってますが、Prettierが認識できませんでした。なので、Prettier用のPluginがあるか調査してみました。
-!
-余談ですが、...]]></summary>
-        <author>
-            <name>BellStone</name>
         </author>
     </entry>
 </feed>
