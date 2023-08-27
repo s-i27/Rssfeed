@@ -2,10 +2,330 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-08-26T01:09:06.287Z</updated>
+    <updated>2023-08-27T01:15:23.634Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[型を意識したPythonのすすめ 第0回]]></title>
+        <id>https://zenn.dev/shim_a2kf3/articles/typed_python_no_0</id>
+        <link href="https://zenn.dev/shim_a2kf3/articles/typed_python_no_0"/>
+        <updated>2023-08-26T16:02:38.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+お仕事でPythonを書いて1年くらい経ちました。
+(Python自体はもう少しやっています。)
+結構カッチリルールを決めてプログラムを書いていく現場に当たったこともあり、型ヒントやmypyを使ってPythonらしからぬ型チェックを強制しています。
+型を意識しなくとも気軽に使えることが利点のPythonで、わざわざ型を意識したコーディングをする理由とはなんでしょうか？
+この疑問の答えを探しつつ、やっぱりPythonでも型の意識は大事だよね と共感していただけたらと思い、少しずつ記事を書いていこうかと腰を上げた次第です。
+
+ おことわり
+本記事と関連する記事は、あくまで個人の...]]></summary>
+        <author>
+            <name>しま</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RecBoleを使ってみよう 環境構築編]]></title>
+        <id>https://zenn.dev/kentoo1/articles/f3d0d4fd610f12</id>
+        <link href="https://zenn.dev/kentoo1/articles/f3d0d4fd610f12"/>
+        <updated>2023-08-26T11:20:30.000Z</updated>
+        <summary type="html"><![CDATA[RecBoleのロゴ。公式サイト https://recbole.io/index.html より引用
+
+ 概要
+RecBoleは、多機能かつ拡張性の高いレコメンドシステム用のフレームワークで、様々なレコメンドアルゴリズムとデータセット、評価方法を統一的なフォーマットで扱うことができます。
+今回はRecBoleが動作する環境をPoetry上に構築していきます。
+
+ 環境構築
+以下の環境で作業を行っています。
+
+ハードウェア: MacBook Air (M1, 2020)
+OS: MacOS Ventura 13.4.1
+
+
+ Pythonの用意
+今回は ~/src/recbole_sa...]]></summary>
+        <author>
+            <name>ケントゥ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pytest メモ]]></title>
+        <id>https://zenn.dev/shimo_s3/articles/9930977e690e63</id>
+        <link href="https://zenn.dev/shimo_s3/articles/9930977e690e63"/>
+        <updated>2023-08-26T08:18:14.000Z</updated>
+        <summary type="html"><![CDATA[pytestで出力の1行目を改行する
+printデバッグをしているとき、pytestの一行目の開始点が揃わないのでよく惑わされています。
+pytest -s --no-header test_rollback.py
+
+ 通常
+stdoutはテスト関数名の直後から始まります。
+
+
+ pytest_runtest_setupフックを使う
+root_of_test/conftest.pyにこのように書くと最初に改行してくれる。
+def pytest_runtest_setup(item):
+    print("\n")
+
+
+ 特定のファイルを除外するとき
+以下をpytestから除外したい...]]></summary>
+        <author>
+            <name>shimo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Qiskit で遊んでみる (19) — VQE を今北産業する]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-qiskit19</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-qiskit19"/>
+        <updated>2023-08-26T08:10:01.000Z</updated>
+        <summary type="html"><![CDATA[目的
+NISQ 量子コンピュータの代表的なアルゴリズムの 1 つに VQE (Variational Quantum Eigensolver) というものがある。名前も凄そうだが、解説が圧倒される難しいものが多い。これについて 今北産業 の精神で迫ってみたい。
+
+ 結論
+VQE とは要するに以下 (3 行) である:
+qc = QuantumCircuit(1)
+qc.ry(Parameter("θ"), 0)
+print(VQE(Estimator(), qc, SPSA()).compute_minimum_eigenvalue(Pauli("Z")).optimal_param...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SeamlessM4Tで英語のYouTube動画の日本語音声を自動生成する]]></title>
+        <id>https://zenn.dev/laiso/articles/f7f3a11153dd80</id>
+        <link href="https://zenn.dev/laiso/articles/f7f3a11153dd80"/>
+        <updated>2023-08-26T04:07:39.000Z</updated>
+        <summary type="html"><![CDATA[SeamlessM4Tとは
+https://gigazine.net/news/20230823-meta-speech-translation-transcription-seamlessm4t/
+
+ 環境構築
+Linux+CUDAな環境が一番楽です。Google Colab Proが良いでしょう。
+https://note.com/npaka/n/ne7874068482f
+
+ 依存ライブラリ
+システム依存については https://huggingface.co/spaces/facebook/seamless_m4t/blob/main/Dockerfile が参考になります。...]]></summary>
+        <author>
+            <name>laiso</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Google検索せずにサービスロゴを思い出せるのが成功パターン  @github @twitter @docker @golang @php]]></title>
+        <id>https://zenn.dev/yumainaura/articles/qiita-2019-01-02t14_14_32-09_00</id>
+        <link href="https://zenn.dev/yumainaura/articles/qiita-2019-01-02t14_14_32-09_00"/>
+        <updated>2023-08-26T03:55:34.000Z</updated>
+        <summary type="html"><![CDATA[成功しているロゴはGoogle検索しなくても思い出せるやつ
+思い出せないやつは成功しているとは言えないんじゃないか
+GolangのGoPherくんは公式ロゴじゃないらしい、公式ロゴは誰も知らない
+
+
+ English
+What is the rememberable succeeded logo design? @github @twitter @docker @golang @php
+
+ its no googling remembering logo
+
+ e.g Docker
+
+
+ Github
+easy to remember for engineers
+but some par...]]></summary>
+        <author>
+            <name>稲浦悠馬 (いなうらゆうま)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[#python #初心者 #gc #ガベージコレクション #勉強 したい #rubyist @yumainaura]]></title>
+        <id>https://zenn.dev/yumainaura/articles/qiita-2018-12-26t15_57_03-09_00</id>
+        <link href="https://zenn.dev/yumainaura/articles/qiita-2018-12-26t15_57_03-09_00"/>
+        <updated>2023-08-26T03:54:35.000Z</updated>
+        <summary type="html"><![CDATA[Pythonのgcモジュールでガベージコレクションを行う方法 | TechAcademyマガジン
+
+ 疑問、pythonでgcとか必要なの？そんな低レイヤーの処理
+
+プログラマーはメモリの解放を明示的にコーディングしなければなりません。コーディングを忘れたり間違えたりすると、メモリリーク(漏れ)の原因になります。
+
+
+ やはり相当低レイヤー向けの処理らしい
+
+Pythonは必要に応じて自動的にガベージコレクションを行います。
+通常の用途では明示的にガベージコレクションを行う必要はありません。
+
+
+ gc用のモジュールがあるらしい
+
+1行目でgcモジュールをインポートしています。
+
+imp...]]></summary>
+        <author>
+            <name>稲浦悠馬 (いなうらゆうま)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[そもそも言語学的にダジャレとは何なのか？「おもしろいダジャレを入力すると布団が吹っ飛ぶ装置を作った」で学習したいまとめ]]></title>
+        <id>https://zenn.dev/yumainaura/articles/qiita-2018-12-20t12_56_37-09_00</id>
+        <link href="https://zenn.dev/yumainaura/articles/qiita-2018-12-20t12_56_37-09_00"/>
+        <updated>2023-08-26T03:54:17.000Z</updated>
+        <summary type="html"><![CDATA[おもしろいダジャレを入力すると布団が吹っ飛ぶ装置を作った - Qiita
+
+by @fujit33 さん
+
+ ダジャレとはなにか、言語学チックに言うと
+「多様な形での、言葉の反復」と言い直すことが出来るかも。なるほど。
+
+2018年12月現在、Sharekaで対応可能なダジャレは、「完全反復型」「不完全反復型」のみであり、「変形反復型」「潜在表現重複型」は対応していません。
+
+
+ 「完全反復型」
+
+アサインされて日が浅いんです
+
+「あさいん」と「あさいん」で完全一致
+
+ 「不完全反復型」
+
+裏面のらーめん
+
+「らめん」と「らーめん」が反復されているが、不完全一致
+
+ 「変形反復型」
+...]]></summary>
+        <author>
+            <name>稲浦悠馬 (いなうらゆうま)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ルールベースのアプローチとは？「おもしろいダジャレを入力すると布団が吹っ飛ぶ装置を作った」まとめ自己学習]]></title>
+        <id>https://zenn.dev/yumainaura/articles/qiita-2018-12-20t12_48_28-09_00</id>
+        <link href="https://zenn.dev/yumainaura/articles/qiita-2018-12-20t12_48_28-09_00"/>
+        <updated>2023-08-26T03:54:16.000Z</updated>
+        <summary type="html"><![CDATA[おもしろいダジャレを入力すると布団が吹っ飛ぶ装置を作った - Qiita
+
+by @fujit33 さん
+
+ ルールベースって人工知能なの？
+らしい。
+
+※ルールベースは人工知能ではないと言い張る人は、第２次人工知能ブームでググってください。
+
+
+ ルールベースによるアプローチの例
+
+「布団がふっとんだ」を「全てカタカナ」に変える(小文字とか記号も削除)
+「3文字ずつのズレ配列を作る」
+重複判定する
+
+
+['フトン', 'トンガ', 'ンガフ', 'ガフト', 'フトン', 'トンダ']
+
+
+ ダジャレ判定判定の結果
+nの設定「二文字重複」と「三文字重複」で結果が変わる。
+精度は変わ...]]></summary>
+        <author>
+            <name>稲浦悠馬 (いなうらゆうま)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Wayback Machine を使ってリンク切れした古いバージョンのモジュール・ライブラリをダウンロードする]]></title>
+        <id>https://zenn.dev/yumainaura/articles/qiita-2018-08-02t09_45_50-09_00</id>
+        <link href="https://zenn.dev/yumainaura/articles/qiita-2018-08-02t09_45_50-09_00"/>
+        <updated>2023-08-26T03:52:32.000Z</updated>
+        <summary type="html"><![CDATA[どうしてもという時に、こういう方法もあるよという話。
+Internet Archive: Wayback Machine はWebページのアーカイブサービス。
+圧縮ファイルなどもアーカイブしているようだ。
+
+ ホップ
+リンク切れしたURLを入力する
+
+
+ ステップ
+見つけた
+
+
+ ジャンプ
+ダウンロード！
+
+ 危なくない？
+公平なアーカイブサービスだから危険度が高いとは思わないが、扱いはお任せする。
+ちなみに僕はダウンロードまで進みこそすれ、実際に利用したことはない。
+
+ Gist
+
+The Case of using "Wayback Machine" when old version...]]></summary>
+        <author>
+            <name>稲浦悠馬 (いなうらゆうま)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ansibleの仕組み | なぜ Ansible はリモートサーバーにも python を必要とするのか]]></title>
+        <id>https://zenn.dev/yumainaura/articles/qiita-2018-07-15t13_12_59-09_00</id>
+        <link href="https://zenn.dev/yumainaura/articles/qiita-2018-07-15t13_12_59-09_00"/>
+        <updated>2023-08-26T03:52:17.000Z</updated>
+        <summary type="html"><![CDATA[答え
+リモートサーバーに実行プログラムを送り込む仕組みだから。
+そのプログラム=モジュールが主にpythonで書かれているから。(*)
+
+EFFICIENT ARCHITECTURE
+Ansible works by connecting to your nodes and pushing out small programs, called "Ansible modules" to them.
+
+How Ansible Works | Ansible.com
+
+ 試してみよう
+
+ ansible コマンドを実行
+$ ansible -i inventory.txt example ...]]></summary>
+        <author>
+            <name>稲浦悠馬 (いなうらゆうま)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pyenv の activate って何？ ( pyenv shell との違い )]]></title>
+        <id>https://zenn.dev/yumainaura/articles/qiita-2018-07-06t01_28_34-09_00</id>
+        <link href="https://zenn.dev/yumainaura/articles/qiita-2018-07-06t01_28_34-09_00"/>
+        <updated>2023-08-26T03:44:51.000Z</updated>
+        <summary type="html"><![CDATA[pyenv activate コマンドは pyenv-virtualenv プラグインによる追加コマンド。
+pyenv shell とだいたい同じことをするが、シェルのために色々やってくれるっぽい。(曖昧な理解)
+一時的に virtualenv の特定環境を使う場合は pyenv activate を叩いたら良さそう。
+
+ コマンド
+
+
+pyenv activate [viatualenvの環境名] で有効化
+
+pyenv deactivate で無効化
+
+
+ 例
+特に分かりやすいのは、 activate した時にシェルに virtualenv の名前を表示してくれるところ。
+
+
+ 自動...]]></summary>
+        <author>
+            <name>稲浦悠馬 (いなうらゆうま)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[chrome拡張をseleniumのブラウザに取り込む]]></title>
+        <id>https://zenn.dev/pycetra/articles/chrome_extension_and_selenium_for_end2end</id>
+        <link href="https://zenn.dev/pycetra/articles/chrome_extension_and_selenium_for_end2end"/>
+        <updated>2023-08-26T02:48:39.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+第三者のchrome拡張を使ったwebサイトのend2endのテスト環境を作ってみたところ、
+手作業をけっこう減らせたのでこの記事にまとめておきます。
+環境
+
+macOS:m2
+Python 3.10.6
+selenium 4.11.2
+
+
+ 実行方法
+git clone https://github.com/GoogleChrome/chrome-extensions-samples.git
+mkdir sample; cp ./chrome-extensions-samples/functional-samples/tutorial.hello-world/* ./sa...]]></summary>
+        <author>
+            <name>pycetra</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Ruby使いがPythonを触ってみたメモ]]></title>
         <id>https://zenn.dev/yumemo/articles/cf56813599259e</id>
@@ -5592,182 +5912,6 @@ https://zenn.dev/umi_mori/books/chatbot-chatgpt
 https://zenn.dev/umi_mori/books/prompt-engineer
 !
 文字よりも「動画の方が理解しやすい」という方...]]></summary>
-        <author>
-            <name>ますみ@エンジニア</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ソフトマックス関数について]]></title>
-        <id>https://zenn.dev/yuto_mo/articles/b0d294992c050a</id>
-        <link href="https://zenn.dev/yuto_mo/articles/b0d294992c050a"/>
-        <updated>2023-07-28T11:36:12.000Z</updated>
-        <summary type="html"><![CDATA[今回はソフトマックス関数について解説します。
-
- ソフトマックス関数とは
-y_k=\dfrac{e^{a_k}}{\sum\limits_{i=1}^n e^{a_i}}
-で表される関数です。
-難しそうに見えますが、実は簡単な割合計算です。
-理解するための例として、{a_1,a_2,a_3}の中で{a_1}の割合を求めたい場合、\dfrac{a_1}{a_1+a_2+a_3}と計算すると思います。
-ソフトマックス関数はこの数値を、e^{a_1}のようにeの指数にaを当てはめたものに変えただけです。上記の例では
-・y_1=\dfrac{e^{a_1}}{e^{a_1}+e^{a_2}+e^...]]></summary>
-        <author>
-            <name>pomu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[plotlyで描画するときはmodeを明示しよう（戒め）]]></title>
-        <id>https://zenn.dev/nowa0402/articles/5eeb1366286856</id>
-        <link href="https://zenn.dev/nowa0402/articles/5eeb1366286856"/>
-        <updated>2023-07-28T11:00:02.000Z</updated>
-        <summary type="html"><![CDATA[タイトル通り。2時間くらいハマった。
-公式を読まなかった自身への戒めを込めて記事にします。
-◎本記事の結論
-折れ線グラフを作るときはmode="lines"かmode="line+markers"を明示する。
-理由: modeはデータ数によってデフォルト値が変化するため
-
-20個未満: mode="lines+markers"
-
-20個以上: mode="lines"
-
-
-
- plotlyとは
-グラフ描画を行うライブラリ
-https://plotly.com/python/
-pythonだとmatplotlibもよく使われます。
-https://matplotlib.org/
-私の用途で...]]></summary>
-        <author>
-            <name>nowa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-274｜A - Batting Average]]></title>
-        <id>https://zenn.dev/hyperdb/articles/e91c7834a02f29</id>
-        <link href="https://zenn.dev/hyperdb/articles/e91c7834a02f29"/>
-        <updated>2023-07-28T04:46:08.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-274 A - Batting Average
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def r(x):
-    return '1.000' if x == 1.0 else "0.%03d" % ((x * 10000 + 5) // 10)
-
-
-def main():
-    a, b = getIntMap()
-
-    print(r(b / a))
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-274｜B - Line Sensor]]></title>
-        <id>https://zenn.dev/hyperdb/articles/37fa09df54473d</id>
-        <link href="https://zenn.dev/hyperdb/articles/37fa09df54473d"/>
-        <updated>2023-07-28T04:46:08.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-274 B - Line Sensor
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getStringListRow(N):
-    return [list(list(input())) for _ in range(N)]
-
-
-def main():
-    h, w = getIntMap()
-    c = getStringListRow(h)
-
-    a = []
-    for i in range(len(c[0])):
-        tmp = ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Dockerでnltkを使いたい]]></title>
-        <id>https://zenn.dev/kazuph/articles/9cf3aa31ac3fb0</id>
-        <link href="https://zenn.dev/kazuph/articles/9cf3aa31ac3fb0"/>
-        <updated>2023-07-28T00:53:29.000Z</updated>
-        <summary type="html"><![CDATA[色々試しましたが、自分の環境では以下の2行が必要だった。
-...
-RUN pip3 install nltk
-RUN python3 -m nltk.downloader all -d /root/nltk_data
-...]]></summary>
-        <author>
-            <name>kazuph</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[文字数制限のない要約チャットボットの実装方法【Python / LangChain / ChatGPT】]]></title>
-        <id>https://zenn.dev/umi_mori/articles/langchain-chains-long-text-summarize</id>
-        <link href="https://zenn.dev/umi_mori/articles/langchain-chains-long-text-summarize"/>
-        <updated>2023-07-28T00:43:29.000Z</updated>
-        <summary type="html"><![CDATA[はじめまして、ますみです！
-
-この記事では、「LangChain」というライブラリを使って、「文字数制限のない要約チャットボットの作り方」を解説します。
-ChatGPTやLangChainやについてまだ詳しくない方は、こちらを先にご覧ください◎
-https://zenn.dev/umi_mori/books/chatbot-chatgpt
-https://zenn.dev/umi_mori/books/prompt-engineer
-!
-文字よりも「動画の方が理解しやすい」という方はこちらをご覧ください◎
-文字数制限のない要約チャットボットの実装方法【Python / LangChain...]]></summary>
-        <author>
-            <name>ますみ@エンジニア</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[文字数制限のないFAQチャットボットの実装方法【Python / LangChain / ChatGPT】]]></title>
-        <id>https://zenn.dev/umi_mori/articles/langchain-chains-long-text-qa</id>
-        <link href="https://zenn.dev/umi_mori/articles/langchain-chains-long-text-qa"/>
-        <updated>2023-07-28T00:38:33.000Z</updated>
-        <summary type="html"><![CDATA[はじめまして、ますみです！
-
-この記事では、「LangChain」というライブラリを使って、「文字数制限のないFAQチャットボットの作り方」を解説します。
-ChatGPTやLangChainやについてまだ詳しくない方は、こちらを先にご覧ください◎
-https://zenn.dev/umi_mori/books/chatbot-chatgpt
-https://zenn.dev/umi_mori/books/prompt-engineer
-!
-文字よりも「動画の方が理解しやすい」という方はこちらをご覧ください◎
-文字数制限のないFAQチャットボットの実装方法【Python / LangCha...]]></summary>
-        <author>
-            <name>ますみ@エンジニア</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【完全版】文字数制限のないChatGPTを実装するためのアルゴリズムまとめ【Python / LangChain / FAQチャットボット】]]></title>
-        <id>https://zenn.dev/umi_mori/articles/langchain-chains-long-text-algorithm</id>
-        <link href="https://zenn.dev/umi_mori/articles/langchain-chains-long-text-algorithm"/>
-        <updated>2023-07-28T00:36:51.000Z</updated>
-        <summary type="html"><![CDATA[はじめまして、ますみです！
-
-この記事では、「文字数制限のないChatGPTを実装するためのアルゴリズム」を解説します！
-ChatGPTやLangChainやについてまだ詳しくない方は、こちらを先にご覧ください◎
-https://zenn.dev/umi_mori/books/chatbot-chatgpt
-https://zenn.dev/umi_mori/books/prompt-engineer
-!
-文字よりも「動画の方が理解しやすい」という方はこちらをご覧ください◎
-【完全版】文字数制限のないChatGPTを実装するためのアルゴリズムまとめ【Python / LangChain ...]]></summary>
         <author>
             <name>ますみ@エンジニア</name>
         </author>
