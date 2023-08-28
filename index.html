@@ -22,6 +22,342 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-27 datetime="2023-08-27T16:15:59.000Z">2023-08-27</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-27 datetime="2023-08-27T16:15:59.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/torachi0401/articles/how_to_twitter_bot"
+                        open
+                      >
+                        <summary class="article-expander__title">楽天の売れ筋商品からランダムにX(Twitter)に投稿する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/torachi0401/articles/how_to_twitter_bot">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Heks1esG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%25A5%25BD%25E5%25A4%25A9%25E3%2581%25AE%25E5%25A3%25B2%25E3%2582%258C%25E7%25AD%258B%25E5%2595%2586%25E5%2593%2581%25E3%2581%258B%25E3%2582%2589%25E3%2583%25A9%25E3%2583%25B3%25E3%2583%2580%25E3%2583%25A0%25E3%2581%25ABX%2528Twitter%2529%25E3%2581%25AB%25E6%258A%2595%25E7%25A8%25BF%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Torachi0401%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQwODYyYTE0MDYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+楽天BooksのIT関連の書籍の売れ筋からランダムでTwitterに投稿するシステムを作りました。
+特定のジャンルの売れ筋上位30の中からランダムに1つを選択していますので、場合によっては同じ商品が投稿される場合もあります。
+
+ 環境
+
+
+Railway
+
+python3.11
+
+tweepy
+reuests
+
+
+
+
+
+
+ ソースコード
+import tweepy
+from const import *
+
+
+def create_post(_title, _affiliate_url, _item_caption):
+    client &#x3D; tweepy.Client(c...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nori0__/articles/0ef8cbb5bda1d8"
+                        open
+                      >
+                        <summary class="article-expander__title">Zennに投稿した記事一覧をCSVに出力する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nori0__/articles/0ef8cbb5bda1d8">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--8hd1ptmc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Zenn%25E3%2581%25AB%25E6%258A%2595%25E7%25A8%25BF%25E3%2581%2597%25E3%2581%259F%25E8%25A8%2598%25E4%25BA%258B%25E4%25B8%2580%25E8%25A6%25A7%25E3%2582%2592CSV%25E3%2581%25AB%25E5%2587%25BA%25E5%258A%259B%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nori0__%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY4ZjdkODlmZTMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>背景
+今まで投稿した技術記事を一覧で欲しいと言われてたので手作業だるすぎとなったのでコード書くことにした。
+
+ 実装
+https://github.com/nori1994/OUTPUT_CSV_OF_QIITA_ZENN_ARTICLE
+ZennだけでなくQiitaでの記事一覧も欲しかったのでどちらも出力できるようにした。
+Qiitaについてはこちら。
+記事作成日と記事名のCSVが出力される。
+published, title,
+YYYY/mm/dd, article title,
+
+ 工夫したところ
+
+
+仮想環境記事を参考に仮想環境が Python3 の標準ライブラリである ve...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yonda/articles/13ff0912b92dce"
+                        open
+                      >
+                        <summary class="article-expander__title">pythonでの直接法による最適計算の一例</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yonda/articles/13ff0912b92dce">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--X0D0DCzw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A7%25E3%2581%25AE%25E7%259B%25B4%25E6%258E%25A5%25E6%25B3%2595%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%259C%2580%25E9%2581%25A9%25E8%25A8%2588%25E7%25AE%2597%25E3%2581%25AE%25E4%25B8%2580%25E4%25BE%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yonda%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q4ZmM1MDUwZGMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>最適制御問題を最適化手法を利用して解く直説法
+これをpythonでやってみるだけのメモ
+例題とモデルの数式は「直接法による最適計算手法と宇宙機への応用」（宇宙開発事業団技術報告， ISSN1345-7888， NASDA-TMR-010010）より利用させてもらう。
+
+ 例題1
+1次元の運動
+位置:x
+速度:v
+推力:u
+推力は
+-1 &lt;&#x3D; u &lt;&#x3D; 1
+と制限される。
+境界条件は
+x(0) &#x3D; 0
+v(0) &#x3D; 0
+v(1) &#x3D; 0
+目的関数は
+\max x(1)
+つまり、
+始め（t&#x3D;0）は静止しているが、
+最後(t&#x3D;1)にはできるだけ遠いところで静止するような
+ロケットの...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/fitness_densuke/articles/sse_fastapi_openai"
+                        open
+                      >
+                        <summary class="article-expander__title">SSE(Server-Sent Events)をFastAPIで行いChatGPTの回答をストリーミングで返すAPIサーバーの実装</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/fitness_densuke/articles/sse_fastapi_openai">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--UYTR4nHC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:SSE%2528Server-Sent%2520Events%2529%25E3%2582%2592FastAPI%25E3%2581%25A7%25E8%25A1%258C%25E3%2581%2584ChatGPT%25E3%2581%25AE%25E5%259B%259E%25E7%25AD%2594%25E3%2582%2592%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25A7%25E8%25BF%2594%25E3%2581%2599AP...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Tamtam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzg4YzUxYzNmMDQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>今回はFastAPIとSSE(Server-Sent Events)を使って、ChatGPTのようなストリーミングによるレスポンスを実装してみたいと思います！
+
+ SSE(Server-Sent Events)とは
+SSEとは、サーバーからクライアントへのイベント・ストリームによる非同期通信をHTTP経由で提供する技術です。
+Content-Typeヘッダーにtext/event-streamを指定しデータを送信すると、クライアント側でイベントを受け取ることができます。
+WebSocketとSSEの主な違いは、WebSocketが双方向通信であるのに対し、SSEは単一方向の通信です。
+S...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/h0tcatnohotmens/articles/ad6fe9ec3a7148"
+                        open
+                      >
+                        <summary class="article-expander__title">Python3とscikit-learnでスロットの大当たり確率を予想して無双しようとした話(ランダムフォレスト編</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/h0tcatnohotmens/articles/ad6fe9ec3a7148">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--WS3_fEdj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python3%25E3%2581%25A8scikit-learn%25E3%2581%25A7%25E3%2582%25B9%25E3%2583%25AD%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AE%25E5%25A4%25A7%25E5%25BD%2593%25E3%2581%259F%25E3%2582%258A%25E7%25A2%25BA%25E7%258E%2587%25E3%2582%2592%25E4%25BA%2588%25E6%2583%25B3%25E3%2581%2597%25E3%2581%25A6%25E7%2584%25A1%25E5%258F%258C%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%25E3%2581%25A8%25E3%2581%2597%25E3%2581%259F%25E8%25A9%25B1%2528%25E3%2583%25A9%25E3%2583%25B3%25E3%2583%2580%25E3%2583%25A0%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25AC%25E3%2582%25B9%25E3%2583%2588%25E7%25B7%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AE%25E3%2583%25BC%25E3%2582%258A%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3JSSlNUeC00VDVCS184a2xtWmxsUFZyYWtCZXpVbzIwUG1takFGPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+
+スロットのデータを手入力でcsvに書き込み、ランダムフォレストで大当たり確率・設定の予想をして、検証をした結果を記事にしてみました。
+
+
+ 対象読者
+
+機械学習に興味がある方
+スロットの大当たり予想を試してみたい方
+
+
+ 大当たり予想の検証をした経緯
+
+スロットは1から6まで設定が存在し、6に近いほど高設定と呼ばれプレイヤーが勝ちやすくなります。
+当然ながら、しょっちゅう設定6が入ることは無いのが現実です。
+そこで、機械学習で過去のデータを学習して予想すれば高設定の台に座りやすくなったり、低設定を打つリスクが下げられるのではと考え実験しました。
+
+
+ 注意
+この記事および...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/jcc/articles/76ba8d333f375d"
+                        open
+                      >
+                        <summary class="article-expander__title">GCS composeで32以上のオブジェクトをまとめる方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/jcc/articles/76ba8d333f375d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ifSSyhwE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GCS%2520compose%25E3%2581%25A732%25E4%25BB%25A5%25E4%25B8%258A%25E3%2581%25AE%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E3%2582%2592%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:jc%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFhMGIzZjk3ZDguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>先日の記事にてパーティション化されたCSVオブジェクトをCloudSQLにimportする方法を紹介しました。
+https://zenn.dev/jcc/articles/053ee1e609411d
+SDKを利用して32より多いオブジェクトをまとめる場合、GCPのコミュニティのチュートリアルのコードをそのまま使っていました。（2023.8.10にアーカイブされ済み）
+https://github.com/GoogleCloudPlatform/community/blob/master/archived/cloud-storage-infinite-compose/index.md
+文...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/otinu/articles/4207621a3e2e0d"
+                        open
+                      >
+                        <summary class="article-expander__title">Gmailに届く認証コードをGmailAPIから自動確認したい</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/otinu/articles/4207621a3e2e0d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ZRv_KwLs--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Gmail%25E3%2581%25AB%25E5%25B1%258A%25E3%2581%258F%25E8%25AA%258D%25E8%25A8%25BC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592GmailAPI%25E3%2581%258B%25E3%2582%2589%25E8%2587%25AA%25E5%258B%2595%25E7%25A2%25BA%25E8%25AA%258D%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%258A%25E3%2583%2581%25E3%2583%258C%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhkNTNkM2I3MTAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>ご挨拶
+はじめまして！ おチヌと申します。
+普段は Java に触ることが多いですが、個人では Python や JS など自由にやっています。
+何かしらやってることの区切りがついたり、おもしろそうなネタがまとまったりした際に記事などアウトプットしていきたいと考えてます。
+誰かの記事に助けられることが多いので、自分の記事も微力ながら誰かの+@になるとうれしいです。
+どうぞよろしくお願いします。
+
+ GmailAPI の設定
+公式ドキュメントが分かりやすかったです。
+https://developers.google.com/gmail/api/quickstart/python?hl...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/huraipan/articles/e49e856058625e"
+                        open
+                      >
+                        <summary class="article-expander__title">[Python]文字列の入力を受けて文字数を数える</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/huraipan/articles/e49e856058625e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--EzQElnzO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BPython%255D%25E6%2596%2587%25E5%25AD%2597%25E5%2588%2597%25E3%2581%25AE%25E5%2585%25A5%25E5%258A%259B%25E3%2582%2592%25E5%258F%2597%25E3%2581%2591%25E3%2581%25A6%25E6%2596%2587%25E5%25AD%2597%25E6%2595%25B0%25E3%2582%2592%25E6%2595%25B0%25E3%2581%2588%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:huraipan%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZXY3eUhtRlk4RjNPZjM5M1MybVIyck9kaUh2QVJlRDFNX2p3SW5WXzV4UmRRPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>本当に簡単な作業をしましょう。
+これは初めてPyhtonを学ぶ方向けの練習問題です。
+名前を入力したら名前の文字数を出力します。
+
+ 文字列を入力してもらおう
+まず文字列を入力してもらう必要がありますね
+input関数を使って名前をもらいます。
+input(&quot;名前を教えてください&quot;)
+
+ 文字数を数える関数は？
+len関数を使ったら文字数を数えることができます。
+len(&quot;abc&quot;)  # 3
+
+ 結合
+じゃあ上で学んだ関数を使って結合しましょう。
+まずinputを使ったところに入力した文字列が残ります。
+これで入力した名前の文字数をわかりますね。
+len(input(&quot;名前を教えてくだ...</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/blueman/articles/8c04b1a57cb4dd"
+                        open
+                      >
+                        <summary class="article-expander__title">コマンドプロンプト上で実行するライブラリのエラー対処法(Python)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/blueman/articles/8c04b1a57cb4dd">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--jyIp5pBX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2597%25E3%2583%2588%25E4%25B8%258A%25E3%2581%25A7%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2581%25AE%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E5%25AF%25BE%25E5%2587%25A6%25E6%25B3%2595%2528Python%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%259E%25E3%2583%25B3%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Zkt1ajRKaldOUWItM0o1cV8yUmFNc1ZockFKNjJBVEtDNnZfUHZLV1Robm9vPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>目次
+はじめに
+実際にやったこと
+おわりに
+
+ はじめに
+コマンドプロンプト上でライブラリを実行しようとするとエラーが出て調べてもあまり分からず苦労したので、自分以外にも同様の問題に遭遇している方の助けになればと思い対処法を紹介します。
+ライブラリ名をコマンドプロンプトにて入力して使用するライブラリ(例えば、pyinstallerやmanimなど)でコマンドプロンプト上でライブラリを実行しようとしたところ次のようなエラーが出ました。
+エラー文
+
+エラー文
+
+このエラーを解決するためにpip installを実行してpyinstallerがどこの階層にあるのかを調べると、
+実行結果
+
+...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-26 datetime="2023-08-26T16:02:38.000Z">2023-08-26</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-26 datetime="2023-08-26T16:02:38.000Z"></time>
           </button>
@@ -9079,201 +9415,6 @@ Encoder
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/aew2sbee/articles/django-rest-framework-install"
-                        open
-                      >
-                        <summary class="article-expander__title">【Django】django rest framework環境構築/インストール</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/aew2sbee/articles/django-rest-framework-install">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--P0DZASjf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Django%25E3%2580%2591django%2520rest%2520framework%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%252F%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B5%25E3%2582%258B%25E3%2581%259F%2520%25E3%2581%25AA%25E3%2581%258A%25E3%2581%258D%2520%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YTFYdHhmWGZPVmpKek9sTnQ0cDZmaWQyeENLMTlKOEl0akpQczZiZz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-社内の有志メンバーの活動でDRFを使用したので、導入方法を記録として残しておきます。
-http://127.0.0.1:8000/books/list/にアクセスして
-下記の画面が表示されるまでを解説します
-
-
- 0. ファイル構成の確認
-下記のようなファイル構成で始めます
-src
-└─ backend
-
- 1. ライブラリーのインストール
-
-
-djangoとdjango rest frameworkを下記コマンドでインストールする
-
-pip install django
-pip install djangorestframework
-
-djangoのVersionを確認す...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yamiii/articles/c7c7fa66aedf3f"
-                        open
-                      >
-                        <summary class="article-expander__title">FastAPI+PoetryなDocker環境を作る！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yamiii/articles/c7c7fa66aedf3f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--STnSvukq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%252BPoetry%25E3%2581%25AADocker%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yamii%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FiOTg1ZjI2MWQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>概要
-FastAPI in Containers - Dockerを読んでいて、Poetryでライブラリ管理したいと思ったので、作ってみた！
-
- できたもの
-https://github.com/r-eiyama/fast-api-docker
-リポジトリをクローンして、docker compose up -dを実行すれば環境が作れてしまう！！
-作れた人はこの記事にいいねを頼む。
-
- 解説
-ディレクトリ構成は下記のようにシンプルである。
-Simple is the Bestとはまさにこのことを言うのではなかろうか。
-.
-├── Dockerfile
-├── Taskfile.yml ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/fix/articles/d571d2867fb1d9"
-                        open
-                      >
-                        <summary class="article-expander__title">作りたいものがない。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/fix/articles/d571d2867fb1d9">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--WxQVSi4A--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BD%259C%25E3%2582%258A%25E3%2581%259F%25E3%2581%2584%25E3%2582%2582%25E3%2581%25AE%25E3%2581%258C%25E3%2581%25AA%25E3%2581%2584%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:fix%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3ZjQ3YjgxMDEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Flutter(Dart)学習 停滞
-Flutter(Dart)学習あまりできてないです。
-理由はタイトル通り。
-Flutter大学に入ったのを機に、コミュニティ内の記事＆動画をラジオ替わりに聞くなどは合間で情報収集は継続。
-それだけでも、月額料金を払った価値があるので十分ですが…。
-
- 停滞する理由
-最初の自己紹介の記事でも色々書きましたが、小学校の頃から趣味でプログラミング学習と、アプリ開発をやってるので、いい加減、作りたいアプリの制作アイデア的な物はもう枯れてきてます。
-同じように、小・中学生時代から趣味でプログラミングをはじめてプライベートでも開発してる人がいれば、どんなソフ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/malwarekiddy/articles/dd6e5d8a243a69"
-                        open
-                      >
-                        <summary class="article-expander__title">PythonでZabbixのxmlから情報を抽出する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/malwarekiddy/articles/dd6e5d8a243a69">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--SNPCxzud--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7Zabbix%25E3%2581%25AExml%25E3%2581%258B%25E3%2582%2589%25E6%2583%2585%25E5%25A0%25B1%25E3%2582%2592%25E6%258A%25BD%25E5%2587%25BA%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kaka%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YmQ4R3J6bFotOVMxd1pqNmRzQnVoWlJmM2FaMWk4elVkMXBRdU94UT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Zabbixの数万行に及ぶ設定内容を、パラメーターシートとして提出しなければいけない事があります。
-人力では無理ですので、Pythonにやってもらいます。
-
- 前提
-目的は、Zabbixから出力されたxml形式のファイルから、指定の情報を抽出することです。
-zabbixから出力されるxmlは、データの内容によってDOM構造が異なりますが、スクリプト内のパスを書き換えれば、どのようなxmlでも処理できます。
-
- xml
-今回は長文にしたくないのでお手軽に、ホスト情報のxmlから「ホスト名」「テンプレート名」「グループ名」「ホストのIPアドレス」を取得してみます。
-今回処理するxmlは次のよ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/nameless_sn/articles/gql_fastapi_tutorial"
-                        open
-                      >
-                        <summary class="article-expander__title">30分でFastAPIでGraphQL APIを開発するチュートリアル</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nameless_sn/articles/gql_fastapi_tutorial">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--gkCqIkJj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:30%25E5%2588%2586%25E3%2581%25A7FastAPI%25E3%2581%25A7GraphQL%2520API%25E3%2582%2592%25E9%2596%258B%25E7%2599%25BA%25E3%2581%2599%25E3%2582%258B%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%2588%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shota%2520Nukumizu%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3BpRWxxcmxndGkyV3NPQ2dpcmg2R1dFS3NaSC1SOHJOTE1JcXNscWc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-今回の記事ではデータベースを使わずに、1時間でFastAPIでGraphQL APIを開発する方法を解説する。
-!
-注意：今回の記事では、GraphQL APIやFastAPIに関する知識を理解している前提で説明をする。本記事でも簡潔に解説するが、詳細に理解したいならばこちらの記事を参照するといい。FastAPIの場合はこちら。
-
-
- 対象とする読者
-
-FastAPIを使っているひと
-これからPythonでGraphQL APIを開発したいひと
-タイトルを見て気になったひと
-
-
- 開発環境
-
-Windows 11
-Python 3.10.2
-FastAPI
-Strawber...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/umi_mori/articles/langchain-indexes-git"
-                        open
-                      >
-                        <summary class="article-expander__title">GitHubリポジトリをChatGPTに学習させる方法【Python / LangChain / FAQ】</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/umi_mori/articles/langchain-indexes-git">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--wf3dmfuA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GitHub%25E3%2583%25AA%25E3%2583%259D%25E3%2582%25B8%25E3%2583%2588%25E3%2583%25AA%25E3%2582%2592ChatGPT%25E3%2581%25AB%25E5%25AD%25A6%25E7%25BF%2592%25E3%2581%2595%25E3%2581%259B%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%25E3%2580%2590Python%2520%252F%2520LangChain%2520%252F%2520FAQ%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25BE%25E3%2581%2599%25E3%2581%25BF%2540%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M5ZDA3ZmI1ZGEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめまして、ますみです！
-
-この記事では、「LangChain」というライブラリを使って、「GitHubリポジトリのソースコードを学習したChatGPTの実装方法」を解説します。
-この記事を読むことで、「ソースコードを一行一行読む」作業を減らすことができます。
-ChatGPTやLangChainについてまだ詳しくない方は、こちらを先にご覧ください◎
-https://zenn.dev/umi_mori/books/chatbot-chatgpt
-https://zenn.dev/umi_mori/books/prompt-engineer
-!
-文字よりも「動画の方が理解しやすい」という方...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -9281,8 +9422,8 @@ https://zenn.dev/umi_mori/books/prompt-engineer
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5988049280">
-        <time id="build-timestamp" datetime="2023-08-27T01:15:23.589Z">2023-08-27T01:15:23.589Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/5994390637">
+        <time id="build-timestamp" datetime="2023-08-28T01:12:33.240Z">2023-08-28T01:12:33.240Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
