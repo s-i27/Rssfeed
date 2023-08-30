@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-29 datetime="2023-08-29T00:08:40.000Z">2023-08-29</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-29 datetime="2023-08-29T00:08:40.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-29 datetime="2023-08-29T15:14:23.000Z">2023-08-29</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-29 datetime="2023-08-29T15:14:23.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,619 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/porphyrio/articles/93ef80b71703d3"
+                        open
+                      >
+                        <summary class="article-expander__title">東工大機械系院試をpythonで解いてみた[数学編]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/porphyrio/articles/93ef80b71703d3">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--0mSQ8zwL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259D%25B1%25E5%25B7%25A5%25E5%25A4%25A7%25E6%25A9%259F%25E6%25A2%25B0%25E7%25B3%25BB%25E9%2599%25A2%25E8%25A9%25A6%25E3%2582%2592python%25E3%2581%25A7%25E8%25A7%25A3%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%255B%25E6%2595%25B0%25E5%25AD%25A6%25E7%25B7%25A8%255D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:porphyrio%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2YyYWIyZTAzMjMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+東工大の機械系の院試の問題をpythonを使って解いてみます。今回は令和3年度の数学の試験を解いていきます。過去問は以下のページにあります。
+https://www.titech.ac.jp/admissions/prospective-students/admissions/past-exam-papers
+
+ 問１
+
+
+ 問1 (1)
+回転体の体積を求める問題です。まず図を書いてみます。
+import matplotlib.pyplot as plt
+import numpy as np
+
+#仮の値
+a &#x3D; 2
+b &#x3D; 5
+
+# 円のパラメータ
+center &#x3D; (0,...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kentoo1/articles/30ac7f25d76278"
+                        open
+                      >
+                        <summary class="article-expander__title">RecBoleを使ってみよう2　データの用意</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kentoo1/articles/30ac7f25d76278">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Mq26oQmi--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:RecBole%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%2588%25E3%2581%25862%25E3%2580%2580%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E7%2594%25A8%25E6%2584%258F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25B1%25E3%2583%25B3%25E3%2583%2588%25E3%2582%25A5%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZTJFYmV2S1VvM1Y4Z3lNZ2I2MVppYS1IUEk0aXcxZmx3WW9ISmdrMEg2TUE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+前回はPoetryを用いてRecboleの環境構築をし、テストコマンドが通るところまで進めました。
+今回は、Recboleが用意しているデータセットリストの中からAnimeデータセットを取得し、RecBoleで使えるフォーマットに加工する方法を書きます。基本的には公式ドキュメント（Anime.md）の通りに進めればよいのですが、ローカル環境に依存しない形で進めたいので、ここではPoetryを使った方法を紹介します。
+
+ データを用意する
+
+ データ加工リポジトリのクローン
+mkdir ~/src
+cd ~/src
+git clone https://github.com/RUC...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/h_hiroyuki/articles/4b92c64ab41ede"
+                        open
+                      >
+                        <summary class="article-expander__title">衛生画像をPythonでNDVIに変換して表示する方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/h_hiroyuki/articles/4b92c64ab41ede">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--QjrxHtFp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25A1%259B%25E7%2594%259F%25E7%2594%25BB%25E5%2583%258F%25E3%2582%2592Python%25E3%2581%25A7NDVI%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2597%25E3%2581%25A6%25E8%25A1%25A8%25E7%25A4%25BA%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Hiro%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MllIU1h5eTFrNkRvWmpuQUZyLWZRMlc5V05SUk1zMlpvbmlPMGp1Zz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+衛生画像を活用して健康と衛生に関する情報を得ることは、今や一般的な方法です。本記事では、Pythonを使用して、衛生画像をNDVI（Normalized Difference Vegetation Index）に変換し、そのプロセスを通じて衛生画像の解析方法を紹介します。
+
+ 衛生画像とNDVIとは？
+衛生画像は、特定の波長範囲で撮影された画像で、土地や植物の健康状態を評価するのに使用されます。一方、NDVIは植物の植生を示す指標で、緑色と近赤外線の光の反射率を比較することで算出されます。NDVIは、植物の生育状態や土地の質を評価するのに役立つ重要な指標です。
+農業では、例...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/honomaru/articles/16121b9124e7b4"
+                        open
+                      >
+                        <summary class="article-expander__title">Day 1 ~ N日間Rayを学ぶ  / Python で分散コンピューティング~</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/honomaru/articles/16121b9124e7b4">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--phUBjXjd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Day%25201%2520%7E%2520N%25E6%2597%25A5%25E9%2596%2593Ray%25E3%2582%2592%25E5%25AD%25A6%25E3%2581%25B6%2520%2520%252F%2520Python%2520%25E3%2581%25A7%25E5%2588%2586%25E6%2595%25A3%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2594%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%2586%25E3%2582%25A3%25E3%2583%25B3%25E3%2582%25B0%7E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Honoka%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZkhvUlFkcXEyaTRiRXVOQTU1Yk1OMTYxSTFfMlh4NzcyRFZXQ2dfUVJpPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>前書き
+毎日Rayとその周りの知識について、少しでも学習した記録を残していこうと思います。
+RayだけでなくOS周りの知識もつけていきたいなと思います。
+みなさんは、Rayをご存知でしょうか？
+英語でもRayのブログを書いているんですが、調べていて日本語の記事が少ないのかな？と思ったので、日本語でも書いてみようかなというモチベーションです。
+※英語版も同じですが、学習過程の記録なので理解が誤ってる可能性もありますが、誤りに気づいたらできるだけ修正もしていきたいと思います。。
+Rayについては、オライリーから書籍が出ています。英語版ですが。。
+
+Scaling Python With ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nomuraya/articles/f8b749930ed0af16d76c"
+                        open
+                      >
+                        <summary class="article-expander__title">pythonのクラス変数に外部関数を使うとTypeError:(省略) but 1 was givenになる問題を考える</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nomuraya/articles/f8b749930ed0af16d76c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--SG3Wfa9L--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25AE%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25B9%25E5%25A4%2589%25E6%2595%25B0%25E3%2581%25AB%25E5%25A4%2596%25E9%2583%25A8%25E9%2596%25A2%25E6%2595%25B0%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E3%2581%25A8TypeError%253A%2528%25E7%259C%2581%25E7%2595%25A5%2529%2520but%25201%2520was%2520given%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258B%25E5%2595%258F%25E9%25A1%258C%25E3%2582%2592%25E8%2580%2583%25E3%2581%2588%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nomuraya%2540%25E5%2585%2583CTO%25E3%2581%25AEIT%25E8%25AC%259B%25E5%25B8%25AB%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cyeDF3QzRTNUdSLVlmSWN5RDV0b2lxUkQ1SklaSkFpSjk4cUk1UVE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>!
+この記事はQiitaから移行しています。
+
+https://qiita.com/items/f8b749930ed0af16d76c
+
+
+ お詫び
+Qiitaの元記事にて、区切り線を「---」で書いている場所があり、これがZennの記法に干渉して一部うまく表示できない記事がある事を認識しています。
+全ての記事を精査しきれていないため、お手数ですがお見かけの際は教えていただけると大変喜びます。
+
+
+ 変更前タイトル：pythonのクラス変数に外部関数を使うときにTypeError: function name takes 0 positional arguments but 1 was...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nomuraya/articles/d68ed63a7dae897eda7c"
+                        open
+                      >
+                        <summary class="article-expander__title">pythonで任意の場所に文字を挿入したい！（関数・ラムダ式でも書いてみた）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nomuraya/articles/d68ed63a7dae897eda7c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--AWOvgTp9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A7%25E4%25BB%25BB%25E6%2584%258F%25E3%2581%25AE%25E5%25A0%25B4%25E6%2589%2580%25E3%2581%25AB%25E6%2596%2587%25E5%25AD%2597%25E3%2582%2592%25E6%258C%25BF%25E5%2585%25A5%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%25EF%25BC%2581%25EF%25BC%2588%25E9%2596%25A2%25E6%2595%25B0%25E3%2583%25BB%25E3%2583%25A9%25E3%2583%25A0%25E3%2583%2580%25E5%25BC%258F%25E3%2581%25A7%25E3%2582%2582%25E6%259B%25B8%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nomuraya%2540%25E5%2585%2583CTO%25E3%2581%25AEIT%25E8%25AC%259B%25E5%25B8%25AB%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cyeDF3QzRTNUdSLVlmSWN5RDV0b2lxUkQ1SklaSkFpSjk4cUk1UVE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>!
+この記事はQiitaから移行しています。
+
+https://qiita.com/items/d68ed63a7dae897eda7c
+
+
+ お詫び
+Qiitaの元記事にて、区切り線を「---」で書いている場所があり、これがZennの記法に干渉して一部うまく表示できない記事がある事を認識しています。
+全ての記事を精査しきれていないため、お手数ですがお見かけの際は教えていただけると大変喜びます。
+
+base_string &#x3D; &#x27;test&#x27;
+INSERT_POINT &#x3D; 2  #分かりやすくするために大文字
+insert_string &#x3D; &#x27;--hoge--&#x27;
+
+# 2文字目から挿入したい...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nomuraya/articles/d360b531039cac1a9842"
+                        open
+                      >
+                        <summary class="article-expander__title">pathlibのメソッドチェーンだけでパスを加工したい</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nomuraya/articles/d360b531039cac1a9842">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--5ApO0Uqf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pathlib%25E3%2581%25AE%25E3%2583%25A1%25E3%2582%25BD%25E3%2583%2583%25E3%2583%2589%25E3%2583%2581%25E3%2582%25A7%25E3%2583%25BC%25E3%2583%25B3%25E3%2581%25A0%25E3%2581%2591%25E3%2581%25A7%25E3%2583%2591%25E3%2582%25B9%25E3%2582%2592%25E5%258A%25A0%25E5%25B7%25A5%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nomuraya%2540%25E5%2585%2583CTO%25E3%2581%25AEIT%25E8%25AC%259B%25E5%25B8%25AB%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cyeDF3QzRTNUdSLVlmSWN5RDV0b2lxUkQ1SklaSkFpSjk4cUk1UVE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>!
+この記事はQiitaから移行しています。
+
+https://qiita.com/items/d360b531039cac1a9842
+
+
+ お詫び
+Qiitaの元記事にて、区切り線を「---」で書いている場所があり、これがZennの記法に干渉して一部うまく表示できない記事がある事を認識しています。
+全ての記事を精査しきれていないため、お手数ですがお見かけの際は教えていただけると大変喜びます。
+
+フルパスを持つPath or strから、任意に指定した階層以上だけを切り捨てたい&amp;...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nomuraya/articles/b1a59a78ddb1b21f172a"
+                        open
+                      >
+                        <summary class="article-expander__title">備忘録：pythonのelse時に何もしない場合の書き方をワンライナーで</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nomuraya/articles/b1a59a78ddb1b21f172a">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Q-bVsL4W--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%2582%2599%25E5%25BF%2598%25E9%258C%25B2%25EF%25BC%259Apython%25E3%2581%25AEelse%25E6%2599%2582%25E3%2581%25AB%25E4%25BD%2595%25E3%2582%2582%25E3%2581%2597%25E3%2581%25AA%25E3%2581%2584%25E5%25A0%25B4%25E5%2590%2588%25E3%2581%25AE%25E6%259B%25B8%25E3%2581%258D%25E6%2596%25B9%25E3%2582%2592%25E3%2583%25AF%25E3%2583%25B3%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%258A%25E3%2583%25BC%25E3%2581%25A7%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nomuraya%2540%25E5%2585%2583CTO%25E3%2581%25AEIT%25E8%25AC%259B%25E5%25B8%25AB%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cyeDF3QzRTNUdSLVlmSWN5RDV0b2lxUkQ1SklaSkFpSjk4cUk1UVE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>!
+この記事はQiitaから移行しています。
+
+https://qiita.com/items/b1a59a78ddb1b21f172a
+
+
+ お詫び
+Qiitaの元記事にて、区切り線を「---」で書いている場所があり、これがZennの記法に干渉して一部うまく表示できない記事がある事を認識しています。
+全ての記事を精査しきれていないため、お手数ですがお見かけの際は教えていただけると大変喜びます。
+
+気付いたらそれだけなんですが、気付くまでに時間が掛かるやつです。
+探しても見つからなかったので備忘録。
+
+ やりたいこと
+def practice(message &#x3D; None):
+  if ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nomuraya/articles/ab1f3c7062f9ef6d588f"
+                        open
+                      >
+                        <summary class="article-expander__title">[map,filterなど高階関数がよく分からない場合]listの中にlistを持っていた時にmap関数を使いたい</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nomuraya/articles/ab1f3c7062f9ef6d588f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--AkXAmoPN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255Bmap%252Cfilter%25E3%2581%25AA%25E3%2581%25A9%25E9%25AB%2598%25E9%259A%258E%25E9%2596%25A2%25E6%2595%25B0%25E3%2581%258C%25E3%2582%2588%25E3%2581%258F%25E5%2588%2586%25E3%2581%258B%25E3%2582%2589%25E3%2581%25AA%25E3%2581%2584%25E5%25A0%25B4%25E5%2590%2588%255Dlist%25E3%2581%25AE%25E4%25B8%25AD%25E3%2581%25ABlist%25E3%2582%2592%25E6%258C%2581%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2581%259F%25E6%2599%2582%25E3%2581%25ABmap%25E9%2596%25A2%25E6%2595%25B0%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2584%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nomuraya%2540%25E5%2585%2583CTO%25E3%2581%25AEIT%25E8%25AC%259B%25E5%25B8%25AB%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cyeDF3QzRTNUdSLVlmSWN5RDV0b2lxUkQ1SklaSkFpSjk4cUk1UVE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>!
+この記事はQiitaから移行しています。
+
+https://qiita.com/items/ab1f3c7062f9ef6d588f
+
+
+ お詫び
+Qiitaの元記事にて、区切り線を「---」で書いている場所があり、これがZennの記法に干渉して一部うまく表示できない記事がある事を認識しています。
+全ての記事を精査しきれていないため、お手数ですがお見かけの際は教えていただけると大変喜びます。
+
+
+ [map,filterなど高階関数がよく分からない場合]listの中にlistを持っていた時にmap関数を使いたい
+なんてことはないんだけど、解説してるサイトが見つからなかったので、後で困...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nomuraya/articles/a53faad2d3ad566f9b69"
+                        open
+                      >
+                        <summary class="article-expander__title">もっと簡単で高速に一意なデータの判別がしたい</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nomuraya/articles/a53faad2d3ad566f9b69">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--40XZGICI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%2582%25E3%2581%25A3%25E3%2581%25A8%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25A7%25E9%25AB%2598%25E9%2580%259F%25E3%2581%25AB%25E4%25B8%2580%25E6%2584%258F%25E3%2581%25AA%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E5%2588%25A4%25E5%2588%25A5%25E3%2581%258C%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nomuraya%2540%25E5%2585%2583CTO%25E3%2581%25AEIT%25E8%25AC%259B%25E5%25B8%25AB%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cyeDF3QzRTNUdSLVlmSWN5RDV0b2lxUkQ1SklaSkFpSjk4cUk1UVE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>!
+この記事はQiitaから移行しています。
+
+https://qiita.com/items/a53faad2d3ad566f9b69
+
+
+ お詫び
+Qiitaの元記事にて、区切り線を「---」で書いている場所があり、これがZennの記法に干渉して一部うまく表示できない記事がある事を認識しています。
+全ての記事を精査しきれていないため、お手数ですがお見かけの際は教えていただけると大変喜びます。
+
+結構簡単に出来るみたいです。
+当初は素直にlist作ってその中にtargetが存在するかチェックするループを使って…としていたんですが、数によってはめちゃくちゃ重くなるforを実行してしまいま...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nomuraya/articles/7ae15e8dc299ea8ad2c8"
+                        open
+                      >
+                        <summary class="article-expander__title">Google Safe Browsing ListにCSVから取得したマルチバイト文字を含んだURLを渡す</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nomuraya/articles/7ae15e8dc299ea8ad2c8">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--sgQauXGz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%2520Safe%2520Browsing%2520List%25E3%2581%25ABCSV%25E3%2581%258B%25E3%2582%2589%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2597%25E3%2581%259F%25E3%2583%259E%25E3%2583%25AB%25E3%2583%2581%25E3%2583%2590%25E3%2582%25A4%25E3%2583%2588%25E6%2596%2587%25E5%25AD%2597%25E3%2582%2592%25E5%2590%25AB%25E3%2582%2593%25E3%2581%25A0URL%25E3%2582%2592%25E6%25B8%25A1%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nomuraya%2540%25E5%2585%2583CTO%25E3%2581%25AEIT%25E8%25AC%259B%25E5%25B8%25AB%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cyeDF3QzRTNUdSLVlmSWN5RDV0b2lxUkQ1SklaSkFpSjk4cUk1UVE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>!
+この記事はQiitaから移行しています。
+
+https://qiita.com/items/7ae15e8dc299ea8ad2c8
+
+
+ お詫び
+Qiitaの元記事にて、区切り線を「---」で書いている場所があり、これがZennの記法に干渉して一部うまく表示できない記事がある事を認識しています。
+全ての記事を精査しきれていないため、お手数ですがお見かけの際は教えていただけると大変喜びます。
+
+Python2.7でやってます。3系はもっと簡単に出来そう。
+
+ ソースコード
+from urlparse import urlparse
+import urllib
+
+def toGSBL(...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nomuraya/articles/78d0174977bb61a52808"
+                        open
+                      >
+                        <summary class="article-expander__title">XMLファイルをPandas.DataFrameで扱いたい</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nomuraya/articles/78d0174977bb61a52808">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--nwLV6DFk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:XML%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592Pandas.DataFrame%25E3%2581%25A7%25E6%2589%25B1%25E3%2581%2584%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nomuraya%2540%25E5%2585%2583CTO%25E3%2581%25AEIT%25E8%25AC%259B%25E5%25B8%25AB%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cyeDF3QzRTNUdSLVlmSWN5RDV0b2lxUkQ1SklaSkFpSjk4cUk1UVE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>!
+この記事はQiitaから移行しています。
+
+https://qiita.com/items/78d0174977bb61a52808
+
+
+ お詫び
+Qiitaの元記事にて、区切り線を「---」で書いている場所があり、これがZennの記法に干渉して一部うまく表示できない記事がある事を認識しています。
+全ての記事を精査しきれていないため、お手数ですがお見かけの際は教えていただけると大変喜びます。
+
+
+ XMLファイルをPandas.DataFrameで扱いたい
+pandasはcsvやjsonを扱う時は便利ですが、xmlは対応してくれていないのか、良い方法が思いつきませんでした。
+xmlを...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nomuraya/articles/51b5a8bf9ef41ed04ac2"
+                        open
+                      >
+                        <summary class="article-expander__title">pandasの威力を手っ取り早く実感したい</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nomuraya/articles/51b5a8bf9ef41ed04ac2">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Cf8Yfxvw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pandas%25E3%2581%25AE%25E5%25A8%2581%25E5%258A%259B%25E3%2582%2592%25E6%2589%258B%25E3%2581%25A3%25E5%258F%2596%25E3%2582%258A%25E6%2597%25A9%25E3%2581%258F%25E5%25AE%259F%25E6%2584%259F%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nomuraya%2540%25E5%2585%2583CTO%25E3%2581%25AEIT%25E8%25AC%259B%25E5%25B8%25AB%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cyeDF3QzRTNUdSLVlmSWN5RDV0b2lxUkQ1SklaSkFpSjk4cUk1UVE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>!
+この記事はQiitaから移行しています。
+
+https://qiita.com/items/51b5a8bf9ef41ed04ac2
+
+
+ お詫び
+Qiitaの元記事にて、区切り線を「---」で書いている場所があり、これがZennの記法に干渉して一部うまく表示できない記事がある事を認識しています。
+全ての記事を精査しきれていないため、お手数ですがお見かけの際は教えていただけると大変喜びます。
+
+私自身、pythonもあまり理解していると言えないレベルだが、そんなレベルでも手っ取り早くパンダさんすげー！っていいたい記事が見つからなかったので書いた。
+正直、他の記事とかを読むと、周りのレ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yu_9/articles/cd31b6a904dcde"
+                        open
+                      >
+                        <summary class="article-expander__title">GPT-4とLangChainで技術記事のクイズを生成するサイトを作った</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yu_9/articles/cd31b6a904dcde">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--u19Zco9A--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GPT-4%25E3%2581%25A8LangChain%25E3%2581%25A7%25E6%258A%2580%25E8%25A1%2593%25E8%25A8%2598%25E4%25BA%258B%25E3%2581%25AE%25E3%2582%25AF%25E3%2582%25A4%25E3%2582%25BA%25E3%2582%2592%25E7%2594%259F%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%2588%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yukyu%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E4YzcxMmIzM2UuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>読んだ技術記事の理解を深めるべく、技術記事の内容からクイズを生成するサイトを作りました。
+https://quizbite.yukyu.net/about
+
+ 使い方
+https://quizbite.yukyu.net にテキストボックスに技術記事のURLを入力し、「クイズを作る」をクリックします。
+あとは、クイズが生成されるまで待ちます。生成が終わるまで大体1分半くらいかかります。
+
+https://quizbite.yukyu.net/?url&#x3D;とすると、テキストボックスにurlが入力された状態で共有できます。
+
+ デモ動画
+https://yout...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/shabaraba/articles/c581b6126b1a23"
+                        open
+                      >
+                        <summary class="article-expander__title">アソシエーション分析ができるAPIをlambdaとAPI-Gatewayで作った</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shabaraba/articles/c581b6126b1a23">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--65sTOJsD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25A2%25E3%2582%25BD%25E3%2582%25B7%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E5%2588%2586%25E6%259E%2590%25E3%2581%258C%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258BAPI%25E3%2582%2592lambda%25E3%2581%25A8API-Gateway%25E3%2581%25A7%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2582%2583%25E3%2581%25B0%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRmMjlhNmM2OTMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+今は訳合ってサービスを閉じてしまっているのですが、スマレジプラットフォームアプリでlook-into-basketsというアプリを公開していました。
+https://github.com/shabaraba/look-into-baskets
+取引履歴から期間を指定してアソシエーション分析結果を表示するアプリだったのですが、
+
+フロントとバックが密結合だったので、分割したかった
+「アソシエーション分析」というもの自体が割と使い勝手がよく、いろんなことに応用が効きそう
+
+自作ブログのタグを分析すれば、僕の興味とかスキルセットとか見えるんじゃないか、とか
+
+
+
+という理由から、...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/maretol/articles/9d6aca61cbb89e"
+                        open
+                      >
+                        <summary class="article-expander__title">pandasのDataFrame.to_sqlのmethodとchunksize設定について</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/maretol/articles/9d6aca61cbb89e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--uXa6jMaP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pandas%25E3%2581%25AEDataFrame.to_sql%25E3%2581%25AEmethod%25E3%2581%25A8chunksize%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Maretol%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hHd3ROUEQtTzQxSkszUmNIbmUtel9hb1hhQ3d2M2phWlBJVzlDPXMyNTAtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>ことのはじまり
+BigQueryで集計した結果をMｙSQLに入れる作業でpythonを用いてこんな感じの実装をしていた（実際はもうちょいいろいろしてる
+query_job &#x3D; bq_client.query(some_query)
+query_job.result()
+result &#x3D; query_job.to_dataframe()
+
+result.to_sql(
+	some_table,
+	connection,
+	if_exist&#x3D;&quot;append&quot;,
+)
+あるとき、この部分でエラーが起きて対応したのだが（この対応自体は本記事とあまり関係ないため省略）、pandasのドキュメント...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/fb995e930cf0c1"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-294｜A - Filter</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/fb995e930cf0c1">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--rXopiIsv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-294%25EF%25BD%259CA%2520-%2520Filter%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-294 A - Filter
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n &#x3D; getInt()
+    a &#x3D; getIntList()
+    b &#x3D; [i for i in a if i % 2 &#x3D;&#x3D; 0]
+
+    print(&quot; &quot;.join(map(str, b)))
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    ma...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/1f21f49cdf37d5"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-294｜B - ASCII Art</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/1f21f49cdf37d5">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Gr4_OMpi--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-294%25EF%25BD%259CB%2520-%2520ASCII%2520Art%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-294 B - ASCII Art
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntListRow(N):
+    return [list(map(int, input().split())) for _ in range(N)]
+
+
+def asc(c):
+    return chr(ord(&#x27;A&#x27;) + c - 1)
+
+
+def main():
+    h, w &#x3D; getIntMap()
+    a &#x3D; getIntListRow(h)
+
+    f...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/suehiro3721p/books/5b47e32964893f"
+                        open
+                      >
+                        <summary class="article-expander__title">大人のためのPythoで、情報、数学再学習</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/suehiro3721p/books/5b47e32964893f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--s6X8UUTi--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci8zNjEzOTkwNzA4LmpwZWc&#x3D;%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>メルマガ「Pythoで、情報、数学再学習」(パイマガ)のまとめ
+https://www.mag2.com/m/0001685552
+
+Python  言語で、高校に導入された教科「情報」を学習し、高校数学、さらに、大学工学部で勉強する数学を勉強します。人工知能の基礎となる統計も学習します。</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -9117,319 +9730,6 @@ https://zenn.dev/umi_mori/books/prompt-engineer
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/nano_sudo/articles/a00db1a55d6c4c"
-                        open
-                      >
-                        <summary class="article-expander__title">discord.py でCog・Extensionを使ってみよう！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nano_sudo/articles/a00db1a55d6c4c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--W8IFu93g--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:discord.py%2520%25E3%2581%25A7Cog%25E3%2583%25BBExtension%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%2588%25E3%2581%2586%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E9%25A0%2588%25E8%2597%25A4%25E3%2583%258A%25E3%2583%258E%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYxZTllNTY0ZTAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-この記事では、discord.pyでのCog・Extensionの使い方を説明します！
-拡張性・メンテナンス性の高い discord Bot を目指している方におすすめです。
-
- Cogとは
-
-Bot開発においてコマンドやリスナー、いくつかの状態を一つのクラスにまとめてしまいたい場合があるでしょう。コグはそれを実現したものです。(discord.pyドキュメント)
-
-
- Cog・Extensionを使うメリット
-
-機能のグループ化
-Cogを使用することで、Botの機能をグループに分けることができる。
-(例:音楽コマンドや管理コマンドなど)
-再利用性の向上
-Cogをコピーすれ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hekuchandao/articles/e6b57ff3730fb4"
-                        open
-                      >
-                        <summary class="article-expander__title">streamlitとfoliumを使用した都道府県別の新型コロナ感染者数ヒートマップを表示するデータアプリを作成する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hekuchandao/articles/e6b57ff3730fb4">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--loti7ETl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:streamlit%25E3%2581%25A8folium%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E9%2583%25BD%25E9%2581%2593%25E5%25BA%259C%25E7%259C%258C%25E5%2588%25A5%25E3%2581%25AE%25E6%2596%25B0%25E5%259E%258B%25E3%2582%25B3%25E3%2583%25AD%25E3%2583%258A%25E6%2584%259F%25E6%259F%2593%25E8%2580%2585%25E6%2595%25B0%25E3%2583%2592%25E3%2583%25BC%25E3%2583%2588%25E3%2583%259E%25E3%2583%2583%25E3%2583%2597%25E3%2582%2592%25E8%25A1%25A8%25E7%25A4%25BA%25E3%2581%2599%25E3%2582%258B%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:HEKUCHAN%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyZWVhZTQzNGQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-
-作ったアプリ
-ソースコード
-https://github.com/IwataGumi/Japan_covid_19_map
-
- つくるもの
-
-指定した期間を可視化できる
-都道府県にカーソルを合わせたら詳細が出てくる
-
-
- 環境
-Python 3.9.6
-python &#x3D; &quot;&gt;&#x3D;3.9,&lt;3.9.7&quot;
-folium &#x3D; &quot;^0.14.0&quot;
-streamlit &#x3D; &quot;^1.25.0&quot;
-streamlit-folium &#x3D; &quot;^0.13.0&quot;
-geopandas &#x3D; &quot;^0.13.2&quot;
-numpy &#x3D; &quot;^1.25.1&quot;
-
- データの加工
-
- データのダウンロード
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;29
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/ohke/articles/9ce51323c44f80"
-                        open
-                      >
-                        <summary class="article-expander__title">AIモデルの予測結果の可視化を楽にしたい? Gradioを使ってみよう!</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ohke/articles/9ce51323c44f80">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--i2UvQLQ2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AE%25E4%25BA%2588%25E6%25B8%25AC%25E7%25B5%2590%25E6%259E%259C%25E3%2581%25AE%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E3%2582%2592%25E6%25A5%25BD%25E3%2581%25AB%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%253F%2520Gradio%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%2588%25E3%2581%2586%2521%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ohke%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzlmMzI1YWRjYjkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>AIモデルによる推論結果を可視化して、それを社内に共有できるWebアプリケーションを作りたいということが、AIに関わるお仕事だとよくあるかと思います。
-こういった機械学習向けのデモライブラリ (フレームワーク) として最近ちょこちょこ話題に上るGradioを触って、使い勝手などを見ていきます。
-https://www.gradio.app/
-Gradioの公式ガイドを主に参考にしています。
-https://www.gradio.app/guides
-
- Gradioとは
-Gradioは、機械学習モデルのデモをWebアプリケーションとして簡単に実装・公開できるPythonライブラリです。
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;14
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/voicy/articles/b56e73c8c56692"
-                        open
-                      >
-                        <summary class="article-expander__title">RVCで社長の声になりすませるか</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/voicy/articles/b56e73c8c56692">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--YtNOgG2G--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:RVC%25E3%2581%25A7%25E7%25A4%25BE%25E9%2595%25B7%25E3%2581%25AE%25E5%25A3%25B0%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258A%25E3%2581%2599%25E3%2581%25BE%25E3%2581%259B%25E3%2582%258B%25E3%2581%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Voicy%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:kenta%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhiODU5ZTAwNWYuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKekVsTGpjV1o1SEZsYWdBV3NrR24wUTNhb3UyY2s1WEkwejFrSnE9czk2LWM&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-株式会社Voicy データチーム所属のいしけんです。
-今回は少し前に話題になったRVCボイスチェンジャーで(いまさらながら)遊んでみたので、そのことについて簡単にまとめてみようと思います。5分程度の軽い読みものとして目を通していただければ幸いです。
-ちなみに私は音声変換等の技術について詳しい人間ではなく、機械学習の分野に精通している人間ではないので記事の内容に誤りがある可能性があります。もし誤り等ございましたらコメント等で教えていただけると幸いです。
-
- RVCとは
-Retrieval-based-Voice-Conversionの略称です。
-RVCはオープンソースの機械学...</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mesgory/articles/a9ec9cbe8afe7d"
-                        open
-                      >
-                        <summary class="article-expander__title">Selenium でブラウザ操作を自動化する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mesgory/articles/a9ec9cbe8afe7d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--JFHtyZBh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Selenium%2520%25E3%2581%25A7%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25A6%25E3%2582%25B6%25E6%2593%258D%25E4%25BD%259C%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:M%25E1%25B4%2587s%25C9%25A2%25E1%25B4%258F%25CA%2580%25CA%258F%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZlNjQ4NWVjOTQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Selenium を利用して Python からウェブブラウザを自動操作する方法を説明します。
-
- 🛠️ 事前準備
-デバイスやソフトウェアは以下を用いる。
-
-💻 PC端末（macOS）
-💿 Python 、🔌 Selenium
-💿 Visual Studio Code 、 🔌 Python
-
-
- 1. Pyhton の導入
-公式サイトからパッケージファイルをダウンロードし、インストールを済ませておく。
-https://www.python.org/
-
-🖥️ terminal
-$ # Python のバージョンを表示
-$ python3 --version
-
-$ # pip のバージョンを...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/43e8e5b916b7b1"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-275｜B - ABC-DEF</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/43e8e5b916b7b1">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--K4xqWZnR--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-275%25EF%25BD%259CB%2520-%2520ABC-DEF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-275 B - ABC-DEF
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def m3(x, y, z, a):
-    return (x % a) * (y % a) * (z % a)
-
-
-def main():
-    a, b, c, d, e, f &#x3D; getIntMap()
-    div &#x3D; 998244353
-
-    print((m3(a, b, c, div) - m3(d, e, f, div)) % div)
-
-
-if __name__ &#x3D;&#x3D; &quot;...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/1642b68501910c"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-275｜A - Find Takahashi</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/1642b68501910c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--N57BwvEA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-275%25EF%25BD%259CA%2520-%2520Find%2520Takahashi%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-275 A - Find Takahashi
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n &#x3D; getInt()
-    h &#x3D; getIntList()
-
-    print(h.index(max(h)) + 1)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-07-30 datetime="2023-07-30T14:51:11.000Z">2023-07-30</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-07-30 datetime="2023-07-30T14:51:11.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/blueman/articles/e30de15f0c9bf3"
-                        open
-                      >
-                        <summary class="article-expander__title">中心差分を用いた接線の交点の求め方とPythonのライブラリであるmatplotlibによる可視化</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/blueman/articles/e30de15f0c9bf3">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--0PnK9V9Z--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25B8%25AD%25E5%25BF%2583%25E5%25B7%25AE%25E5%2588%2586%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E6%258E%25A5%25E7%25B7%259A%25E3%2581%25AE%25E4%25BA%25A4%25E7%2582%25B9%25E3%2581%25AE%25E6%25B1%2582%25E3%2582%2581%25E6%2596%25B9%25E3%2581%25A8Python%25E3%2581%25AE%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2581%25A7%25E3%2581%2582%25E3%2582%258Bmatplotlib%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%259E%25E3%2583%25B3%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Zkt1ajRKaldOUWItM0o1cV8yUmFNc1ZockFKNjJBVEtDNnZfUHZLV1Robm9vPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>この記事は、Qiitaにも投稿してます!!
-詳しくは下のリンクから↓
-https://qiita.com/blueman/items/542064585cd44f894494
-TwitterではQiitaの新着記事の通知やおすすめの理工学書の紹介を行ってます!!
-フォローよろしくお願いします!!
-Twitterは下のリンクから↓
-https://twitter.com/0ca00118726208m
-
- はじめに
-様々な関数の任意の2点の接線の交点を求めると面白そうだったので、2つの接線の交点のx座標とy座標の式を求めました。
-また、Pythonのライブラリであるmatplotlibを用...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -9437,8 +9737,8 @@ https://twitter.com/0ca00118726208m
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6006745716">
-        <time id="build-timestamp" datetime="2023-08-29T01:12:34.220Z">2023-08-29T01:12:34.220Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6019317223">
+        <time id="build-timestamp" datetime="2023-08-30T01:12:11.082Z">2023-08-30T01:12:11.082Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
