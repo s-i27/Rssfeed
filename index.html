@@ -22,6 +22,492 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-31 datetime="2023-08-31T17:59:41.000Z">2023-08-31</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-31 datetime="2023-08-31T17:59:41.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/derwind/articles/dwd-cuquantum06"
+                        open
+                      >
+                        <summary class="article-expander__title">cuQuantum で遊んでみる (6) — 最大カット問題と QUBO と QAOA</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/derwind/articles/dwd-cuquantum06">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--cmLCt9va--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:cuQuantum%2520%25E3%2581%25A7%25E9%2581%258A%25E3%2582%2593%25E3%2581%25A7%25E3%2581%25BF%25E3%2582%258B%2520%25286%2529%2520%25E2%2580%2594%2520%25E6%259C%2580%25E5%25A4%25A7%25E3%2582%25AB%25E3%2583%2583%25E3%2583%2588%25E5%2595%258F%25E9%25A1%258C%25E3%2581%25A8%2520QUBO%2520%25E3%2581%25A8%2520QAOA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:derwind%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>目的
+cuQuantum で遊んでみる (5) — VQE その 2 で VQE を無理やり実行してみたが、今回は 3 種類の方法で最大カット問題を解いてみたい。
+
+ 最大カット問題
+Maximum cut にあるように、頂点と辺がつながったグラフにおいて、頂点を黒と白に塗分ける類のものである。辺で繋がった頂点同士が異なる色で塗られている場合に、その辺は “カット可能” という解釈をする。カットできる箇所を最大化するという組み合わせ最適化問題である。
+明らかに 最大カット問題 のほうが明らかに優しい雰囲気の解説である。
+
+ 今回試す手法
+
+
+TYTAN SDK: 疑似量子アニーリング...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/x_point_1/articles/65a0a20bea145f"
+                        open
+                      >
+                        <summary class="article-expander__title">ジェネレータでyieldの後に処理が書いてあったらどうなる</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/x_point_1/articles/65a0a20bea145f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--NXqUB5LJ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%258D%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25A7yield%25E3%2581%25AE%25E5%25BE%258C%25E3%2581%25AB%25E5%2587%25A6%25E7%2590%2586%25E3%2581%258C%25E6%259B%25B8%25E3%2581%2584%25E3%2581%25A6%25E3%2581%2582%25E3%2581%25A3%25E3%2581%259F%25E3%2582%2589%25E3%2581%25A9%25E3%2581%2586%25E3%2581%25AA%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25A8%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25B9%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2588%25E3%2583%25AF%25E3%2583%25B3%25E6%258A%2580%25E8%25A1%2593%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%2586%25E3%2581%25BF%25E3%2581%25B6%25E3%2581%25A9%25E3%2581%2586%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Y3YzY4ZjI4ZDcuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzg4ODA3MWRhN2QuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+どうも、うみぶどうです。エックスポイントワンで働き始めてまだ日が浅いエンジニアです。
+Pythonのジェネレータの動きについて、理解が足りず困った経験から記事を執筆しました。
+表題通りです。どうなるんでしょう。
+
+ そもそもジェネレータってなに
+Pythonにおいて、繰り返し値を返却することができる関数のことです。
+ものすごくざっくり説明すると、関数で値の返却を記述する局面で、
+return value
+とするところをreturnの代わりに、yieldを以下のように使用します。
+for row in rows:
+    yield row
+呼び出される度に一つずつ、値を返却...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/collabostyle/articles/d6e32c3d96b2ec"
+                        open
+                      >
+                        <summary class="article-expander__title">Python（openpyxl）でExcelをHTMLに変換する試み</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/collabostyle/articles/d6e32c3d96b2ec">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--5Kr5l7zr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25EF%25BC%2588openpyxl%25EF%25BC%2589%25E3%2581%25A7Excel%25E3%2582%2592HTML%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%25E8%25A9%25A6%25E3%2581%25BF%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25B3%25E3%2583%25A9%25E3%2583%259C%25E3%2582%25B9%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%25AB%2520Developers%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:TETRER%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MxOTFmZDljMTIuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYyN2RmN2E0ZWIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+今回はExcelで作った文書のレイアウトを、PythonでHTMLに変換するツールを作成してみました。
+サンプルで使った文書は、いわゆるExcel方眼紙の稟議書です。
+
+ 結果
+実行結果から書いてしまいますが、Pythonのライブラリ「openpyxl」を使うことで、
+Excelのセルの情報を読み取り、それっぽくHTML＋CSSに変換できることができました！
+ですが、再現性を上げるには装飾の反映や、マージセルの考慮などが大変なことも分かりました。
+処理の流れを解説しますが、罫線の種類、背景色、文字色の指定などいろいろ未完成です💦
+
+
+ 処理の流れ
+
+ 【１】メイン処理
+エン...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/daidai_daitai/articles/92e8fbbfa79e42"
+                        open
+                      >
+                        <summary class="article-expander__title">日経先物分析その1 ... Sessionの割り当て</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/daidai_daitai/articles/92e8fbbfa79e42">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--LnS4Ac7z--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2597%25A5%25E7%25B5%258C%25E5%2585%2588%25E7%2589%25A9%25E5%2588%2586%25E6%259E%2590%25E3%2581%259D%25E3%2581%25AE1%2520...%2520Session%25E3%2581%25AE%25E5%2589%25B2%25E3%2582%258A%25E5%25BD%2593%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%25A9%2599%25E3%2580%2582%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MjJMLWoxUDdDS1dHZWJjbmh0YUxmV3BGRGNSTnBDQnZZTGYxYUpqQT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>何をするのか
+日経先物を対象にデータの前処理や分析を行います。一度に全部を書くのが大変なので、シリーズ化しちょこちょこ書いて行こうと思っていますが、勉強中の素人なので間違いは勘弁してください。
+
+ その1の目的
+日経先物miniの1分足データを使用し、session名を割り当て、sessionごとにuniqueなIDを割り当てる方法を解説します。
+
+ 準備
+
+ 使用するデータ
+DataFrame
+ 
+shape: (2_874_147, 6)
+┌─────────────────────┬───────┬───────┬───────┬───────┬────────┐
+│ date...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/seven_901/articles/05bd001edd4aaa"
+                        open
+                      >
+                        <summary class="article-expander__title">RyeでWord2Vecの開発環境を構築</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/seven_901/articles/05bd001edd4aaa">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--p7W5BMjd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Rye%25E3%2581%25A7Word2Vec%25E3%2581%25AE%25E9%2596%258B%25E7%2599%25BA%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E6%25A7%258B%25E7%25AF%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:seven_901%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NjZmMyNDM2NTMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+3年ぶりにPythonの開発環境を整えるためにzennなどを調査してみると、最近ではRyeと呼ばれるパッケージ管理ツールが注目されているそうです。
+https://rye-up.com/
+早速、こちらのインストール手順を進めてから、日本語のwikipediaを学習させるためのWord2Vecの開発環境を構築しました。
+その時の環境構築の手順と実際にRyeを利用してみた感想を記述したいと思います。
+
+ リポジトリ
+https://github.com/hagiwa901/word2vec
+
+ 環境
+
+Mac
+Docker：20.10.0
+docker-compose：1.27.4...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/terass_dev/articles/c38e38499e0635"
+                        open
+                      >
+                        <summary class="article-expander__title">座談会記事ができるまで 〜Whisper + pyannote.audio で自動書き起こし・話者分離を試してみた〜</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/terass_dev/articles/c38e38499e0635">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--PmWleX1y--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%25BA%25A7%25E8%25AB%2587%25E4%25BC%259A%25E8%25A8%2598%25E4%25BA%258B%25E3%2581%258C%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2581%25BE%25E3%2581%25A7%2520%25E3%2580%259CWhisper%2520%252B%2520pyannote.audio%2520%25E3%2581%25A7%25E8%2587%25AA%25E5%258B%2595%25E6%259B%25B8%25E3%2581%258D%25E8%25B5%25B7%25E3%2581%2593%25E3%2581%2597%25E3%2583%25BB%25E8%25A9%25B1%25E8%2580%2585%25E5%2588%2586%25E9%259B%25A2%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%259C%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Terass%2520Tech%2520Blog%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:hiroya%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzJiZjJkODQzYTQuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E3ZGI3MTE2ZjQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>株式会社TERASS でエンジニアリングマネージャーを担当している hiroya です。
+前回、TERASS エンジニアメンバーのデスク環境座談会と題した記事を公開しましたが、今回はその記事ができるまでの過程をご紹介したいと思います。
+また、「最新の音声認識モデルを利用することで文字起こし作業がどれだけ簡略化できるか？」といった点について、記事の後半でその手順や実際の精度について説明していきます。
+
+ 全体の流れ
+
+ 1. 記事のストーリーを決める
+記事全体の流れを想定しながら、どんな感じの内容を盛り込むか決めていきます。
+
+
+ 2. スケジュールを確保し、座談会を開催
+TERASSは「...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/mkpoli/articles/ff01135f91d7ee"
+                        open
+                      >
+                        <summary class="article-expander__title">アイヌ語仮名「ㇷ゚」に対する正規表現の罠</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mkpoli/articles/ff01135f91d7ee">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--dP6qdFDq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25A2%25E3%2582%25A4%25E3%2583%258C%25E8%25AA%259E%25E4%25BB%25AE%25E5%2590%258D%25E3%2580%258C%25E3%2587%25B7%25E3%2582%259A%25E3%2580%258D%25E3%2581%25AB%25E5%25AF%25BE%25E3%2581%2599%25E3%2582%258B%25E6%25AD%25A3%25E8%25A6%258F%25E8%25A1%25A8%25E7%258F%25BE%25E3%2581%25AE%25E7%25BD%25A0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:mkpoli%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FmYmE0YjkxMmMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>導入
+アイヌ語は日本語と異なり、閉音節（子音で終わる音節）も存在するので、表記の際音素文字であるラテン文字なら、そのまま p, t, k, m, n, s, r などの子音文字を後ろの付ければ良いわけなので、アイヌ語ローマ字表記では、何も問題が生じない。しかし、元々開音節言語である日本語に特化したカタカナのような仮名文字で表記する際、鼻音 n は「ン」でなんとかなる（実はそれでもまずい事になっているけどここでは割愛する）が、p, t, k, m, n, s, r, h はどうしようもないので、特殊の捨て仮名（小書き仮名文字）を利用することになっている。
+具体的には以下のような特殊仮名...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/okun/articles/3ed213edd1048e"
+                        open
+                      >
+                        <summary class="article-expander__title">[保存版] pandasのメモリ節約方法まとめ</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/okun/articles/3ed213edd1048e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--EPCe3wBJ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255B%25E4%25BF%259D%25E5%25AD%2598%25E7%2589%2588%255D%2520pandas%25E3%2581%25AE%25E3%2583%25A1%25E3%2583%25A2%25E3%2583%25AA%25E7%25AF%2580%25E7%25B4%2584%25E6%2596%25B9%25E6%25B3%2595%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:O-KUN%2520Tech%2520Blog%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:t_nobu%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FiMWVmODg2OWIuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM3MWUwNGEyYjAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>pandasのDataFrameで大容量データを扱っていると、すぐにメモリ超過してしまいます。
+メモリ超過すると、ついスペック側でメモリを上げたくなってしまいますが、やはり費用が嵩んでしまいます。
+しかし、pandasの実装を少し工夫するだけで、使用メモリを大幅に抑えられることが結構あります。
+私はこれまでメモリを節約するためにあらゆる方法を試してきましたので、今回はおすすめの手法をまとめてみました！
+皆さんのサーバー費用が少しでも抑えられると幸いです。
+
+ 基本編
+
+ カラムの型指定をする
+カラムについて、型の指定がないと、数値の場合には自動でint64またはfloat64が付与されて...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/maeda56/articles/da8ea39cd5a030"
+                        open
+                      >
+                        <summary class="article-expander__title">conda環境をjupyter notebookで使う</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/maeda56/articles/da8ea39cd5a030">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--to7ILWP4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:conda%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592jupyter%2520notebook%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:maeda56%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM2ZGZmNmIyMjYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>conda install ipykernel
+python -m ipykernel install --user --name&#x3D;環境名</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/maeda56/articles/7d0a72c90491a5"
+                        open
+                      >
+                        <summary class="article-expander__title">Pytorch3dのインストール</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/maeda56/articles/7d0a72c90491a5">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--GmCJdpp---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Pytorch3d%25E3%2581%25AE%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:maeda56%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM2ZGZmNmIyMjYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>apt-get install g++
+pip install git+https://github.com/facebookresearch/pytorch3d.git
+環境はUbuntu22.04.3LTSのanaconda環境。
+pip　install pytorch3dやcondaではうまく行かなかった。gitからpipでとってくる方法だとうまく行きました。</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/maeda56/articles/07083a654e98e9"
+                        open
+                      >
+                        <summary class="article-expander__title">pip install notebookでPyYaml error</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/maeda56/articles/07083a654e98e9">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Ju_SvlwR--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_64:pip%2520install%2520notebook%25E3%2581%25A7PyYaml%2520error%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:maeda56%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM2ZGZmNmIyMjYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>anaconda環境でpip install notebookとすると以下のログが出ました。
+(省略)
+Attempting uninstall: pyyaml
+    Found existing installation: PyYAML 5.1.2
+ERROR: Cannot uninstall &#x27;PyYAML&#x27;. It is a distutils installed project and thus we cannot accurately determine which files belong to it which would lead to only a partial ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/bdd8a22ba9d6f9"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-296｜A - Alternately</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/bdd8a22ba9d6f9">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--4oQxmYUS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-296%25EF%25BD%259CA%2520-%2520Alternately%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-296 A - Alternately
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getString():
+    return input()
+
+
+def main():
+    n &#x3D; getInt()
+    s &#x3D; getString()
+
+    print(&#x27;Yes&#x27; if s.find(&#x27;MM&#x27;) &#x3D;&#x3D; -1 and s.find(&#x27;FF&#x27;) &#x3D;&#x3D; -1 else &#x27;No&#x27;)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/95d1b7b3b2c836"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-296｜B - Chessboard</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/95d1b7b3b2c836">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--WoW_9YoO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-296%25EF%25BD%259CB%2520-%2520Chessboard%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-296 B - Chessboard
+
+
+
+ 提出結果
+def getStringRow(N):
+    return [input() for _ in range(N)]
+
+
+def main():
+    s &#x3D; getStringRow(8)
+    s.reverse()
+
+    for y in range(8):
+        x &#x3D; s[y].find(&#x27;*&#x27;)
+        if x &gt;&#x3D; 0:
+            print(&#x27;%s%d&#x27; % (chr(ord(&#x27;a&#x27;) + x), y + 1))
+
+
+if __name__...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tmori/articles/5b29373cad0197"
+                        open
+                      >
+                        <summary class="article-expander__title">【ABC317】AtCoder Beginner Contest 317 A-D 振り返り【Python】</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tmori/articles/5b29373cad0197">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--e2nIGP7g--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590ABC317%25E3%2580%2591AtCoder%2520Beginner%2520Contest%2520317%2520A-D%2520%25E6%258C%25AF%25E3%2582%258A%25E8%25BF%2594%25E3%2582%258A%25E3%2580%2590Python%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tmori%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwMWQwYjU2OGIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>https://atcoder.jp/contests/abc317
+
+ A - Potions
+以下の条件になるまで傷口を順番に選択する。
+P_n (傷薬nの回復量) + H (現在の体力) \geq X (目標体力)
+N, H, X &#x3D; map(int, input().split())
+p_list &#x3D; list(map(int, input().split()))
+
+for i, p in enumerate(p_list):
+    if H + p &gt;&#x3D; X:
+        print(i + 1)
+        exit()
+
+ B - MissingNo.
+ナオ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/d2c_mtech_blog/articles/1d4511c9345e7c"
+                        open
+                      >
+                        <summary class="article-expander__title">Pythonにおけるハッシュの扱いとメモリの削減について</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/d2c_mtech_blog/articles/1d4511c9345e7c">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Afr35cM7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2591%25E3%2582%258B%25E3%2583%258F%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E3%2581%25AE%25E6%2589%25B1%25E3%2581%2584%25E3%2581%25A8%25E3%2583%25A1%25E3%2583%25A2%25E3%2583%25AA%25E3%2581%25AE%25E5%2589%258A%25E6%25B8%259B%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:D2C%2520m-tech%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:D2C%2520m-tech%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzJmZTIyZmYyMWQuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI5NDFkOTJhMTkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+こんにちは、D2Cデータサイエンティストの小林です。
+本記事では、Pythonによるハッシュの扱い方とハッシュを用いることで使用するメモリの削減ができるのかを検証します。
+ハッシュについては簡単な紹介のみとなりますので、ハッシュについて深く知りたい方は他の記事を参考していただければと思います。
+
+ 開発環境
+検証において以下の環境を使用しました。
+
+AWS EC2 (インスタンスタイプ: r5.2xlarge)
+Python 3.10系（3.10.9）
+pandas 1.5.1
+memory_profiler 0.61.0
+hashlib 3.10系で提供されているモジュー...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-30 datetime="2023-08-30T22:04:45.000Z">2023-08-30</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-30 datetime="2023-08-30T22:04:45.000Z"></time>
           </button>
@@ -9439,335 +9925,10 @@ https://zenn.dev/umi_mori/books/prompt-engineer
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-02 datetime="2023-08-02T11:51:24.000Z">2023-08-02</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-02 datetime="2023-08-02T11:51:24.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/blueman/articles/046cce5f52f114"
-                        open
-                      >
-                        <summary class="article-expander__title">PythonのライブラリであるOpenCVを用いた中心差分による画素値ごとの微分</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/blueman/articles/046cce5f52f114">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--IMGDO79j--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AE%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2581%25A7%25E3%2581%2582%25E3%2582%258BOpenCV%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E4%25B8%25AD%25E5%25BF%2583%25E5%25B7%25AE%25E5%2588%2586%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E7%2594%25BB%25E7%25B4%25A0%25E5%2580%25A4%25E3%2581%2594%25E3%2581%25A8%25E3%2581%25AE%25E5%25BE%25AE%25E5%2588%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%259E%25E3%2583%25B3%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Zkt1ajRKaldOUWItM0o1cV8yUmFNc1ZockFKNjJBVEtDNnZfUHZLV1Robm9vPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>※この記事は自分のQiitaの記事の転載です。
-Qiitaの記事はこちら
-https://qiita.com/blueman/items/8b9b8a719d59c6f32979
-前回の記事はこちら
-https://zenn.dev/blueman/articles/e30de15f0c9bf3
-
- はじめに
-前回の記事では、数値微分の中で最も精度が高いのは中心差分らしいということが分かりました。
-今回は、中心差分を用いて画像の画素値ごとに中心差分を施していきOpenCVを用いて表示させようと思います。また、matplotlibを用いてRGBのそれぞれのヒストグラムを表示させようと思いま...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/collabostyle/articles/5b0387a403bd3d"
-                        open
-                      >
-                        <summary class="article-expander__title">次世代の SendGrid !? メール送信プラットフォーム Resend</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/collabostyle/articles/5b0387a403bd3d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--WKRgEt8B--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%25AC%25A1%25E4%25B8%2596%25E4%25BB%25A3%25E3%2581%25AE%2520SendGrid%2520%2521%253F%2520%25E3%2583%25A1%25E3%2583%25BC%25E3%2583%25AB%25E9%2580%2581%25E4%25BF%25A1%25E3%2583%2597%25E3%2583%25A9%25E3%2583%2583%25E3%2583%2588%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%25A0%2520Resend%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25B3%25E3%2583%25A9%25E3%2583%259C%25E3%2582%25B9%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%25AB%2520Developers%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:kazuno%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MxOTFmZDljMTIuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMxZWExODEyMWMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>気になるサービスを見つけたので、試してみました〜！！
-https://resend.com/
-
- Resend
-
- Resend とは
-Resend は API 経由でメールを送信することができるサービスです。
-https://resend.com/blog/introducing-resend
-
-Think of it as a next-generation Sendgrid.
-次世代の Sendgrid と考えてください。
-
-次世代の SendGrid と謳っており、開発者の開発体験を重視したメール送信プラットフォームを目指しているそうです。
-
- 料金比較
-SendGrid と利用...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/shytaani/articles/5f7096831542a9"
-                        open
-                      >
-                        <summary class="article-expander__title">【社内勉強会向け①】Pythonについて</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shytaani/articles/5f7096831542a9">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s----d7wFeg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E7%25A4%25BE%25E5%2586%2585%25E5%258B%2589%25E5%25BC%25B7%25E4%25BC%259A%25E5%2590%2591%25E3%2581%2591%25E2%2591%25A0%25E3%2580%2591Python%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Toru.T%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y1FiejZORHAwb08wbTdxWS05dUFJZGlfYVIyVlJUbHdGb1A3ODRieGJJPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>1. Pythonとは
-Python（パイソン）は、汎用的で高水準なプログラミング言語であり、1991年にGuido van Rossumによって設計・開発されました。Pythonは、シンプルで読みやすい構文を持ち、人間が理解しやすいコードを書きやすいことが特徴です。
-
- Zen of Python
-Pythonの設計思想は、「The Zen of Python」[1]として知られる一連の原則によって表現されています。これはPythonに多大な貢献をしたティム・ピーターズ（Tim Peters）によって提唱され、Pythonコミュニティで広く受け入れられています。
-
-Beautifu...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/tabukichi/articles/baca41b5227fc1"
-                        open
-                      >
-                        <summary class="article-expander__title">StreamlitとAzure OpenAI APIを組み合わせて簡単にAIアプリを作成しよう！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tabukichi/articles/baca41b5227fc1">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--gq_XTzk5--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Streamlit%25E3%2581%25A8Azure%2520OpenAI%2520API%25E3%2582%2592%25E7%25B5%2584%25E3%2581%25BF%25E5%2590%2588%25E3%2582%258F%25E3%2581%259B%25E3%2581%25A6%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25ABAI%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tbkt%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2QzYmM0Yjk4OWQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-今回は、PythonのフレームワークであるStreamlitを活用して、簡単にインタラクティブなAIアプリケーションを作成する方法をご紹介します。
-Streamlitを使うと、HTMLやJavascriptを書くことなく、Pythonのみでウェブアプリケーションを作成できます。これにより、プログラミングに詳しくない方でも簡単にアプリケーションを構築できるようになります。
-さらに、今回はAzure OpenAIのAPIを活用して、AIに何らかの生成処理を行わせるアプリケーションを作成します。Azure OpenAI APIは、自然言語処理や文章生成に特化した強力なAPIであり...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/tk_tech/articles/5bc14089f986c8"
-                        open
-                      >
-                        <summary class="article-expander__title">Lambda + API GatewayでHTMLからPOST通信して、内容によって表示を分岐させる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tk_tech/articles/5bc14089f986c8">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--5FRFFwy4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Lambda%2520%252B%2520API%2520Gateway%25E3%2581%25A7HTML%25E3%2581%258B%25E3%2582%2589POST%25E9%2580%259A%25E4%25BF%25A1%25E3%2581%2597%25E3%2581%25A6%25E3%2580%2581%25E5%2586%2585%25E5%25AE%25B9%25E3%2581%25AB%25E3%2582%2588%25E3%2581%25A3%25E3%2581%25A6%25E8%25A1%25A8%25E7%25A4%25BA%25E3%2582%2592%25E5%2588%2586%25E5%25B2%2590%25E3%2581%2595%25E3%2581%259B%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:TKTK%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2YwYjg3OTRmNzcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>概要
-キーワードを入力できるページAがある。
-あるキーワードを入力し、POSTで送信する。
-キーワードが正しいものであればページBを表示し、正しいキーワードでなければページCを表示する。
-
-ページAへはGETでアクセスする。
-ページB, CへはPOSTでアクセスする。
-
-使用AWSサービス
-
-API Gateway
-Lambda Python 3.11
-
-
- 参考サイト
-AWS LambdaでHTMLを出力してみた
-https://qiita.com/yoshidasts/items/d58c555aed2693e99ae6
-こちらのサイトを参考に作成しようとしてみたが、かなり前の記...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/lamrongol/articles/6fe132ba619a52"
-                        open
-                      >
-                        <summary class="article-expander__title">知識ゼロから始める具体的なプログラミング入門</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/lamrongol/articles/6fe132ba619a52">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--y3VZFN-J--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%259F%25A5%25E8%25AD%2598%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589%25E5%25A7%258B%25E3%2582%2581%25E3%2582%258B%25E5%2585%25B7%25E4%25BD%2593%25E7%259A%2584%25E3%2581%25AA%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E5%2585%25A5%25E9%2596%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Laml%2520%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NiNDRiZjhhNjMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>試しに「プログラミング入門」「プログラミング 始め方」で検索したところ、どうすればプログラミングを（無料で）勉強できるか具体的に書いてるページがなかった（2022年現在）ので書いてみることにします。
-
- プログラミング言語とは
-プログラミングを始めるにはまずプログラミング言語を選ばなければいけません。プログラミング言語とはコンピュータ（スマホや家電内蔵のものも含む）にどんな動作を行うべきかを記述するためのものです。なぜそんなものが必要なのかというと、コンピュータというのは0と1（より正確には電流のオン・オフ）しか判別できないため、指示するためには「0100001011...」というように...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/enven/articles/python_annotations_with_future"
-                        open
-                      >
-                        <summary class="article-expander__title">[python] __future__.annotations をインポートすると__annotations__が文字列になる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/enven/articles/python_annotations_with_future">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--_XHQmBmY--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255Bpython%255D%2520__future__.annotations%2520%25E3%2582%2592%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E3%2581%2599%25E3%2582%258B%25E3%2581%25A8__annotations__%25E3%2581%258C...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2588%25E3%2582%2593%25E3%2581%25B6%25E3%2582%2593%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2g1LW5HV3VTeEFVM1VzVHV4bWljUVVCUDhSMXUtZ19IU0VpQTdUPXMyNTAtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>ちょっとはまったので備忘録.
-環境: windows python 3.11.4, 3.10.5
-
- 背景
-from dataclasses import dataclass
-
-
-@dataclass
-class A:
-    f1: str
-
-
-@dataclass
-class B:
-    f2: A
-    f3: int | None
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    print(B.__annotations__)
-
-上記コードを実行すると以下のような出力になる
-{&#x27;f2&#x27;: , &#x27;f3&#x27;: i...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/esm/articles/617c02f0cc41ef"
-                        open
-                      >
-                        <summary class="article-expander__title">【FDO43】【会話文章生成 その1】ChatGPTのAPIを利用したアプリケーションの実装</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/esm/articles/617c02f0cc41ef">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--tzNBv4b7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590FDO43%25E3%2580%2591%25E3%2580%2590%25E4%25BC%259A%25E8%25A9%25B1%25E6%2596%2587%25E7%25AB%25A0%25E7%2594%259F%25E6%2588%2590%2520%25E3%2581%259D%25E3%2581%25AE1%25E3%2580%2591ChatGPT%25E3%2581%25AEAPI%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2581%25AE%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25B0%25B8%25E5%2592%258C%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2583%259E%25E3%2583%258D%25E3%2582%25B8%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588%2520Tech%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:sfjwr%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2UxYzlhYmNlZjEuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WU00VG5xR2pzRl9UYS10V0xrYVpzVy1YT2pDb1NOTmZ3LXRTVk89czk2LWM&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>この記事は、「おしゃべりクマちゃん🧸」シリーズの記事になります。
-ChatGPTのAPIを利用して、おしゃべりクマちゃんの心臓部、雑談会話の文章を生成する機能(以降、発言生成機能と呼称)を作成しました。
-その機能についての紹介を、何回かに分けて行なっていきます。
-今回は、ChatGPTのAPIの使い方の解説になります😀
-
- ChatGPTのAPIについて
-ChatGPTのAPIは、引数にプロンプト(と必要なら会話の履歴)を与えて呼び出すことで、そのプロンプトに対する回答を生成させることができます。
-プロンプトとはChatGPTに与える指示のようなもので、日本語や英語などの自然言語で記述し...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/libra189/articles/a37d90688a0442"
-                        open
-                      >
-                        <summary class="article-expander__title">Jinjaテンプレートから自作関数を呼び出す</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/libra189/articles/a37d90688a0442">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--GFowhuqe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Jinja%25E3%2583%2586%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%2588%25E3%2581%258B%25E3%2582%2589%25E8%2587%25AA%25E4%25BD%259C%25E9%2596%25A2%25E6%2595%25B0%25E3%2582%2592%25E5%2591%25BC%25E3%2581%25B3%25E5%2587%25BA%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%25AA%25E3%2583%2596%25E3%2583%25A9%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVjODVkMzFkM2UuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>ご閲覧ありがとうございます。
-FlaskのJinjaテンプレートでFlask側で定義した自作関数を呼び出したいと思ったのですが、少し面倒だったので記録として残しておきます。
-
- 検証環境
-
-
-
-環境
-バージョン
-
-
-
-
-OS
-MacOS 12.3
-
-
-Python
-3.9.6
-
-
-Flask
-2.0.2
-
-
-Jinja
-3.1.1
-
-
-
-
- 解決したい問題
-例えば、Flaskで動的に画面に値を表示したい時、Jinjaにはそのような関数は用意されていないため、一般的にはテンプレート呼び出し時に結果を引き渡す必要があります
-コード例
-
-app.py
-from flask import Fla...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6031832789">
-        <time id="build-timestamp" datetime="2023-08-31T01:12:40.970Z">2023-08-31T01:12:40.970Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6044219680">
+        <time id="build-timestamp" datetime="2023-09-01T01:17:00.595Z">2023-09-01T01:17:00.595Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
