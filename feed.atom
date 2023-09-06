@@ -2,10 +2,206 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-09-05T01:11:04.659Z</updated>
+    <updated>2023-09-06T01:12:15.938Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[cuQuantum で遊んでみる (9) — 少し規模が大きめの QAOA を計算する]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-cuquantum09</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-cuquantum09"/>
+        <updated>2023-09-05T15:51:40.000Z</updated>
+        <summary type="html"><![CDATA[目的
+cuQuantum で遊んでみる (8) — QAOA の期待値計算高速化 で大分計算周りをマシにしたのでもう少し本格的な計算をしてみたいというもの。
+なお、今回の計算、どこか間違えているようなのだが間違えているなりにそこそこ行けてそうなので、一旦記事にしてしまって後日修正したい。
+実験は Google Colab 上で T4 を使って行った。そんな手軽な環境で本格的な QAOA も VQE も実行できるのである。
+
+ お題
+TYTANSDK のチュートリアル 線形回帰 を拝借したい。因みにこの問題は疑似量子アニーリングで計算したらすぐに結果が得られる。
+
+ QAOA に書き直...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[日経先物分析その2 ... SQまでの残存時間の計算]]></title>
+        <id>https://zenn.dev/daidai_daitai/articles/64f45e2d3df2b0</id>
+        <link href="https://zenn.dev/daidai_daitai/articles/64f45e2d3df2b0"/>
+        <updated>2023-09-05T13:23:09.000Z</updated>
+        <summary type="html"><![CDATA[その1では何をしたのか
+その1では日経先物のタイムバーに、DaySessionとNightSessionの情報を追加し、SesssionごとにUniqueなIDを割り当てました。
+今回その情報は使用しませんが、気になる方は見てみて下さい。
+https://zenn.dev/daidai_daitai/articles/92e8fbbfa79e42
+
+ その2では何をするのか
+日経先物のつなぎ足データから次のSQまでの残存時間を計算します。今回はタイムバーを使用しますが、その他の方法でサンプリングされたデータでも、コードを少し変えれば使用できると思います。
+
+ SQとは
+以下は生成AI...]]></summary>
+        <author>
+            <name>橙。</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[一般社団法人サイバー技術・インターネット自由研究会の電子公告をPythonで読む]]></title>
+        <id>https://zenn.dev/notch_man8600/articles/efee2fb94b1519</id>
+        <link href="https://zenn.dev/notch_man8600/articles/efee2fb94b1519"/>
+        <updated>2023-09-05T12:33:08.000Z</updated>
+        <summary type="html"><![CDATA[最近、Telnetがホットですね。
+
+というわけでPythonで読んでみました。なお、telnetlibでは上手くいきませんでした。
+# Standard Library
+import socket
+
+try:
+    sock = socket.create_connection(("koukoku.shadan.open.ad.jp", 23))
+    while True:
+        chunk = sock.recv(2)
+        if not chunk:
+            break
+        try:
+            print(chun...]]></summary>
+        <author>
+            <name>notch_man</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】顔データセットの間違い探し（失敗編②）]]></title>
+        <id>https://zenn.dev/ykesamaru/articles/83b171b045809c</id>
+        <link href="https://zenn.dev/ykesamaru/articles/83b171b045809c"/>
+        <updated>2023-09-05T12:06:24.000Z</updated>
+        <summary type="html"><![CDATA[顔データセットの間違い探し 失敗編②
+前回の記事では、マシンが熱暴走して何回かブラックアウトするという屈辱を味わいました。今回は、その続きです。
+
+!
+この記事で紹介している方法で、顔データセットの間違い探しを行いましたが、処理時間が異常に長く、諦めました。ですので、以降の記事を「失敗編②」としました。
+
+前回の記事
+https://zenn.dev/ykesamaru/articles/d4b78ea53b02e2
+前回の手法では、顔画像から特徴ベクトルを取得し、その後組み合わせを作成していました。そこで今回は、特徴ベクトルを作成する段階と、組み合わせからコサイン類似度を計算する段...]]></summary>
+        <author>
+            <name>yKesamaru</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【個人メモ】RTX4090+llama.cppでGPUオフロードできなかったので解決した]]></title>
+        <id>https://zenn.dev/saldra/articles/26288e2f03f2ae</id>
+        <link href="https://zenn.dev/saldra/articles/26288e2f03f2ae"/>
+        <updated>2023-09-05T05:09:09.000Z</updated>
+        <summary type="html"><![CDATA[概要
+RTX-4090環境でtext-generation-webui環境を構築していたところ、なぜかllama.cppのモデルでGPUオフロードできなかったので、調べて解決した。
+https://zenn.dev/saldra/articles/619232a81f2705
+
+ やったこと
+
+ pytorchの最新化
+nvcc -Vを行ったところ、CUDA12系だったのでpytorchを入れなおした。
+pip install --pre torch --index-url https://download.pytorch.org/whl/nightly/cu121
+これでも直らなか...]]></summary>
+        <author>
+            <name>Sald ra</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-299｜B - Trick Taking]]></title>
+        <id>https://zenn.dev/hyperdb/articles/daa9c8ec47568a</id>
+        <link href="https://zenn.dev/hyperdb/articles/daa9c8ec47568a"/>
+        <updated>2023-09-05T04:36:12.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-299 B - Trick Taking
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n, t = getIntMap()
+    c = [0] + getIntList()
+    r = [0] + getIntList()
+
+    a = [i for i in range(len(c)) if c[i] ==...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-299｜A - Treasure Chest]]></title>
+        <id>https://zenn.dev/hyperdb/articles/75aa806a5a4a1d</id>
+        <link href="https://zenn.dev/hyperdb/articles/75aa806a5a4a1d"/>
+        <updated>2023-09-05T04:36:12.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-299 A - Treasure Chest
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getString():
+    return input()
+
+
+def main():
+    n = getInt()
+    s = getString()
+
+    print('in' if s.find('|') < s.find('*') < s.rfind('|') else 'out')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【量子コンピュータ】IBM量子開発者認定試験(C1000-112)サンプル問題をしがんでしがんで舐め回す(後編  Q011-20)]]></title>
+        <id>https://zenn.dev/whitishlion/articles/d6c4765a8f1684</id>
+        <link href="https://zenn.dev/whitishlion/articles/d6c4765a8f1684"/>
+        <updated>2023-09-05T02:01:06.000Z</updated>
+        <summary type="html"><![CDATA[みなさんこんにちは！
+この記事は，IBMが提供する量子開発者認定資格試験 Exam C1000-112: Fundamentals of Quantum Computation Using Qiskit v0.2X Developerサンプル問題の解答と解説記事です！
+今回は後編で，前編は下記ページにありますので，まだご覧になってない方は是非ご一読ください！
+https://zenn.dev/whitishlion/articles/daff336619acef
+前編で取り扱ったQ01.~Q10.の続きでQ11.~20を扱います。
+では，早速解説の続きに進みたいと思います！
+
+第11問は...]]></summary>
+        <author>
+            <name>oreo_k</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[移行業務の改善 その3 CSV加工の分離]]></title>
+        <id>https://zenn.dev/superstudio/articles/17e346b27114ef</id>
+        <link href="https://zenn.dev/superstudio/articles/17e346b27114ef"/>
+        <updated>2023-09-05T02:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+弊社では ecforce というシステムをSaaSという形でサービスを提供しています。
+ecforceの導入を希望されるクライアント様には、大きく2パターンがあります。
+
+
+新規で ECを立ち上げたいというクライアント様
+別のカートシステムを現在使っており、ecforceに乗り換えたいというクライアント様
+
+後者につきまして、当然ながら顧客や注文データをリセットするわけにもいかないので、 既存データも引き継ぎたい という要望をいただくことが大多数です。
+ただ他社のカートシステムとecforceではデータ構造が異なるので、データを抽出してそのままecforceのデータベースに...]]></summary>
+        <author>
+            <name>Yuji Miyashita</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Golangで重み付き乱択アルゴリズムを作成したので検証してみる]]></title>
         <id>https://zenn.dev/koupro0204/articles/bf87dea2478b72</id>
@@ -207,6 +403,20 @@ Webフレームワークの選択: Pythonには様々なWebフレームワー...
 備忘録として使いつつ、何か教えてくれる人がいればラッキーと思う、そんなよこしまな気持ちで投稿してみよう。初投稿なので読みにくいかも、まいっか。]]></summary>
         <author>
             <name>ベテラン初心者</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【量子コンピュータ】IBM量子開発者認定試験(C1000-112)サンプル問題をしがんでしがんで舐め回す(前編 Q01-10)]]></title>
+        <id>https://zenn.dev/whitishlion/articles/daff336619acef</id>
+        <link href="https://zenn.dev/whitishlion/articles/daff336619acef"/>
+        <updated>2023-09-04T07:22:29.000Z</updated>
+        <summary type="html"><![CDATA[みなさんこんにちは！
+この記事は，IBMが提供する量子開発者認定資格試験 Exam C1000-112: Fundamentals of Quantum Computation Using Qiskit v0.2X Developerサンプル問題の解答と解説記事です！
+IBMは, 当IBM量子開発者認定という資格を提供しており，その資格取得のためには当試験のpassが必要がです。(筆者は2023年8月にIBM量子開発者認定を取得。取得ホヤホヤ🍲で本記事執筆中です！)
+本記事はとにかくボリュームが多いため、試験自体の説明は概要に留め, サンプル問題の解説に集中しています。
+また，本前編/後...]]></summary>
+        <author>
+            <name>oreo_k</name>
         </author>
     </entry>
     <entry>
@@ -6298,161 +6508,6 @@ def tournamentWinner(competitions, results):
         if results[i]:  # もしi番目の競技の結果がTrue（チーム1...]]></summary>
         <author>
             <name>takuh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[並列処理による高速化の方法【ChatGPT / LangChain / Python】]]></title>
-        <id>https://zenn.dev/umi_mori/articles/langchain-async-run</id>
-        <link href="https://zenn.dev/umi_mori/articles/langchain-async-run"/>
-        <updated>2023-08-07T11:47:12.000Z</updated>
-        <summary type="html"><![CDATA[はじめまして、ますみです！
-
-この記事では、「LangChain」というライブラリを使って、「複数のプロンプト処理を高速化する方法」を解説します。
-ChatGPT APIを使ったシステムを作った時に、処理時間がかかりすぎて、高速化したい時ってありますよね。
-そんな時に、LangChainのAgentとasyncioライブラリを組み合わせることで、処理を同時に実行することで高速化することができます！
-ChatGPTやLangChainについてまだ詳しくない方は、こちらを先にご覧ください◎
-https://zenn.dev/umi_mori/books/chatbot-chatgpt
-htt...]]></summary>
-        <author>
-            <name>ますみ@エンジニア</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ウェブページをChatGPTに学習させる方法【Python / LangChain / FAQ】]]></title>
-        <id>https://zenn.dev/umi_mori/articles/langchain-indexes-webpage</id>
-        <link href="https://zenn.dev/umi_mori/articles/langchain-indexes-webpage"/>
-        <updated>2023-08-07T06:18:11.000Z</updated>
-        <summary type="html"><![CDATA[はじめまして、ますみです！
-
-この記事では、「LangChain」というライブラリを使って、「特定のウェブページを学習したChatGPTの実装方法」を解説します。
-この記事を読むことで、企業や商品の紹介サイト、あるいはプログラミングの難解なドキュメンテーションを元にしたチャットボットの作成が可能になります。
-ChatGPTやLangChainについてまだ詳しくない方は、こちらを先にご覧ください◎
-https://zenn.dev/umi_mori/books/chatbot-chatgpt
-https://zenn.dev/umi_mori/books/prompt-engineer
-!...]]></summary>
-        <author>
-            <name>ますみ@エンジニア</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-279｜A - wwwvvvvvv]]></title>
-        <id>https://zenn.dev/hyperdb/articles/91367b290f84eb</id>
-        <link href="https://zenn.dev/hyperdb/articles/91367b290f84eb"/>
-        <updated>2023-08-07T03:53:07.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-279 A - wwwvvvvvv
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s = list(getString())
-
-    print(s.count('v') + s.count('w') * 2)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-279｜B - LOOKUP]]></title>
-        <id>https://zenn.dev/hyperdb/articles/31e47fc7e2f34e</id>
-        <link href="https://zenn.dev/hyperdb/articles/31e47fc7e2f34e"/>
-        <updated>2023-08-07T03:53:07.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-279 B - LOOKUP
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s = getString()
-    t = getString()
-
-    print('Yes' if s.find(t) >= 0 else 'No')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[備忘録] - macのVSCodeで作成したpythonのvenv環境が利用できるインタプリタ一覧に出てこなかった時の設定方法]]></title>
-        <id>https://zenn.dev/kazh/articles/00003_mac_vscode_python_venv_enviroment</id>
-        <link href="https://zenn.dev/kazh/articles/00003_mac_vscode_python_venv_enviroment"/>
-        <updated>2023-08-06T14:37:48.000Z</updated>
-        <summary type="html"><![CDATA[環境と背景
-Macbook M2でHomebrewを使ってPythonをインストール。
-その後、任意のフォルダにvenvで仮想環境を作成。
-しかし、VSCodeのインタプリタ選択のリストに作成したvenv環境が出てこない。
-このインタプリタ選択のリストに作成したvenv環境を表示させる方法をメモしておく。
-※ 赤丸の場所をクリックすると、上に「インタープリターの選択」が出てくる。
-
-
- 設定方法
-settings.jsonファイルに以下を書き込む。
-// Folders in your home directory to look into for virtual environme...]]></summary>
-        <author>
-            <name>日高一博</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonのPillowで画像に外枠をつける]]></title>
-        <id>https://zenn.dev/not75743/articles/718e72a20453ff</id>
-        <link href="https://zenn.dev/not75743/articles/718e72a20453ff"/>
-        <updated>2023-08-06T13:11:36.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-今回はpythonのPillowで画像に外枠をつけてみました。
-外枠をつければZennの添付画像がさらに見やすくなるため、ぜひともマスターしたいところです。
-
- 方針
-PillowのImageOpsモジュールを使います。
-expandメソッドで画像に枠線を追加することが出来るため、今回の用途にドンピシャです。
-https://pillow.readthedocs.io/en/stable/reference/ImageOps.html#PIL.ImageOps.expand
-
- イメージ図
-
-
- 環境
-Ubuntu 20.04
-Python 3.11.1
-
- 検証
-
- 使用...]]></summary>
-        <author>
-            <name>not75743</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[OptunaのLightGBMTunerに学ぶ、LightGBMのハイパーパラメーターのチューニング方法]]></title>
-        <id>https://zenn.dev/nishimoto/articles/8d575924cc619d</id>
-        <link href="https://zenn.dev/nishimoto/articles/8d575924cc619d"/>
-        <updated>2023-08-06T13:11:32.000Z</updated>
-        <summary type="html"><![CDATA[概要
-OptunaのLightGBMTunerを読んでいたら、LightGBMTunerにハイパラチューニングのナレッジがぶっこまれていたのでシェア。
-https://optuna.readthedocs.io/en/stable/_modules/optuna/integration/_lightgbm_tuner/optimize.html#LightGBMTuner
-
-
- 何をチューニングすればいいの？
-以下に「feature fraction, num_leaves, bagging_fraction および bagging_freq のいずれかによる変化が大きく」と記載があ...]]></summary>
-        <author>
-            <name>nishimoto</name>
         </author>
     </entry>
 </feed>
