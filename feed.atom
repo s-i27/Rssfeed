@@ -2,10 +2,138 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-09-09T01:10:13.820Z</updated>
+    <updated>2023-09-10T01:16:26.541Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[【AI】AIの本を読んだのでレビュー]]></title>
+        <id>https://zenn.dev/tunaproducts/articles/de841b91a1a856</id>
+        <link href="https://zenn.dev/tunaproducts/articles/de841b91a1a856"/>
+        <updated>2023-09-10T00:44:32.000Z</updated>
+        <summary type="html"><![CDATA[!
+AI関連本を読んだのでレビューをしてみます
+
+
+ 読んだ本
+
+タイトル：
+投資対効果を最大化するAI導入7つのルール
+著者：石川聡彦(株式会社アイデミー社長)
+
+https://www.amazon.co.jp/投資対効果を最大化する-AI導入７つのルール-石川-聡彦-ebook/dp/B0854G2KS3
+※Kindle版もあり、
+Kindle Unlimited会員は追加料金なしで読めます。
+
+ レビュー（最高★★★⇔最低☆☆☆）
+読みやすさ　★★☆
+専門性　　　★★☆
+総合　　　　★★☆
+
+ 全体概略
+本著の序文には以下のように記されています。
+
+技術としては草創期、歴史の浅...]]></summary>
+        <author>
+            <name>tunaProducts&lt;tech&gt;(つなぷろテック)</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPI (mangum) を AWS Lambda で動かす]]></title>
+        <id>https://zenn.dev/pilefort/articles/a286144465cb6b</id>
+        <link href="https://zenn.dev/pilefort/articles/a286144465cb6b"/>
+        <updated>2023-09-09T16:26:50.000Z</updated>
+        <summary type="html"><![CDATA[対象
+
+PythonのFastAPIをAWS Lambdaで動かしたい人
+カスタムイメージを使ってビルドしたい人
+ローカルでの動作確認方法を知りたい人
+AWSのリソース作成の概略を知りたい人
+
+
+ 利用するライブラリのバージョン
+以下のライブラリを利用します。
+fastapiは執筆時点での最新版、mangumは0.11.0より新しいバージョンだとエラーが発生するため、このバージョンとしてます。
+pydanticやstarlette, typing-extensionsはfastapiやmangumの依存ライブラリです。
+fastapi==0.103.1
+pydantic==2.3.0...]]></summary>
+        <author>
+            <name>pilefort</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HuggingfaceのTrainer.train()でログを残す方法]]></title>
+        <id>https://zenn.dev/nishimoto/articles/4b7d0fe2592504</id>
+        <link href="https://zenn.dev/nishimoto/articles/4b7d0fe2592504"/>
+        <updated>2023-09-09T12:18:06.000Z</updated>
+        <summary type="html"><![CDATA[結論とソースコード
+こんな感じでTrainerのcallbacksにtransformers.TrainerCallbackを継承したクラスを渡せばOK。
+def init_logger(log_file='train.log'):
+    from logging import getLogger, INFO, FileHandler, Formatter, StreamHandler
+    logger = getLogger(__name__)
+    logger.setLevel(INFO)
+    handler1 = StreamHandler()
+    handl...]]></summary>
+        <author>
+            <name>nishimoto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Python] Stringと数字を一緒に出力(f-String)]]></title>
+        <id>https://zenn.dev/huraipan/articles/5a2be9823f8716</id>
+        <link href="https://zenn.dev/huraipan/articles/5a2be9823f8716"/>
+        <updated>2023-09-09T07:36:14.000Z</updated>
+        <summary type="html"><![CDATA[今日は簡単にf-Stringの使い方を勉強しましょう。
+
+suji = 12
+
+print("sujiは " + suji + "です。")   ## error
+
+今までintとかfloatをstringと一緒にprint()関数の中で使うためにintをStringに変更して少し面倒くさいでした
+suji = 12
+
+print("sujiは " + str(suji) + "です。")   ## sujiは 12です。
+
+
+しかしf-Stringを使ったらもっと簡単にできます。
+まずダブルクォーテーションの前にfを付きます。
+そして使いたいintとかfloat関数名を{}の中に書きま...]]></summary>
+        <author>
+            <name>huraipan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Mojo の __moveinit__ を適用させるには __del__ が必要]]></title>
+        <id>https://zenn.dev/ttttkkkkk/articles/295089fcf26129</id>
+        <link href="https://zenn.dev/ttttkkkkk/articles/295089fcf26129"/>
+        <updated>2023-09-09T05:26:41.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Pythonと互換性がありながら、高速化された新言語 Mojoが一般公開され、色々触ってみています。
+Mojo の特徴として、型に以下の3種類が存在することが挙げられます。
+
+ムーブ・コピー不可
+ムーブ可能
+
+
+__moveinit__ の実装が条件
+
+
+コピー・ムーブ可能
+
+
+__copyinit__ の実装が条件
+ムーブの時には__moveinit__ があればそちらがよばれるし、なければ__copyinit__が呼ばれる
+
+
+
+この3種類をうまく使うことで所有権の管理が可能です。
+また
+a = b^
+のような ^ transfer 演算子が呼ばれた際には、__move...]]></summary>
+        <author>
+            <name>Taqqn</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Mojo の borrowed, inout, owned]]></title>
         <id>https://zenn.dev/ttttkkkkk/articles/f3cfb2ba5e73d6</id>
@@ -6004,272 +6132,6 @@ PySimpleGUIは、PythonでGUIアプリケーションを作成するためのラ
 
 levenshtein_distance.py
 def levenshteinDistanc...]]></summary>
-        <author>
-            <name>takuh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonからGoへ：参照渡しと値渡しを整理してスムーズな移行をする]]></title>
-        <id>https://zenn.dev/shibata/articles/67a25654171980</id>
-        <link href="https://zenn.dev/shibata/articles/67a25654171980"/>
-        <updated>2023-08-11T08:18:42.000Z</updated>
-        <summary type="html"><![CDATA[背景
-いざGoを書くにあたり参照渡しと値渡しが曖昧だったので再整理しました。
-
- 本文
-例えば、次のGoのコードを見てみましょう。
-showName 関数の引数は①user Userとするのか、それとも②user *Userとするのか、どちらが適切なのでしょうか？
-package main
-
-import (
-    "fmt"
-)
-
-type User struct {
-    Name string
-    Age  int
-}
-
-func showName(user *User) {
-    fmt.Println(user.Name)
-}
-
-func main() {
-   ...]]></summary>
-        <author>
-            <name>Shibata</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】逆ポーランド記法]]></title>
-        <id>https://zenn.dev/takuh/articles/15ee93dfd0771c</id>
-        <link href="https://zenn.dev/takuh/articles/15ee93dfd0771c"/>
-        <updated>2023-08-11T07:52:59.000Z</updated>
-        <summary type="html"><![CDATA[作るもの
-逆ポーランド記法（Reverse Polish Notation、RPN）を使用して表現された数式を計算する関数。
-中置記法で表現された式「3 + 4」を逆ポーランド記法に変換すると「3 4 +」となる。この式をRPNで解釈すると、最初に「3」と「4」をスタックに積み、次に「+」演算子が来たときにスタックから2つの数値を取り出して演算し、計算結果をスタックに戻すという手順が続く。
-
- 実装
-
-rpn.py
-def evaluate_rpn(expression):
-    stack = []  # 演算対象の数値や中間結果を保持するスタック
-
-    # RPN式の各トー...]]></summary>
-        <author>
-            <name>takuh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python(pytest)でテスト書くならfixture,conftest,parametrizeを理解すると世界が一気に変わる]]></title>
-        <id>https://zenn.dev/tk_resilie/articles/python_test_template</id>
-        <link href="https://zenn.dev/tk_resilie/articles/python_test_template"/>
-        <updated>2023-08-11T06:53:06.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Pythonのテストライブラリといえばpytestが一般的です。
-Python標準のuniitestとは異なり、クラスベースではなく関数ベースでテストコードを記述することが一般的ですが、fixture,conftest,parametrizeを理解すると一気に世界が変わり、テスト体験が圧倒的に向上するため、これらの実装方法を紹介します。
-
- リポジトリ
-本記事の説明に使用しているサンプルのテスト実装は、以下のリポジトリです。
-https://github.com/takashi-yoneya/python-test-template
-
- 想定読者
-PythonやGitの基本的な...]]></summary>
-        <author>
-            <name>米谷 昂(Python/FastAPIプロフェッショナル)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】パターンマッチャー]]></title>
-        <id>https://zenn.dev/takuh/articles/d49963a0ffa5fd</id>
-        <link href="https://zenn.dev/takuh/articles/d49963a0ffa5fd"/>
-        <updated>2023-08-11T06:37:58.000Z</updated>
-        <summary type="html"><![CDATA[作るもの
-与えられたパターンに対して、文字列内の部分文字列の組み合わせを探し、一致する場合にその組み合わせを返す関数。
-
- 実装
-
-pattern_matcher.py
-def patternMatcher(pattern, string):
-    # パターンが空または文字列よりも長い場合は、マッチング不可能なので空のリストを返す
-    if len(pattern) == 0 or len(pattern) > len(string):
-        return []
-
-    # パターンの最初の文字を取得
-    firstLetterA = pattern[0...]]></summary>
-        <author>
-            <name>takuh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[StreamlitでChatGPTアプリを作成しよう!]]></title>
-        <id>https://zenn.dev/tsuzukia/articles/bc0564a7a7f427</id>
-        <link href="https://zenn.dev/tsuzukia/articles/bc0564a7a7f427"/>
-        <updated>2023-08-11T05:20:41.000Z</updated>
-        <summary type="html"><![CDATA[StreamlitでChatGPTアプリが作れちゃうんです。
-しかもstreaming機能ありで結構本家に近いですよ！
-
-
- Streamlitとは？
-Streamlitは、PythonでWebアプリケーションを素早く作成するためのオープンソースライブラリです。データ分析、可視化、機械学習モデルのデモなどに特に適しており、コーディングの専門知識がなくても使いやすいツールです。
-https://streamlit.io/
-
- ChatGPTとは？
-ChatGPTについてはご存じですよね？ChatGPTはOpenAIによって開発された自然言語処理のモデルで、人間のような文章の生成が可能です。...]]></summary>
-        <author>
-            <name>TAKEZO</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【2023年度最新版】Twitter API 取得方法]]></title>
-        <id>https://zenn.dev/eito_blog/articles/a982fdb073493a</id>
-        <link href="https://zenn.dev/eito_blog/articles/a982fdb073493a"/>
-        <updated>2023-08-11T05:04:04.000Z</updated>
-        <summary type="html"><![CDATA[Twitter APIを利用することでツイート処理を自動化することができます。
-本記事ではTwitter APIの取得方法について解説していきます。
-※電話番号、メールアドレスが登録されているTwitterアカウントを所持していることが前提となります。
-
- Twitter Developersにアクセス
-以下のURLにアクセスします。Twitterアカウントのログインが求められることもあるのでその際はログインをします。
-https://developer.twitter.com/en/apps
-
- Create an appをクリック
-その後Create an appをクリックします。...]]></summary>
-        <author>
-            <name>エイト</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】カレンダーマッチング]]></title>
-        <id>https://zenn.dev/takuh/articles/4b591ffb605b9f</id>
-        <link href="https://zenn.dev/takuh/articles/4b591ffb605b9f"/>
-        <updated>2023-08-11T04:18:51.000Z</updated>
-        <summary type="html"><![CDATA[作るもの
-2人のカレンダースケジュールを比較し、共通の空き時間（会議を開催できる時間帯）を見つけるための関数。
-
- 実装
-
-calendar_matching_py
-# ２つのカレンダーのスケジュールを比較し、共通の空き時間を見つける関数
-def calendarMatching(calendar1, dailyBounds1, calendar2, dailyBounds2, meetingDuration):
-    # 両カレンダーの営業開始と終了の最大・最小時間を取得
-    earlyBound = max(timeToMinutes(dailyBounds1[0]), t...]]></summary>
-        <author>
-            <name>takuh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】ナップサック問題]]></title>
-        <id>https://zenn.dev/takuh/articles/7f58d455ca30ce</id>
-        <link href="https://zenn.dev/takuh/articles/7f58d455ca30ce"/>
-        <updated>2023-08-11T00:30:36.000Z</updated>
-        <summary type="html"><![CDATA[作るもの
-再帰を使用してナップサック問題を解決する関数。内部関数 dfs は、現在のアイテムを選ぶか選ばないかを選択肢としながら、可能な組み合わせを試すことで最適解を探索する。関数 knapsackProblem は、最初に dfs を初期値で呼び出してナップサック問題を解決し、最終的な結果を返す。
-※ ナップサック問題（Knapsack Problem）とは？
-最適化問題の一つであり、与えられた一定の容量を持つナップサック（背負い袋）に、異なるアイテムの集合を入れていくことで、アイテムの価値の合計を最大化する問題。
-
- 実装
-
-knapsack_problem.py
-from ty...]]></summary>
-        <author>
-            <name>takuh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】４つの数の合計]]></title>
-        <id>https://zenn.dev/takuh/articles/322bad420fee69</id>
-        <link href="https://zenn.dev/takuh/articles/322bad420fee69"/>
-        <updated>2023-08-11T00:01:07.000Z</updated>
-        <summary type="html"><![CDATA[作るもの
-与えられた配列から4つの要素の組み合わせを選び、その合計が目標値と一致するものを見つけてリストで返す関数。
-
- 実装
-
-four_number_sum.py
-def fourNumberSum(array, targetSum):
-    result = []  # 合計が目標値と一致する組み合わせを格納するリスト
-    array.sort()  # 配列をソートして順序を整える
-    for i in range(len(array) - 3):  # 4つの要素の組み合わせを探すため、最後から4番目の要素までループ
-        for j in range(...]]></summary>
-        <author>
-            <name>takuh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】単調配列]]></title>
-        <id>https://zenn.dev/takuh/articles/41f16414a3c64e</id>
-        <link href="https://zenn.dev/takuh/articles/41f16414a3c64e"/>
-        <updated>2023-08-10T23:10:26.000Z</updated>
-        <summary type="html"><![CDATA[作るもの
-与えられた配列が単調な増加または単調な減少を持つかどうかを判定するための関数。
-
- 実装
-
-main.py
-def isMonotonic(array):
-    c = True  # 単調増加を示すフラグ
-    d = True  # 単調減少を示すフラグ
-    for i in range(len(array) - 1):
-        # 配列内の要素を順番に比較し、単調増加かどうかを判定
-        c = c and array[i] <= array[i + 1]
-        # 配列内の要素を順番に比較し、単調減少かどうかを判定
-    ...]]></summary>
-        <author>
-            <name>takuh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Qiskit で遊んでみる (17) — Quantum Machine Learning その 3]]></title>
-        <id>https://zenn.dev/derwind/articles/dwd-qiskit17</id>
-        <link href="https://zenn.dev/derwind/articles/dwd-qiskit17"/>
-        <updated>2023-08-10T18:15:05.000Z</updated>
-        <summary type="html"><![CDATA[目的
-Qiskit で遊んでみる (15) — Quantum Machine Learning の内容を GPU シミュレーションで行いたい。そのために、今回は cuQuantum で遊んでみる (5) — VQE その 2 で触れた cuQuantum (cuTensorNet) を活用したい。
-
- ナイーブな実装
-Qiskit で遊んでみる (15) — Quantum Machine Learning での実装において、期待値計算を以下のようにすればいけるのだが、これがとてつもなく思い。期待計算と勾配計算のための QuantumCircuit をばらばらに構築するコストや、C...]]></summary>
-        <author>
-            <name>derwind</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【DRF】drf-writable-nestedはvalidated_dataの値を参照しない]]></title>
-        <id>https://zenn.dev/takapy11820/articles/3b307a5fc93f5b</id>
-        <link href="https://zenn.dev/takapy11820/articles/3b307a5fc93f5b"/>
-        <updated>2023-08-10T15:16:20.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Django REST frameworkで、リレーションされたデータを生成しようと考えた時、公式ドキュメントには
-https://www.django-rest-framework.org/api-guide/relations/#writable-nested-serializers
-と示されています。ふむ。
-また、他の選択肢としては以下のサードパーティライブラリがあります
-https://github.com/beda-software/drf-writable-nested
-前者・後者ともやりたいことは実現できる為、drf-writable-nestedを採用した結...]]></summary>
-        <author>
-            <name>takapp</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】特定の要素をリストの末尾に移動する関数]]></title>
-        <id>https://zenn.dev/takuh/articles/c5933b9f577ba4</id>
-        <link href="https://zenn.dev/takuh/articles/c5933b9f577ba4"/>
-        <updated>2023-08-10T14:09:14.000Z</updated>
-        <summary type="html"><![CDATA[作るもの
-与えられたリスト（array）内の特定の要素（toMove）をリストの末尾に移動する関数。
-
- 実装
-
-main.py
-def moveElementToEnd(array, toMove):
-    # 一時的なインデックスを初期化
-    tmp = 0
-
-    # リスト内の各要素に対してループ処理を開始
-    for i in range(len(array)):
-        # 現在の要素が移動させたい要素でない場合
-        if array[i] != toMove:
-            # 現在の要素と一時的な位置にある要素を入れ替え
-  ...]]></summary>
         <author>
             <name>takuh</name>
         </author>
