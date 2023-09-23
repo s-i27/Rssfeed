@@ -2,10 +2,186 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-09-22T01:13:13.963Z</updated>
+    <updated>2023-09-23T01:10:56.160Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[NumPyからCuPyへ：高速化の一例]]></title>
+        <id>https://zenn.dev/ykesamaru/articles/f5b41a67523302</id>
+        <link href="https://zenn.dev/ykesamaru/articles/f5b41a67523302"/>
+        <updated>2023-09-22T12:21:57.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+環境
+インストール
+
+CuPyについて
+
+NumPyのサンプルコード
+CuPyによる高速化
+性能比較
+
+
+
+CuPyの苦手な処理
+
+NumPyのサンプルコード
+CuPyのサンプルコード
+性能比較
+
+
+まとめ
+
+
+ はじめに
+Pythonで数値計算を行う際によく使われるライブラリがNumPyです。しかし、GPUを活用することで計算速度を向上させたい場面も多いでしょう。そこでCuPyが登場します。この記事では、NumPyのコードをCuPyに置き換える一例とその性能比較について解説します。一方でCuPyの苦手な処理についても触れますので、使いどころを間違えないようにしましょう。
+...]]></summary>
+        <author>
+            <name>yKesamaru</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PydanticのRootModelを使いこなす]]></title>
+        <id>https://zenn.dev/yosemat/articles/637f84c579d0b7</id>
+        <link href="https://zenn.dev/yosemat/articles/637f84c579d0b7"/>
+        <updated>2023-09-22T07:47:57.000Z</updated>
+        <summary type="html"><![CDATA[PydanticのBaseModelの恩恵をlistやdictにも与えたい
+こんにちは、極論モンスターのYosematです。
+PydanticはTypeSafeにPythonをかけて最高ですよね。特に私が好きなのはmodel_validateのようなSerialize/Deserializeの機能です。しかしPydanticのBaseModelはうまいことdictやjsonへのSerialize/Deserializeができますがlist[MyModel]はPydanticのクラスではないのでmodel_validateのようなクラスメソッドにアクセスできません。
+ダサい方法を先に書...]]></summary>
+        <author>
+            <name>Yosemat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-310｜B - Strictly Superior]]></title>
+        <id>https://zenn.dev/hyperdb/articles/5a1fb5c71078c2</id>
+        <link href="https://zenn.dev/hyperdb/articles/5a1fb5c71078c2"/>
+        <updated>2023-09-22T07:03:25.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-310 B - Strictly Superior
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntListRow(N):
+    return [list(map(int, input().split())) for _ in range(N)]
+
+
+def main():
+    n, m = getIntMap()
+    pl = getIntListRow(n)
+
+    fl = [pl[i][2:] for i in range(n)]  # p...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-310｜A - Order Something Else]]></title>
+        <id>https://zenn.dev/hyperdb/articles/0cbb4c118e2ca4</id>
+        <link href="https://zenn.dev/hyperdb/articles/0cbb4c118e2ca4"/>
+        <updated>2023-09-22T07:03:24.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-310 A - Order Something Else
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n, p, q = getIntMap()
+    a = getIntList()
+    b = min([q + a[i] for i in range(n)])
+
+    print(b if b < p ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MySQLとSQLAlchemyで詰まった話]]></title>
+        <id>https://zenn.dev/chapi/articles/c50a050549faf7</id>
+        <link href="https://zenn.dev/chapi/articles/c50a050549faf7"/>
+        <updated>2023-09-22T04:13:06.000Z</updated>
+        <summary type="html"><![CDATA[MySQLとPythonを利用して自社サービスを開発しています。開発していく中で解決に時間がかかったので原因と解決方法をまとめました。
+
+ 環境
+MYSQL: 8.0
+Python: 3.9
+SQLAlchemy: 1.4.36
+開発環境の構築にはDockerを利用しています。
+
+ エラーになったコード
+要件上、idとsystem_timestampというtimestamp型を複合主キーにする必要がありました。
+
+models.py
+from sqlalchemy import create_engine
+from sqlalchemy.orm import declarative_ba...]]></summary>
+        <author>
+            <name>ちゃぴ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[カメラ情報を用いてリアルタイムで状況をテキストに起こしたい (Ros2) part2]]></title>
+        <id>https://zenn.dev/iasl/articles/371968a2f31e32</id>
+        <link href="https://zenn.dev/iasl/articles/371968a2f31e32"/>
+        <updated>2023-09-22T04:05:20.000Z</updated>
+        <summary type="html"><![CDATA[前回は、使いたいモデル(BLIP-2)を見つけることができ、それらがAIプラットフォームであるHugging Faceにたくさんあることが分かりました。今回はまずHugging Faceについてまとめたいと思います。
+
+ Hugging Faceについて
+前述のとおりAIプラットフォームであり、特に自然言語生成モデルがたくさんあります。
+
+Hugging Faceの主な目的は、AIコミュニティの協力と共有を促進することです。プラットフォームは、AIモデルやデータセットをユーザーがアップロードし、共有することができるようになっています。また、他のユーザーがアップロードしたモデルやデータセッ...]]></summary>
+        <author>
+            <name>toky</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[カメラ情報を用いてリアルタイムで状況をテキストに起こしたい (Ros2) part1]]></title>
+        <id>https://zenn.dev/iasl/articles/3fb2b018044232</id>
+        <link href="https://zenn.dev/iasl/articles/3fb2b018044232"/>
+        <updated>2023-09-22T04:02:47.000Z</updated>
+        <summary type="html"><![CDATA[今まで深く機械学習や深層学習を学んでいなかったので触れてみようと思いました。今回はとにかく実装することをメインに進めていきたいと思います。
+
+ 深層学習モデルを扱うにあたって
+まず、目的を明確にする必要があります。今回は動画像の状況を文章に起こしたいと考えています。また、１からモデルを組み立てる技術はないので、構築済みのモデルを使いたいと考えています。
+
+ 大規模言語モデル(LLM)について
+今回は入力動画像を大規模言語モデルに入れて、現在の状況を説明するものを作りたいなと考えています。そもそも、大規模言語モデル(LLM)とは以下のようなものです。
+
+大規模言語モデル（Large Lan...]]></summary>
+        <author>
+            <name>toky</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PowerShellスクリプトを実行できるように設定する]]></title>
+        <id>https://zenn.dev/ricmsd/articles/7f2ceade6581db</id>
+        <link href="https://zenn.dev/ricmsd/articles/7f2ceade6581db"/>
+        <updated>2023-09-22T03:54:10.000Z</updated>
+        <summary type="html"><![CDATA[WindowsでPythonの仮想環境（virtual environments）を有効にしようとしたところ以下のエラーに遭遇したので回避方法をメモしておきます。
+
+ Activate.ps1
+PS C:\project> & c:/project/venv/Scripts/Activate.ps1
+& : このシステムではスクリプトの実行が無効になっているため、ファイル C:\project\venv\Scripts\Activate.ps1 を読み込むことができません。詳細については、「about_Execution_Policies」(https://go.m...]]></summary>
+        <author>
+            <name>ricmsd</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[pytestで非同期関数をテストする]]></title>
         <id>https://zenn.dev/fhmn/articles/2ca12d989dd505</id>
@@ -6185,202 +6361,6 @@ type = "index"
 rye add の...]]></summary>
         <author>
             <name>Coji Mizoguchi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LlamaIndexでslackのQAボットを作成してみた]]></title>
-        <id>https://zenn.dev/collabostyle/articles/69e3d2cac37707</id>
-        <link href="https://zenn.dev/collabostyle/articles/69e3d2cac37707"/>
-        <updated>2023-08-24T10:00:59.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-前回以下の記事でLlamaIndexでPDFファイルを読み込んでQAボットを作成しましたが、LlamaIndexではslackからもデータを読み込む事ができるようなので、やってみました。
-https://zenn.dev/collabostyle/articles/cc52ff546df34d
-
- パッケージのインストール
-Pythonで以下のパッケージをインストールします。
-今回はslackからデータを読み取るためslack sdkをインストールします。
-pip install llama-index
-pip install openai
-pip install slac...]]></summary>
-        <author>
-            <name>kony</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python開発環境をディファクトになりつつあるRyeで整える]]></title>
-        <id>https://zenn.dev/takaha4k/articles/b515ded6cdf15f</id>
-        <link href="https://zenn.dev/takaha4k/articles/b515ded6cdf15f"/>
-        <updated>2023-08-24T09:16:57.000Z</updated>
-        <summary type="html"><![CDATA[TL;DR
-Pythonの開発環境を整える際、選択肢がありすぎて困る。
-その困りごとを一掃してくれるのが、Ryeである。
-Pythonの開発環境を整えるのであれば、Ryeを使うべし。
-
- Ryeとは
-Pythonにおけるone-stop-shop、すなはち、これ１つですべての用事が足りるものらしいです。
-以下は原文。
-
-Rye is Armin's personal one-stop-shop for all his Python needs. It installs and manages Python installations, manages pyproject.toml f...]]></summary>
-        <author>
-            <name>takaha4k</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python3の二重Listを初期化するときに気をつけること]]></title>
-        <id>https://zenn.dev/t_ooka/articles/aaaa4fba79e53d</id>
-        <link href="https://zenn.dev/t_ooka/articles/aaaa4fba79e53d"/>
-        <updated>2023-08-24T04:02:14.000Z</updated>
-        <summary type="html"><![CDATA[Python初心者です。
-最近競プロに興味を持ってコーディング問題を解いていたのですが、ListをListで初期化する際に気づいたことがありまとめます。
-
- 参考コード
-sampleList = [[]]*10
-print(sampleList)
-# [[], [], [], [], [], [], [], [], [], []] 
-sampleList[0].append(1)
-print(sampleList)
-# [[1], [1], [1], [1], [1], [1], [1], [1], [1], [1]]
-
- 気づき
-上記の形[[]]*10のように初期化されたListオブジ...]]></summary>
-        <author>
-            <name>t-ooka</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-291｜B - Trimmed Mean]]></title>
-        <id>https://zenn.dev/hyperdb/articles/91f1cc180318d5</id>
-        <link href="https://zenn.dev/hyperdb/articles/91f1cc180318d5"/>
-        <updated>2023-08-24T03:27:01.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-291 B - Trimmed Mean
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n = getInt()
-    x = getIntList()
-
-    x.sort()
-    y = x[n:n*4]
-
-    print(sum(y) / (3 * n))
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-291｜A - camel Case]]></title>
-        <id>https://zenn.dev/hyperdb/articles/7e5ed3e2d65db7</id>
-        <link href="https://zenn.dev/hyperdb/articles/7e5ed3e2d65db7"/>
-        <updated>2023-08-24T03:27:01.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-291 A - camel Case
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s = list(getString())
-
-    for i in range(len(s)):
-        if s[i] <= 'Z':
-            print(i + 1)
-            break
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[chatGPT(gpt3.5-turbo)をファインチューニングしてみた]]></title>
-        <id>https://zenn.dev/nano_sudo/articles/eaf0d77646d7b8</id>
-        <link href="https://zenn.dev/nano_sudo/articles/eaf0d77646d7b8"/>
-        <updated>2023-08-23T16:30:46.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-こんにちは、@nano_sudoです！
-ついに、皆様ご待望のgpt3.5-turboのファインチューニングができるようになりました！
-ということで、今回は、chatGPT(gpt-3.5-turbo)をファインチューニングする方法を紹介します。
-
- ファインチューニングのメリット
-
-ファインチューニングを行うことで、APIを通じて利用可能なモデルをさらに活用することができます:
-
-プロンプトよりも高品質な結果
-プロンプトに収まりきらないほどの例でトレーニングできる能力
-短いプロンプトによるトークンの節約
-
-低レイテンシーのリクエスト
-(OpenAI公式ドキュメント)[Fin...]]></summary>
-        <author>
-            <name>須藤ナノ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TorchVision (MobileNetV3 Large) -> ONNX -> TFLite (シグネチャ推論)]]></title>
-        <id>https://zenn.dev/pinto0309/articles/216488def0c00b</id>
-        <link href="https://zenn.dev/pinto0309/articles/216488def0c00b"/>
-        <updated>2023-08-23T15:17:05.000Z</updated>
-        <summary type="html"><![CDATA[1. 環境
-
-Intel Corei9 Gen.10
-Ubuntu 22.04
-TorchVision
-ONNX
-TensorFlow
-
-
- 2. パッケージのインストール
-sudo apt-get update \
-&& sudo apt-get install -y flatbuffers-compiler
-
-pip install -U onnx==1.14.0 \
-&& python -m pip install onnx_graphsurgeon \
-    --index-url https://pypi.ngc.nvidia.com \
-...]]></summary>
-        <author>
-            <name>PINTO</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[lambrollでサブディレクトリにある関数を指定する]]></title>
-        <id>https://zenn.dev/thaim/articles/2023-08-lambroll-subdir</id>
-        <link href="https://zenn.dev/thaim/articles/2023-08-lambroll-subdir"/>
-        <updated>2023-08-23T14:39:53.000Z</updated>
-        <summary type="html"><![CDATA[lambrollでlambda関数を構築する
-pythonでlambda関数を構築する。そのデプロイにlambrollを利用したい。対象のディレクトリ構成に応じてどのようにデプロイ設定をすればよいか。
-
- ルートディレクトリにハンドラー関数がある場合
-ルートディレクトリに lambda_function.py があり、そこで定義されている関数 lambda_handler を呼び出したい場合。
-この場合はlambrollのREADMEにある通り、単に lambroll deploy すればよい。
-$ ls
-function.json  lambda_function.py
-
-$ ca...]]></summary>
-        <author>
-            <name>thaim</name>
         </author>
     </entry>
 </feed>
