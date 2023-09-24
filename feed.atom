@@ -2,10 +2,89 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-09-23T01:10:56.160Z</updated>
+    <updated>2023-09-24T01:16:59.457Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[DuckDB爆速すぎてGISに使ったりChatGPTと組み合わせてみる]]></title>
+        <id>https://zenn.dev/otwn/articles/f11d37685caf93</id>
+        <link href="https://zenn.dev/otwn/articles/f11d37685caf93"/>
+        <updated>2023-09-24T00:34:33.000Z</updated>
+        <summary type="html"><![CDATA[この記事ではDuckDBを使用した地理分析や、Python上でDuckdbのデータを基にLangchainを使ったモデルを利用することで話し言葉でSQLを実行させる例を紹介します。
+
+ SQLの価値
+2023年も残り数ヶ月ですが、2022年では最も人気あるプログラミング言語のアンケートでSQLはPythonを抑えて3位でありました(参照)。今年はどうなるでしょうか。ただSQLがここに位置するのは必要性が上昇しているからでしょう。同僚もデータサイエンス分野ではPythonかRで良かった(はずな)のに、SQL学びなおすのかと笑いながら話していました。軽く聞いたアンケートでも、多くの人がSQ...]]></summary>
+        <author>
+            <name>otwn</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Django上でCeleryの環境を構築するための細かい設定項目]]></title>
+        <id>https://zenn.dev/shimakaze_soft/articles/93d6d3eb90221f</id>
+        <link href="https://zenn.dev/shimakaze_soft/articles/93d6d3eb90221f"/>
+        <updated>2023-09-24T00:12:31.000Z</updated>
+        <summary type="html"><![CDATA[Django上でCeleryの環境を構築する
+Django上でCeleryの環境の構築方法は以下の記事でまとめています。
+https://zenn.dev/shimakaze_soft/articles/bbd859803c63a6
+
+ Workerのプリフェッチ
+CeleryのWorkerがタスクを実行する際、効率的なタスク処理のためにプリフェッチという機能を活用します。
+プリフェッチとは、Workerが一度に複数のタスクをキューから事前に先読みして、タスクを保持しておく機能のことを指します。
+これにより、前のタスクが終了した瞬間に直ちに次のタスクを開始することができ、Worker...]]></summary>
+        <author>
+            <name>shimakaze_soft</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DjangoのCeleryで非同期タスクを定期実行するBeatの環境を構築する]]></title>
+        <id>https://zenn.dev/shimakaze_soft/articles/3d099fd6f08142</id>
+        <link href="https://zenn.dev/shimakaze_soft/articles/3d099fd6f08142"/>
+        <updated>2023-09-23T22:01:59.000Z</updated>
+        <summary type="html"><![CDATA[Django上でCeleryの実行結果をDBに保存する構築方法は以下の記事で紹介しました。
+https://zenn.dev/shimakaze_soft/articles/b925594a2235b0
+今回はCeleryを定期実行する機能であるBeatの設定を適用して、Django上でバッチなどの定期実行の機能を設定していきます。
+今回はDjango上でCeleryのBeatを使いやすくするためのライブラリとしてのdjango-celery-beatの使い方についても紹介していきます。
+
+ インストール
+まずは上記の記事を最初に読んで、Docker上でDjangoとCeleryの環境構...]]></summary>
+        <author>
+            <name>shimakaze_soft</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DjangoのCeleryで非同期タスクの実行結果をDBに保存する]]></title>
+        <id>https://zenn.dev/shimakaze_soft/articles/b925594a2235b0</id>
+        <link href="https://zenn.dev/shimakaze_soft/articles/b925594a2235b0"/>
+        <updated>2023-09-23T10:32:52.000Z</updated>
+        <summary type="html"><![CDATA[Django上でCelery環境の構築方法は以下の記事で紹介しました。
+https://zenn.dev/shimakaze_soft/articles/bbd859803c63a6
+今回はそのCeleryの実行結果をDBに自動で保存してくれたり、Django-ORMを介して実行結果を取得したりできるdjango-celery-resultsというライブラリがあり、そちらの使い方について紹介します。
+https://github.com/celery/django-celery-results
+
+ インストール
+まずは上記の記事を最初に読んで、Docker上でDjangoとCeleryの...]]></summary>
+        <author>
+            <name>shimakaze_soft</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DjangoのCeleryで非同期でタスクを実行して、モニタリングする環境をDockerで構築する]]></title>
+        <id>https://zenn.dev/shimakaze_soft/articles/bbd859803c63a6</id>
+        <link href="https://zenn.dev/shimakaze_soft/articles/bbd859803c63a6"/>
+        <updated>2023-09-23T06:24:33.000Z</updated>
+        <summary type="html"><![CDATA[Pythonで非同期処理をやる場合はCeleryを使うのが定番です。
+今回はceleryを試しに動作させるための環境をdocker-composeを使って簡単に作る方法をご紹介し、Django上で動作するように環境構築します。
+以前、昔にnoteに書いた以下の記事の応用や焼き直しのような内容です。（随分昔に書いた懐かしい記事）
+https://note.com/shimakaze_soft/n/n4a2b63d320ed
+
+ 基本的に使用するツール類
+今回は以下の4つを使用します。
+それぞれ別なコンテナで動作させるため、本番の運用などでは、別々なサーバーで動作させることを想定しています。...]]></summary>
+        <author>
+            <name>shimakaze_soft</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[NumPyからCuPyへ：高速化の一例]]></title>
         <id>https://zenn.dev/ykesamaru/articles/f5b41a67523302</id>
@@ -6161,206 +6240,6 @@ def sum(a, b):
 空行が足りないと E302 expected 2 blank lines って言われちゃ...]]></summary>
         <author>
             <name>YUme</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのglob・osを用いた拡張子ごとのフォルダ振り分け]]></title>
-        <id>https://zenn.dev/blueman/articles/bb11f8929a0dad</id>
-        <link href="https://zenn.dev/blueman/articles/bb11f8929a0dad"/>
-        <updated>2023-08-25T10:05:50.000Z</updated>
-        <summary type="html"><![CDATA[この記事はQiitaの記事の転載です!!
-元記事はこちら
-https://qiita.com/blueman/items/94054906f377afbe910b
-
-
- 目次
-はじめに
-作成した経緯
-実行環境
-正規表現を用いてフォルダにアクセスする方法
-拡張子ありのファイル名の取得方法
-ファイル名から拡張子を取得する方法
-プログラムデータと結果・素材データの識別方法
-フォルダの作成方法
-フォルダごとにデータを振り分ける方法
-ソースコード
-結果
-まとめ
-
- はじめに
-今回は、前回の記事で振り分けたフォルダの中のデータを拡張子から「結果・素材」フォルダと「ソースコード」フォルダにデータを振り...]]></summary>
-        <author>
-            <name>ブルーマン</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[パンダとアヒルの手を組ませて、オープンデータを楽に分析する]]></title>
-        <id>https://zenn.dev/paxdare_labo/articles/99c4e373a9fb58</id>
-        <link href="https://zenn.dev/paxdare_labo/articles/99c4e373a9fb58"/>
-        <updated>2023-08-25T07:25:16.000Z</updated>
-        <summary type="html"><![CDATA[前置き
-DuckDBというOLAPデータベースをご存じでしょうか。
-去年くらいから、そこはかとなく流行り始めているようで、Python環境で簡単に動くのですが、処理が速いとか色々な形式に対応しているとか、様々な特徴があります。
-と、DuckDBを昨日知ったばかりの私が、これ以上語っていくとボロがでそうなので、それは参考にさせていただいたページの諸先輩方にお任せします。
-[参考]
-
-https://zenn.dev/notrogue/articles/1193d0ab8d8eda
-https://www.salesanalytics.co.jp/datascience/datascie...]]></summary>
-        <author>
-            <name>PAX dare Labo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【補足解説】Django公式チュートリアル（その１のみ）を初級者向けに補足してみた]]></title>
-        <id>https://zenn.dev/tigrebiz/articles/python-django-tutorial</id>
-        <link href="https://zenn.dev/tigrebiz/articles/python-django-tutorial"/>
-        <updated>2023-08-25T06:59:48.000Z</updated>
-        <summary type="html"><![CDATA[本記事の目的
-
-実務でPythonDjangoで開発をすることになったため、チュートリアルをおこなって理解を深める。
-公式チュートリアルを学習しつつ、不明点や分かりにくい点については補足をおこなっていく。
-
-
- 目次
-
-
-本記事の目的
-目次
-Django公式ドキュメントを見ながらチュートリアルを行う
-Django の概要
-
-クイックインストールガイド
-
-Pythonのインストール
-Djangoのインストール
-仮想開発環境ディレクトリについて
-
-
-
-はじめての Django アプリ作成 その 1
-
-Django学習の基本
-プロジェクトを作成する
-開発用サーバー
-Polls アプリケーシ...]]></summary>
-        <author>
-            <name>taiga</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[IPv6 で公開する FastAPI サーバ / uvicorn の起動方法]]></title>
-        <id>https://zenn.dev/coji/articles/08154798093d04</id>
-        <link href="https://zenn.dev/coji/articles/08154798093d04"/>
-        <updated>2023-08-25T06:49:41.000Z</updated>
-        <summary type="html"><![CDATA[結論
-uvicorn server:app --host :: --port 8080
-これでホストについてる IPv6 のアドレス全部に bind されます。
-[::] を指定しても動かない。]]></summary>
-        <author>
-            <name>Coji Mizoguchi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-292｜B - Yellow and Red Card]]></title>
-        <id>https://zenn.dev/hyperdb/articles/d56c492a01aedd</id>
-        <link href="https://zenn.dev/hyperdb/articles/d56c492a01aedd"/>
-        <updated>2023-08-25T03:50:56.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-292 B - Yellow and Red Card
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def main():
-    n, q = getIntMap()
-    ev = getIntListRow(q)
-    c = [0] + [0 for _ in range(n)]
-
-    f...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-292｜A - CAPS LOCK]]></title>
-        <id>https://zenn.dev/hyperdb/articles/942930634a99e4</id>
-        <link href="https://zenn.dev/hyperdb/articles/942930634a99e4"/>
-        <updated>2023-08-25T03:50:55.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-292 A - CAPS LOCK
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s = getString()
-
-    print(s.upper())
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NotionのテーブルにNotion APIを使ってリレーションを一括追加するGoogle Colabファイルを公開しました]]></title>
-        <id>https://zenn.dev/kikuta/articles/notion-api-with-python-to-batch-input-relation</id>
-        <link href="https://zenn.dev/kikuta/articles/notion-api-with-python-to-batch-input-relation"/>
-        <updated>2023-08-24T15:42:45.000Z</updated>
-        <summary type="html"><![CDATA[gist のリンク
-https://gist.github.com/kikutadev/25b4f9fc725b14d2bcb4103182f78539
-
- Colab のリンク
-https://colab.research.google.com/gist/kikutadev/25b4f9fc725b14d2bcb4103182f78539/notion-api-batch-relation.ipynb
-
- 使い方
-以下の 5 ステップで進めていきます。
-
-NOTION_TOKEN の取得
-Notion でインテグレーションを追加する
-database_id の取得
-プロパティの編集...]]></summary>
-        <author>
-            <name>kikuta</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[rye で pytorch を追加/インストールする方法]]></title>
-        <id>https://zenn.dev/coji/articles/1a1fc3fa9ed710</id>
-        <link href="https://zenn.dev/coji/articles/1a1fc3fa9ed710"/>
-        <updated>2023-08-24T13:55:51.000Z</updated>
-        <summary type="html"><![CDATA[なにもかもわからず、３時間ぐらい試行錯誤したので、忘れたときのために。
-
- 結論
-rye init したあとに
-
-pyproject.toml に sources を追加 (CPU版の場合)
-
-[[tool.rye.sources]]
-name = "torch"
-url = "https://download.pytorch.org/whl/cpu"
-type = "index"
-※ CPU版以外がほしい場合は pytoach 公式サイトの Getting Started で適切なやつを選んで、pip3 install のオプションに指定されてるURLを指定する。
-
-rye add の...]]></summary>
-        <author>
-            <name>Coji Mizoguchi</name>
         </author>
     </entry>
 </feed>
