@@ -22,6 +22,211 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-26 datetime="2023-09-26T01:04:51.000Z">2023-09-26</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-26 datetime="2023-09-26T01:04:51.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/fhmn/articles/188b23c6a95644"
+                        open
+                      >
+                        <summary class="article-expander__title">alembicのマイグレーションファイルの書き方</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/fhmn/articles/188b23c6a95644">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--rKQlYJrL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:alembic%25E3%2581%25AE%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25B0%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AE%25E6%259B%25B8%25E3%2581%258D%25E6%2596%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:fhmn%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZlMjg4NDdmYmEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Pythonのマイグレーションツールalembicで、テーブル作成や列追加等をどう記載すればよいかまとめます。
+alembicのインストールや設定方法については触れません。
+
+ テーブル作成
+from datetime import datetime
+
+from alembic import op
+from sqlalchemy import DATETIME, VARCHAR, Column, Integer
+
+
+def upgrade() -&gt; None:
+    op.create_table(
+        &quot;users&quot;,
+        Column(&quot;id&quot;, In...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/cae_taka/articles/e3f4267adbf3bf"
+                        open
+                      >
+                        <summary class="article-expander__title">CAEのためのPython6（メッシュ入れ替えツール）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/cae_taka/articles/e3f4267adbf3bf">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--9d3-gMhq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:CAE%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AEPython6%25EF%25BC%2588%25E3%2583%25A1%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E5%2585%25A5%25E3%2582%258C%25E6%259B%25BF%25E3%2581%2588%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Taka%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhmY2QxNmFlM2MuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>動機
+
+日頃のAssy作業で一番多いのがベースになるモデルがあって、
+部品の一部を入れ替えていく作業かと思います。
+この作業１つ2つなら大したことないんですが、数が多くなると必要な部品を消して
+しまったり、節点や要素のリナンバーをミスしてモデルを壊してしまうことがあります。
+また、プリソフトでこの作業をやっていると節点と要素だけ消せばいいところをパートやセットノードなどを削除してしまう危険性があります。（私はこれが原因で部品がすり抜けてました）
+やっていることは単純なので、計算結果の前でしまった！！と頭抱えこまないように自動化していきたいと思います。
+
+
+ 今回やること
+
+ベースにな...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-25 datetime="2023-09-25T05:17:50.000Z">2023-09-25</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-25 datetime="2023-09-25T05:17:50.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/9d3e5ddee2b33f"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-311｜B - Vacation Together</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/9d3e5ddee2b33f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ajYanlR---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-311%25EF%25BD%259CB%2520-%2520Vacation%2520Together%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-311 B - Vacation Together
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getStringListRow(N):
+    return [list(input()) for _ in range(N)]
+
+
+def main():
+    n, d &#x3D; getIntMap()
+    s &#x3D; getStringListRow(n)
+
+    # x -&gt; y transform
+    t &#x3D; []
+    for i in range(...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/59ca91228a3158"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-311｜A - First ABC</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/59ca91228a3158">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ztCdIILk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-311%25EF%25BD%259CA%2520-%2520First%2520ABC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-311 A - First ABC
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getString():
+    return input()
+
+
+def main():
+    n &#x3D; getInt()
+    s &#x3D; [&#x27;&#x27;] + list(getString())
+
+    print(max([s.index(&#x27;A&#x27;), s.index(&#x27;B&#x27;), s.index(&#x27;C&#x27;)]))
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-24 datetime="2023-09-24T22:43:04.000Z">2023-09-24</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-24 datetime="2023-09-24T22:43:04.000Z"></time>
           </button>
@@ -9172,291 +9377,6 @@ YYYY/mm/dd, article title,
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yonda/articles/13ff0912b92dce"
-                        open
-                      >
-                        <summary class="article-expander__title">pythonでの直接法による最適計算の一例</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yonda/articles/13ff0912b92dce">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--X0D0DCzw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A7%25E3%2581%25AE%25E7%259B%25B4%25E6%258E%25A5%25E6%25B3%2595%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%259C%2580%25E9%2581%25A9%25E8%25A8%2588%25E7%25AE%2597%25E3%2581%25AE%25E4%25B8%2580%25E4%25BE%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yonda%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q4ZmM1MDUwZGMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>最適制御問題を最適化手法を利用して解く直説法
-これをpythonでやってみるだけのメモ
-例題とモデルの数式は「直接法による最適計算手法と宇宙機への応用」（宇宙開発事業団技術報告， ISSN1345-7888， NASDA-TMR-010010）より利用させてもらう。
-
- 例題1
-1次元の運動
-位置:x
-速度:v
-推力:u
-推力は
--1 &lt;&#x3D; u &lt;&#x3D; 1
-と制限される。
-境界条件は
-x(0) &#x3D; 0
-v(0) &#x3D; 0
-v(1) &#x3D; 0
-目的関数は
-\max x(1)
-つまり、
-始め（t&#x3D;0）は静止しているが、
-最後(t&#x3D;1)にはできるだけ遠いところで静止するような
-ロケットの...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;11
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/fitness_densuke/articles/sse_fastapi_openai"
-                        open
-                      >
-                        <summary class="article-expander__title">SSE(Server-Sent Events)をFastAPIで行いChatGPTの回答をストリーミングで返すAPIサーバーの実装</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/fitness_densuke/articles/sse_fastapi_openai">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--UYTR4nHC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:SSE%2528Server-Sent%2520Events%2529%25E3%2582%2592FastAPI%25E3%2581%25A7%25E8%25A1%258C%25E3%2581%2584ChatGPT%25E3%2581%25AE%25E5%259B%259E%25E7%25AD%2594%25E3%2582%2592%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25A7%25E8%25BF%2594%25E3%2581%2599AP...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Tamtam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzg4YzUxYzNmMDQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>今回はFastAPIとSSE(Server-Sent Events)を使って、ChatGPTのようなストリーミングによるレスポンスを実装してみたいと思います！
-
- SSE(Server-Sent Events)とは
-SSEとは、サーバーからクライアントへのイベント・ストリームによる非同期通信をHTTP経由で提供する技術です。
-Content-Typeヘッダーにtext/event-streamを指定しデータを送信すると、クライアント側でイベントを受け取ることができます。
-WebSocketとSSEの主な違いは、WebSocketが双方向通信であるのに対し、SSEは単一方向の通信です。
-S...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/h0tcatnohotmens/articles/ad6fe9ec3a7148"
-                        open
-                      >
-                        <summary class="article-expander__title">Python3とscikit-learnでスロットの大当たり確率を予想して無双しようとした話(ランダムフォレスト編</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/h0tcatnohotmens/articles/ad6fe9ec3a7148">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--WS3_fEdj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python3%25E3%2581%25A8scikit-learn%25E3%2581%25A7%25E3%2582%25B9%25E3%2583%25AD%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AE%25E5%25A4%25A7%25E5%25BD%2593%25E3%2581%259F%25E3%2582%258A%25E7%25A2%25BA%25E7%258E%2587%25E3%2582%2592%25E4%25BA%2588%25E6%2583%25B3%25E3%2581%2597%25E3%2581%25A6%25E7%2584%25A1%25E5%258F%258C%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%25E3%2581%25A8%25E3%2581%2597%25E3%2581%259F%25E8%25A9%25B1%2528%25E3%2583%25A9%25E3%2583%25B3%25E3%2583%2580%25E3%2583%25A0%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25AC%25E3%2582%25B9%25E3%2583%2588%25E7%25B7%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AE%25E3%2583%25BC%25E3%2582%258A%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3JSSlNUeC00VDVCS184a2xtWmxsUFZyYWtCZXpVbzIwUG1takFGPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-
-スロットのデータを手入力でcsvに書き込み、ランダムフォレストで大当たり確率・設定の予想をして、検証をした結果を記事にしてみました。
-
-
- 対象読者
-
-機械学習に興味がある方
-スロットの大当たり予想を試してみたい方
-
-
- 大当たり予想の検証をした経緯
-
-スロットは1から6まで設定が存在し、6に近いほど高設定と呼ばれプレイヤーが勝ちやすくなります。
-当然ながら、しょっちゅう設定6が入ることは無いのが現実です。
-そこで、機械学習で過去のデータを学習して予想すれば高設定の台に座りやすくなったり、低設定を打つリスクが下げられるのではと考え実験しました。
-
-
- 注意
-この記事および...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/jcc/articles/76ba8d333f375d"
-                        open
-                      >
-                        <summary class="article-expander__title">GCS composeで32以上のオブジェクトをまとめる方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/jcc/articles/76ba8d333f375d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ifSSyhwE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GCS%2520compose%25E3%2581%25A732%25E4%25BB%25A5%25E4%25B8%258A%25E3%2581%25AE%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E3%2582%2592%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:jc%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFhMGIzZjk3ZDguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>先日の記事にてパーティション化されたCSVオブジェクトをCloudSQLにimportする方法を紹介しました。
-https://zenn.dev/jcc/articles/053ee1e609411d
-SDKを利用して32より多いオブジェクトをまとめる場合、GCPのコミュニティのチュートリアルのコードをそのまま使っていました。（2023.8.10にアーカイブされ済み）
-https://github.com/GoogleCloudPlatform/community/blob/master/archived/cloud-storage-infinite-compose/index.md
-文...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/otinu/articles/4207621a3e2e0d"
-                        open
-                      >
-                        <summary class="article-expander__title">Gmailに届く認証コードをGmailAPIから自動確認したい</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/otinu/articles/4207621a3e2e0d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ZRv_KwLs--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Gmail%25E3%2581%25AB%25E5%25B1%258A%25E3%2581%258F%25E8%25AA%258D%25E8%25A8%25BC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592GmailAPI%25E3%2581%258B%25E3%2582%2589%25E8%2587%25AA%25E5%258B%2595%25E7%25A2%25BA%25E8%25AA%258D%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%258A%25E3%2583%2581%25E3%2583%258C%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhkNTNkM2I3MTAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>ご挨拶
-はじめまして！ おチヌと申します。
-普段は Java に触ることが多いですが、個人では Python や JS など自由にやっています。
-何かしらやってることの区切りがついたり、おもしろそうなネタがまとまったりした際に記事などアウトプットしていきたいと考えてます。
-誰かの記事に助けられることが多いので、自分の記事も微力ながら誰かの+@になるとうれしいです。
-どうぞよろしくお願いします。
-
- GmailAPI の設定
-公式ドキュメントが分かりやすかったです。
-https://developers.google.com/gmail/api/quickstart/python?hl...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/huraipan/articles/e49e856058625e"
-                        open
-                      >
-                        <summary class="article-expander__title">[Python]文字列の入力を受けて文字数を数える</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/huraipan/articles/e49e856058625e">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--EzQElnzO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BPython%255D%25E6%2596%2587%25E5%25AD%2597%25E5%2588%2597%25E3%2581%25AE%25E5%2585%25A5%25E5%258A%259B%25E3%2582%2592%25E5%258F%2597%25E3%2581%2591%25E3%2581%25A6%25E6%2596%2587%25E5%25AD%2597%25E6%2595%25B0%25E3%2582%2592%25E6%2595%25B0%25E3%2581%2588%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:huraipan%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZXY3eUhtRlk4RjNPZjM5M1MybVIyck9kaUh2QVJlRDFNX2p3SW5WXzV4UmRRPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>本当に簡単な作業をしましょう。
-これは初めてPyhtonを学ぶ方向けの練習問題です。
-名前を入力したら名前の文字数を出力します。
-
- 文字列を入力してもらおう
-まず文字列を入力してもらう必要がありますね
-input関数を使って名前をもらいます。
-input(&quot;名前を教えてください&quot;)
-
- 文字数を数える関数は？
-len関数を使ったら文字数を数えることができます。
-len(&quot;abc&quot;)  # 3
-
- 結合
-じゃあ上で学んだ関数を使って結合しましょう。
-まずinputを使ったところに入力した文字列が残ります。
-これで入力した名前の文字数をわかりますね。
-len(input(&quot;名前を教えてくだ...</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/blueman/articles/8c04b1a57cb4dd"
-                        open
-                      >
-                        <summary class="article-expander__title">コマンドプロンプト上で実行するライブラリのエラー対処法(Python)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/blueman/articles/8c04b1a57cb4dd">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--jyIp5pBX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2597%25E3%2583%2588%25E4%25B8%258A%25E3%2581%25A7%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2581%25AE%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E5%25AF%25BE%25E5%2587%25A6%25E6%25B3%2595%2528Python%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%259E%25E3%2583%25B3%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Zkt1ajRKaldOUWItM0o1cV8yUmFNc1ZockFKNjJBVEtDNnZfUHZLV1Robm9vPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>目次
-はじめに
-実際にやったこと
-おわりに
-
- はじめに
-コマンドプロンプト上でライブラリを実行しようとするとエラーが出て調べてもあまり分からず苦労したので、自分以外にも同様の問題に遭遇している方の助けになればと思い対処法を紹介します。
-ライブラリ名をコマンドプロンプトにて入力して使用するライブラリ(例えば、pyinstallerやmanimなど)でコマンドプロンプト上でライブラリを実行しようとしたところ次のようなエラーが出ました。
-エラー文
-
-エラー文
-
-このエラーを解決するためにpip installを実行してpyinstallerがどこの階層にあるのかを調べると、
-実行結果
-
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-08-26 datetime="2023-08-26T16:02:38.000Z">2023-08-26</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-08-26 datetime="2023-08-26T16:02:38.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/shim_a2kf3/articles/typed_python_no_0"
-                        open
-                      >
-                        <summary class="article-expander__title">型を意識したPythonのすすめ 第0回</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shim_a2kf3/articles/typed_python_no_0">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--2B7bHU9N--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%259E%258B%25E3%2582%2592%25E6%2584%258F%25E8%25AD%2598%25E3%2581%2597%25E3%2581%259FPython%25E3%2581%25AE%25E3%2581%2599%25E3%2581%2599%25E3%2582%2581%2520%25E7%25AC%25AC0%25E5%259B%259E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2581%25BE%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc4YTRkMjU0YjcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-お仕事でPythonを書いて1年くらい経ちました。
-(Python自体はもう少しやっています。)
-結構カッチリルールを決めてプログラムを書いていく現場に当たったこともあり、型ヒントやmypyを使ってPythonらしからぬ型チェックを強制しています。
-型を意識しなくとも気軽に使えることが利点のPythonで、わざわざ型を意識したコーディングをする理由とはなんでしょうか？
-この疑問の答えを探しつつ、やっぱりPythonでも型の意識は大事だよね と共感していただけたらと思い、少しずつ記事を書いていこうかと腰を上げた次第です。
-
- おことわり
-本記事と関連する記事は、あくまで個人の...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -9464,8 +9384,8 @@ len(input(&quot;名前を教えてくだ...</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6293653043">
-        <time id="build-timestamp" datetime="2023-09-25T01:13:59.448Z">2023-09-25T01:13:59.448Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6306782527">
+        <time id="build-timestamp" datetime="2023-09-26T01:13:52.817Z">2023-09-26T01:13:52.817Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

@@ -12,6 +12,66 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/fhmn/articles/188b23c6a95644",
+          "author": "fhmn",
+          "description": "Pythonのマイグレーションツールalembicで、テーブル作成や列追加等をどう記載すればよいかまとめます。\nalembicのインストールや設定方法については触れません。\n\n テーブル作成\nfrom datetime import datetime\n\nfrom alembic import op\nfrom sqlalchemy import DATETIME, VARCHAR, Column, Integer\n\n\ndef upgrade() -> None:\n    op.create_table(\n        \"users\",\n        Column(\"id\", In...",
+          "link": "https://zenn.dev/fhmn/articles/188b23c6a95644",
+          "publishedOn": "2023-09-26T01:04:51.000Z",
+          "wordCount": 940,
+          "title": "alembicのマイグレーションファイルの書き方",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--rKQlYJrL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:alembic%25E3%2581%25AE%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25B0%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AE%25E6%259B%25B8%25E3%2581%258D%25E6%2596%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:fhmn%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZlMjg4NDdmYmEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--rKQlYJrL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:alembic%25E3%2581%25AE%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25B0%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AE%25E6%259B%25B8%25E3%2581%258D%25E6%2596%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:fhmn%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZlMjg4NDdmYmEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/cae_taka/articles/e3f4267adbf3bf",
+          "author": "Taka",
+          "description": "動機\n\n日頃のAssy作業で一番多いのがベースになるモデルがあって、\n部品の一部を入れ替えていく作業かと思います。\nこの作業１つ2つなら大したことないんですが、数が多くなると必要な部品を消して\nしまったり、節点や要素のリナンバーをミスしてモデルを壊してしまうことがあります。\nまた、プリソフトでこの作業をやっていると節点と要素だけ消せばいいところをパートやセットノードなどを削除してしまう危険性があります。（私はこれが原因で部品がすり抜けてました）\nやっていることは単純なので、計算結果の前でしまった！！と頭抱えこまないように自動化していきたいと思います。\n\n\n 今回やること\n\nベースにな...",
+          "link": "https://zenn.dev/cae_taka/articles/e3f4267adbf3bf",
+          "publishedOn": "2023-09-26T00:33:04.000Z",
+          "wordCount": 4573,
+          "title": "CAEのためのPython6（メッシュ入れ替えツール）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--9d3-gMhq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:CAE%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AEPython6%25EF%25BC%2588%25E3%2583%25A1%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E5%2585%25A5%25E3%2582%258C%25E6%259B%25BF%25E3%2581%2588%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Taka%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhmY2QxNmFlM2MuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--9d3-gMhq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:CAE%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AEPython6%25EF%25BC%2588%25E3%2583%25A1%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E5%2585%25A5%25E3%2582%258C%25E6%259B%25BF%25E3%2581%2588%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Taka%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhmY2QxNmFlM2MuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/9d3e5ddee2b33f",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-311 B - Vacation Together\n\n\n\n 提出結果\ndef getIntMap():\n    return map(int, input().split())\n\n\ndef getStringListRow(N):\n    return [list(input()) for _ in range(N)]\n\n\ndef main():\n    n, d = getIntMap()\n    s = getStringListRow(n)\n\n    # x -> y transform\n    t = []\n    for i in range(...",
+          "link": "https://zenn.dev/hyperdb/articles/9d3e5ddee2b33f",
+          "publishedOn": "2023-09-25T05:17:50.000Z",
+          "wordCount": 473,
+          "title": "［AtCoder］ABC-311｜B - Vacation Together",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--ajYanlR---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-311%25EF%25BD%259CB%2520-%2520Vacation%2520Together%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--ajYanlR---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-311%25EF%25BD%259CB%2520-%2520Vacation%2520Together%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/59ca91228a3158",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-311 A - First ABC\n\n\n\n 提出結果\ndef getInt():\n    return int(input())\n\n\ndef getString():\n    return input()\n\n\ndef main():\n    n = getInt()\n    s = [''] + list(getString())\n\n    print(max([s.index('A'), s.index('B'), s.index('C')]))\n\n\nif __name__ == \"__main__\":\n    main()",
+          "link": "https://zenn.dev/hyperdb/articles/59ca91228a3158",
+          "publishedOn": "2023-09-25T05:17:49.000Z",
+          "wordCount": 299,
+          "title": "［AtCoder］ABC-311｜A - First ABC",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--ztCdIILk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-311%25EF%25BD%259CA%2520-%2520First%2520ABC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--ztCdIILk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-311%25EF%25BD%259CA%2520-%2520First%2520ABC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
           "id": "https://zenn.dev/singularity/articles/40dd07f9f3da2b",
           "author": "kozayupapa",
           "description": "特定サービスを深く熟知していて、APIも自在に使いこなし、お客さんの必要としているソリューションをつくるのを手伝ってくれるソリューションエンジニアって素敵ですよね。いままでそんな素敵なソリューションエンジニアは、雇用するのも養成するのも大変で、超大手のクラウドベンダーぐらいしか十分に用意するのは難しかったです。\nこの記事では、OpenAI.functions+IPython+SlashGPTを活用することで、自社サービス専用のソリューションエンジニア(ボット)を手早く起ち上げる方法を解説します。\n言い換えると、自然言語での要求に応じて独自APIを呼び出すコードを実装、実行してくれるCod...",
@@ -3860,126 +3920,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--8hd1ptmc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Zenn%25E3%2581%25AB%25E6%258A%2595%25E7%25A8%25BF%25E3%2581%2597%25E3%2581%259F%25E8%25A8%2598%25E4%25BA%258B%25E4%25B8%2580%25E8%25A6%25A7%25E3%2582%2592CSV%25E3%2581%25AB%25E5%2587%25BA%25E5%258A%259B%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nori0__%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY4ZjdkODlmZTMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/yonda/articles/13ff0912b92dce",
-          "author": "yonda",
-          "description": "最適制御問題を最適化手法を利用して解く直説法\nこれをpythonでやってみるだけのメモ\n例題とモデルの数式は「直接法による最適計算手法と宇宙機への応用」（宇宙開発事業団技術報告， ISSN1345-7888， NASDA-TMR-010010）より利用させてもらう。\n\n 例題1\n1次元の運動\n位置:x\n速度:v\n推力:u\n推力は\n-1 <= u <= 1\nと制限される。\n境界条件は\nx(0) = 0\nv(0) = 0\nv(1) = 0\n目的関数は\n\\max x(1)\nつまり、\n始め（t=0）は静止しているが、\n最後(t=1)にはできるだけ遠いところで静止するような\nロケットの...",
-          "link": "https://zenn.dev/yonda/articles/13ff0912b92dce",
-          "publishedOn": "2023-08-27T12:53:36.000Z",
-          "wordCount": 3437,
-          "title": "pythonでの直接法による最適計算の一例",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--X0D0DCzw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A7%25E3%2581%25AE%25E7%259B%25B4%25E6%258E%25A5%25E6%25B3%2595%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%259C%2580%25E9%2581%25A9%25E8%25A8%2588%25E7%25AE%2597%25E3%2581%25AE%25E4%25B8%2580%25E4%25BE%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yonda%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q4ZmM1MDUwZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--X0D0DCzw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A7%25E3%2581%25AE%25E7%259B%25B4%25E6%258E%25A5%25E6%25B3%2595%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%259C%2580%25E9%2581%25A9%25E8%25A8%2588%25E7%25AE%2597%25E3%2581%25AE%25E4%25B8%2580%25E4%25BE%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yonda%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q4ZmM1MDUwZGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/fitness_densuke/articles/sse_fastapi_openai",
-          "author": "Tamtam",
-          "description": "今回はFastAPIとSSE(Server-Sent Events)を使って、ChatGPTのようなストリーミングによるレスポンスを実装してみたいと思います！\n\n SSE(Server-Sent Events)とは\nSSEとは、サーバーからクライアントへのイベント・ストリームによる非同期通信をHTTP経由で提供する技術です。\nContent-Typeヘッダーにtext/event-streamを指定しデータを送信すると、クライアント側でイベントを受け取ることができます。\nWebSocketとSSEの主な違いは、WebSocketが双方向通信であるのに対し、SSEは単一方向の通信です。\nS...",
-          "link": "https://zenn.dev/fitness_densuke/articles/sse_fastapi_openai",
-          "publishedOn": "2023-08-27T11:13:22.000Z",
-          "wordCount": 859,
-          "title": "SSE(Server-Sent Events)をFastAPIで行いChatGPTの回答をストリーミングで返すAPIサーバーの実装",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--UYTR4nHC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:SSE%2528Server-Sent%2520Events%2529%25E3%2582%2592FastAPI%25E3%2581%25A7%25E8%25A1%258C%25E3%2581%2584ChatGPT%25E3%2581%25AE%25E5%259B%259E%25E7%25AD%2594%25E3%2582%2592%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25A7%25E8%25BF%2594%25E3%2581%2599AP...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Tamtam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzg4YzUxYzNmMDQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--UYTR4nHC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:SSE%2528Server-Sent%2520Events%2529%25E3%2582%2592FastAPI%25E3%2581%25A7%25E8%25A1%258C%25E3%2581%2584ChatGPT%25E3%2581%25AE%25E5%259B%259E%25E7%25AD%2594%25E3%2582%2592%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25A7%25E8%25BF%2594%25E3%2581%2599AP...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Tamtam%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzg4YzUxYzNmMDQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/h0tcatnohotmens/articles/ad6fe9ec3a7148",
-          "author": "のーり",
-          "description": "はじめに\n\nスロットのデータを手入力でcsvに書き込み、ランダムフォレストで大当たり確率・設定の予想をして、検証をした結果を記事にしてみました。\n\n\n 対象読者\n\n機械学習に興味がある方\nスロットの大当たり予想を試してみたい方\n\n\n 大当たり予想の検証をした経緯\n\nスロットは1から6まで設定が存在し、6に近いほど高設定と呼ばれプレイヤーが勝ちやすくなります。\n当然ながら、しょっちゅう設定6が入ることは無いのが現実です。\nそこで、機械学習で過去のデータを学習して予想すれば高設定の台に座りやすくなったり、低設定を打つリスクが下げられるのではと考え実験しました。\n\n\n 注意\nこの記事および...",
-          "link": "https://zenn.dev/h0tcatnohotmens/articles/ad6fe9ec3a7148",
-          "publishedOn": "2023-08-27T10:20:22.000Z",
-          "wordCount": 186,
-          "title": "Python3とscikit-learnでスロットの大当たり確率を予想して無双しようとした話(ランダムフォレスト編",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--WS3_fEdj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python3%25E3%2581%25A8scikit-learn%25E3%2581%25A7%25E3%2582%25B9%25E3%2583%25AD%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AE%25E5%25A4%25A7%25E5%25BD%2593%25E3%2581%259F%25E3%2582%258A%25E7%25A2%25BA%25E7%258E%2587%25E3%2582%2592%25E4%25BA%2588%25E6%2583%25B3%25E3%2581%2597%25E3%2581%25A6%25E7%2584%25A1%25E5%258F%258C%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%25E3%2581%25A8%25E3%2581%2597%25E3%2581%259F%25E8%25A9%25B1%2528%25E3%2583%25A9%25E3%2583%25B3%25E3%2583%2580%25E3%2583%25A0%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25AC%25E3%2582%25B9%25E3%2583%2588%25E7%25B7%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AE%25E3%2583%25BC%25E3%2582%258A%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3JSSlNUeC00VDVCS184a2xtWmxsUFZyYWtCZXpVbzIwUG1takFGPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--WS3_fEdj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python3%25E3%2581%25A8scikit-learn%25E3%2581%25A7%25E3%2582%25B9%25E3%2583%25AD%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AE%25E5%25A4%25A7%25E5%25BD%2593%25E3%2581%259F%25E3%2582%258A%25E7%25A2%25BA%25E7%258E%2587%25E3%2582%2592%25E4%25BA%2588%25E6%2583%25B3%25E3%2581%2597%25E3%2581%25A6%25E7%2584%25A1%25E5%258F%258C%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%25E3%2581%25A8%25E3%2581%2597%25E3%2581%259F%25E8%25A9%25B1%2528%25E3%2583%25A9%25E3%2583%25B3%25E3%2583%2580%25E3%2583%25A0%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25AC%25E3%2582%25B9%25E3%2583%2588%25E7%25B7%25A8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AE%25E3%2583%25BC%25E3%2582%258A%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3JSSlNUeC00VDVCS184a2xtWmxsUFZyYWtCZXpVbzIwUG1takFGPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/jcc/articles/76ba8d333f375d",
-          "author": "jc",
-          "description": "先日の記事にてパーティション化されたCSVオブジェクトをCloudSQLにimportする方法を紹介しました。\nhttps://zenn.dev/jcc/articles/053ee1e609411d\nSDKを利用して32より多いオブジェクトをまとめる場合、GCPのコミュニティのチュートリアルのコードをそのまま使っていました。（2023.8.10にアーカイブされ済み）\nhttps://github.com/GoogleCloudPlatform/community/blob/master/archived/cloud-storage-infinite-compose/index.md\n文...",
-          "link": "https://zenn.dev/jcc/articles/76ba8d333f375d",
-          "publishedOn": "2023-08-27T09:58:42.000Z",
-          "wordCount": 1857,
-          "title": "GCS composeで32以上のオブジェクトをまとめる方法",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--ifSSyhwE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GCS%2520compose%25E3%2581%25A732%25E4%25BB%25A5%25E4%25B8%258A%25E3%2581%25AE%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E3%2582%2592%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:jc%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFhMGIzZjk3ZDguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--ifSSyhwE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GCS%2520compose%25E3%2581%25A732%25E4%25BB%25A5%25E4%25B8%258A%25E3%2581%25AE%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E3%2582%2592%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:jc%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFhMGIzZjk3ZDguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/otinu/articles/4207621a3e2e0d",
-          "author": "おチヌ",
-          "description": "ご挨拶\nはじめまして！ おチヌと申します。\n普段は Java に触ることが多いですが、個人では Python や JS など自由にやっています。\n何かしらやってることの区切りがついたり、おもしろそうなネタがまとまったりした際に記事などアウトプットしていきたいと考えてます。\n誰かの記事に助けられることが多いので、自分の記事も微力ながら誰かの+@になるとうれしいです。\nどうぞよろしくお願いします。\n\n GmailAPI の設定\n公式ドキュメントが分かりやすかったです。\nhttps://developers.google.com/gmail/api/quickstart/python?hl...",
-          "link": "https://zenn.dev/otinu/articles/4207621a3e2e0d",
-          "publishedOn": "2023-08-27T09:50:20.000Z",
-          "wordCount": 542,
-          "title": "Gmailに届く認証コードをGmailAPIから自動確認したい",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--ZRv_KwLs--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Gmail%25E3%2581%25AB%25E5%25B1%258A%25E3%2581%258F%25E8%25AA%258D%25E8%25A8%25BC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592GmailAPI%25E3%2581%258B%25E3%2582%2589%25E8%2587%25AA%25E5%258B%2595%25E7%25A2%25BA%25E8%25AA%258D%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%258A%25E3%2583%2581%25E3%2583%258C%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhkNTNkM2I3MTAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--ZRv_KwLs--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Gmail%25E3%2581%25AB%25E5%25B1%258A%25E3%2581%258F%25E8%25AA%258D%25E8%25A8%25BC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592GmailAPI%25E3%2581%258B%25E3%2582%2589%25E8%2587%25AA%25E5%258B%2595%25E7%25A2%25BA%25E8%25AA%258D%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%258A%25E3%2583%2581%25E3%2583%258C%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhkNTNkM2I3MTAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/huraipan/articles/e49e856058625e",
-          "author": "huraipan",
-          "description": "本当に簡単な作業をしましょう。\nこれは初めてPyhtonを学ぶ方向けの練習問題です。\n名前を入力したら名前の文字数を出力します。\n\n 文字列を入力してもらおう\nまず文字列を入力してもらう必要がありますね\ninput関数を使って名前をもらいます。\ninput(\"名前を教えてください\")\n\n 文字数を数える関数は？\nlen関数を使ったら文字数を数えることができます。\nlen(\"abc\")  # 3\n\n 結合\nじゃあ上で学んだ関数を使って結合しましょう。\nまずinputを使ったところに入力した文字列が残ります。\nこれで入力した名前の文字数をわかりますね。\nlen(input(\"名前を教えてくだ...",
-          "link": "https://zenn.dev/huraipan/articles/e49e856058625e",
-          "publishedOn": "2023-08-27T06:36:53.000Z",
-          "wordCount": 149,
-          "title": "[Python]文字列の入力を受けて文字数を数える",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--EzQElnzO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BPython%255D%25E6%2596%2587%25E5%25AD%2597%25E5%2588%2597%25E3%2581%25AE%25E5%2585%25A5%25E5%258A%259B%25E3%2582%2592%25E5%258F%2597%25E3%2581%2591%25E3%2581%25A6%25E6%2596%2587%25E5%25AD%2597%25E6%2595%25B0%25E3%2582%2592%25E6%2595%25B0%25E3%2581%2588%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:huraipan%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZXY3eUhtRlk4RjNPZjM5M1MybVIyck9kaUh2QVJlRDFNX2p3SW5WXzV4UmRRPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--EzQElnzO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BPython%255D%25E6%2596%2587%25E5%25AD%2597%25E5%2588%2597%25E3%2581%25AE%25E5%2585%25A5%25E5%258A%259B%25E3%2582%2592%25E5%258F%2597%25E3%2581%2591%25E3%2581%25A6%25E6%2596%2587%25E5%25AD%2597%25E6%2595%25B0%25E3%2582%2592%25E6%2595%25B0%25E3%2581%2588%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:huraipan%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZXY3eUhtRlk4RjNPZjM5M1MybVIyck9kaUh2QVJlRDFNX2p3SW5WXzV4UmRRPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/blueman/articles/8c04b1a57cb4dd",
-          "author": "ブルーマン",
-          "description": "目次\nはじめに\n実際にやったこと\nおわりに\n\n はじめに\nコマンドプロンプト上でライブラリを実行しようとするとエラーが出て調べてもあまり分からず苦労したので、自分以外にも同様の問題に遭遇している方の助けになればと思い対処法を紹介します。\nライブラリ名をコマンドプロンプトにて入力して使用するライブラリ(例えば、pyinstallerやmanimなど)でコマンドプロンプト上でライブラリを実行しようとしたところ次のようなエラーが出ました。\nエラー文\n\nエラー文\n\nこのエラーを解決するためにpip installを実行してpyinstallerがどこの階層にあるのかを調べると、\n実行結果\n\n...",
-          "link": "https://zenn.dev/blueman/articles/8c04b1a57cb4dd",
-          "publishedOn": "2023-08-27T01:00:00.000Z",
-          "wordCount": 235,
-          "title": "コマンドプロンプト上で実行するライブラリのエラー対処法(Python)",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--jyIp5pBX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2597%25E3%2583%2588%25E4%25B8%258A%25E3%2581%25A7%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2581%25AE%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E5%25AF%25BE%25E5%2587%25A6%25E6%25B3%2595%2528Python%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%259E%25E3%2583%25B3%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Zkt1ajRKaldOUWItM0o1cV8yUmFNc1ZockFKNjJBVEtDNnZfUHZLV1Robm9vPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--jyIp5pBX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B3%25E3%2583%259E%25E3%2583%25B3%25E3%2583%2589%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2597%25E3%2583%2588%25E4%25B8%258A%25E3%2581%25A7%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2581%25AE%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E5%25AF%25BE%25E5%2587%25A6%25E6%25B3%2595%2528Python%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%259E%25E3%2583%25B3%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Zkt1ajRKaldOUWItM0o1cV8yUmFNc1ZockFKNjJBVEtDNnZfUHZLV1Robm9vPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/shim_a2kf3/articles/typed_python_no_0",
-          "author": "しま",
-          "description": "はじめに\nお仕事でPythonを書いて1年くらい経ちました。\n(Python自体はもう少しやっています。)\n結構カッチリルールを決めてプログラムを書いていく現場に当たったこともあり、型ヒントやmypyを使ってPythonらしからぬ型チェックを強制しています。\n型を意識しなくとも気軽に使えることが利点のPythonで、わざわざ型を意識したコーディングをする理由とはなんでしょうか？\nこの疑問の答えを探しつつ、やっぱりPythonでも型の意識は大事だよね と共感していただけたらと思い、少しずつ記事を書いていこうかと腰を上げた次第です。\n\n おことわり\n本記事と関連する記事は、あくまで個人の...",
-          "link": "https://zenn.dev/shim_a2kf3/articles/typed_python_no_0",
-          "publishedOn": "2023-08-26T16:02:38.000Z",
-          "wordCount": 354,
-          "title": "型を意識したPythonのすすめ 第0回",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--2B7bHU9N--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%259E%258B%25E3%2582%2592%25E6%2584%258F%25E8%25AD%2598%25E3%2581%2597%25E3%2581%259FPython%25E3%2581%25AE%25E3%2581%2599%25E3%2581%2599%25E3%2582%2581%2520%25E7%25AC%25AC0%25E5%259B%259E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2581%25BE%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc4YTRkMjU0YjcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--2B7bHU9N--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%259E%258B%25E3%2582%2592%25E6%2584%258F%25E8%25AD%2598%25E3%2581%2597%25E3%2581%259FPython%25E3%2581%25AE%25E3%2581%2599%25E3%2581%2599%25E3%2582%2581%2520%25E7%25AC%25AC0%25E5%259B%259E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2581%25BE%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc4YTRkMjU0YjcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
         }
       ]
     }
