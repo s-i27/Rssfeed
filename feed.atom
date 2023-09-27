@@ -2,10 +2,212 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-09-26T01:13:52.868Z</updated>
+    <updated>2023-09-27T01:13:46.803Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[文章を自動で改行して字幕を作る。(BudouX in Python）]]></title>
+        <id>https://zenn.dev/micchi/articles/e0a584deeced0a</id>
+        <link href="https://zenn.dev/micchi/articles/e0a584deeced0a"/>
+        <updated>2023-09-26T16:14:18.000Z</updated>
+        <summary type="html"><![CDATA[ゴール：文章を読みやすい位置で改行するために分割する。
+先日、BudouX: 読みやすい改行のための軽量な分かち書き器という記事が公開されていました。
+動画の字幕を作成するために早速使ってみました。
+
+ 開発環境
+
+Python 3.10.12
+
+
+ 事前準備
+pip install budoux
+
+ やったこと
+
+ 分かち書き
+日本語は単語ごとに空白で区切らないため単語の切れ目の判定が難しいです。
+そこで、BudouXはこの問題を次の文字の間で区切るべきか否かの二値分類問題に落とし込み、文章に対して、予測値が正であれば区切り、そうでなければ区切らないという処理を繰り返すことで、読み...]]></summary>
+        <author>
+            <name>micchi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[discord.pyでスラッシュコマンドを実装する方法]]></title>
+        <id>https://zenn.dev/952490802574164/articles/b8b0232b29e79b</id>
+        <link href="https://zenn.dev/952490802574164/articles/b8b0232b29e79b"/>
+        <updated>2023-09-26T10:49:16.000Z</updated>
+        <summary type="html"><![CDATA[Discordボットとは
+Discordは、ゲーマーやコミュニティのメンバーに利用されるコミュニケーションツールです。この記事では、Discordボットを作成し、Pythonライブラリであるdiscord.pyを使用してスラッシュコマンドを実装する方法を説明します。
+
+ 開発環境のセットアップ
+Discordボットを開発するには、Pythonとdiscord.pyのセットアップが必要です。以下は、開発環境をセットアップする手順です。
+Pythonをインストールします。
+discord.pyライブラリをインストールします。
+Discord Botを作成します。
+
+ ボットの基本設定
+ボ...]]></summary>
+        <author>
+            <name>まるた</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pydanticで非プリミティブを使う]]></title>
+        <id>https://zenn.dev/yosemat/articles/6834cfc8de0d86</id>
+        <link href="https://zenn.dev/yosemat/articles/6834cfc8de0d86"/>
+        <updated>2023-09-26T10:13:26.000Z</updated>
+        <summary type="html"><![CDATA[非プリミティブな型はPydanticでは使えない
+こんにちは極論モンスターのYosematです。
+Pydanticはbuilt-inで値のValidationやSerialization（stringやjsonに変換して保存したりする機能）がついていて便利ですが非プリミティブな型はPydanticModelでは使えません。これは型によってValidation/Serializationのロジックは異なるからです。
+Pythonユーザーのよくあるユースケースは「numpyをPydanticで使う」だと思います。
+import numpy as np
+from pydantic impo...]]></summary>
+        <author>
+            <name>Yosemat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPI と Strawberry(GraphQL) が動作する諸々整ったデモアプリを作ってみた]]></title>
+        <id>https://zenn.dev/comachi/articles/4376fb0a50ca0f</id>
+        <link href="https://zenn.dev/comachi/articles/4376fb0a50ca0f"/>
+        <updated>2023-09-26T10:10:09.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+
+この記事では、最近 FastAPI と Strawberry(GraphQL) に入門した私が、FastAPI と Strawberry(GraphQL) が動作する諸々整ったデモアプリを使用する（作る）方法をメモとして残します。
+Strawberry に関する記事（特にサンプルコード付き）は未だあまり少ない印象を受けましたので、Strawberry について入門する方の参考になればと思います。
+
+FastAPI と Strawberry(GraphQL) に入門してから数週間なので、アンチパターンを踏んでいるかもしれませんが、サンプルコードの一つとしていただければと思い...]]></summary>
+        <author>
+            <name>comachi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonのlambdaは式構文だから命令文を書けないとか言われるけど関数定義がobjectになるから別に困らない]]></title>
+        <id>https://zenn.dev/karamawanu/articles/3a879e40014b57</id>
+        <link href="https://zenn.dev/karamawanu/articles/3a879e40014b57"/>
+        <updated>2023-09-26T06:27:47.000Z</updated>
+        <summary type="html"><![CDATA[pythonは、式構文と命令文が明確に分かれており、lamdaが式扱いになる。これはpythonの問題点だとは言われる。
+公式ドキュメントにもそう書いてある。あえてpython2.7にリンク。後半を抜粋する。
+https://docs.python.org/ja/2.7/reference/expressions.html#lambda
+
+パラメータの構文の一覧は 関数定義 を参照してください。ラムダ式で作成された関数は命令文を含むことができない点に注意してください。
+
+中で命令文が書けないのでこれが他言語育ちからやたらdisられる。
+だが待ってほしい。lambdaの章には前半にもうひと...]]></summary>
+        <author>
+            <name>karamawanu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[venv使用時は全角が入ったパス名に注意]]></title>
+        <id>https://zenn.dev/tk2345/articles/138e079d93ac49</id>
+        <link href="https://zenn.dev/tk2345/articles/138e079d93ac49"/>
+        <updated>2023-09-26T05:04:13.000Z</updated>
+        <summary type="html"><![CDATA[結論
+venvで仮想環境を作成するときにパス内に全角が含まれていると仮想環境でない通常の環境化で動作してしまうため、半角のみでの環境を作成してください。
+
+ 環境
+OS: Windows11
+Python: 3.7.9
+シェル：PowerShell
+
+ 現象
+
+ パスに全角を含まない場合
+D:\venv_testに仮想環境を作成してみます。
+
+仮想環境をアクティブにし、pip freezeでパッケージの確認を行います。先ほど環境を作成したため、何もインストールされていません。
+
+
+ パスに全角を含んだ場合
+一度venvフォルダを削除し、フォルダ名をvenv_テストに変更して改めて仮想...]]></summary>
+        <author>
+            <name>tk2345</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-312｜A - Chord]]></title>
+        <id>https://zenn.dev/hyperdb/articles/cb44aff7b662bd</id>
+        <link href="https://zenn.dev/hyperdb/articles/cb44aff7b662bd"/>
+        <updated>2023-09-26T04:54:11.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-312 A - Chord
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = getString()
+
+    print('Yes' if s in ['ACE', 'BDF', 'CEG', 'DFA', 'EGB', 'FAC', 'GBD'] else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-312｜B - TaK Code]]></title>
+        <id>https://zenn.dev/hyperdb/articles/b5f4d1e88272fa</id>
+        <link href="https://zenn.dev/hyperdb/articles/b5f4d1e88272fa"/>
+        <updated>2023-09-26T04:54:11.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-312 B - TaK Code
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+def getStringRow(N):
+    return [input() for _ in range(N)]
+
+def chk(c):
+    a = ['###.', '###.', '###.', '....', '....', '.###', '.###', '.###']
+    t = [c[0][0:4], c[1][0:4], c[2][0:4], c[3][0:4], c[5...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[多重共線性の検証（線形回帰とRandomForest）]]></title>
+        <id>https://zenn.dev/stylishboob/articles/c9d82b9eae3284</id>
+        <link href="https://zenn.dev/stylishboob/articles/c9d82b9eae3284"/>
+        <updated>2023-09-26T02:30:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+私の職場では「多重共線性はだめだ！多重共線性を取り除け！」とよく叫ばれています。
+ただ、多重共線性の説明をみると大体が線形回帰の例のみで、それ以外のケースはどうなのかについてはあまり言及されていませんでした。
+そこで、今回は線形回帰（sklearnのLinearRegression）に加えて、非線形の回帰手法であるRandomForest（こちらもsklearnのRandomForestRegressor）で多重共線性があるのかを検証したいと思います。
+また、多重共線性はモデルの予測精度にも影響を与えるものだと勘違いしていましたので、RMSEもどれくらい変わるのかを今回の検...]]></summary>
+        <author>
+            <name>stylishboob</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Next.jsとPythonの開発環境を爆速で構築する]]></title>
+        <id>https://zenn.dev/arsaga/articles/0fdee431a8374a</id>
+        <link href="https://zenn.dev/arsaga/articles/0fdee431a8374a"/>
+        <updated>2023-09-26T02:17:10.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+今回はフロントエンドにNext.js、バックエンドにPythonを採用して、Webサイトの環境構築を行いたいと思います。元々、Whisper APIとVOICEVOXによる合成音声を使用した会話アプリを開発したかったのですがですが、環境構築の段階でかなりのボリュームになった為、一旦記事として共有します。
+
+
+ モノレポについて
+モノレポとはWebアプリの全てのコード（WebバックエンドやWebフロントエンド）を単一のリポジトリに保存するパターンを指します。 リポジトリを単一化することのメリットは、複数のチームで開発を行う際に、バックエンドとフロントエンドでコードを使い回すこ...]]></summary>
+        <author>
+            <name>まさきち</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[alembicのマイグレーションファイルの書き方]]></title>
         <id>https://zenn.dev/fhmn/articles/188b23c6a95644</id>
@@ -49,6 +251,22 @@ def upgrade() -> None:
 ベースにな...]]></summary>
         <author>
             <name>Taka</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【物体検出】アンカーボックスって？【図解】]]></title>
+        <id>https://zenn.dev/nekoallergy/articles/dl-advanced-anchor</id>
+        <link href="https://zenn.dev/nekoallergy/articles/dl-advanced-anchor"/>
+        <updated>2023-09-25T22:00:00.000Z</updated>
+        <summary type="html"><![CDATA[アンカーボックスとは？
+物体検出タスクは、写真や映像の中から「物体が何か？」と「物体がどこにあるか？」を見つける技術です。ここで「アンカーボックス」というのは、物体の位置を推測するための「参照ボックス」として考えることができます。
+具体例で考えてみましょう。
+例えば、道路の写真に車や自転車、歩行者が写っているとします。
+
+アンカーボックスとは？
+アンカーボックスは、この写真上のあらゆる場所に小さな四角いボックスをいくつか置いて、それぞれのボックスが物体を含むかどうかを推測します。そして、もし物体を含んでいると判断されたら、そのボックスの位置や大きさを調整して、物体を正確に囲むようにし...]]></summary>
+        <author>
+            <name>NekoAllergy</name>
         </author>
     </entry>
     <entry>
@@ -5730,201 +5948,6 @@ PyMCではカーネル関数やスパースGPなどデフォルトで用意さ�
 時系列モデル（...]]></summary>
         <author>
             <name>よしだ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ubuntu に nginx, Postgresql, ngrok を使って Mattermost を使ってみた。]]></title>
-        <id>https://zenn.dev/hiro_0128/books/f74e4a24f5e95d</id>
-        <link href="https://zenn.dev/hiro_0128/books/f74e4a24f5e95d"/>
-        <updated>2023-08-28T12:05:34.000Z</updated>
-        <summary type="html"><![CDATA[Mattermost のサーバーを構築から公開までの忘備録。]]></summary>
-        <author>
-            <name>hirosan</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ガウス過程回帰とGPyのメモ]]></title>
-        <id>https://zenn.dev/hk_ilohas/articles/gaussian-process</id>
-        <link href="https://zenn.dev/hk_ilohas/articles/gaussian-process"/>
-        <updated>2023-08-28T08:30:19.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Kindle の日替わりセールで買って積読になっていた『ガウス過程と機械学習』を読んだので，ガウス過程回帰について整理し，GPy で試してみました．この記事の内容は『ガウス過程と機械学習』の 2-4 章に対応しています．
-ガウス過程回帰とは回帰分析手法の一種で，非線形な関数関係を表すことができます．ガウス過程回帰ではカーネル関数と呼ばれる類似度を表す関数を設定しますが，このカーネル関数を変えることで無限回微分可能な滑らかな関数やブラウン運動，周期性など様々なものを扱えます．
-
- ガウス分布
-平均 \mu，分散 \sigma ^2 のガウス分布の確率密度関数は，
-
-\math...]]></summary>
-        <author>
-            <name>HK_ilohas</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SlackとChatGPT APIでチャットボットを作る パート5（番外編／Gradioインターフェイス）]]></title>
-        <id>https://zenn.dev/techflagcorp/articles/5f2aead03878b1</id>
-        <link href="https://zenn.dev/techflagcorp/articles/5f2aead03878b1"/>
-        <updated>2023-08-28T07:52:11.000Z</updated>
-        <summary type="html"><![CDATA[SlackとChatGPT APIでチャットボットを作る パート5（番外編／Gradioインターフェイス）
-パート1（基礎編）、パート2（会話履歴管理編）、パート3（function calling編）、パート4 （code interpreterぽい編）ときて、パート5では番外編としてインターフェイスをGradioにすげ換えてみたいと思います。Slackを使っていない方も多いと思いますが、そんな皆さんもGradioなら手軽に試すことができます。ただひとつ、実は悲しいお知らせがありまして、パート4 （code interpreterぽい編）でPythonコードの実行に使ったIPyth...]]></summary>
-        <author>
-            <name>dagger1</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[中間テーブルとは #2]]></title>
-        <id>https://zenn.dev/oreilly_ota/articles/96fb2d58e273e1</id>
-        <link href="https://zenn.dev/oreilly_ota/articles/96fb2d58e273e1"/>
-        <updated>2023-08-28T05:13:08.000Z</updated>
-        <summary type="html"><![CDATA[概要
-本記事では、中間テーブルのデータ表示方法を解説する。「中間テーブルとは #1」に続く記事なので、より詳細を知りたい方はそちらを参考いただきたい。
-https://zenn.dev/oreilly_ota/articles/a9a3b4d1dabec0
-
- 中間テーブルのおさらい
-中間テーブルのコードを以下に記載する。
-order_items = db.Table('order_items',
-    db.Column('order_id', db.Integer, db.ForeignKey('order.id'), primary_key=True),
-    db.Col...]]></summary>
-        <author>
-            <name>オライリーヨッシー</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-293｜A - Swap Odd and Even]]></title>
-        <id>https://zenn.dev/hyperdb/articles/f3fc0c304664d1</id>
-        <link href="https://zenn.dev/hyperdb/articles/f3fc0c304664d1"/>
-        <updated>2023-08-28T04:50:37.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-293 A - Swap Odd and Even
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s = getString()
-    t = ''
-
-    i = 0
-    while i < len(s):
-        t += (s[i:i+2])[::-1]
-        i += 2
-    print(t)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-293｜B - Call the ID Number]]></title>
-        <id>https://zenn.dev/hyperdb/articles/dbb58b46626623</id>
-        <link href="https://zenn.dev/hyperdb/articles/dbb58b46626623"/>
-        <updated>2023-08-28T04:50:36.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-293 B - Call the ID Number
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n = getInt()
-    a = [0] + getIntList()
-    b = [0 for _ in range(len(a))]
-
-    for i in range(1, len(a)):
-        if b[i] == 0:...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AtProtocolを使ってBlueskyにPythonからLinkCardをPostする]]></title>
-        <id>https://zenn.dev/sion_pn/articles/a725029649b0f8</id>
-        <link href="https://zenn.dev/sion_pn/articles/a725029649b0f8"/>
-        <updated>2023-08-28T01:40:45.000Z</updated>
-        <summary type="html"><![CDATA[https://zenn.dev/sion_pn/articles/afe598bdbfebf9
-前回、AtProtocolを使ってBlueskyにPythonからPostする方法を書きましたが、この方法でURLを含んだテキストを投稿しても、リンクが自動では有効にならないため任意のWebページを開くことが出来ません。
-そのため、Blueskyへリンク付きのPostを投稿したい場合、LinkCardを作成して投稿を行うという手順を踏む必要があります。
-
- 使用ライブラリ
-前回の記事で紹介した、The At Protocol SDK for Pythonを使用して実装を行います。
-本記事投稿...]]></summary>
-        <author>
-            <name>Mimaki SiON</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[楽天の売れ筋商品からランダムにX(Twitter)に投稿する]]></title>
-        <id>https://zenn.dev/torachi0401/articles/how_to_twitter_bot</id>
-        <link href="https://zenn.dev/torachi0401/articles/how_to_twitter_bot"/>
-        <updated>2023-08-27T16:15:59.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-楽天BooksのIT関連の書籍の売れ筋からランダムでTwitterに投稿するシステムを作りました。
-特定のジャンルの売れ筋上位30の中からランダムに1つを選択していますので、場合によっては同じ商品が投稿される場合もあります。
-
- 環境
-
-
-Railway
-
-python3.11
-
-tweepy
-reuests
-
-
-
-
-
-
- ソースコード
-import tweepy
-from const import *
-
-
-def create_post(_title, _affiliate_url, _item_caption):
-    client = tweepy.Client(c...]]></summary>
-        <author>
-            <name>Torachi0401</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Zennに投稿した記事一覧をCSVに出力する]]></title>
-        <id>https://zenn.dev/nori0__/articles/0ef8cbb5bda1d8</id>
-        <link href="https://zenn.dev/nori0__/articles/0ef8cbb5bda1d8"/>
-        <updated>2023-08-27T15:13:55.000Z</updated>
-        <summary type="html"><![CDATA[背景
-今まで投稿した技術記事を一覧で欲しいと言われてたので手作業だるすぎとなったのでコード書くことにした。
-
- 実装
-https://github.com/nori1994/OUTPUT_CSV_OF_QIITA_ZENN_ARTICLE
-ZennだけでなくQiitaでの記事一覧も欲しかったのでどちらも出力できるようにした。
-Qiitaについてはこちら。
-記事作成日と記事名のCSVが出力される。
-published, title,
-YYYY/mm/dd, article title,
-
- 工夫したところ
-
-
-仮想環境記事を参考に仮想環境が Python3 の標準ライブラリである ve...]]></summary>
-        <author>
-            <name>nori0__</name>
         </author>
     </entry>
 </feed>
