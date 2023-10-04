@@ -22,6 +22,324 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-03 datetime="2023-10-03T16:47:29.000Z">2023-10-03</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-03 datetime="2023-10-03T16:47:29.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nakurei/articles/list-copy-with-python"
+                        open
+                      >
+                        <summary class="article-expander__title">Pythonでlistをコピーしたいだけなのに、調べたら方法がたくさんあったという話</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nakurei/articles/list-copy-with-python">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--zQCEP5w9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7list%25E3%2582%2592%25E3%2582%25B3%25E3%2583%2594%25E3%2583%25BC%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%25E3%2581%25A0%25E3%2581%2591%25E3%2581%25AA%25E3%2581%25AE%25E3%2581%25AB%25E3%2580%2581%25E8%25AA%25BF%25E3%2581%25B9%25E3%2581%259F%25E3%2582%2589%25E6%2596%25B9%25E6%25B3%2595%25E3%2581%258C%25E3%2581%259F%25E3%2581%258F%25E3%2581%2595%25E3%2582%2593%25E3%2581%2582%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25A8%25E3%2581%2584%25E3%2581%2586%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:NakuRei%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2ZjNThmYWI0YTguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>これはなに
+Pythonでlistをコピーする方法について調べたメモ。
+
+ 結論 | 結局どの手法が良いのか
+どの方法が優れているかは状況によるが、上記の調査結果から、筆者は下記の手法を選択しようと思った。
+
+浅いコピー : copy.copy()を利用
+深いコピー : copy.deepcopy()を利用
+
+
+ はじめに
+Pythonでは、b &#x3D; aでリストをコピーできない。
+b &#x3D; aでリストをコピーしようとすると、新しいリストが作成されるのではなく、既存のリストaへの新しい参照bが作成される。つまり、aとbは同じオブジェクトを指す。
+a &#x3D; [1, [2, 3], 4]
+b &#x3D;...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/udonmaru/articles/2b4238a9f99016"
+                        open
+                      >
+                        <summary class="article-expander__title">最悪なコードと最高なコード</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/udonmaru/articles/2b4238a9f99016">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--h3IDoqGA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259C%2580%25E6%2582%25AA%25E3%2581%25AA%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25A8%25E6%259C%2580%25E9%25AB%2598%25E3%2581%25AA%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:udonmaru%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EwODVjMWI5ODkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>chatgptに最悪なコードを作ってもらいました
+
+ 普通に作ってもらった
+import random as r,math as m;exec(&#x27;&#x27;.join([chr(108-(i%2)*32)+chr(97+(i%2)*4) for i in range(12)]));x,y,z,a,b,c&#x3D;1,2,3,4,5,6
+def f(x,y,z,a,b,c):return m.sqrt(x**2+y**2+z**2),m.sqrt(a**2+b**2+c**2)
+def g(v,w):return r.choice([v,w])
+print(g(*f(x,y,z,a,b,c)))
+
+ ダメ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/atu4403/articles/howto-git-cliff"
+                        open
+                      >
+                        <summary class="article-expander__title">CHANGELOGの悩みを一発解決！git-cliffの使い方からカスタマイズまで📚</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/atu4403/articles/howto-git-cliff">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--TxkcEiAF--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:CHANGELOG%25E3%2581%25AE%25E6%2582%25A9%25E3%2581%25BF%25E3%2582%2592%25E4%25B8%2580%25E7%2599%25BA%25E8%25A7%25A3%25E6%25B1%25BA%25EF%25BC%2581git-cliff%25E3%2581%25AE%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%25E3%2581%258B%25E3%2582%2589%25E3%2582%25AB%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25BA%25E3%2581%25BE%25E3%2581%25A7%2520%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:atu4403%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZhYmI2YjcxOWYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+CHANGELOGを自動生成するツールは多種多様です。Conventional Commitsに対応したコミットメッセージから生成するもの、GitHub上でのリリースやタグ付けまで行うものなどがあります。
+CHANGELOGを自動生成する際には、バージョンタグに対応したコミットメッセージを基にしてくれると便利です。コミットメッセージを適切に付けるだけで、後はツールにお任せできます。ただし、いくつかの懸念点が存在します。
+
+ 懸念点 1: チキンエッグプロブレム
+CHANGELOG自動生成ツールは便利ですが、一つの大きな問題があります。それは、Gitのタグとコミットメッセージ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/airiin/articles/1400294ab87dae"
+                        open
+                      >
+                        <summary class="article-expander__title">Python｜機械学習</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/airiin/articles/1400294ab87dae">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--QX0H_x0A--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25EF%25BD%259C%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:AIRI%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3ZDBjMWQ2ZWYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>欠損値の補完
+欠損値補完の流れは以下の通り。
+
+欠損値の数を確認
+ヒストグラムで表示し、欠損値の補完方法を考える
+欠損値を補完する
+欠損値の数を確認
+
+
+ 欠損値を平均値で補完する場合
+data.isnull().sum()
+# 各カラムの欠損値の数が表示される。
+
+plt.hist(data[&#x27;カラム名&#x27;])
+plt.show()
+# 指定したカラムのヒストグラムが表示される。
+
+average &#x3D; data[&#x27;カラム名&#x27;].mean()
+data.update(data[&#x27;カラム名&#x27;].fillna(average))
+# 欠損値を平均値で補完。
+
+data[&#x27;カラム名&#x27;].is...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/shogura/articles/lane-tracker"
+                        open
+                      >
+                        <summary class="article-expander__title">Python3 + OpenCVで道路白線検出プログラムを実装する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shogura/articles/lane-tracker">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--0zc6zthN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python3%2520%252B%2520OpenCV%25E3%2581%25A7%25E9%2581%2593%25E8%25B7%25AF%25E7%2599%25BD%25E7%25B7%259A%25E6%25A4%259C%25E5%2587%25BA%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%25A0%25E3%2582%2592%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:shogura%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdlMDM2MzdkMTkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+ドイツで自動車のソフトウェアエンジニアリングを学んでる奴 &quot;shogura&quot; です。
+「Shaping the Future of mobility, together」を掲げ、自動車に関するソフトウェアエンジニアリングのプログラムを提供しているSEA:MEに参加しています。SEA:MEでは「組み込みシステム」「自動運転」「モビリティエコシステム」の3つのモジュールから自分の興味に合った分野を学習することができます。
+本記事では、自動運転モジュールの一環であるPiRacerで決まったレーンを自動走行でさせるという課題の一部である道路白線検出プログラムについてどのように実装し...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/ouma_san/articles/d6734a48743156"
+                        open
+                      >
+                        <summary class="article-expander__title">Androidアプリ内でPythonを実行する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ouma_san/articles/d6734a48743156">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--lhojFVpx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Android%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E5%2586%2585%25E3%2581%25A7Python%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%258A%25E9%25A6%25AC%25E3%2581%2595%25E3%2582%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I1OWNlMjgyYWIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>あいさつ
+初めまして、お馬さんです。大学生やっています。大学で初めてプログラミングを触りました。
+初めの記事なので誤字やもっとこうしたほうがいいなどがあるかもしれませんがどうぞお手柔らかにお願いします。
+
+ 環境
+
+Android Studio Electric Eel | 2022.1.1
+kotlin: 1.7.0
+minSdk: 24
+targetSdk: 33
+
+
+ 最終目標
+AndroidでPythonのライブラリを使用できるようにする。
+Androidの単一データをPythonで処理し、Androidで取得できるようにする。
+Androidの配列データをPythonで処理...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;26
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/2657d97d909f0b"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-318｜A - Full Moon</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/2657d97d909f0b">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--yIdS4yFU--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-318%25EF%25BD%259CA%2520-%2520Full%2520Moon%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-318 A - Full Moon
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    n, m, p &#x3D; getIntMap()
+    a &#x3D; [i * p + m for i in range(n // p + 1) if i * p + m &lt;&#x3D; n]
+
+    print(len(a))
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/22275b66bab66a"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-318｜B - Overlapping sheets</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/22275b66bab66a">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--qjq4nbSg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-318%25EF%25BD%259CB%2520-%2520Overlapping%2520sheets%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-318 B - Overlapping sheets
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+def getIntListRow(N):
+    return [list(map(int, input().split())) for _ in range(N)]
+
+def getMax(xy):
+    m &#x3D; 0
+    for x in xy:
+        m &#x3D; max(m, max(x))
+    return m
+
+def getSum(xy):
+    s &#x3D; 0
+    for x in...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yktakaha4/articles/assert_function_calls_in_all_unittests"
+                        open
+                      >
+                        <summary class="article-expander__title">unittestで特定の関数呼び出しをテスト全体でアサーションする</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yktakaha4/articles/assert_function_calls_in_all_unittests">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Z1Wp5AO3--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:unittest%25E3%2581%25A7%25E7%2589%25B9%25E5%25AE%259A%25E3%2581%25AE%25E9%2596%25A2%25E6%2595%25B0%25E5%2591%25BC%25E3%2581%25B3%25E5%2587%25BA%25E3%2581%2597%25E3%2582%2592%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E5%2585%25A8%25E4%25BD%2593%25E3%2581%25A7%25E3%2582%25A2%25E3%2582%25B5%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yuuki%2520Takahashi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2huMEtJWDdJZzVrRm9aVVlkai1yWDZfYk1UNDhEUXE5WE53YUVsPXMyNTAtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>小ネタです🍣
+Pythonでプログラミングをするにあたって print はとても便利です
+ビルトイン関数のためimportは不要ですし、実装やテストの最中にちょっとだけ現在の状態を確認したいときに、誰しもお世話になったことがあるのでないかと思います
+https://docs.python.org/ja/3.11/library/functions.html#print
+しかしながら、Pythonにはロギングの仕組みとしてlogging モジュールが用意されており、プロダクションコードにおいてはこちらを利用すべきです
+https://docs.python.org/ja/3/howto/l...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-02 datetime="2023-10-02T23:35:11.000Z">2023-10-02</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-02 datetime="2023-10-02T23:35:11.000Z"></time>
           </button>
@@ -8211,416 +8529,6 @@ cuQuantum で遊んでみる (6) — 最大カット問題と QUBO と QAOA で 
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hk_ilohas/articles/mersenne-twister-previous-state"
-                        open
-                      >
-                        <summary class="article-expander__title">Mersenne Twister (MT19937) で未来と過去の乱数列を予測してみる【Python】</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hk_ilohas/articles/mersenne-twister-previous-state">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--jSCFyQor--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Mersenne%2520Twister%2520%2528MT19937%2529%2520%25E3%2581%25A7%25E6%259C%25AA%25E6%259D%25A5%25E3%2581%25A8%25E9%2581%258E%25E5%258E%25BB%25E3%2581%25AE%25E4%25B9%25B1%25E6%2595%25B0%25E5%2588%2597%25E3%2582%2592%25E4%25BA%2588%25E6%25B8%25AC%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25E3%2580%2590Python%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:HK_ilohas%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk2NjcxM2U1NTEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-Mersenne Twister (MT, メルセンヌ・ツイスタ) は擬似乱数を生成するアルゴリズムの一種です。その中でも、MT19937 という手法には次のような長所があります。
-
-周期が 2^{19937}-1 と非常に長い。
-高次元（623 次元）でも均等に分布する。
-擬似乱数の生成が高速。
-
-このような特徴から、様々なプログラミング言語の標準的な擬似乱数生成器に Mersenne Twister が採用されています。たとえば、Python の random には MT19937 が採用されています。
-しかし、Mersenne Twister は暗号論的擬似乱数ではあ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/akai_t/articles/fa18bdca2d8c93"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonの勉強メモ</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/akai_t/articles/fa18bdca2d8c93">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--i087QfdA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AE%25E5%258B%2589%25E5%25BC%25B7%25E3%2583%25A1%25E3%2583%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Tadaaki%2520AKAI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2puSk5aWkszM2hUY29aMExTcDZVZHlyV1Zxa2d0N2RMc29WSkI4UlE9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>内容について
-Pythonを基礎から勉強するためにPythonプログラミング入門を読んで気になったところや他の知っている言語（PHP等）との違いをメモ
-
- 
-
- 数値演算
-
-** と指定すると指数になる（ex:4 ** 2 &#x3D; 16)
-
-PHPは5.6以降で同じ書き方ができる（知らなかった）
-PHP5.6未満の場合はpow(4, 2)と書く
-
-
-// で割ると切り捨てとなる（ex:7 / 2 &#x3D; 3.5だが7 // 2 &#x3D; 3となる）
-
-PHPの場合はfloor(7 / 2)
-
-
-
-
-
- 変数と関数の基礎
-
-関数定義はdef 関数名 (引数, ...):という形式になる。
-中括弧({...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;14
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/akai_t/articles/af8f8b502a59bf"
-                        open
-                      >
-                        <summary class="article-expander__title">AIを利用して知識ゼロからPythonでシステム構築をする その３ - 構築失敗編 -</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/akai_t/articles/af8f8b502a59bf">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--5QdUDTOc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E7%259F%25A5%25E8%25AD%2598%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589Python%25E3%2581%25A7%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E6%25A7%258B%25E7%25AF%2589%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%2520%25E3%2581%259D%25E3%2581%25AE%25EF%25BC%2593%2520-%2520%25E6%25A7%258B%25E7%25AF%2589%25E5%25A4%25B1%25E6%2595%2597%25E7%25B7%25A8%2520-%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Tadaaki%2520AKAI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2puSk5aWkszM2hUY29aMExTcDZVZHlyV1Zxa2d0N2RMc29WSkI4UlE9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>構築失敗編
-
- 前提知識と仕様
-
-PHPやJavaを用いたWebアプリケーションの開発経験はあるが、Pythonは全く触った経験無し
-さくらのレンタルサーバ スタンダードを契約済み
-問い合わせは基本的に無料で利用できるChatGPT3.5を利用
-できる限りAIを利用して構築（使用技術等は自分で決定し、随時記載）
-フレームワークはFlaskを使ってみることとする
-
-
-User
-Flaskを利用してデータベースと接続するWebアプリを作成したい
-ChatGPT
-素晴らしいです！Flaskを使用してデータベースと接続するWebアプリケーションを作成することは、一般的なタスクです。以下に、基...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/akai_t/articles/3ad9378c57f4ec"
-                        open
-                      >
-                        <summary class="article-expander__title">AIを利用して知識ゼロからPythonでシステム構築をする その２ - Flask編 -</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/akai_t/articles/3ad9378c57f4ec">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--wRTUwlvx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E7%259F%25A5%25E8%25AD%2598%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589Python%25E3%2581%25A7%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E6%25A7%258B%25E7%25AF%2589%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%2520%25E3%2581%259D%25E3%2581%25AE%25EF%25BC%2592%2520-%2520Flask%25E7%25B7%25A8%2520-%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Tadaaki%2520AKAI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2puSk5aWkszM2hUY29aMExTcDZVZHlyV1Zxa2d0N2RMc29WSkI4UlE9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Flask編
-
- 前提知識と仕様
-
-PHPやJavaを用いたWebアプリケーションの開発経験はあるが、Pythonは全く触った経験無し
-さくらのレンタルサーバ スタンダードを契約済み
-問い合わせは基本的に無料で利用できるChatGPT3.5を利用
-できる限りAIを利用して構築（使用技術等は自分で決定し、随時記載）
-フレームワークはFlaskを使ってみることとする
-
-
-User
-Flaskを利用してWebシステムを構築したい。
-Flaskの基本的な使い方を教えてください。
-ChatGPT
-FlaskはPythonで書かれた軽量なWebアプリケーションフレームワークです。以下に、Flas...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/akai_t/articles/b32e6c92660e8f"
-                        open
-                      >
-                        <summary class="article-expander__title">AIを利用して知識ゼロからPythonでシステム構築をする その１ - サーバー構築編 -</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/akai_t/articles/b32e6c92660e8f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--UB7SHjDS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E7%259F%25A5%25E8%25AD%2598%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589Python%25E3%2581%25A7%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E6%25A7%258B%25E7%25AF%2589%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%2520%25E3%2581%259D%25E3%2581%25AE%25EF%25BC%2591%2520-%2520%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E6%25A7%258B%25E7%25AF%2589%25E7%25B7%25A8%2520-%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Tadaaki%2520AKAI%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2puSk5aWkszM2hUY29aMExTcDZVZHlyV1Zxa2d0N2RMc29WSkI4UlE9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>サーバー構築編
-
- 前提知識と仕様
-
-PHPやJavaを用いたWebアプリケーションの開発経験はあるが、Pythonは全く触った経験無し
-さくらのレンタルサーバ スタンダードを契約済み
-問い合わせは基本的に無料で利用できるChatGPT3.5を利用
-できる限りAIを利用して構築（使用技術等は自分で決定し、随時記載）
-
-
-User
-PythonでWebアプリケーションを作成します。
-はじめに何からすればいいですか？
-ChatGPT
-PythonでWebアプリケーションを作成する際の基本的な手順は次のとおりです：
-
-
-Webフレームワークの選択: Pythonには様々なWebフレームワー...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/manabinaoshi/articles/81eb6709bc1b38"
-                        open
-                      >
-                        <summary class="article-expander__title">おっさん、学びなおす</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/manabinaoshi/articles/81eb6709bc1b38">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--WAjIVIer--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%258A%25E3%2581%25A3%25E3%2581%2595%25E3%2582%2593%25E3%2580%2581%25E5%25AD%25A6%25E3%2581%25B3%25E3%2581%25AA%25E3%2581%258A%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%2599%25E3%2583%2586%25E3%2583%25A9%25E3%2583%25B3%25E5%2588%259D%25E5%25BF%2583%25E8%2580%2585%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Y4NzJjZjNjYzUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>社会に出て１０年あまり、高校数学の記憶もあやふや、ITも初心者のおっさんがデータサイエンスを一から勉強。Python、R、Java、PHPなどプログラミングはサッパリ、なんならExcel、Wordもあやしい、そんな状況からスタート。
-備忘録として使いつつ、何か教えてくれる人がいればラッキーと思う、そんなよこしまな気持ちで投稿してみよう。初投稿なので読みにくいかも、まいっか。</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/whitishlion/articles/daff336619acef"
-                        open
-                      >
-                        <summary class="article-expander__title">【量子コンピュータ】IBM量子開発者認定試験(C1000-112)サンプル問題をしがんでしがんで舐め回す(前編 Q01-10)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/whitishlion/articles/daff336619acef">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--gYQu9bN6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E9%2587%258F%25E5%25AD%2590%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2594%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25BF%25E3%2580%2591IBM%25E9%2587%258F%25E5%25AD%2590%25E9%2596%258B%25E7%2599%25BA%25E8%2580%2585%25E8%25AA%258D%25E5%25AE%259A%25E8%25A9%25A6%25E9%25A8%2593%2528C1000-112%2529%25E3%2582%25B5%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AB%25E5%2595%258F%25E9%25A1%258C%25E3%2582%2592%25E3%2581%2597%25E3%2581%258C%25E3%2582%2593%25E3%2581%25A7%25E3%2581%2597%25E3%2581%258C%25E3%2582%2593%25E3%2581%25A7%25E8%2588%2590%25E3%2582%2581%25E5%259B%259E%25E3%2581%2599%2528%25E5%2589%258D%25E7%25B7%25A8%2520Q...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:oreo_k%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKd053RGlEU2c2aGZNZk93Wm1pTnd5c1RGVnBCVmQ5ZTBqYVpDakI9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>みなさんこんにちは！
-この記事は，IBMが提供する量子開発者認定資格試験 Exam C1000-112: Fundamentals of Quantum Computation Using Qiskit v0.2X Developerサンプル問題の解答と解説記事です！
-IBMは, 当IBM量子開発者認定という資格を提供しており，その資格取得のためには当試験のpassが必要がです。(筆者は2023年8月にIBM量子開発者認定を取得。取得ホヤホヤ🍲で本記事執筆中です！)
-本記事はとにかくボリュームが多いため、試験自体の説明は概要に留め, サンプル問題の解説に集中しています。
-また，本前編/後...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;18
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kedama_nth/articles/how-to-pyparsing"
-                        open
-                      >
-                        <summary class="article-expander__title">pyparsingを使えば正規表現がわからなくてもパース処理が書ける</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kedama_nth/articles/how-to-pyparsing">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--gA9Cblcu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pyparsing%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2588%25E3%2581%25B0%25E6%25AD%25A3%25E8%25A6%258F%25E8%25A1%25A8%25E7%258F%25BE%25E3%2581%258C%25E3%2582%258F%25E3%2581%258B%25E3%2582%2589%25E3%2581%25AA%25E3%2581%258F%25E3%2581%25A6%25E3%2582%2582%25E3%2583%2591%25E3%2583%25BC%25E3%2582%25B9%25E5%2587%25A6%25E7%2590%2586%25E3%2581%258C%25E6%259B%25B8%25E3%2581%2591%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kedama_nth%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2l6OEFiVjNqSm9EVGNEYUJMZDVHSUdhS2xyV0Q2cWd1Q0oxMEdRPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-詳しい説明は他の記事に譲りますが、pyparsingはPEG(Parsing Expression Grammar)という手法を用いた構文解析ライブラリです。
-pyparsingを利用することで、比較的簡単にパース処理を記述することができます。
-パース処理が書けるようになると、コマンドやプログラムが吐き出したログから欲しいデータだけを取り出せるようになるほか、データの変換処理やユーザが入力した文字列の処理などが書けるようになります。
-本記事は「正規表現がイマイチ理解できなくて困っている」「パース処理を書きたいけど、正規表現が書けない」という方々に向けた記事になります。
-本記...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/b2a0f44d3e6bc7"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-298｜A - Job Interview</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/b2a0f44d3e6bc7">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--HVSucJF3--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-298%25EF%25BD%259CA%2520-%2520Job%2520Interview%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-298 A - Job Interview
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getString():
-    return input()
-
-
-def main():
-    n &#x3D; getInt()
-    s &#x3D; getString()
-
-    print(&#x27;Yes&#x27; if s.count(&#x27;o&#x27;) &gt; 0 and s.count(&#x27;x&#x27;) &#x3D;&#x3D; 0 else &#x27;No&#x27;)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/6144f611f7eadb"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-298｜B - Coloring Matrix</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/6144f611f7eadb">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--r7EHmK44--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-298%25EF%25BD%259CB%2520-%2520Coloring%2520Matrix%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-298 B - Coloring Matrix
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def updown(l):
-    result &#x3D; []
-
-    for i in range(len(l)):
-        result.append(l[len(l) - i - 1])
-
-    return result
-
-
-d...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-03 datetime="2023-09-03T15:27:35.000Z">2023-09-03</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-03 datetime="2023-09-03T15:27:35.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/erand/articles/c771d28aba8413"
-                        open
-                      >
-                        <summary class="article-expander__title">自動売買ツールをリアル環境で検証する方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/erand/articles/c771d28aba8413">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--k3-Frej8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%2587%25AA%25E5%258B%2595%25E5%25A3%25B2%25E8%25B2%25B7%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%25E3%2582%2592%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A7%25E6%25A4%259C%25E8%25A8%25BC%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2588%25E3%2582%2589%25E3%2582%2593%25E3%2581%25A9%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZFZfZWV3cW94WmpSeW1kdEk3VWFGbzVReG5fYkdyczJBcVVDbi1OVjhSPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>株・FXで儲けたくて自動売買ツールを作った方は、海外FXの口座開設ボーナスを使って資金調達するのがおすすめ。私もPythonでコードを書いて、口座開設ボーナスを使って検証をしてました。
-デモ口座でも出来るとおっしゃる方もいますが、どうしても本気度が出ない方もいるので実際のお金がかかった状態がよいです。ただし、自己資金を使うのはリスクがあるのでボーナスを使いましょう。
-参考サイト：海外FXで口座開設ボーナスがもらえる業者一覧</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/comachi/articles/a058dc03790d55"
-                        open
-                      >
-                        <summary class="article-expander__title">FastAPI が動く諸々整った Python 環境を Docker で作ってみる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/comachi/articles/a058dc03790d55">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--THtWSR-S--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%2520%25E3%2581%258C%25E5%258B%2595%25E3%2581%258F%25E8%25AB%25B8%25E3%2580%2585%25E6%2595%25B4%25E3%2581%25A3%25E3%2581%259F%2520Python%2520%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%2520Docker%2520%25E3%2581%25A7%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:comachi%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzlmZjhjY2NmZTUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-
-この記事では、最近 WSL2 を使い始めた私が、FastAPI が動く諸々整った Python 環境を Docker で作る方法を、メモとして残します。
-FastAPI で単に Hello, World するためだけの環境ではなく、フォーマッタ、リンタ、型チェック、ユニットテスト、パッケージ管理などを導入した環境を用意しました。
-
-また、VSCode 上でのテストカバレッジの可視化についても実施できるようにしました。
-
-
-この記事は、nikkie さんの Hatena Blog を参考にして作成しました。いくつかの記事の Tips をまとめたものを作成したイメージです。
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -8628,8 +8536,8 @@ FastAPI で単に Hello, World するためだけの環境ではなく、フォ�
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6387400435">
-        <time id="build-timestamp" datetime="2023-10-03T01:14:14.637Z">2023-10-03T01:14:14.637Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6400310250">
+        <time id="build-timestamp" datetime="2023-10-04T01:15:44.818Z">2023-10-04T01:15:44.818Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
