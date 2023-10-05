@@ -22,6 +22,319 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-04 datetime="2023-10-04T14:03:01.000Z">2023-10-04</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-04 datetime="2023-10-04T14:03:01.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/lucidfrontier45/articles/8902653414edc6"
+                        open
+                      >
+                        <summary class="article-expander__title">任意の確率分布でベイズ分類機を作る</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/lucidfrontier45/articles/8902653414edc6">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--MresCg46--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BB%25BB%25E6%2584%258F%25E3%2581%25AE%25E7%25A2%25BA%25E7%258E%2587%25E5%2588%2586%25E5%25B8%2583%25E3%2581%25A7%25E3%2583%2599%25E3%2582%25A4%25E3%2582%25BA%25E5%2588%2586%25E9%25A1%259E%25E6%25A9%259F%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:lucidfrontier45%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzcxY2RkYzI0MmUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>やりたいこと
+scikit-learnのnaive_bayesにはいくつかのモデルが実装されていますが、それ以外の確率分布、特にKDEでフィットした経験分布を用いてベイズ分類機を作りたい。
+
+ やり方
+基本的には以下の通りです。
+
+
+C: class
+
+X: 観測値
+
+C^* &#x3D; \mathrm{argmax}_C P(C)P(X|C)
+任意の形のP(X|C)を利用できるようにできるだけ汎用的に作りたいのでこれを抽象クラスにしてAPIだけ定義し、それ以外の部分を実際に実装します。fitで観測データからパラメータを推定し、pdfで確率(密度)を返します。
+
+ 分布抽象クラスのAPI
+f...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/shiro_toy_box/articles/3ebcac8e5c229f"
+                        open
+                      >
+                        <summary class="article-expander__title">APIから受け取ったJSONデータをUnityで辞書型に変換する方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shiro_toy_box/articles/3ebcac8e5c229f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--NBpiXO4---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:API%25E3%2581%258B%25E3%2582%2589%25E5%258F%2597%25E3%2581%2591%25E5%258F%2596%25E3%2581%25A3%25E3%2581%259FJSON%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592Unity%25E3%2581%25A7%25E8%25BE%259E%25E6%259B%25B8%25E5%259E%258B%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2582%258D%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyNzY5NDdhMzAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>前書き
+作っているもののオプション設定を作ろうと思い、たどり着いた解決方法です。
+参照の記事をもとにChatGPTで解決することができました。
+https://note.com/sirodon_256/n/nd92fc6c26cc8
+
+ やりたいこと
+
+APIでロールプレイの設定の情報取得できるように
+
+
+ 本題
+
+ APIの処理
+
+api.py
+from fastapi import FastAPI
+import subprocess
+import os
+import character_roleplay
+
+app &#x3D; FastAPI()
+
+@app.get(&quot;/roll_mode...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kemomimi02/articles/13da0afb8cdb3d"
+                        open
+                      >
+                        <summary class="article-expander__title">Raspberry PiとNFCでスマートフォンでタッチするとリクエストを送るようにする</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kemomimi02/articles/13da0afb8cdb3d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--chYpRBgc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Raspberry%2520Pi%25E3%2581%25A8NFC%25E3%2581%25A7%25E3%2582%25B9%25E3%2583%259E%25E3%2583%25BC%25E3%2583%2588%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25B3%25E3%2581%25A7%25E3%2582%25BF%25E3%2583%2583%25E3%2583%2581%25E3%2581%2599%25E3%2582%258B%25E3%2581%25A8%25E3%2583%25AA%25E3%2582%25AF%25E3%2582%25A8%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E9%2580%2581%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%259F%25E3%2583%25B3%25E3%2583%259F%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSTFQWjdyYUZKLTI2MkJwLThRTmNqdTBVMXBPNUdXRWMycDYyaDhldW9PUzJzPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>必要なもの
+Raspberry Pi 2 model B v1.2
+
+PaSoRi RC-S380
+
+TP-Link TL-WN725N
+（Raspberry Pi 2 model BにWifiが搭載されていないため）
+
+電磁スピーカー
+PCのビープ音を出すスピーカーを使いました
+
+電磁スピーカー Amazon URL
+
+ Raspberry Pi にOSをインストールする
+下記サイトから Raspberry Pi Imager をインストール
+Raspberry Pi OS
+Raspberry Pi Imagerを起動したら、「OSを選ぶ」から「Raspberry Pi OS」を...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nameless_sn/articles/fastapi_testing_tutorial"
+                        open
+                      >
+                        <summary class="article-expander__title">FastAPI✕SQLite✕SQLModelで作ったJWT認証付きREST APIで、簡単なテストをする流れ</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nameless_sn/articles/fastapi_testing_tutorial">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--7L-ICUCP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%25E2%259C%2595SQLite%25E2%259C%2595SQLModel%25E3%2581%25A7%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259FJWT%25E8%25AA%258D%25E8%25A8%25BC%25E4%25BB%2598%25E3%2581%258DREST%2520API%25E3%2581%25A7%25E3%2580%2581%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25AA%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%25E6%25B5%2581%25E3%2582%258C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shota%2520Nukumizu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y3BpRWxxcmxndGkyV3NPQ2dpcmg2R1dFS3NaSC1SOHJOTE1JcXNscWc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+今回の記事では、FastAPIとSQLiteで作ったREST APIをテストする方法を解説する。
+
+ 対象とする読者
+
+FastAPIをこれから学ぶひと
+FastAPIで実際にテストしたい人
+これからFastAPIを実務で導入したいひと
+
+
+ REST APIを開発する手順
+FastAPIを使用して、SQLModelとSQLiteを用いた簡単なJWT認証付きのREST APIを開発する手順を以下に示す。
+
+ (1) 必要なライブラリのインストール
+pip install fastapi[all] uvicorn sqlmodel
+
+ (2) モデルの定義:
+
+ /app/m...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/f0d60808c79988"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-319｜A - Legendary Players</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/f0d60808c79988">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--2f3HC9g9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-319%25EF%25BD%259CA%2520-%2520Legendary%2520Players%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-319 A - Legendary Players
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+def main():
+    s &#x3D; getString()
+    d &#x3D; {
+        &#x27;tourist&#x27;: 3858,
+        &#x27;ksun48&#x27;: 3679,
+        &#x27;Benq&#x27;: 3658,
+        &#x27;Um_nik&#x27;: 3648,
+        &#x27;apiad&#x27;: 3638,
+        &#x27;Stonefeang&#x27;: 3630,
+        &#x27;ecnerwala&#x27;: 36...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/94903215e001eb"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-319｜B - Measure</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/94903215e001eb">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--1re03D1p--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-319%25EF%25BD%259CB%2520-%2520Measure%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-319 B - Measure
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+def main():
+    n &#x3D; getInt()
+    a &#x3D; [j for j in range(1, 10) if n % j &#x3D;&#x3D; 0]
+
+    r &#x3D; &#x27;&#x27;
+    for i in range(n + 1):
+        x &#x3D; [b for b in a if i % (n / b) &#x3D;&#x3D; 0]
+        if len(x) &#x3D;&#x3D; 0:
+            r +&#x3D; &#x27;-&#x27;
+        els...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/takilog/articles/5cab3bfd05a9a2"
+                        open
+                      >
+                        <summary class="article-expander__title">Overture Maps Foundationのデータを活用したい (3): Mapboxを用いたクラスタ可視化</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takilog/articles/5cab3bfd05a9a2">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--BdJJiAKW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Overture%2520Maps%2520Foundation%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E6%25B4%25BB%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2520%25283%2529%253A%2520Mapbox%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25B9%25E3%2582%25BF%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259F%25E3%2581%258D%25E3%2582%258D%25E3%2581%2590%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzgzY2JlMWNiYTYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Overture Maps Foundationというものがあります。前回、位置データ (Placesデータ) をダウンロードして保存しました。
+https://zenn.dev/takilog/articles/e96d8c1e132db4
+今回はMatplotlibではなく、Mapboxを利用して、ダウンロードしてきたPOI情報を地図上に可視化してみます。
+
+ データの確認
+前回の記事でダウンロードして総数のうち、10,000個のPOIを格納してgeojson形式に変換したものを用意しました。このような形式になっています。基本的には点 (Point) として、名前とID・カテゴリ名・...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/takuowake/articles/52e2803d258a57"
+                        open
+                      >
+                        <summary class="article-expander__title">graph-toolの基本的な使い方</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takuowake/articles/52e2803d258a57">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--zZi3zJrP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:graph-tool%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%25E7%259A%2584%25E3%2581%25AA%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Takuo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U2MmQ0OTllYjEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+graph-toolはPythonのライブラリで、大規模なネットワークの解析や操作を高速に行うことができるツールです。以下では、graph-toolの基本的な使い方を紹介します。
+
+ インストール
+まずはgraph-toolをインストールします。詳細なインストール手順は公式ドキュメントを参照してください。
+Ubuntu OSのDocker上でインストールする方法については、以下を参考にしてください。
+https://zenn.dev/takuowake/articles/7c654e3b2a7df6
+
+ graph-toolの使い方
+
+ 基本的なグラフの作成
+from gr...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-03 datetime="2023-10-03T16:47:29.000Z">2023-10-03</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-03 datetime="2023-10-03T16:47:29.000Z"></time>
           </button>
@@ -8168,367 +8481,6 @@ https://zenn.dev/daidai_daitai/articles/92e8fbbfa79e42
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/notch_man8600/articles/efee2fb94b1519"
-                        open
-                      >
-                        <summary class="article-expander__title">一般社団法人サイバー技術・インターネット自由研究会の電子公告をPythonで読む</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/notch_man8600/articles/efee2fb94b1519">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--MQ94VZa1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25B8%2580%25E8%2588%25AC%25E7%25A4%25BE%25E5%259B%25A3%25E6%25B3%2595%25E4%25BA%25BA%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%2590%25E3%2583%25BC%25E6%258A%2580%25E8%25A1%2593%25E3%2583%25BB%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%258D%25E3%2583%2583%25E3%2583%2588%25E8%2587%25AA%25E7%2594%25B1%25E7%25A0%2594%25E7%25A9%25B6%25E4%25BC%259A%25E3%2581%25AE%25E9%259B%25BB%25E5%25AD%2590%25E5%2585%25AC%25E5%2591%258A%25E3%2582%2592Python%25E3%2581%25A7%25E8%25AA%25AD%25E3%2582%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:notch_man%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U1NWIwNjRlY2UuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>最近、Telnetがホットですね。
-
-というわけでPythonで読んでみました。なお、telnetlibでは上手くいきませんでした。
-# Standard Library
-import socket
-
-try:
-    sock &#x3D; socket.create_connection((&quot;koukoku.shadan.open.ad.jp&quot;, 23))
-    while True:
-        chunk &#x3D; sock.recv(2)
-        if not chunk:
-            break
-        try:
-            print(chun...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/ykesamaru/articles/83b171b045809c"
-                        open
-                      >
-                        <summary class="article-expander__title">【Python】顔データセットの間違い探し（失敗編②）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ykesamaru/articles/83b171b045809c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--BkuvGJbt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591%25E9%25A1%2594%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%25BB%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AE%25E9%2596%2593%25E9%2581%2595%25E3%2581%2584%25E6%258E%25A2%25E3%2581%2597%25EF%25BC%2588%25E5%25A4%25B1%25E6%2595%2597%25E7%25B7%25A8%25E2%2591%25A1%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yKesamaru%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM0ODhjZWYyNjAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>顔データセットの間違い探し 失敗編②
-前回の記事では、マシンが熱暴走して何回かブラックアウトするという屈辱を味わいました。今回は、その続きです。
-
-!
-この記事で紹介している方法で、顔データセットの間違い探しを行いましたが、処理時間が異常に長く、諦めました。ですので、以降の記事を「失敗編②」としました。
-
-前回の記事
-https://zenn.dev/ykesamaru/articles/d4b78ea53b02e2
-前回の手法では、顔画像から特徴ベクトルを取得し、その後組み合わせを作成していました。そこで今回は、特徴ベクトルを作成する段階と、組み合わせからコサイン類似度を計算する段...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/saldra/articles/26288e2f03f2ae"
-                        open
-                      >
-                        <summary class="article-expander__title">【個人メモ】RTX4090+llama.cppでGPUオフロードできなかったので解決した</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/saldra/articles/26288e2f03f2ae">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--8qyi82j4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E5%2580%258B%25E4%25BA%25BA%25E3%2583%25A1%25E3%2583%25A2%25E3%2580%2591RTX4090%252Bllama.cpp%25E3%2581%25A7GPU%25E3%2582%25AA%25E3%2583%2595%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25AA%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25AE%25E3%2581%25A7%25E8%25A7%25A3%25E6%25B1%25BA%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Sald%2520ra%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiZmIxNDBmZjEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>概要
-RTX-4090環境でtext-generation-webui環境を構築していたところ、なぜかllama.cppのモデルでGPUオフロードできなかったので、調べて解決した。
-https://zenn.dev/saldra/articles/619232a81f2705
-
- やったこと
-
- pytorchの最新化
-nvcc -Vを行ったところ、CUDA12系だったのでpytorchを入れなおした。
-pip install --pre torch --index-url https://download.pytorch.org/whl/nightly/cu121
-これでも直らなか...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/daa9c8ec47568a"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-299｜B - Trick Taking</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/daa9c8ec47568a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--59rV0TM1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-299%25EF%25BD%259CB%2520-%2520Trick%2520Taking%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-299 B - Trick Taking
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n, t &#x3D; getIntMap()
-    c &#x3D; [0] + getIntList()
-    r &#x3D; [0] + getIntList()
-
-    a &#x3D; [i for i in range(len(c)) if c[i] &#x3D;&#x3D;...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/75aa806a5a4a1d"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-299｜A - Treasure Chest</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/75aa806a5a4a1d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--fL5Ko_IX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-299%25EF%25BD%259CA%2520-%2520Treasure%2520Chest%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-299 A - Treasure Chest
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getString():
-    return input()
-
-
-def main():
-    n &#x3D; getInt()
-    s &#x3D; getString()
-
-    print(&#x27;in&#x27; if s.find(&#x27;|&#x27;) &lt; s.find(&#x27;*&#x27;) &lt; s.rfind(&#x27;|&#x27;) else &#x27;out&#x27;)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/whitishlion/articles/d6c4765a8f1684"
-                        open
-                      >
-                        <summary class="article-expander__title">【量子コンピュータ】IBM量子開発者認定試験(C1000-112)サンプル問題をしがんでしがんで舐め回す(後編  Q011-20)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/whitishlion/articles/d6c4765a8f1684">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--91Gl88Qa--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E9%2587%258F%25E5%25AD%2590%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2594%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25BF%25E3%2580%2591IBM%25E9%2587%258F%25E5%25AD%2590%25E9%2596%258B%25E7%2599%25BA%25E8%2580%2585%25E8%25AA%258D%25E5%25AE%259A%25E8%25A9%25A6%25E9%25A8%2593%2528C1000-112%2529%25E3%2582%25B5%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AB%25E5%2595%258F%25E9%25A1%258C%25E3%2582%2592%25E3%2581%2597%25E3%2581%258C%25E3%2582%2593%25E3%2581%25A7%25E3%2581%2597%25E3%2581%258C%25E3%2582%2593%25E3%2581%25A7%25E8%2588%2590%25E3%2582%2581%25E5%259B%259E%25E3%2581%2599%2528%25E5%25BE%258C%25E7%25B7%25A8%2520%2520...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:oreo_k%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKd053RGlEU2c2aGZNZk93Wm1pTnd5c1RGVnBCVmQ5ZTBqYVpDakI9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>みなさんこんにちは！
-この記事は，IBMが提供する量子開発者認定資格試験 Exam C1000-112: Fundamentals of Quantum Computation Using Qiskit v0.2X Developerサンプル問題の解答と解説記事です！
-今回は後編で，前編は下記ページにありますので，まだご覧になってない方は是非ご一読ください！
-https://zenn.dev/whitishlion/articles/daff336619acef
-前編で取り扱ったQ01.~Q10.の続きでQ11.~20を扱います。
-では，早速解説の続きに進みたいと思います！
-
-第11問は...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/superstudio/articles/17e346b27114ef"
-                        open
-                      >
-                        <summary class="article-expander__title">移行業務の改善 その3 CSV加工の分離</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/superstudio/articles/17e346b27114ef">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--kB0p6Piq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25A7%25BB%25E8%25A1%258C%25E6%25A5%25AD%25E5%258B%2599%25E3%2581%25AE%25E6%2594%25B9%25E5%2596%2584%2520%25E3%2581%259D%25E3%2581%25AE3%2520CSV%25E5%258A%25A0%25E5%25B7%25A5%25E3%2581%25AE%25E5%2588%2586%25E9%259B%25A2%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:SUPER%2520STUDIO%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:Yuji%2520Miyashita%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U4NWIxMTkzZGYuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RhNGJmYTEzOTQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-弊社では ecforce というシステムをSaaSという形でサービスを提供しています。
-ecforceの導入を希望されるクライアント様には、大きく2パターンがあります。
-
-
-新規で ECを立ち上げたいというクライアント様
-別のカートシステムを現在使っており、ecforceに乗り換えたいというクライアント様
-
-後者につきまして、当然ながら顧客や注文データをリセットするわけにもいかないので、 既存データも引き継ぎたい という要望をいただくことが大多数です。
-ただ他社のカートシステムとecforceではデータ構造が異なるので、データを抽出してそのままecforceのデータベースに...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-04 datetime="2023-09-04T19:24:16.000Z">2023-09-04</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-04 datetime="2023-09-04T19:24:16.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/koupro0204/articles/bf87dea2478b72"
-                        open
-                      >
-                        <summary class="article-expander__title">Golangで重み付き乱択アルゴリズムを作成したので検証してみる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/koupro0204/articles/bf87dea2478b72">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--GZRTVZwM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Golang%25E3%2581%25A7%25E9%2587%258D%25E3%2581%25BF%25E4%25BB%2598%25E3%2581%258D%25E4%25B9%25B1%25E6%258A%259E%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25B4%25E3%2583%25AA%25E3%2582%25BA%25E3%2583%25A0%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2597%25E3%2581%259F%25E3%2581%25AE%25E3%2581%25A7%25E6%25A4%259C%25E8%25A8%25BC%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2584%25E3%2580%2582%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVjOWNmMDljNTUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>インターンで作成したガチャのアルゴリズムが果たして正しいのか検証してみる。
-
- アルゴリズムについて
-以下の記事を参考にコーディングしました。
-ループを用いて重み付き抽選を行う
-正直自分が解説するよりわかりやすいので気になる方は記事を見てみてください。
-以下がGoのコードになります。（ちょっとだけコメント入れました）
-細かいほかの部分のコードはちょっと見せれないです。
-// getGacha ガチャアルゴリズム
-func getGacha(times int, allcollection []entity.RatioCollection) []entity.RatioCollection...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/pinter/articles/20230903functionspythondifference"
-                        open
-                      >
-                        <summary class="article-expander__title">Azure Functions Python Programming Model v1 と v2 の違い</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/pinter/articles/20230903functionspythondifference">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--UviEQMrk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520Functions%2520Python%2520Programming%2520Model%2520v1%2520%25E3%2581%25A8%2520v2%2520%25E3%2581%25AE%25E9%2581%2595%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%2581%25E3%2583%25A3%25E3%2583%259E%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pMR2ZhYmNfbmdmS3VFUnJNcVhJNGdQbm1EalZOd3NwTjhKYlRNRkE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Azure Functions の最新の 4.x version では、C#、JavaScript、Java、Powershell、Python、TypeScript など様々な言語が使用可能です。
-中でも、Python を使用する際には、Python v1 プログラミングモデルと、Python v2 プログラミングモデルがあります。
-なお、ここでいう v1 や v2 は Python 自体のバージョンとは関係ありません。あくまで、Functions で Python を使用する際のプログラミングモデルの話です。
-v2 のプログラミングモデルでは、Functions アプリケーションを簡...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/sergicalsix/articles/2863c493c22118"
-                        open
-                      >
-                        <summary class="article-expander__title">ファインチューニング用の訓練データの作成方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sergicalsix/articles/2863c493c22118">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--7kc4HHet--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2581%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25B3%25E3%2582%25B0%25E7%2594%25A8%25E3%2581%25AE%25E8%25A8%2593%25E7%25B7%25B4%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E4%25BD%259C%25E6%2588%2590%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sergicalsix%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhlODkyZDMzYjUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>概要
-機械学習モデルのファインチューニングは、特定のタスクに対してモデルを最適化する一般的な手法です。しかし、ファインチューニングを行う前に、適切なデータセットを用意する必要があります。
-この記事では、Pythonを使用して簡単にファインチューニング用のデータセットを作成する方法を紹介します。
-
- 内容
-
- 事前準備:ライブラリのインストールとトークナイザーの準備
-datasetsとtransformersを使えば簡単にファインチューニングができます。
-https://huggingface.co/docs/datasets/index
-https://huggingface.co/...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/derwind/articles/dwd-cuquantum08"
-                        open
-                      >
-                        <summary class="article-expander__title">cuQuantum で遊んでみる (8) — QAOA の期待値計算高速化</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/derwind/articles/dwd-cuquantum08">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--UlyR2hXE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:cuQuantum%2520%25E3%2581%25A7%25E9%2581%258A%25E3%2582%2593%25E3%2581%25A7%25E3%2581%25BF%25E3%2582%258B%2520%25288%2529%2520%25E2%2580%2594%2520QAOA%2520%25E3%2581%25AE%25E6%259C%259F%25E5%25BE%2585%25E5%2580%25A4%25E8%25A8%2588%25E7%25AE%2597%25E9%25AB%2598%25E9%2580%259F%25E5%258C%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:derwind%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>目的
-cuQuantum で遊んでみる (6) — 最大カット問題と QUBO と QAOA で QAOA の計算を cuQuantum の cuTensorNet で行ったがあまり速くなかった。
-これについて、cuQuantum で遊んでみる (7) — 期待値計算再考 で QAOA の類のハミルトニアンのテンソルネットワークへの効率的な埋め込みについて考察した。
-この上で更に GPU 計算への配慮をした実装をすると 2 倍以上の高速化ができるのでこれについて簡単にまとめる。実際は更に工夫すると 3 倍以上に高速化ができるが、コードも 3 倍汚くなるので本記事では 2 倍くらいで止...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;14
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -8536,8 +8488,8 @@ cuQuantum で遊んでみる (6) — 最大カット問題と QUBO と QAOA で 
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6400310250">
-        <time id="build-timestamp" datetime="2023-10-04T01:15:44.818Z">2023-10-04T01:15:44.818Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6413404088">
+        <time id="build-timestamp" datetime="2023-10-05T01:13:55.964Z">2023-10-05T01:13:55.964Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

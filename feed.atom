@@ -2,10 +2,215 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-10-04T01:15:44.861Z</updated>
+    <updated>2023-10-05T01:13:56.000Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[任意の確率分布でベイズ分類機を作る]]></title>
+        <id>https://zenn.dev/lucidfrontier45/articles/8902653414edc6</id>
+        <link href="https://zenn.dev/lucidfrontier45/articles/8902653414edc6"/>
+        <updated>2023-10-04T14:03:01.000Z</updated>
+        <summary type="html"><![CDATA[やりたいこと
+scikit-learnのnaive_bayesにはいくつかのモデルが実装されていますが、それ以外の確率分布、特にKDEでフィットした経験分布を用いてベイズ分類機を作りたい。
+
+ やり方
+基本的には以下の通りです。
+
+
+C: class
+
+X: 観測値
+
+C^* = \mathrm{argmax}_C P(C)P(X|C)
+任意の形のP(X|C)を利用できるようにできるだけ汎用的に作りたいのでこれを抽象クラスにしてAPIだけ定義し、それ以外の部分を実際に実装します。fitで観測データからパラメータを推定し、pdfで確率(密度)を返します。
+
+ 分布抽象クラスのAPI
+f...]]></summary>
+        <author>
+            <name>lucidfrontier45</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[APIから受け取ったJSONデータをUnityで辞書型に変換する方法]]></title>
+        <id>https://zenn.dev/shiro_toy_box/articles/3ebcac8e5c229f</id>
+        <link href="https://zenn.dev/shiro_toy_box/articles/3ebcac8e5c229f"/>
+        <updated>2023-10-04T13:41:14.000Z</updated>
+        <summary type="html"><![CDATA[前書き
+作っているもののオプション設定を作ろうと思い、たどり着いた解決方法です。
+参照の記事をもとにChatGPTで解決することができました。
+https://note.com/sirodon_256/n/nd92fc6c26cc8
+
+ やりたいこと
+
+APIでロールプレイの設定の情報取得できるように
+
+
+ 本題
+
+ APIの処理
+
+api.py
+from fastapi import FastAPI
+import subprocess
+import os
+import character_roleplay
+
+app = FastAPI()
+
+@app.get("/roll_mode...]]></summary>
+        <author>
+            <name>しろ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Raspberry PiとNFCでスマートフォンでタッチするとリクエストを送るようにする]]></title>
+        <id>https://zenn.dev/kemomimi02/articles/13da0afb8cdb3d</id>
+        <link href="https://zenn.dev/kemomimi02/articles/13da0afb8cdb3d"/>
+        <updated>2023-10-04T08:48:51.000Z</updated>
+        <summary type="html"><![CDATA[必要なもの
+Raspberry Pi 2 model B v1.2
+
+PaSoRi RC-S380
+
+TP-Link TL-WN725N
+（Raspberry Pi 2 model BにWifiが搭載されていないため）
+
+電磁スピーカー
+PCのビープ音を出すスピーカーを使いました
+
+電磁スピーカー Amazon URL
+
+ Raspberry Pi にOSをインストールする
+下記サイトから Raspberry Pi Imager をインストール
+Raspberry Pi OS
+Raspberry Pi Imagerを起動したら、「OSを選ぶ」から「Raspberry Pi OS」を...]]></summary>
+        <author>
+            <name>ミンミ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPI✕SQLite✕SQLModelで作ったJWT認証付きREST APIで、簡単なテストをする流れ]]></title>
+        <id>https://zenn.dev/nameless_sn/articles/fastapi_testing_tutorial</id>
+        <link href="https://zenn.dev/nameless_sn/articles/fastapi_testing_tutorial"/>
+        <updated>2023-10-04T07:54:20.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+今回の記事では、FastAPIとSQLiteで作ったREST APIをテストする方法を解説する。
+
+ 対象とする読者
+
+FastAPIをこれから学ぶひと
+FastAPIで実際にテストしたい人
+これからFastAPIを実務で導入したいひと
+
+
+ REST APIを開発する手順
+FastAPIを使用して、SQLModelとSQLiteを用いた簡単なJWT認証付きのREST APIを開発する手順を以下に示す。
+
+ (1) 必要なライブラリのインストール
+pip install fastapi[all] uvicorn sqlmodel
+
+ (2) モデルの定義:
+
+ /app/m...]]></summary>
+        <author>
+            <name>Shota Nukumizu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-319｜A - Legendary Players]]></title>
+        <id>https://zenn.dev/hyperdb/articles/f0d60808c79988</id>
+        <link href="https://zenn.dev/hyperdb/articles/f0d60808c79988"/>
+        <updated>2023-10-04T07:31:04.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-319 A - Legendary Players
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+def main():
+    s = getString()
+    d = {
+        'tourist': 3858,
+        'ksun48': 3679,
+        'Benq': 3658,
+        'Um_nik': 3648,
+        'apiad': 3638,
+        'Stonefeang': 3630,
+        'ecnerwala': 36...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-319｜B - Measure]]></title>
+        <id>https://zenn.dev/hyperdb/articles/94903215e001eb</id>
+        <link href="https://zenn.dev/hyperdb/articles/94903215e001eb"/>
+        <updated>2023-10-04T07:31:03.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-319 B - Measure
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+def main():
+    n = getInt()
+    a = [j for j in range(1, 10) if n % j == 0]
+
+    r = ''
+    for i in range(n + 1):
+        x = [b for b in a if i % (n / b) == 0]
+        if len(x) == 0:
+            r += '-'
+        els...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Overture Maps Foundationのデータを活用したい (3): Mapboxを用いたクラスタ可視化]]></title>
+        <id>https://zenn.dev/takilog/articles/5cab3bfd05a9a2</id>
+        <link href="https://zenn.dev/takilog/articles/5cab3bfd05a9a2"/>
+        <updated>2023-10-04T05:32:40.000Z</updated>
+        <summary type="html"><![CDATA[Overture Maps Foundationというものがあります。前回、位置データ (Placesデータ) をダウンロードして保存しました。
+https://zenn.dev/takilog/articles/e96d8c1e132db4
+今回はMatplotlibではなく、Mapboxを利用して、ダウンロードしてきたPOI情報を地図上に可視化してみます。
+
+ データの確認
+前回の記事でダウンロードして総数のうち、10,000個のPOIを格納してgeojson形式に変換したものを用意しました。このような形式になっています。基本的には点 (Point) として、名前とID・カテゴリ名・...]]></summary>
+        <author>
+            <name>たきろぐ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[graph-toolの基本的な使い方]]></title>
+        <id>https://zenn.dev/takuowake/articles/52e2803d258a57</id>
+        <link href="https://zenn.dev/takuowake/articles/52e2803d258a57"/>
+        <updated>2023-10-04T03:09:51.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+graph-toolはPythonのライブラリで、大規模なネットワークの解析や操作を高速に行うことができるツールです。以下では、graph-toolの基本的な使い方を紹介します。
+
+ インストール
+まずはgraph-toolをインストールします。詳細なインストール手順は公式ドキュメントを参照してください。
+Ubuntu OSのDocker上でインストールする方法については、以下を参考にしてください。
+https://zenn.dev/takuowake/articles/7c654e3b2a7df6
+
+ graph-toolの使い方
+
+ 基本的なグラフの作成
+from gr...]]></summary>
+        <author>
+            <name>Takuo</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Pythonでlistをコピーしたいだけなのに、調べたら方法がたくさんあったという話]]></title>
         <id>https://zenn.dev/nakurei/articles/list-copy-with-python</id>
@@ -5144,229 +5349,6 @@ https://zenn.dev/daidai_daitai/articles/92e8fbbfa79e42
 以下は生成AI...]]></summary>
         <author>
             <name>橙。</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[一般社団法人サイバー技術・インターネット自由研究会の電子公告をPythonで読む]]></title>
-        <id>https://zenn.dev/notch_man8600/articles/efee2fb94b1519</id>
-        <link href="https://zenn.dev/notch_man8600/articles/efee2fb94b1519"/>
-        <updated>2023-09-05T12:33:08.000Z</updated>
-        <summary type="html"><![CDATA[最近、Telnetがホットですね。
-
-というわけでPythonで読んでみました。なお、telnetlibでは上手くいきませんでした。
-# Standard Library
-import socket
-
-try:
-    sock = socket.create_connection(("koukoku.shadan.open.ad.jp", 23))
-    while True:
-        chunk = sock.recv(2)
-        if not chunk:
-            break
-        try:
-            print(chun...]]></summary>
-        <author>
-            <name>notch_man</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】顔データセットの間違い探し（失敗編②）]]></title>
-        <id>https://zenn.dev/ykesamaru/articles/83b171b045809c</id>
-        <link href="https://zenn.dev/ykesamaru/articles/83b171b045809c"/>
-        <updated>2023-09-05T12:06:24.000Z</updated>
-        <summary type="html"><![CDATA[顔データセットの間違い探し 失敗編②
-前回の記事では、マシンが熱暴走して何回かブラックアウトするという屈辱を味わいました。今回は、その続きです。
-
-!
-この記事で紹介している方法で、顔データセットの間違い探しを行いましたが、処理時間が異常に長く、諦めました。ですので、以降の記事を「失敗編②」としました。
-
-前回の記事
-https://zenn.dev/ykesamaru/articles/d4b78ea53b02e2
-前回の手法では、顔画像から特徴ベクトルを取得し、その後組み合わせを作成していました。そこで今回は、特徴ベクトルを作成する段階と、組み合わせからコサイン類似度を計算する段...]]></summary>
-        <author>
-            <name>yKesamaru</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【個人メモ】RTX4090+llama.cppでGPUオフロードできなかったので解決した]]></title>
-        <id>https://zenn.dev/saldra/articles/26288e2f03f2ae</id>
-        <link href="https://zenn.dev/saldra/articles/26288e2f03f2ae"/>
-        <updated>2023-09-05T05:09:09.000Z</updated>
-        <summary type="html"><![CDATA[概要
-RTX-4090環境でtext-generation-webui環境を構築していたところ、なぜかllama.cppのモデルでGPUオフロードできなかったので、調べて解決した。
-https://zenn.dev/saldra/articles/619232a81f2705
-
- やったこと
-
- pytorchの最新化
-nvcc -Vを行ったところ、CUDA12系だったのでpytorchを入れなおした。
-pip install --pre torch --index-url https://download.pytorch.org/whl/nightly/cu121
-これでも直らなか...]]></summary>
-        <author>
-            <name>Sald ra</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-299｜B - Trick Taking]]></title>
-        <id>https://zenn.dev/hyperdb/articles/daa9c8ec47568a</id>
-        <link href="https://zenn.dev/hyperdb/articles/daa9c8ec47568a"/>
-        <updated>2023-09-05T04:36:12.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-299 B - Trick Taking
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n, t = getIntMap()
-    c = [0] + getIntList()
-    r = [0] + getIntList()
-
-    a = [i for i in range(len(c)) if c[i] ==...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-299｜A - Treasure Chest]]></title>
-        <id>https://zenn.dev/hyperdb/articles/75aa806a5a4a1d</id>
-        <link href="https://zenn.dev/hyperdb/articles/75aa806a5a4a1d"/>
-        <updated>2023-09-05T04:36:12.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-299 A - Treasure Chest
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getString():
-    return input()
-
-
-def main():
-    n = getInt()
-    s = getString()
-
-    print('in' if s.find('|') < s.find('*') < s.rfind('|') else 'out')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【量子コンピュータ】IBM量子開発者認定試験(C1000-112)サンプル問題をしがんでしがんで舐め回す(後編  Q011-20)]]></title>
-        <id>https://zenn.dev/whitishlion/articles/d6c4765a8f1684</id>
-        <link href="https://zenn.dev/whitishlion/articles/d6c4765a8f1684"/>
-        <updated>2023-09-05T02:01:06.000Z</updated>
-        <summary type="html"><![CDATA[みなさんこんにちは！
-この記事は，IBMが提供する量子開発者認定資格試験 Exam C1000-112: Fundamentals of Quantum Computation Using Qiskit v0.2X Developerサンプル問題の解答と解説記事です！
-今回は後編で，前編は下記ページにありますので，まだご覧になってない方は是非ご一読ください！
-https://zenn.dev/whitishlion/articles/daff336619acef
-前編で取り扱ったQ01.~Q10.の続きでQ11.~20を扱います。
-では，早速解説の続きに進みたいと思います！
-
-第11問は...]]></summary>
-        <author>
-            <name>oreo_k</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[移行業務の改善 その3 CSV加工の分離]]></title>
-        <id>https://zenn.dev/superstudio/articles/17e346b27114ef</id>
-        <link href="https://zenn.dev/superstudio/articles/17e346b27114ef"/>
-        <updated>2023-09-05T02:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-弊社では ecforce というシステムをSaaSという形でサービスを提供しています。
-ecforceの導入を希望されるクライアント様には、大きく2パターンがあります。
-
-
-新規で ECを立ち上げたいというクライアント様
-別のカートシステムを現在使っており、ecforceに乗り換えたいというクライアント様
-
-後者につきまして、当然ながら顧客や注文データをリセットするわけにもいかないので、 既存データも引き継ぎたい という要望をいただくことが大多数です。
-ただ他社のカートシステムとecforceではデータ構造が異なるので、データを抽出してそのままecforceのデータベースに...]]></summary>
-        <author>
-            <name>Yuji Miyashita</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Golangで重み付き乱択アルゴリズムを作成したので検証してみる]]></title>
-        <id>https://zenn.dev/koupro0204/articles/bf87dea2478b72</id>
-        <link href="https://zenn.dev/koupro0204/articles/bf87dea2478b72"/>
-        <updated>2023-09-04T19:24:16.000Z</updated>
-        <summary type="html"><![CDATA[インターンで作成したガチャのアルゴリズムが果たして正しいのか検証してみる。
-
- アルゴリズムについて
-以下の記事を参考にコーディングしました。
-ループを用いて重み付き抽選を行う
-正直自分が解説するよりわかりやすいので気になる方は記事を見てみてください。
-以下がGoのコードになります。（ちょっとだけコメント入れました）
-細かいほかの部分のコードはちょっと見せれないです。
-// getGacha ガチャアルゴリズム
-func getGacha(times int, allcollection []entity.RatioCollection) []entity.RatioCollection...]]></summary>
-        <author>
-            <name>い。</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Azure Functions Python Programming Model v1 と v2 の違い]]></title>
-        <id>https://zenn.dev/pinter/articles/20230903functionspythondifference</id>
-        <link href="https://zenn.dev/pinter/articles/20230903functionspythondifference"/>
-        <updated>2023-09-04T14:24:25.000Z</updated>
-        <summary type="html"><![CDATA[Azure Functions の最新の 4.x version では、C#、JavaScript、Java、Powershell、Python、TypeScript など様々な言語が使用可能です。
-中でも、Python を使用する際には、Python v1 プログラミングモデルと、Python v2 プログラミングモデルがあります。
-なお、ここでいう v1 や v2 は Python 自体のバージョンとは関係ありません。あくまで、Functions で Python を使用する際のプログラミングモデルの話です。
-v2 のプログラミングモデルでは、Functions アプリケーションを簡...]]></summary>
-        <author>
-            <name>チャマ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ファインチューニング用の訓練データの作成方法]]></title>
-        <id>https://zenn.dev/sergicalsix/articles/2863c493c22118</id>
-        <link href="https://zenn.dev/sergicalsix/articles/2863c493c22118"/>
-        <updated>2023-09-04T13:58:31.000Z</updated>
-        <summary type="html"><![CDATA[概要
-機械学習モデルのファインチューニングは、特定のタスクに対してモデルを最適化する一般的な手法です。しかし、ファインチューニングを行う前に、適切なデータセットを用意する必要があります。
-この記事では、Pythonを使用して簡単にファインチューニング用のデータセットを作成する方法を紹介します。
-
- 内容
-
- 事前準備:ライブラリのインストールとトークナイザーの準備
-datasetsとtransformersを使えば簡単にファインチューニングができます。
-https://huggingface.co/docs/datasets/index
-https://huggingface.co/...]]></summary>
-        <author>
-            <name>sergicalsix</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[cuQuantum で遊んでみる (8) — QAOA の期待値計算高速化]]></title>
-        <id>https://zenn.dev/derwind/articles/dwd-cuquantum08</id>
-        <link href="https://zenn.dev/derwind/articles/dwd-cuquantum08"/>
-        <updated>2023-09-04T13:48:06.000Z</updated>
-        <summary type="html"><![CDATA[目的
-cuQuantum で遊んでみる (6) — 最大カット問題と QUBO と QAOA で QAOA の計算を cuQuantum の cuTensorNet で行ったがあまり速くなかった。
-これについて、cuQuantum で遊んでみる (7) — 期待値計算再考 で QAOA の類のハミルトニアンのテンソルネットワークへの効率的な埋め込みについて考察した。
-この上で更に GPU 計算への配慮をした実装をすると 2 倍以上の高速化ができるのでこれについて簡単にまとめる。実際は更に工夫すると 3 倍以上に高速化ができるが、コードも 3 倍汚くなるので本記事では 2 倍くらいで止...]]></summary>
-        <author>
-            <name>derwind</name>
         </author>
     </entry>
 </feed>
