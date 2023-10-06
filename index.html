@@ -22,6 +22,353 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-05 datetime="2023-10-05T21:02:01.000Z">2023-10-05</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-05 datetime="2023-10-05T21:02:01.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/masinc/articles/885ed8cb51c6ee"
+                        open
+                      >
+                        <summary class="article-expander__title">Python 3.12 の新機能試してみた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/masinc/articles/885ed8cb51c6ee">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--N9H-8NA6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25203.12%2520%25E3%2581%25AE%25E6%2596%25B0%25E6%25A9%259F%25E8%2583%25BD%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:masinc%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvbS5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>2023/10/2 に Python 3.12 がリリースされました。
+今回は、Python 3.12 の気になった新機能を試してみました。
+
+ 型パラメータ構文
+
+ Generics 関連
+Python にも他の言語のジェネリクスのような記法が追加されました。
+
+ Generics 関数
+Python3.11 以下の場合:
+from typing import TypeVar
+
+T &#x3D; TypeVar(&#x27;T&#x27;)
+
+def max(a: T, b: T) -&gt; T:
+    return a if a &gt; b else b
+
+Python3.12:
+def max[T](a:...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/enterrocken/articles/d4f04e842eba2f"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】ChatGPT+Slack APIでチャットボットを作成する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/enterrocken/articles/d4f04e842eba2f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--X6t_qiid--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591ChatGPT%252BSlack%2520API%25E3%2581%25A7%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuki.hirano%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YXh1MGVFSGV5anMwelFidEdMZE9QZTRNTG1JNThCYlo4cTRTblNHdz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+初めまして。
+都内IT企業で、データアルゴリズムチームのエンジニアをしております、Noraです。
+今回は、SlackAPIとOpenAI APIを活用して、チャットボットを構築します。
+今回はPythonを利用した実装です。
+社内Slackにチャットボットを構築することで、メンバーの質問内容を把握できるようになります。
+また、スレッドの内容を記憶した返答をできるようになると、満足度も向上し、様々なチャット内容を蓄積・展開できます。
+（OpenAI APIは従量課金制なので、使い過ぎには気をつけましょう）
+
+ 利用ツール・言語
+
+ Python
+今回の実装はPythonを使用...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/ssfuno/articles/962c7d61ded576"
+                        open
+                      >
+                        <summary class="article-expander__title">plotlyでGEBCOの地形データを可視化してみる</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ssfuno/articles/962c7d61ded576">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--j0cArMYm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:plotly%25E3%2581%25A7GEBCO%25E3%2581%25AE%25E5%259C%25B0%25E5%25BD%25A2%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2599%25E3%2581%25B5%25E3%2583%25BC%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I2ZmY3ZDJhMDQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>イントロダクション
+plotlyはインタラクティブなグラフを描けるPythonのライブラリです。こちらの記事を拝見して、GEBCOの地形データをsurface plotで表示してみたいと思ったので試してみました。
+https://qiita.com/tmiyama/items/bba94d4125d9b67edf84
+伊豆諸島のあたりを表示してみた結果がこちらです！（中央奥は伊豆半島）
+海底と比べると島ってすごく高いんだなと感じますね🏝️
+
+
+ 動作環境
+
+Python 3.10.12
+netCDF4 1.6.4
+plotly 5.15.0
+
+
+ データのダウンロード
+GEBCOはパ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hiyokotti/articles/9213b4f2fa07e2"
+                        open
+                      >
+                        <summary class="article-expander__title">点群データのアライメント（回転）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hiyokotti/articles/9213b4f2fa07e2">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--I1AQh7cH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%2582%25B9%25E7%25BE%25A4%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E3%2582%25A2%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588%25EF%25BC%2588%25E5%259B%259E%25E8%25BB%25A2%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%2596%25B0%25E7%25B1%25B3%25E3%2581%25B2%25E3%2582%2588%25E3%2581%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSUN6aEMtZGNQTTNtZng5azZYQ2xVYjhRaWpLZzhKeTFYSTJBTUI3SEtlVEE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>初めに
+LiDARセンサなどで3次元空間をスキャンした際に、センサのわずかな設置角度ズレなどによって期待のデータとは異なるデータが取れてしまう場合があると思います。
+今回はそんな時に役立つデータの補正方法（の一例）を紹介したいと思います。
+ちょっと数学的な用語などはうろ覚えで書いてますので、間違いあればバッシバシにご指摘ください。。。
+
+ 思想
+案件によってさまざまだとは思いますが、今回は3次元空間内の床面を基準としてセンサの傾きを補正します。
+①スキャンした点群データから床面となる平面を特定する
+②特定した平面の方程式（ax+by+cz+d&#x3D;0)を使って回転軸ベクトルを決定する
+③...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hiyokotti/articles/f21d41fcfadca6"
+                        open
+                      >
+                        <summary class="article-expander__title">スクレイピング入門　（Python）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hiyokotti/articles/f21d41fcfadca6">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--XWMFkpeu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%2594%25E3%2583%25B3%25E3%2582%25B0%25E5%2585%25A5%25E9%2596%2580%25E3%2580%2580%25EF%25BC%2588Python%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%2596%25B0%25E7%25B1%25B3%25E3%2581%25B2%25E3%2582%2588%25E3%2581%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSUN6aEMtZGNQTTNtZng5azZYQ2xVYjhRaWpLZzhKeTFYSTJBTUI3SEtlVEE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+昨今なにかとアツいスクレイピング。
+様々な理由で興味がある人もいるのではないでしょうか
+私自身も
+
+趣味であるTCG（主にポケモンカード）を何とかECサイトで定価購入したい
+でもECサイトの定価販売なんて秒で売り切れるから買えない
+代わりに機械が勝手に買ってくれたらうれしいな
+という願望からスクレイピングに手を出し、何とか自動購入ツールを完成させました。
+
+今回はそんな私がスクレイピングに入門するにあたって学んだことを
+備忘録として記します。
+※様々な記事で言われていることですが、スクレイピングを禁止しているサイトもあるのでご自身で規約を読まれて自己責任でお願いします。
+
+...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/a_adachi/articles/fc314c754f4488"
+                        open
+                      >
+                        <summary class="article-expander__title">IIIFマニフェストを元に画像をダウンロードするPythonスクリプト</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/a_adachi/articles/fc314c754f4488">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--l4acg34n--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:IIIF%25E3%2583%259E%25E3%2583%258B%25E3%2583%2595%25E3%2582%25A7%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E5%2585%2583%25E3%2581%25AB%25E7%2594%25BB%25E5%2583%258F%25E3%2582%2592%25E3%2583%2580%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%2589%25E3%2581%2599%25E3%2582%258BPython%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2597%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:a-adachi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Y5MGI1NDg3YzcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>n番煎じですが、備忘録として書き残します。
+IIIFマニフェストを元に画像をダウンロードするスクリプトです。標準ライブラリのみで動作すると思います。
+python iiif_dl.py https://iiif.example.com/path/to/manifest
+GitHubにもアップロードしています。
+https://github.com/adachi-a/iiif-image-downloader/
+誤りやお気づきの点などありましたらぜひコメントいただけますと幸いです。
+
+iiif_dl.py
+import json
+import os
+import sys
+import ti...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/8a84ecc784b47a"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-320｜A - Leyland Number</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/8a84ecc784b47a">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--M6gXlYKd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-320%25EF%25BD%259CA%2520-%2520Leyland%2520Number%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-320 A - Leyland Number
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b &#x3D; getIntMap()
+
+    print(a ** b + b ** a)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/1fdaa82f30a397"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-320｜B - Longest Palindrome</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/1fdaa82f30a397">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--xHtnYodp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-320%25EF%25BD%259CB%2520-%2520Longest%2520Palindrome%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-320 B - Longest Palindrome
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s &#x3D; getString()
+
+    c &#x3D; 0
+    for i in range(len(s), 0, -1):
+        for j in range(0, len(s) - i + 1):
+            w &#x3D; s[j:j+i]
+            r &#x3D; w[::-1]
+            if w &#x3D;&#x3D; r:
+                ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/mesummery/articles/9d8e4e30c3275e"
+                        open
+                      >
+                        <summary class="article-expander__title">3日間でテック記事のAI要約・翻訳メディアをつくってみました</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mesummery/articles/9d8e4e30c3275e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--dyPjg4gh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:3%25E6%2597%25A5%25E9%2596%2593%25E3%2581%25A7%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E8%25A8%2598%25E4%25BA%258B%25E3%2581%25AEAI%25E8%25A6%2581%25E7%25B4%2584%25E3%2583%25BB%25E7%25BF%25BB%25E8%25A8%25B3%25E3%2583%25A1%25E3%2583%2587%25E3%2582%25A3%25E3%2582%25A2%25E3%2582%2592%25E3%2581%25A4%25E3%2581%258F%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Na%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzlkNDAxOGU2NGQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>つくったもの
+
+🔗 Tech Sloths
+英語のテックブログなどを中心に、OpenAI APIにより要約と翻訳を行いメディア化しました。
+AIによる、記事の内容を活かした「アイディアや導入例」の提案なども掲載しています。
+
+ 開発した背景
+
+日々アップデートされる技術情報、どこから手をつけるかわからなくなりがちだった
+テックブログは長文が多くて読むのに時間がかかる印象があった
+
+英語の文章を読む心理的ハードルの高さがあった
+
+OpenAI API Function calling について知り、何かやりたかった
+
+
+ 使用した技術
+
+ フロントエンド
+
+Notion
+
+なるべく工数...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-04 datetime="2023-10-04T14:03:01.000Z">2023-10-04</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-04 datetime="2023-10-04T14:03:01.000Z"></time>
           </button>
@@ -8253,234 +8600,6 @@ class ToolbarView(tk.Frame):
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/takiser/articles/e847aef130d4d8"
-                        open
-                      >
-                        <summary class="article-expander__title">Python Tkinterで複数Frameアプリを作る</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takiser/articles/e847aef130d4d8">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--oVbviVS4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520Tkinter%25E3%2581%25A7%25E8%25A4%2587%25E6%2595%25B0Frame%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takiser%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dacXJINlVvNlVkY28zd3FMamhhZnQwd1JhWHNrT3ZLNjlzSVVwPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>並列に並べる場合
-import tkinter as tk
-
-class Frame1(tk.Frame):
-    def __init__(self, master&#x3D;None):
-        super().__init__(master)
-        self.master &#x3D; master
-        self.pack()
-        self.create_widgets()
-
-    def create_widgets(self):
-        self.label1 &#x3D; tk.Label(self)
-        self.label1[&quot;te...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/dcb0e8eb956501"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-300｜B - Same Map in the RPG World</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/dcb0e8eb956501">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--epjmi9q6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-300%25EF%25BD%259CB%2520-%2520Same%2520Map%2520in%2520the%2520RPG%2520World%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-300 B - Same Map in the RPG World
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getStringListRow(N):
-    return [list(input()) for _ in range(N)]
-
-
-def rx(x):
-    for i in range(len(x)):
-        x[i] &#x3D; x[i][1:] + x[i][:1]
-    return x
-
-
-def ry(x):
-    return x...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/6083bb53238640"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-300｜A - N-choice question</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/6083bb53238640">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--NmIanXz_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-300%25EF%25BD%259CA%2520-%2520N-choice%2520question%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-300 A - N-choice question
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n, a, b &#x3D; getIntMap()
-    c &#x3D; [0] + getIntList()
-
-    print(c.index(a + b))
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/os1ma/articles/935f6e653f1052"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonの開発環境の3つの観点をおさえよう</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/os1ma/articles/935f6e653f1052">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--HKzHjLrv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AE%25E9%2596%258B%25E7%2599%25BA%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25AE3%25E3%2581%25A4%25E3%2581%25AE%25E8%25A6%25B3%25E7%2582%25B9%25E3%2582%2592%25E3%2581%258A%25E3%2581%2595%25E3%2581%2588%25E3%2582%2588%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:oshima_123%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY1ZjAzMGZmOTcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>先日 &quot;Python の「仮想環境」を完全に理解しよう&quot; というスライドを公開したらかなり反響がありました。
-
-Python の開発環境の構築は、正直言ってかなり複雑だと思います。
-pip・venv・pyenv・Pipenv などなど、似たような名前・似たような役割のツールがたくさん登場して、最初は全然意味が分かりません。
-慣れればなんとかなるのですが、慣れるまではかなり苦しいです。
-このようにとても難解であるにも関わらず、Python は機械学習などでよく使われることから、避けられないことも多いです。
-そこでこの記事には、「そもそも Python の開発環境にはどんな観点があるんだ？こ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-05 datetime="2023-09-05T15:51:40.000Z">2023-09-05</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-05 datetime="2023-09-05T15:51:40.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/derwind/articles/dwd-cuquantum09"
-                        open
-                      >
-                        <summary class="article-expander__title">cuQuantum で遊んでみる (9) — 少し規模が大きめの QAOA を計算する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/derwind/articles/dwd-cuquantum09">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--pLbKETBy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:cuQuantum%2520%25E3%2581%25A7%25E9%2581%258A%25E3%2582%2593%25E3%2581%25A7%25E3%2581%25BF%25E3%2582%258B%2520%25289%2529%2520%25E2%2580%2594%2520%25E5%25B0%2591%25E3%2581%2597%25E8%25A6%258F%25E6%25A8%25A1%25E3%2581%258C%25E5%25A4%25A7%25E3%2581%258D%25E3%2582%2581%25E3%2581%25AE%2520QAOA%2520%25E3%2582%2592%25E8%25A8%2588%25E7%25AE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:derwind%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>目的
-cuQuantum で遊んでみる (8) — QAOA の期待値計算高速化 で大分計算周りをマシにしたのでもう少し本格的な計算をしてみたいというもの。
-なお、今回の計算、どこか間違えているようなのだが間違えているなりにそこそこ行けてそうなので、一旦記事にしてしまって後日修正したい。
-実験は Google Colab 上で T4 を使って行った。そんな手軽な環境で本格的な QAOA も VQE も実行できるのである。
-
- お題
-TYTANSDK のチュートリアル 線形回帰 を拝借したい。因みにこの問題は疑似量子アニーリングで計算したらすぐに結果が得られる。
-
- QAOA に書き直...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;14
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/daidai_daitai/articles/64f45e2d3df2b0"
-                        open
-                      >
-                        <summary class="article-expander__title">日経先物分析その2 ... SQまでの残存時間の計算</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/daidai_daitai/articles/64f45e2d3df2b0">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--CplaaHzB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2597%25A5%25E7%25B5%258C%25E5%2585%2588%25E7%2589%25A9%25E5%2588%2586%25E6%259E%2590%25E3%2581%259D%25E3%2581%25AE2%2520...%2520SQ%25E3%2581%25BE%25E3%2581%25A7%25E3%2581%25AE%25E6%25AE%258B%25E5%25AD%2598%25E6%2599%2582%25E9%2596%2593%25E3%2581%25AE%25E8%25A8%2588%25E7%25AE%2597%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%25A9%2599%25E3%2580%2582%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MjJMLWoxUDdDS1dHZWJjbmh0YUxmV3BGRGNSTnBDQnZZTGYxYUpqQT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>その1では何をしたのか
-その1では日経先物のタイムバーに、DaySessionとNightSessionの情報を追加し、SesssionごとにUniqueなIDを割り当てました。
-今回その情報は使用しませんが、気になる方は見てみて下さい。
-https://zenn.dev/daidai_daitai/articles/92e8fbbfa79e42
-
- その2では何をするのか
-日経先物のつなぎ足データから次のSQまでの残存時間を計算します。今回はタイムバーを使用しますが、その他の方法でサンプリングされたデータでも、コードを少し変えれば使用できると思います。
-
- SQとは
-以下は生成AI...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;19
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -8488,8 +8607,8 @@ https://zenn.dev/daidai_daitai/articles/92e8fbbfa79e42
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6413404088">
-        <time id="build-timestamp" datetime="2023-10-05T01:13:55.964Z">2023-10-05T01:13:55.964Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6426272354">
+        <time id="build-timestamp" datetime="2023-10-06T01:13:51.330Z">2023-10-06T01:13:51.330Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
