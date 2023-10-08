@@ -22,6 +22,254 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-08 datetime="2023-10-08T00:59:48.000Z">2023-10-08</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-08 datetime="2023-10-08T00:59:48.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tossy21/articles/fe9745b2548595"
+                        open
+                      >
+                        <summary class="article-expander__title">Cloud FunctionsのHTTPトリガーを使って，Slackのチャンネルへ通知する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tossy21/articles/fe9745b2548595">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--iPvjh43q--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloud%2520Functions%25E3%2581%25AEHTTP%25E3%2583%2588%25E3%2583%25AA%25E3%2582%25AC%25E3%2583%25BC%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25EF%25BC%258CSlack%25E3%2581%25AE%25E3%2583%2581%25E3%2583%25A3%25E3%2583%25B3%25E3%2583%258D%25E3%2583%25AB%25E3%2581%25B8%25E9%2580%259A%25E7%259F%25A5%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tossy%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdkYTdiNWJkY2IuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Python Slack SDKからSlackのチャンネルへ通知する仕組みをGoogle Cloud Functionsで実現します。
+Slack Appは，前回の記事で作成したものを用います。
+https://zenn.dev/tossy21/articles/c9ff5d1e24b407
+
+ Cloud FunctionsでSlackへ通知する関数を作成
+Cloud Functionsで関数を作成します。
+コードは前回同様のものをベースとして利用します。
+以下のコードをmain.pyとして保存します。
+Cloud Functionsでは，関数ディレクトリのルートにあるmain.pyと...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/eito_blog/articles/0eda0d55736f27"
+                        open
+                      >
+                        <summary class="article-expander__title">【LINE API】LINE APIを取得する手順</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/eito_blog/articles/0eda0d55736f27">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--bkWxBkgd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590LINE%2520API%25E3%2580%2591LINE%2520API%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%25E6%2589%258B%25E9%25A0%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25A8%25E3%2582%25A4%25E3%2583%2588%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E1ZTg3MmJkZDUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>LINE APIを利用することで、botから自分のLINEにメッセージを送信するプログラムを作成することができます。
+本記事では上記プログラム作成のために必要な下記の情報を取得する手順について解説していきます。
+
+チェネルアクセストークン
+ユーザーID
+
+
+ LINE Developersにアクセス
+添付URLにアクセスし、「今すぐはじめよう」をクリックします。
+https://developers.line.biz/ja/services/messaging-api/
+LINEアカウントでログインより、ログインします。
+
+
+ LINE Developersへの登録
+LINE Devel...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/taisan11/articles/4fd5fe6581e07d"
+                        open
+                      >
+                        <summary class="article-expander__title">りんなAIモデル一覧</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/taisan11/articles/4fd5fe6581e07d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--L8PM83MV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%258A%25E3%2582%2593%25E3%2581%25AAAI%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E4%25B8%2580%25E8%25A6%25A7%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259F%25E3%2581%2584%25E3%2581%2595%25E3%2582%2593%2521%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzcxZDE1NzViN2YuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>注意
+これは適当にrinnaの文章生成系のaiをまとめたものです。どんぐらいの性能をしてるかを見て選ぶものです
+なので紹介などは自分で調べてください
+手抜き
+
+ gpt-japanese
+
+ 1b
+1.3B パラメータの日本語 GPT モデル
+
+ モデルアーキテクチャ
+24 層、2048 隠れサイズのトランスフォーマーベースの言語モデル。
+
+ トレーニング
+モデルは、従来の言語モデリング目標を最適化するために、日本語 C4、日本語 CC-100、および日本語 Wikipediaでトレーニングされました。同じデータから選択された検証セットでは約 14 パープレキシティに達します。
+
+ ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-07 datetime="2023-10-07T13:57:28.000Z">2023-10-07</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-07 datetime="2023-10-07T13:57:28.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/whitecat_22/articles/f826daf43155cd"
+                        open
+                      >
+                        <summary class="article-expander__title">Django REST FrameworkでAPIを作成してみた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/whitecat_22/articles/f826daf43155cd">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--r7DK5QXf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%2520REST%2520Framework%25E3%2581%25A7API%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:whitecat_22%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2l2eUZtdktTTWRSUlBfNzVKcGFKUHcxRkJDY2F6UHR1dkx0U20yPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>背景
+以前からDjangoにおけるWebアプリケーション作成において、ReactやFlutterなどのフロントエンドのフレームワークとの結合を考えております。
+今回は、それに先立ちフロントエンドとバックエンドとのやりとりをDjango REST Frameworkを利用したRESTful APIで行なうために学習した記録です。
+先人たちの知恵をお借りするなどして解決できたことを、この場をお借りして感謝するとともに、大変恐縮ですが自分のメモとして、こちらへまとめておきます。
+
+ はじめに
+チグサさんのブログ：「チグサウェブ」の記事を参考に、Django REST Frameworkを利...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tossy21/articles/c9ff5d1e24b407"
+                        open
+                      >
+                        <summary class="article-expander__title">Python Slack SDKのchat.postMessageを使って，Slackのチャンネルへ通知する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tossy21/articles/c9ff5d1e24b407">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--2wQiHmG---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520Slack%2520SDK%25E3%2581%25AEchat.postMessage%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25EF%25BC%258CSlack%25E3%2581%25AE%25E3%2583%2581%25E3%2583%25A3%25E3%2583%25B3%25E3%2583%258D%25E3%2583%25AB%25E3%2581%25B8%25E9%2580%259A%25E7%259F%25A5%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tossy%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdkYTdiNWJkY2IuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Python Slack SDKのchat.postMessageを使って，Slackのチャンネルへ通知します。
+
+ Slack Appの作成
+
+
+https://api.slack.com/apps へアクセス
+
+
+Create New Appを押下
+
+
+Create an appで「from scratch」を選択
+
+
+App Name と workspace を選択し，Create Appを押下
+
+
+Featuresの「OAuth &amp; Permissions」を押下
+
+
+Scopesの「Bot Token Scopes」で「Add an OAuth Scope」を押下
+
+
+...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/pejpo/articles/8b60c9ee0122ee"
+                        open
+                      >
+                        <summary class="article-expander__title">conda-forgeに自作ライブラリを登録した</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/pejpo/articles/8b60c9ee0122ee">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--YqJLqw7h--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:conda-forge%25E3%2581%25AB%25E8%2587%25AA%25E4%25BD%259C%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2582%2592%25E7%2599%25BB%25E9%258C%25B2%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Dr_O%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2IyZGEzYWJiZTkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+PythonでSMiPolyというライブラリを作り、PyPIで公開していますが、この度、condaでインストールできるように、conda-forgeに登録しました(Anaconda.orgではこちら)。登録は、公式のインストラクションのStep-by-step Instructionsを中心に読んで進めました。
+Zennでも、「Conda-ForgeにPythonパッケージを公開する手順」や、「自作パッケージをconda-forgeに登録してみた」といった記事が投稿されており、大変参考にさせていただきました。
+
+ 概要
+PyPIに登録し、pipでインストールできる状態として...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-05 datetime="2023-10-05T21:02:01.000Z">2023-10-05</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-05 datetime="2023-10-05T21:02:01.000Z"></time>
           </button>
@@ -8165,222 +8413,6 @@ fn add(borrowed x: Int, borrowed y: Int) -...</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/knao124/articles/glm-coefficients-p-value"
-                        open
-                      >
-                        <summary class="article-expander__title">回帰係数のp値の意味</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/knao124/articles/glm-coefficients-p-value">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--1-YOnTfx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%259B%259E%25E5%25B8%25B0%25E4%25BF%2582%25E6%2595%25B0%25E3%2581%25AEp%25E5%2580%25A4%25E3%2581%25AE%25E6%2584%258F%25E5%2591%25B3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:knao124%2Cx_90%2Cy_98/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>回帰係数のp値の意味
-
- p値の意味
-回帰係数のp値は、 各係数が統計的に有意であるかを判定するための指標となっている。
-p値が十分に小さければ、各係数は目的変数に影響を与えている、と&quot;統計的に&quot;判断できる。
-
- 検定の内容
-具体的に、線形な項では以下の検定を行っている。
-
-帰無仮説（H_0）: 該当する回帰係数は0である。（目的変数に影響を与えない）
-対立仮説（H_1）: 該当する回帰係数は0ではない。（目的変数に影響を与える）
-
-p値が有意水準（一般的には0.05とか0.01）よりも小さい場合、帰無仮説が棄却され、対立仮説が採択される。
-
- p値が小さい &#x3D;&#x3D; 目的変数への影響度...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/ssfuno/articles/2e45f6aec8f444"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonで方位角を16方位に変換する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ssfuno/articles/2e45f6aec8f444">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--6Cu5R32S--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E6%2596%25B9%25E4%25BD%258D%25E8%25A7%2592%25E3%2582%259216%25E6%2596%25B9%25E4%25BD%258D%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2599%25E3%2581%25B5%25E3%2583%25BC%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I2ZmY3ZDJhMDQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>イントロダクション
-本記事では、Pythonで2地点間の方位角を16方位に変換する方法について記載します。
-
-16方位の図（出典：日本地図センター）
-こちらの記事のJavaScriptでのコードを参考にさせていただきました。
-https://qiita.com/m-suizu@github/items/a3d69c211f8f3a5cb624
-
- 動作環境
-
-macOS Ventura 13.5.1
-Python 3.11.4
-
-
- コードと説明
-方位角が0〜360°で表される時は、下記のように算出できます。
-from decimal import Decimal, ROUND_HA...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/shintaroamaike/articles/afcbc867db495e"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonライクな新言語「Mojo」が一般公開され、ローカル環境に構築できるようになりました</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shintaroamaike/articles/afcbc867db495e">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--WAZ8JFfO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2583%25A9%25E3%2582%25A4%25E3%2582%25AF%25E3%2581%25AA%25E6%2596%25B0%25E8%25A8%2580%25E8%25AA%259E%25E3%2580%258CMojo%25E3%2580%258D%25E3%2581%258C%25E4%25B8%2580%25E8%2588%25AC%25E5%2585%25AC%25E9%2596%258B%25E3%2581%2595%25E3%2582%258C%25E3%2580%2581%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25AB%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%25AA%25E3%2582%258A%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ShintaroAmaike%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVmNWYzMmE0MWIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>以前投稿した新言語「Mojo」がローカルダウンロードできるようになったとの案内がされました。
-https://zenn.dev/minedia/articles/1432443e97cb13
-実際にWindows環境へインストールしてローカル環境で実施してみます。
-Modular
-にアクセスします。
-
- 手順
-
- 1.VSCodeをインストールし、WSL extensionとMojo extensionをインストールします。
-WSL extension
-
-Mojo extension
-
-
- 2.Ubuntu 22.04 for WSLをインストールし、開きます。
-Ubuntu 22.04...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/solxyz_bso/articles/trying-chatdev"
-                        open
-                      >
-                        <summary class="article-expander__title">Windows環境で噂のChatDevを動かす</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/solxyz_bso/articles/trying-chatdev">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--s2g7e_5G--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Windows%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25A7%25E5%2599%2582%25E3%2581%25AEChatDev%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2582%25BD%25E3%2583%25AB%25E3%2582%25AF%25E3%2582%25B7%25E3%2583%25BC%25E3%2582%25BA%25EF%25BC%2588%25E4%25BA%258B%25E6%25A5%25AD%25E6%2588%25A6%25E7%2595%25A5%25E5%25AE%25A4%25EF%25BC%2589%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kojiro%2520Ohara%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc4MWMwN2FhYjIuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NiZWJiYTJkNjIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>仮想のソフトウェア開発会社ChatDev
-先日X（旧Twitter）で話題となっていた、OpenAI APIを利用して自動でソフトウェアを作成するChatDevに興味を持ったので、実際に試してみました。
-https://github.com/OpenBMB/ChatDev
-
-ChatDevは、最高経営責任者（CEO）、最高技術責任者（CTO）、プログラマー、テスターなど、さまざまな役割を持つインテリジェントエージェントによって運営されるバーチャルソフトウェア企業です。
-これらのエージェントは、マルチエージェントの組織構造を形成し、&quot;プログラミングを通じてデジタル世界に革命を起こす&quot;と...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-07 datetime="2023-09-07T16:01:50.000Z">2023-09-07</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-07 datetime="2023-09-07T16:01:50.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/atsuik/articles/5bbc1415e7ac69"
-                        open
-                      >
-                        <summary class="article-expander__title">PythonのLogginng(Minimum)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/atsuik/articles/5bbc1415e7ac69">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--sXf5lc0n--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_68:Python%25E3%2581%25AELogginng%2528Minimum%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:atsuik%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y2VyRXg4M0pVblZyenZhVGVuVmZyNXNHbWRoOXpheThtTjhDY2FEdWJXPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-Pythonで新しくプロジェクトを作ろうとした際、そういえばLoggerの設定や取り扱いってどうすればいいんだっけ？と思って調べてみたところQiitaやZennだと様々な流儀のLoggingのやり方が書いてあって、結局どうすればいいのかがわからず混乱したので自分で調べてまとめました。
-
- 最低限十分なLogginngの方法
-私がLoggingについて調べ始めたときは、とりあえずどうしたらいいのかだけが分かればよかったので同じ気持ちの人のために結論だけ書きます。
-
- Packageプロジェクトの場合
-PythonのPackageを作成している場合はログを送出したい各モジュール...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/takiser/articles/55a67a45bf9603"
-                        open
-                      >
-                        <summary class="article-expander__title">Tabular Data Plot</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takiser/articles/55a67a45bf9603">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--3-Cghdbn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_72:Tabular%2520Data%2520Plot%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takiser%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dacXJINlVvNlVkY28zd3FMamhhZnQwd1JhWHNrT3ZLNjlzSVVwPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>import pandas as pd
-import matplotlib.pyplot as plt
-from pathlib import Path
-
-# import glob
-
-
-class SingleLotDataModel:
-    def __init__(self, csvPath):
-        self.__loadData(csvPath&#x3D;csvPath)
-        self.timeColmun &#x3D; &quot;TimeFromStart&quot;
-        self.intervalName &#x3D; [&quot;INTERVAL&quot;]
-        self.__addTi...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -8388,8 +8420,8 @@ class SingleLotDataModel:
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6438052082">
-        <time id="build-timestamp" datetime="2023-10-07T01:12:51.037Z">2023-10-07T01:12:51.037Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6444630364">
+        <time id="build-timestamp" datetime="2023-10-08T01:18:26.462Z">2023-10-08T01:18:26.462Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
