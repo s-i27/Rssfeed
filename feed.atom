@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-10-08T01:18:26.490Z</updated>
+    <updated>2023-10-09T01:13:40.576Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
@@ -5218,99 +5218,6 @@ fastapi==0.103.1
 pydantic==2.3.0...]]></summary>
         <author>
             <name>pilefort</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[HuggingfaceのTrainer.train()でログを残す方法]]></title>
-        <id>https://zenn.dev/nishimoto/articles/4b7d0fe2592504</id>
-        <link href="https://zenn.dev/nishimoto/articles/4b7d0fe2592504"/>
-        <updated>2023-09-09T12:18:06.000Z</updated>
-        <summary type="html"><![CDATA[結論とソースコード
-こんな感じでTrainerのcallbacksにtransformers.TrainerCallbackを継承したクラスを渡せばOK。
-def init_logger(log_file='train.log'):
-    from logging import getLogger, INFO, FileHandler, Formatter, StreamHandler
-    logger = getLogger(__name__)
-    logger.setLevel(INFO)
-    handler1 = StreamHandler()
-    handl...]]></summary>
-        <author>
-            <name>nishimoto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Python] Stringと数字を一緒に出力(f-String)]]></title>
-        <id>https://zenn.dev/huraipan/articles/5a2be9823f8716</id>
-        <link href="https://zenn.dev/huraipan/articles/5a2be9823f8716"/>
-        <updated>2023-09-09T07:36:14.000Z</updated>
-        <summary type="html"><![CDATA[今日は簡単にf-Stringの使い方を勉強しましょう。
-
-suji = 12
-
-print("sujiは " + suji + "です。")   ## error
-
-今までintとかfloatをstringと一緒にprint()関数の中で使うためにintをStringに変更して少し面倒くさいでした
-suji = 12
-
-print("sujiは " + str(suji) + "です。")   ## sujiは 12です。
-
-
-しかしf-Stringを使ったらもっと簡単にできます。
-まずダブルクォーテーションの前にfを付きます。
-そして使いたいintとかfloat関数名を{}の中に書きま...]]></summary>
-        <author>
-            <name>huraipan</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Mojo の __moveinit__ を適用させるには __del__ が必要]]></title>
-        <id>https://zenn.dev/ttttkkkkk/articles/295089fcf26129</id>
-        <link href="https://zenn.dev/ttttkkkkk/articles/295089fcf26129"/>
-        <updated>2023-09-09T05:26:41.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Pythonと互換性がありながら、高速化された新言語 Mojoが一般公開され、色々触ってみています。
-Mojo の特徴として、型に以下の3種類が存在することが挙げられます。
-
-ムーブ・コピー不可
-ムーブ可能
-
-
-__moveinit__ の実装が条件
-
-
-コピー・ムーブ可能
-
-
-__copyinit__ の実装が条件
-ムーブの時には__moveinit__ があればそちらがよばれるし、なければ__copyinit__が呼ばれる
-
-
-
-この3種類をうまく使うことで所有権の管理が可能です。
-また
-a = b^
-のような ^ transfer 演算子が呼ばれた際には、__move...]]></summary>
-        <author>
-            <name>Taqqn</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Mojo の borrowed, inout, owned]]></title>
-        <id>https://zenn.dev/ttttkkkkk/articles/f3cfb2ba5e73d6</id>
-        <link href="https://zenn.dev/ttttkkkkk/articles/f3cfb2ba5e73d6"/>
-        <updated>2023-09-08T18:11:07.000Z</updated>
-        <summary type="html"><![CDATA[Mojo 言語が一般公開されたので、色々コンパイラで遊んでみました。
-その研究記録をここに残します！！
-
- borrowed, inout, owned について
-Mojo には関数の引数として borrowed, inout, owned を取ることができます。それぞれ引数がどのように関数内で扱われるかが異なります。
-Rustの借用やC++の参照・ポインタを思い出します。
-
- borrowed
-まず基本的なのが、borrowedです。これは Mojo のデフォルトの設定となり、省略が可能です。
-つまり
-fn add(borrowed x: Int, borrowed y: Int) -...]]></summary>
-        <author>
-            <name>Taqqn</name>
         </author>
     </entry>
 </feed>
