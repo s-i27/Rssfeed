@@ -22,6 +22,290 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-09 datetime="2023-10-09T16:48:31.000Z">2023-10-09</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-09 datetime="2023-10-09T16:48:31.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/karaage0703/articles/9e58dec9eeaa86"
+                        open
+                      >
+                        <summary class="article-expander__title">Notion API x Python</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/karaage0703/articles/9e58dec9eeaa86">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--sONYkSD_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:Notion%2520API%2520x%2520Python%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:karaage0703%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hDZEtvakJfZXdDTjNCV1Z0WXIteFNIZ0hmRjlXZmt3QzI5c0Y0aXYwPXMyNTAtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Notion API Python SDK
+とりあえず試したのでメモです。
+以下公式が詳しいです。
+https://github.com/ramnes/notion-sdk-py
+
+ Notion側
+以下でインテグレーションを作成します。
+https://www.notion.so/my-integrations
+以下の通りでOKです。
+
+インテグレーションを作成すると、トークンを取得できます。取得したら、環境変数に設定しておきましょう。
+$ export NOTION_TOKEN&#x3D;&quot;NOTION_INTEGRATION_TOKEN&quot;
+制御したいページの右上の…をクリックして「+コネ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tk_hamaguchi/articles/788c9f7f2d290e"
+                        open
+                      >
+                        <summary class="article-expander__title">PythonでCLIを含んだパッケージをhatchで作る</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tk_hamaguchi/articles/788c9f7f2d290e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--M-cAd0jr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7CLI%25E3%2582%2592%25E5%2590%25AB%25E3%2582%2593%25E3%2581%25A0%25E3%2583%2591%25E3%2583%2583%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%2592hatch%25E3%2581%25A7%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tk_hamaguchi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lIb3g3cVdUTDcyQ25MTHFwOVA5Z2lYeW83SGtFdlZoMy11c09BWEE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>記事の概要
+PythonでCLIを作ろうと思った時、rubyでいうところの bundle gem 的なものがないかと探していたところ、hatchに辿り着いたので使い方をメモしておきます。
+この記事で取り扱うのは下記の内容です。
+
+環境準備
+パッケージの雛形生成
+ローカル環境での動作確認
+Lintチェック
+テスト
+カバレッジ
+パッケージング
+依存ライブラリの管理
+
+
+ 0. 環境準備
+まずは作業用のフォルダと仮想環境を準備する。
+$ mkdir sandbox_hatch
+$ cd sandbox_hatch
+$ python3.11 -m venv venv
+$ source ven...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/fitness_densuke/articles/understanding_coroutine_in_python"
+                        open
+                      >
+                        <summary class="article-expander__title">Pythonのコルーチンをそこはかとなく理解する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/fitness_densuke/articles/understanding_coroutine_in_python">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--bt2-U9mL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AE%25E3%2582%25B3%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2581%25E3%2583%25B3%25E3%2582%2592%25E3%2581%259D%25E3%2581%2593%25E3%2581%25AF%25E3%2581%258B%25E3%2581%25A8%25E3%2581%25AA%25E3%2581%258F%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Tamtam%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzg4YzUxYzNmMDQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>コルーチンの前に..ジェネレータの基本
+コルーチンについていきなり説明する前に、その前提知識となるジェネレータについて解説します。
+Pythonの用語集からジェネレータの意味を引用します。
+
+(ジェネレータ) generator iterator を返す関数です。 通常の関数に似ていますが、 yield 式を持つ点で異なります。 yield 式は、 for ループで使用できたり、next() 関数で値を 1 つずつ取り出したりできる、値の並びを生成するのに使用されます。
+
+ジェネレータは、イテレーション中に要素を動的に生成するイテレータになります。
+特徴としてはyield を使い「値...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/y_taiki/articles/aws_sam_setup"
+                        open
+                      >
+                        <summary class="article-expander__title">【SAM】Lambda + API Gatewayの開発環境構築</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/y_taiki/articles/aws_sam_setup">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--J6pktcVC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590SAM%25E3%2580%2591Lambda%2520%252B%2520API%2520Gateway%25E3%2581%25AE%25E9%2596%258B%25E7%2599%25BA%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:taiki%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MmlZZmE0SW5SS29Pbi0xdjBsdDQwR0Z2MHJZVXNFcDJDWDE4Znc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+SAMを使って、ローカルでAPI Gatewayを起動し、lambda_function.pyにリクエストできる環境を構築します
+
+ SAMとは
+AWSでサーバーレスアプリケーションを構築するためのフレームワークです。
+このフレームワークを使用することで、AWS Lambda、Amazon API Gateway、およびその他のサーバーレスリソースのアプリケーションを定義、デプロイすることができます。
+SAM CLIを使用すると、ローカルの開発環境でAWS LambdaやAmazon API Gatewayなどを模倣することができます。
+
+ 前提
+以下の内容は、インストール...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/k5h/articles/243e31ce883eb3"
+                        open
+                      >
+                        <summary class="article-expander__title">ちょこちょこ作ってたmarkdown生成ライブラリを公開しました🐍</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/k5h/articles/243e31ce883eb3">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--G3jldq2l--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%25A1%25E3%2582%2587%25E3%2581%2593%25E3%2581%25A1%25E3%2582%2587%25E3%2581%2593%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%259Fmarkdown%25E7%2594%259F%25E6%2588%2590%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2582%2592%25E5%2585%25AC%25E9%2596%258B%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2520%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:k5h%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc2YjlhZjQwOWMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>こんにちは．
+最近論文を提出して研究にひと段落ついたので，実験しながらちょこちょこ作ってたPythonのMarkdown生成ライブラリを公開しました．
+元々は，実験結果を研究室で共有するために，pythonから直接markdown形式の表を直感的に出力できるようにしようと思って作っていました，
+作っているうちに，思ったよりいい感じになってきて，他に人でも役に立てるようなものになったんじゃないかと思ったので，綺麗にラッピングしてPyPIに上げてみました．
+もしよければ使ってみてくれると嬉しいです．
+
+ mdfy
+
+
+
+
+
+ Installation
+pip install mdfy
+
+ ど...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/whitecat_22/articles/9e0682c17ac818"
+                        open
+                      >
+                        <summary class="article-expander__title">Django REST FrameworkでのAPI実装からSwagger UIでスキーマを表示してみた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/whitecat_22/articles/9e0682c17ac818">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--XZgkSwWv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%2520REST%2520Framework%25E3%2581%25A7%25E3%2581%25AEAPI%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%258B%25E3%2582%2589Swagger%2520UI%25E3%2581%25A7%25E3%2582%25B9%25E3%2582%25AD%25E3%2583%25BC%25E3%2583%259E%25E3%2582%2592%25E8%25A1%25A8%25E7%25A4%25BA%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:whitecat_22%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2l2eUZtdktTTWRSUlBfNzVKcGFKUHcxRkJDY2F6UHR1dkx0U20yPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+先日Django REST Framework（DRF）を利用してAPIを作成しました。
+APIのドキュメントをつくることも考慮すると、Swaggerのドキュメント生成を基本機能としてサポートしているFastAPIに傾きかけましたが、やはりDjangoの強力な管理機能は業務アプリに欠かせません。
+DRFで作成したAPIのドキュメントを簡単に作成できないかと調べていたところ、少しの工夫でFastAPIと同様にAPIドキュメントを自動作成することができることを知りました。
+今回は、DRFで実装したAPIからAPIドキュメントの作成を自動化する手順をここに残します。
+先人たちの知...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/whitecat_22/articles/b82ee3e7a43011"
+                        open
+                      >
+                        <summary class="article-expander__title">React+DjangoRESTFramworkでSPAのToDoアプリをつくる</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/whitecat_22/articles/b82ee3e7a43011">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--sdo1L5Qz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:React%252BDjangoRESTFramwork%25E3%2581%25A7SPA%25E3%2581%25AEToDo%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E3%2581%25A4%25E3%2581%258F%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:whitecat_22%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2l2eUZtdktTTWRSUlBfNzVKcGFKUHcxRkJDY2F6UHR1dkx0U20yPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>背景
+以前からDjangoにおけるWebアプリケーション作成において、ReactやFlutterなどのフロントエンドのフレームワークとの結合を考えております。
+今回は、手始めにフロントエンドにReactを、バックエンドはDjango REST Frameworkを利用したRESTful APIで行なうことを目的にToDoアプリの作成をしながら学習した記録です。
+先人たちの知恵をお借りするなどして解決できたことを、この場をお借りして感謝するとともに、大変恐縮ですが自分のメモとして、こちらへまとめておきます。
+
+ はじめに
+ReactやPython、Djangoなどの技術仕様も日に日に変...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/datahaikuninja/articles/decode-compressed-response-generated-lambda-edge"
+                        open
+                      >
+                        <summary class="article-expander__title">Lambda@EdgeでHTTPレスポンスを圧縮したら発生した、Viewerのデコードエラーを解決する方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/datahaikuninja/articles/decode-compressed-response-generated-lambda-edge">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--8-CDD6i1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Lambda%2540Edge%25E3%2581%25A7HTTP%25E3%2583%25AC%25E3%2582%25B9%25E3%2583%259D%25E3%2583%25B3%25E3%2582%25B9%25E3%2582%2592%25E5%259C%25A7%25E7%25B8%25AE%25E3%2581%2597%25E3%2581%259F%25E3%2582%2589%25E7%2599%25BA%25E7%2594%259F%25E3%2581%2597%25E3%2581%259F%25E3%2580%2581Viewer%25E3%2581%25AE%25E3%2583%2587%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E3%2582%2592%25E8%25A7%25A3%25E6%25B1%25BA%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:datahaikuninja%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2UxYzNlOTRlNjEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Lambda@EdgeでHTTPレスポンスを圧縮したら、Viewerのデコードエラーが発生した
+オリジンリクエストトリガーのLambda関数でHTTPレスポンスを圧縮したら、Viewerのデコードエラーが発生してレスポンスボディをロードできなくなる事象が発生しました。
+どのようにエラーを解決したか、備忘録的な記事を書こうと思います。
+Lambda@Edgeで圧縮処理を行うのはかなり特殊なケースだと思いますが、同じ事象に困っている人の参考になれば幸いです。
+なお、本記事内のコードはPythonですが、Node.jsでも参考になると思います。
+結論から書くと、Lambda関数がretur...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/shiki_01/books/my-study-book"
+                        open
+                      >
+                        <summary class="article-expander__title">一緒に勉強していこうって本</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shiki_01/books/my-study-book">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://static.zenn.studio/images/logo-only-dark.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>プログラマー志望の高校生が勉強したことを自分の備忘録としてまとめるだけ</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-08 datetime="2023-10-08T00:59:48.000Z">2023-10-08</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-08 datetime="2023-10-08T00:59:48.000Z"></time>
           </button>
@@ -7616,642 +7900,6 @@ https://www.amazon.co.jp/文系ＡＩ人材になる―統計・プログラム�
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/c6tower/articles/c43e9f2fa93f5a"
-                        open
-                      >
-                        <summary class="article-expander__title">Apache AirflowのExponential Backoffを読み解く</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/c6tower/articles/c43e9f2fa93f5a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--0rZNvPo4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Apache%2520Airflow%25E3%2581%25AEExponential%2520Backoff%25E3%2582%2592%25E8%25AA%25AD%25E3%2581%25BF%25E8%25A7%25A3%25E3%2581%258F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25BF%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JkZWRhOGYwMDguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>要約
-
-Apache AirflowのDAGには標準でExponential Backoff And Jitterが用意されている
-2.5.3以前と2.6.0以降でretry間隔の最大値に変更があった模様
-
-
- 前提
-
- Airflowのversionは？
-2.5.3。
-一部、2.6.0の話も出てくる。
-執筆時の最新バージョンは2.7.1。
-
- Exponential Backoffとは？
-しっかりと理解したい人向け: AWSのブログがオススメ
-https://aws.amazon.com/jp/blogs/architecture/exponential-backoff-and-j...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/sergicalsix/articles/5f58fecdb8411d"
-                        open
-                      >
-                        <summary class="article-expander__title">Transformersライブラリで自然言語生成（NLG）を簡単に！自作ラッパークラスの作成と使い方</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sergicalsix/articles/5f58fecdb8411d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--MawW-A2r--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Transformers%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2581%25A7%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E7%2594%259F%25E6%2588%2590%25EF%25BC%2588NLG%25EF%25BC%2589%25E3%2582%2592%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25AB%25EF%25BC%2581%25E8%2587%25AA%25E4%25BD%259C%25E3%2583%25A9%25E3%2583%2583%25E3%2583%2591%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25B9%25E3%2581%25AE%25E4%25BD%259C%25E6%2588%2590%25E3%2581%25A8%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sergicalsix%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhlODkyZDMzYjUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-自然言語生成（Natural Language Generation, NLG）は、AIと自然言語処理（NLP）の興味深い分野の一つです。Hugging FaceのTransformersライブラリは、このようなタスクを簡単に行うための多くのツールを提供しています。
-この記事では、Transformersライブラリを使って自然言語生成を簡単に行うための自作ラッパークラスを紹介します。
-自作ラッパークラスの特徴は以下です。
-
-簡単な初期化: モデル名を指定するだけで、tokenizerとmodelが自動的に初期化されます。
-柔軟なオプション: エンコード、生成、デコードの各ス...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/shundeveloper/articles/b5cc85b4d1e7eb"
-                        open
-                      >
-                        <summary class="article-expander__title">日本語に関連するunicodeの範囲一文字を指定する正規表現マッチオブジェクトを作成する関数の作成</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shundeveloper/articles/b5cc85b4d1e7eb">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--o6HPwgUI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E3%2581%25AB%25E9%2596%25A2%25E9%2580%25A3%25E3%2581%2599%25E3%2582%258Bunicode%25E3%2581%25AE%25E7%25AF%2584%25E5%259B%25B2%25E4%25B8%2580%25E6%2596%2587%25E5%25AD%2597%25E3%2582%2592%25E6%258C%2587%25E5%25AE%259A%25E3%2581%2599%25E3%2582%258B%25E6%25AD%25A3%25E8%25A6%258F%25E8%25A1%25A8%25E7%258F%25BE%25E3%2583%259E%25E3%2583%2583%25E3%2583%2581%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%25E9%2596%25A2%25E6%2595%25B0%25E3%2581%25AE%25E4%25BD%259C%25E6%2588%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shun%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY3Y2U4NzUxNzkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>注意
-
-ここで日本語に関連するとしているunicodeの範囲は以下とする.
-unicode正規化(NFC)を使えば大体はカバーしていると思われるが, 足りない・入れて欲しい部分部分等があればコメントをお願いします.
-
-
-
-hiragana (U+3040 to U+309F): Hiragana PDF
-
-
-katakana (U+30A0 to U+30FF): Katakana PDF
-
-
-katakana_half_width (U+FF65 to U+FF9F): Half-width Katakana PDF
-
-
-katakana_phonetic_extensions (...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/blueman/articles/7faaae8e09e26d"
-                        open
-                      >
-                        <summary class="article-expander__title">ガンマ補正を用いたリアルタイム映像の明るさ調整【Python】</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/blueman/articles/7faaae8e09e26d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--jDBYX1gZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AC%25E3%2583%25B3%25E3%2583%259E%25E8%25A3%259C%25E6%25AD%25A3%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E3%2583%25AA%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%25A0%25E6%2598%25A0%25E5%2583%258F%25E3%2581%25AE%25E6%2598%258E%25E3%2582%258B%25E3%2581%2595%25E8%25AA%25BF%25E6%2595%25B4%25E3%2580%2590Python%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%259E%25E3%2583%25B3%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Zkt1ajRKaldOUWItM0o1cV8yUmFNc1ZockFKNjJBVEtDNnZfUHZLV1Robm9vPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>この記事はQiitaの記事の転載です!!
-Qiitaの記事はこちら!!
-https://qiita.com/blueman/items/ebd7ff126704bcdbf93d
-
-
- 目次
-はじめに
-実行環境
-webカメラの幅と高さの取得方法
-メインウィンドウのサイズの設定方法
-リアルタイム映像の表示領域の設定方法
-スライドバーで小数を扱う方法
-スライドバーの設定方法
-ガンマ補正の実装方法
-ルックアップテーブルの作成方法
-ガンマ補正の処理方法
-リアルタイム画像のtkinterでの表示方法
-定期的に処理を実行する方法
-ソースコード
-結果
-まとめ
-
- はじめに
-今回は、前回のTwitter(...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/xxyyzz/articles/044dfe042c327e"
-                        open
-                      >
-                        <summary class="article-expander__title">Visitor</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/xxyyzz/articles/044dfe042c327e">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--1ZnmmZLm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:Visitor%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:xxyyzz%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWNMRkloLXNFRlFEbkYwR0hSX3Y2eHp2Vko0dmVrcTdHQ1ZXRFhSX25GQXc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Visitor パターンは、オブジェクトの構造からアルゴリズムを分離することで、構造が変更されない限り、新しい操作を追加できるようにするデザインパターンです。このパターンは、構造内の各要素に対して訪問者が実行する操作を表すことができる Visitor クラスを使用します。
-
- 主要な構成要素:
-
-
-Visitor (訪問者): 具体的な訪問者を表すクラスまたはインターフェース。
-
-ConcreteVisitor (具体的な訪問者): 特定のアルゴリズムを実行するためのVisitorの具体的な実装。
-
-Element (要素): Visitor クラスが訪問する要素のインターフェース。
-
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/xxyyzz/articles/2d866877e5db55"
-                        open
-                      >
-                        <summary class="article-expander__title">Template Method</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/xxyyzz/articles/2d866877e5db55">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--prmweREr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:Template%2520Method%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:xxyyzz%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWNMRkloLXNFRlFEbkYwR0hSX3Y2eHp2Vko0dmVrcTdHQ1ZXRFhSX25GQXc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Template Method パターンは、アルゴリズムの骨格を定義するが、一部のステップをサブクラスに委譲することでアルゴリズムの構造を変更することなく特定のステップをオーバーライドするデザインパターンです。
-
- 主要な構成要素:
-
-
-Abstract Class (抽象クラス): アルゴリズムの骨格を定義するテンプレートメソッドを持つクラス。このクラスは、オーバーライド可能な一部のステップを定義することもできます。
-
-Concrete Class (具体クラス): 抽象クラスのメソッドをオーバーライドして具体的な実装を提供するクラス。
-
-
- 例:
-簡単な料理の手順を考えてみましょう。...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/xxyyzz/articles/c29bb8fd716323"
-                        open
-                      >
-                        <summary class="article-expander__title">Strategy</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/xxyyzz/articles/c29bb8fd716323">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--hClnvWuP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:Strategy%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:xxyyzz%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWNMRkloLXNFRlFEbkYwR0hSX3Y2eHp2Vko0dmVrcTdHQ1ZXRFhSX25GQXc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Strategy デザインパターンは、アルゴリズムのセットを定義し、それぞれのアルゴリズムをカプセル化するもので、これによりアルゴリズムを互いに独立して変更したり交換したりできます。
-基本的には、アルゴリズムの実装の詳細を隠蔽しながら、クライアント側から異なるアルゴリズムや戦略を選択・交換する能力を提供します。
-
- Strategy パターンの具体的な例：ソートアルゴリズム
-例として、異なる種類のソートアルゴリズムを適用するシステムを考えます。
-
-
-Strategy (インターフェース/抽象クラス)
-from abc import ABC, abstractmethod
-
-class S...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/xxyyzz/articles/9f0eaa9f91f5f6"
-                        open
-                      >
-                        <summary class="article-expander__title">State</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/xxyyzz/articles/9f0eaa9f91f5f6">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--QswmGlnM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:State%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:xxyyzz%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWNMRkloLXNFRlFEbkYwR0hSX3Y2eHp2Vko0dmVrcTdHQ1ZXRFhSX25GQXc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>State パターンは、オブジェクトの内部状態が変わるたびにオブジェクトの動作を変更するためのデザインパターンです。このパターンは、オブジェクトが状態ごとに異なる動作を持つ場合や、複雑な条件や分岐がオブジェクトの動作に関連する場合に役立ちます。
-
- 主要な構成要素:
-
-
-Context (文脈): 現在の状態を定義し、クライアントに対して一貫したインターフェースを提供するクラス。
-
-State (状態): すべての具体的な状態が実装すべきインターフェース。
-
-ConcreteState (具体的な状態): State インターフェースを実装し、Contextの状態に関連する特定の動作を提...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/xxyyzz/articles/996a06f8438e37"
-                        open
-                      >
-                        <summary class="article-expander__title">Observer</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/xxyyzz/articles/996a06f8438e37">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--G4768KIx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:Observer%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:xxyyzz%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWNMRkloLXNFRlFEbkYwR0hSX3Y2eHp2Vko0dmVrcTdHQ1ZXRFhSX25GQXc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Observer パターンは、オブジェクトの状態の変更が他のオブジェクトに影響を及ぼす場合に、これらのオブジェクト間の依存関係を定義するデザインパターンです。状態が変更されたときに自動的に通知されるオブジェクトを登録します。
-
- 主要な構成要素:
-
-
-Subject (被験者): Observerを追加、削除、通知するメソッドを持つオブジェクト。
-
-Observer (観察者): Subjectからの更新を受け取るオブジェクトのインターフェース。
-
-ConcreteObserver (具体的な観察者): Observerインターフェースを実装するオブジェクトで、Subjectからの更新を...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/xxyyzz/articles/ef204d8b60a043"
-                        open
-                      >
-                        <summary class="article-expander__title">Memento</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/xxyyzz/articles/ef204d8b60a043">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--6YQdxd7w--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:Memento%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:xxyyzz%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWNMRkloLXNFRlFEbkYwR0hSX3Y2eHp2Vko0dmVrcTdHQ1ZXRFhSX25GQXc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Memento パターンは、オブジェクトの内部状態をキャプチャし、後でそのオブジェクトをその状態に戻す方法を提供するデザインパターンです。これにより、オブジェクトの状態を変更した後でも、変更を元に戻す（アンドゥ）操作が可能になります。
-
- 主要な構成要素:
-
-
-Originator (発行者): 状態を持つオブジェクト。Mementoを作成し、前の状態に戻すためにそれを使用します。
-
-Memento (記念品): Originatorの内部状態のスナップショットを保持するオブジェクト。
-
-Caretaker (保管者): Mementoの保管と状態の復元を管理するオブジェクト。
-
-
- 例...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/xxyyzz/articles/53860a9a493ce2"
-                        open
-                      >
-                        <summary class="article-expander__title">Mediator</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/xxyyzz/articles/53860a9a493ce2">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--vS9mfOrh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:Mediator%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:xxyyzz%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWNMRkloLXNFRlFEbkYwR0hSX3Y2eHp2Vko0dmVrcTdHQ1ZXRFhSX25GQXc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Mediator パターンは、オブジェクト間の通信をカプセル化するオブジェクトを定義するデザインパターンです。このパターンは、オブジェクトが直接通信するのではなく、Mediatorオブジェクトを介して通信することで、オブジェクト間の依存関係を減少させ、疎結合を促進します。
-
- 主要な構成要素:
-
-
-Mediator (仲介者): すべての通信をコーディネートするインターフェースや抽象クラス。
-
-ConcreteMediator (具体的な仲介者): Mediatorの具体的な実装で、Colleagueオブジェクト間の通信を調整します。
-
-Colleague (同僚): 通信を行うオブジェ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/xxyyzz/articles/95782e76463ce3"
-                        open
-                      >
-                        <summary class="article-expander__title">Interpreter</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/xxyyzz/articles/95782e76463ce3">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--KoFrobr9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:Interpreter%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:xxyyzz%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWNMRkloLXNFRlFEbkYwR0hSX3Y2eHp2Vko0dmVrcTdHQ1ZXRFhSX25GQXc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Interpreter パターンは、特定のタスクのための言語を解釈するための表現を定義し、それを使用して文を解釈するための解釈機を使用するデザインパターンです。これは主に、繰り返し発生する問題のための簡単な言語を作成する場合に使用されます。
-
- 主要な構成要素:
-
-
-AbstractExpression (抽象表現): すべての具体的な表現の共通の操作を定義するインターフェースや抽象クラス。
-
-TerminalExpression (終端表現): 文中の終端記号を表す。
-
-NonTerminalExpression (非終端表現): 文中の非終端記号を表す。
-
-Context (文脈):...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/xxyyzz/articles/a4052adc76df9c"
-                        open
-                      >
-                        <summary class="article-expander__title">Command</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/xxyyzz/articles/a4052adc76df9c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--lYRjG0tK--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:Command%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:xxyyzz%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWNMRkloLXNFRlFEbkYwR0hSX3Y2eHp2Vko0dmVrcTdHQ1ZXRFhSX25GQXc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Command パターンは、リクエストをオブジェクトとしてカプセル化し、遅延実行やキュー、ログ取り、トランザクションなどのサポートを可能にするデザインパターンです。このパターンを使用することで、リクエストの送信者と受信者を分離できます。
-
- 主要な構成要素:
-
-
-Command (コマンド): 実行されるアクションを表すインターフェースや抽象クラス。
-
-ConcreteCommand (具体的なコマンド): Command インターフェースを実装する具体的なクラス。
-
-Invoker (起動者): Command の実行を要求するクラス。
-
-Receiver (受信者): コマンドの実際...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/xxyyzz/articles/bf2ba5000a4b6e"
-                        open
-                      >
-                        <summary class="article-expander__title">Chain of Responsibility</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/xxyyzz/articles/bf2ba5000a4b6e">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--13YJLUC9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_72:Chain%2520of%2520Responsibility%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:xxyyzz%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWNMRkloLXNFRlFEbkYwR0hSX3Y2eHp2Vko0dmVrcTdHQ1ZXRFhSX25GQXc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Chain of Responsibility パターンは、複数のオブジェクトを一連の処理手段として連鎖させ、リクエストをこのチェーン上で逐次的に処理させるデザインパターンです。これにより、リクエストの送信者と受信者を分離し、処理を行うオブジェクトを動的に指定できます。
-
- 主要な構成要素:
-
-
-Handler (ハンドラ): 処理要求を持つインターフェースや抽象クラス。
-
-ConcreteHandler (具体的なハンドラ): Handler インターフェースを実装する具体的なクラス。次のハンドラへの参照を持つこともできます。
-
-
- 例:
-ログの重要度に応じて、異なるログレベルでのメッ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/xxyyzz/articles/3fa688f3446462"
-                        open
-                      >
-                        <summary class="article-expander__title">Proxy</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/xxyyzz/articles/3fa688f3446462">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--y6lLd3W9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:Proxy%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:xxyyzz%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWNMRkloLXNFRlFEbkYwR0hSX3Y2eHp2Vko0dmVrcTdHQ1ZXRFhSX25GQXc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Proxy パターンは、別のオブジェクトへのアクセスを制御するための代理または置き換えオブジェクトを提供するデザインパターンです。プロキシは元のオブジェクトと同じインターフェースを持っており、クライアントはプロキシを通じて元のオブジェクトにアクセスします。
-
- 主要な構成要素:
-
-
-Subject (対象): RealSubject と Proxy が共有するインターフェースや抽象クラス。
-
-RealSubject (実対象): Proxy が代表する実際のオブジェクト。
-
-Proxy (代理): RealSubject へのアクセスを制御するオブジェクト。
-
-
- 例:
-データベースへの...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/xxyyzz/articles/3f12416eb2b0be"
-                        open
-                      >
-                        <summary class="article-expander__title">Flyweight</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/xxyyzz/articles/3f12416eb2b0be">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--r8LUf1ol--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:Flyweight%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:xxyyzz%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWNMRkloLXNFRlFEbkYwR0hSX3Y2eHp2Vko0dmVrcTdHQ1ZXRFhSX25GQXc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Flyweight パターンは、大量の類似したオブジェクトを効率的に共有することで、メモリの使用を最適化するデザインパターンです。このパターンは、オブジェクトの共通のデータを外部のデータ構造に保持し、オブジェクト自体はそのデータへの参照のみを持つことで、メモリ使用量を削減します。
-
- 主要な構成要素:
-
-
-Flyweight (フライウェイト): すべての具象フライウェイトが共有するインターフェースや抽象クラス。
-
-ConcreteFlyweight (具象フライウェイト): 共有される具体的なオブジェクト。
-
-FlyweightFactory (フライウェイト工場): 既存のフライウェ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/xxyyzz/articles/13967a4ff7b76e"
-                        open
-                      >
-                        <summary class="article-expander__title">Facade</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/xxyyzz/articles/13967a4ff7b76e">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Yf0GWB5Z--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:Facade%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:xxyyzz%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSWNMRkloLXNFRlFEbkYwR0hSX3Y2eHp2Vko0dmVrcTdHQ1ZXRFhSX25GQXc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Facade（ファサード）パターンは、複雑なサブシステムのインターフェースを単純化するためのデザインパターンです。このパターンでは、シンプルな一つのインターフェースを介してサブシステムの一連のインターフェースにアクセスできるようにします。これにより、サブシステムを使用するクライアントは、サブシステム内部の複雑さを知らなくてもその機能を利用できます。
-
- 主要な構成要素:
-
-
-Facade (ファサード): クライアントからのリクエストを適切なサブシステムのオブジェクトに転送する役割を持つクラス。
-
-Subsystem (サブシステム): ファサードによってラップされる一連の複雑なクラスや...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/tunaproducts/articles/de841b91a1a856"
-                        open
-                      >
-                        <summary class="article-expander__title">【AI】AIの本を読んだのでレビュー</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tunaproducts/articles/de841b91a1a856">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ox72TF9H--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590AI%25E3%2580%2591AI%25E3%2581%25AE%25E6%259C%25AC%25E3%2582%2592%25E8%25AA%25AD%25E3%2582%2593%25E3%2581%25A0%25E3%2581%25AE%25E3%2581%25A7%25E3%2583%25AC%25E3%2583%2593%25E3%2583%25A5%25E3%2583%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tunaProducts%253Cte...%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ5NzI0MzQ2NjMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>!
-AI関連本を読んだのでレビューをしてみます
-
-
- 読んだ本
-
-タイトル：
-投資対効果を最大化するAI導入7つのルール
-著者：石川聡彦(株式会社アイデミー社長)
-
-https://www.amazon.co.jp/投資対効果を最大化する-AI導入７つのルール-石川-聡彦-ebook/dp/B0854G2KS3
-※Kindle版もあり、
-Kindle Unlimited会員は追加料金なしで読めます。
-
- レビュー（最高★★★⇔最低☆☆☆）
-読みやすさ　★★☆
-専門性　　　★★☆
-総合　　　　★★☆
-
- 全体概略
-本著の序文には以下のように記されています。
-
-技術としては草創期、歴史の浅...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-09 datetime="2023-09-09T16:26:50.000Z">2023-09-09</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-09 datetime="2023-09-09T16:26:50.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/pilefort/articles/a286144465cb6b"
-                        open
-                      >
-                        <summary class="article-expander__title">FastAPI (mangum) を AWS Lambda で動かす</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/pilefort/articles/a286144465cb6b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--hrPlAEVi--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%2520%2528mangum%2529%2520%25E3%2582%2592%2520AWS%2520Lambda%2520%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:pilefort%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvcC5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>対象
-
-PythonのFastAPIをAWS Lambdaで動かしたい人
-カスタムイメージを使ってビルドしたい人
-ローカルでの動作確認方法を知りたい人
-AWSのリソース作成の概略を知りたい人
-
-
- 利用するライブラリのバージョン
-以下のライブラリを利用します。
-fastapiは執筆時点での最新版、mangumは0.11.0より新しいバージョンだとエラーが発生するため、このバージョンとしてます。
-pydanticやstarlette, typing-extensionsはfastapiやmangumの依存ライブラリです。
-fastapi&#x3D;&#x3D;0.103.1
-pydantic&#x3D;&#x3D;2.3.0...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -8259,8 +7907,8 @@ pydantic&#x3D;&#x3D;2.3.0...</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6451209322">
-        <time id="build-timestamp" datetime="2023-10-09T01:13:40.535Z">2023-10-09T01:13:40.535Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6463467521">
+        <time id="build-timestamp" datetime="2023-10-10T01:13:18.308Z">2023-10-10T01:13:18.308Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
