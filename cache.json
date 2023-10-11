@@ -12,6 +12,66 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/sansuke05/articles/ad971fe2607f81",
+          "author": "サンスケ",
+          "description": "すぐに使いたい人向け\nDockerfileがこちらにあります\nhttps://gist.github.com/sansuke05/c4e79e1815d41f70f962bdf03d9f39f0\n\n はじめに\n個人開発でモバイル端末からText To Speechを使いたい需要が発生したため、キャラクターの音声合成を使える COEIROINK をクラウド上で動作させることにしました。\nその時にどのようなことをやったかを今回まとめることにしました。\n長くなりそうなので、この記事ではまずDocker上で動かせるようにするまでにやったことをまとめています。\n\n Docker上で動かせるよう...",
+          "link": "https://zenn.dev/sansuke05/articles/ad971fe2607f81",
+          "publishedOn": "2023-10-10T18:30:06.000Z",
+          "wordCount": 712,
+          "title": "COEIROINK(CPU)をクラウド対応するまでにやったこと(Docker上で動かせるようにするまで編)",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--7N4DSa20--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:COEIROINK%2528CPU%2529%25E3%2582%2592%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25A6%25E3%2583%2589%25E5%25AF%25BE%25E5%25BF%259C%25E3%2581%2599%25E3%2582%258B%25E3%2581%25BE%25E3%2581%25A7%25E3%2581%25AB%25E3%2582%2584%25E3%2581%25A3%25E3%2581%259F%25E3%2581%2593%25E3%2581%25A8%2528Docker%25E4%25B8%258A%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%259B%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25E3%2581%25BE%25E3%2581%25A7%25E7%25B7%25A8%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25B5%25E3%2583%25B3%25E3%2582%25B9%25E3%2582%25B1%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzNTlhMGMzNDcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--7N4DSa20--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:COEIROINK%2528CPU%2529%25E3%2582%2592%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25A6%25E3%2583%2589%25E5%25AF%25BE%25E5%25BF%259C%25E3%2581%2599%25E3%2582%258B%25E3%2581%25BE%25E3%2581%25A7%25E3%2581%25AB%25E3%2582%2584%25E3%2581%25A3%25E3%2581%259F%25E3%2581%2593%25E3%2581%25A8%2528Docker%25E4%25B8%258A%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%259B%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25E3%2581%25BE%25E3%2581%25A7%25E7%25B7%25A8%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25B5%25E3%2583%25B3%25E3%2582%25B9%25E3%2582%25B1%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzNTlhMGMzNDcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/kit_ok/articles/d0558e5f7e14a9",
+          "author": "カイト@データ基盤屋",
+          "description": "結論\n\n文字コードチェック自体は file_content = uploaded_file.read() した後に file_content.decode(\"utf-8\") して UnicodeDecodeError を検知するなどで簡単に可能\nファイルオブジェクトをreadしているので、ファイルの読み込みカーソルが最下部まで行ってしまうので、 uploaded_file.seek(0) でカーソルを先頭に戻してやる必要がある\nもっと楽に文字コードのバリデーションができる方法があれば知りたい\n\n\n 今回起きたこと・ハマったポイント\n仕事で、「streamlitでアップロードしたファイ...",
+          "link": "https://zenn.dev/kit_ok/articles/d0558e5f7e14a9",
+          "publishedOn": "2023-10-10T10:54:03.000Z",
+          "wordCount": 443,
+          "title": "StreamlitのFile Uploadで文字コードチェック",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--HN05L6Ja--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Streamlit%25E3%2581%25AEFile%2520Upload%25E3%2581%25A7%25E6%2596%2587%25E5%25AD%2597%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2583%2581%25E3%2582%25A7%25E3%2583%2583%25E3%2582%25AF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25AB%25E3%2582%25A4%25E3%2583%2588%2540%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%259F%25BA%25E7%259B%25A4%25E5%25B1%258B%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBlZTBkYjZkMjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--HN05L6Ja--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Streamlit%25E3%2581%25AEFile%2520Upload%25E3%2581%25A7%25E6%2596%2587%25E5%25AD%2597%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2583%2581%25E3%2582%25A7%25E3%2583%2583%25E3%2582%25AF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25AB%25E3%2582%25A4%25E3%2583%2588%2540%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%259F%25BA%25E7%259B%25A4%25E5%25B1%258B%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBlZTBkYjZkMjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/emp_tech_blog/articles/ffa83b5231b15c",
+          "author": "ssnay",
+          "description": "LeetCodeってなんですか？\nシリコンバレーの名だたる企業や日本でも大きなサービスを展開するようなソフトウェア企業では、エンジニア採用でコーディング面接がある場合が多く、このサイトはその対策としてよく利用されるものです。\n\n 今回の問題\n早いコードができたわけではないですが、他の解答よりシンプルなコードになっていると思ったので紹介しようと思いました。\n・https://leetcode.com/problems/sqrtx/\n問題文\nGiven a non-negative integer x, \nreturn the square root of x rounded down ...",
+          "link": "https://zenn.dev/emp_tech_blog/articles/ffa83b5231b15c",
+          "publishedOn": "2023-10-10T07:29:41.000Z",
+          "wordCount": 782,
+          "title": "LeetCode: 69.Sqrt(x) 解説",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--VnQeWYbp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_66:LeetCode%253A%252069.Sqrt%2528x%2529%2520%25E8%25A7%25A3%25E8%25AA%25AC%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:EMP%2520Tech%2520Blog%2Cx_220%2Cy_160/g_south_west%2Cl_text:notosansjp-medium.otf_34:ssnay%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FhYTMzODRhNGEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y0tXeWUzaDhOdk5LQWJ0Qk1XZnhhYXBobktNYXY0NGpqY1c1NmM9czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--VnQeWYbp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_66:LeetCode%253A%252069.Sqrt%2528x%2529%2520%25E8%25A7%25A3%25E8%25AA%25AC%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:EMP%2520Tech%2520Blog%2Cx_220%2Cy_160/g_south_west%2Cl_text:notosansjp-medium.otf_34:ssnay%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FhYTMzODRhNGEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y0tXeWUzaDhOdk5LQWJ0Qk1XZnhhYXBobktNYXY0NGpqY1c1NmM9czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/hyperdb/articles/c24a804ac30e4f",
+          "author": "はいぱぁ",
+          "description": "設問ページ\n\n🔗ABC-320 C - Slot Strategy 2 (Easy)\n\n\n\n 提出結果\ndef getInt():\n    return int(input())\n\n\ndef getStringRow(N):\n    return [list(input()) for _ in range(N)]\n\n\ndef pick(a, n, m):\n    return a[n % m]\n\n\ndef main():\n    m = getInt()\n    s = getStringRow(3)\n\n    r = []\n    for x in range(m):\n      ...",
+          "link": "https://zenn.dev/hyperdb/articles/c24a804ac30e4f",
+          "publishedOn": "2023-10-10T04:56:39.000Z",
+          "wordCount": 608,
+          "title": "［AtCoder］ABC-320｜C - Slot Strategy 2 (Easy)",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--JLTitnhg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-320%25EF%25BD%259CC%2520-%2520Slot%2520Strategy%25202%2520%2528Easy%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--JLTitnhg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-320%25EF%25BD%259CC%2520-%2520Slot%2520Strategy%25202%2520%2528Easy%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
           "id": "https://zenn.dev/karaage0703/articles/9e58dec9eeaa86",
           "author": "karaage0703",
           "description": "Notion API Python SDK\nとりあえず試したのでメモです。\n以下公式が詳しいです。\nhttps://github.com/ramnes/notion-sdk-py\n\n Notion側\n以下でインテグレーションを作成します。\nhttps://www.notion.so/my-integrations\n以下の通りでOKです。\n\nインテグレーションを作成すると、トークンを取得できます。取得したら、環境変数に設定しておきましょう。\n$ export NOTION_TOKEN=\"NOTION_INTEGRATION_TOKEN\"\n制御したいページの右上の…をクリックして「+コネ...",
@@ -3080,141 +3140,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--emXqX80l--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520%25E3%2581%25A7%2520Tellus%2520%25E3%2581%25AE%25E8%25A1%259B%25E6%2598%259F%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E6%25A4%259C%25E7%25B4%25A2%25E3%2583%25BB%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Takahiro%2520Miyoshi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FGZFp1Y29saS1PUm5hclV5ZUljZW45MjZKTGdzalJ5SEtyY3JVc21oTmtWSUNZPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/riontajima/articles/0aab45b7c99c00",
-          "author": "田島利恩",
-          "description": "はじめに\nはじめまして。新卒エンジニアです。\nPythonでAPIを作る経験をしてみたい、そう感じ今回記事を書かせていただきました。\n\n REST API\nAPIを作成するにあたって、REST APIについて学習しました。\nhttps://tech.012grp.co.jp/entry/rest_api_basics\n上記のサイトは、一つ一つかみ砕いて説明がしてあり、とても分かりやすかったです。\nサイトの内容を簡単にまとめると\n\nRESTは「RESTの4原則に沿ったシンプルな設計思想」のことで、\n　　①統一インターフェース\n　　②アドレス可能性\n　　③接続性\n　　④ステートレス性\n　...",
-          "link": "https://zenn.dev/riontajima/articles/0aab45b7c99c00",
-          "publishedOn": "2023-09-11T12:31:25.000Z",
-          "wordCount": 1271,
-          "title": "PythonでWebAPI作ってみた",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--A8QKkrPy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7WebAPI%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%2594%25B0%25E5%25B3%25B6%25E5%2588%25A9%25E6%2581%25A9%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WUgzdHJsdUR0TnhqRHFWNHF1ZzBXYXRPZ0EwWHh3VUxCZUtIOFk9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--A8QKkrPy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7WebAPI%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%2594%25B0%25E5%25B3%25B6%25E5%2588%25A9%25E6%2581%25A9%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WUgzdHJsdUR0TnhqRHFWNHF1ZzBXYXRPZ0EwWHh3VUxCZUtIOFk9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/sikkim/articles/bc86fbcac3a9fd",
-          "author": "TAKAHASHI Taro",
-          "description": "!\n注意：この記事はかなり長いです。\n\n\n はじめに\n数か月ほど前、住所の正規化が話題になりました。こちらの記事が特に有名ですね。\nhttps://note.com/inuro/n/n7ec7cf15cf9c\n関連して、こちらの記事も話題になりました。\nhttps://yoshinorinie.hatenablog.com/entry/2023/06/09/091804\n当時はほかにも色々な人が日本のヤバい住所の例をあげてくれて、とても楽しかったです。\n実は弊社でもAddressianという住所正規化サービスを提供しています。初めて目にする変わった住所を見かけたら、とりあえず自社のAPI...",
-          "link": "https://zenn.dev/sikkim/articles/bc86fbcac3a9fd",
-          "publishedOn": "2023-09-11T08:04:36.000Z",
-          "wordCount": 3044,
-          "title": "住所正規化のデモ機能を作ったので、日本のヤバい住所を入力してみた",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--uqOZJ-Ud--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BD%258F%25E6%2589%2580%25E6%25AD%25A3%25E8%25A6%258F%25E5%258C%2596%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25A2%25E6%25A9%259F%25E8%2583%25BD%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25AE%25E3%2581%25A7%25E3%2580%2581%25E6%2597%25A5%25E6%259C%25AC%25E3%2581%25AE%25E3%2583%25A4%25E3%2583%2590%25E3%2581%2584%25E4%25BD%258F%25E6%2589%2580%25E3%2582%2592%25E5%2585%25A5%25E5%258A%259B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:TAKAHASHI%2520Taro%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRhMWVmZDc1ODkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--uqOZJ-Ud--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BD%258F%25E6%2589%2580%25E6%25AD%25A3%25E8%25A6%258F%25E5%258C%2596%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25A2%25E6%25A9%259F%25E8%2583%25BD%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25AE%25E3%2581%25A7%25E3%2580%2581%25E6%2597%25A5%25E6%259C%25AC%25E3%2581%25AE%25E3%2583%25A4%25E3%2583%2590%25E3%2581%2584%25E4%25BD%258F%25E6%2589%2580%25E3%2582%2592%25E5%2585%25A5%25E5%258A%259B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:TAKAHASHI%2520Taro%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRhMWVmZDc1ODkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/hyperdb/articles/bfd92e1cea3b76",
-          "author": "はいぱぁ",
-          "description": "設問ページ\n\n🔗ABC-302 A - Attack\n\n\n\n 提出結果\ndef getIntMap():\n    return map(int, input().split())\n\n\ndef main():\n    a, b = getIntMap()\n\n    c = a // b\n\n    print(c if a % b == 0 else c + 1)\n\n\nif __name__ == \"__main__\":\n    main()",
-          "link": "https://zenn.dev/hyperdb/articles/bfd92e1cea3b76",
-          "publishedOn": "2023-09-11T05:26:01.000Z",
-          "wordCount": 261,
-          "title": "［AtCoder］ABC-302｜A - Attack",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--DSQiYS3l--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-302%25EF%25BD%259CA%2520-%2520Attack%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--DSQiYS3l--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-302%25EF%25BD%259CA%2520-%2520Attack%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/hyperdb/articles/af130ee6bf2127",
-          "author": "はいぱぁ",
-          "description": "設問ページ\n\n🔗ABC-302 B - Find snuke\n\n\n\n 提出結果\ndef getIntMap():\n    return map(int, input().split())\n\n\ndef getStringListRow(N):\n    return [list(input()) for _ in range(N)]\n\n\ndef chk(l, s):\n    p = [[0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0], [-1, -1]]\n\n    for i in range(len(p)):\n    ...",
-          "link": "https://zenn.dev/hyperdb/articles/af130ee6bf2127",
-          "publishedOn": "2023-09-11T05:26:00.000Z",
-          "wordCount": 944,
-          "title": "［AtCoder］ABC-302｜B - Find snuke",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--gPZGHOv9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-302%25EF%25BD%259CB%2520-%2520Find%2520snuke%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--gPZGHOv9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-302%25EF%25BD%259CB%2520-%2520Find%2520snuke%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/nii/articles/lower-upper-comparison",
-          "author": "nii",
-          "description": "概要\nPythonの文字列で、\"Python\"のような文字列を\"python”に変換したいことがあります。\n本記事では、大文字や小文字を判定する方法や変換する方法をまとめました。\nまた、大量の文字列に対して変換する際の速度比較も実施しました。\n\n 変換方法\n\n 大文字から小文字に変換\nstr型のlower()を使用します。\nhttps://docs.python.org/ja/3/library/stdtypes.html#str.lower\nupper_str = \"THIS IS UPPERCASE\"\nto_lower_str = upper_str.lower()\n\nprint...",
-          "link": "https://zenn.dev/nii/articles/lower-upper-comparison",
-          "publishedOn": "2023-09-11T04:56:30.000Z",
-          "wordCount": 1026,
-          "title": "Pythonで大文字と小文字の変換と速度比較",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--fEAJG_nk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E5%25A4%25A7%25E6%2596%2587%25E5%25AD%2597%25E3%2581%25A8%25E5%25B0%258F%25E6%2596%2587%25E5%25AD%2597%25E3%2581%25AE%25E5%25A4%2589%25E6%258F%259B%25E3%2581%25A8%25E9%2580%259F%25E5%25BA%25A6%25E6%25AF%2594%25E8%25BC%2583%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nii%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E5M2FmMTYyNTEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--fEAJG_nk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E5%25A4%25A7%25E6%2596%2587%25E5%25AD%2597%25E3%2581%25A8%25E5%25B0%258F%25E6%2596%2587%25E5%25AD%2597%25E3%2581%25AE%25E5%25A4%2589%25E6%258F%259B%25E3%2581%25A8%25E9%2580%259F%25E5%25BA%25A6%25E6%25AF%2594%25E8%25BC%2583%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nii%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E5M2FmMTYyNTEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/taishii/articles/04964001eb644d",
-          "author": "taishi-i",
-          "description": "Huggingface Datasets で利用可能なテキスト分類用データセットを公開しました🤗\nこのデータセットは、GitHub リポジトリに対して日本語の自然言語処理（NLP）に関連するか否かのラベルが付与されています。\nさらにベースライン用のモデルも公開しましたので、大規模言語モデルの性能評価の比較に活用いただければと考えています。\nこの記事では、データセットの詳細、利用方法やベースラインモデルのエラー分析の結果を紹介します。\nhttps://huggingface.co/datasets/taishi-i/awesome-japanese-nlp-classification-d...",
-          "link": "https://zenn.dev/taishii/articles/04964001eb644d",
-          "publishedOn": "2023-09-11T03:31:34.000Z",
-          "wordCount": 1407,
-          "title": "日本語 NLP リポジトリ分類データセットを公開しました！",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--P-HEvzW0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%2520NLP%2520%25E3%2583%25AA%25E3%2583%259D%25E3%2582%25B8%25E3%2583%2588%25E3%2583%25AA%25E5%2588%2586%25E9%25A1%259E%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%25BB%25E3%2583%2583%25E3%2583%2588%25E3%2582%2592%25E5%2585%25AC%25E9%2596%258B%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:taishi-i%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E4OGM2ZjQwMWMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--P-HEvzW0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%2520NLP%2520%25E3%2583%25AA%25E3%2583%259D%25E3%2582%25B8%25E3%2583%2588%25E3%2583%25AA%25E5%2588%2586%25E9%25A1%259E%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%25BB%25E3%2583%2583%25E3%2583%2588%25E3%2582%2592%25E5%2585%25AC%25E9%2596%258B%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:taishi-i%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E4OGM2ZjQwMWMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/nakurei/articles/understand-python-enumerate",
-          "author": "NakuRei",
-          "description": "これはなに\nEffective Python 第2版の項目7「rangeではなくenumerateを使おう」において、下記の記述があった。\n\nenumerateは、遅延評価ジェネレータでイテレータをラップします。\nenumerateは、ループのインデックスとイテレータの次の値の対をyieldします。\n\nこの記述の意味がさっぱりわからなかったので調べた。\n\n そもそもenumerateとは\nenumerateはPythonの組み込み関数のひとつである。\nenumerate(iterable, start=0)\n\n 引数\n\n\n\n引数\n名前\n渡すもの\n\n\n\n\n第1引数\niterable\nシ...",
-          "link": "https://zenn.dev/nakurei/articles/understand-python-enumerate",
-          "publishedOn": "2023-09-10T23:37:14.000Z",
-          "wordCount": 1064,
-          "title": "Pythonのenumerateの挙動を理解する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--Xicu7Ys_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AEenumerate%25E3%2581%25AE%25E6%258C%2599%25E5%258B%2595%25E3%2582%2592%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:NakuRei%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2ZjNThmYWI0YTguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Xicu7Ys_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AEenumerate%25E3%2581%25AE%25E6%258C%2599%25E5%258B%2595%25E3%2582%2592%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:NakuRei%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2ZjNThmYWI0YTguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/takiser/articles/c64fc753129791",
-          "author": "takiser",
-          "description": "import pandas as pd\nimport matplotlib.pyplot as plt\nfrom pathlib import Path\nfrom mpl_toolkits.mplot3d import Axes3D\n\n\nclass SingleLotDataModel:\n    def __init__(self, csvPath):\n        self.timeFromStart = \"TimeFromStart\"\n        self.timeFromPlane = \"TimeFromPlane\"\n        self.timeFromLayer = ...",
-          "link": "https://zenn.dev/takiser/articles/c64fc753129791",
-          "publishedOn": "2023-09-10T14:08:08.000Z",
-          "wordCount": 2264,
-          "title": "plt3d",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--5KYgSmMR--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:plt3d%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takiser%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dacXJINlVvNlVkY28zd3FMamhhZnQwd1JhWHNrT3ZLNjlzSVVwPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--5KYgSmMR--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:plt3d%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takiser%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dacXJINlVvNlVkY28zd3FMamhhZnQwd1JhWHNrT3ZLNjlzSVVwPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
-        },
-        {
-          "id": "https://zenn.dev/tunaproducts/articles/a04e86c050f50a",
-          "author": "tunaProductsTech(つなぷろテック)",
-          "description": "!\n文系向けに書かれたAIの本を読んでみたので、レビューを書きました。内容のネタバレはしないように配慮いたします。\n\n\n 読んだ本\n\nタイトル：文系AI人材になる\n著者：野口竜司\n\nhttps://www.amazon.co.jp/文系ＡＩ人材になる―統計・プログラム知識は不要-野口-竜司-ebook/dp/B0828D1TYR/ref=sr_1_1?adgrpid=134580030913&gclid=CjwKCAiA3KefBhByEiwAi2LDHBAsdVGfPZ_NywYgCVA4ENmaOVZwTkqyaE6S4I4u27cFWBUnxS2yGxoCqLwQAvD_...",
-          "link": "https://zenn.dev/tunaproducts/articles/a04e86c050f50a",
-          "publishedOn": "2023-09-10T13:55:19.000Z",
-          "wordCount": 211,
-          "title": "【AI】AIの本を読んだのでレビュー(その2:文系向けのAI関連本)",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--mp3i53Jl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590AI%25E3%2580%2591AI%25E3%2581%25AE%25E6%259C%25AC%25E3%2582%2592%25E8%25AA%25AD%25E3%2582%2593%25E3%2581%25A0%25E3%2581%25AE%25E3%2581%25A7%25E3%2583%25AC%25E3%2583%2593%25E3%2583%25A5%25E3%2583%25BC%2528%25E3%2581%259D%25E3%2581%25AE2%253A%25E6%2596%2587%25E7%25B3%25BB%25E5%2590%2591%25E3%2581%2591%25E3%2581%25AEAI%25E9%2596%25A2%25E9%2580%25A3%25E6%259C%25AC%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tunaProductsTec...%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ5NzI0MzQ2NjMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--mp3i53Jl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590AI%25E3%2580%2591AI%25E3%2581%25AE%25E6%259C%25AC%25E3%2582%2592%25E8%25AA%25AD%25E3%2582%2593%25E3%2581%25A0%25E3%2581%25AE%25E3%2581%25A7%25E3%2583%25AC%25E3%2583%2593%25E3%2583%25A5%25E3%2583%25BC%2528%25E3%2581%259D%25E3%2581%25AE2%253A%25E6%2596%2587%25E7%25B3%25BB%25E5%2590%2591%25E3%2581%2591%25E3%2581%25AEAI%25E9%2596%25A2%25E9%2580%25A3%25E6%259C%25AC%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tunaProductsTec...%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ5NzI0MzQ2NjMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png"
         }
       ]
     }
