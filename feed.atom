@@ -2,10 +2,69 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-10-13T01:15:49.841Z</updated>
+    <updated>2023-10-14T01:11:53.541Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[VSCodeのisort拡張機能が繰り返しクラッシュする場合の暫定的な解決策]]></title>
+        <id>https://zenn.dev/a_adachi/articles/01585a26e7dcdd</id>
+        <link href="https://zenn.dev/a_adachi/articles/01585a26e7dcdd"/>
+        <updated>2023-10-13T08:38:28.000Z</updated>
+        <summary type="html"><![CDATA[isort拡張機能が繰り返しクラッシュする
+VSCodeを立ち上げると以下のようなエラーが表示されるとの相談を受けました。
+The isort server crashed 5 times in the last 3 minutes. The server will not be restarted.
+
+ 暫定的な解決策
+isortのバグのようですが、詳細はわかりませんでした。相談者はimport文のフォーマットは特に必要ないとのことだったので、とりあえず以下リンク先の通り機能を無効化することでエラーが出なくなりました。
+https://github.com/microsoft/vs...]]></summary>
+        <author>
+            <name>a-adachi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[何度も調べてしまうPythonコード]]></title>
+        <id>https://zenn.dev/kt_n/articles/4e848bb1e5dbd6</id>
+        <link href="https://zenn.dev/kt_n/articles/4e848bb1e5dbd6"/>
+        <updated>2023-10-13T04:09:33.000Z</updated>
+        <summary type="html"><![CDATA[概要
+簡単なんだけど、何回でも調べてしまうPythonコードをまとめておく。
+随時更新していきたい。
+
+ CSV読み込み
+import csv
+
+with open(csv_filepath, 'rt') as f:
+    # ヘッダーを飛ばす
+    header = next(csv.reader(f))
+    reader = csv.reader(f)
+    data = [row for row in reader]
+
+ CSV書き込み
+import csv
+
+with open(csv_filepath, 'wt', newline="", encoding='ut...]]></summary>
+        <author>
+            <name>kt_n</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Function calling に Pydantic を使ってみよう]]></title>
+        <id>https://zenn.dev/os1ma/articles/8958aba961b665</id>
+        <link href="https://zenn.dev/os1ma/articles/8958aba961b665"/>
+        <updated>2023-10-13T03:42:45.000Z</updated>
+        <summary type="html"><![CDATA[OpenAI の文章生成 API（Chat Completions API）には、2023 年 6 月に「Function calling」という機能が追加されました。
+この Function calling ですが、そのまま使おうとすると少し記述の手間が大きいと感じないでしょうか？
+この記事では、Function calling をちょっと楽に使うため、Pydantic を使う方法を紹介します。
+
+ Function calling とは
+まず、Function calling について簡単に説明します。
+Function calling は例えば次のように実装します。
+OUTPUT_...]]></summary>
+        <author>
+            <name>oshima_123</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【個人開発 #1-3】レコメンドシステムを作ってみた vol.3　〜推薦アルゴリズム「協調フィルタリング」〜]]></title>
         <id>https://zenn.dev/waka07/articles/development-diary_1-3</id>
@@ -4482,227 +4541,6 @@ pip 20.3.4
 sudo apt install -y llvm libatlas3-base...]]></summary>
         <author>
             <name>bathtimefish</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Qiskit で遊んでみる (20) — Qiskit Optimization での QAOA]]></title>
-        <id>https://zenn.dev/derwind/articles/dwd-qiskit20</id>
-        <link href="https://zenn.dev/derwind/articles/dwd-qiskit20"/>
-        <updated>2023-09-14T12:01:49.000Z</updated>
-        <summary type="html"><![CDATA[目的
-この記事は大分昔に書いた記事 がベースだったりする[1]。
-この時はちょっと Qiskit の古い API を使ったのだが、今回はそれも含めて最新の API にまでアップデートしたい。なお、実用性は狙いではない。
-量子コンピューティングの基礎を手を使って学ぶ上での良書に「IBM Quantumで学ぶ量子コンピュータ」があるが、同書 pp.203-210 に掲載された QAOA のコードは新しい Qiskit では動かない。Qiskit Aqua という Deprecated になってしまったパッケージを使っているからである。このコードをQiskit 0.44.0 以降で動くとこ...]]></summary>
-        <author>
-            <name>derwind</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【2023年9月】0円で読めるPythonの技術書5選]]></title>
-        <id>https://zenn.dev/raio/articles/bcdacfbf43bcc8</id>
-        <link href="https://zenn.dev/raio/articles/bcdacfbf43bcc8"/>
-        <updated>2023-09-14T11:52:30.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-みなさん、こんにちは。高校生エンジニアのRaioです！
-平日は公立高校に通いながら、放課後や休日はIT企業のエンジニアとして働いています🧑🏻‍💻
-↓筆者について↓
-https://qiita.com/Raio14f/items/ef0fb67685b36298bcb0
-今回の記事では、0円で読めるPythonの技術書5選を紹介します！
-無料で読む方法も紹介してるので、是非最後まで見て頂けると幸いです👍🏻
-
- 技術書を無料で読む方法
-KindleUnlimitedを使うことで、沢山の技術書を無料で何冊でも読むことが可能です🙌
-
-200万冊以上の書籍が何冊でも読み放題
-月額98...]]></summary>
-        <author>
-            <name>Raio｜高校生エンジニア</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[matplotlibの fig, axで凡例がはみ出る時の対処法]]></title>
-        <id>https://zenn.dev/apo_zenn/articles/1c2a9c0a92a6c6</id>
-        <link href="https://zenn.dev/apo_zenn/articles/1c2a9c0a92a6c6"/>
-        <updated>2023-09-14T08:58:58.000Z</updated>
-        <summary type="html"><![CDATA[このように凡例がはみ出してしまう場合
-
-以下を最後に追加する。
-fig.tight_layout() 
-
- 修正後
-
-無事、凡例がFigure内に収められる
-
- plot.を使っている人 (pyplot使用者の場合)
-plt.tihgt_layout()
-でいけます。
-
- 例
-import numpy as np
-import matplotlib.pyplot as plt
-
-x = np.arange(0,10,0.1)
-y = np.sin(x)
-
-# 表示
-fig, ax = plt.subplots(1,1,figsize=(6,4))
-ax.set_title("SIN", ...]]></summary>
-        <author>
-            <name>apo_zenn</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pyenvとvenvを利用したPython環境の構築（Windows、macOS対応）]]></title>
-        <id>https://zenn.dev/ryotajin/articles/19-build-python-by-pyenv-venv</id>
-        <link href="https://zenn.dev/ryotajin/articles/19-build-python-by-pyenv-venv"/>
-        <updated>2023-09-14T07:23:56.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Pythonを始める上で最初につまずくのは実行環境の構築だと思います。私もずいぶん苦労した思い出があります。
-さらに頭を悩ませるのがバージョン管理です。ライブラリのバージョンはもちろん、Python自体のバージョンも管理の必要が出てきます。自分でライブラリを作るようになるとこの必要性を強く感じます。
-そこで今回はpyenvとvenvを併用して、Pythonとライブラリのバージョンを管理しつつ環境を構築する方法について解説します。
-本記事の想定はPythonはある程度使ったことがあって、バージョン管理をきちんとやりたくなってきた人です。また、GitHubの操作がたびたび出てく...]]></summary>
-        <author>
-            <name>riu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-305｜A - Water Station]]></title>
-        <id>https://zenn.dev/hyperdb/articles/f9734172210f8e</id>
-        <link href="https://zenn.dev/hyperdb/articles/f9734172210f8e"/>
-        <updated>2023-09-14T04:40:39.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-305 A - Water Station
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def main():
-    n = getInt()
-
-    p = n // 5
-
-    print(p * 5 if n % 5 < 3 else (p + 1) * 5)
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-305｜B - ABCDEFG]]></title>
-        <id>https://zenn.dev/hyperdb/articles/d1e5c40c4ea5ac</id>
-        <link href="https://zenn.dev/hyperdb/articles/d1e5c40c4ea5ac"/>
-        <updated>2023-09-14T04:40:38.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-305 B - ABCDEFG
-
-
-
- 提出結果
-def getStringMap():
-    return input().split()
-
-
-def main():
-    p, q = getStringMap()
-    d = [3, 1, 4, 1, 5, 9]
-    s = ord(p) - ord('A')
-    e = ord(q) - ord('A')
-
-    print(abs(sum(d[:s]) - sum(d[:e])))
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CAEのためのpython5(6面視画像をエクセルに貼り付け)]]></title>
-        <id>https://zenn.dev/cae_taka/articles/421352fa73d4c7</id>
-        <link href="https://zenn.dev/cae_taka/articles/421352fa73d4c7"/>
-        <updated>2023-09-14T02:51:54.000Z</updated>
-        <summary type="html"><![CDATA[動機
-CAEの結果（形状やコンター図など）から資料を作成する機会6面視の画像を作成することが、
-多くあると思います。（僕は多かったです。）
-この作業、やってることは単純ですが案外やってみるとめんどくさいです。
-こういう作業は、自動化ですね。
-ちょっと長くなりそうなので2回に分けて書いていきます。
-
- 今回やること
-1回目では、6面視の画像を作成しました。今回は作成した画像を新規作成したエクセルに貼り付けていきます。
-
- プログラムの説明
-
-まずは、エクセルを操作するために。openpyxlとPillowをインストールします。
-
-pip install openpyxl
-pip ins...]]></summary>
-        <author>
-            <name>Taka</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LLMのファインチューニングで事実の学習ができないのは本当か？ちょっと実験してみた]]></title>
-        <id>https://zenn.dev/ohtaman/articles/llm_finetune_lora</id>
-        <link href="https://zenn.dev/ohtaman/articles/llm_finetune_lora"/>
-        <updated>2023-09-13T21:19:25.000Z</updated>
-        <summary type="html"><![CDATA[三行要約
-
-LLM のファインチューニングでは事実の学習ができないという話があったので、事実の学習の例として、シェイクスピアのRomeoをBobに置き換える実験を行った
-実験では、訓練対象とする層による結果の違いを確認した。アテンション層のみを訓練した場合は、Bobへの置き換えはできなかった。一方、全結合層を含めて訓練した場合は、学習率を調整するとBobへの置き換えができた
-ファインチューニングが事実の学習に向いているかはさておき、工夫次第でファインチューニングも事実の学習に利用できる可能性はある
-
-
- 背景
-先月 ChatGPT(GPT-3.5 Turbo) のファインチューニング...]]></summary>
-        <author>
-            <name>ohtaman</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[poetryでpythonのpackageを管理する]]></title>
-        <id>https://zenn.dev/knao124/articles/230913-poetry</id>
-        <link href="https://zenn.dev/knao124/articles/230913-poetry"/>
-        <updated>2023-09-13T15:02:45.000Z</updated>
-        <summary type="html"><![CDATA[poetryとは
-
-venv + .lockでバージョン統一できるpip
-高速（遅くない）
-https://python-poetry.org/docs/
-
-
- install
-以下参考
-
-https://python-poetry.org/docs/
-
-
- 使い方
-projectでpoetryを使い始める
-
-$ poetry init
-
-なにかpackageをinstallしたいとき
-
-$ poetry add <package_name>
-
-dev環境のみでいいとき
-
-$ poetry add --dev <package_name>
-
-.lockファイル...]]></summary>
-        <author>
-            <name>knao124</name>
         </author>
     </entry>
 </feed>
