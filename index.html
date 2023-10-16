@@ -22,6 +22,249 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-15 datetime="2023-10-15T13:23:27.000Z">2023-10-15</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-15 datetime="2023-10-15T13:23:27.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyga2c/articles/pd_datetime_period"
+                        open
+                      >
+                        <summary class="article-expander__title">PythonのDataFrameで日付を取り扱う</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyga2c/articles/pd_datetime_period">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--GPMf4W-8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AEDataFrame%25E3%2581%25A7%25E6%2597%25A5%25E4%25BB%2598%25E3%2582%2592%25E5%258F%2596%25E3%2582%258A%25E6%2589%25B1%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hyga2c%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdhZGVkNzFjOTguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>pandasで時系列データを取り扱った際の気付き諸々をまとめていく。（随時更新予定）
+
+ 1. pandas DataFrameで日付データをDatetime indexとして取り扱う
+日付ベースのデータをもとに集計する場合は、日付データをDatetime indexとして取り扱った方が何かと便利と思われる。
+
+ 1.1. 利点 Group_byによる集計が簡単
+たとえば月次/四半期での集計は pd.Grouper(freq&#x3D;&#x27;param&#x27;) を用いて実施できる。
+import pandas as pd
+import numpy as np
+from datetime import da...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hk_ilohas/articles/normal-dist-transform"
+                        open
+                      >
+                        <summary class="article-expander__title">一様乱数から正規乱数を生成する方法【Python】</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hk_ilohas/articles/normal-dist-transform">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--CUNuEQX---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25B8%2580%25E6%25A7%2598%25E4%25B9%25B1%25E6%2595%25B0%25E3%2581%258B%25E3%2582%2589%25E6%25AD%25A3%25E8%25A6%258F%25E4%25B9%25B1%25E6%2595%25B0%25E3%2582%2592%25E7%2594%259F%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%25E3%2580%2590Python%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:HK_ilohas%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk2NjcxM2U1NTEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+この記事では、[0,1) の一様乱数から標準正規分布 \mathcal{N}(0,1) に従う正規乱数を生成する方法について説明し、Python で簡易的に実装します。また、正規乱数から多次元正規乱数を生成する方法についても取り扱います。
+今回の元ネタは、参考文献でも挙げている伏見正則『乱数』です。これは日本語で書かれた数少ない乱数についての入門書で、長い間絶版になっていました。ところが、なんと先日ちくま学芸文庫で復刊したことでようやく手に入れることができました！　この本では、メルセンヌ・ツイスター以前の内容が取り扱われていて、悪戦苦闘している歴史がよくわかりました。
+
+ ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;16
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/enterrocken/articles/e6ae6ddcc121d8"
+                        open
+                      >
+                        <summary class="article-expander__title">【X(Twitter) Bot】Ｘの運用がめんどくさい全ての人へ</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/enterrocken/articles/e6ae6ddcc121d8">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--lWzc5JZN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590X%2528Twitter%2529%2520Bot%25E3%2580%2591%25EF%25BC%25B8%25E3%2581%25AE%25E9%2581%258B%25E7%2594%25A8%25E3%2581%258C%25E3%2582%2581%25E3%2582%2593%25E3%2581%25A9%25E3%2581%258F%25E3%2581%2595%25E3%2581%2584%25E5%2585%25A8%25E3%2581%25A6%25E3%2581%25AE%25E4%25BA%25BA%25E3%2581%25B8%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuki.hirano%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YXh1MGVFSGV5anMwelFidEdMZE9QZTRNTG1JNThCYlo4cTRTblNHdz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+初めまして。
+都内IT企業で、データアルゴリズムチームのエンジニアをしております、Noraです。
+今回は、X(旧Twitter）とOpenAI APIを活用して、Xへの自動投稿ボットを構築します。
+定期実行は、AWSのLambda + EventBridgeというシンプルなアーキテクチャで実現しています。
+「Xをはじめとした、SNS運用をしたいけど、毎日投稿するのはめんどくさいなー。。」という方全てにおすすめの記事となっております。！
+では、ぜひご覧ください！
+↓完成イメージ
+
+
+ アーキテクチャ
+
+
+ 実装手順
+
+Xに投稿するメソッドをPythonで実装（Zenn API...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/huraipan/articles/0e78b7fe024ab3"
+                        open
+                      >
+                        <summary class="article-expander__title">[Python] [Python] ランダムモジュール</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/huraipan/articles/0e78b7fe024ab3">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--kBSfAqnf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BPython%255D%2520%255BPython%255D%2520%25E3%2583%25A9%25E3%2583%25B3%25E3%2583%2580%25E3%2583%25A0%25E3%2583%25A2%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:huraipan%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZXY3eUhtRlk4RjNPZjM5M1MybVIyck9kaUh2QVJlRDFNX2p3SW5WXzV4UmRRPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>モジュールとは？
+モジュールはプログラムを構成するコンポーネントで、関連するデータと関数を 1 つにまとめたユニットを意味します。
+つまり実装したい機能を直接作成することなく、すでに作成されたファイルを取得することで、コードの可読性を高め、量を減らすことができます。
+randomモジュールを利用して調べてみます。
+
+
+
+ ランダムモジュール
+randomモジュールを利用するためには、次のようなコードを作成する必要があります。
+import random
+
+これでランダムモジュールを書くための準備が完了しました。
+
+
+
+ サイコロ転がし
+それではランダムモジュールを利用してサイコロ転が...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/karamawanu/articles/3347b89d8dd7ed"
+                        open
+                      >
+                        <summary class="article-expander__title">google custom search api</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/karamawanu/articles/3347b89d8dd7ed">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--joBnojC2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:google%2520custom%2520search%2520api%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:karamawanu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2laSzJJYTRGZWZqV2RySzJqdHFlWnBmaE5HZ3BHLWxid2NUX0NLWHF3PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>この数年来、グーグルの各種手続きが極端に煩雑化した。
+openai chatcompletion api と組み合わせるのに、gogole search API を使おうと思って調べてみた。
+google custom search api は手続きは判りづらいが使い方は簡単だった。
+
+ 事務手続き
+apiの登録だけでは使えず、”検索エンジン”の定義を指定する必要がある。
+アカウント作成、支払い設定等については割愛する。
+
+ APIの利用登録
+本件のためのgoogle cloudプロジェクトを作成する。
+作成済みのものを流用してもいいが、管理が煩雑かつ密結合なので、API専用のものを作成...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hayap/articles/c0bd2ece92cae7"
+                        open
+                      >
+                        <summary class="article-expander__title">Amazon BedrockをAWS Lambda上で呼び出してみた（API化）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hayap/articles/c0bd2ece92cae7">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--zYv8pxsS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Amazon%2520Bedrock%25E3%2582%2592AWS%2520Lambda%25E4%25B8%258A%25E3%2581%25A7%25E5%2591%25BC%25E3%2581%25B3%25E5%2587%25BA%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25EF%25BC%2588API%25E5%258C%2596%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:HayaP%2528kohei%2520hay...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzU2MWJjYTRlZDguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+こんにちは、はやぴー（@HayaP）です。
+前回の記事ではPythonスクリプトからAmazon Bedrockを利用してみましたが、今回はAWS LambdaからAmazon Bedrockを動かしてみたいと思います。
+
+ 前提
+前提として、Amazon BedrockでJurassic-2 Midが使用可能になっていることが必要です。
+実施手順は、過去の記事Amazon BedrockをPythonスクリプトから利用してみたにありますので、ご参照ください。
+
+ TL;DR (忙しい人用)
+
+Amazon BedrockのJurassic-2 MidモデルをAWS Lam...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hayap/articles/23be87f9ddeb0e"
+                        open
+                      >
+                        <summary class="article-expander__title">Amazon BedrockをPythonスクリプトから利用してみた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hayap/articles/23be87f9ddeb0e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--gI7NLQva--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Amazon%2520Bedrock%25E3%2582%2592Python%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2597%25E3%2583%2588%25E3%2581%258B%25E3%2582%2589%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:HayaP%2528kohei%2520hay...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzU2MWJjYTRlZDguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+こんにちは、はやぴー（@HayaP）です。
+ついに、Amazon BedrockがGAされましたね！
+東京リージョンでも、一部のモデルが使用可能になりました。
+今回はPythonスクリプトでAmazon Bedrockを利用してみます。
+理由として、Lambdaから実行するケースや、Webアプリケーションに組み込むケースが多そうだなぁと感じているからです。（Lambdaで実行するハンズオンは別で記事を書く予定です）
+
+ 対象読者
+
+Amazon Bedrockに興味がある方
+Pythonスクリプトで、Amazon Bedrockを利用したい方
+AWS Lambdaでの実装を...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-14 datetime="2023-10-14T14:24:58.000Z">2023-10-14</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-14 datetime="2023-10-14T14:24:58.000Z"></time>
           </button>
@@ -6903,293 +7146,10 @@ row_vecto...</span>
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-16 datetime="2023-09-16T12:07:55.000Z">2023-09-16</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-16 datetime="2023-09-16T12:07:55.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yuto_mo/articles/cb7ce477d70153"
-                        open
-                      >
-                        <summary class="article-expander__title">numpyのスライスについて解説</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yuto_mo/articles/cb7ce477d70153">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--GHOLCBIk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:numpy%25E3%2581%25AE%25E3%2582%25B9%25E3%2583%25A9%25E3%2582%25A4%25E3%2582%25B9%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E8%25A7%25A3%25E8%25AA%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:pomu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y1VrTExkd1N5ZlVzTndSLW1vRzNmdmRBZXZCMmlmdXBwdjRkbEk9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>今回はnumpyのスライスについて解説します。
-
- スライスとは？
-スライスは
-
-配列データなどから条件に一致する部分を抜き出す
-
-
-操作です。
-PythonのリストやNumPyの配列に対して、[start:stop:step] といった形でスライスを指定することができます。
-コードで使い方を見ていきましょう。
-
- コード
-numpyのスライスは多次元データにも適用できます。まずは1次元から見ていきます。
-・1次元配列のスライス
-import numpy as np
-
-# 1次元配列
-arr1 &#x3D; np.array([0, 1, 2, 3, 4, 5])
-
-# インデックス1から3までの...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/raio/articles/f22d767531fbc0"
-                        open
-                      >
-                        <summary class="article-expander__title">エンジニアなのにKindleUnlimited入ってないの？</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/raio/articles/f22d767531fbc0">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--t_OPxFFp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2581%25AA%25E3%2581%25AE%25E3%2581%25ABKindleUnlimited%25E5%2585%25A5%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25AA%25E3%2581%2584%25E3%2581%25AE%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Raio%25EF%25BD%259C%25E9%25AB%2598%25E6%25A0%25A1%25E7%2594%259F%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdjOGJiMmU3N2YuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>皆さん、こんにちは。高校生エンジニアのRaioです🙌
-公立高校に通いながら、放課後や休日はIT企業のエンジニアとして働いています。
-https://zenn.dev/raio/articles/2478a66537c685
-今回の記事では、日々進化する技術を追うエンジニアがKidnleUnlimitedに入るメリットを３つ解説しようと思います。
-ご興味あれば、是非最後までご覧ください👀
-↓KindleUnlimitedに入会したい方は画像をクリック↓
-https://amzn.to/3OJt26v
-
- 1ヶ月無料で技術書が読み放題
-KindleUnlimitedを使えば、1ヶ月間無料で沢...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/sumeragi_0258/articles/e20bed20533612"
-                        open
-                      >
-                        <summary class="article-expander__title">メタ強化学習を搭載したChatbotの実装方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/sumeragi_0258/articles/e20bed20533612">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--eWqlAduL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25A1%25E3%2582%25BF%25E5%25BC%25B7%25E5%258C%2596%25E5%25AD%25A6%25E7%25BF%2592%25E3%2582%2592%25E6%2590%25AD%25E8%25BC%2589%25E3%2581%2597%25E3%2581%259FChatbot%25E3%2581%25AE%25E5%25AE%259F%25E8%25A3%2585%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2599%25E3%2582%2581%25E3%2582%2589%25E3%2581%258E%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSm1nN3RWYkRZREpuTlI5TlRiT3dDTUg3RkZuWGZzTXN4UWlyOE1Sd2NIc3VJPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>GPT4を利用して、プロンプトエンジニアリングを中心としたなんちゃって実装をしました。
-なお、記事の執筆は一部ChatGPTに手伝ってもらっています。
-
- メタ強化学習とは？
-メタ強化学習（Meta-Reinforcement Learning、Meta-RL）は、AIモデルが新しいタスクや環境に対して迅速に適応できるように学習する技術です。伝統的な強化学習アプローチでは、モデルは特定のタスクに特化して学習しますが、新しいタスクに遭遇したとき、ゼロから学習しなければなりません。これに対して、メタ強化学習ではモデルは複数のタスクにわたって「学習する方法を学習」します。
-このアプローチの利点...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/bathtimefish/articles/4988990670ee7d"
-                        open
-                      >
-                        <summary class="article-expander__title">Open InterpreterをローカルモデルでWSL上で使ってみる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/bathtimefish/articles/4988990670ee7d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--E0wjzKCN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Open%2520Interpreter%25E3%2582%2592%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25A7WSL%25E4%25B8%258A%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:bathtimefish%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzhiNjQyNThkN2IuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-やばいと評判のOpen Interpreter。GPT4で使うのが鉄板だと思いますがローカルPCにモデルをロードして使うこともできます。
-ここではWindows11のWSL上にOpen InterpreterをインストールしてローカルのCode Llamaを使う方法を紹介します。
-試した環境は以下のとおりです
-
-Core i9-13900
-64GB RAM
-GeForce RTX 4090
-Windows 11 Pro
-WSL (Ubuntu 22.04 LTS)
-
-
- セットアップする
-こちらのようにWSL上でCUDAが利用できるようになっているのが前提です。
-Open ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kazuhito/articles/800e1176270c43"
-                        open
-                      >
-                        <summary class="article-expander__title">【Python】NumPyのmemmap()を使って、OpenCVの画像を他プロセスに受け渡すメモ</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kazuhito/articles/800e1176270c43">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--uteczS24--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591NumPy%25E3%2581%25AEmemmap%2528%2529%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2580%2581OpenCV%25E3%2581%25AE%25E7%2594%25BB%25E5%2583%258F%25E3%2582%2592%25E4%25BB%2596%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25BB%25E3%2582%25B9%25E3%2581%25AB%25E5%258F%2597%25E3%2581%2591%25E6%25B8%25A1%25E3%2581%2599%25E3%2583%25A1%25E3%2583%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kazuhito%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dZUW5XQmozQjhFcGlwOVEtSzhhelItcEV1azFOTXdteGhVeUowZHc9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>NumPyのmemmap()を使って、OpenCVの画像を他プロセスに受け渡すメモです🦔
-以下のようなイメージ↓
-
-書き込み側のスクリプトからメモリマップドファイルに書き込んで、別スクリプトから読み込む↓
-
-画像の受け渡しデータはメモリマップドファイルに書き込まれているので、書き込み側のスクリプトを終了しても、最後に書き込まれた画像が参照できる↓
-
-再度、書き込み側のスクリプトを実行すればメモリマップドファイルに書き込みが再開するので、読み取り側の表示も更新が再開する↓
-
-それぞれのスクリプトは以下です。
-メモリマップドファイル書き込み側↓
-
-cv-np-memmap-writer.py...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yuto_mo/articles/9fcf1089c0aade"
-                        open
-                      >
-                        <summary class="article-expander__title">selfについて解説</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yuto_mo/articles/9fcf1089c0aade">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--FjW18KBj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:self%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E8%25A7%25A3%25E8%25AA%25AC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:pomu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y1VrTExkd1N5ZlVzTndSLW1vRzNmdmRBZXZCMmlmdXBwdjRkbEk9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>今回はpythonのクラスで使用するselfについて解説します。
-
- selfとは
-selfとは
-
-インスタンス自体を指す特殊な変数
-
-です。
-
- インスタンスとは？
-インスタンスはクラスから生成されたオブジェクトのことを指します
-これはコードで見た方が理解しやすいと思います。
-class Car:
-    # クラス内の関数をメソッドと呼ぶ
-    # コンストラクタ（初期化メソッド）
-    def __init__(self, color, size):
-        self.color &#x3D; color  # インスタンス変数colorを設定
-        self.size...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/porphyrio/articles/b687a5c757fe75"
-                        open
-                      >
-                        <summary class="article-expander__title">東工大機械系院試をpythonで解いてみた[材料力学編]</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/porphyrio/articles/b687a5c757fe75">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--JTsSV_gP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259D%25B1%25E5%25B7%25A5%25E5%25A4%25A7%25E6%25A9%259F%25E6%25A2%25B0%25E7%25B3%25BB%25E9%2599%25A2%25E8%25A9%25A6%25E3%2582%2592python%25E3%2581%25A7%25E8%25A7%25A3%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%255B%25E6%259D%2590%25E6%2596%2599%25E5%258A%259B%25E5%25AD%25A6%25E7%25B7%25A8%255D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:porphyrio%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2YyYWIyZTAzMjMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-東工大の機械系の院試の問題をpythonを使って解いてみます。今回は令和1年度 材料力学 を解いていきます。過去問は以下のページにあります。
-https://www.titech.ac.jp/admissions/prospective-students/admissions/past-exam-papers
-
- 問題
-
-
-
- 問1
-pythonを使う必要がないので普通に解きます。
-(1)
-①
-
-\alpha L \Delta T
-
-②
-
-\alpha L \Delta T
-(2)
-
-\lambda&#x3D;\varepsilon L&#x3D;\frac{\sigma}{E}L&#x3D;\frac...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/ninnin324/books/64557f0881ce31"
-                        open
-                      >
-                        <summary class="article-expander__title">ブラウザを作ろう</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ninnin324/books/64557f0881ce31">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Qc4OFQOh--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci9iZmZkMWY1MjUzLmpwZWc&#x3D;%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>短いコードで簡単なブラウザを作ります</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6521110859">
-        <time id="build-timestamp" datetime="2023-10-15T01:18:44.891Z">2023-10-15T01:18:44.891Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6527764101">
+        <time id="build-timestamp" datetime="2023-10-16T01:15:28.046Z">2023-10-16T01:15:28.046Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
