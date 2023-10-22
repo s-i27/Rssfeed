@@ -2,10 +2,266 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-10-20T01:13:51.811Z</updated>
+    <updated>2023-10-22T01:18:49.426Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[主成分分析(PCA)-理論とPythonで実装]]></title>
+        <id>https://zenn.dev/totopironote/articles/aa17833ef00e5f</id>
+        <link href="https://zenn.dev/totopironote/articles/aa17833ef00e5f"/>
+        <updated>2023-10-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+今回扱う主成分分析(Principal component analysis ; PCA)は、次元削減の有名な方法である。
+pを次元数、nをデータ数とするとp \le nの状況を扱う。
+はじめに理論を説明し、次にpythonで実装する。
+
+ 主成分分析
+平均\mu , 共分散行列\Sigma をもつ母集団からn個のp次データベクトルx_j , j=1,…,nを無作為に抽出する。
+
+\Sigma=H\Lambda H^T = \sum_{s=1}^p\lambda_{(s)}h_{(s)}h_{(s)}^T
+
+\Lambda=diag(\lambda_{(1)},...,\l...]]></summary>
+        <author>
+            <name>ととぴろnote</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SQLAlchemy のCRUD(Create, Read, Update, Delete) 基本操作]]></title>
+        <id>https://zenn.dev/yuma_memorandum/articles/98797dec048836</id>
+        <link href="https://zenn.dev/yuma_memorandum/articles/98797dec048836"/>
+        <updated>2023-10-21T23:49:39.000Z</updated>
+        <summary type="html"><![CDATA[SQLAlchemyを使うテーブルの基本操作を下記にまとめます。
+接続するDBはAccessを使用しています。SQLserverなど別のDBを使う場合は接続部分のコードを変更して下さい。
+↓　AccessとSQLServerの接続方法を紹介
+https://zenn.dev/yuma_memorandum/articles/f2de7bbbc71a51
+
+ DBとの接続(Accessファイル)
+from sqlalchemy import create_engine,MetaData
+from sqlalchemy.orm import declarative_base
+
+Access_...]]></summary>
+        <author>
+            <name>ゆうま</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Djangoで使いたいからPythonでmarkdownをHTML変換する]]></title>
+        <id>https://zenn.dev/koupro0204/articles/0a2efe19eaeda4</id>
+        <link href="https://zenn.dev/koupro0204/articles/0a2efe19eaeda4"/>
+        <updated>2023-10-21T22:22:19.000Z</updated>
+        <summary type="html"><![CDATA[目的
+
+ markdownをHTML変換
+ブログみたいなWEBアプリを開発する際にmarkdownで記事を書いてそれをHTMLに変換して表示という風にやりたい。
+やることは以下です。
+
+DBにcontentsにmarkdown形式で記事を保存
+markdownをHTMLに変換
+実際に表示
+
+1.の部分は本記事では触れません。
+
+ 今回やること
+https://qiita.com/y-tsutsu/items/1424ce70171765d86316
+上記のQiitaの記事を参考にします。
+やることとしては以下になります。
+
+MarkdownからHTMLへの変換
+テンプレートで使うため...]]></summary>
+        <author>
+            <name>い。</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RustとPythonの画像のリサイズ速度]]></title>
+        <id>https://zenn.dev/k10dayo/articles/e8c4043519cc3c</id>
+        <link href="https://zenn.dev/k10dayo/articles/e8c4043519cc3c"/>
+        <updated>2023-10-21T14:16:19.000Z</updated>
+        <summary type="html"><![CDATA[画像をリサイズする際、Rust使ったら速いんじゃないかと書いてみたら、Pythonのほうが速かった件。
+Rustはimageクレートで cargo build --releaseしたもの
+PythonはPIL
+言語というより、使用するライブラリとクレートの比較になりますが、画像をリサイズして保存する速度だけを比較してます。
+自分は、Rust初心者なので参考程度に
+10枚リサイズ
+
+
+
+言語
+1回目
+2回目
+3回目
+平均
+
+
+
+
+Rust
+2.91秒
+2.90秒
+2.76秒
+平均2.85秒
+
+
+Python
+0.49秒
+0.45秒
+0.48秒
+平均0.47秒
+
+
+
+50枚リサイズ
+
+
+...]]></summary>
+        <author>
+            <name>だよ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonでFXのユロドルアノマリーを検証]]></title>
+        <id>https://zenn.dev/harukii/articles/60296649d2af57</id>
+        <link href="https://zenn.dev/harukii/articles/60296649d2af57"/>
+        <updated>2023-10-21T06:00:24.000Z</updated>
+        <summary type="html"><![CDATA[値動きの特徴
+import pandas as pd
+import MetaTrader5 as mt5
+from datetime import timedelta
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# MT5への接続
+mt5.initialize()
+
+def fetch_and_prepare(symbol, timeframe, count, timezone_hours, ratio_calculation):
+    # データの取得
+    rates = mt5.copy_rates_from...]]></summary>
+        <author>
+            <name>ホソノP</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Flask 環境導入]]></title>
+        <id>https://zenn.dev/apo_zenn/articles/fedaf3afd583e7</id>
+        <link href="https://zenn.dev/apo_zenn/articles/fedaf3afd583e7"/>
+        <updated>2023-10-21T05:46:42.000Z</updated>
+        <summary type="html"><![CDATA[環境導入
+仮想環境(venv)の中に導入していきます。
+
+ shell
+$ py -3.8 -m venv venv # 仮想環境作成 (-3.8には任意のpythonバージョンを指定)
+$ .\venv\Scripts\activate # 仮想環境をactivate
+$ cd venv # venv内に移動
+
+$ pip install Flask # Flaskインストール
+$ mkdir src # venv内に作業フォルダを作成
+$ cd src
+
+
+
+ アプリケーションの作成(srcフォルダ内)
+
+ hello.py
+from flask import Flask
+
+ap...]]></summary>
+        <author>
+            <name>apo_zenn</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【初心者向け/ITスクール 66日】Python JSONparsing/DB access]]></title>
+        <id>https://zenn.dev/eldorado215/articles/628fa353319271</id>
+        <link href="https://zenn.dev/eldorado215/articles/628fa353319271"/>
+        <updated>2023-10-20T09:01:37.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+今日は、ITスクールに通った66日目の日で、今日学んだ知識を記事にシェアしたいと思います。本記事が、ITを勉強を始めた方々にもロードマップになればいいと思います。
+今日は、昨日の続きで、PythonでJSONをParsingする実習を行い、
+Oracle DBとアクセスする実習を行いました。
+
+ JSON Parsing
+Rest APIを使って、JSONのデーターをParsingしました。
+# -*- coding:utf-8 -*-
+from http.client import HTTPSConnection
+from urllib.parse import quot...]]></summary>
+        <author>
+            <name>Hyon🇰🇷</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[犬の写真から犬種を判別するアプリを作成してみた]]></title>
+        <id>https://zenn.dev/delacroix/articles/d91421d4e37617</id>
+        <link href="https://zenn.dev/delacroix/articles/d91421d4e37617"/>
+        <updated>2023-10-20T08:00:45.000Z</updated>
+        <summary type="html"><![CDATA[概要
+今回は犬の画像を用いて、犬の犬種を判別するAIアプリを作っていきたいと思います。
+実際僕は犬の犬種については全く詳しくないので、犬の画像や名前を言われてもいつもピンとこないので、犬の画像を入力すると犬種が返ってくるというアプリを作りたいと思います。
+とはいえ、いきなり全種類の犬種の判別はかなりハードルが高いので、まずは特徴が大きく異なる３種類の犬種の判別をできるアプリを作っていきたいと思います
+今回のエントリーナンバ-
+No1. コーギー
+
+No2. ドーベルマン
+
+No3. パグ
+
+この3種類の犬の犬種を判別するアプリを作っていきたいと思います！
+
+ 目次
+今回の開発は大きく...]]></summary>
+        <author>
+            <name>taro-u</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[君は「マシンイプシロン」を知っているか]]></title>
+        <id>https://zenn.dev/satoshiakatsuka/articles/327405e7d7da35</id>
+        <link href="https://zenn.dev/satoshiakatsuka/articles/327405e7d7da35"/>
+        <updated>2023-10-20T03:29:22.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+みなさんは「マシンイプシロン」または「計算機イプシロン」を知ってますか？
+先日書いたコードでマシンイプシロンの概念を知って、浮動小少数点数の計算と少し仲良くなれました。
+個人的にとても勉強になったので記事にまとめてみます！
+
+ 対象読者
+
+マシンイプシロンを知らない人
+浮動小数点型、その計算について学習したい人
+
+
+ マシンイプシロンの定義
+まずはマシンイプシロンの定義です。Wikipediaの引用です。
+
+計算機イプシロン（けいさんきイプシロン、英: machine epsilon）は、浮動小数点数において、「1より大きい最小の数」と1との差のことである。
+
+Python...]]></summary>
+        <author>
+            <name>sakats</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MojoがApple Silicon Macに対応したので早速試してみた]]></title>
+        <id>https://zenn.dev/spacemarket/articles/bf0abfc8bb4305</id>
+        <link href="https://zenn.dev/spacemarket/articles/bf0abfc8bb4305"/>
+        <updated>2023-10-20T02:56:57.000Z</updated>
+        <summary type="html"><![CDATA[Pythonの高速なスーパーセットとされているMojoがApple Silicon Macについに対応したので、早速インストールしてMojo入門してみました。
+https://www.modular.com/blog/mojo-is-now-available-on-mac
+※ 記事作成日の前日（2023年10月19日）に公開されました。
+!
+本記事の検証環境は以下の通りです。
+M1 Pro MacBook Pro
+macOS Sonoma 14.0
+Python 3.11.3
+
+
+ インストール手順
+
+ 0. ModularにSign up
+https://developer.modu...]]></summary>
+        <author>
+            <name>miotava</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Pandasを使ったデータベースとの接続]]></title>
         <id>https://zenn.dev/yuma_memorandum/articles/f2de7bbbc71a51</id>
@@ -3591,496 +3847,6 @@ https://note.com/shimakaze_soft/n/n4a2b63d320ed
 それぞれ別なコンテナで動作させるため、本番の運用などでは、別々なサーバーで動作させることを想定しています。...]]></summary>
         <author>
             <name>shimakaze_soft</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NumPyからCuPyへ：高速化の一例]]></title>
-        <id>https://zenn.dev/ykesamaru/articles/f5b41a67523302</id>
-        <link href="https://zenn.dev/ykesamaru/articles/f5b41a67523302"/>
-        <updated>2023-09-22T12:21:57.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-環境
-インストール
-
-CuPyについて
-
-NumPyのサンプルコード
-CuPyによる高速化
-性能比較
-
-
-
-CuPyの苦手な処理
-
-NumPyのサンプルコード
-CuPyのサンプルコード
-性能比較
-
-
-まとめ
-
-
- はじめに
-Pythonで数値計算を行う際によく使われるライブラリがNumPyです。しかし、GPUを活用することで計算速度を向上させたい場面も多いでしょう。そこでCuPyが登場します。この記事では、NumPyのコードをCuPyに置き換える一例とその性能比較について解説します。一方でCuPyの苦手な処理についても触れますので、使いどころを間違えないようにしましょう。
-...]]></summary>
-        <author>
-            <name>yKesamaru</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PydanticのRootModelを使いこなす]]></title>
-        <id>https://zenn.dev/yosemat/articles/637f84c579d0b7</id>
-        <link href="https://zenn.dev/yosemat/articles/637f84c579d0b7"/>
-        <updated>2023-09-22T07:47:57.000Z</updated>
-        <summary type="html"><![CDATA[PydanticのBaseModelの恩恵をlistやdictにも与えたい
-こんにちは、極論モンスターのYosematです。
-PydanticはTypeSafeにPythonをかけて最高ですよね。特に私が好きなのはmodel_validateのようなSerialize/Deserializeの機能です。しかしPydanticのBaseModelはうまいことdictやjsonへのSerialize/Deserializeができますがlist[MyModel]はPydanticのクラスではないのでmodel_validateのようなクラスメソッドにアクセスできません。
-ダサい方法を先に書...]]></summary>
-        <author>
-            <name>Yosemat</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-310｜B - Strictly Superior]]></title>
-        <id>https://zenn.dev/hyperdb/articles/5a1fb5c71078c2</id>
-        <link href="https://zenn.dev/hyperdb/articles/5a1fb5c71078c2"/>
-        <updated>2023-09-22T07:03:25.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-310 B - Strictly Superior
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-
-def main():
-    n, m = getIntMap()
-    pl = getIntListRow(n)
-
-    fl = [pl[i][2:] for i in range(n)]  # p...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-310｜A - Order Something Else]]></title>
-        <id>https://zenn.dev/hyperdb/articles/0cbb4c118e2ca4</id>
-        <link href="https://zenn.dev/hyperdb/articles/0cbb4c118e2ca4"/>
-        <updated>2023-09-22T07:03:24.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-310 A - Order Something Else
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntList():
-    return list(map(int, input().split()))
-
-
-def main():
-    n, p, q = getIntMap()
-    a = getIntList()
-    b = min([q + a[i] for i in range(n)])
-
-    print(b if b < p ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MySQLとSQLAlchemyで詰まった話]]></title>
-        <id>https://zenn.dev/chapi/articles/c50a050549faf7</id>
-        <link href="https://zenn.dev/chapi/articles/c50a050549faf7"/>
-        <updated>2023-09-22T04:13:06.000Z</updated>
-        <summary type="html"><![CDATA[MySQLとPythonを利用して自社サービスを開発しています。開発していく中で解決に時間がかかったので原因と解決方法をまとめました。
-
- 環境
-MYSQL: 8.0
-Python: 3.9
-SQLAlchemy: 1.4.36
-開発環境の構築にはDockerを利用しています。
-
- エラーになったコード
-要件上、idとsystem_timestampというtimestamp型を複合主キーにする必要がありました。
-
-models.py
-from sqlalchemy import create_engine
-from sqlalchemy.orm import declarative_ba...]]></summary>
-        <author>
-            <name>ちゃぴ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[カメラ情報を用いてリアルタイムで状況をテキストに起こしたい (Ros2) part2]]></title>
-        <id>https://zenn.dev/iasl/articles/371968a2f31e32</id>
-        <link href="https://zenn.dev/iasl/articles/371968a2f31e32"/>
-        <updated>2023-09-22T04:05:20.000Z</updated>
-        <summary type="html"><![CDATA[前回は、使いたいモデル(BLIP-2)を見つけることができ、それらがAIプラットフォームであるHugging Faceにたくさんあることが分かりました。今回はまずHugging Faceについてまとめたいと思います。
-
- Hugging Faceについて
-前述のとおりAIプラットフォームであり、特に自然言語生成モデルがたくさんあります。
-
-Hugging Faceの主な目的は、AIコミュニティの協力と共有を促進することです。プラットフォームは、AIモデルやデータセットをユーザーがアップロードし、共有することができるようになっています。また、他のユーザーがアップロードしたモデルやデータセッ...]]></summary>
-        <author>
-            <name>toky</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[カメラ情報を用いてリアルタイムで状況をテキストに起こしたい (Ros2) part1]]></title>
-        <id>https://zenn.dev/iasl/articles/3fb2b018044232</id>
-        <link href="https://zenn.dev/iasl/articles/3fb2b018044232"/>
-        <updated>2023-09-22T04:02:47.000Z</updated>
-        <summary type="html"><![CDATA[今まで深く機械学習や深層学習を学んでいなかったので触れてみようと思いました。今回はとにかく実装することをメインに進めていきたいと思います。
-
- 深層学習モデルを扱うにあたって
-まず、目的を明確にする必要があります。今回は動画像の状況を文章に起こしたいと考えています。また、１からモデルを組み立てる技術はないので、構築済みのモデルを使いたいと考えています。
-
- 大規模言語モデル(LLM)について
-今回は入力動画像を大規模言語モデルに入れて、現在の状況を説明するものを作りたいなと考えています。そもそも、大規模言語モデル(LLM)とは以下のようなものです。
-
-大規模言語モデル（Large Lan...]]></summary>
-        <author>
-            <name>toky</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PowerShellスクリプトを実行できるように設定する]]></title>
-        <id>https://zenn.dev/ricmsd/articles/7f2ceade6581db</id>
-        <link href="https://zenn.dev/ricmsd/articles/7f2ceade6581db"/>
-        <updated>2023-09-22T03:54:10.000Z</updated>
-        <summary type="html"><![CDATA[WindowsでPythonの仮想環境（virtual environments）を有効にしようとしたところ以下のエラーに遭遇したので回避方法をメモしておきます。
-
- Activate.ps1
-PS C:\project> & c:/project/venv/Scripts/Activate.ps1
-& : このシステムではスクリプトの実行が無効になっているため、ファイル C:\project\venv\Scripts\Activate.ps1 を読み込むことができません。詳細については、「about_Execution_Policies」(https://go.m...]]></summary>
-        <author>
-            <name>ricmsd</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pytestで非同期関数をテストする]]></title>
-        <id>https://zenn.dev/fhmn/articles/2ca12d989dd505</id>
-        <link href="https://zenn.dev/fhmn/articles/2ca12d989dd505"/>
-        <updated>2023-09-22T01:05:02.000Z</updated>
-        <summary type="html"><![CDATA[FastAPIを使っていると非同期関数を扱うことが増えます。
-非同期関数のテストの書き方をメモとして記載します。
-!
-記載のコード例では単純化のため一部コードを省略しています。
-
-
- コード
-下記のコードをテストするケースを考える。
-
-repo.py
-from sqlalchemy import select
-from sqlalchemy.orm import Session
-
-
-class UsersRepository:
-    async def find_by_id(session: Session, id: int) -> User:
-        result = ...]]></summary>
-        <author>
-            <name>fhmn</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【中級者向け】Streamlitで作るデータ解析Webアプリ]]></title>
-        <id>https://zenn.dev/labcode/books/cf772007ca5335</id>
-        <link href="https://zenn.dev/labcode/books/cf772007ca5335"/>
-        <updated>2023-09-21T13:14:34.000Z</updated>
-        <summary type="html"><![CDATA[📰 概要
-
-データファイルをドラッグ&ドロップするだけで、解析が自動で行われるようなアプリを作りたいと思ったことはありませんか？
-
-自分が作った解析コードを他の人にも使ってもらいたいと思ったことはありませんか？
-
-本書では、これらの望みを叶えてくれるデータ解析用のWebアプリの作成方法をご紹介しています。
-PythonのライブラリであるStreamlitを用いることで、HTML / CSS / JavaScriptなどの言語不要で簡単に作成できます。
-
-本書では種類の異なる4つのオリジナルアプリの作り方をご紹介しています。
-ソースコードもすべて公開しているので、お手元のPCでアプリを動かしながら学習することができます。
-
-👍 Webアプリの利点
-・ ブラウザを使って簡単に操作可能になる
-・ 他の人にも使ってもらいやすくなる
-・ 公開すれば、全世界の人が使えるようになる
-
-👫 対象とする読者
-・ データ解析用のオリジナルのWebアプリを作りたい人
-・ GUIの操作で解析を半自動化したい人
-・ 研究室の他のメンバーにも自分の解析コードを使ってほしいと思っている人
-・ Streamlitを使ってWebアプリを作りたい人
-・ 手を動かしながらPythonを習得したい人
-
-【販売価格】
-期間限定で ¥2000→¥1000 (50% OFF!!)で販売しております！
-
-📰アップデート情報
-2023/09/21：技術書初版がリリースされました。
-
-本技術書は随時アップデートされていきます。
-一度購入された方はアップデートされたとしても追加料金は発生しませんのでご安心ください。]]></summary>
-        <author>
-            <name>LabCode（ラボコード）</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonの学習におすすめ技術書5選【高校生エンジニアが解説】]]></title>
-        <id>https://zenn.dev/raio/articles/da804721b33850</id>
-        <link href="https://zenn.dev/raio/articles/da804721b33850"/>
-        <updated>2023-09-21T11:22:26.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-みなさん、こんにちは。高校生エンジニアのRaioです🙌
-公立高校に通いながら、放課後や休日はIT企業のエンジニアとして働いています。
-今回の記事では、Pythonの学習におすすめ技術書5選について解説します！
-
- 技術書を無料で読む方法
-KindleUnlimitedを使うことで、沢山の技術書を無料で何冊でも読むことが可能です🙌
-
-200万冊以上の書籍が何冊でも読み放題
-月額980円が今なら1ヶ月無料
-場所に囚われず、様々な端末で使用可能
-
-勿論、技術書以外にもビジネス書や漫画など種類豊富です！
-↓入会したい方は画像をクリック↓
-https://amzn.to/3rv5CZ...]]></summary>
-        <author>
-            <name>Raio｜高校生エンジニア</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ChromeバージョンアップによるSeleniumエラーのトラブルシューティング]]></title>
-        <id>https://zenn.dev/ykesamaru/articles/a1a4fd5eae8563</id>
-        <link href="https://zenn.dev/ykesamaru/articles/a1a4fd5eae8563"/>
-        <updated>2023-09-21T11:06:50.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-環境
-問題の発生
-エラーメッセージ
-解決手順
-まとめ
-
-
- はじめに
-この記事は、ChromeのバージョンアップによってSeleniumで発生する一般的なエラーとその解決手順について解説するものです。
-この記事は主に自分用の備忘録として書かれており、今後同様の問題に遭遇した際にすぐに対処できるようにすることを目的としています。
-
- 環境
-$ uname -a
-Linux user 5.15.0-83-generic #92~20.04.1-Ubuntu SMP Mon Aug 21 14:00:49 UTC 2023 x86_64 x86_64 x86_64 GNU/Lin...]]></summary>
-        <author>
-            <name>yKesamaru</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python の環境構築をやってみた]]></title>
-        <id>https://zenn.dev/harukinguu/articles/641a84f5f53987</id>
-        <link href="https://zenn.dev/harukinguu/articles/641a84f5f53987"/>
-        <updated>2023-09-21T09:22:39.000Z</updated>
-        <summary type="html"><![CDATA[今日、とあるYoutubeにのってたAmazon価格追跡アプリを真似して作ってみようと思ったのですが、せっかくなのでAnacondaで仮想環境を作って取り組みたいと考え、様々な記事を見ながら環境構築に取り組んでみたので、その経緯についてまとめます。
-
- 前提
-
-Anacondaはインストール済み
-vscodeもインストール済み
-
-
- やり方
-
-
-pythonの拡張機能のインストール
-
-
-Anacondaでの仮想環境の構築
-https://ai-inter1.com/python-vscode/
-createした。
-
-
-環境変数の設定
-https://blog.beachside.dev/...]]></summary>
-        <author>
-            <name>はるき</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python で RC4 暗号を実装する]]></title>
-        <id>https://zenn.dev/fikastudio/articles/3ff628c031af52</id>
-        <link href="https://zenn.dev/fikastudio/articles/3ff628c031af52"/>
-        <updated>2023-09-21T05:30:07.000Z</updated>
-        <summary type="html"><![CDATA[この記事では、Python を使用して RC4 暗号を実装します。
-Python のライブラリを使用すれば RC4 暗号なんて簡単に利用することができます。
-しかし、RC4 暗号の中身を理解するという意味で、スクラッチで実装します。
-
- RC4 概要
-RC4 暗号の歴史などは、他の記事に譲ります。ここでは、RC4 の仕組みについてのみ着目します。RC4 はストリーム暗号の１種です。ストリーム暗号は、平文をビットもしくはバイト単位で暗号化・復号処理を行います。しかし、これらの処理は独立して行われるものではなく、例えばあるバイトの暗号化処理は、前のバイトの暗号化処理に依存します。
-RC4 は...]]></summary>
-        <author>
-            <name>情報工学入門チャンネル</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-309｜A - Nine]]></title>
-        <id>https://zenn.dev/hyperdb/articles/91e153865fdc9a</id>
-        <link href="https://zenn.dev/hyperdb/articles/91e153865fdc9a"/>
-        <updated>2023-09-21T05:06:30.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-309 A - Nine
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b = getIntMap()
-
-    print('Yes' if b - a == 1 and a % 3 != 0 else 'No')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-309｜B - Rotate]]></title>
-        <id>https://zenn.dev/hyperdb/articles/1a9448bb9fc2c2</id>
-        <link href="https://zenn.dev/hyperdb/articles/1a9448bb9fc2c2"/>
-        <updated>2023-09-21T05:06:29.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-309 B - Rotate
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getStringListRow(N):
-    return [list(input()) for _ in range(N)]
-
-
-def cp(x, y):
-    z = []
-    for i in range(y):
-        z.append([x[i][j] for j in range(y)])
-    return z
-
-
-def main():
-    n = getInt()
-    a = g...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【個人開発 #1-1】レコメンドシステムを作ってみた vol.1　〜サービス概要〜]]></title>
-        <id>https://zenn.dev/waka07/articles/development-diary_1-1</id>
-        <link href="https://zenn.dev/waka07/articles/development-diary_1-1"/>
-        <updated>2023-09-20T23:31:02.000Z</updated>
-        <summary type="html"><![CDATA[作りたいシステム
-忙しい人のためのギフト提案型AI「AiSAP!(エイサップ)」
-
- コンセプト
-忙しい社会人のために、AIが可能な限り素早く（ASAP: As Soon As Possible）、最適なギフトを提案してくれるWebサービス。
-
- 作ろうと思ったきっかけ
-友達や彼女への誕プレとか、お世話になっている会社の人へのお返しとか、何あげたらいいか毎回悩む！しかも直前になって気づくから買いに行っている時間もない！
-という自分の悩みから作りたいなーとなんとなく思っていたのですが、
-「何か新サービスを提案してください」と会社に言われて、締め切りが急に出現。
-2ヶ月足らずで作ることに...]]></summary>
-        <author>
-            <name>Waka</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Qiskit で遊んでみる (21) — QAOA でお絵描き]]></title>
-        <id>https://zenn.dev/derwind/articles/dwd-qiskit21</id>
-        <link href="https://zenn.dev/derwind/articles/dwd-qiskit21"/>
-        <updated>2023-09-20T17:39:36.000Z</updated>
-        <summary type="html"><![CDATA[目的
-TYTAN tutorial おすすめ5（お絵かきロジック） という TYTANSDK のチュートリアルがある。原理的には QAOA でいけるはずなので試してみたい。
-cuTensorNet での実験は使われたし、何だかんだで時間がかかっていつ解けるのであろうかという感じであったので、今回は思い切って cuStateVec を用いる。
-以下の内容は Google Colab の T4 を用いて計算した。
-
- 今回解きたい問題
-必要なモジュールを import する。
-from __future__ import annotations
-
-import time
-from col...]]></summary>
-        <author>
-            <name>derwind</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Python] FirestoreにJSONでデータをアップロードする]]></title>
-        <id>https://zenn.dev/410/articles/64b7c0d3e46609</id>
-        <link href="https://zenn.dev/410/articles/64b7c0d3e46609"/>
-        <updated>2023-09-20T15:41:06.000Z</updated>
-        <summary type="html"><![CDATA[環境
-
-MacOS Ventura 13.5.2
-Python 3.9.6
-
-
- 秘密鍵を用意する
-Firebaseのコンソールにアクセスし、「プロジェクトの設定」 > 「サービス　アカウント」を開きます。
-ボタンをクリックして、新しい秘密鍵をダウンロードします。
-
-
- コード
-mykey.json　- 秘密鍵　
-sample_data.json - サンプルデータ
-サンプルデータ
-{
-    "data": {
-        "K2Kjm3x6": {
-            "name": "Taro",
-            "age": 25,
-          ...]]></summary>
-        <author>
-            <name>ようてん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのthreadを復習してみた。[個人的メモ]]]></title>
-        <id>https://zenn.dev/kaba777/articles/084d09bbd17160</id>
-        <link href="https://zenn.dev/kaba777/articles/084d09bbd17160"/>
-        <updated>2023-09-20T14:29:50.000Z</updated>
-        <summary type="html"><![CDATA[Pythonはシングルスレッドだ。
-例えば実行に１秒かかる関数taskがあるとする。
-def task():
-  print('Starting a task...')
-  sleep(1)
-  print('done')
-以下のように2回taskを呼べば、pythonはシングルスレッドのため、１回目のtaskの終了を待ってから２回目のtaskを開始するため、全体では２秒かかる。
-task()
-task()
-これを解決するのがThreadだ。処理を並行して走らせることで１秒で処理を終わらせることが出来る。
-pythonでthreadを使用するにはまずThreadをインポートする。
-fro...]]></summary>
-        <author>
-            <name>カバ</name>
         </author>
     </entry>
 </feed>
