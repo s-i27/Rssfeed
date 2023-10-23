@@ -2,10 +2,225 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-10-22T01:18:49.426Z</updated>
+    <updated>2023-10-23T01:14:20.398Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[SQLFluffでDocker越しにSQLのフォーマットチェック]]></title>
+        <id>https://zenn.dev/dozo/articles/846b756d64fdc7</id>
+        <link href="https://zenn.dev/dozo/articles/846b756d64fdc7"/>
+        <updated>2023-10-23T00:48:00.000Z</updated>
+        <summary type="html"><![CDATA[SQLのLinterなんてあったのか
+!
+関連記事:
+
+ファイルの修正個所、コミットの差分だけPHPCSを充てる方法
+WSLとJetbrains GatewayでPHPStormローカルリモート開発
+PHP SPLの標準Interfaceを真剣に考える
+assertEqualsを今すぐ捨て、assertSameを使うのです
+PHPUnitには @testdox を使え
+
+
+データベースのデプロイする際、
+migrationに任せたり、
+SQLを書いたりと各社環境はまちまちで、
+甲乙つけがたい状況。
+lintに関してmigrationであればその言語側に任せればいいが、
+SQLについて...]]></summary>
+        <author>
+            <name>dozo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【初めて学ぶquri-parts】VQEしてみた]]></title>
+        <id>https://zenn.dev/yamada_quantum/articles/1da6331276aa7e</id>
+        <link href="https://zenn.dev/yamada_quantum/articles/1da6331276aa7e"/>
+        <updated>2023-10-22T23:00:00.000Z</updated>
+        <summary type="html"><![CDATA[今回はVQEを量子計算ライブラリを使ってやってみたい。そんな気持ちが溢れたので、国産の量子計算ライブラリであるquri-partsを使ってVQEを実行してみようと思います。
+VQEの理解も、quri-partsの理解もまあまあ浅いので間違っている可能性があることご了承ください。
+ではざっくりやっていきます！
+!
+イメージつけるために数式などを出していますが、あんまり自信ないのでご容赦ください。
+
+
+ quri-partsについて
+皆さん、量子計算系のライブラリといえば、何を思い浮かべますか？
+qiskit？　Q#？　はたまたQulacsですか？
+私はquri-partsです。
+quri-...]]></summary>
+        <author>
+            <name>やまぐち</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【python】意図が伝わるコード(コレクション・イテレーション)]]></title>
+        <id>https://zenn.dev/kazu1/articles/9d0fad96eb7562</id>
+        <link href="https://zenn.dev/kazu1/articles/9d0fad96eb7562"/>
+        <updated>2023-10-22T15:46:58.000Z</updated>
+        <summary type="html"><![CDATA[記事の概要
+Pythonのデータ構造は、異なる状況や要件に適応するための多様な特性を持っています。この記事では、Pythonで利用可能な主要なコレクション型とそれぞれの特性、そして適切な使用例を紹介します。
+また複数の方法があるiteration(ループ文)についてもどれを選択すれば、どういう意図で書いたかを認識してもらいやすいかを紹介していこうと思います。
+自己文書化されたコードを目指して、コレクションとiterationの手段がどのような意図の表現になるかを知りましょうということですね。
+
+ コレクションの選択による意図
+コレクションとそれに付随する意図を記載しています。
+この意...]]></summary>
+        <author>
+            <name>僕はエンジニア</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[暗号化]]></title>
+        <id>https://zenn.dev/kk0515/articles/1eac914af99443</id>
+        <link href="https://zenn.dev/kk0515/articles/1eac914af99443"/>
+        <updated>2023-10-22T12:44:08.000Z</updated>
+        <summary type="html"><![CDATA[from cryptography.fernet import Fernet
+import base64
+
+# 暗号化されたデータをファイルに書き込む
+def write_encrypted_data(filename, data, key):
+    cipher_suite = Fernet(key)
+    encrypted_data = cipher_suite.encrypt(data)
+    with open(filename, 'wb') as file:
+        file.write(encrypted_data)
+
+# ファイルからデータを読み取る
+def...]]></summary>
+        <author>
+            <name>kk060515</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[復号]]></title>
+        <id>https://zenn.dev/kk0515/articles/7603d42a24f166</id>
+        <link href="https://zenn.dev/kk0515/articles/7603d42a24f166"/>
+        <updated>2023-10-22T12:40:08.000Z</updated>
+        <summary type="html"><![CDATA[from cryptography.fernet import Fernet
+import base64
+
+# ファイルから暗号化されたデータを読み取る
+def read_encrypted_data(filename):
+    with open(filename, 'rb') as file:
+        return file.read()
+
+# ユーザーから鍵を入力
+def get_user_key():
+    user_key = input("Enter the encryption key used for decryption: ")
+    key = user...]]></summary>
+        <author>
+            <name>kk060515</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Atcoder Beginners contest 321 "CutOff"解説]]></title>
+        <id>https://zenn.dev/firedingo/articles/0e316b1a118858</id>
+        <link href="https://zenn.dev/firedingo/articles/0e316b1a118858"/>
+        <updated>2023-10-22T11:58:41.000Z</updated>
+        <summary type="html"><![CDATA[Atcoder Beginners contest 321 "CutOff"解説 In　Python
+今回はついこないだ解いたCutOffという問題をPythonで解説していきます。
+過去問として解いていくときの参考になれば幸いです。
+
+ 問題
+問題文にはいろんなことが書いてありますが、僕なりに要約するとこんな感じです。
+分かりにくかったら下のリンクから問題文を読んでください。
+
+
+Nラウンド行われる試験がある
+各ラウンドには0-100のスコアが存在する
+総合的なスコアは最低値と最大値を除いたものになる
+iラウンド目のスコアはAi
+**最終結果（総合的なスコア）をX点以上にするために...]]></summary>
+        <author>
+            <name>FireDingo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【SAM】Unable to import module を解決]]></title>
+        <id>https://zenn.dev/y_taiki/articles/sam_deploy_template</id>
+        <link href="https://zenn.dev/y_taiki/articles/sam_deploy_template"/>
+        <updated>2023-10-22T09:24:44.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+以前作成した記事【SAM】Lambda + API Gatewayの開発環境構築で構築した開発環境を、AWS上にデプロイしました。しかしrequirements.txtに書いているモジュールがインポートできず、Lambdaでエラーが発生していました。
+今回はそのエラーを解決します。
+
+ ディレクトリ構成
+.
+|-- lambda_function.py
+|-- requirements.txt
+`-- template.yaml
+各ファイルの内容は以下です👇
+
+requirements.txt
+slackweb
+
+
+template.yaml
+Transform: AWS:...]]></summary>
+        <author>
+            <name>taiki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RTX3070でfaster-whisperを途中の環境構築からやってみた]]></title>
+        <id>https://zenn.dev/olemi/articles/374c880b5ff3c2</id>
+        <link href="https://zenn.dev/olemi/articles/374c880b5ff3c2"/>
+        <updated>2023-10-22T09:10:04.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+せっかくRTX3070があって、Whisperは6GくらいGPUメモリがあれば動くと聞き、
+faster-whisperがLarge_v2を使えてしかも処理速度が速いと聞いたのでやってみた
+C++は入っているので、CUDA周りの導入から始めました。
+※なんも考えずにPython走らせたらcuDNNが無いよエラーで気付かされました
+
+ PC環境
+
+i5-12400F
+NVIDIA RTX3070（GPUメモリ8GB）
+メモリ DDR4 32GB
+Python 3.10
+Windows 11
+
+
+ CUDA関連の導入
+!
+ここが一番時間かかりました
+
+
+ CUDA・cuDNNの...]]></summary>
+        <author>
+            <name>オレミ_微経験エンジニア</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[youtubeダウンローダー作ってみた]]></title>
+        <id>https://zenn.dev/caymankun/articles/678e0ac6bd8b24</id>
+        <link href="https://zenn.dev/caymankun/articles/678e0ac6bd8b24"/>
+        <updated>2023-10-22T05:10:37.000Z</updated>
+        <summary type="html"><![CDATA[youtubeダウンローダーとは?
+youtubeの動画をダウンロードするためのもの。
+
+ 用意するもの
+
+pythonサーバー(replit)
+phpサーバー(risupuレンタルサーバー)
+
+
+ 仕組み
+
+
+ コード
+
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="content-language" content="ja" />
+   <title>MEDL</titl...]]></summary>
+        <author>
+            <name>caymankun</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[主成分分析(PCA)-理論とPythonで実装]]></title>
         <id>https://zenn.dev/totopironote/articles/aa17833ef00e5f</id>
@@ -3812,39 +4027,6 @@ https://zenn.dev/shimakaze_soft/articles/b925594a2235b0
 
  インストール
 まずは上記の記事を最初に読んで、Docker上でDjangoとCeleryの環境構...]]></summary>
-        <author>
-            <name>shimakaze_soft</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DjangoのCeleryで非同期タスクの実行結果をDBに保存する]]></title>
-        <id>https://zenn.dev/shimakaze_soft/articles/b925594a2235b0</id>
-        <link href="https://zenn.dev/shimakaze_soft/articles/b925594a2235b0"/>
-        <updated>2023-09-23T10:32:52.000Z</updated>
-        <summary type="html"><![CDATA[Django上でCelery環境の構築方法は以下の記事で紹介しました。
-https://zenn.dev/shimakaze_soft/articles/bbd859803c63a6
-今回はそのCeleryの実行結果をDBに自動で保存してくれたり、Django-ORMを介して実行結果を取得したりできるdjango-celery-resultsというライブラリがあり、そちらの使い方について紹介します。
-https://github.com/celery/django-celery-results
-
- インストール
-まずは上記の記事を最初に読んで、Docker上でDjangoとCeleryの...]]></summary>
-        <author>
-            <name>shimakaze_soft</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DjangoのCeleryで非同期でタスクを実行して、モニタリングする環境をDockerで構築する]]></title>
-        <id>https://zenn.dev/shimakaze_soft/articles/bbd859803c63a6</id>
-        <link href="https://zenn.dev/shimakaze_soft/articles/bbd859803c63a6"/>
-        <updated>2023-09-23T06:24:33.000Z</updated>
-        <summary type="html"><![CDATA[Pythonで非同期処理をやる場合はCeleryを使うのが定番です。
-今回はceleryを試しに動作させるための環境をdocker-composeを使って簡単に作る方法をご紹介し、Django上で動作するように環境構築します。
-以前、昔にnoteに書いた以下の記事の応用や焼き直しのような内容です。（随分昔に書いた懐かしい記事）
-https://note.com/shimakaze_soft/n/n4a2b63d320ed
-
- 基本的に使用するツール類
-今回は以下の4つを使用します。
-それぞれ別なコンテナで動作させるため、本番の運用などでは、別々なサーバーで動作させることを想定しています。...]]></summary>
         <author>
             <name>shimakaze_soft</name>
         </author>
