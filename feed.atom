@@ -2,10 +2,213 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-10-24T01:13:38.283Z</updated>
+    <updated>2023-10-25T01:13:43.587Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[stable diffusion webui extensionエラーへの対処]]></title>
+        <id>https://zenn.dev/meii/articles/04e3d202f038c5</id>
+        <link href="https://zenn.dev/meii/articles/04e3d202f038c5"/>
+        <updated>2023-10-24T14:55:54.000Z</updated>
+        <summary type="html"><![CDATA[エラーの内容
+assert not shared.cmd_opts.disable_extension_access, "extension access disabled because of command line flags"
+
+ 理由
+読めばわかるがextensionへのアクセスが制限されてる
+
+ 解決方法
+commandlineARGS
+--enable-insecure-extension-access
+通常の場合
+./webui.sh --enable-insecure-extension-access]]></summary>
+        <author>
+            <name>mei</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【GitHubスター100個突破】Pythonのprint()のC++版を本気で作ってみた]]></title>
+        <id>https://zenn.dev/sassan/articles/4878e79272ed61</id>
+        <link href="https://zenn.dev/sassan/articles/4878e79272ed61"/>
+        <updated>2023-10-24T08:20:01.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+※2023/10/24:記事をQiitaからZennに移しました。
+Pythonのprint()は数値でも文字列でも配列でも、どのような型の変数でも文字列にしてくれてすごく便利です。
+僕は競プロ(競技プログラミング)をやっているのですが、時間との闘いである競プロでは、このようなあらゆる変数表示が出来る関数はデバッグにとても重宝します。
+しかし、C++にはそのような関数はありません。特にC++は高速で競プロに向いている言語なので、C++にそのような関数がないのはとてももったいないです。
+だったら作ればいいじゃない、ということで、print()のC++バージョンを本気で作ってみ...]]></summary>
+        <author>
+            <name>sassan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[faster-whisper をリアルタイムストリーミング処理するプレプリントがあったのでColabで動かしてみた]]></title>
+        <id>https://zenn.dev/momosuke/articles/whisper-streaming</id>
+        <link href="https://zenn.dev/momosuke/articles/whisper-streaming"/>
+        <updated>2023-10-24T08:17:33.000Z</updated>
+        <summary type="html"><![CDATA[OpenAI から Whisper とかいう化け物ASRモデルが出たかと思えば，C++で書かれたCore MLをサポートした whisper.cpp が出たかと思えば，とても高速化された faster-whisper 出てきました．
+https://github.com/openai/whisper
+https://github.com/ggerganov/whisper.cpp
+https://github.com/guillaumekln/faster-whisper
+3つのモデルの性能比較については，以下の記事がよくまとまっています．
+https://zenn.dev/piment...]]></summary>
+        <author>
+            <name>momosuke | Ryosuke Hyakuta</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Windows】ローカルPCにvenvでpythonの環境構築]]></title>
+        <id>https://zenn.dev/taniii_shio/articles/5af72f0918c7d8</id>
+        <link href="https://zenn.dev/taniii_shio/articles/5af72f0918c7d8"/>
+        <updated>2023-10-24T07:53:21.000Z</updated>
+        <summary type="html"><![CDATA[以下の理由で、ローカルPC（Windows）上にvenvでpythonの環境構築をしました。
+
+openaiやlangchainなどのパッケージをcondaで管理するのが複雑だったため
+ネットワークの関係でDockerが使用できないため
+
+詰まった箇所があったのでメモです。
+
+ 環境
+
+OS: windows11
+python: 3.10.11
+
+
+ やりたいこと
+
+pythonをローカルPC（windows）で実行
+
+バージョン管理ツール（asdfなど）やパッケージ管理ツール（conda, poetry）を使用しない
+pipを使いたい
+
+
+
+
+ 手順
+
+以下から、python3（任意の...]]></summary>
+        <author>
+            <name>Naoto Shioya</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fletでエラーダイアログを実装する。]]></title>
+        <id>https://zenn.dev/ziaensochan/articles/7b2c9c7cacc017</id>
+        <link href="https://zenn.dev/ziaensochan/articles/7b2c9c7cacc017"/>
+        <updated>2023-10-24T06:14:14.000Z</updated>
+        <summary type="html"><![CDATA[読む前に
+!
+この記事を書いた人はプログラミング初心者なので一部単語が間違えてたり
+コードに無駄があるかもしれません。万が一致命的なミスをしていた場合はご指摘ください;;
+
+
+ fletとは
+fletはPythonでGUIを作るためのライブラリ？フレームワーク？です。(ここらへんよくわかんない)
+FletはFlutterをベースとしているため何を考えなくてもいい感じのUIになります。
+https://flet.dev/
+次のコードがfletの基本になります。
+
+hello.py
+#インポート
+import flet as ft
+
+#ウィンドウ
+def main(page: ft.Pa...]]></summary>
+        <author>
+            <name>ziaenso_</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-311｜C - Find it!]]></title>
+        <id>https://zenn.dev/hyperdb/articles/40f3afa7efce22</id>
+        <link href="https://zenn.dev/hyperdb/articles/40f3afa7efce22"/>
+        <updated>2023-10-24T05:56:06.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-311 C - Find it!
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n = getInt()
+    a = [x - 1 for x in getIntList()]
+
+    pt = 0
+    route = [pt]
+    reached = [0 for _ in range(n)]
+    reached[pt] = 1
+
+ ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Google Drive API】サービスアカウントキーを使用して、共有ドライブにファイルアップロード]]></title>
+        <id>https://zenn.dev/nyazuki/articles/181c1d6269a7d1</id>
+        <link href="https://zenn.dev/nyazuki/articles/181c1d6269a7d1"/>
+        <updated>2023-10-24T05:53:33.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Google Drive APIを利用してローカルのcsvファイルをアップロードする機能を作成しました。本記事ではその手順をまとめます。
+
+ APIの有効化
+プロジェクトを作成し、Google Cloud コンソールから、Google Drive API を有効にしておきます。
+
+ 資格情報の選択
+ローカルからリクエストを送る際の認証方法を選択します。認証方法には、下の３つがあります。
+
+
+
+資格情報の種類
+説明
+
+
+
+
+APIキー
+一般公開データに匿名でアクセスを提供し、認証不要
+
+
+OAuth クライアント ID
+リクエストを送信する際にブラウザを開いてユーザー認証
+
+...]]></summary>
+        <author>
+            <name>azuki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[応用情報技術者試験 午後問題過去問のアルゴリズムをpythonで書いてみた]]></title>
+        <id>https://zenn.dev/matcha22/articles/c76362469b986e</id>
+        <link href="https://zenn.dev/matcha22/articles/c76362469b986e"/>
+        <updated>2023-10-24T03:12:24.000Z</updated>
+        <summary type="html"><![CDATA[平成２７年度　問３　２分探索木の問題
+https://www.ipa.go.jp/shiken/mondai-kaiotu/2015h27.html
+class Node:
+    def __init__(self, key):
+        self.key = key
+        self.left = None
+        self.right = None
+
+def search(k, p):
+    if p is None:
+        return None
+    elif k == p.key:
+        return p
+    elif k...]]></summary>
+        <author>
+            <name>matcha</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[テスト記事]]></title>
         <id>https://zenn.dev/nogayama/articles/f2ef6325533411</id>
@@ -3945,120 +4148,6 @@ def upgrade() -> None:
 アンカーボックスは、この写真上のあらゆる場所に小さな四角いボックスをいくつか置いて、それぞれのボックスが物体を含むかどうかを推測します。そして、もし物体を含んでいると判断されたら、そのボックスの位置や大きさを調整して、物体を正確に囲むようにし...]]></summary>
         <author>
             <name>NekoAllergy</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-311｜B - Vacation Together]]></title>
-        <id>https://zenn.dev/hyperdb/articles/9d3e5ddee2b33f</id>
-        <link href="https://zenn.dev/hyperdb/articles/9d3e5ddee2b33f"/>
-        <updated>2023-09-25T05:17:50.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-311 B - Vacation Together
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getStringListRow(N):
-    return [list(input()) for _ in range(N)]
-
-
-def main():
-    n, d = getIntMap()
-    s = getStringListRow(n)
-
-    # x -> y transform
-    t = []
-    for i in range(...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-311｜A - First ABC]]></title>
-        <id>https://zenn.dev/hyperdb/articles/59ca91228a3158</id>
-        <link href="https://zenn.dev/hyperdb/articles/59ca91228a3158"/>
-        <updated>2023-09-25T05:17:49.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-311 A - First ABC
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getString():
-    return input()
-
-
-def main():
-    n = getInt()
-    s = [''] + list(getString())
-
-    print(max([s.index('A'), s.index('B'), s.index('C')]))
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1番手早く自社サービスのソリューションエンジニアを作る方法(OpenAI.functions + IPython+ SlashGPT)]]></title>
-        <id>https://zenn.dev/singularity/articles/40dd07f9f3da2b</id>
-        <link href="https://zenn.dev/singularity/articles/40dd07f9f3da2b"/>
-        <updated>2023-09-24T22:43:04.000Z</updated>
-        <summary type="html"><![CDATA[特定サービスを深く熟知していて、APIも自在に使いこなし、お客さんの必要としているソリューションをつくるのを手伝ってくれるソリューションエンジニアって素敵ですよね。いままでそんな素敵なソリューションエンジニアは、雇用するのも養成するのも大変で、超大手のクラウドベンダーぐらいしか十分に用意するのは難しかったです。
-この記事では、OpenAI.functions+IPython+SlashGPTを活用することで、自社サービス専用のソリューションエンジニア(ボット)を手早く起ち上げる方法を解説します。
-言い換えると、自然言語での要求に応じて独自APIを呼び出すコードを実装、実行してくれるCod...]]></summary>
-        <author>
-            <name>kozayupapa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CloudTrailを使ってリソース作成者を自動的にタグ付けしてみた]]></title>
-        <id>https://zenn.dev/strix/articles/290fed1c2a5665</id>
-        <link href="https://zenn.dev/strix/articles/290fed1c2a5665"/>
-        <updated>2023-09-24T14:43:19.000Z</updated>
-        <summary type="html"><![CDATA[概要
-コストを最適化するために、定期的なリソースの棚卸はかかせません。
-例えば検証用やPoCで一時的に作成したEC2を目的が達成したとしても何故かしばらく残しておくことが多々あると思います。そして、消し忘れると後に誰が作ったのかわからず消したいけど消せないと悶々とした気持ちになるのです。
-誰が作ったのかが一目瞭然となれば、すぐ連絡をすることができスムーズにアクションができますよね。例えばCloudTrailとLambdaを使って作成者（Author）のタグ情報を自動的につける設定できないか考えてみました。
-
- 大まかな流れ
-CloudTrailでは誰が・いつ・何をしたかが記録されるの...]]></summary>
-        <author>
-            <name>Masayuki Harano</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Docker + FastAPI + nginxで環境構築]]></title>
-        <id>https://zenn.dev/hiromichi1729/articles/e1d4fd87484ceb</id>
-        <link href="https://zenn.dev/hiromichi1729/articles/e1d4fd87484ceb"/>
-        <updated>2023-09-24T14:29:10.000Z</updated>
-        <summary type="html"><![CDATA[背景
-業務で今まで触ったことのなかったpythonでapi開発をする必要になったので、同じような人がいた場合参考になればと思い自分が行った環境構築の手順をここに残します。
-
- Pythonのフレームワーク
-pythonのどのフレームワークを使って開発をするかからまず決めないといけなかったので、参考までにどういう基準でFastAPIを選んだのか書いておきます。
-一応、候補として
-
-Django
-Flask
-FastAPI
-
-の3種類がありました。
-Djangoはフルスタックなフレームワークなので、必要なものが全部揃っているのがメリットですが、今回はサーバーが立てられればいいのでオーバー...]]></summary>
-        <author>
-            <name>百木拓迪</name>
         </author>
     </entry>
 </feed>
