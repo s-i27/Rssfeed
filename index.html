@@ -22,6 +22,215 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-26 datetime="2023-10-26T16:59:11.000Z">2023-10-26</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-26 datetime="2023-10-26T16:59:11.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/ogawa3427/articles/785b83f3c56a8a"
+                        open
+                      >
+                        <summary class="article-expander__title">WSL上のUbuntuでPythonとSelenium(Chrome)を豪勢に環境構築する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ogawa3427/articles/785b83f3c56a8a">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--SPv62iLx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:WSL%25E4%25B8%258A%25E3%2581%25AEUbuntu%25E3%2581%25A7Python%25E3%2581%25A8Selenium%2528Chrome%2529%25E3%2582%2592%25E8%25B1%25AA%25E5%258B%25A2%25E3%2581%25AB%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E5%25B0%258F%25E5%25B7%259D%252FOgawa3427%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNiNjM3MTBjN2QuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Seleniumを始めたのですが、複数環境で使うので環境構築メモを残します。
+
+ 「豪勢」とは何か
+WSLのUbuntuにはPythonが付属していますが、バージョンの上げ方などが複雑で大変そうだったので今後の拡張性も考えてpyenvとvenvを入れて力技で解決してしまおう！ということです。
+
+ 環境
+WSL2 1.2.5.0
+Ubuntu-20.04(インストール直後)
+Python3.11.6
+
+ まずPython本体を3.11.6にする
+いつもの
+
+bash
+sudo apt update  
+sudo apt -y upgrade  
+
+pyenvをcloneしてきて隠しフォルダ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/6d5e5b969842d7"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-312｜C - Invisible Hand</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/6d5e5b969842d7">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--aWx8VopS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-312%25EF%25BD%259CC%2520-%2520Invisible%2520Hand%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-312 C - Invisible Hand
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def check(a, b, p):
+    sellers &#x3D; len([x for x in a if x &#x3D; p])
+    return sellers ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/argi_berri/articles/feb2489d646847"
+                        open
+                      >
+                        <summary class="article-expander__title">LightGBM (scikit-learn API) で ROC 曲線を描く</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/argi_berri/articles/feb2489d646847">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--rBi_4PnI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:LightGBM%2520%2528scikit-learn%2520API%2529%2520%25E3%2581%25A7%2520ROC%2520%25E6%259B%25B2%25E7%25B7%259A%25E3%2582%2592%25E6%258F%258F%25E3%2581%258F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ARGIA%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RhYWQwM2NmMzcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>前文
+
+ 注意
+
+これはメモである。正確性を保証しない。
+
+
+ 環境とライブラリの前提
+
+環境：WSL + mamba
+ライブラリ：scikit-learn, lightgbm, seaborn
+
+LightGBM は scikit-learn API から呼び出す。
+
+
+ 本編
+
+ モデルの準備と予想
+(X_train, y_train)と (X_test, y_test) はそれぞれ学習と検証に用いる説明変数と目的変数のデータセットである。その他の詳細は割愛する。
+import lightgbm as lgb
+
+model &#x3D; lgb.LGBMClassifier(...)
+mo...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/shytaani/articles/863d3f83f40095"
+                        open
+                      >
+                        <summary class="article-expander__title">【社内勉強会③】Linter, Formatterについて</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shytaani/articles/863d3f83f40095">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--qmnBlUW9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E7%25A4%25BE%25E5%2586%2585%25E5%258B%2589%25E5%25BC%25B7%25E4%25BC%259A%25E2%2591%25A2%25E3%2580%2591Linter%252C%2520Formatter%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Toru.T%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y1FiejZORHAwb08wbTdxWS05dUFJZGlfYVIyVlJUbHdGb1A3ODRieGJJPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Linterとは
+Linterは、ソースコードを解析して、潜在的なバグの検出や、規定されたルール[1]に沿ってコードが書かれているかをチェックする静的解析ツールの1つです。
+
+ Formatterとは
+Formatterは、コードのスタイルをチェックし、規定されたルール[1:1]に基づいてコードを整形するツールです。
+
+ Linter、Formatterを利用するメリット
+1. コードの品質向上
+Linterは、潜在的なバグや不適切なコーディングスタイルを検出し、それらを修正することでコードの品質を向上させます。
+2. 一貫性のあるコーディングスタイル
+Formatterは、一貫性の...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/merosu_radio/articles/2da39a25f91f05"
+                        open
+                      >
+                        <summary class="article-expander__title">Optunaによる多目的最適化を実験に組み込む</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/merosu_radio/articles/2da39a25f91f05">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--72aChdXK--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Optuna%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E5%25A4%259A%25E7%259B%25AE%25E7%259A%2584%25E6%259C%2580%25E9%2581%25A9%25E5%258C%2596%25E3%2582%2592%25E5%25AE%259F%25E9%25A8%2593%25E3%2581%25AB%25E7%25B5%2584%25E3%2581%25BF%25E8%25BE%25BC%25E3%2582%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:merosu_radio%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFjMGU2MGFkYzMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+例えば製造業では、顧客要求物性を達成するための条件チューニング、あるいはプラント製造条件をチューニングする機会が数多くあるかと思います。
+その際に、往々にして物性Aの値が良化すると物性Bの値が悪化するケースが存在するかと思います。
+その際に使える機械学習の手法として、Optunaによる多目的最適化があります。
+本記事ではOptunaによる多目的最適化を実験に組み込むためのサンプルコードを紹介します。
+
+
+ 実装
+
+ サンプルデータの作成
+
+
+ サンプルデータの分布確認
+まずは、今回使用するサンプルデータを作成します。
+物性値の硬度と靭性を以下のように定式化します。
+実際はこ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-25 datetime="2023-10-25T15:58:23.000Z">2023-10-25</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-25 datetime="2023-10-25T15:58:23.000Z"></time>
           </button>
@@ -6228,341 +6437,6 @@ SQカ...</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yonedar/articles/f1bd70f59ebe89"
-                        open
-                      >
-                        <summary class="article-expander__title">AIボイチェン RVCの設定方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yonedar/articles/f1bd70f59ebe89">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--zMnhlYsp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AI%25E3%2583%259C%25E3%2582%25A4%25E3%2583%2581%25E3%2582%25A7%25E3%2583%25B3%2520RVC%25E3%2581%25AE%25E8%25A8%25AD%25E5%25AE%259A%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yone%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I0MmZjN2Y4ZjcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-環境構築から学習データ作成・利用までを記載
-RVCのgithubを参照しつつ補足しています
-
- 環境構築
-
-
-
- 仮想環境構築(不要な場合はスキップ）
-
-rvc用の仮想環境をanacondaで構築する場合(rvcという名称でpython3.10入れる）conda create -n rvc python&#x3D;3.10
-
-
-仮想環境の起動conda activate rvc
-
-
-
-
-
-
- RVCの導入
-
-
-
-2.1. win + Nvidia(RTX30xx)を利用する場合
-
-cmdで下記を実行し、cudaのバージョンが11.7か11.8か確認するnvcc -V
-
-
-11.7か1...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mtmaru/articles/3e64ccfc4fc2d2"
-                        open
-                      >
-                        <summary class="article-expander__title">遅延評価と機械学習</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mtmaru/articles/3e64ccfc4fc2d2">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--PQ1mpnCn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E9%2581%2585%25E5%25BB%25B6%25E8%25A9%2595%25E4%25BE%25A1%25E3%2581%25A8%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:mtmaru%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzgzMzI4NmUyYmMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>最近「なぜ関数プログラミングは重要か」という文書の存在を知りました。関数型プログラミング界隈ではかなり有名な文書のようだったので私も読んでみたのですが、話題の一つとして「遅延評価がプログラムのモジュール化を可能にし、生産性を高める」という話が事例とともに説明されており、とても勉強になりました。まだまだ理解しきれてはいませんが……
-本記事では、「なぜ関数プログラミングは重要か」に触発された私が、試しに機械学習のパイプライン構築に遅延評価を適用してみた事例を紹介します。読者のターゲットは普段Pythonで機械学習に触れているデータサイエンティストの方です。本記事を通して、遅延評価を使うと機械...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;17
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/nekoallergy/articles/dl-advanced-featuremap-anchor"
-                        open
-                      >
-                        <summary class="article-expander__title">【物体検出】特徴マップとアンカーボックスの関係って？【図解】</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nekoallergy/articles/dl-advanced-featuremap-anchor">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--8KYASLcX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E7%2589%25A9%25E4%25BD%2593%25E6%25A4%259C%25E5%2587%25BA%25E3%2580%2591%25E7%2589%25B9%25E5%25BE%25B4%25E3%2583%259E%25E3%2583%2583%25E3%2583%2597%25E3%2581%25A8%25E3%2582%25A2%25E3%2583%25B3%25E3%2582%25AB%25E3%2583%25BC%25E3%2583%259C%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25B9%25E3%2581%25AE%25E9%2596%25A2%25E4%25BF%2582%25E3%2581%25A3%25E3%2581%25A6%25EF%25BC%259F%25E3%2580%2590%25E5%259B%25B3%25E8%25A7%25A3%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:NekoAllergy%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRkMzhmNmU1YjguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-物体検出とは、写真の中から「何が写っているか？」と「どこにあるか？」を見つける技術です。
-
-物体検出とは？
-この物体検出では、アンカーボックス という技術が使われます。
-アンカーボックスの考え方を正しく理解するためには、まず 特徴マップ というものを理解していきましょう。
-
- 特徴マップって？
-特徴マップとは、画像の中から重要な情報を取り出し、それを保存する技術です。
-
-特徴マップって？
-
-
-情報を取り出す: 画像はたくさんの情報を持っています。CNNを使うことで、画像の内容や形状といった特徴（情報）を抽出することができます。これらの情報は「特徴マップ」と表現され、深い層に...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/takiser/articles/668b0ed83ef251"
-                        open
-                      >
-                        <summary class="article-expander__title">coco-annotatorから必要な部分だけ抜き取る</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takiser/articles/668b0ed83ef251">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ejERFMcL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:coco-annotator%25E3%2581%258B%25E3%2582%2589%25E5%25BF%2585%25E8%25A6%2581%25E3%2581%25AA%25E9%2583%25A8%25E5%2588%2586%25E3%2581%25A0%25E3%2581%2591%25E6%258A%259C%25E3%2581%258D%25E5%258F%2596%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takiser%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dacXJINlVvNlVkY28zd3FMamhhZnQwd1JhWHNrT3ZLNjlzSVVwPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>何ができるコード？
-coco-annotatorでkeypointだけをannotationしたデータセットのjsonからfile_nameとkeypointsだけを抜き取ってjsonファイルを作成します。
-元ファイルがあるディレクトリにsimple_dataset.jsonとして出力されます。
-
- 何に使ったの？
-自作keypoint detection深層学習モデルを作成中です。被写体が絶対に写っていること、全てのkeypointが見えていることを条件として簡易的なモデルを作成しています。必要な情報は画像に対応する3点のkeypointsなのでそれだけを抽出するために作成した。
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/5d0b824fb24082"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-313｜B - Who is Saikyo?</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/5d0b824fb24082">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--3Due2mj9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-313%25EF%25BD%259CB%2520-%2520Who%2520is%2520Saikyo%253F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-313 B - Who is Saikyo?
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-def main():
-    n, m &#x3D; getIntMap()
-    ab &#x3D; getIntListRow(m)
-
-    r &#x3D; [0] + [0 for _ in range(n)]
-    for a, ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/54b5f1cfe5a407"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-313｜A - To Be Saikyo</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/54b5f1cfe5a407">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--CVaOO7oz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-313%25EF%25BD%259CA%2520-%2520To%2520Be%2520Saikyo%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-313 A - To Be Saikyo
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-def getIntList():
-    return list(map(int, input().split()))
-
-def main():
-    n &#x3D; getInt()
-    a &#x3D; getIntList()
-
-    if n &#x3D;&#x3D; 1:
-        print(0)
-    else:
-        m &#x3D; max(a[1:])
-        print(0 if a[0] &gt; m else ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/takiser/articles/60631464166421"
-                        open
-                      >
-                        <summary class="article-expander__title">jsonファイルの構造を任意深度で可視化する(python)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takiser/articles/60631464166421">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--m_d0bPH6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:json%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AE%25E6%25A7%258B%25E9%2580%25A0%25E3%2582%2592%25E4%25BB%25BB%25E6%2584%258F%25E6%25B7%25B1%25E5%25BA%25A6%25E3%2581%25A7%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2528python%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takiser%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dacXJINlVvNlVkY28zd3FMamhhZnQwd1JhWHNrT3ZLNjlzSVVwPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>何をするコード？
-pythonを使ってjsonの構造を可視化します。
-ファイルのパスと表示したい深度を実行時引数で指定できます。
-表示するのはjsonのkeyです。
-
- 何に使ったの？
-jsonで書かれた深層学習用データセットの構造を知りたいと思った時に使いました。
-
- コード
-json-visualizeKey.py
-import json
-import sys
-from pathlib import Path
-import re
-
-
-def open_json(path):
-    with open(path) as data:
-        return json.load...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/eurekapu/articles/3a3fa62e444cde"
-                        open
-                      >
-                        <summary class="article-expander__title">フォルダ・ファイルの変更をざっとみたいときに</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/eurekapu/articles/3a3fa62e444cde">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--sMAwZloF--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25AB%25E3%2583%2580%25E3%2583%25BB%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AE%25E5%25A4%2589%25E6%259B%25B4%25E3%2582%2592%25E3%2581%2596%25E3%2581%25A3%25E3%2581%25A8%25E3%2581%25BF%25E3%2581%259F%25E3%2581%2584%25E3%2581%25A8%25E3%2581%258D%25E3%2581%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E5%25B0%258F%25E6%259D%25BE%25E5%2595%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M4MjU4OTdlYTEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>私はITに強い税理士・公認会計士の小松啓です。今日はコードでどのように業務を自動化しているかをご紹介します。
-特に財務デューデリジェンスでは、多くのデータがクラウドにアップロードされます。その管理が大変です。そこで、毎朝ローカルに新しいフォルダをダウンロードし、Pythonスクリプトで更新されたファイルを特定します。これでデータの整理が効率的に行えます。
-このスクリプトはフォルダとファイルの構造をテキストファイルで見られるようにします。テキストファイルには年月日が付き、指定の場所に保存されます。
-import os
-from tkinter import Tk, filedialog, ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-09-26 datetime="2023-09-26T16:14:18.000Z">2023-09-26</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-09-26 datetime="2023-09-26T16:14:18.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/micchi/articles/e0a584deeced0a"
-                        open
-                      >
-                        <summary class="article-expander__title">文章を自動で改行して字幕を作る。(BudouX in Python）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/micchi/articles/e0a584deeced0a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Gk2l3TYn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2596%2587%25E7%25AB%25A0%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E3%2581%25A7%25E6%2594%25B9%25E8%25A1%258C%25E3%2581%2597%25E3%2581%25A6%25E5%25AD%2597%25E5%25B9%2595%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%25E3%2580%2582%2528BudouX%2520in%2520Python%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:micchi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRhNzljMjNjOTUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>ゴール：文章を読みやすい位置で改行するために分割する。
-先日、BudouX: 読みやすい改行のための軽量な分かち書き器という記事が公開されていました。
-動画の字幕を作成するために早速使ってみました。
-
- 開発環境
-
-Python 3.10.12
-
-
- 事前準備
-pip install budoux
-
- やったこと
-
- 分かち書き
-日本語は単語ごとに空白で区切らないため単語の切れ目の判定が難しいです。
-そこで、BudouXはこの問題を次の文字の間で区切るべきか否かの二値分類問題に落とし込み、文章に対して、予測値が正であれば区切り、そうでなければ区切らないという処理を繰り返すことで、読み...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -6570,8 +6444,8 @@ pip install budoux
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6648142546">
-        <time id="build-timestamp" datetime="2023-10-26T01:12:17.941Z">2023-10-26T01:12:17.941Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6661632937">
+        <time id="build-timestamp" datetime="2023-10-27T01:12:32.795Z">2023-10-27T01:12:32.795Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

@@ -2,10 +2,142 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-10-26T01:12:17.985Z</updated>
+    <updated>2023-10-27T01:12:32.822Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[WSL上のUbuntuでPythonとSelenium(Chrome)を豪勢に環境構築する]]></title>
+        <id>https://zenn.dev/ogawa3427/articles/785b83f3c56a8a</id>
+        <link href="https://zenn.dev/ogawa3427/articles/785b83f3c56a8a"/>
+        <updated>2023-10-26T16:59:11.000Z</updated>
+        <summary type="html"><![CDATA[Seleniumを始めたのですが、複数環境で使うので環境構築メモを残します。
+
+ 「豪勢」とは何か
+WSLのUbuntuにはPythonが付属していますが、バージョンの上げ方などが複雑で大変そうだったので今後の拡張性も考えてpyenvとvenvを入れて力技で解決してしまおう！ということです。
+
+ 環境
+WSL2 1.2.5.0
+Ubuntu-20.04(インストール直後)
+Python3.11.6
+
+ まずPython本体を3.11.6にする
+いつもの
+
+bash
+sudo apt update  
+sudo apt -y upgrade  
+
+pyenvをcloneしてきて隠しフォルダ...]]></summary>
+        <author>
+            <name>小川/Ogawa3427</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-312｜C - Invisible Hand]]></title>
+        <id>https://zenn.dev/hyperdb/articles/6d5e5b969842d7</id>
+        <link href="https://zenn.dev/hyperdb/articles/6d5e5b969842d7"/>
+        <updated>2023-10-26T10:06:25.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-312 C - Invisible Hand
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def check(a, b, p):
+    sellers = len([x for x in a if x <= p])
+    buyers = len([x for x in b if x >= p])
+    return sellers ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LightGBM (scikit-learn API) で ROC 曲線を描く]]></title>
+        <id>https://zenn.dev/argi_berri/articles/feb2489d646847</id>
+        <link href="https://zenn.dev/argi_berri/articles/feb2489d646847"/>
+        <updated>2023-10-26T06:42:23.000Z</updated>
+        <summary type="html"><![CDATA[前文
+
+ 注意
+
+これはメモである。正確性を保証しない。
+
+
+ 環境とライブラリの前提
+
+環境：WSL + mamba
+ライブラリ：scikit-learn, lightgbm, seaborn
+
+LightGBM は scikit-learn API から呼び出す。
+
+
+ 本編
+
+ モデルの準備と予想
+(X_train, y_train)と (X_test, y_test) はそれぞれ学習と検証に用いる説明変数と目的変数のデータセットである。その他の詳細は割愛する。
+import lightgbm as lgb
+
+model = lgb.LGBMClassifier(...)
+mo...]]></summary>
+        <author>
+            <name>ARGIA</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【社内勉強会③】Linter, Formatterについて]]></title>
+        <id>https://zenn.dev/shytaani/articles/863d3f83f40095</id>
+        <link href="https://zenn.dev/shytaani/articles/863d3f83f40095"/>
+        <updated>2023-10-26T05:47:20.000Z</updated>
+        <summary type="html"><![CDATA[Linterとは
+Linterは、ソースコードを解析して、潜在的なバグの検出や、規定されたルール[1]に沿ってコードが書かれているかをチェックする静的解析ツールの1つです。
+
+ Formatterとは
+Formatterは、コードのスタイルをチェックし、規定されたルール[1:1]に基づいてコードを整形するツールです。
+
+ Linter、Formatterを利用するメリット
+1. コードの品質向上
+Linterは、潜在的なバグや不適切なコーディングスタイルを検出し、それらを修正することでコードの品質を向上させます。
+2. 一貫性のあるコーディングスタイル
+Formatterは、一貫性の...]]></summary>
+        <author>
+            <name>Toru.T</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Optunaによる多目的最適化を実験に組み込む]]></title>
+        <id>https://zenn.dev/merosu_radio/articles/2da39a25f91f05</id>
+        <link href="https://zenn.dev/merosu_radio/articles/2da39a25f91f05"/>
+        <updated>2023-10-26T02:42:56.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+例えば製造業では、顧客要求物性を達成するための条件チューニング、あるいはプラント製造条件をチューニングする機会が数多くあるかと思います。
+その際に、往々にして物性Aの値が良化すると物性Bの値が悪化するケースが存在するかと思います。
+その際に使える機械学習の手法として、Optunaによる多目的最適化があります。
+本記事ではOptunaによる多目的最適化を実験に組み込むためのサンプルコードを紹介します。
+
+
+ 実装
+
+ サンプルデータの作成
+
+
+ サンプルデータの分布確認
+まずは、今回使用するサンプルデータを作成します。
+物性値の硬度と靭性を以下のように定式化します。
+実際はこ...]]></summary>
+        <author>
+            <name>merosu_radio</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[独学におすすめのIT書籍 その3]]></title>
         <id>https://zenn.dev/torachi0401/articles/recommend_books3</id>
@@ -3804,223 +3936,6 @@ SQごとにidを割り当てる
 SQカ...]]></summary>
         <author>
             <name>橙。</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AIボイチェン RVCの設定方法]]></title>
-        <id>https://zenn.dev/yonedar/articles/f1bd70f59ebe89</id>
-        <link href="https://zenn.dev/yonedar/articles/f1bd70f59ebe89"/>
-        <updated>2023-09-27T12:33:01.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-環境構築から学習データ作成・利用までを記載
-RVCのgithubを参照しつつ補足しています
-
- 環境構築
-
-
-
- 仮想環境構築(不要な場合はスキップ）
-
-rvc用の仮想環境をanacondaで構築する場合(rvcという名称でpython3.10入れる）conda create -n rvc python=3.10
-
-
-仮想環境の起動conda activate rvc
-
-
-
-
-
-
- RVCの導入
-
-
-
-2.1. win + Nvidia(RTX30xx)を利用する場合
-
-cmdで下記を実行し、cudaのバージョンが11.7か11.8か確認するnvcc -V
-
-
-11.7か1...]]></summary>
-        <author>
-            <name>yone</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[遅延評価と機械学習]]></title>
-        <id>https://zenn.dev/mtmaru/articles/3e64ccfc4fc2d2</id>
-        <link href="https://zenn.dev/mtmaru/articles/3e64ccfc4fc2d2"/>
-        <updated>2023-09-27T09:52:08.000Z</updated>
-        <summary type="html"><![CDATA[最近「なぜ関数プログラミングは重要か」という文書の存在を知りました。関数型プログラミング界隈ではかなり有名な文書のようだったので私も読んでみたのですが、話題の一つとして「遅延評価がプログラムのモジュール化を可能にし、生産性を高める」という話が事例とともに説明されており、とても勉強になりました。まだまだ理解しきれてはいませんが……
-本記事では、「なぜ関数プログラミングは重要か」に触発された私が、試しに機械学習のパイプライン構築に遅延評価を適用してみた事例を紹介します。読者のターゲットは普段Pythonで機械学習に触れているデータサイエンティストの方です。本記事を通して、遅延評価を使うと機械...]]></summary>
-        <author>
-            <name>mtmaru</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【物体検出】特徴マップとアンカーボックスの関係って？【図解】]]></title>
-        <id>https://zenn.dev/nekoallergy/articles/dl-advanced-featuremap-anchor</id>
-        <link href="https://zenn.dev/nekoallergy/articles/dl-advanced-featuremap-anchor"/>
-        <updated>2023-09-27T08:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-物体検出とは、写真の中から「何が写っているか？」と「どこにあるか？」を見つける技術です。
-
-物体検出とは？
-この物体検出では、アンカーボックス という技術が使われます。
-アンカーボックスの考え方を正しく理解するためには、まず 特徴マップ というものを理解していきましょう。
-
- 特徴マップって？
-特徴マップとは、画像の中から重要な情報を取り出し、それを保存する技術です。
-
-特徴マップって？
-
-
-情報を取り出す: 画像はたくさんの情報を持っています。CNNを使うことで、画像の内容や形状といった特徴（情報）を抽出することができます。これらの情報は「特徴マップ」と表現され、深い層に...]]></summary>
-        <author>
-            <name>NekoAllergy</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[coco-annotatorから必要な部分だけ抜き取る]]></title>
-        <id>https://zenn.dev/takiser/articles/668b0ed83ef251</id>
-        <link href="https://zenn.dev/takiser/articles/668b0ed83ef251"/>
-        <updated>2023-09-27T07:12:08.000Z</updated>
-        <summary type="html"><![CDATA[何ができるコード？
-coco-annotatorでkeypointだけをannotationしたデータセットのjsonからfile_nameとkeypointsだけを抜き取ってjsonファイルを作成します。
-元ファイルがあるディレクトリにsimple_dataset.jsonとして出力されます。
-
- 何に使ったの？
-自作keypoint detection深層学習モデルを作成中です。被写体が絶対に写っていること、全てのkeypointが見えていることを条件として簡易的なモデルを作成しています。必要な情報は画像に対応する3点のkeypointsなのでそれだけを抽出するために作成した。
-...]]></summary>
-        <author>
-            <name>takiser</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-313｜B - Who is Saikyo?]]></title>
-        <id>https://zenn.dev/hyperdb/articles/5d0b824fb24082</id>
-        <link href="https://zenn.dev/hyperdb/articles/5d0b824fb24082"/>
-        <updated>2023-09-27T06:08:38.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-313 B - Who is Saikyo?
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def getIntListRow(N):
-    return [list(map(int, input().split())) for _ in range(N)]
-
-def main():
-    n, m = getIntMap()
-    ab = getIntListRow(m)
-
-    r = [0] + [0 for _ in range(n)]
-    for a, ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-313｜A - To Be Saikyo]]></title>
-        <id>https://zenn.dev/hyperdb/articles/54b5f1cfe5a407</id>
-        <link href="https://zenn.dev/hyperdb/articles/54b5f1cfe5a407"/>
-        <updated>2023-09-27T06:08:38.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-313 A - To Be Saikyo
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-def getIntList():
-    return list(map(int, input().split()))
-
-def main():
-    n = getInt()
-    a = getIntList()
-
-    if n == 1:
-        print(0)
-    else:
-        m = max(a[1:])
-        print(0 if a[0] > m else ...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[jsonファイルの構造を任意深度で可視化する(python)]]></title>
-        <id>https://zenn.dev/takiser/articles/60631464166421</id>
-        <link href="https://zenn.dev/takiser/articles/60631464166421"/>
-        <updated>2023-09-27T06:04:58.000Z</updated>
-        <summary type="html"><![CDATA[何をするコード？
-pythonを使ってjsonの構造を可視化します。
-ファイルのパスと表示したい深度を実行時引数で指定できます。
-表示するのはjsonのkeyです。
-
- 何に使ったの？
-jsonで書かれた深層学習用データセットの構造を知りたいと思った時に使いました。
-
- コード
-json-visualizeKey.py
-import json
-import sys
-from pathlib import Path
-import re
-
-
-def open_json(path):
-    with open(path) as data:
-        return json.load...]]></summary>
-        <author>
-            <name>takiser</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[フォルダ・ファイルの変更をざっとみたいときに]]></title>
-        <id>https://zenn.dev/eurekapu/articles/3a3fa62e444cde</id>
-        <link href="https://zenn.dev/eurekapu/articles/3a3fa62e444cde"/>
-        <updated>2023-09-27T04:35:06.000Z</updated>
-        <summary type="html"><![CDATA[私はITに強い税理士・公認会計士の小松啓です。今日はコードでどのように業務を自動化しているかをご紹介します。
-特に財務デューデリジェンスでは、多くのデータがクラウドにアップロードされます。その管理が大変です。そこで、毎朝ローカルに新しいフォルダをダウンロードし、Pythonスクリプトで更新されたファイルを特定します。これでデータの整理が効率的に行えます。
-このスクリプトはフォルダとファイルの構造をテキストファイルで見られるようにします。テキストファイルには年月日が付き、指定の場所に保存されます。
-import os
-from tkinter import Tk, filedialog, ...]]></summary>
-        <author>
-            <name>小松啓</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[文章を自動で改行して字幕を作る。(BudouX in Python）]]></title>
-        <id>https://zenn.dev/micchi/articles/e0a584deeced0a</id>
-        <link href="https://zenn.dev/micchi/articles/e0a584deeced0a"/>
-        <updated>2023-09-26T16:14:18.000Z</updated>
-        <summary type="html"><![CDATA[ゴール：文章を読みやすい位置で改行するために分割する。
-先日、BudouX: 読みやすい改行のための軽量な分かち書き器という記事が公開されていました。
-動画の字幕を作成するために早速使ってみました。
-
- 開発環境
-
-Python 3.10.12
-
-
- 事前準備
-pip install budoux
-
- やったこと
-
- 分かち書き
-日本語は単語ごとに空白で区切らないため単語の切れ目の判定が難しいです。
-そこで、BudouXはこの問題を次の文字の間で区切るべきか否かの二値分類問題に落とし込み、文章に対して、予測値が正であれば区切り、そうでなければ区切らないという処理を繰り返すことで、読み...]]></summary>
-        <author>
-            <name>micchi</name>
         </author>
     </entry>
 </feed>
