@@ -22,6 +22,313 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-03 datetime="2023-11-03T18:36:00.000Z">2023-11-03</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-03 datetime="2023-11-03T18:36:00.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/fmfm_mdk/articles/pytorch-masked-value-is-not-same"
+                        open
+                      >
+                        <summary class="article-expander__title">pytorch, BERT, batch処理, paddingするとしない時とは値が異なる</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/fmfm_mdk/articles/pytorch-masked-value-is-not-same">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--fEWCzlUh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pytorch%252C%2520BERT%252C%2520batch%25E5%2587%25A6%25E7%2590%2586%252C%2520padding%25E3%2581%2599%25E3%2582%258B%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25AA%25E3%2581%2584%25E6%2599%2582%25E3%2581%25A8%25E3%2581%25AF%25E5%2580%25A4%25E3%2581%258C%25E7%2595%25B0%25E3%2581%25AA%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:fmfm_mdk%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKekN3Sm1FLUFSVHNMVmZEZkJ5NWlZWlJyS2tTQld2clBWLXZKNjQ9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>回答：気のせいです．
+正確には，誤差の範囲，で良いと思います．
+以降より細かい検証の話です．
+
+ 環境情報
+
+OS: win 10
+pytorch&#x3D;&#x3D;2.10
+
+
+ 以下のコードでCLSの値を取り出します
+from transformers import BertJapaneseTokenizer, BertModel
+model_name &#x3D; &#x27;cl-tohoku/bert-base-japanese-whole-word-masking&#x27;
+
+tokenizer &#x3D; BertJapaneseTokenizer.from_pretrained( model_name )
+pt_mod...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yamasakit/articles/dc9ed1acd5ae3b"
+                        open
+                      >
+                        <summary class="article-expander__title">VSCode extension mypy-type-checker 使ってみた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yamasakit/articles/dc9ed1acd5ae3b">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--am5UIGKP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:VSCode%2520extension%2520mypy-type-checker%2520%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yamasaKit%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzg1ZDc4NDNmZDguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>💡 やったこと
+
+
+ruff の採用と同時に Linter/Formatter/Type annotation の見直しをしました。
+
+mypy はゆるく使う方針で --disallow-untyped-defs のみ採用しました。
+
+mypy-type-checker を使うことで mypy の利用がより簡便になりました。
+
+
+ 背景
+ruff という Linter/Formatter が最近いい感じらしいです。
+https://docs.astral.sh/ruff
+
+
+flake8, isort, black とほぼ同等 (公式が言うには例えば black は 99% カバー)...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/koki_n22/articles/7c53c523d1b154"
+                        open
+                      >
+                        <summary class="article-expander__title">Djangoで大量データをループでテストする</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/koki_n22/articles/7c53c523d1b154">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--1x-BlCy0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%25E3%2581%25A7%25E5%25A4%25A7%25E9%2587%258F%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E3%2581%25A7%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:koki_n22%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKdzJOTE9mR0hiLTctLUlPODdCTWxucHBQMG16NFNfUGpTazBrMEU9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>このページでは、Djangoで大量データをループでテストする方法を説明します。
+
+ TL;DR
+大量データをループでテストのコードをコピペし、状況に合わせて手を入れてお使いください。
+
+ 何が嬉しいのか
+例えば、チケット価格で11枚目以降は以下のように謎の値引きが行われることがあるとします。
+11枚目: 9500円
+12枚目: 9300円
+13枚目: 9200円
+14枚目: 9000円
+15枚目: 8700円
+...以降、1枚ずつの値段設定が続く
+このテストコードを真面目に書くと、以下のように似通ったコードをひたすら書くことになり、可読性が悪くなります。
+保守性も悪くなり、手を入れる際に...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/praveen2501/articles/4ded1312d863d0"
+                        open
+                      >
+                        <summary class="article-expander__title">title2</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/praveen2501/articles/4ded1312d863d0">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--juFtFe7F--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80:title2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Praveen%2520Kumar%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS01Cck1jaExvMWppNmsyWmxXaGJJeFZyZno1LXAzQlBrbC1DdjRLVWpidkE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Dog parks are usually full of excitement as pooches of all sizes and breeds gather to play, sniff, explore and run amok. That being said, there are some dog parks that take the excitement to a whole new level through innovative landscapes, tasty treats on offer and so much more. Those who enjoy t...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/praveen2501/articles/c774e111f0d371"
+                        open
+                      >
+                        <summary class="article-expander__title">title1</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/praveen2501/articles/c774e111f0d371">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--jMIlTSCk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80:title1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Praveen%2520Kumar%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS01Cck1jaExvMWppNmsyWmxXaGJJeFZyZno1LXAzQlBrbC1DdjRLVWpidkE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>There will be an improvement in relationships. You will participate in grand events. There will be joy and happiness in the home. The family will stay together. You will be involved in traditional activities. You may acquire valuable assets. Attractive proposals will come your way. You will be a ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/croys/articles/d782e590d4d709"
+                        open
+                      >
+                        <summary class="article-expander__title">自前サーバーで動かしてたWebサービスを障害発生から4時間でHeroku環境に移行させた話</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/croys/articles/d782e590d4d709">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--kBnIPQFa--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%2587%25AA%25E5%2589%258D%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%259FWeb%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%25E3%2582%2592%25E9%259A%259C%25E5%25AE%25B3%25E7%2599%25BA%25E7%2594%259F%25E3%2581%258B%25E3%2582%25894%25E6%2599%2582%25E9%2596%2593%25E3%2581%25A7Heroku%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%25AB%25E7%25A7%25BB%25E8%25A1%258C%25E3%2581%2595%25E3%2581%259B%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Croys%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WVdKNXBQWF8wSHhVMG11eF9TVWxvQ3NJSEppVXFBMEI2djIzQXRtUT1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>そもそもどんなサービスを動かしていたのか
+
+ VRSNS　VRChat向けのゲーム内通貨保存システム「CBS」
+・ユーザー数はおよそ3000人
+・日あたりのアクティブユーザーは60人
+
+
+ 特徴
+・ゲーム内でのロールプレイイベントに価値を付加できる
+・イベントに向けて労働ワールドで稼ぎ，イベントをさらに楽しむ
+・キャストは給与を貰える→循環経済の創造
+
+ 今回何が起きたのか
+
+ アップデート
+・ターゲットサービスプラットフォームであるVRChatにクライアントアップデートが入った
+・この際にhttpによる平文通信がブロックされるように変更された
+・事前のアナウンスはなかった
+
+ 当日...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/praveen2501/articles/b8fff48bf6fc43"
+                        open
+                      >
+                        <summary class="article-expander__title">title2</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/praveen2501/articles/b8fff48bf6fc43">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--juFtFe7F--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80:title2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Praveen%2520Kumar%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS01Cck1jaExvMWppNmsyWmxXaGJJeFZyZno1LXAzQlBrbC1DdjRLVWpidkE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Dog parks are usually full of excitement as pooches of all sizes and breeds gather to play, sniff, explore and run amok. That being said, there are some dog parks that take the excitement to a whole new level through innovative landscapes, tasty treats on offer and so much more. Those who enjoy t...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/praveen2501/articles/74bcb5870522fa"
+                        open
+                      >
+                        <summary class="article-expander__title">title1</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/praveen2501/articles/74bcb5870522fa">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--jMIlTSCk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80:title1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Praveen%2520Kumar%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS01Cck1jaExvMWppNmsyWmxXaGJJeFZyZno1LXAzQlBrbC1DdjRLVWpidkE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>There will be an improvement in relationships. You will participate in grand events. There will be joy and happiness in the home. The family will stay together. You will be involved in traditional activities. You may acquire valuable assets. Attractive proposals will come your way. You will be a ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/gomo/articles/971bfa63f0705f"
+                        open
+                      >
+                        <summary class="article-expander__title">Djangoのテンプレートでforのようなendタグを持つカスタムタグを書く</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/gomo/articles/971bfa63f0705f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ng7lHD4L--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%25E3%2581%25AE%25E3%2583%2586%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%2588%25E3%2581%25A7for%25E3%2581%25AE%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AAend%25E3%2582%25BF%25E3%2582%25B0%25E3%2582%2592%25E6%258C%2581%25E3%2581%25A4%25E3%2582%25AB%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25A0%25E3%2582%25BF%25E3%2582%25B0%25E3%2582%2592%25E6%259B%25B8%25E3%2581%258F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Masamoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2gtRjJxMWpOMWJqN1lzb2VDWUYybmlwb21TNk1qcHEzMTdHN3VwPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+pythonのWebフレームワークDjangoで{% for athlete in athlete_list %}
+{{athlete.name}}
+{% endfor %}のような、HTMLや他のタグを間に挟めるendタグを持つカスタムタグを自作する方法です。
+初Django（というかpythonも少ししか書いたことない）なのでお作法とか違ったらすいません。
+ドキュメントは下記ですが少々内容が足りないです。タグの引数の解析の説明がありません。
+https://docs.djangoproject.com/en/4.2/howto/cu...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/robes/articles/f7912be0269b1f"
+                        open
+                      >
+                        <summary class="article-expander__title">BERTで512トークンを超える長文を扱う方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/robes/articles/f7912be0269b1f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--DxpCvo3P--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:BERT%25E3%2581%25A7512%25E3%2583%2588%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%25B3%25E3%2582%2592%25E8%25B6%2585%25E3%2581%2588%25E3%2582%258B%25E9%2595%25B7%25E6%2596%2587%25E3%2582%2592%25E6%2589%25B1%25E3%2581%2586%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:osn_Lofi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYwN2VmNjZiMGEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>BERTは、テキスト分類や感情分析などの自然言語処理タスクにおいて、
+革命的な成果をもたらしたモデルの一つです。
+しかしながら、その使用にあたっては、致命的な制約があります。
+それは、モデルが一度に処理できる文章の長さが512トークンまでという制約です。
+この制約のため、BERTでは長文を扱えないと考えていらっしゃる方も多いと思います。
+私もそうでした。
+この記事では、BERTで512トークンを超える長文を扱う方法について解説していきます。
+
+ BERTで長文を扱う方法
+BERTで長文を扱うための方法として、いくつかのアプローチが提案されています。
+ここでは、最も、原始的な方法として、長...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-11-02 datetime="2023-11-02T21:00:01.000Z">2023-11-02</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-11-02 datetime="2023-11-02T21:00:01.000Z"></time>
           </button>
@@ -6207,360 +6514,6 @@ def max[T](a:...</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/ssfuno/articles/962c7d61ded576"
-                        open
-                      >
-                        <summary class="article-expander__title">plotlyでGEBCOの地形データを可視化してみる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ssfuno/articles/962c7d61ded576">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--j0cArMYm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:plotly%25E3%2581%25A7GEBCO%25E3%2581%25AE%25E5%259C%25B0%25E5%25BD%25A2%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2599%25E3%2581%25B5%25E3%2583%25BC%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I2ZmY3ZDJhMDQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>イントロダクション
-plotlyはインタラクティブなグラフを描けるPythonのライブラリです。こちらの記事を拝見して、GEBCOの地形データをsurface plotで表示してみたいと思ったので試してみました。
-https://qiita.com/tmiyama/items/bba94d4125d9b67edf84
-伊豆諸島のあたりを表示してみた結果がこちらです！（中央奥は伊豆半島）
-海底と比べると島ってすごく高いんだなと感じますね🏝️
-
-
- 動作環境
-
-Python 3.10.12
-netCDF4 1.6.4
-plotly 5.15.0
-
-
- データのダウンロード
-GEBCOはパ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hiyokotti/articles/9213b4f2fa07e2"
-                        open
-                      >
-                        <summary class="article-expander__title">点群データのアライメント（回転）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hiyokotti/articles/9213b4f2fa07e2">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--I1AQh7cH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%2582%25B9%25E7%25BE%25A4%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E3%2582%25A2%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588%25EF%25BC%2588%25E5%259B%259E%25E8%25BB%25A2%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%2596%25B0%25E7%25B1%25B3%25E3%2581%25B2%25E3%2582%2588%25E3%2581%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSUN6aEMtZGNQTTNtZng5azZYQ2xVYjhRaWpLZzhKeTFYSTJBTUI3SEtlVEE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>初めに
-LiDARセンサなどで3次元空間をスキャンした際に、センサのわずかな設置角度ズレなどによって期待のデータとは異なるデータが取れてしまう場合があると思います。
-今回はそんな時に役立つデータの補正方法（の一例）を紹介したいと思います。
-ちょっと数学的な用語などはうろ覚えで書いてますので、間違いあればバッシバシにご指摘ください。。。
-
- 思想
-案件によってさまざまだとは思いますが、今回は3次元空間内の床面を基準としてセンサの傾きを補正します。
-①スキャンした点群データから床面となる平面を特定する
-②特定した平面の方程式（ax+by+cz+d&#x3D;0)を使って回転軸ベクトルを決定する
-③...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hiyokotti/articles/f21d41fcfadca6"
-                        open
-                      >
-                        <summary class="article-expander__title">スクレイピング入門　（Python）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hiyokotti/articles/f21d41fcfadca6">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--XWMFkpeu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%2594%25E3%2583%25B3%25E3%2582%25B0%25E5%2585%25A5%25E9%2596%2580%25E3%2580%2580%25EF%25BC%2588Python%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%2596%25B0%25E7%25B1%25B3%25E3%2581%25B2%25E3%2582%2588%25E3%2581%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSUN6aEMtZGNQTTNtZng5azZYQ2xVYjhRaWpLZzhKeTFYSTJBTUI3SEtlVEE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-昨今なにかとアツいスクレイピング。
-様々な理由で興味がある人もいるのではないでしょうか
-私自身も
-
-趣味であるTCG（主にポケモンカード）を何とかECサイトで定価購入したい
-でもECサイトの定価販売なんて秒で売り切れるから買えない
-代わりに機械が勝手に買ってくれたらうれしいな
-という願望からスクレイピングに手を出し、何とか自動購入ツールを完成させました。
-
-今回はそんな私がスクレイピングに入門するにあたって学んだことを
-備忘録として記します。
-※様々な記事で言われていることですが、スクレイピングを禁止しているサイトもあるのでご自身で規約を読まれて自己責任でお願いします。
-
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/a_adachi/articles/fc314c754f4488"
-                        open
-                      >
-                        <summary class="article-expander__title">IIIFマニフェストを元に画像をダウンロードするPythonスクリプト</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/a_adachi/articles/fc314c754f4488">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--l4acg34n--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:IIIF%25E3%2583%259E%25E3%2583%258B%25E3%2583%2595%25E3%2582%25A7%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E5%2585%2583%25E3%2581%25AB%25E7%2594%25BB%25E5%2583%258F%25E3%2582%2592%25E3%2583%2580%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%2589%25E3%2581%2599%25E3%2582%258BPython%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2597%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:a-adachi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Y5MGI1NDg3YzcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>n番煎じですが、備忘録として書き残します。
-IIIFマニフェストを元に画像をダウンロードするスクリプトです。標準ライブラリのみで動作すると思います。
-python iiif_dl.py https://iiif.example.com/path/to/manifest
-GitHubにもアップロードしています。
-https://github.com/adachi-a/iiif-image-downloader/
-誤りやお気づきの点などありましたらぜひコメントいただけますと幸いです。
-
-iiif_dl.py
-import json
-import os
-import sys
-import ti...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/8a84ecc784b47a"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-320｜A - Leyland Number</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/8a84ecc784b47a">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--M6gXlYKd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-320%25EF%25BD%259CA%2520-%2520Leyland%2520Number%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-320 A - Leyland Number
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    a, b &#x3D; getIntMap()
-
-    print(a ** b + b ** a)
-
-
-if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
-    main()</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hyperdb/articles/1fdaa82f30a397"
-                        open
-                      >
-                        <summary class="article-expander__title">［AtCoder］ABC-320｜B - Longest Palindrome</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/1fdaa82f30a397">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--xHtnYodp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-320%25EF%25BD%259CB%2520-%2520Longest%2520Palindrome%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>設問ページ
-
-🔗ABC-320 B - Longest Palindrome
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s &#x3D; getString()
-
-    c &#x3D; 0
-    for i in range(len(s), 0, -1):
-        for j in range(0, len(s) - i + 1):
-            w &#x3D; s[j:j+i]
-            r &#x3D; w[::-1]
-            if w &#x3D;&#x3D; r:
-                ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mesummery/articles/9d8e4e30c3275e"
-                        open
-                      >
-                        <summary class="article-expander__title">3日間でテック記事のAI要約・翻訳メディアをつくってみました</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mesummery/articles/9d8e4e30c3275e">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--dyPjg4gh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:3%25E6%2597%25A5%25E9%2596%2593%25E3%2581%25A7%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E8%25A8%2598%25E4%25BA%258B%25E3%2581%25AEAI%25E8%25A6%2581%25E7%25B4%2584%25E3%2583%25BB%25E7%25BF%25BB%25E8%25A8%25B3%25E3%2583%25A1%25E3%2583%2587%25E3%2582%25A3%25E3%2582%25A2%25E3%2582%2592%25E3%2581%25A4%25E3%2581%258F%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Na%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzlkNDAxOGU2NGQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>つくったもの
-
-🔗 Tech Sloths
-英語のテックブログなどを中心に、OpenAI APIにより要約と翻訳を行いメディア化しました。
-AIによる、記事の内容を活かした「アイディアや導入例」の提案なども掲載しています。
-
- 開発した背景
-
-日々アップデートされる技術情報、どこから手をつけるかわからなくなりがちだった
-テックブログは長文が多くて読むのに時間がかかる印象があった
-
-英語の文章を読む心理的ハードルの高さがあった
-
-OpenAI API Function calling について知り、何かやりたかった
-
-
- 使用した技術
-
- フロントエンド
-
-Notion
-
-なるべく工数...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-10-04 datetime="2023-10-04T14:03:01.000Z">2023-10-04</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-10-04 datetime="2023-10-04T14:03:01.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/lucidfrontier45/articles/8902653414edc6"
-                        open
-                      >
-                        <summary class="article-expander__title">任意の確率分布でベイズ分類機を作る</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/lucidfrontier45/articles/8902653414edc6">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--MresCg46--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BB%25BB%25E6%2584%258F%25E3%2581%25AE%25E7%25A2%25BA%25E7%258E%2587%25E5%2588%2586%25E5%25B8%2583%25E3%2581%25A7%25E3%2583%2599%25E3%2582%25A4%25E3%2582%25BA%25E5%2588%2586%25E9%25A1%259E%25E6%25A9%259F%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:lucidfrontier45%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzcxY2RkYzI0MmUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>やりたいこと
-scikit-learnのnaive_bayesにはいくつかのモデルが実装されていますが、それ以外の確率分布、特にKDEでフィットした経験分布を用いてベイズ分類機を作りたい。
-
- やり方
-基本的には以下の通りです。
-
-
-C: class
-
-X: 観測値
-
-C^* &#x3D; \mathrm{argmax}_C P(C)P(X|C)
-任意の形のP(X|C)を利用できるようにできるだけ汎用的に作りたいのでこれを抽象クラスにしてAPIだけ定義し、それ以外の部分を実際に実装します。fitで観測データからパラメータを推定し、pdfで確率(密度)を返します。
-
- 分布抽象クラスのAPI
-f...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/shiro_toy_box/articles/3ebcac8e5c229f"
-                        open
-                      >
-                        <summary class="article-expander__title">APIから受け取ったJSONデータをUnityで辞書型に変換する方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shiro_toy_box/articles/3ebcac8e5c229f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--NBpiXO4---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:API%25E3%2581%258B%25E3%2582%2589%25E5%258F%2597%25E3%2581%2591%25E5%258F%2596%25E3%2581%25A3%25E3%2581%259FJSON%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592Unity%25E3%2581%25A7%25E8%25BE%259E%25E6%259B%25B8%25E5%259E%258B%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2582%258D%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyNzY5NDdhMzAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>前書き
-作っているもののオプション設定を作ろうと思い、たどり着いた解決方法です。
-参照の記事をもとにChatGPTで解決することができました。
-https://note.com/sirodon_256/n/nd92fc6c26cc8
-
- やりたいこと
-
-APIでロールプレイの設定の情報取得できるように
-
-
- 本題
-
- APIの処理
-
-api.py
-from fastapi import FastAPI
-import subprocess
-import os
-import character_roleplay
-
-app &#x3D; FastAPI()
-
-@app.get(&quot;/roll_mode...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -6568,8 +6521,8 @@ app &#x3D; FastAPI()
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6740097298">
-        <time id="build-timestamp" datetime="2023-11-03T01:14:44.753Z">2023-11-03T01:14:44.753Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/6751817740">
+        <time id="build-timestamp" datetime="2023-11-04T01:13:40.019Z">2023-11-04T01:13:40.019Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
