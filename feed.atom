@@ -2,10 +2,84 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-11-11T02:13:37.020Z</updated>
+    <updated>2023-11-12T01:20:09.837Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[OpenAIのAPI(GPT-4V・DALL-E3)を使って「絵しりとり」する]]></title>
+        <id>https://zenn.dev/yufuji25/articles/db5d72e2ce279d</id>
+        <link href="https://zenn.dev/yufuji25/articles/db5d72e2ce279d"/>
+        <updated>2023-11-11T17:02:18.000Z</updated>
+        <summary type="html"><![CDATA[A. OpenAI DevDay
+OpenAI DevDay(2023/11/7)の発表で報告されたAPIの一部を使って、簡単なチュートリアルを作ってみたいな～と思い、一例として「絵しりとり」のシステムを構築してみました！
+ソースコードはgithubにまとめてます
+
+!
+Dog → Goldfish → Hawk → Kangaroo → Okapi → ...
+
+
+OpenAI DevDayの様子
+
+https://www.youtube.com/live/U9mJuUkhUzk?si=NUifpYrcx6Wmk4On
+
+ B. 準備
+
+ APIのクレジット設定
+APIを使用するに...]]></summary>
+        <author>
+            <name>Y. Fujimoto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tkinterでデスクトップアプリを作成しPyinstallerで実行ファイルにして配布する]]></title>
+        <id>https://zenn.dev/tsujino/articles/e5d03fc637e8f2</id>
+        <link href="https://zenn.dev/tsujino/articles/e5d03fc637e8f2"/>
+        <updated>2023-11-11T13:53:58.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事ではPythonのTkinterで簡易的なデスクトップアプリを作成し、Pyinstallerで実行ファイルに変換して配布するまでの手順を解説します。
+なお、Pyinstallerはクロスプラットフォームには対応していないため、アプリを起動したいOS上で実行ファイルに変換する必要があります。
+開発環境
+
+OS: Windows10
+Python: 3.8.12
+miniconda3: 4.14.0
+Tkinter: 8.6
+Pyinstaller: 5.6.2
+
+
+ 作業手順
+
+ 1. 事前準備
+miniconda3やPyinstaller等の必要なツールをインストー...]]></summary>
+        <author>
+            <name>Tsujino</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PandasのDataFrameに対してastypeを使用した型変換をする場合の落とし穴]]></title>
+        <id>https://zenn.dev/difromy/articles/eaed0c0ad2c862</id>
+        <link href="https://zenn.dev/difromy/articles/eaed0c0ad2c862"/>
+        <updated>2023-11-11T13:31:06.000Z</updated>
+        <summary type="html"><![CDATA[DataFrameの型変換ですごく時間をかけてしまったので備考録として。
+dataframeのfloat型列をint型に変換したかった。
+列名が固定ではないため、列番号を指定して変換しようと試みたがうまくいかなかった。
+以下単純化したイメージ。
+import pandas as pd
+
+data = {
+    "column1":[1.1,2.2,3.3],
+    "column2":[4.4,5.5,6.6]
+    }
+df = pd.DataFrame(data)
+
+#ilocで列を指定
+df_iloc = df.copy()
+df_iloc.iloc[:,1] = df.il...]]></summary>
+        <author>
+            <name>サダイ</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【個人開発 #1-4】レコメンドシステムを作ってみた vol.4　〜画面の実装〜]]></title>
         <id>https://zenn.dev/waka07/articles/development-diary_1-4</id>
@@ -4180,83 +4254,6 @@ main.py
 data = ...]]></summary>
         <author>
             <name>tsuchi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[VSCodeのisort拡張機能が繰り返しクラッシュする場合の暫定的な解決策]]></title>
-        <id>https://zenn.dev/a_adachi/articles/01585a26e7dcdd</id>
-        <link href="https://zenn.dev/a_adachi/articles/01585a26e7dcdd"/>
-        <updated>2023-10-13T08:38:28.000Z</updated>
-        <summary type="html"><![CDATA[isort拡張機能が繰り返しクラッシュする
-VSCodeを立ち上げると以下のようなエラーが表示されるとの相談を受けました。
-The isort server crashed 5 times in the last 3 minutes. The server will not be restarted.
-
- 暫定的な解決策
-isortのバグのようですが、詳細はわかりませんでした。相談者はimport文のフォーマットは特に必要ないとのことだったので、とりあえず以下リンク先の通り機能を無効化することでエラーが出なくなりました。
-https://github.com/microsoft/vs...]]></summary>
-        <author>
-            <name>a-adachi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[何度も調べてしまうPythonコード]]></title>
-        <id>https://zenn.dev/kt_n/articles/4e848bb1e5dbd6</id>
-        <link href="https://zenn.dev/kt_n/articles/4e848bb1e5dbd6"/>
-        <updated>2023-10-13T04:09:33.000Z</updated>
-        <summary type="html"><![CDATA[概要
-簡単なんだけど、何回でも調べてしまうPythonコードをまとめておく。
-随時更新していきたい。
-
- CSV読み込み
-import csv
-
-with open(csv_filepath, 'rt') as f:
-    # ヘッダーを飛ばす
-    header = next(csv.reader(f))
-    reader = csv.reader(f)
-    data = [row for row in reader]
-
- CSV書き込み
-import csv
-
-with open(csv_filepath, 'wt', newline="", encoding='ut...]]></summary>
-        <author>
-            <name>kt_n</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Function calling に Pydantic を使ってみよう]]></title>
-        <id>https://zenn.dev/os1ma/articles/8958aba961b665</id>
-        <link href="https://zenn.dev/os1ma/articles/8958aba961b665"/>
-        <updated>2023-10-13T03:42:45.000Z</updated>
-        <summary type="html"><![CDATA[OpenAI の文章生成 API（Chat Completions API）には、2023 年 6 月に「Function calling」という機能が追加されました。
-この Function calling ですが、そのまま使おうとすると少し記述の手間が大きいと感じないでしょうか？
-この記事では、Function calling をちょっと楽に使うため、Pydantic を使う方法を紹介します。
-
- Function calling とは
-まず、Function calling について簡単に説明します。
-Function calling は例えば次のように実装します。
-OUTPUT_...]]></summary>
-        <author>
-            <name>oshima_123</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【個人開発 #1-3】レコメンドシステムを作ってみた vol.3　〜推薦アルゴリズム「協調フィルタリング」〜]]></title>
-        <id>https://zenn.dev/waka07/articles/development-diary_1-3</id>
-        <link href="https://zenn.dev/waka07/articles/development-diary_1-3"/>
-        <updated>2023-10-12T23:15:10.000Z</updated>
-        <summary type="html"><![CDATA[作りたいシステム
-忙しい人のためのギフト提案型AI「AiSAP!(エイサップ)」
-忙しい社会人のために、AIが可能な限り素早く（ASAP: As Soon As Possible）、最適なギフトを提案してくれるWebサービス。
-※本記事の目的は個人開発の流れの紹介なので、アルゴリズムや技術の説明について正確性を欠いている箇所があるかもしれません。ご了承ください。
-（詳しい方はコメント等でご指摘いただけると幸いです）
-
- 推薦アルゴリズムとは
-このシステムの肝となるのが「推薦アルゴリズム」です。
-「推薦アルゴリズム」とは、大量のアイテムの中から、様々なデータに基づいて、ユーザにおすすめ...]]></summary>
-        <author>
-            <name>Waka</name>
         </author>
     </entry>
 </feed>
