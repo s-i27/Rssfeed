@@ -2,10 +2,31 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-11-15T01:17:10.455Z</updated>
+    <updated>2023-11-16T01:18:01.795Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[起動中のMayaでPytestを実行する]]></title>
+        <id>https://zenn.dev/tack2/articles/d1eefbcf031da9</id>
+        <link href="https://zenn.dev/tack2/articles/d1eefbcf031da9"/>
+        <updated>2023-11-15T14:31:29.000Z</updated>
+        <summary type="html"><![CDATA[目的
+MayaでPytestを実行する時は通常下記の様にコマンドプロンプトで実行する。
+mayapy -m pytest
+しかし、この方法だと毎回standalone起動が必要となり、テストに時間がかかるため、起動中のMayaでPytestを実行したくなった。
+
+ 実行できない
+普通にスクリプトエディターで実行しても下記エラーが発生し、できない。
+import pytest
+pytest.main(["テストフォルダ"])
+
+# INTERNALERROR>     self.isatty = file.isatty()
+# INTERNALERROR> Attribut...]]></summary>
+        <author>
+            <name>Tack2@TA</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[PyGMTと気象庁のJSONを使って地震の分布を描いてみる]]></title>
         <id>https://zenn.dev/ssfuno/articles/29c092760e7bcb</id>
@@ -4183,75 +4204,6 @@ Python versionは最新版では動かない箇所があるかもしれないの
 ~~~]]></summary>
         <author>
             <name>Ryota Chijimatsu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【初心者向け/ITスクール 63日】Pythonの基礎文法一覧]]></title>
-        <id>https://zenn.dev/eldorado215/articles/41b8cf24d43ae2</id>
-        <link href="https://zenn.dev/eldorado215/articles/41b8cf24d43ae2"/>
-        <updated>2023-10-17T10:45:02.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-今日は、ITスクールに通った63日目の日で、今日学んだ知識を記事にシェアしたいと思います。本記事が、ITを勉強を始めた方々にもロードマップになればいいと思います。
-今日は、現在プログラミング言語でJavaを超えて、1位になっているPythonを勉強しました。
-データーなどを扱うことに特化された言語で、今後PythonでParsingする実習をある予定です。
-まず、その一歩として、Pythonの基礎文法を学び、少しなれる時間を持ちました。
-
- 出力
-
- -- coding: utf-8 --
-Python2まではASCIIにエンコーディングされるので、# -*- coding...]]></summary>
-        <author>
-            <name>Hyon🇰🇷</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[小ネタ]uvicornとlogging]]></title>
-        <id>https://zenn.dev/techflagcorp/articles/8d6327311e1e9f</id>
-        <link href="https://zenn.dev/techflagcorp/articles/8d6327311e1e9f"/>
-        <updated>2023-10-17T03:43:17.000Z</updated>
-        <summary type="html"><![CDATA[[小ネタ]uvicornとlogging
-FastAPIと組み合わせてよく使われるuvicornですが、loggingで軽くハマったのでまとめておきます。
-
- uvicornコマンドで起動する場合
-uvicornは内部でloggingを使ってログを吐きます。下のシンプルなコードで試してみます。
-
-main.py
-from fastapi import FastAPI
-
-app = FastAPI()
-
-@app.get("/hello/{name}")
-def hello(name: str) -> dict:
-    s = f"Hello, {name}!"
-    ret...]]></summary>
-        <author>
-            <name>dagger1</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Fletの画面遷移におけるTIPS]]></title>
-        <id>https://zenn.dev/yuki6flower/articles/ca145854ed55b3</id>
-        <link href="https://zenn.dev/yuki6flower/articles/ca145854ed55b3"/>
-        <updated>2023-10-16T16:27:47.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-FletはPythonでFlutterアプリを構築できるフレームワークです。
-ボタンやテキストボックスといったGUIとしての部品だけでなく、異なる画面間を遷移するための部品も揃ってます。
-ただ、その取り扱いにはけっこう苦戦したので、その時に得た知見をを共有します。
-
- 読者の想定
-Fletの公式ドキュメントの「Navigation and routing」を読んで、以下を理解している
-
-
-page.viewsの最後の要素が画面に表示される
-
-
-page.views：ft.Viewオブジェクトのリスト
-
-
-
-page.go()などでRouteが変更される時にpage.on_r...]]></summary>
-        <author>
-            <name>yuki6flower</name>
         </author>
     </entry>
 </feed>
