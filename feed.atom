@@ -2,10 +2,73 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-11-19T01:22:39.008Z</updated>
+    <updated>2023-11-20T01:18:33.765Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[FastAPIでAPIを使ってみよう①]]></title>
+        <id>https://zenn.dev/kou_kawa/articles/13-fastpi-api-hotpepper</id>
+        <link href="https://zenn.dev/kou_kawa/articles/13-fastpi-api-hotpepper"/>
+        <updated>2023-11-19T13:50:05.000Z</updated>
+        <summary type="html"><![CDATA[🎯目的
+
+公開されているAPIからデータを取得してみよう
+今回はフリーでクライアントキーを取得して実行できる「hotpepper」を使用してみた
+
+
+ ホットペッパーのAPIキーを取得
+以下サイトで新規登録を行い、APIキーを取得します。
+https://webservice.recruit.co.jp/index.html
+Powered by ホットペッパーグルメ Webサービス
+
+ API構成
+今回のAPI構成は以下になります。
+GET : /hotpepper (ホットペッパーのAPIを実行し、データを取得する)
+
+ プロジェクトフォルダ構成
+今回のプロジェクトフォルダ構成は...]]></summary>
+        <author>
+            <name>Kou</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【要注意】Azure OpenAIのopenaiパッケージのバージョンが上がったことによりPythonの書き方が大きく変わりました]]></title>
+        <id>https://zenn.dev/pipon_tech_blog/articles/6fbc3cc6cb22be</id>
+        <link href="https://zenn.dev/pipon_tech_blog/articles/6fbc3cc6cb22be"/>
+        <updated>2023-11-19T10:11:30.000Z</updated>
+        <summary type="html"><![CDATA[こちらの記事でもOpenAIのパッケージが変わったことに驚いたことを書いているのですが、
+友人もコード書き直しだ〜と嘆いていたので、皆んな困ってると思い記事を書いています。
+https://zenn.dev/pipon_tech_blog/articles/f84f4e11c085a9
+OpenAI Pythonの1系が出まして、普通にinstallすると以前の書き方と変わります。
+公式はこちらがわかりやすいです。
+https://learn.microsoft.com/ja-jp/azure/ai-services/openai/quickstart?tabs=command-line...]]></summary>
+        <author>
+            <name>seiyakitazume</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ruff + pre-commitでコミット時にコード品質を保ちたい]]></title>
+        <id>https://zenn.dev/nowa0402/articles/79aaeb8db5731c</id>
+        <link href="https://zenn.dev/nowa0402/articles/79aaeb8db5731c"/>
+        <updated>2023-11-19T02:30:00.000Z</updated>
+        <summary type="html"><![CDATA[リモートブランチのコードの品質を保ちたい
+最近、コードレビューする時にこんな悩みがありました。
+
+戻り値のアノテーションが漏れているな…
+docString書き忘れている…
+あれ？そもそもこれ書いた人のフォーマッター・リンター効いていないかも…？
+
+個人的な意見として
+リモートブランチにプッシュされるコードはリンターやフォーマッターを正常に通過したものであってほしいと思っています。
+正常に通過したものであれば、本来のコードレビューの目的である
+コードの書きっぷりに注力できると思いました。
+色々調べた結果、pre-commitを使えば解決できそうだとわかったので
+検証含めて記事に残しま...]]></summary>
+        <author>
+            <name>nowa</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ryeで作成したPythonカーネルにVS CodeのJupyterで接続する]]></title>
         <id>https://zenn.dev/takelushi/articles/ca8ed217a66593</id>
@@ -4146,57 +4209,6 @@ Python
 ...]]></summary>
         <author>
             <name>だよ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonでFXのユロドルアノマリーを検証]]></title>
-        <id>https://zenn.dev/harukii/articles/60296649d2af57</id>
-        <link href="https://zenn.dev/harukii/articles/60296649d2af57"/>
-        <updated>2023-10-21T06:00:24.000Z</updated>
-        <summary type="html"><![CDATA[値動きの特徴
-import pandas as pd
-import MetaTrader5 as mt5
-from datetime import timedelta
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# MT5への接続
-mt5.initialize()
-
-def fetch_and_prepare(symbol, timeframe, count, timezone_hours, ratio_calculation):
-    # データの取得
-    rates = mt5.copy_rates_from...]]></summary>
-        <author>
-            <name>ホソノP</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Flask 環境導入]]></title>
-        <id>https://zenn.dev/apo_zenn/articles/fedaf3afd583e7</id>
-        <link href="https://zenn.dev/apo_zenn/articles/fedaf3afd583e7"/>
-        <updated>2023-10-21T05:46:42.000Z</updated>
-        <summary type="html"><![CDATA[環境導入
-仮想環境(venv)の中に導入していきます。
-
- shell
-$ py -3.8 -m venv venv # 仮想環境作成 (-3.8には任意のpythonバージョンを指定)
-$ .\venv\Scripts\activate # 仮想環境をactivate
-$ cd venv # venv内に移動
-
-$ pip install Flask # Flaskインストール
-$ mkdir src # venv内に作業フォルダを作成
-$ cd src
-
-
-
- アプリケーションの作成(srcフォルダ内)
-
- hello.py
-from flask import Flask
-
-ap...]]></summary>
-        <author>
-            <name>apo_zenn</name>
         </author>
     </entry>
 </feed>
