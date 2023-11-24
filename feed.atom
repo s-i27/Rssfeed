@@ -2,10 +2,200 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-11-23T01:17:21.705Z</updated>
+    <updated>2023-11-24T01:15:38.882Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[とっても軽いDistrolessコンテナでPythonとFlaskを動かす]]></title>
+        <id>https://zenn.dev/tkithrta/articles/93dca23f0f93df</id>
+        <link href="https://zenn.dev/tkithrta/articles/93dca23f0f93df"/>
+        <updated>2023-11-23T19:08:07.000Z</updated>
+        <summary type="html"><![CDATA[https://gitlab.com/tkithrta/psh
+私はPSHというActivityPub実装サーバーをVercel上で動かしたりしているのですが、Vercelで動かすのに飽きたので最近はRaspberry Pi ZeroやCGIに飽き足らずDockerやらDocker Composeやらで動かそうとしています。
+そしてとっても軽いDistrolessコンテナのPython用のイメージが前から実験的なもので公開されていたことを思い出し、見に行ったらgcr.io/distroless/python3-debian12が実験的なものではなかったため、本番環境で動かしてもよさそうだ...]]></summary>
+        <author>
+            <name>黒ヰ樹</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[パッケージのバイナリ内に組み込まれたpythonパスを直接書き換える]]></title>
+        <id>https://zenn.dev/tsujino/articles/d82c5899cc7b54</id>
+        <link href="https://zenn.dev/tsujino/articles/d82c5899cc7b54"/>
+        <updated>2023-11-23T10:56:38.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+pip等でパッケージをインストールした際、パッケージのexeファイル等のバイナリ内にpythonインタープリタの絶対パスが組み込まれます。普段の運用では特段問題はないですが、特別な事情で別のpython環境などで使用したい場合などには、指定先のパスにpythonが見つからずエラーとなってしまいます。
+そう言ったケースでは、バイナリ値を直接書き換えることでエラーを回避することができます。
+非常に簡単な作業ですが、備忘もかねて手順を残します。
+なお、実行ファイルの書き換えについてはライセンス等に十分ご注意の上実施してください。
+使用環境
+
+OS: Windows10
+Binar...]]></summary>
+        <author>
+            <name>Tsujino</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[長さの違う配列を足し算する (python)]]></title>
+        <id>https://zenn.dev/apo_zenn/articles/ce5a47ae5184ee</id>
+        <link href="https://zenn.dev/apo_zenn/articles/ce5a47ae5184ee"/>
+        <updated>2023-11-23T10:34:01.000Z</updated>
+        <summary type="html"><![CDATA[計算のイメージ
+
+長さが違う配列を用意
+a = [1,2,3,4,5]
+b = [1,2]
+
+
+
+bの足りない部分を0で埋めて長さをそろえる
+a = [1,2,3,4,5]
+b = [1,2,0,0,0]
+
+
+
+足し算する
+a + b = [2,4,3,4,5]
+
+
+ やり方
+np.padを使って足りない長さを0埋めして計算します．
+
+ example.py
+import numpy as np
+
+## 長さの違う配列を足し算する
+a = np.array([1,2,3,4,5])
+b = np.array([1,2])
+b_pad = np.pad(b, (0, 3), "cons...]]></summary>
+        <author>
+            <name>apo_zenn</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[tox実行時にpyenvでインストールしたバージョンを使いたい]]></title>
+        <id>https://zenn.dev/hhatto/articles/89f5abb10cc74c</id>
+        <link href="https://zenn.dev/hhatto/articles/89f5abb10cc74c"/>
+        <updated>2023-11-23T09:39:02.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+tox実行時に少し古めのPythonバージョンでもテストを実行したく、環境的にpyenvを使っているのでtox+pyenvな仕組みはないかを調べました。Webを検索してみるといくつかの記事があるのですが、2023年11月現在でうまく動かなかったので、別の方法を試してみました。そのメモです。
+
+ 前提
+toxのバージョンは4.x系です。
+$ tox --version
+4.11.3 from /usr/local/lib/python3.10/site-packages/tox/__init__.py
+toxの4系は色々ぶれいきんぐなちぇんじーずが入ったようで、プラグインの仕...]]></summary>
+        <author>
+            <name>hhatto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonスクリプト内で動的にライブラリをインストールする際に警告ログを一切出力させない]]></title>
+        <id>https://zenn.dev/nondescript/articles/89fc1bac927b14</id>
+        <link href="https://zenn.dev/nondescript/articles/89fc1bac927b14"/>
+        <updated>2023-11-23T07:08:16.000Z</updated>
+        <summary type="html"><![CDATA[確認環境
+
+Docker(linux/amd64):3.12.0-slim-bookworm
+
+Anaconda(Windows10):3.11.2
+
+
+ コード
+requestsの例
+
+dynamic_install.py
+import importlib
+import pip._internal.cli.main as cli_main
+
+name: str = "requests"
+version: str = "2.29.0"
+try:
+    importlib.import_module(name)
+except ImportError:
+    cli_main(
+  ...]]></summary>
+        <author>
+            <name>素人の戯言</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[lambda関数とは？]]></title>
+        <id>https://zenn.dev/yuto_mo/articles/be0ea32468826c</id>
+        <link href="https://zenn.dev/yuto_mo/articles/be0ea32468826c"/>
+        <updated>2023-11-23T06:21:44.000Z</updated>
+        <summary type="html"><![CDATA[今回はPythonのlambda関数について解説します。
+
+ 結論
+引数 を受け取り、処理 の結果を返す関数
+lambda 引数: 処理
+
+例
+
+add = lambda x, y: x + y
+print(add(5, 3))
+# 8
+
+ 嬉しいこと
+
+
+簡潔さ
+lambda関数のメリットは簡潔さです。関数処理を1行で実装できるため、可読性が向上します。
+
+
+関数を引数として渡せる
+lambda関数は他の関数の引数として渡すことができ、高階関数（他の関数を引数として受け取る関数）との相性が良いです。(例:sorted、map、filter)
+
+
+
+ 例
+
+リストの要素を2倍(map)
+...]]></summary>
+        <author>
+            <name>yuu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Slackへ定期的にデータベースの内容を通知するシステムを作成する]]></title>
+        <id>https://zenn.dev/masamichi2004/articles/8623398542ba63</id>
+        <link href="https://zenn.dev/masamichi2004/articles/8623398542ba63"/>
+        <updated>2023-11-23T05:18:50.000Z</updated>
+        <summary type="html"><![CDATA[概要
+この記事ではSlack APIを使って定期的にデータベースの値を持ってきてslackに通知してくれるアプリを作成します. 実務経験がない方向けにこのシステムの有効性を説明すると, 実務では基本的にデベロッパー以外の人間がデータベースの中身を確認することは難しいです(権限的な問題). ですのでBizサイドの人間が定期的にデータベースの内容を確認するためにはデータが自動的に通知されるようにしておくことがとても有効だということになります. 今回は業務連携システムで一番使われているslackを利用しますが, Discord APIなどを利用して自分で実装することも可能ですので是非トライ...]]></summary>
+        <author>
+            <name>Masamichi Kanakubo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[相対パスが効かない場合の原因　python]]></title>
+        <id>https://zenn.dev/apo_zenn/articles/c6f021a4c0cfb2</id>
+        <link href="https://zenn.dev/apo_zenn/articles/c6f021a4c0cfb2"/>
+        <updated>2023-11-23T03:10:52.000Z</updated>
+        <summary type="html"><![CDATA[原因
+実行場所が悪かった．
+実行したいファイルの階層まで移動して，pythonを実行すれば動いた．
+!
+私の場合，VScodeで実行しており，実行場所がホームディレクトリになってしまっていたため動かなかった．
+
+
+ 実行プログラムと生じたエラー
+
+ test.py
+import os
+
+#フォルダ内のファイルをすべて読み込み
+dir_path = dir_path = "../img"
+files = os.listdir(dir_path)
+print(files)
+
+FileNotFoundError: [WinError 3] 指定されたパスが見つかりません。
+相対パスなのだか...]]></summary>
+        <author>
+            <name>apo_zenn</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[行列積状態について考える (2)]]></title>
         <id>https://zenn.dev/derwind/articles/dwd-matrix-product02</id>
@@ -3783,59 +3973,6 @@ FastAPIは、Python 3.6+で書かれたモダンで高速なPythonのWebフレ�
 簡易性と柔軟性: 依存性注入、セキュリティ、認証などの機能を備えた使いやすい構文を提供す...]]></summary>
         <author>
             <name>Kou</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[画像俳句AI]]></title>
-        <id>https://zenn.dev/daishin/articles/c43d96cca6a411</id>
-        <link href="https://zenn.dev/daishin/articles/c43d96cca6a411"/>
-        <updated>2023-10-25T12:28:07.000Z</updated>
-        <summary type="html"><![CDATA[機能
-ウェブページで撮影か画像ファイルのアップロードができます。
-
-サーバーで200、俳句が返ってきます。
-
-アラートで表示。大成功！
-
-
- 動き
-画像分析でキーワードを抜き出し、日本語に翻訳。
-GPT4のAPIで俳句を生成。
-・この時プロンプトが大事で、日本語に翻訳したものがカタカナだと俳句にならない、わかりやすい日本語にここで修正させる。
-表示。
-
- コード
-ウェブ側
-
-サーバ側
-※辞書が1,000行ありますお気を付けください。この下長いです。
-
-
- 注意点
-・辞書にない言葉が返ってくるとハチャメチャな俳句になる。
-・画像からキーワードをとってくるときの精度上げようと思うと学習が必要]]></summary>
-        <author>
-            <name>川上大心</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[stable diffusion webui extensionエラーへの対処]]></title>
-        <id>https://zenn.dev/meii/articles/04e3d202f038c5</id>
-        <link href="https://zenn.dev/meii/articles/04e3d202f038c5"/>
-        <updated>2023-10-24T14:55:54.000Z</updated>
-        <summary type="html"><![CDATA[エラーの内容
-assert not shared.cmd_opts.disable_extension_access, "extension access disabled because of command line flags"
-
- 理由
-読めばわかるがextensionへのアクセスが制限されてる
-
- 解決方法
-commandlineARGS
---enable-insecure-extension-access
-通常の場合
-./webui.sh --enable-insecure-extension-access]]></summary>
-        <author>
-            <name>mei</name>
         </author>
     </entry>
 </feed>
