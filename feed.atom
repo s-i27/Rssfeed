@@ -2,10 +2,207 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-11-29T01:18:37.800Z</updated>
+    <updated>2023-11-30T01:17:37.779Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Python100本ノック#8 ポリモーフィズム(Polymorphism)]]></title>
+        <id>https://zenn.dev/willyang/articles/b74a5e931d8586</id>
+        <link href="https://zenn.dev/willyang/articles/b74a5e931d8586"/>
+        <updated>2023-11-29T22:28:00.000Z</updated>
+        <summary type="html"><![CDATA[ポリモーフィズム(Polymorphism)とは
+Polymorphism ：「多様性、多相性、多態性」という意味。
+オブジェクト指向プログラミング(object-oriented programming, OOP）においてポリモフィズムとは同じ操作の呼び出しで、呼び出されたオブジェクトごとに異なる適切な動作を行うことを表す。この状態をプログラムで実現するために、クラスの継承関係やインタフェースとクラスの実装関係が使用される。
+
+ duck typing（ダックタイピング）とは
+Pythonでは、厳密なポリモーフィズムにこだわらず、ダックタイピングという手法を用いられている。ダックタ...]]></summary>
+        <author>
+            <name>willyang</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-327｜B - A^A]]></title>
+        <id>https://zenn.dev/hyperdb/articles/f9dff584846cc4</id>
+        <link href="https://zenn.dev/hyperdb/articles/f9dff584846cc4"/>
+        <updated>2023-11-29T08:56:23.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-327 B - A^A
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    b = getInt()
+    a = 0
+
+    while True:
+        a += 1
+        aa = a ** a
+        if aa == b:
+            print(a)
+            break
+        elif aa > b:
+            print(-1)
+            break
+
+
+if __n...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-327｜A - ab]]></title>
+        <id>https://zenn.dev/hyperdb/articles/8fd3370285fa9f</id>
+        <link href="https://zenn.dev/hyperdb/articles/8fd3370285fa9f"/>
+        <updated>2023-11-29T08:56:22.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-327 A - ab
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getString():
+    return input()
+
+
+def main():
+    n = getInt()
+    s = getString()
+
+    print('Yes' if 'ab' in s or 'ba' in s else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Redshift Serverless の Data API を使用して、S3 にある CSVファイルのデータを取り込む]]></title>
+        <id>https://zenn.dev/nkmrkz/articles/aws-redshift-serverless-data-api</id>
+        <link href="https://zenn.dev/nkmrkz/articles/aws-redshift-serverless-data-api"/>
+        <updated>2023-11-29T06:00:04.000Z</updated>
+        <summary type="html"><![CDATA[Redshift Serverless の Data API を使用して、S3 にある CSVファイルのデータを取り込むためのメモ
+
+ やったこと
+
+ Redshift Serverless の NameSpace に S3 アクセス用のIAMポリシーをアタッチする
+
+S3 に保存されている CSV にアクセスするため、S3 バケットへの LIST アクセスとバケットオブジェクトへの GET アクセスを許可するポリシーを持つロールをアタッチする
+
+https://docs.aws.amazon.com/ja_jp/redshift/latest/dg/loading-data-acces...]]></summary>
+        <author>
+            <name>nakamurakzz</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2023年版：boto3のDynamoDB client構文(書き足し中)]]></title>
+        <id>https://zenn.dev/zakinko/articles/e5b401ff399b24</id>
+        <link href="https://zenn.dev/zakinko/articles/e5b401ff399b24"/>
+        <updated>2023-11-29T05:47:26.000Z</updated>
+        <summary type="html"><![CDATA[scan
+ret = client.scan(
+            TableName='hoge_table',
+            FilterExpression='begins_with(aa , :a)',
+            ExpressionAttributeValues={
+                ':a': {'S': "hogehoge"},
+            },
+        )        
+print(ret['Items'])]]></summary>
+        <author>
+            <name>dada</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python100本ノック#7 メソッド解決順序(MRO:Method Resolution Order)]]></title>
+        <id>https://zenn.dev/willyang/articles/d570387c8793a9</id>
+        <link href="https://zenn.dev/willyang/articles/d570387c8793a9"/>
+        <updated>2023-11-29T03:37:35.000Z</updated>
+        <summary type="html"><![CDATA[メソッド解決順序(MRO:Method Resolution Order)とは
+クラスのメソッド実行時に、どのクラスからどういう順番から呼び出されるかを解析するためのメソッドである。メソッドを解析する時に利用されることが多い。
+
+ 基本文法
+クラス名.__mro__
+クラス名.mro()
+
+ 具体例
+class Car(object):
+    def __init__(self, brand, model, color):
+        self.brand = brand
+        self.model = model
+        self.color = color...]]></summary>
+        <author>
+            <name>willyang</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python100本ノック#6 オーバーライド(Override)]]></title>
+        <id>https://zenn.dev/willyang/articles/7d8bb85af4f86d</id>
+        <link href="https://zenn.dev/willyang/articles/7d8bb85af4f86d"/>
+        <updated>2023-11-29T03:07:56.000Z</updated>
+        <summary type="html"><![CDATA[オーバーライドとは
+単に親クラスを継承するだけでは、子クラスの存在意義はなく親クラスを使えばよい。
+継承してさらに独自の特徴を持たせるべきである。
+オーバーライドは、親クラスから継承した属性とメソッドを独自のものに作り直すことである。
+
+ 例
+class Animal(object):
+    def eat(self):
+        print('i can eat')
+    
+    def call(self):
+        print('i can call')
+        
+class Dog(Animal):
+    pass
+
+class Cat(Anim...]]></summary>
+        <author>
+            <name>willyang</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python100本ノック#5 Pythonの継承(inheritance)]]></title>
+        <id>https://zenn.dev/willyang/articles/507462a3b0c5d9</id>
+        <link href="https://zenn.dev/willyang/articles/507462a3b0c5d9"/>
+        <updated>2023-11-29T01:26:27.000Z</updated>
+        <summary type="html"><![CDATA[継承とは
+既存のクラスをもとに、新しいクラスを作成することを「継承」と言う。
+既存クラスを継承して作成したクラスを「派生クラス」と言う。
+継承元となるクラスを「親クラス」や「スーパークラス」、「基底クラス」などと呼ぶ。
+継承先のクラスは「子クラス」「サブクラス」、「派生クラス」と呼ぶ。
+
+ 継承の基本文法
+class B(object):
+    pass
+
+clss A(B):
+    pass
+    
+a = A()
+
+ 具体例
+Personクラスを継承するTeacherとStudentクラス
+class Person(object):
+    def eat(self):
+ ...]]></summary>
+        <author>
+            <name>willyang</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[JijModeling-Transpiler-QuantumでQuantum Alternating Operator Ansatz]]></title>
         <id>https://zenn.dev/jij_inc/articles/jtq_graph_coloring</id>
@@ -3765,144 +3962,6 @@ https://aws.amazon.com/jp/kinesis/video-streams/features/?nc=sn&loc=2
 個人的...]]></summary>
         <author>
             <name>いばらき</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[TransformersでLLMの出力をストリーム生成してQOL向上]]></title>
-        <id>https://zenn.dev/platina/articles/e6aa6e96373c09</id>
-        <link href="https://zenn.dev/platina/articles/e6aa6e96373c09"/>
-        <updated>2023-10-31T10:28:02.000Z</updated>
-        <summary type="html"><![CDATA[Transformers の TextStreamer 機能を使ってストリーム生成を行います。また、Gradio の ChatInterface と組み合わせて快適にチャットするサンプルコードも紹介します。
-今回の環境
-
-Python 3.10.12
-Transformers 4.34.1
-Gradio 3.50.2
-
-!
-今回使用する機能 (TextStreamer, TextIteratorStreamer) はまだ開発中であり、将来的に変更が入って動作しなくなる可能性があるためご注意ください。
-
-今回のコードを試せる Colab ノートブック:
-https://gist.githu...]]></summary>
-        <author>
-            <name>Plat</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LangChain のプログラムを Azure OpenAI で動くように書き換える]]></title>
-        <id>https://zenn.dev/imksoo/articles/f91bd0bce0e18f</id>
-        <link href="https://zenn.dev/imksoo/articles/f91bd0bce0e18f"/>
-        <updated>2023-10-31T07:52:55.000Z</updated>
-        <summary type="html"><![CDATA[LangChain を Python で使う | Hakky Handbook を見ながら LangChain を勉強し始めました。
-が、OpenAI前提で書かれていて、企業内でよく利用検討される Azure OpenAI で動かすとしたらどうするんだ？というところで試行錯誤していました。
-エージェントをチャットモデルと組合わせて使用する のサンプルプログラムを使って Azure OpenAI 上で動作させるにはどうすれば？を OpenAI with Web Browsing に壁打ちしてもらいながらやってみました。
-
- 書き換え前の Python スクリプト
-from langchai...]]></summary>
-        <author>
-            <name>きりの</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[生成AIアプリ開発フレームワークLangChain入門]]></title>
-        <id>https://zenn.dev/yoshiyuki_kono/articles/63e731ab98ffca</id>
-        <link href="https://zenn.dev/yoshiyuki_kono/articles/63e731ab98ffca"/>
-        <updated>2023-10-31T07:19:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-
- 本稿の目的
-本稿は、LangChainという技術について関心を持った方へ向けて、できるだけ前提知識を想定せずに入門するための情報を提供する、という目的で書かれています。
-
- 主な対象読者
-本稿は、主な対象読者として、ビジネスアプリケーションに携わる開発者、アーキテクトを想定しています。そのため、テーマの学術的・理論的な側面よりも、実務的な側面（例えば、生成AIを活用したサービス開発からの観点）に比重を置いています。
-
- 本稿の構成
-本稿の構成は、以下の３ステップからなっています。
-
-生成AI活用アプリケーション概要
-ベクトル検索
-LangChain入門
-
-
- 生成AI活...]]></summary>
-        <author>
-            <name>Yoshiyuki Kono</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-323｜B - Round-Robin Tournament]]></title>
-        <id>https://zenn.dev/hyperdb/articles/9c34c2fde19277</id>
-        <link href="https://zenn.dev/hyperdb/articles/9c34c2fde19277"/>
-        <updated>2023-10-31T06:03:23.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-323 B - Round-Robin Tournament
-
-
-
- 提出結果
-def getInt():
-    return int(input())
-
-
-def getStringRow(N):
-    return [list(input()) for _ in range(N)]
-
-
-def main():
-    n = getInt()
-    s = getStringRow(n)
-
-    entry = {}
-    for i in range(n):
-        entry[i + 1] = s[i].count('o') * 10...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-323｜A - Weak Beats]]></title>
-        <id>https://zenn.dev/hyperdb/articles/6bb0d8d2903328</id>
-        <link href="https://zenn.dev/hyperdb/articles/6bb0d8d2903328"/>
-        <updated>2023-10-31T06:03:23.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-323 A - Weak Beats
-
-
-
- 提出結果
-def getString():
-    return input()
-
-
-def main():
-    s = getString()
-    a = list(map(int, [s[x] for x in range(len(s)) if x % 2 == 1]))
-
-    print('Yes' if sum(a) == 0 else 'No')
-
-
-if __name__ == "__main__":
-    main()]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ノイズ掃き出し法-理論とPythonで実装]]></title>
-        <id>https://zenn.dev/totopironote/articles/d5e2754275ce6c</id>
-        <link href="https://zenn.dev/totopironote/articles/d5e2754275ce6c"/>
-        <updated>2023-10-31T05:56:22.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-今回は、高次元主成分分析(高次元PCA)の1つである、ノイズ掃き出し法(noise-reduction methodology)を紹介します。
-高次元データにおいて従来の主成分分析には問題があることを説明しました。その問題を回避する一つの方法がノイズ掃き出し法です。名前の通り、ノイズの部分を推定して掃き出す方法となっています。
-n>dのPCAはこちらの記事をチェック。
-https://zenn.dev/totopironote/articles/aa17833ef00e5f
-高次元データについて知りたい方はこちらをチェック
-https://zenn.dev/totop...]]></summary>
-        <author>
-            <name>ととぴろnote</name>
         </author>
     </entry>
 </feed>
