@@ -2,10 +2,226 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-12-12T01:18:42.502Z</updated>
+    <updated>2023-12-13T01:18:18.028Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[緯度経度データの検索・処理をいつもやっている]]></title>
+        <id>https://zenn.dev/takilog/articles/199f30c01111a8</id>
+        <link href="https://zenn.dev/takilog/articles/199f30c01111a8"/>
+        <updated>2023-12-12T23:10:44.000Z</updated>
+        <summary type="html"><![CDATA[本記事は情報検索・検索技術 Advent Calendar 2023の13日目の記事です。
+最近Overtureのデータを触っていて、何回も同じ処理を書いていて頭がダメな感じなので、将来の自分のために処理をメモするために書いています。
+特にライブラリをチョロっと使うだけの簡単な処理を書きました。
+せっかくなので、これまでの細々とやっていた記事も宣伝しておきます。
+
+シェープファイル(shpファイル)をPython+Geopandasで扱った
+Overture Maps Foundationのデータを活用したい (3): Mapboxを用いたクラスタ可視化
+
+
+ 設定
+どこかから処理してき...]]></summary>
+        <author>
+            <name>たきろぐ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python で実行時型チェックをしよう：改良版]]></title>
+        <id>https://zenn.dev/wsuzume/articles/67ce25adea10b4</id>
+        <link href="https://zenn.dev/wsuzume/articles/67ce25adea10b4"/>
+        <updated>2023-12-12T17:28:32.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+よく調べたら前回作ったやつよりもシンプルかつ強力なのができたので共有します。
+Python のバージョンは 3.10 以上にしてください。
+
+ 参考文献
+
+inspect --- 活動中のオブジェクトの情報を取得する
+functools --- 高階関数と呼び出し可能オブジェクトの操作
+
+
+ Install
+$ pip install nobus
+from nobus.typecheck import typecheck
+
+ コピペ用
+ロクにメンテされていない個人開発のライブラリに抵抗がある人は以下のソースコードをコピペしてください。50行もなくとても素直で読めば分かると思...]]></summary>
+        <author>
+            <name>Josh Nobus</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[大規模言語モデルを自作しよう！(Transformers+DeepSpeed+torch.compile+flash_attn2）]]></title>
+        <id>https://zenn.dev/selllous/articles/transformers_pretrain_to_ft</id>
+        <link href="https://zenn.dev/selllous/articles/transformers_pretrain_to_ft"/>
+        <updated>2023-12-12T16:43:47.000Z</updated>
+        <summary type="html"><![CDATA[本記事は、LLM Advent Calendar 2023 13日目の記事です。
+https://qiita.com/advent-calendar/2023/llm
+
+ はじめに
+🤗 Transformersは、自然言語処理、マルチモーダル、音声処理、コンピュータビジョン分野の事前学習済モデルを簡単にダウンロードしトレーニングすることが可能なpythonライブラリです。このライブラリを使用し、大規模言語モデル（LLM）の事前学習済モデルをローカルPC上にダウンロードし、それを使用した言語生成や、要約・翻訳・質問応答などの個別のタスクへのファインチューニング、チャットAIへの組み込みなど...]]></summary>
+        <author>
+            <name>celery</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Flaskで全例外を共通関数で処理しつつ、デフォルトのInternal Server Errorページを表示]]></title>
+        <id>https://zenn.dev/nondescript/articles/31517126cebb55</id>
+        <link href="https://zenn.dev/nondescript/articles/31517126cebb55"/>
+        <updated>2023-12-12T15:42:53.000Z</updated>
+        <summary type="html"><![CDATA[TL;DR
+
+エラーがwerkzeug.exceptions.HTTPExceptionのサブクラスでないときにInternalServerError()を返却する
+
+
+ 要求
+
+すべてのルーティングにおける全例外を、HTTPエラーとそれ以外のそれぞれでの共通関数で処理するか、あるいは両方の共通関数で処理したい
+例外をハンドリングした際は全てデフォルトのHTTPエラーフォーマットで返したい
+
+
+ 実装例
+
+
+
+ HTTPエラーとそれ以外のエラーで関数を分ける場合
+
+
+
+server_sep.py
+from flask import Flask
+from werkzeug.except...]]></summary>
+        <author>
+            <name>素人の戯言</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[json 見やすくする]]></title>
+        <id>https://zenn.dev/newjackhack/articles/7ac21dc83035fe</id>
+        <link href="https://zenn.dev/newjackhack/articles/7ac21dc83035fe"/>
+        <updated>2023-12-12T12:44:59.000Z</updated>
+        <summary type="html"><![CDATA[test.txt
+{
+  "person": {
+    "name": "John Doe",
+    "age": 30,
+    "address": {
+      "city": "Example City",
+      "state": "Test State",
+      "zipcode": "12345"
+    },
+    "contacts": [
+      {
+        "type": "email",
+        "value": "john.doe@example.com"
+      },
+      {
+        "type":...]]></summary>
+        <author>
+            <name>New Jack Hack</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ALB / NLB のアクセスログを CloudWatch Logs に転送する（2023 年版）]]></title>
+        <id>https://zenn.dev/nh8939/articles/fcb8d8e92adbd3</id>
+        <link href="https://zenn.dev/nh8939/articles/fcb8d8e92adbd3"/>
+        <updated>2023-12-12T12:32:27.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+ALB / NLB のアクセスログは S3 にしか出力できません。そのため、ログを検索するには Athena など S3 に対応した分析ツールを使用する必要があります。
+Athena も非常に便利なツールですが、もっと手軽に CloudWatch Logs で閲覧したい場合は、S3 の Create Object イベントをトリガーに Lambda を実行してなんとかするパターンが一般的です。サンプルコードも GitHub などで見つけることができます。
+https://github.com/rupertbg/aws-load-balancer-logs-to-cloudw...]]></summary>
+        <author>
+            <name>NH#8939</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[rye add BeautifulSoupしてrye syncするとエラーが出る]]></title>
+        <id>https://zenn.dev/aiyoshida/articles/947d3751dfbb85</id>
+        <link href="https://zenn.dev/aiyoshida/articles/947d3751dfbb85"/>
+        <updated>2023-12-12T06:36:07.000Z</updated>
+        <summary type="html"><![CDATA[結論
+rye remove BeautifulSoup
+rye add beautifulsoup4
+rye sync
+以上。
+
+ 経緯
+$ rye add BeautifulSoup
+$ rye sync
+Reusing already existing virtualenv
+Generating production lockfile: /（プロジェクトパス）/requirements.lock
+    error: subprocess-exited-with-error
+
+    × python setup.py egg_info did not run successfu...]]></summary>
+        <author>
+            <name>Ai.Yoshida</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SQLAlchemy flush超入門]]></title>
+        <id>https://zenn.dev/simpleform/articles/20231212-06-sqlalchemy-flush</id>
+        <link href="https://zenn.dev/simpleform/articles/20231212-06-sqlalchemy-flush"/>
+        <updated>2023-12-12T04:50:07.000Z</updated>
+        <summary type="html"><![CDATA[シンプルフォームの中仙道(@hinata17100) です。本記事は SimpleForm Advent Calendar 2023 の12日目の記事となっています。
+本記事ではPythonの中でよく利用されているORMの1つであるSQLAlchemyの「flush」についてご紹介します。
+
+ flushとは
+flushとは、addとcommitの間というイメージをするとわかりやすいです。どういうことかというと、DB上に一時的に保存はされてはいるけどrollbackが可能な状態です。
+
+ 動作の例
+文章ではわかりにくいと思うので実際に動作を見てみましょう。
+game.nameがvalor...]]></summary>
+        <author>
+            <name>シンプルフォーム Tech Blog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AWS Lambda handler はどのように呼ばれるのか]]></title>
+        <id>https://zenn.dev/hkdord/articles/lambda-handler-deep-dive</id>
+        <link href="https://zenn.dev/hkdord/articles/lambda-handler-deep-dive"/>
+        <updated>2023-12-12T04:05:20.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事はAWS Lambda と Serverless Advent Calendar 2023 12 日目の記事です。
+AWS Lambda の handler 関数は Python の場合ドキュメントにあるように event と context という２つの引数を取ります。
+def handler_name(event, context): 
+    ...
+    return some_value
+一方で Go の場合 handler 関数はドキュメントにあるように context.Context と各呼び出し元のサービスに応じた event を引数に取る関数です...]]></summary>
+        <author>
+            <name>Hidekazu Karino</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonでIMAP接続に使われた暗号化バージョンをチェックする]]></title>
+        <id>https://zenn.dev/yktakaha4/articles/check_imap_tls_version_in_python</id>
+        <link href="https://zenn.dev/yktakaha4/articles/check_imap_tls_version_in_python"/>
+        <updated>2023-12-12T03:30:02.000Z</updated>
+        <summary type="html"><![CDATA[小ネタです🍣
+AWSにおいて、暗号化通信に用いられるプロトコルの最小バージョンが TLS 1.2 以上となることが2022年6月にアナウンスされていましたが、これはSDKなどが利用しているAPIエンドポイントを指しており、サービス内で独自にエンドポイントを定義するものについては一部が未対応の状態になっていました
+https://aws.amazon.com/jp/blogs/news/tls-1-2-required-for-aws-endpoints/
+例えば、マネージドのIMAPサービスであるWorkMailにおいては上記対応の期限が2023年12月であることを通知されていました
+こ...]]></summary>
+        <author>
+            <name>Yuuki Takahashi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[有限要素法による非時間依存3次元シュレディンガー方程式]]></title>
+        <id>https://zenn.dev/lao/articles/4b9d5332e719fa</id>
+        <link href="https://zenn.dev/lao/articles/4b9d5332e719fa"/>
+        <updated>2023-12-12T02:00:58.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+有限要素法による非時間依存1次元シュレディンガー方程式で1次元, 有限要素法による非時間依存2次元シュレディンガー方程式で2次元のシュレディンガー方程式を有限要素法を用いて解いたので, 今回は3次元のシュレディンガー方程式を解く.
+3次元のシュレディンガー方程式は
+
+\left(-\frac{\hbar^2}{2m}\nabla^2+V(x,\,y,\,z)\right)\phi(x,\,y,\,z)=E\phi(x,\,y,\,z)
+
+です（dV は体積分を表す.）. ただし, \displaystyle\nabla^2=\frac{\partial^2}{\partia...]]></summary>
+        <author>
+            <name>らお</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[AIでどんなネタも寿司にする！寿司画像生成iOSアプリをつくった]]></title>
         <id>https://zenn.dev/mesummery/articles/8c54128f0dfbe2</id>
@@ -93,6 +309,21 @@ pygame.init(): Pygameを使う前に、この関数を呼び出してP...]]></su
 本記事では ChatGPT と GNN を用いたニュ...]]></summary>
         <author>
             <name>シンプルフォーム Tech Blog</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChatGPT+LangChain| Elasticsearch公式ドキュメントのQ&Aを作ってみる]]></title>
+        <id>https://zenn.dev/zozotech/articles/86543f2ad9a09e</id>
+        <link href="https://zenn.dev/zozotech/articles/86543f2ad9a09e"/>
+        <updated>2023-12-11T02:25:28.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事は、情報検索・検索技術 Advent Calendar 2023 の 11日目の記事です。
+本記事では、最新のElasticsearchの公式ドキュメントの内容を元にQ&Aを行うチャットボットを、LLMとLangChain、さらには、Elasticsearchのベクトル検索機能を使って作成したので、実現方法や利用した技術について紹介します。
+
+また、RAGを使ったWikipediaのQ&Aを作った話が、同アドベントカレンダーの4日目の記事で紹介されているので、気になる方はご参照ください。
+https://secon.dev/entry/2023/12...]]></summary>
+        <author>
+            <name>さっと</name>
         </author>
     </entry>
     <entry>
@@ -4359,153 +4590,6 @@ https://github.com/kigasudayooo/pdf_to_df
 pdf_list.jsonは以下のように、pdfのリンクと...]]></summary>
         <author>
             <name>あるごん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】日付操作の基本]]></title>
-        <id>https://zenn.dev/robes/articles/f288800b3a2eb5</id>
-        <link href="https://zenn.dev/robes/articles/f288800b3a2eb5"/>
-        <updated>2023-11-13T11:27:01.000Z</updated>
-        <summary type="html"><![CDATA[この記事では、Pythonでの日付操作の基本をご紹介します。
-具体的には、以下の日付型⇔文字列型・数値型の変換について、Pythonコードをご紹介します。
-
-日付型（date型）データを文字列データ（YYYYMMDD形式）に変換
-文字列データ（YYYYMMDD形式）を日付型データに変換
-数値型データ（YYYYMMDD形式）を日付型データに変換
-エポック秒（UNIX時間）を日付型データに変換
-
-
- 日付型⇔文字列型・数値型の変換
-!
-各タスクを解くためのデータフレームを用意します。
-
-import pandas as pd
-
-df = pd.DataFrame({
-    'date型':...]]></summary>
-        <author>
-            <name>osn_Lofi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】OSモジュールについてまとめました]]></title>
-        <id>https://zenn.dev/robes/articles/ae1f1dbcb0c5aa</id>
-        <link href="https://zenn.dev/robes/articles/ae1f1dbcb0c5aa"/>
-        <updated>2023-11-13T11:23:41.000Z</updated>
-        <summary type="html"><![CDATA[Pythonコードを、さまざまOSで使えるようにするため、OSモジュールがあります。
-OSモジュールを使えば、ファイルやディレクトリの操作が簡単になります。
-そんな便利なOSモジュールについて、一覧形式でまとめました。
-
-
-
-関数
-内容
-
-
-
-
-os.getcwd()
-現在の作業フォルダのpathを取得する
-
-
-os.chdir(path)
-作業フォルダをpathに変更する
-
-
-os.mkdir(path)
-フォルダをpathに作成する
-
-
-os.rmdir(path)
-フォルダを削除する。フォルダの中身は空でないと削除できない
-
-
-os.path.exists(path)
-ファイルが存...]]></summary>
-        <author>
-            <name>osn_Lofi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyO3拡張にPythonの型ヒントを付ける]]></title>
-        <id>https://zenn.dev/jij_inc/articles/pyo3-mannually-type-stub-file</id>
-        <link href="https://zenn.dev/jij_inc/articles/pyo3-mannually-type-stub-file"/>
-        <updated>2023-11-13T11:04:26.000Z</updated>
-        <summary type="html"><![CDATA[Pythonの型ヒントとstub file
-Python 3.5 (PEP 484) から型ヒントが導入され、Pythonのコードに型を付けることが出来るようになりました。これはPythonのコードを読むときに型を理解しやすくなるだけでなく、IDEなどのツールが型を利用して補完やリファクタリングを行うことが出来るようになります。また、型ヒントを付けることで静的解析を行うことが出来るようになり、実行時のエラーを減らすことが出来ます。
-def greeting(name: str) -> str:
-    return 'Hello ' + name
-Pythonの型ヒントの歴史と...]]></summary>
-        <author>
-            <name>termoshtt</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[個人開発で会議中ランプを制作]]></title>
-        <id>https://zenn.dev/x_point_1/articles/0d4e2c7fcaa885</id>
-        <link href="https://zenn.dev/x_point_1/articles/0d4e2c7fcaa885"/>
-        <updated>2023-11-13T05:45:25.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-初めまして、ryotaです。
-エックスポイントワンで働き始めて半年が経過した、まだまだ駆け出しのエンジニアryotaです。
-日々わからないことだらけの私ですが、今回は会議中ランプを自作してみることにしました。
-何かと不慣れな為、歪なところもあるかと思いますが、超絶大目に見てやってください😋
-
- 概要
-まず今回使用するのがざっとこんな感じです。
-
-ON AIR ランプ（よくみるやつ）
-MaBeee（電池型ワイヤレス電源供給デバイス）
-
-ぶっちゃけローカルアプリなのでそこまで難しくはありません。
-というのも当初はAWSにデプロイすべくterraformを使用して作成していたので...]]></summary>
-        <author>
-            <name>ryota</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Lambdaチュートリアル: Amazon S3 トリガーを使用してサムネイル画像を作成するを試してみた]]></title>
-        <id>https://zenn.dev/nenenemo/articles/56f78fd441e84e</id>
-        <link href="https://zenn.dev/nenenemo/articles/56f78fd441e84e"/>
-        <updated>2023-11-13T05:23:26.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-awsのLamdbaの以下のチュートリアルでかなりハマってしまいました...。調べてもよくわからず、M1 Macを使用しているからなのか?など色々難しく考えてしまっていたのですが、解決方法はシンプルでした。
-https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/with-s3-tutorial.html#with-s3-tutorial-create-function-code
-ちなみにどんなエラーだったのかというと
-https://predora005.hatenablog.com/entry/2021/05/29/1900...]]></summary>
-        <author>
-            <name>ネモさん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[share]]></title>
-        <id>https://zenn.dev/aoyagi816/articles/509eeacb59ea4e</id>
-        <link href="https://zenn.dev/aoyagi816/articles/509eeacb59ea4e"/>
-        <updated>2023-11-12T23:57:54.000Z</updated>
-        <summary type="html"><![CDATA[https://drive.google.com/drive/folders/1qx0hKZcimE4eJptlufPyQGCeY0SY35ak?usp=sharing]]></summary>
-        <author>
-            <name>Aoyagi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[音声認識機能をつけてみた]]></title>
-        <id>https://zenn.dev/pienthon/articles/3e0e96488f8779</id>
-        <link href="https://zenn.dev/pienthon/articles/3e0e96488f8779"/>
-        <updated>2023-11-12T15:37:39.000Z</updated>
-        <summary type="html"><![CDATA[MVP機能の完成が見えてきた
-大風邪をひきました。
-ベッドで寝ながらPCいじってるのでギリギリレベル。
-しかしながら音声を聞き取り、そのテキストをAPIに投げ、レスポンスを受け取るという部分までは完成しました。
-
-「手を振って」と声をかけたらwaveというレスポンスが返ってきています。
-ここまで来れば、あとはモデルのアニメーションを制御するだけです。
-これからまだまだ機能はつけていくつもりですが、かなりミニマルなベータ版として完成したのではないでしょうか。
-
- 画面のデザインも考えていきたい
-ここまできたので、そろそろ画面構成も考えていきたいところです。
-Figmaで画面作ってみよう...]]></summary>
-        <author>
-            <name>Rininmmmment</name>
         </author>
     </entry>
 </feed>
