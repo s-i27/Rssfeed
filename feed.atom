@@ -2,10 +2,185 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-12-14T01:17:17.602Z</updated>
+    <updated>2023-12-15T01:19:05.368Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[coremltoolsでPyTorchモデルをCore MLモデルに変換する]]></title>
+        <id>https://zenn.dev/shu223/articles/coremltools_pytorch</id>
+        <link href="https://zenn.dev/shu223/articles/coremltools_pytorch"/>
+        <updated>2023-12-14T21:13:14.000Z</updated>
+        <summary type="html"><![CDATA[coremltools 4.0からはコンバーターが大きく刷新され、PyTorchモデルがONNXを経由することなく直接Core MLモデルに変換できるようになった。
+https://qiita.com/shu223/items/6ddfbedb4fdfb2059a11
+coremltoolsをM1 Mac上に環境構築する手順についてはこちらに書いた。
+https://note.com/shu223/n/n95af3b29d89e
+本記事では現行の最新バージョンでPyTorchモデルをCore MLモデルに変換する実装について書く。
+!
+本記事は2022年8月に noteのマガジン に書い...]]></summary>
+        <author>
+            <name>Shuichi Tsutsumi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RAPIDS RMMでRAMをGPUメモリとして使う]]></title>
+        <id>https://zenn.dev/karunru/articles/7ff503d8ef7480</id>
+        <link href="https://zenn.dev/karunru/articles/7ff503d8ef7480"/>
+        <updated>2023-12-14T15:34:12.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事は Kaggle Advent Calendar 2023 15日目の記事です
+皆さん，GPUメモリ足りてますか！？
+kaggleをやっているとどうしてもGPUメモリが足りなくてout_of_memoryを見る機会が多いと思います
+本記事では，RAMをGPUメモリとして扱い，cuDFとpytorchでGPUメモリ足りない問題を解決する方法をご紹介します
+
+ RAPIDS Memory Manager (RMM)
+RAPIDS Memory Manager (RMM) とは，cuDFなどが有名なNVIDIAが開発しているライブラリ郡RAPIDS[1]のうちの一つで，G...]]></summary>
+        <author>
+            <name>やまぴー</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lambdaでdatetimeを定義するとき]]></title>
+        <id>https://zenn.dev/jun784/articles/bc88e972e2a86d</id>
+        <link href="https://zenn.dev/jun784/articles/bc88e972e2a86d"/>
+        <updated>2023-12-14T15:21:35.000Z</updated>
+        <summary type="html"><![CDATA[datetimeをglobalで定義してはいけない。
+lambda_handler以下に定義
+from datetime import datetime, timezone, timedelta
+
+# このように定義するとlambdaのインスタンスの実行時間によって値が変わらない
+now_jst = datetime.now(jst)
+
+# 代わりにlambdaタイプをつける
+now_jst = lambda: datetime.now(jst)
+    
+# UNIXタイムスタンプをミリ秒単位で取得
+unix_timestamp_ms = int(now_jst.timestamp()...]]></summary>
+        <author>
+            <name>Jun Kawasaki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PlanetScale APIを使ってDBテストを高速化した]]></title>
+        <id>https://zenn.dev/keitakn/articles/accelerate-planetscale-test-code</id>
+        <link href="https://zenn.dev/keitakn/articles/accelerate-planetscale-test-code"/>
+        <updated>2023-12-14T15:03:23.000Z</updated>
+        <summary type="html"><![CDATA[概要
+PlanetScale APIを使ってDBテストを高速化したので、その時にやった具体的な手法を記載した記事になります。
+
+ 対象読者
+下記の通りです。
+
+テストコードを書いたことがある人
+PlanetScaleを使ったことがある人
+テストコードの実行速度に関して問題意識を持っている人
+
+サンプルコードはPythonとpytestを使っていますが、この記事の内容は他言語のテストコードでも応用できるかと思います。
+
+ 筆者のバックグラウンド
+普段はTypeScript（Next.jsを主に利用）を用いたフロントエンド開発者です。
+以前はバックエンドエンジニアで主にGoを使ってAWS...]]></summary>
+        <author>
+            <name>keitakn</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ブルーバックとか使わずにクロマキー合成する]]></title>
+        <id>https://zenn.dev/kura103/articles/bd65ce70a2b595</id>
+        <link href="https://zenn.dev/kura103/articles/bd65ce70a2b595"/>
+        <updated>2023-12-14T15:00:01.000Z</updated>
+        <summary type="html"><![CDATA[ハッピバースデートゥミ〜〜〜♪ハッピバースデートゥミ〜〜〜♪、ハッピバースデーディアわたし〜♪
+ハッピバースデートゥミ〜〜〜♪
+くら＠ちゅらデータ（43）です。
+この投稿はちゅらデータアドベントカレンダー2023の15日目の記事です。
+OBSで人と背景をクロマキー合成するときに背景を単色にする必要があるんですが大変なんでどうにかしたいなーって話です。
+
+ はじめに
+オンラインミーティングだとmeetやzoomの機能で綺麗に人と背景を合成してくれて散らかった部屋を晒さなくて済むんですが、OBSで合成する時が困るんですよね。
+OBSのインプットの時点で背景を単色にできればスムーズに合成できる...]]></summary>
+        <author>
+            <name>kura103</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LLM・プロンプトの評価・テストフレームワークについてまとめてみた]]></title>
+        <id>https://zenn.dev/pomcho555/articles/8e42f0a4ce39eb</id>
+        <link href="https://zenn.dev/pomcho555/articles/8e42f0a4ce39eb"/>
+        <updated>2023-12-14T14:09:48.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+ご存知の通り大LLM時代なわけで、つよつよな方からアフィリ記事までこぞってどうやってLLMで良い出力を得るかまとめております。そしてそのテクニックがプロンプトエンジニアリングとして体系化されつつあります。ただし、エンプラでLLMを真面目に使おうとすると、プロンプトの管理やLLMごとの管理、レスポンスタイムの計測など様々な評価を継続的にやる必要があります。従来のデータサイエンスでも結局評価や計測が後々重要になったきたことを考えると必然かもしれませんが、そこらへんをまとめた日本語の記事がなかったので、アドベントカレンダーというチャンスを使ってまとめてみます!
+そのなわけで、この...]]></summary>
+        <author>
+            <name>pomcho555</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GIS × Python Tutorial Session1~ 座標データの中身 ~]]></title>
+        <id>https://zenn.dev/daidai_daitai/articles/6018ca73367744</id>
+        <link href="https://zenn.dev/daidai_daitai/articles/6018ca73367744"/>
+        <updated>2023-12-14T14:01:42.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+GIS関連の業務を行う際に、どの様にデータを扱っていますか?
+ローカル環境でGISに関する計算などを行う場合は、"QGIS" や "ArcGIS Pro" などのデスクトップアプリが有名で、私自身も "ArcGIS Pro" を使用しています。
+GISエンジニアであればともかく、そうでない方はGISを補助的に利用するだけでガッツリ使うという方も少ないかもしれません。もちろんそれでも問題はないのですが、どの様なデータになっているのかを理解していると、活用の幅も広がるかもしれません。
+このTutorialはPythonでGISデータを扱う事に焦点を当てて進めていきます。Part...]]></summary>
+        <author>
+            <name>橙。</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pyenvとpipenvでいい感じに環境作成]]></title>
+        <id>https://zenn.dev/thiem/articles/a04c3113463a69</id>
+        <link href="https://zenn.dev/thiem/articles/a04c3113463a69"/>
+        <updated>2023-12-14T12:51:19.000Z</updated>
+        <summary type="html"><![CDATA[実施環境
+mac pro m2
+
+ step1 Homebrewのインストール
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+ Homebrewの環境変数の設定(zprofileを使用するパターン)
+echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> /Users/<<ユーザ名>>/.zprofile
+eval $(/opt/homebrew/bin/...]]></summary>
+        <author>
+            <name>tammy</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Polars の maintain_order について]]></title>
+        <id>https://zenn.dev/shu421/articles/883deabe505052</id>
+        <link href="https://zenn.dev/shu421/articles/883deabe505052"/>
+        <updated>2023-12-14T09:06:51.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは！shu421と言います。
+Polars Advent Calendar 2023 の 14 日目です。今回は Polars の maintain_order 引数について書きたいと思います。簡単な Tips 的な内容なのでさらっと読んでいただけると嬉しいです。また今回は version 0.19.5 を対象に記事を書きましたが、 Polars はアップデート頻度が多く、仕様がよく変わります。将来的にこの記事とは異なる仕様になる可能性もあるので、最新の仕様は公式ドキュメントを追っていただけると幸いです。
+https://pola.rs/#
+
+ 目次
+
+maintain_orde...]]></summary>
+        <author>
+            <name>shu421</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonでカスタムファイルシステムを作ろう]]></title>
+        <id>https://zenn.dev/nicosys_pub/articles/0yes6yg3pikxchv9klzws</id>
+        <link href="https://zenn.dev/nicosys_pub/articles/0yes6yg3pikxchv9klzws"/>
+        <updated>2023-12-14T06:40:53.000Z</updated>
+        <summary type="html"><![CDATA[Pythonでカスタムファイルシステムを作ろう
+Pythonでカスタムファイルシステムを作ろう
+プログラマーのみなさん、こんにちは！今回はPythonでオレオレファイルシステムを作っているお話です。さっそくコードをご紹介しますね。
+コードはcoloramaを使用して色づけし、フォーマットも適切に行っています。こちらが該当部分です。
+def fuse_method(f):
+    def wrapped_func(*args, **kw):
+        try:
+            return f(*args, **kw)
+        except:
+          ...]]></summary>
+        <author>
+            <name>Nicosys - BE:BUDDY（ビバディ）</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[VS Code+DevContainer+Dockerで最強Python開発環境]]></title>
         <id>https://zenn.dev/aidemy/articles/vscode-env-python</id>
@@ -63,6 +238,25 @@ dbtやDataformを利用すればおのずと依存関係に基づいたデータ
 サンプルのリポジトリです。今回はgraphlibを利用するため...]]></summary>
         <author>
             <name>snagasawa</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新卒研修チーム分けを新卒が最適化した話]]></title>
+        <id>https://zenn.dev/h_atsu/articles/training_team_opt</id>
+        <link href="https://zenn.dev/h_atsu/articles/training_team_opt"/>
+        <updated>2023-12-13T19:23:59.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは、新卒一年目データサイエンティストのはだです。
+この記事はBrainPad Advent Calendarの12日目の記事です。
+
+ はじめに
+本記事では新卒研修のチーム決めを混合整数計画問題で定式化して解いてみた話をしたいと思います。
+研修の空き時間に同期と雑談(ヒアリング？)しながらゼロからモデルを組み立てて、実際のチーム決めでも使われたのでとても良い経験になりました。
+以下ではブレインパッドの新卒研修のざっくりした説明とチーム分けのモデルについて説明していきたいと思います。
+
+ 研修について
+ブレインパッドの新卒研修は4,5,6月の3ヶ月間あり、4月はビジネス系研修、5月...]]></summary>
+        <author>
+            <name>h_atsu</name>
         </author>
     </entry>
     <entry>
@@ -4706,41 +4900,6 @@ pytest.main(["テストフォルダ"])
 # INTERNALERROR> Attribut...]]></summary>
         <author>
             <name>Tack2@TA</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyGMTと気象庁のJSONを使って地震の分布を描いてみる]]></title>
-        <id>https://zenn.dev/ssfuno/articles/29c092760e7bcb</id>
-        <link href="https://zenn.dev/ssfuno/articles/29c092760e7bcb"/>
-        <updated>2023-11-14T13:35:23.000Z</updated>
-        <summary type="html"><![CDATA[イントロダクション
-以前の記事では、USGSの提供する地震情報を使って地震の分布を描きましたが、今回は気象庁の地震情報を使って描いてみます。
-無料で利用できる気象庁の地震情報には下記のようなものがあります。
-
-
-
-情報
-対象期間
-特徴
-
-
-
-
-震度データベース
-1919年〜
-リアルタイム性はないが、詳細な条件で情報を絞り込むことができる。CSV形式で出力可能
-
-
-Atomフィード
-過去数日間
-リアルタイム性があり、詳細な仕様が公開されているので、自動処理に適している。XML形式
-
-
-気象庁Webページ表示用JSON
-過去30日間
-リアルタイム性はあるが、APIとして提供されているわけ...]]></summary>
-        <author>
-            <name>すふー</name>
         </author>
     </entry>
 </feed>

@@ -12,6 +12,156 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/shu223/articles/coremltools_pytorch",
+          "author": "Shuichi Tsutsumi",
+          "description": "coremltools 4.0からはコンバーターが大きく刷新され、PyTorchモデルがONNXを経由することなく直接Core MLモデルに変換できるようになった。\nhttps://qiita.com/shu223/items/6ddfbedb4fdfb2059a11\ncoremltoolsをM1 Mac上に環境構築する手順についてはこちらに書いた。\nhttps://note.com/shu223/n/n95af3b29d89e\n本記事では現行の最新バージョンでPyTorchモデルをCore MLモデルに変換する実装について書く。\n!\n本記事は2022年8月に noteのマガジン に書い...",
+          "link": "https://zenn.dev/shu223/articles/coremltools_pytorch",
+          "publishedOn": "2023-12-14T21:13:14.000Z",
+          "wordCount": 1521,
+          "title": "coremltoolsでPyTorchモデルをCore MLモデルに変換する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--7Ck3R3TM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:coremltools%25E3%2581%25A7PyTorch%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2582%2592Core%2520ML%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shuichi%2520Tsutsumi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pHcm5LNC1XQ2l0MVBwSUFqSTFFODhnLXRFZUd6UmRfVkcwNlZwRmc9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--7Ck3R3TM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:coremltools%25E3%2581%25A7PyTorch%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2582%2592Core%2520ML%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shuichi%2520Tsutsumi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pHcm5LNC1XQ2l0MVBwSUFqSTFFODhnLXRFZUd6UmRfVkcwNlZwRmc9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/karunru/articles/7ff503d8ef7480",
+          "author": "やまぴー",
+          "description": "はじめに\nこの記事は Kaggle Advent Calendar 2023 15日目の記事です\n皆さん，GPUメモリ足りてますか！？\nkaggleをやっているとどうしてもGPUメモリが足りなくてout_of_memoryを見る機会が多いと思います\n本記事では，RAMをGPUメモリとして扱い，cuDFとpytorchでGPUメモリ足りない問題を解決する方法をご紹介します\n\n RAPIDS Memory Manager (RMM)\nRAPIDS Memory Manager (RMM) とは，cuDFなどが有名なNVIDIAが開発しているライブラリ郡RAPIDS[1]のうちの一つで，G...",
+          "link": "https://zenn.dev/karunru/articles/7ff503d8ef7480",
+          "publishedOn": "2023-12-14T15:34:12.000Z",
+          "wordCount": 410,
+          "title": "RAPIDS RMMでRAMをGPUメモリとして使う",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--8NHLVrwl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:RAPIDS%2520RMM%25E3%2581%25A7RAM%25E3%2582%2592GPU%25E3%2583%25A1%25E3%2583%25A2%25E3%2583%25AA%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25A6%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2584%25E3%2581%25BE%25E3%2581%25B4%25E3%2583%25BC%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvay5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--8NHLVrwl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:RAPIDS%2520RMM%25E3%2581%25A7RAM%25E3%2582%2592GPU%25E3%2583%25A1%25E3%2583%25A2%25E3%2583%25AA%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25A6%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2584%25E3%2581%25BE%25E3%2581%25B4%25E3%2583%25BC%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvay5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/jun784/articles/bc88e972e2a86d",
+          "author": "Jun Kawasaki",
+          "description": "datetimeをglobalで定義してはいけない。\nlambda_handler以下に定義\nfrom datetime import datetime, timezone, timedelta\n\n# このように定義するとlambdaのインスタンスの実行時間によって値が変わらない\nnow_jst = datetime.now(jst)\n\n# 代わりにlambdaタイプをつける\nnow_jst = lambda: datetime.now(jst)\n    \n# UNIXタイムスタンプをミリ秒単位で取得\nunix_timestamp_ms = int(now_jst.timestamp()...",
+          "link": "https://zenn.dev/jun784/articles/bc88e972e2a86d",
+          "publishedOn": "2023-12-14T15:21:35.000Z",
+          "wordCount": 155,
+          "title": "Lambdaでdatetimeを定義するとき",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--f_Ltg8TO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Lambda%25E3%2581%25A7datetime%25E3%2582%2592%25E5%25AE%259A%25E7%25BE%25A9%25E3%2581%2599%25E3%2582%258B%25E3%2581%25A8%25E3%2581%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Jun%2520Kawasaki%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2djcFAtXzBjNXY0VjA4dzBvSWxMMjNCdmpJMTRrUTBmUWVEUi1SZUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--f_Ltg8TO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Lambda%25E3%2581%25A7datetime%25E3%2582%2592%25E5%25AE%259A%25E7%25BE%25A9%25E3%2581%2599%25E3%2582%258B%25E3%2581%25A8%25E3%2581%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Jun%2520Kawasaki%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2djcFAtXzBjNXY0VjA4dzBvSWxMMjNCdmpJMTRrUTBmUWVEUi1SZUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/keitakn/articles/accelerate-planetscale-test-code",
+          "author": "keitakn",
+          "description": "概要\nPlanetScale APIを使ってDBテストを高速化したので、その時にやった具体的な手法を記載した記事になります。\n\n 対象読者\n下記の通りです。\n\nテストコードを書いたことがある人\nPlanetScaleを使ったことがある人\nテストコードの実行速度に関して問題意識を持っている人\n\nサンプルコードはPythonとpytestを使っていますが、この記事の内容は他言語のテストコードでも応用できるかと思います。\n\n 筆者のバックグラウンド\n普段はTypeScript（Next.jsを主に利用）を用いたフロントエンド開発者です。\n以前はバックエンドエンジニアで主にGoを使ってAWS...",
+          "link": "https://zenn.dev/keitakn/articles/accelerate-planetscale-test-code",
+          "publishedOn": "2023-12-14T15:03:23.000Z",
+          "wordCount": 1364,
+          "title": "PlanetScale APIを使ってDBテストを高速化した",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--tHP7u7YX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PlanetScale%2520API%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6DB%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E9%25AB%2598%25E9%2580%259F%25E5%258C%2596%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:keitakn%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I4YWRiOTY3ZDIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--tHP7u7YX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PlanetScale%2520API%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6DB%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E9%25AB%2598%25E9%2580%259F%25E5%258C%2596%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:keitakn%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I4YWRiOTY3ZDIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/kura103/articles/bd65ce70a2b595",
+          "author": "kura103",
+          "description": "ハッピバースデートゥミ〜〜〜♪ハッピバースデートゥミ〜〜〜♪、ハッピバースデーディアわたし〜♪\nハッピバースデートゥミ〜〜〜♪\nくら＠ちゅらデータ（43）です。\nこの投稿はちゅらデータアドベントカレンダー2023の15日目の記事です。\nOBSで人と背景をクロマキー合成するときに背景を単色にする必要があるんですが大変なんでどうにかしたいなーって話です。\n\n はじめに\nオンラインミーティングだとmeetやzoomの機能で綺麗に人と背景を合成してくれて散らかった部屋を晒さなくて済むんですが、OBSで合成する時が困るんですよね。\nOBSのインプットの時点で背景を単色にできればスムーズに合成できる...",
+          "link": "https://zenn.dev/kura103/articles/bd65ce70a2b595",
+          "publishedOn": "2023-12-14T15:00:01.000Z",
+          "wordCount": 1909,
+          "title": "ブルーバックとか使わずにクロマキー合成する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--okVH-NqI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2581%25A8%25E3%2581%258B%25E4%25BD%25BF%25E3%2582%258F%25E3%2581%259A%25E3%2581%25AB%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%259E%25E3%2582%25AD%25E3%2583%25BC%25E5%2590%2588%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kura103%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y29IWlpwRDZtbVd0NUVadGtaNVhDMldRMWFkTi1ROHhzWkw5ZE5qTjdGMFE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--okVH-NqI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2581%25A8%25E3%2581%258B%25E4%25BD%25BF%25E3%2582%258F%25E3%2581%259A%25E3%2581%25AB%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%259E%25E3%2582%25AD%25E3%2583%25BC%25E5%2590%2588%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kura103%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y29IWlpwRDZtbVd0NUVadGtaNVhDMldRMWFkTi1ROHhzWkw5ZE5qTjdGMFE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/pomcho555/articles/8e42f0a4ce39eb",
+          "author": "pomcho555",
+          "description": "はじめに\nご存知の通り大LLM時代なわけで、つよつよな方からアフィリ記事までこぞってどうやってLLMで良い出力を得るかまとめております。そしてそのテクニックがプロンプトエンジニアリングとして体系化されつつあります。ただし、エンプラでLLMを真面目に使おうとすると、プロンプトの管理やLLMごとの管理、レスポンスタイムの計測など様々な評価を継続的にやる必要があります。従来のデータサイエンスでも結局評価や計測が後々重要になったきたことを考えると必然かもしれませんが、そこらへんをまとめた日本語の記事がなかったので、アドベントカレンダーというチャンスを使ってまとめてみます!\nそのなわけで、この...",
+          "link": "https://zenn.dev/pomcho555/articles/8e42f0a4ce39eb",
+          "publishedOn": "2023-12-14T14:09:48.000Z",
+          "wordCount": 1710,
+          "title": "LLM・プロンプトの評価・テストフレームワークについてまとめてみた",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--mdoZZ3sQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:LLM%25E3%2583%25BB%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2597%25E3%2583%2588%25E3%2581%25AE%25E8%25A9%2595%25E4%25BE%25A1%25E3%2583%25BB%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2583%2595%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%25A0%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:pomcho555%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVmNTUwZWFlY2MuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--mdoZZ3sQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:LLM%25E3%2583%25BB%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2597%25E3%2583%2588%25E3%2581%25AE%25E8%25A9%2595%25E4%25BE%25A1%25E3%2583%25BB%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2583%2595%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%25A0%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:pomcho555%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVmNTUwZWFlY2MuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/daidai_daitai/articles/6018ca73367744",
+          "author": "橙。",
+          "description": "はじめに\nGIS関連の業務を行う際に、どの様にデータを扱っていますか?\nローカル環境でGISに関する計算などを行う場合は、\"QGIS\" や \"ArcGIS Pro\" などのデスクトップアプリが有名で、私自身も \"ArcGIS Pro\" を使用しています。\nGISエンジニアであればともかく、そうでない方はGISを補助的に利用するだけでガッツリ使うという方も少ないかもしれません。もちろんそれでも問題はないのですが、どの様なデータになっているのかを理解していると、活用の幅も広がるかもしれません。\nこのTutorialはPythonでGISデータを扱う事に焦点を当てて進めていきます。Part...",
+          "link": "https://zenn.dev/daidai_daitai/articles/6018ca73367744",
+          "publishedOn": "2023-12-14T14:01:42.000Z",
+          "wordCount": 1592,
+          "title": "GIS × Python Tutorial Session1~ 座標データの中身 ~",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--dV8rmEtt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GIS%2520%25C3%2597%2520Python%2520Tutorial%2520Session1%7E%2520%25E5%25BA%25A7%25E6%25A8%2599%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E4%25B8%25AD%25E8%25BA%25AB%2520%7E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%25A9%2599%25E3%2580%2582%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MjJMLWoxUDdDS1dHZWJjbmh0YUxmV3BGRGNSTnBDQnZZTGYxYUpqQT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--dV8rmEtt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GIS%2520%25C3%2597%2520Python%2520Tutorial%2520Session1%7E%2520%25E5%25BA%25A7%25E6%25A8%2599%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E4%25B8%25AD%25E8%25BA%25AB%2520%7E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%25A9%2599%25E3%2580%2582%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MjJMLWoxUDdDS1dHZWJjbmh0YUxmV3BGRGNSTnBDQnZZTGYxYUpqQT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/thiem/articles/a04c3113463a69",
+          "author": "tammy",
+          "description": "実施環境\nmac pro m2\n\n step1 Homebrewのインストール\n$ /bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n\n Homebrewの環境変数の設定(zprofileを使用するパターン)\necho 'eval $(/opt/homebrew/bin/brew shellenv)' >> /Users/<<ユーザ名>>/.zprofile\neval $(/opt/homebrew/bin/...",
+          "link": "https://zenn.dev/thiem/articles/a04c3113463a69",
+          "publishedOn": "2023-12-14T12:51:19.000Z",
+          "wordCount": 398,
+          "title": "pyenvとpipenvでいい感じに環境作成",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--aXJgv8W0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pyenv%25E3%2581%25A8pipenv%25E3%2581%25A7%25E3%2581%2584%25E3%2581%2584%25E6%2584%259F%25E3%2581%2598%25E3%2581%25AB%25E7%2592%25B0%25E5%25A2%2583%25E4%25BD%259C%25E6%2588%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tammy%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4Wk9nMGZQWWxST081cnlPS1J1NjVFT3k2U3lQcTN4QlFnOGUwbU89czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--aXJgv8W0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pyenv%25E3%2581%25A8pipenv%25E3%2581%25A7%25E3%2581%2584%25E3%2581%2584%25E6%2584%259F%25E3%2581%2598%25E3%2581%25AB%25E7%2592%25B0%25E5%25A2%2583%25E4%25BD%259C%25E6%2588%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tammy%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4Wk9nMGZQWWxST081cnlPS1J1NjVFT3k2U3lQcTN4QlFnOGUwbU89czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/shu421/articles/883deabe505052",
+          "author": "shu421",
+          "description": "こんにちは！shu421と言います。\nPolars Advent Calendar 2023 の 14 日目です。今回は Polars の maintain_order 引数について書きたいと思います。簡単な Tips 的な内容なのでさらっと読んでいただけると嬉しいです。また今回は version 0.19.5 を対象に記事を書きましたが、 Polars はアップデート頻度が多く、仕様がよく変わります。将来的にこの記事とは異なる仕様になる可能性もあるので、最新の仕様は公式ドキュメントを追っていただけると幸いです。\nhttps://pola.rs/#\n\n 目次\n\nmaintain_orde...",
+          "link": "https://zenn.dev/shu421/articles/883deabe505052",
+          "publishedOn": "2023-12-14T09:06:51.000Z",
+          "wordCount": 2180,
+          "title": "Polars の maintain_order について",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--vbfvheKn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Polars%2520%25E3%2581%25AE%2520maintain_order%2520%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:shu421%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2phbmdqb1JMS0xkR2xrdHRjOXZKNlEyajNWRGlnUVJKZ2o1YzFFTUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--vbfvheKn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Polars%2520%25E3%2581%25AE%2520maintain_order%2520%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:shu421%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2phbmdqb1JMS0xkR2xrdHRjOXZKNlEyajNWRGlnUVJKZ2o1YzFFTUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/nicosys_pub/articles/0yes6yg3pikxchv9klzws",
+          "author": "Nicosys - BE:BUDDY（ビバディ）",
+          "description": "Pythonでカスタムファイルシステムを作ろう\nPythonでカスタムファイルシステムを作ろう\nプログラマーのみなさん、こんにちは！今回はPythonでオレオレファイルシステムを作っているお話です。さっそくコードをご紹介しますね。\nコードはcoloramaを使用して色づけし、フォーマットも適切に行っています。こちらが該当部分です。\ndef fuse_method(f):\n    def wrapped_func(*args, **kw):\n        try:\n            return f(*args, **kw)\n        except:\n          ...",
+          "link": "https://zenn.dev/nicosys_pub/articles/0yes6yg3pikxchv9klzws",
+          "publishedOn": "2023-12-14T06:40:53.000Z",
+          "wordCount": 624,
+          "title": "Pythonでカスタムファイルシステムを作ろう",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--ZNHs0w5X--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E3%2582%25AB%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25A0%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258D%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Nicosys%2520-%2520BE%253ABUDDY...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMzZDJlOTI4ZmQuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Nicosys%2520Tech%2520blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2ZlMWQzZWY4MDQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--ZNHs0w5X--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E3%2582%25AB%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25A0%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258D%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Nicosys%2520-%2520BE%253ABUDDY...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMzZDJlOTI4ZmQuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Nicosys%2520Tech%2520blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2ZlMWQzZWY4MDQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
           "id": "https://zenn.dev/aidemy/articles/vscode-env-python",
           "author": "masa-suke",
           "description": "概要\n\n 本書の内容\nVS CodeとDockerを利用した、Python用開発環境の設定/利用方法を説明します。\n本書で実現する開発環境の概略図は以下です。\n\nDockerを利用するので、動作環境のポータビリティが確保できる等のメリットがある他に、\n以下のことができるようになります。\n\nVSCodeのUIで、コンテナをビルド・起動する\nVSCodeのUIで、コンテナ内のソースコード編集やスクリプトを実行する\nなどなど。\n\nなお、本書は、PCがMacであることを想定して説明しますが、WindowやUbuntu-Destop等のLinuxディストリビューションでも同様のことができます。...",
@@ -55,6 +205,21 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Ff0quHH2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Topological%2520Sort%25E3%2581%25A7BigQuery%25E3%2581%25AE%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%2596%25E3%2582%2592%25E3%2582%25B9%25E3%2582%25B1%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:snagasawa%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pzejVpaGZYZnBkcG1XREtDUTZldW1oOFZtamt1WnZSVGN4YXVHPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/h_atsu/articles/training_team_opt",
+          "author": "h_atsu",
+          "description": "こんにちは、新卒一年目データサイエンティストのはだです。\nこの記事はBrainPad Advent Calendarの12日目の記事です。\n\n はじめに\n本記事では新卒研修のチーム決めを混合整数計画問題で定式化して解いてみた話をしたいと思います。\n研修の空き時間に同期と雑談(ヒアリング？)しながらゼロからモデルを組み立てて、実際のチーム決めでも使われたのでとても良い経験になりました。\n以下ではブレインパッドの新卒研修のざっくりした説明とチーム分けのモデルについて説明していきたいと思います。\n\n 研修について\nブレインパッドの新卒研修は4,5,6月の3ヶ月間あり、4月はビジネス系研修、5月...",
+          "link": "https://zenn.dev/h_atsu/articles/training_team_opt",
+          "publishedOn": "2023-12-13T19:23:59.000Z",
+          "wordCount": 1735,
+          "title": "新卒研修チーム分けを新卒が最適化した話",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--7VAuxFE9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2596%25B0%25E5%258D%2592%25E7%25A0%2594%25E4%25BF%25AE%25E3%2583%2581%25E3%2583%25BC%25E3%2583%25A0%25E5%2588%2586%25E3%2581%2591%25E3%2582%2592%25E6%2596%25B0%25E5%258D%2592%25E3%2581%258C%25E6%259C%2580%25E9%2581%25A9%25E5%258C%2596%25E3%2581%2597%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:h_atsu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I1ZjZlYjlkOWMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--7VAuxFE9--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2596%25B0%25E5%258D%2592%25E7%25A0%2594%25E4%25BF%25AE%25E3%2583%2581%25E3%2583%25BC%25E3%2583%25A0%25E5%2588%2586%25E3%2581%2591%25E3%2582%2592%25E6%2596%25B0%25E5%258D%2592%25E3%2581%258C%25E6%259C%2580%25E9%2581%25A9%25E5%258C%2596%25E3%2581%2597%25E3%2581%259F%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:h_atsu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I1ZjZlYjlkOWMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
         },
         {
           "id": "https://zenn.dev/ssfuno/articles/d0a8b424f5c707",
@@ -3360,21 +3525,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--g2OojFw4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25B5%25B7%25E5%258B%2595%25E4%25B8%25AD%25E3%2581%25AEMaya%25E3%2581%25A7Pytest%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Tack2%2540TA%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2ljRFJDTE5pUWZWc000cFBacFFhYVoxNk9aQzF6NHZHZzI4cE52RFE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/ssfuno/articles/29c092760e7bcb",
-          "author": "すふー",
-          "description": "イントロダクション\n以前の記事では、USGSの提供する地震情報を使って地震の分布を描きましたが、今回は気象庁の地震情報を使って描いてみます。\n無料で利用できる気象庁の地震情報には下記のようなものがあります。\n\n\n\n情報\n対象期間\n特徴\n\n\n\n\n震度データベース\n1919年〜\nリアルタイム性はないが、詳細な条件で情報を絞り込むことができる。CSV形式で出力可能\n\n\nAtomフィード\n過去数日間\nリアルタイム性があり、詳細な仕様が公開されているので、自動処理に適している。XML形式\n\n\n気象庁Webページ表示用JSON\n過去30日間\nリアルタイム性はあるが、APIとして提供されているわけ...",
-          "link": "https://zenn.dev/ssfuno/articles/29c092760e7bcb",
-          "publishedOn": "2023-11-14T13:35:23.000Z",
-          "wordCount": 1161,
-          "title": "PyGMTと気象庁のJSONを使って地震の分布を描いてみる",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--a6MBfNvz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PyGMT%25E3%2581%25A8%25E6%25B0%2597%25E8%25B1%25A1%25E5%25BA%2581%25E3%2581%25AEJSON%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E5%259C%25B0%25E9%259C%2587%25E3%2581%25AE%25E5%2588%2586%25E5%25B8%2583%25E3%2582%2592%25E6%258F%258F%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2599%25E3%2581%25B5%25E3%2583%25BC%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I2ZmY3ZDJhMDQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--a6MBfNvz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PyGMT%25E3%2581%25A8%25E6%25B0%2597%25E8%25B1%25A1%25E5%25BA%2581%25E3%2581%25AEJSON%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E5%259C%25B0%25E9%259C%2587%25E3%2581%25AE%25E5%2588%2586%25E5%25B8%2583%25E3%2582%2592%25E6%258F%258F%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2599%25E3%2581%25B5%25E3%2583%25BC%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I2ZmY3ZDJhMDQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
         }
       ]
     }
