@@ -2,10 +2,85 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-12-15T01:19:05.368Z</updated>
+    <updated>2023-12-16T01:16:55.924Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[botter のためのデプロイ入門]]></title>
+        <id>https://zenn.dev/mtkn1/books/deployment-for-botter</id>
+        <link href="https://zenn.dev/mtkn1/books/deployment-for-botter"/>
+        <updated>2023-12-15T19:39:14.000Z</updated>
+        <summary type="html"><![CDATA[仮想通貨 bot をクラウドに自動デプロイする方法を紹介します。]]></summary>
+        <author>
+            <name>まちゅけん</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[行列積状態について考える (5) — ニューラルネットワークのモデル圧縮]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-matrix-product05</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-matrix-product05"/>
+        <updated>2023-12-15T18:15:53.000Z</updated>
+        <summary type="html"><![CDATA[目的
+行列積状態について考える (3) の続きとして、ニューラルネットワークのモデル圧縮について考えたい。arXiv:1509:06569 Tensorizing Neural Networks に沿って考えたい。
+
+ 全結合層と TT-層
+ニューラルネットワークの全結合層は W \in \operatorname{Mat}(m,n; \R) および b \in \R^m に対して、x \in \R^n を入力として
+
+\begin{align*}
+y = Wx + b
+\end{align*}
+
+により出力 y \in \R^m を与えるようなものである。
+以下、arXiv:150...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LINQ -> Python チートシート]]></title>
+        <id>https://zenn.dev/shimat/articles/d8812d20e803cf</id>
+        <link href="https://zenn.dev/shimat/articles/d8812d20e803cf"/>
+        <updated>2023-12-15T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[C# Advent Calendar 2023の16日目の記事です。が主題はPython！
+https://qiita.com/advent-calendar/2023/csharplang
+「C#のLINQのアレは、Pythonではどう書くんだっけ？」という際の自分用メモです。
+
+ 想定読者
+
+LINQは空気のように慣れ親しんでいる
+Pythonは月並みに書けはする
+
+時代はPythonですからね[1]。うまく付き合わないといけません。C#が母語という人がPythonを書くシーンを想定しています。
+
+ 環境
+
+.NET 8 / C# 12
+Python 3.12.0
+
+Pythonにつ...]]></summary>
+        <author>
+            <name>shimat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WebUIではなく素のDiffusersでLora（safetensors）もLCMもやる]]></title>
+        <id>https://zenn.dev/kazuph/articles/1a67d696f5d68d</id>
+        <link href="https://zenn.dev/kazuph/articles/1a67d696f5d68d"/>
+        <updated>2023-12-15T01:55:12.000Z</updated>
+        <summary type="html"><![CDATA[ざっくりこんな感じになります。V100で620msecで生成できます。
+
+
+ Setup
+!pip install -U diffusers transformers scipy ftfy accelerate
+
+ LoRA modelのロード
+今回はsafetensorsをダウンロードします。これはLoraとして指定すると数ステップで画像が生成できるようになります。
+!wget  -O LCM-LoRA.safetensors "https://civitai.com/api/download/models/225222?type=Model&format=SafeTensor...]]></summary>
+        <author>
+            <name>kazuph</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[coremltoolsでPyTorchモデルをCore MLモデルに変換する]]></title>
         <id>https://zenn.dev/shu223/articles/coremltools_pytorch</id>
@@ -4769,137 +4844,6 @@ GCOMはGlobal Change Observation Missionの略で、(環境という単語が抜
 二号機は2017年に打ち上げられた「GCOM-C」通称「しきさい」と呼ばれ...]]></summary>
         <author>
             <name>Kenta Kudo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AWS Lambda に deploy した lxml が動かなくなったお話]]></title>
-        <id>https://zenn.dev/tututen/articles/262f4703155730</id>
-        <link href="https://zenn.dev/tututen/articles/262f4703155730"/>
-        <updated>2023-11-16T08:21:57.000Z</updated>
-        <summary type="html"><![CDATA[発端
-2023年11月上旬頃にアプリを修正してDeployしてエラー通知が届く
-
-Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
-
-これは BeautifulSoup の parser で推奨されてる、lxml が使えない（もしくはインストールされていない） 場合に出るログである。
-
- 調査
-今回のアプリは serverless framework を利用し、github actions を利用して deploy し...]]></summary>
-        <author>
-            <name>tututen</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SQLAlchemy で MySQL の UPSERT を実装する]]></title>
-        <id>https://zenn.dev/k0kishima/articles/6477007b5fb283</id>
-        <link href="https://zenn.dev/k0kishima/articles/6477007b5fb283"/>
-        <updated>2023-11-16T08:17:09.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Rails だと以前から activerecord-import っていう gem で Upsert が実現できたり、6.x や 7.x からは ActiveRecord が upsert_all を実装している。
-Python が採用されているあるプロジェクトでは ORM に SQLAlchemy を採用しているが、これが Rails の ActiveRecord のように抽象化された UPSERT は行えず、各RDB毎に用意されたインターフェースを用いて適当に実装する必要があった。
-ここでは MySQL を利用した実装例を記載する。
-
- 動作確認環境
-
-
-
-ライブラリ
-バー...]]></summary>
-        <author>
-            <name>k0kishima</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Tello】ドローン操縦をしてみる]]></title>
-        <id>https://zenn.dev/watson_sei/articles/e11248e1686eb3</id>
-        <link href="https://zenn.dev/watson_sei/articles/e11248e1686eb3"/>
-        <updated>2023-11-16T08:06:20.000Z</updated>
-        <summary type="html"><![CDATA[TelloをC++(Pythonもサブで）で操縦する方法についてまとめました。
-
- Telloとは
-Telloドローンは、Ryze Tech社によって製造された小型のクワッドコプターで、重量はわずか80gと非常に軽量です。このドローンは、DJIのフライトテクノロジーを利用しており、Vision Positioning Systemという高度な飛行制御システムを搭載しています。このシステムにより、Telloは室内での飛行に適しており、特定の位置にホバリングすることができます。
-Vision Positioning System
-VPS(Visual Positioning System)は...]]></summary>
-        <author>
-            <name>Watson-Sei</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Slackへの匿名投稿機能を Slack Bolt for Python + AWS SAM で作ってみる]]></title>
-        <id>https://zenn.dev/d2c_mtech_blog/articles/293d8c641e3361</id>
-        <link href="https://zenn.dev/d2c_mtech_blog/articles/293d8c641e3361"/>
-        <updated>2023-11-16T04:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-こんにちは、D2Cエンジニアの穐澤です。
-Slackで気軽に雑談したいけど、名前を出して発言するのはちょっと気が引けると感じる方も世の中には多いのではないでしょうか？
-その一解決策として、本記事では匿名投稿を実現するSlackアプリを作成してみたいと思います。
-匿名投稿の実現という点のみで言えば、以下記事のようにSlackのワークフロービルダーから簡単に機能を作成でき、わざわざSlackアプリを作成する必要もありません。
-https://chidakiyo.hatenablog.com/entry/slack-workflow-anonymous
-https://logic...]]></summary>
-        <author>
-            <name>D2C エンジニア穐澤</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[float16, float32, float64の取れる範囲 (python)]]></title>
-        <id>https://zenn.dev/apo_zenn/articles/57c9439265cea5</id>
-        <link href="https://zenn.dev/apo_zenn/articles/57c9439265cea5"/>
-        <updated>2023-11-16T02:10:13.000Z</updated>
-        <summary type="html"><![CDATA[float16:　整数部分を含め，5桁まで保持　　(例: 123.44)
-float32:　整数部分を含め，8桁まで保持　　(例: 123.45679)
-float64:　整数部分を含め，17桁まで保持　 (例: 123.45678912345679)
-
- test.py
-import numpy as np
-
-### float16, 32, 64
-a = np.array(123.45678912345678912)
-b = np.array(123.45678912345678912)
-c = np.array(123.45678912345678912)
-
-a = a.asty...]]></summary>
-        <author>
-            <name>apo_zenn</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[中学英語レベルの純日本人理系大学生が、1ヶ月ちょいでAI駆使して卒論7割終わらせながらTOEIC 900超えた話]]></title>
-        <id>https://zenn.dev/mohki7/articles/578fb1cf59c901</id>
-        <link href="https://zenn.dev/mohki7/articles/578fb1cf59c901"/>
-        <updated>2023-11-15T17:41:29.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-データサイエンティストを目指して日々勉強している、慶應大学理工学部4年生（2023.11.14時点）
-取得資格、コンペ優勝経験など、リアルタイムの情報は👇👇👇をみてね
-X: @A7_data←こういう者です。
-プロフィールページ→こちら
-※全て、個人の意見です。個人差もあります。
-
- TOEICとは
-TOEICは、Test of English for International Communicationの略で、非英語圏の人々がビジネスシーンで英語を使う能力を測るためのテスト。
-リスニングとリーディングの2つのセクションで構成されており、それぞれ495点満点、合計990点...]]></summary>
-        <author>
-            <name>A7@データサイエンティスト目指してる大学生</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[起動中のMayaでPytestを実行する]]></title>
-        <id>https://zenn.dev/tack2/articles/d1eefbcf031da9</id>
-        <link href="https://zenn.dev/tack2/articles/d1eefbcf031da9"/>
-        <updated>2023-11-15T14:31:29.000Z</updated>
-        <summary type="html"><![CDATA[目的
-MayaでPytestを実行する時は通常下記の様にコマンドプロンプトで実行する。
-mayapy -m pytest
-しかし、この方法だと毎回standalone起動が必要となり、テストに時間がかかるため、起動中のMayaでPytestを実行したくなった。
-
- 実行できない
-普通にスクリプトエディターで実行しても下記エラーが発生し、できない。
-import pytest
-pytest.main(["テストフォルダ"])
-
-# INTERNALERROR>     self.isatty = file.isatty()
-# INTERNALERROR> Attribut...]]></summary>
-        <author>
-            <name>Tack2@TA</name>
         </author>
     </entry>
 </feed>
