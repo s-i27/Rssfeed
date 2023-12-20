@@ -12,6 +12,81 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/aidemy/articles/b30501ee3e1737",
+          "author": "meibyeleth",
+          "description": "!\nこの記事は、 Aidemy Advent Calendar 2023の20日目の投稿です。\n前回の記事はこれからのデータ分析はPandasにDuckDBも併用して高速化しようという話でした。\n\n※弊社の教材はe-learningではなく、オンラインDXラーニングと呼びます。弊社のコンテンツを分析したわけではないのでこのタイトルで許してください。\n\n相関関係は因果関係を示したものではないと統計学で習い、じゃあ因果関係を示す手法を教えてくれよって頭が爆発しそうになった皆さんこんにちは。自分は何回も爆発しました。\n本記事はe-learningのデータセットとPCアルゴリズムを用いてどの要素...",
+          "link": "https://zenn.dev/aidemy/articles/b30501ee3e1737",
+          "publishedOn": "2023-12-19T15:00:00.000Z",
+          "wordCount": 4978,
+          "title": "相関と因果は混ぜるな危険 PCアルゴリズムを用いたe-learningのデータの因果推論",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--J0iDqFdF--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%259B%25B8%25E9%2596%25A2%25E3%2581%25A8%25E5%259B%25A0%25E6%259E%259C%25E3%2581%25AF%25E6%25B7%25B7%25E3%2581%259C%25E3%2582%258B%25E3%2581%25AA%25E5%258D%25B1%25E9%2599%25BA%2520PC%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25B4%25E3%2583%25AA%25E3%2582%25BA%25E3%2583%25A0%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259Fe-learning%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E5%259B%25A0%25E6%259E%259C%25E6%258E%25A8%25E8%25AB%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:meibyeleth%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNhNmVhZTQ3ZDkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Aidemy%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FDTlBFdS1PdzV4eWp3Ml9sMnVGNWRjRnB1NGxzenRad2MzVkdtNlE4dHlKMVE9czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--J0iDqFdF--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%259B%25B8%25E9%2596%25A2%25E3%2581%25A8%25E5%259B%25A0%25E6%259E%259C%25E3%2581%25AF%25E6%25B7%25B7%25E3%2581%259C%25E3%2582%258B%25E3%2581%25AA%25E5%258D%25B1%25E9%2599%25BA%2520PC%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25B4%25E3%2583%25AA%25E3%2582%25BA%25E3%2583%25A0%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259Fe-learning%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E5%259B%25A0%25E6%259E%259C%25E6%258E%25A8%25E8%25AB%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:meibyeleth%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNhNmVhZTQ3ZDkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Aidemy%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FDTlBFdS1PdzV4eWp3Ml9sMnVGNWRjRnB1NGxzenRad2MzVkdtNlE4dHlKMVE9czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/usbhatyu/articles/434e5cfb8f1438",
+          "author": "MASATOnoUSB",
+          "description": "はじめに\nこちらはTouchDesigner Advent Calendar 2023 19日目の記事です。\nhttps://qiita.com/advent-calendar/2023/touchdesigner\nみなさんは2022年に実装されたAnnotateCOMP使っていますでしょうか？\nこの機能によって実装ごとにまとめたりコメントを入れられたりとても便利になりました。\n\n今回はこのAnnotateCOMPを用いてNetworkEditor内を飛び回るシステムを作りました。\nhttps://twitter.com/usbhatyu/status/173708888857182...",
+          "link": "https://zenn.dev/usbhatyu/articles/434e5cfb8f1438",
+          "publishedOn": "2023-12-19T13:33:08.000Z",
+          "wordCount": 1759,
+          "title": "【TouchDesigner】PythonとAnnotateでEditor内を瞬間移動する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--zOaL4yn2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590TouchDesigner%25E3%2580%2591Python%25E3%2581%25A8Annotate%25E3%2581%25A7Editor%25E5%2586%2585%25E3%2582%2592%25E7%259E%25AC%25E9%2596%2593%25E7%25A7%25BB%25E5%258B%2595%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:MASATOnoUSB%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNhY2NiMGVlYWQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--zOaL4yn2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590TouchDesigner%25E3%2580%2591Python%25E3%2581%25A8Annotate%25E3%2581%25A7Editor%25E5%2586%2585%25E3%2582%2592%25E7%259E%25AC%25E9%2596%2593%25E7%25A7%25BB%25E5%258B%2595%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:MASATOnoUSB%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNhY2NiMGVlYWQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/joeyoji/articles/7e5f17d6d4ddf3",
+          "author": "joeyoji",
+          "description": "問題設定\n簡単のためデータx\\in\\mathbb{Z}_{\\geq0}は1次元データとする。\n\n\n統計モデル：混合ポアソン分布\n\n\np(x|\\pi,\\lambda)=\\sum_{c=1}^C\\pi_c\\mathrm{Poisson}(x|\\lambda_c)=\\sum_{c=1}^C\\pi_c\\frac{\\lambda_c^x}{x!}e^{-\\lambda_c}\n\n\n\\pi=(\\pi_c)_{c=1}^C\\in \\mathbb{S}^{C-1}は混合比率、\\lambda=(\\lambda)_{c=1}^C\\in\\mathbb{R}_{\\geq0}^Cはポアソン分布の強度パラメータ。...",
+          "link": "https://zenn.dev/joeyoji/articles/7e5f17d6d4ddf3",
+          "publishedOn": "2023-12-19T05:33:30.000Z",
+          "wordCount": 198,
+          "title": "numpyとscipyを用いて混合ポアソン分布の事後分布を計算する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--F8JC3ITw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:numpy%25E3%2581%25A8scipy%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%25A6%25E6%25B7%25B7%25E5%2590%2588%25E3%2583%259D%25E3%2582%25A2%25E3%2582%25BD%25E3%2583%25B3%25E5%2588%2586%25E5%25B8%2583%25E3%2581%25AE%25E4%25BA%258B%25E5%25BE%258C%25E5%2588%2586%25E5%25B8%2583%25E3%2582%2592%25E8%25A8%2588%25E7%25AE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:joeyoji%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSjNTQUZCQXd4U01VaGh1alF1U09pU1RBR2FPUVZqQmVXTF9tMGNrQkQyaGlJPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--F8JC3ITw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:numpy%25E3%2581%25A8scipy%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%25A6%25E6%25B7%25B7%25E5%2590%2588%25E3%2583%259D%25E3%2582%25A2%25E3%2582%25BD%25E3%2583%25B3%25E5%2588%2586%25E5%25B8%2583%25E3%2581%25AE%25E4%25BA%258B%25E5%25BE%258C%25E5%2588%2586%25E5%25B8%2583%25E3%2582%2592%25E8%25A8%2588%25E7%25AE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:joeyoji%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSjNTQUZCQXd4U01VaGh1alF1U09pU1RBR2FPUVZqQmVXTF9tMGNrQkQyaGlJPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/sre_holdings/articles/5e92725c9fed39",
+          "author": "k.okabayashi",
+          "description": "こんにちは。\nSREホールディングス株式会社データサイエンティストの岡林です。\nデータ分析、機械学習の前処理では通常pandasを使用していますが、データ数が増えてくると処理時間が気になることがあります。\n少し前から話題になっているpolarsを使用すると、pandasよりも速く処理ができそうなので、実際に試してみます。\n\n TL;DR\n\n\npolarsはpandasより、概ね数倍〜十倍程度速い\nデータのread/writeはcsvよりも、parquetを使用した方が速い\nライブラリの成熟度、安定性の面ではpandasが有利\n\n用途やシーンによって使い分けるのが良い。\n\n 動作環境\n\nM...",
+          "link": "https://zenn.dev/sre_holdings/articles/5e92725c9fed39",
+          "publishedOn": "2023-12-19T02:33:37.000Z",
+          "wordCount": 3293,
+          "title": "polarsはpandasよりはやい？",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--MTbP_yVL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:polars%25E3%2581%25AFpandas%25E3%2582%2588%25E3%2582%258A%25E3%2581%25AF%25E3%2582%2584%25E3%2581%2584%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:k.okabayashi%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2ZlYWJhYWQ3ZjEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:SRE%2520Holdings%2520%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNkJpWHFTa3hWUFhnUjBPc2VMbExKS3dZaFN3WUlYX3o1TGxMWm95QT1zOTYtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--MTbP_yVL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:polars%25E3%2581%25AFpandas%25E3%2582%2588%25E3%2582%258A%25E3%2581%25AF%25E3%2582%2584%25E3%2581%2584%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:k.okabayashi%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2ZlYWJhYWQ3ZjEuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:SRE%2520Holdings%2520%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNkJpWHFTa3hWUFhnUjBPc2VMbExKS3dZaFN3WUlYX3o1TGxMWm95QT1zOTYtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/khrtz/articles/c02a4e2d7d0e9f",
+          "author": "へるつ",
+          "description": "概要\n僕は普段は仕事でTAをしています。\nMayaでのモデリングの作業工程を記録してアニメーションで再現したいと思ったので検証しました。\nよくYouTubeでみるようなモデリング講座ってOBSなどで画面収録してると思います。外部に公開するような動機があれば、画面収録するとは思いますが、普段画面収録してたらPCの容量いくつあっても足りませんよね。なのでMaya上で操作単位でのモデルの変更履歴を保存するツールを考えたので検証を行いました。もし実現できればモデリングの工程をSNSにあげてドヤることもできますね。完成後に1から作業工程っぽくアニメーションを付けてる方もいらっしゃいました。(大...",
+          "link": "https://zenn.dev/khrtz/articles/c02a4e2d7d0e9f",
+          "publishedOn": "2023-12-19T02:06:28.000Z",
+          "wordCount": 2826,
+          "title": "【Maya】モデルのメッシュと頂点情報の変更履歴を保存して再現する、モデリング作業記録ツールの検証",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--vhxtGBJM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Maya%25E3%2580%2591%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AE%25E3%2583%25A1%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E3%2581%25A8%25E9%25A0%2582%25E7%2582%25B9%25E6%2583%2585%25E5%25A0%25B1%25E3%2581%25AE%25E5%25A4%2589%25E6%259B%25B4%25E5%25B1%25A5%25E6%25AD%25B4%25E3%2582%2592%25E4%25BF%259D%25E5%25AD%2598%25E3%2581%2597%25E3%2581%25A6%25E5%2586%258D%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%25E3%2580%2581%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B0%25E4%25BD%259C%25E6%25A5%25AD%25E8%25A8%2598%25E9%258C%25B2%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%25AE%25E6%25A4%259C%25E8%25A8%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B8%25E3%2582%258B%25E3%2581%25A4%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E3ZWUzOWE0NDQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--vhxtGBJM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Maya%25E3%2580%2591%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AE%25E3%2583%25A1%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E3%2581%25A8%25E9%25A0%2582%25E7%2582%25B9%25E6%2583%2585%25E5%25A0%25B1%25E3%2581%25AE%25E5%25A4%2589%25E6%259B%25B4%25E5%25B1%25A5%25E6%25AD%25B4%25E3%2582%2592%25E4%25BF%259D%25E5%25AD%2598%25E3%2581%2597%25E3%2581%25A6%25E5%2586%258D%25E7%258F%25BE%25E3%2581%2599%25E3%2582%258B%25E3%2580%2581%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AA%25E3%2583%25B3%25E3%2582%25B0%25E4%25BD%259C%25E6%25A5%25AD%25E8%25A8%2598%25E9%258C%25B2%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%25AE%25E6%25A4%259C%25E8%25A8%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B8%25E3%2582%258B%25E3%2581%25A4%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E3ZWUzOWE0NDQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
           "id": "https://zenn.dev/nomumu/articles/f344aa7b2dee74",
           "author": "nomumu",
           "description": "!\nこの記事は ROS2 Advent Calendar 2023 の14日目です。\n\n\n Wake-on-LANでロボット制御パソコンを起動したい\n今年は例年のmicro-ROSネタから少し離れて小ネタをご紹介します。\nROS 2を動かす複数のパソコンの起動を連動させたい場合のTipsになります。\n趣味で複数のロボット制御用パソコン(以下、制御PC)を搭載するロボット制御ユニットを製作しているのですが、その中で気づいたちょっとしたノウハウ[1]の紹介記事になります。\n\n 複数のパソコンで制御されるロボットシステム\n少し大型のロボットシステムになると、役割分担されたいくつかの制御PCが搭...",
@@ -3710,51 +3785,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--uEuZoMuO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Gradio%25E3%2582%2592Docker%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Optimisuke%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQzYjg5MWQ0NTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/rie_amasato/articles/1ee3af1a885fdc",
-          "author": "Amasato Rie(遍怜 悧叡)",
-          "description": "Webサイトからデータをとってきて、（要はスクレイピングして）データベースに保存をしたいとき、ログイン画面という関門が立ち塞がることがあります\n普段のわたしはでログイン情報を送るURLに POSTでアクセスして〜というゴリ押しでやるのですが、ふとした気まぐれでSeleniumを使ってスクレイピングすることにしました\nGitPodにiPadからアクセスしてスクレイピングする方法を書き留めておく。そんなおはなし。\n（Gitpodに限らず、CUI環境でSeleniumを動かすときのメモとしても使えそう。かも）\n\n Seleniumとは\nSeleniumは、PythonでChrome（などのブラ...",
-          "link": "https://zenn.dev/rie_amasato/articles/1ee3af1a885fdc",
-          "publishedOn": "2023-11-20T09:35:20.000Z",
-          "wordCount": 413,
-          "title": "GitpodでSeleniumを動かしてみたお話",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--E9tKam8d--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Gitpod%25E3%2581%25A7Selenium%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2581%258A%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Amasato%2520Rie%2528%25E9%2581%258D%25E6%2580%259C%2520%25E6%2582%25A7%25E5%258F%25A1%2529%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2YxYzE4OTZjN2UuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--E9tKam8d--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Gitpod%25E3%2581%25A7Selenium%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2581%258A%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Amasato%2520Rie%2528%25E9%2581%258D%25E6%2580%259C%2520%25E6%2582%25A7%25E5%258F%25A1%2529%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2YxYzE4OTZjN2UuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/pipipiz/articles/77830a3ba07778",
-          "author": "piz3in",
-          "description": "はじめに\n私は業務の一環としてPythonを使ったデータ分析をしているのですが、もっと実力をあげたいと思っています。そこで、書籍「Python実践データ分析100本ノック」に取り組んでみました。その結果、実際に仕事でデータ分析をする際にまず行うべきデータ加工と事前分析について、その手順と具体的な方法を学ぶことができました。\n本記事では、これから本書に取り組んでみようとしている方に向けて、私が学んだことを共有したいと思います。\nなお、本書は基礎編、実践編①②、発展編から構成されていますが、本記事で取り上げているのはこのうち基礎編、実践編①の内容です。実践編②以降で学んだことについては別...",
-          "link": "https://zenn.dev/pipipiz/articles/77830a3ba07778",
-          "publishedOn": "2023-11-20T06:31:40.000Z",
-          "wordCount": 917,
-          "title": "データ分析の前段階の基本作業を「Python実践データ分析100本ノック」で学ぶ",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--N8mEz_yt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2588%2586%25E6%259E%2590%25E3%2581%25AE%25E5%2589%258D%25E6%25AE%25B5%25E9%259A%258E%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%25E4%25BD%259C%25E6%25A5%25AD%25E3%2582%2592%25E3%2580%258CPython%25E5%25AE%259F%25E8%25B7%25B5%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2588%2586%25E6%259E%2590100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25E3%2580%258D%25E3%2581%25A7%25E5%25AD%25A6%25E3%2581%25B6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:piz3in%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI2ZGEzYWU0ZTcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--N8mEz_yt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2588%2586%25E6%259E%2590%25E3%2581%25AE%25E5%2589%258D%25E6%25AE%25B5%25E9%259A%258E%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%25E4%25BD%259C%25E6%25A5%25AD%25E3%2582%2592%25E3%2580%258CPython%25E5%25AE%259F%25E8%25B7%25B5%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2588%2586%25E6%259E%2590100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%25E3%2580%258D%25E3%2581%25A7%25E5%25AD%25A6%25E3%2581%25B6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:piz3in%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI2ZGEzYWU0ZTcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/kou_kawa/articles/13-fastpi-api-hotpepper",
-          "author": "Kou",
-          "description": "🎯目的\n\n公開されているAPIからデータを取得してみよう\n今回はフリーでクライアントキーを取得して実行できる「hotpepper」を使用してみた\n\n\n ホットペッパーのAPIキーを取得\n以下サイトで新規登録を行い、APIキーを取得します。\nhttps://webservice.recruit.co.jp/index.html\nPowered by ホットペッパーグルメ Webサービス\n\n API構成\n今回のAPI構成は以下になります。\nGET : /hotpepper (ホットペッパーのAPIを実行し、データを取得する)\n\n プロジェクトフォルダ構成\n今回のプロジェクトフォルダ構成は...",
-          "link": "https://zenn.dev/kou_kawa/articles/13-fastpi-api-hotpepper",
-          "publishedOn": "2023-11-19T13:50:05.000Z",
-          "wordCount": 971,
-          "title": "FastAPIでAPIを使ってみよう①",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--w_x616Po--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%25E3%2581%25A7API%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%2588%25E3%2581%2586%25E2%2591%25A0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kou%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzEyNTU3ZTY0NDIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--w_x616Po--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%25E3%2581%25A7API%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%2588%25E3%2581%2586%25E2%2591%25A0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kou%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzEyNTU3ZTY0NDIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
         }
       ]
     }
