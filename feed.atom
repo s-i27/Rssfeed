@@ -2,10 +2,219 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-12-20T01:03:44.181Z</updated>
+    <updated>2023-12-21T01:16:40.231Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[SlackとChatGPT APIでチャットボットを作る パート6 (OpenAI SDK 1.3.xと1106のモデルに対応する)]]></title>
+        <id>https://zenn.dev/techflagcorp/articles/312cd5f0ee3517</id>
+        <link href="https://zenn.dev/techflagcorp/articles/312cd5f0ee3517"/>
+        <updated>2023-12-21T00:49:39.000Z</updated>
+        <summary type="html"><![CDATA[SlackとChatGPT APIでチャットボットを作る パート6 (OpenAI SDK 1.3.xと1106のモデルに対応する)
+SDKの仕様変化と新型モデルでいろいろ変わりました。今回はパート3のコードを書き換えてOpenAI SDK 1.3.xと1106のモデルに対応すます。依然Chat Completion APIを使用しAssistants APIは使いませんので骨格についてはパラレルfunction calling対応をのぞいてほとんどかわりません。
+
+ ソースコード
+
+chatbot.py
+import os
+from slack_bolt import App
+fr...]]></summary>
+        <author>
+            <name>dagger1</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ニューラルネットの説明可能性について考える (1) — Grad-CAM]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-grad-cam01</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-grad-cam01"/>
+        <updated>2023-12-20T17:27:08.000Z</updated>
+        <summary type="html"><![CDATA[目的
+機械学習のモデルが何故そのような結果を出すのかについて知りたいことがある。決定木のようなモデルの場合、かなり分かりやすいのだがニューラルネットワークの場合にはハッキリ言ってブラックボックスだ。
+ところで Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization という研究がある。CAM (Class Activation Mapping) は分類における重要な因子を計算する技術らしく、Grad-CAM はその改善版らしい。今回は論文を読んでないので、深くは触れないことにする。...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GIS × Python Tutorial Session3 ~ shapely & pyproj~]]></title>
+        <id>https://zenn.dev/daidai_daitai/articles/62686a3889e190</id>
+        <link href="https://zenn.dev/daidai_daitai/articles/62686a3889e190"/>
+        <updated>2023-12-20T14:24:34.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+この記事は「GIS × Python Tutorial」の関連記事です。
+今回はPythonでGISのVectorデータを扱う際に使用する "shapely" と "pyproj" に関しての記事です。
+具体的には
+
+shapelyでのgeometry objectの作成方法
+pyprojでの投影変換
+shapelyの便利なメソッド
+
+を紹介していきます。
+Session5ではgeopandasを扱う予定ですが、geopandasはshapelyをベースに作成されているので、今回紹介するメソッドも使用できるはずです。
+Vectorデータの種類に関しては "Session1"...]]></summary>
+        <author>
+            <name>橙。</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【python】pyenvのインストール手順（Windows）]]></title>
+        <id>https://zenn.dev/takuya_zenn/articles/c66679a8fc8b0a</id>
+        <link href="https://zenn.dev/takuya_zenn/articles/c66679a8fc8b0a"/>
+        <updated>2023-12-20T11:30:54.000Z</updated>
+        <summary type="html"><![CDATA[pyenvのダウンロード
+githubから落としてくる。
+git clone https://github.com/pyenv-win/pyenv-win.git
+
+ 環境変数やパスを通す作業
+
+ 環境変数を設定する
+以下のコマンドを実行する。
+今回は、「C:\Users\ユーザー名」にgithubからクローンしてきた場合で行っている。
+[System.Environment]::SetEnvironmentVariable('PYENV',$env:USERPROFILE + "\pyenv-win\","User")
+
+[System.Environment]::SetEnvir...]]></summary>
+        <author>
+            <name>たくや</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[numpy] 異なる型で四則演算をすると結果がおかしくなる]]></title>
+        <id>https://zenn.dev/apo_zenn/articles/89fca999d35591</id>
+        <link href="https://zenn.dev/apo_zenn/articles/89fca999d35591"/>
+        <updated>2023-12-20T10:43:18.000Z</updated>
+        <summary type="html"><![CDATA[int32とuint16の足し算
+a = 1, b = -1として，その和を計算してみます．
+型はそれぞれ a(int32), b(uint16)です．
+
+ test.py
+a = np.array(1) #int32
+b = np.array(-1).astype("uint16") #uint16
+
+print(a + b)
+
+結果 65536 (int32)
+おかしな結果ですね。本来は0となるはずです。
+
+ 足す方(a)をuint16にしてみる
+今度は先ほどと型を逆転し、
+a(uint16), b(int32)として，その和を計算してみます．
+
+ test.py
+a = np....]]></summary>
+        <author>
+            <name>apo_zenn</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[構造一貫解析ソフトSS7をPythonで実行する #3 ループ処理例（Python実行）]]></title>
+        <id>https://zenn.dev/kitagawadisk/articles/b7b32633c735eb</id>
+        <link href="https://zenn.dev/kitagawadisk/articles/b7b32633c735eb"/>
+        <updated>2023-12-20T08:22:53.000Z</updated>
+        <summary type="html"><![CDATA[フォルダ構成
+src
+├─ ss7_make_python.py :: 入力csv -> 解析のループを行う。
+├─ ss01_0001.py :: ss7 python実行
+├─ module/
+│   └─ ss7_SB1.py :: ss7出力csvの読書きを行う。
+└─ data/  
+│   └─ csv/
+│       ├─ exp.csv :: ss7.iknから生成。順次書替え。
+│       ├─ inp.csv :: ss7.iknから生成。順次書替え。
+│	└─ inp0.csv :: pythonで書換。
+└─ Python/ :: ss7 Op.P...]]></summary>
+        <author>
+            <name>kitagawadisk</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[チャットで楽々検索！ Azure AI Search と OpenAI を組み合わせた独自ドキュメント検索サンプルのご紹介]]></title>
+        <id>https://zenn.dev/microsoft/articles/jp-openai-5v1</id>
+        <link href="https://zenn.dev/microsoft/articles/jp-openai-5v1"/>
+        <updated>2023-12-20T07:05:38.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+皆さん、こんにちは！
+弊社では、OpenAI を活用して様々なシナリオに対応するサンプルを作成・公開しています。
+私のチームのプロジェクトで独自のデータを検索することのできるサンプルの作成に携わっておりますので、その内容をご紹介いたします。
+
+ 概要
+
+ どんなサンプルか？
+
+文章検索サンプルのアーキテクチャ
+本サンプルは、Azure AI Search と OpenAI を組み合わせて、独自のドキュメントを検索することができます！
+独自のドキュメントを Azure AI Search のインデックスに登録しておき、OpenAI を介して質問をすることで、ドキュメントの内容...]]></summary>
+        <author>
+            <name>marumaru1019</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GiNZAを利用して、主語・述語・目的語、修飾被修飾関係などを抽出する]]></title>
+        <id>https://zenn.dev/haru330/articles/800d3f42e2df74</id>
+        <link href="https://zenn.dev/haru330/articles/800d3f42e2df74"/>
+        <updated>2023-12-20T06:50:28.000Z</updated>
+        <summary type="html"><![CDATA[環境
+WSL 2
+Python 3.10.12
+pip 23.3.1
+
+ GiNZA インストール（コマンド）
+以下でspacyも入ります。
+pip install -U ginza
+私の場合、spacy 3.6.1、ginza 5.1.3でした。
+
+ 主語・述語を出す
+以下のコードで、主語・述語を出すことができます。
+引用したコード
+
+import spacy
+def parse_document(sentence, nlp):
+    doc = nlp(sentence)
+    tokens = []
+
+    for sent in doc.sents:
+        f...]]></summary>
+        <author>
+            <name>はる</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[構造一貫解析ソフトSS7をPythonで実行する #2 ループ処理例（コマンド実行）]]></title>
+        <id>https://zenn.dev/kitagawadisk/articles/dc88f544f09dfe</id>
+        <link href="https://zenn.dev/kitagawadisk/articles/dc88f544f09dfe"/>
+        <updated>2023-12-20T05:19:53.000Z</updated>
+        <summary type="html"><![CDATA[フォルダ構成
+src
+├─ss7_make_command.py :: 入力csv -> 解析のループを行う。
+├─ss7_make_command_GUI.py
+├─ module/
+│   ├─ ss7_SB1.py :: ss7出力csvの読書きを行う。
+│   └─ ss7_scmd.py :: scmdファイルを作成する
+└─ data/  
+    ├─ csv/
+    │   ├─ exp.csv :: ss7.iknから生成。順次書替え。
+    │   └─ inp.csv :: ss7.iknから生成。順次書替え。
+    └─ scmd/
+       ...]]></summary>
+        <author>
+            <name>kitagawadisk</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[サーバーレスなGPUクラウド "Modal" で Swallow の 70B モデルをサクッと実行する（$30のクレジットあり）]]></title>
+        <id>https://zenn.dev/kazuph/articles/d10653fcfb17db</id>
+        <link href="https://zenn.dev/kazuph/articles/d10653fcfb17db"/>
+        <updated>2023-12-20T02:57:38.000Z</updated>
+        <summary type="html"><![CDATA[A100(80G)で推論した後のUsage画面。無料枠の範囲内でかなり遊べることがわかる
+今回はメソッドレベルでぽいっとGPUにタスクを投げることができるGPUクラウド"Modal"を使って、最近出たばかりのSwallowというLLMを動かして見ようと思います。
+https://modal.com/
+
+ 課題
+Colabのメモリでは課金していてもA100(40G)でしか動かせません。そうなると「まあ70Bのモデルもあるけど、今回も13Bまで試せばいいかな」と思いがちです。自分もよく自室の自作PCに搭載したRTX3090(24G)で13BのLLMを動かして確認していますが、LLMはだいた...]]></summary>
+        <author>
+            <name>kazuph</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[相関と因果は混ぜるな危険 PCアルゴリズムを用いたe-learningのデータの因果推論]]></title>
         <id>https://zenn.dev/aidemy/articles/b30501ee3e1737</id>
@@ -5133,46 +5342,6 @@ i\hbar\frac{\partial\psi(x, t)}{\partial t}=\left(-\frac{\hbar^2}{2m}\frac{\part
 この記事では式(2.1)ではなく, 以...]]></summary>
         <author>
             <name>らお</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【初心者向け/ITスクール 85日】Coding Test, React]]></title>
-        <id>https://zenn.dev/eldorado215/articles/91d6892d488ac3</id>
-        <link href="https://zenn.dev/eldorado215/articles/91d6892d488ac3"/>
-        <updated>2023-11-20T14:33:07.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-今日は、ITスクールに通った85日目の日です。
-今日は午前中には、Pythonでコーディングテストを練習し、
-いよいよReactを勉強することになりました！
-早めに何かを作ってみてSpringBootと連携する練習をしてみたいと思います！
-
- Python
-
- unpacking print(*list, sep)
-
-listの要素を内部から巡回して、要素ことにプリントする高級文法です。
-
-例えば、完全数を判別するアルゴリズムを組み、完全数の場合、その数を除外して約数のリストをプリントするとします。
-6の場合、[1,2,3,6]が約のリストであり、6は1+2+3なので完全数...]]></summary>
-        <author>
-            <name>Hyon🇰🇷</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GradioをDockerで動かす]]></title>
-        <id>https://zenn.dev/optimisuke/articles/ebf22f7449a1ca</id>
-        <link href="https://zenn.dev/optimisuke/articles/ebf22f7449a1ca"/>
-        <updated>2023-11-20T13:19:26.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Gradio っていう機械学習モデルとかをインタラクティブなアプリにするためのフレームワークを触り中です。ブラックボックスの塊みたいなフレームワークで、機械学習の成果をいい感じに共有するのに良さそうです。
-https://www.gradio.app/
-適当なところでデプロイしてみたくて、Docker で動かしてみたところ、少しつまずきました。今回、ChatGPT にも手伝ってもらって解決したので、そのプロセスも含めて共有です。
-
- Hello, World!
-https://www.gradio.app/guides/quickstart
-Getting Started ...]]></summary>
-        <author>
-            <name>Optimisuke</name>
         </author>
     </entry>
 </feed>
