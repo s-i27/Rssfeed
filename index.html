@@ -22,6 +22,360 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-31 datetime="2023-12-31T15:00:00.000Z">2023-12-31</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-31 datetime="2023-12-31T15:00:00.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/shundeveloper/articles/a38d310f5e524e"
+                        open
+                      >
+                        <summary class="article-expander__title">平均と分散を漸化式を使って爆速で求める</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shundeveloper/articles/a38d310f5e524e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--rDkYKzhF--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%25B9%25B3%25E5%259D%2587%25E3%2581%25A8%25E5%2588%2586%25E6%2595%25A3%25E3%2582%2592%25E6%25BC%25B8%25E5%258C%2596%25E5%25BC%258F%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E7%2588%2586%25E9%2580%259F%25E3%2581%25A7%25E6%25B1%2582%25E3%2582%2581%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shun%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY3Y2U4NzUxNzkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>前書き
+Databaseの情報から平均と分散を計算するAPIを建てようと考えていた. その時に平均と分散の計算量がo(n)なのを現在の平均分散をキャッシュしておけば早くなることに気づいたので計算をしました.
+しかし, そもそも考えているアプリのnが大きくないという条件から素直にDBの関数を使ったほうが保守性が良いということでボツになりました.
+この記事はそんな悲しみを供養する記事です.
+
+ 平均
+
+\begin{align*}
+\bar{x}_n
+&amp;&#x3D;
+\frac{1}{n} \sum x_i
+\\
+&amp;&#x3D;
+\big(
+    \frac{1}{n} \sum_{i&#x3D;1...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kawamottyan/articles/6cb216877a1cb9"
+                        open
+                      >
+                        <summary class="article-expander__title">GRU4Rec</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kawamottyan/articles/6cb216877a1cb9">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--A2rXR_kj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80:GRU4Rec%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kawamottyan%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1M1AycFE5VW9INnQ1N09DNDBTSjV1Wms5Nzg4RUV6SWM4RDNpWkc4dz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>GRU4Recを用いて、ユーザーが次に見る映画を予測する。
+
+ GRU
+
+
+h_tをz_tの値によって更新する
+
+
+h_t &#x3D; (1 - z_t)h_{t-1} + z_t\tilde{h}_t
+
+
+
+h_tを更新する割合を決めるゲートを作成する
+z_tが1つ前の隠れ状態と候補の隠れ状態をどの割合で保持するか決める
+
+
+z_t &#x3D; \sigma(W_z x_t + U_z h_{t-1})
+
+
+
+h_tをリセットする割合を決めるゲートを作成する
+r_tがないと過去の隠れ状態をすべて同じように扱う
+
+
+r_t &#x3D; \sigma(W_r x_t + U_r h_{t-1})
+
+
+
+h_tを更...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kawamottyan/articles/5dfd4d01641c49"
+                        open
+                      >
+                        <summary class="article-expander__title">LinUCB</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kawamottyan/articles/5dfd4d01641c49">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--LMVTKl0X--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80:LinUCB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kawamottyan%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1M1AycFE5VW9INnQ1N09DNDBTSjV1Wms5Nzg4RUV6SWM4RDNpWkc4dz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>LinUCBを用いて、ユーザーが次に見る映画のジャンルの探索を行う。
+
+ UCB
+
+\text{UCB} &#x3D; \bar{x}_j + \sqrt{\frac{2 \ln n}{n_j}}
+
+変数
+
+
+\bar{x}_j: アーム j の平均報酬
+
+n: これまでの試行回数
+
+n_j: アーム j がこれまでに選ばれた回数
+
+\ln: 自然対数
+
+
+この式は、アームの平均報酬 \bar{x}_j と試行回数 n を基に、そのアームを選択する際の信頼上限 (Upper Confidence Bound) を計算する。
+
+ LinUCB
+原著論文は下記である。
+A Contextual-Ban...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tky823/articles/99a846ba3367f6"
+                        open
+                      >
+                        <summary class="article-expander__title">行列の幾何平均計算の実装</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tky823/articles/99a846ba3367f6">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--eO79OW8i--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25A1%258C%25E5%2588%2597%25E3%2581%25AE%25E5%25B9%25BE%25E4%25BD%2595%25E5%25B9%25B3%25E5%259D%2587%25E8%25A8%2588%25E7%25AE%2597%25E3%2581%25AE%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tky823%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSXNhWlZPcHd1VFdZMkt1S09oYjFnUndkQnd5eHZpRXQyTW9LQVdBWF9WPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>正定値Hermite行列に対する幾何平均をNumPyで実装
+ブラインド音源分離手法の多チャネル非負値行列因子分解(MNMF)や独立半正定値テンソル分析（IPSDTA）には，半正定値Hermite行列に対する幾何平均の計算が登場します．Pythonの数値計算ライブラリのNumPyでこれらの手法を実装してみました．その際の工夫について共有します．
+
+ 正定値Hermite行列に対する幾何平均の定義
+2つの正定値Hermite行列\bm{A},\bm{B}\in\mathbb{C}^{N\times N}が与えられたとき，\bm{A}と\bm{B}の幾何平均は，次の式を満たす正定値Herm...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/teke/articles/ac5bda09509a80"
+                        open
+                      >
+                        <summary class="article-expander__title">PySimpleGUIでつくる数当てゲーム</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/teke/articles/ac5bda09509a80">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--FdvbA5pg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PySimpleGUI%25E3%2581%25A7%25E3%2581%25A4%25E3%2581%258F%25E3%2582%258B%25E6%2595%25B0%25E5%25BD%2593%25E3%2581%25A6%25E3%2582%25B2%25E3%2583%25BC%25E3%2583%25A0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A6%25E3%2581%2591%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUxMzUyNzY4NGQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>数当てゲームをPythonで作ろう
+今回は、数当てゲーム（Guess the Number）をPythonのPySimpleGUIを使って作ります。
+PySimpleGUIは初めて取り扱いましたが、無事完成までもっていくことができたので学習記録として共有したいと思います。
+私と同じような初学者の方のお役に立てば幸いです。
+
+ 数当てゲーム（Guess the Number）の概要
+数当てゲームは、その名の通り、ある正解の数を推測して当てるゲームです。
+まず、回答者は正解と思われる数を推測します。その数が正解でない場合、正解の数よりも大きいか小さいかがヒントとして与えられます。
+そのヒ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/khisa/articles/401f6934aca965"
+                        open
+                      >
+                        <summary class="article-expander__title">Multivector Retrieverで検索用のチャンクとLLMに渡すドキュメントを分離することでRAGの精度向上を目指す</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/khisa/articles/401f6934aca965">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s---CMbSXxd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Multivector%2520Retriever%25E3%2581%25A7%25E6%25A4%259C%25E7%25B4%25A2%25E7%2594%25A8%25E3%2581%25AE%25E3%2583%2581%25E3%2583%25A3%25E3%2583%25B3%25E3%2582%25AF%25E3%2581%25A8LLM%25E3%2581%25AB%25E6%25B8%25A1%25E3%2581%2599%25E3%2583%2589%25E3%2582%25AD%25E3%2583%25A5%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2592%25E5%2588%2586%25E9%259B%25A2%25E3%2581%2599%25E3%2582%258B%25E3%2581%2593%25E3%2581%25A8%25E3%2581%25A7RAG%25E3%2581%25AE%25E7%25B2%25BE%25E5%25BA%25A6...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B2%25E3%2581%2595%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTHFKaUVHa1VQMkc5WGpIeHlTa3p4bld3Z3JNcHFhT19hUFVKcWEyQ2YxWUZFPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>今回は、RAGにおいて、ベクトル検索に利用するチャンクと、LLMに渡すコンテキストのドキュメントを分離する方法を試してみます。Langchainの MultiVector Retriever を利用します。結果として、それなりの精度向上が実現できました。
+
+ MultiVector Retriever でRAGの検索精度向上を目指す
+前回は、ブログ記事のテキストを
+タグでチャンク分割することでRAGの精度改善が実現できるかを試しました。元の文章の構造を意識してチャンクを分割することで、Retrieverの精度が向上することを目指したわけです。結果としては、適当に文字数で...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/capriblue/articles/dd3fd8c86fa276"
+                        open
+                      >
+                        <summary class="article-expander__title">HDF5ファイルに多次元配列をC++ (.cpp)で書き込む</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/capriblue/articles/dd3fd8c86fa276">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--GOTN7k0O--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:HDF5%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2581%25AB%25E5%25A4%259A%25E6%25AC%25A1%25E5%2585%2583%25E9%2585%258D%25E5%2588%2597%25E3%2582%2592C%252B%252B%2520%2528.cpp%2529%25E3%2581%25A7%25E6%259B%25B8%25E3%2581%258D%25E8%25BE%25BC%25E3%2582%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:capriblue%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGgwQ042aXJKLUFrU0NMUTJaTlUxVTMzejlkbXhVMU9jX202ZG9XakpSZXc9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>!
+この記事を書いている人は、C++などについて深い知識がありません。実はもっと良い方法があったり、実はやってはいけないやり方を掲載しているかもしれません。ただ以下に示すモチベーションの利用者が何も考えずにHDF5を利用するには苦戦を強いられるため、どなたか同じようなモチベーションの方が少しでも落とし穴にはまることなく実装できればと思い、記事にさせていただきます。コメントなどで指摘いただけると大変助かります。
+
+!
+環境
+
+os: ubuntu22.04
+shell: bash
+cpuコア数: 8
+compiler gcc 4.8.5
+
+
+
+ HDF5を使うきっかけ
+C++で書いたプログ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;15
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/map_universe/articles/482c51c86b03af"
+                        open
+                      >
+                        <summary class="article-expander__title">botについてよくある質問</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/map_universe/articles/482c51c86b03af">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--bL-0WZT8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:bot%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2582%2588%25E3%2581%258F%25E3%2581%2582%25E3%2582%258B%25E8%25B3%25AA%25E5%2595%258F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Map%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ3YjkzZDM2NDIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>1. 動作環境について
+Q: どの証券会社を使ってますか？
+A: auカブコム証券です。
+Q: Pythonですか？Excelですか？
+A: Pythonで書いた自動売買プログラムを使用しています。このプログラムは、後述するkabuステーションAPIにリクエストを送ります。Excelは使用していません。
+Q: APIが使えるんですか？
+A: はい、auカブコム証券が提供するkabuステーションAPIを利用しています。このAPIはローカル型APIで、Windowsマシン上で稼働するkabuステーションがリクエストを処理します。
+Q: Windowsマシンが必要ですか？
+A: はい、24...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/toshi_456/articles/957518bef2317b"
+                        open
+                      >
+                        <summary class="article-expander__title">llm-jp-evalを試す</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/toshi_456/articles/957518bef2317b">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--gCtULuXu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_72:llm-jp-eval%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:toshi_456%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VhYTMxODJkNmQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>llm-jp-evalとは
+llm-jp-evalとはLLM-JP（LLM勉強会）で作成された複数のデータセットから大規模言語モデルの評価を手軽に行うことができるリポジトリである。
+https://github.com/llm-jp/llm-jp-eval
+v1.0.0では以下のNLPのタスクが評価できる。
+
+MC(Multi-Choice QA)：jcommonsenseqa
+NLI(Natural Language Inference)：jamp、janli、jnli、jsem、jsick
+QA(Question Answering)：jemhopqa、niilc
+RC(Read...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/kn64872/articles/f13dc4499218d3"
+                        open
+                      >
+                        <summary class="article-expander__title">Ubuntu22でifconfigからTXとRXを取得する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kn64872/articles/f13dc4499218d3">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--p2qgW2G0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Ubuntu22%25E3%2581%25A7ifconfig%25E3%2581%258B%25E3%2582%2589TX%25E3%2581%25A8RX%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:O.Yabuki-213%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E1ODJlZThhMmQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+ubuntu22のifconfigで出力されるIFのTXとRXの値を取得します。
+対象IFの指定は引数で実施しておきます。
+
+複数のIFの表示時は未対応
+IPv4のみ対応
+ifconfigの出力はディストリビューション毎に大きく違うのでubuntu22専用です。
+
+
+ 実装内容
+
+go.py
+import sys
+import re
+
+r1 &#x3D; re.compile(&#x27;^inet\s+([\d\.]+)\s+netmask\s+([\d\.]+)\s+broadcast\s+([\d\.]+)&#x27;, re.MULTILINE|re.DOTALL)
+r2 &#x3D; re.compil...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-30 datetime="2023-12-30T21:30:17.000Z">2023-12-30</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-30 datetime="2023-12-30T21:30:17.000Z"></time>
           </button>
@@ -8140,167 +8494,6 @@ https://cloud.google.com/gener...</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/simpleform/articles/20231203-03-lambda-graceful-shutdown"
-                        open
-                      >
-                        <summary class="article-expander__title">Lambda が timeout する際に graceful に落としたい日々だった</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/simpleform/articles/20231203-03-lambda-graceful-shutdown">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--eaC3XbPf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Lambda%2520%25E3%2581%258C%2520timeout%2520%25E3%2581%2599%25E3%2582%258B%25E9%259A%259B%25E3%2581%25AB%2520graceful%2520%25E3%2581%25AB%25E8%2590%25BD%25E3%2581%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%25E6%2597%25A5%25E3%2580%2585%25E3%2581%25A0%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25B7%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AB%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25BC%25E3%2583%25A0%2520Tech%2520Blog%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I4ZTY2MTk0OWYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>エンジニアリングマネージャの犬束です。
-本記事は SimpleForm Advent Calendar 2023 の 3 日目の記事です。
-当社では AWS Lambda を多く活用しています。
-今回は、Lambda を運用する中で当社で活用している Tips をご紹介します。
-
- 前提知識
-Python ランタイムの Lambda を活用したことがある方向けの記事です。Lambda の仕組みやデプロイ方法などは説明しないので、Lambda を活用されたことがない方は別記事で調べていただけますと幸いです。
-
- Lambda を使っていて困ること
-Lambda にはタイムアウトが存在します...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/jij_inc/articles/serde-pyobject"
-                        open
-                      >
-                        <summary class="article-expander__title">serdeを使ったRustとPythonでの相互変換</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/jij_inc/articles/serde-pyobject">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--M-lPvIOE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:serde%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259FRust%25E3%2581%25A8Python%25E3%2581%25A7%25E3%2581%25AE%25E7%259B%25B8%25E4%25BA%2592%25E5%25A4%2589%25E6%258F%259B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Jij%2520Tech%2520Blog%2Cx_220%2Cy_160/g_south_west%2Cl_text:notosansjp-medium.otf_34:termoshtt%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I0ZjhjYjkwMmYuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lfdUM4LVBtaVF5cjN4UjBLdWMzN2t3ZDF2cGlsaUZWV25MbzhDS1E9czI1MC1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>この記事はJij Inc. Advent Calendar 2023の2日目の記事です。昨日は オペレーションズリサーチにおけるビジネス課題の解決とは？でした。本日は先日リリースした
-https://github.com/Jij-Inc/serde-pyobject
-の宣伝・解説記事となります。
-
- RustからPythonを操作する
-この記事では同じプロセス内にあるPythonのオブジェクトをRustから操作する方法を解説します。別プロセスのPythonを操作する、例えばサブプロセスとしてPythonを起動して、標準入力を介してPythonコードを送信して結果を標準出力やファイルシステ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kentakudo/articles/a6080fa9d10086"
-                        open
-                      >
-                        <summary class="article-expander__title">FastAPI ①</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kentakudo/articles/a6080fa9d10086">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--BF_CJlqJ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_80:FastAPI%2520%25E2%2591%25A0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kenta%2520Kudo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZVZhZ1J2ZmJsb1piNVk1ZXJMd2lrTHE3VHEtRmlKLTlUMjBWN1FxeWo3X1ZERz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>PythonのWebフレームワークといえばDjangoやflaskが有名だが、最近FastAPIというフレームワークをよく聞くので少し触ってみようと思う。
-
- Fast API とは
-名前にもある通り、パフォーマンスの良さを売りにした、Python3.7以上をターゲットにしたWeb APIを開発するためのフレームワーク。
-元々PythonにはWSGI(ウィスキー) という、WebサーバーとWebアプリケーションの間のインターフェイスを定義した仕様が存在したが、非同期処理にも対応したASGIという仕様が2019年ごろに策定され、その仕様に従ったWebサーバー実装であるUvicornと、AS...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/os1ma/articles/acd3472c3a6755"
-                        open
-                      >
-                        <summary class="article-expander__title">LangChain の新記法「LangChain Expression Language (LCEL)」入門</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/os1ma/articles/acd3472c3a6755">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Zg_PKBou--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:LangChain%2520%25E3%2581%25AE%25E6%2596%25B0%25E8%25A8%2598%25E6%25B3%2595%25E3%2580%258CLangChain%2520Expression%2520Language%2520%2528LCEL%2529%25E3%2580%258D%25E5%2585%25A5%25E9%2596%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:oshima_123%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY1ZjAzMGZmOTcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>LangChain Advent Calendar 2023 の 2 日目の記事です。
-
- LangChain Expression Language (LCEL) とは
-LangChain Expression Language (LCEL) は、LangChain でのコードの新しい記述方法です。
-公式ドキュメント: https://python.langchain.com/docs/expression_language/
-LCEL ではプロンプトや LLM を | で繋げて書き、処理の連鎖 (Chain) を実装します。
-2023 年 10 月後半頃から、LangChain では...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-01 datetime="2023-12-01T14:38:32.000Z">2023-12-01</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-01 datetime="2023-12-01T14:38:32.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/slm/articles/2c0ff60bd7841f"
-                        open
-                      >
-                        <summary class="article-expander__title">Pyxelで入力を簡単に検知したい</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/slm/articles/2c0ff60bd7841f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--4ap1STgd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Pyxel%25E3%2581%25A7%25E5%2585%25A5%25E5%258A%259B%25E3%2582%2592%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25AB%25E6%25A4%259C%25E7%259F%25A5%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:SLMNLL%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lOT2gwRWpCaXlqX255VGNiVVR1NlNTUm5fUTB0bzRVd0VqTEJyPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>この記事の内容
-Pythonでレトロゲーム制作ができるゲームエンジン、Pyxelで、入力検知用のクラスを作り、キー入力を簡単に管理・検出できるようにしてみたいと思います。
-
- サンプルプログラムではどうなっているか
-Pyxelはサンプルプログラムが充実していて、コードの基本的な実例として参考になります[1]。まずは、サンプルプログラムではどのように入力を検知しているかをみてみましょう。
-
- 入力の検知はpyxel.btnやpyxel.btnrを使う
-キー入力とプレイヤーの移動については、サンプルプログラムの09_shooter.pyがすごくわかりやすいです。以下に抜粋してみます。
-
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -8308,8 +8501,8 @@ Pyxelはサンプルプログラムが充実していて、コードの基本的
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/7367528139">
-        <time id="build-timestamp" datetime="2023-12-31T01:22:07.960Z">2023-12-31T01:22:07.960Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/7373937046">
+        <time id="build-timestamp" datetime="2024-01-01T01:23:30.170Z">2024-01-01T01:23:30.170Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

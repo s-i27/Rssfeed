@@ -2,10 +2,235 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2023-12-31T01:22:07.984Z</updated>
+    <updated>2024-01-01T01:23:30.194Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[平均と分散を漸化式を使って爆速で求める]]></title>
+        <id>https://zenn.dev/shundeveloper/articles/a38d310f5e524e</id>
+        <link href="https://zenn.dev/shundeveloper/articles/a38d310f5e524e"/>
+        <updated>2023-12-31T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[前書き
+Databaseの情報から平均と分散を計算するAPIを建てようと考えていた. その時に平均と分散の計算量がo(n)なのを現在の平均分散をキャッシュしておけば早くなることに気づいたので計算をしました.
+しかし, そもそも考えているアプリのnが大きくないという条件から素直にDBの関数を使ったほうが保守性が良いということでボツになりました.
+この記事はそんな悲しみを供養する記事です.
+
+ 平均
+
+\begin{align*}
+\bar{x}_n
+&=
+\frac{1}{n} \sum x_i
+\\
+&=
+\big(
+    \frac{1}{n} \sum_{i=1...]]></summary>
+        <author>
+            <name>Shun</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GRU4Rec]]></title>
+        <id>https://zenn.dev/kawamottyan/articles/6cb216877a1cb9</id>
+        <link href="https://zenn.dev/kawamottyan/articles/6cb216877a1cb9"/>
+        <updated>2023-12-31T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[GRU4Recを用いて、ユーザーが次に見る映画を予測する。
+
+ GRU
+
+
+h_tをz_tの値によって更新する
+
+
+h_t = (1 - z_t)h_{t-1} + z_t\tilde{h}_t
+
+
+
+h_tを更新する割合を決めるゲートを作成する
+z_tが1つ前の隠れ状態と候補の隠れ状態をどの割合で保持するか決める
+
+
+z_t = \sigma(W_z x_t + U_z h_{t-1})
+
+
+
+h_tをリセットする割合を決めるゲートを作成する
+r_tがないと過去の隠れ状態をすべて同じように扱う
+
+
+r_t = \sigma(W_r x_t + U_r h_{t-1})
+
+
+
+h_tを更...]]></summary>
+        <author>
+            <name>kawamottyan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LinUCB]]></title>
+        <id>https://zenn.dev/kawamottyan/articles/5dfd4d01641c49</id>
+        <link href="https://zenn.dev/kawamottyan/articles/5dfd4d01641c49"/>
+        <updated>2023-12-31T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[LinUCBを用いて、ユーザーが次に見る映画のジャンルの探索を行う。
+
+ UCB
+
+\text{UCB} = \bar{x}_j + \sqrt{\frac{2 \ln n}{n_j}}
+
+変数
+
+
+\bar{x}_j: アーム j の平均報酬
+
+n: これまでの試行回数
+
+n_j: アーム j がこれまでに選ばれた回数
+
+\ln: 自然対数
+
+
+この式は、アームの平均報酬 \bar{x}_j と試行回数 n を基に、そのアームを選択する際の信頼上限 (Upper Confidence Bound) を計算する。
+
+ LinUCB
+原著論文は下記である。
+A Contextual-Ban...]]></summary>
+        <author>
+            <name>kawamottyan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[行列の幾何平均計算の実装]]></title>
+        <id>https://zenn.dev/tky823/articles/99a846ba3367f6</id>
+        <link href="https://zenn.dev/tky823/articles/99a846ba3367f6"/>
+        <updated>2023-12-31T13:47:55.000Z</updated>
+        <summary type="html"><![CDATA[正定値Hermite行列に対する幾何平均をNumPyで実装
+ブラインド音源分離手法の多チャネル非負値行列因子分解(MNMF)や独立半正定値テンソル分析（IPSDTA）には，半正定値Hermite行列に対する幾何平均の計算が登場します．Pythonの数値計算ライブラリのNumPyでこれらの手法を実装してみました．その際の工夫について共有します．
+
+ 正定値Hermite行列に対する幾何平均の定義
+2つの正定値Hermite行列\bm{A},\bm{B}\in\mathbb{C}^{N\times N}が与えられたとき，\bm{A}と\bm{B}の幾何平均は，次の式を満たす正定値Herm...]]></summary>
+        <author>
+            <name>tky823</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PySimpleGUIでつくる数当てゲーム]]></title>
+        <id>https://zenn.dev/teke/articles/ac5bda09509a80</id>
+        <link href="https://zenn.dev/teke/articles/ac5bda09509a80"/>
+        <updated>2023-12-31T13:10:39.000Z</updated>
+        <summary type="html"><![CDATA[数当てゲームをPythonで作ろう
+今回は、数当てゲーム（Guess the Number）をPythonのPySimpleGUIを使って作ります。
+PySimpleGUIは初めて取り扱いましたが、無事完成までもっていくことができたので学習記録として共有したいと思います。
+私と同じような初学者の方のお役に立てば幸いです。
+
+ 数当てゲーム（Guess the Number）の概要
+数当てゲームは、その名の通り、ある正解の数を推測して当てるゲームです。
+まず、回答者は正解と思われる数を推測します。その数が正解でない場合、正解の数よりも大きいか小さいかがヒントとして与えられます。
+そのヒ...]]></summary>
+        <author>
+            <name>てけ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Multivector Retrieverで検索用のチャンクとLLMに渡すドキュメントを分離することでRAGの精度向上を目指す]]></title>
+        <id>https://zenn.dev/khisa/articles/401f6934aca965</id>
+        <link href="https://zenn.dev/khisa/articles/401f6934aca965"/>
+        <updated>2023-12-31T11:50:12.000Z</updated>
+        <summary type="html"><![CDATA[今回は、RAGにおいて、ベクトル検索に利用するチャンクと、LLMに渡すコンテキストのドキュメントを分離する方法を試してみます。Langchainの MultiVector Retriever を利用します。結果として、それなりの精度向上が実現できました。
+
+ MultiVector Retriever でRAGの検索精度向上を目指す
+前回は、ブログ記事のテキストを<h2>タグでチャンク分割することでRAGの精度改善が実現できるかを試しました。元の文章の構造を意識してチャンクを分割することで、Retrieverの精度が向上することを目指したわけです。結果としては、適当に文字数で...]]></summary>
+        <author>
+            <name>ひさ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[HDF5ファイルに多次元配列をC++ (.cpp)で書き込む]]></title>
+        <id>https://zenn.dev/capriblue/articles/dd3fd8c86fa276</id>
+        <link href="https://zenn.dev/capriblue/articles/dd3fd8c86fa276"/>
+        <updated>2023-12-31T06:18:24.000Z</updated>
+        <summary type="html"><![CDATA[!
+この記事を書いている人は、C++などについて深い知識がありません。実はもっと良い方法があったり、実はやってはいけないやり方を掲載しているかもしれません。ただ以下に示すモチベーションの利用者が何も考えずにHDF5を利用するには苦戦を強いられるため、どなたか同じようなモチベーションの方が少しでも落とし穴にはまることなく実装できればと思い、記事にさせていただきます。コメントなどで指摘いただけると大変助かります。
+
+!
+環境
+
+os: ubuntu22.04
+shell: bash
+cpuコア数: 8
+compiler gcc 4.8.5
+
+
+
+ HDF5を使うきっかけ
+C++で書いたプログ...]]></summary>
+        <author>
+            <name>capriblue</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[botについてよくある質問]]></title>
+        <id>https://zenn.dev/map_universe/articles/482c51c86b03af</id>
+        <link href="https://zenn.dev/map_universe/articles/482c51c86b03af"/>
+        <updated>2023-12-31T05:15:02.000Z</updated>
+        <summary type="html"><![CDATA[1. 動作環境について
+Q: どの証券会社を使ってますか？
+A: auカブコム証券です。
+Q: Pythonですか？Excelですか？
+A: Pythonで書いた自動売買プログラムを使用しています。このプログラムは、後述するkabuステーションAPIにリクエストを送ります。Excelは使用していません。
+Q: APIが使えるんですか？
+A: はい、auカブコム証券が提供するkabuステーションAPIを利用しています。このAPIはローカル型APIで、Windowsマシン上で稼働するkabuステーションがリクエストを処理します。
+Q: Windowsマシンが必要ですか？
+A: はい、24...]]></summary>
+        <author>
+            <name>Map</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[llm-jp-evalを試す]]></title>
+        <id>https://zenn.dev/toshi_456/articles/957518bef2317b</id>
+        <link href="https://zenn.dev/toshi_456/articles/957518bef2317b"/>
+        <updated>2023-12-31T04:59:41.000Z</updated>
+        <summary type="html"><![CDATA[llm-jp-evalとは
+llm-jp-evalとはLLM-JP（LLM勉強会）で作成された複数のデータセットから大規模言語モデルの評価を手軽に行うことができるリポジトリである。
+https://github.com/llm-jp/llm-jp-eval
+v1.0.0では以下のNLPのタスクが評価できる。
+
+MC(Multi-Choice QA)：jcommonsenseqa
+NLI(Natural Language Inference)：jamp、janli、jnli、jsem、jsick
+QA(Question Answering)：jemhopqa、niilc
+RC(Read...]]></summary>
+        <author>
+            <name>toshi_456</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu22でifconfigからTXとRXを取得する]]></title>
+        <id>https://zenn.dev/kn64872/articles/f13dc4499218d3</id>
+        <link href="https://zenn.dev/kn64872/articles/f13dc4499218d3"/>
+        <updated>2023-12-31T03:20:05.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+ubuntu22のifconfigで出力されるIFのTXとRXの値を取得します。
+対象IFの指定は引数で実施しておきます。
+
+複数のIFの表示時は未対応
+IPv4のみ対応
+ifconfigの出力はディストリビューション毎に大きく違うのでubuntu22専用です。
+
+
+ 実装内容
+
+go.py
+import sys
+import re
+
+r1 = re.compile('^inet\s+([\d\.]+)\s+netmask\s+([\d\.]+)\s+broadcast\s+([\d\.]+)', re.MULTILINE|re.DOTALL)
+r2 = re.compil...]]></summary>
+        <author>
+            <name>O.Yabuki-213</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[「FFT(高速フーリエ変換)を完全に理解した」になるまで 3(実装編)]]></title>
         <id>https://zenn.dev/masswork/articles/fft-understanding-03</id>
@@ -4890,89 +5115,6 @@ cloud-samples-data/gen-app-builder/search/alphabet-investor-pdfs
 https://cloud.google.com/gener...]]></summary>
         <author>
             <name>kkj</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Lambda が timeout する際に graceful に落としたい日々だった]]></title>
-        <id>https://zenn.dev/simpleform/articles/20231203-03-lambda-graceful-shutdown</id>
-        <link href="https://zenn.dev/simpleform/articles/20231203-03-lambda-graceful-shutdown"/>
-        <updated>2023-12-02T12:30:15.000Z</updated>
-        <summary type="html"><![CDATA[エンジニアリングマネージャの犬束です。
-本記事は SimpleForm Advent Calendar 2023 の 3 日目の記事です。
-当社では AWS Lambda を多く活用しています。
-今回は、Lambda を運用する中で当社で活用している Tips をご紹介します。
-
- 前提知識
-Python ランタイムの Lambda を活用したことがある方向けの記事です。Lambda の仕組みやデプロイ方法などは説明しないので、Lambda を活用されたことがない方は別記事で調べていただけますと幸いです。
-
- Lambda を使っていて困ること
-Lambda にはタイムアウトが存在します...]]></summary>
-        <author>
-            <name>シンプルフォーム Tech Blog</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[serdeを使ったRustとPythonでの相互変換]]></title>
-        <id>https://zenn.dev/jij_inc/articles/serde-pyobject</id>
-        <link href="https://zenn.dev/jij_inc/articles/serde-pyobject"/>
-        <updated>2023-12-02T06:29:06.000Z</updated>
-        <summary type="html"><![CDATA[この記事はJij Inc. Advent Calendar 2023の2日目の記事です。昨日は オペレーションズリサーチにおけるビジネス課題の解決とは？でした。本日は先日リリースした
-https://github.com/Jij-Inc/serde-pyobject
-の宣伝・解説記事となります。
-
- RustからPythonを操作する
-この記事では同じプロセス内にあるPythonのオブジェクトをRustから操作する方法を解説します。別プロセスのPythonを操作する、例えばサブプロセスとしてPythonを起動して、標準入力を介してPythonコードを送信して結果を標準出力やファイルシステ...]]></summary>
-        <author>
-            <name>termoshtt</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FastAPI ①]]></title>
-        <id>https://zenn.dev/kentakudo/articles/a6080fa9d10086</id>
-        <link href="https://zenn.dev/kentakudo/articles/a6080fa9d10086"/>
-        <updated>2023-12-02T00:41:40.000Z</updated>
-        <summary type="html"><![CDATA[PythonのWebフレームワークといえばDjangoやflaskが有名だが、最近FastAPIというフレームワークをよく聞くので少し触ってみようと思う。
-
- Fast API とは
-名前にもある通り、パフォーマンスの良さを売りにした、Python3.7以上をターゲットにしたWeb APIを開発するためのフレームワーク。
-元々PythonにはWSGI(ウィスキー) という、WebサーバーとWebアプリケーションの間のインターフェイスを定義した仕様が存在したが、非同期処理にも対応したASGIという仕様が2019年ごろに策定され、その仕様に従ったWebサーバー実装であるUvicornと、AS...]]></summary>
-        <author>
-            <name>Kenta Kudo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LangChain の新記法「LangChain Expression Language (LCEL)」入門]]></title>
-        <id>https://zenn.dev/os1ma/articles/acd3472c3a6755</id>
-        <link href="https://zenn.dev/os1ma/articles/acd3472c3a6755"/>
-        <updated>2023-12-02T00:01:11.000Z</updated>
-        <summary type="html"><![CDATA[LangChain Advent Calendar 2023 の 2 日目の記事です。
-
- LangChain Expression Language (LCEL) とは
-LangChain Expression Language (LCEL) は、LangChain でのコードの新しい記述方法です。
-公式ドキュメント: https://python.langchain.com/docs/expression_language/
-LCEL ではプロンプトや LLM を | で繋げて書き、処理の連鎖 (Chain) を実装します。
-2023 年 10 月後半頃から、LangChain では...]]></summary>
-        <author>
-            <name>oshima_123</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pyxelで入力を簡単に検知したい]]></title>
-        <id>https://zenn.dev/slm/articles/2c0ff60bd7841f</id>
-        <link href="https://zenn.dev/slm/articles/2c0ff60bd7841f"/>
-        <updated>2023-12-01T14:38:32.000Z</updated>
-        <summary type="html"><![CDATA[この記事の内容
-Pythonでレトロゲーム制作ができるゲームエンジン、Pyxelで、入力検知用のクラスを作り、キー入力を簡単に管理・検出できるようにしてみたいと思います。
-
- サンプルプログラムではどうなっているか
-Pyxelはサンプルプログラムが充実していて、コードの基本的な実例として参考になります[1]。まずは、サンプルプログラムではどのように入力を検知しているかをみてみましょう。
-
- 入力の検知はpyxel.btnやpyxel.btnrを使う
-キー入力とプレイヤーの移動については、サンプルプログラムの09_shooter.pyがすごくわかりやすいです。以下に抜粋してみます。
-
-...]]></summary>
-        <author>
-            <name>SLMNLL</name>
         </author>
     </entry>
 </feed>
