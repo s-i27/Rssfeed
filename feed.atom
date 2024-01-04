@@ -2,10 +2,156 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-01-03T01:16:56.364Z</updated>
+    <updated>2024-01-04T01:17:29.348Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Google OAuth2でログインしたユーザーがGoogleグループのメンバーかチェックする(Python,Streamlit)]]></title>
+        <id>https://zenn.dev/ncdc/articles/4971474595b6a8</id>
+        <link href="https://zenn.dev/ncdc/articles/4971474595b6a8"/>
+        <updated>2024-01-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Python(というかStreamlit)で作ったアプリに認証をつけたく、Google OAuth2で認証をつけました。認証機能の実装はyag_aysさんの記事を参考にしたので、そちらを参照いただければと思います。
+https://zenn.dev/yag_ays/articles/ac982910770010
+さて、Google OAuth2で認証した場合、単純な設定で許可できるユーザーは以下のいずれかになります。
+
+Googleのユーザーだったら誰でもOK
+自分の組織のユーザーのみOK
+
+後者の組織の制限で十分な場合もあると思いますが、今回はより利用者を絞りたかったので...]]></summary>
+        <author>
+            <name>いばらき</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Google Colab上でGmailを送信してみる（サービスアカウント認証・パスワード認証・OAuth 2.0 クライアントID）]]></title>
+        <id>https://zenn.dev/hosaka313/articles/a68ccb619cf34d</id>
+        <link href="https://zenn.dev/hosaka313/articles/a68ccb619cf34d"/>
+        <updated>2024-01-03T23:05:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+本記事ではGoogle Colaboratory上でGmailを送る方法を3種類扱います。
+最終的に至った結論はサービスアカウント認証かOAuth 2.0 クライアントIDが有力そうではあるがいずれも問題点あり、です。3種類の方法ともメール送信はできましたが、運用・保守まで考えると「これがベスト」という結論には達せずでした。
+「試行錯誤したけどダメだった系記事」であることを、最初におことわりしておきます。
+
+ 要約
+
+本記事はGoogle WorkspaceでのGmail送付を扱います。
+下記の3つでGoogle ColaboratoryからGmailを送ります。
+
+サービ...]]></summary>
+        <author>
+            <name>hosaka313</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChatGPT x LangChainで会社紹介PDFを基にした回答を得る]]></title>
+        <id>https://zenn.dev/mandenaren/articles/pdf_llm_for_buysell</id>
+        <link href="https://zenn.dev/mandenaren/articles/pdf_llm_for_buysell"/>
+        <updated>2024-01-03T23:00:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+ChatGPTは自然な言葉のようになんでも教えてくれるツールですが、あくまでネット上に大規模に置いてある一般的な知識の回答を返します。
+そのため、最新の情報や独自の情報をこちらから教えて回答を返してもらうような仕組みが求められてきました。
+解の一つとして、PythonのLLMライブラリであるLangChainはベクトルストアによる検索戦略機能を提供しています。
+この記事では、会社紹介のPDFをChatGPTに教えることを通して、使用感を見てみたいと思います。
+!
+OpenAIのAPIを利用するため、事前にOpenAIのアカウントを作成しAPI_KEYを発行する必要があります...]]></summary>
+        <author>
+            <name>なりん</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonでLINE Messaging APIを使用する]]></title>
+        <id>https://zenn.dev/yu_yu/articles/402281ccb6a3f2</id>
+        <link href="https://zenn.dev/yu_yu/articles/402281ccb6a3f2"/>
+        <updated>2024-01-03T13:46:35.000Z</updated>
+        <summary type="html"><![CDATA[この記事では、Pythonを使用してLINE Botからメッセージを送信するコードを公開します。linebot.v3.messaging モジュールを活用し、簡潔かつ効率的にLINEメッセージを送るプログラムです、
+import os
+import linebot.v3.messaging as bot
+from dotenv import load_dotenv
+load_dotenv()
+
+# LINE_BOT_ACCESS_TOKENは、Messaging API設定のチャネルアクセストークン
+LINE_BOT_ACCESS_TOKEN = os.getenv('LINE_BOT_...]]></summary>
+        <author>
+            <name>zoyspace</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[行列積状態について考える (8) — Vidal の標準形 その 2]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-matrix-product08</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-matrix-product08"/>
+        <updated>2024-01-03T05:07:59.000Z</updated>
+        <summary type="html"><![CDATA[目的
+「Vidal の標準形」と呼ばれる MPS (Matrix Product State; 行列積状態) の一つの表示形式について、行列積状態について考える (6) — Vidal の標準形 で考察したが、今回再考察したい。
+現時点での問題点としては、
+
+Qiskit Aer の実装を移植しただけであまりよく分かっていないこと
+内容的に 行列積状態について考える (3) で実装した TT_SVD と近そうだが、実装上の対称性がイマイチないこと
+
+があり、これを解消したい。
+
+ 実装
+必要なモジュールを import する。
+from __future__ import annot...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[WindowsのタスクスケジューラでPythonファイルを定期実行する]]></title>
+        <id>https://zenn.dev/tonokokko/articles/3b65c0c4a5408b</id>
+        <link href="https://zenn.dev/tonokokko/articles/3b65c0c4a5408b"/>
+        <updated>2024-01-03T04:05:59.000Z</updated>
+        <summary type="html"><![CDATA[タイトル通りです。
+Pythonファイルとは言っていますが、ほかの言語のプログラムでもいけると思います。
+簡易Note
+プログラム欄への入力項目
+
+プログラム/スクリプト : pythonのexeファイルの絶対パス
+引数の追加 : 実行するpyファイルのファイル名
+開始 : 実行するpyファイルの親ディレクトリの絶対パス
+
+
+
+
+ タスクスケジューラを開く
+
+
+ 新しいタスクの作成
+
+タスクスケジューラ ライブラリを右クリック
+「基本タスクの作成」をクリック
+*タスクの作成だとより詳細な設定が可能
+*タスク作成後に編集もできるので深く考えずに選んでok
+
+
+
+
+ タスク名の入力
+
+
+ ト...]]></summary>
+        <author>
+            <name>とのこっこ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「Python」の特徴（C、C++と比較して）：ゼロからのPython入門講座を体験して]]></title>
+        <id>https://zenn.dev/hosu/articles/965a11cb57edfe</id>
+        <link href="https://zenn.dev/hosu/articles/965a11cb57edfe"/>
+        <updated>2024-01-02T21:51:10.000Z</updated>
+        <summary type="html"><![CDATA[機械学習をはじめるために、Pythonに入門しました。
+その際に参考にしたのが、東大 松尾研が一般公開している「人工知能・深層学習を学ぶためのロードマップ」。
+このなかで紹介されていたPythonジャパンの「ゼロからのPython入門講座」が分かりやすい！
+Pythonをこれから始める人にはぜひともオススメの教材なので、以下のnoteの記事ですこし紹介しました。
+https://note.com/hovinci/n/n971f7f8eb1bb
+今回の記事では、ぼくがC言語とC++言語を使っているので、それらではお目にかかれない、「Pythonの特徴」について、気づいたことをまとめます。
+...]]></summary>
+        <author>
+            <name>ホ・ヴィンチ</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Reactとd3で健康オタクのためのスタバサイトを作ってみた！]]></title>
         <id>https://zenn.dev/riku_k/articles/4900bba6f4f7a4</id>
@@ -4785,258 +4931,6 @@ secretsmanager.ap-northeast-1.amazonaws.comを
 点光源から放たれた光はスリットが二つ設けられている二重スリットマスクまで伝搬し、マスクを通過した光は各々のスリットから回折しながらスクリーンへとさらに伝搬して行く流れです。ここでスクリーンに...]]></summary>
         <author>
             <name>寅太郎</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[awswrangler(Athena)でのデータ抽出をPolarsへ置き換えて高速化する]]></title>
-        <id>https://zenn.dev/d2c_mtech_blog/articles/282b99e903a032</id>
-        <link href="https://zenn.dev/d2c_mtech_blog/articles/282b99e903a032"/>
-        <updated>2023-12-05T09:02:18.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-こんにちは。D2Cデータサイエンティストの名越です。
-Pythonでs3にある大規模なテーブルデータを多少の条件をつけて抽出する際どのように取得していますでしょうか？
-Pandasを使ってデータ処理をする場合は大規模データだと重くなってしまうためできるだけ事前に処理をしたものを取り出したいですよね。
-私の所属している部署では awswrangler を用いてAthenaでデータ取得することができる環境が整っているため、私はそこまで深く考えることもなくシステム内ではこのやり方でデータを抽出することが多いです。
-本記事では既にある程度十分に速いawswranglerを用いた大規...]]></summary>
-        <author>
-            <name>D2Cデータサイエンティスト名越</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[OpenAIのAssistant API試してみた【基本編】]]></title>
-        <id>https://zenn.dev/kenshiroh/articles/72c95629dc8ad8</id>
-        <link href="https://zenn.dev/kenshiroh/articles/72c95629dc8ad8"/>
-        <updated>2023-12-05T06:19:58.000Z</updated>
-        <summary type="html"><![CDATA[OpenAIの大型のアップデートが2023/11/7に発表されましたね。
-GPT4-Turboがやはり目玉ではありますが、Assistant APIというのもβ版で公開されました。
-概要を読んでみると、langchainのAgentのようなものをOpenAIが公式に実装したという感じですね。
-周辺ツールとして作成されていたものを本家が作りに来るこのパターン、これまでにもよく見てきたパターンですがここでも始まってきましたね。
-playgroundでもAPI経由でも使うことができるが、ここではAPI経由での使い方で試しながら、その特徴を見ていきましょう。
-まずはSDKをアップデートする。as...]]></summary>
-        <author>
-            <name>kenshiroh</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python命名規則]]></title>
-        <id>https://zenn.dev/wanage/articles/8b8c890a47d477</id>
-        <link href="https://zenn.dev/wanage/articles/8b8c890a47d477"/>
-        <updated>2023-12-05T04:42:29.000Z</updated>
-        <summary type="html"><![CDATA[命名規則
-
-
-
-対象
-ルール
-例
-
-
-
-
-パッケージ
-全小文字。なるべく短く。アンダースコア非推奨。
-tqdm, requests ...
-
-
-モジュール
-全小文字。なるべく短く。アンダースコア可。
-sys, os,...
-
-
-クラス
-最初大文字 + 大文字区切り
-MyFavoriteClass
-
-
-例外
-最初大文字 + 大文字区切り
-MyFuckingError
-
-
-型変数
-最初大文字 + 大文字区切り
-MyFavoriteType
-
-
-メソッド
-全小文字 + アンダースコア区切り
-my_favorite_method
-
-
-関数
-全小文字 + アンダースコア区切り
-my_favor...]]></summary>
-        <author>
-            <name>wanage</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[管理者権限がなく、pipでモジュールインストールできないWindows PCにPython環境を構築する手順]]></title>
-        <id>https://zenn.dev/kwaka1208/articles/a-stand-alone-python-environment</id>
-        <link href="https://zenn.dev/kwaka1208/articles/a-stand-alone-python-environment"/>
-        <updated>2023-12-05T02:50:51.000Z</updated>
-        <summary type="html"><![CDATA[概要
-このページでは、限られた条件下にあるPCにPythonの動作環境を構築する手順を説明しています。対象はWindows PCのみとなります。
-また、この記事ではディレクトリ（フォルダ）配置なども具体的に限定的に記述していますが、まったくの初心者でもここに書いてあるとおり進めれば環境を作れるようにするためのものです。ご自身の環境に合わせて適宜読み替えてください。
-
- コマンドラインでの操作
-Pythonの実行環境の構築と自分で作ったPythonのプログラムの実行は、いずれも「コマンドライン」で行います。通常、Windowsではアプリの操作をマウスなどポインティングデバイスで行います...]]></summary>
-        <author>
-            <name>Kenichi Wakabayashi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AWS Lambda カスタムイメージを使って PostgreSQL に接続する]]></title>
-        <id>https://zenn.dev/lincwell_inc/articles/984997447266d1</id>
-        <link href="https://zenn.dev/lincwell_inc/articles/984997447266d1"/>
-        <updated>2023-12-05T00:24:07.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-AWS Lambda から Python を使って PostgreSQL に接続するときに、 psycopg2 を使うことが多いと思います。
-その場合、ZIP にパッケージングして Lambda にアップロードする必要があります。
-今までは、 Serverless Framework を使ったり、 lambci/docker-lambda を使ってローカルでパッケージングしていました。
-普段、 Terraform を使って Lambda などの環境を構築する際に、 ZIP ファイルを予めリポジトリに入れられれば管理が簡単ですが、ファイルが大きい場合デプロイ時に ZIP にパ...]]></summary>
-        <author>
-            <name>mani3</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[XSOverlayの手首メニューのメディアキーを自分のアプリの制御に利用する方法]]></title>
-        <id>https://zenn.dev/dimebag29/articles/d29376aae38d97</id>
-        <link href="https://zenn.dev/dimebag29/articles/d29376aae38d97"/>
-        <updated>2023-12-04T22:16:55.000Z</updated>
-        <summary type="html"><![CDATA[概要
-pynputライブラリを利用したキーボードのグローバルフックによって、XSOverlayの手首メニューの「前の曲」「再生/一時停止」「次の曲」キーが押されたことを検知し、自分のアプリでお好みの処理を実行。その後、メディアプレーヤーなどの他のアプリが動いてしまわないようにキー入力のメッセージを破棄します。
-手首メニューのメディアキーが押された時に情報を飛ばしてくれるような専用のAPIをXSOverlayが用意してくれているわけではありません。
-
-XSOverlayの手首メニューの各メディアキーの場所
-
- 環境
-
-Windows10 64bit
-Python 3.7.5
-pynpu...]]></summary>
-        <author>
-            <name>dimebag29</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonのDecoratorを利用した引数・戻り値の型チェック実装]]></title>
-        <id>https://zenn.dev/ytsakairi/articles/3c9ac78c755172</id>
-        <link href="https://zenn.dev/ytsakairi/articles/3c9ac78c755172"/>
-        <updated>2023-12-04T22:00:00.000Z</updated>
-        <summary type="html"><![CDATA[!
-この記事はAidemy Advent Calendar 2023の５日目の記事です。
-４日目はDynamicVizで次元削減から恣意性を除くでした！
-
-
- 概要
-自作関数を利用する際に、引数と戻り値の型チェックを行うことで、コードの安全性を高められます。
-Pythonのデコレータとアノテーションを利用することで、簡単に複数関数へ型チェックを適用することができます。
-
- デコレータとは
-デコレータは関数やクラスをラップして、別の関数を返す関数のことです。ここでは関数デコレータについて話を進めていきます。
-既存の関数をラップすることにより、引数に指定した関数の前後で処理を追加することがで...]]></summary>
-        <author>
-            <name>sakairi-y</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[OpenAI APIのJSON ModeとFunction Callingの精度比較]]></title>
-        <id>https://zenn.dev/stafes_blog/articles/7f96753fa0de75</id>
-        <link href="https://zenn.dev/stafes_blog/articles/7f96753fa0de75"/>
-        <updated>2023-12-04T21:22:20.000Z</updated>
-        <summary type="html"><![CDATA[!
-この記事は、スターフェスティバル Advent Calendar 2023の5日目です。
-
-こんにちは！   @koonagiです。
-2023年も変わらずインフラエンジニアとデータ基盤エンジニアを兼務しておりまして、RDSのアップデートしたり、Snowflake使ったデータ基盤作ったり色々楽しくやっておりますー。一年早かったなー。
-今日はゆるっとこれまで気になってたけど、調査できなかったOpenAI APIの仕様について調査したのでその結果を書いていきます！
-
- やったこと
-システムにOpenAI APIを組み込むときに、OpenAIのJSON ModeやFunction Calli...]]></summary>
-        <author>
-            <name>koonagi (kohei yamazaki)</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ラジオ復権大作戦~自動切り抜き動画制作システム~]]></title>
-        <id>https://zenn.dev/saurusu_saurusu/articles/e84b3790b38983</id>
-        <link href="https://zenn.dev/saurusu_saurusu/articles/e84b3790b38983"/>
-        <updated>2023-12-04T19:23:57.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-みなさんこんにちわ！ラジオ大好き情報系大学院生です！学部生の頃は深夜１時まで大学で友人とプログラミングに没頭して、ニッポン放送さんのオールナイトニッポンを聴きながら下宿先に帰る生活をしていたほど、プログラミングとラジオに全てを捧げた生活を送っていました。笑（詳細）
-そんな私の学生生活を支えてくれたラジオそしてラジオ業界の救世主となりうるシステムを開発しましたので、紹介したいと思います！
-
- ”ラジオ”の存在意義とは
-今年の夏、東京での就職活動の帰りに、人生で初めて電車で『有楽町駅』を通りかかり、ニッポン放送がある「有楽町」に自分がいることに感激してしまい、改札を出てニッポン...]]></summary>
-        <author>
-            <name>saurusu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonでエアコンのリモコン信号を解析し自在に操作できるようにする]]></title>
-        <id>https://zenn.dev/mikiken/articles/encode-ir-signal</id>
-        <link href="https://zenn.dev/mikiken/articles/encode-ir-signal"/>
-        <updated>2023-12-04T15:00:00.000Z</updated>
-        <summary type="html"><![CDATA[この記事は、CAMPHOR- Advent Calendar 2023の5日目の記事です。
-
- はじめに
-この記事は、以下の記事の続きです。
-https://zenn.dev/mikiken/articles/decode-ir-signal
-前回は、赤外線リモコンの信号をバイナリデータにデコードし、それをパースして以下のように16進数として表記する方法までを説明しました。
-23cb260100205800c64000000000100000a3
-この記事では、エアコンのリモコン信号を解析した上で、エアコンの運転状態からリモコン信号を生成する方法について説明します。
-
- エアコンのリモコ...]]></summary>
-        <author>
-            <name>mikiken</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python100本ノック#12 例外(Exception)処理]]></title>
-        <id>https://zenn.dev/willyang/articles/19f45c0af8b992</id>
-        <link href="https://zenn.dev/willyang/articles/19f45c0af8b992"/>
-        <updated>2023-12-04T14:20:18.000Z</updated>
-        <summary type="html"><![CDATA[例外(Exception)とは
-Pythonではプログラムの実行時に発生するエラーを「例外」と呼ぶ。例外に対処することを「例外処理」といい、Pythonではtry, except文に例外を発生させる可能性があるコードと、例外が発生した際に行う処理を記述していく。
-
- 例外処理
-
- 基本文法(try, except)
-try:
-    発生しうる例外
-except:
-    例外をキャッチした際に処理
-
- 具体例
-try:
-    f = open('python.txt', 'r')
-    content = f.readline()
-    print(content, end=...]]></summary>
-        <author>
-            <name>willyang</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Open-Interpreterを実行中に呼び出される再帰の上限を変更する]]></title>
-        <id>https://zenn.dev/nakashi94/articles/8ff1a7636bea7f</id>
-        <link href="https://zenn.dev/nakashi94/articles/8ff1a7636bea7f"/>
-        <updated>2023-12-04T13:32:02.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Open-Interpreterを実行中に呼び出される再帰の上限を変更する
-
- 環境
-Windows 10 Home
-Docker 23.0.1-rd
-Docker Compose v2.16.0
-python 3.11.5
-Dockerで作成したpython3.11.5を実行する環境で作業をすることを想定している。
-
- 解決されるエラー
-デフォルトではpythonが呼び出すことのできる再帰関数の上限が1000であるため、Open-Interpreterでコードを実行する際に再帰呼び出し回数が上限を超えると以下のエラーが出力される。
-RuntimeError: maximum ...]]></summary>
-        <author>
-            <name>nakashi94</name>
         </author>
     </entry>
 </feed>

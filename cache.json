@@ -12,6 +12,111 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/ncdc/articles/4971474595b6a8",
+          "author": "いばらき",
+          "description": "はじめに\nPython(というかStreamlit)で作ったアプリに認証をつけたく、Google OAuth2で認証をつけました。認証機能の実装はyag_aysさんの記事を参考にしたので、そちらを参照いただければと思います。\nhttps://zenn.dev/yag_ays/articles/ac982910770010\nさて、Google OAuth2で認証した場合、単純な設定で許可できるユーザーは以下のいずれかになります。\n\nGoogleのユーザーだったら誰でもOK\n自分の組織のユーザーのみOK\n\n後者の組織の制限で十分な場合もあると思いますが、今回はより利用者を絞りたかったので...",
+          "link": "https://zenn.dev/ncdc/articles/4971474595b6a8",
+          "publishedOn": "2024-01-04T00:00:00.000Z",
+          "wordCount": 737,
+          "title": "Google OAuth2でログインしたユーザーがGoogleグループのメンバーかチェックする(Python,Streamlit)",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--H2hbmz1v--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%2520OAuth2%25E3%2581%25A7%25E3%2583%25AD%25E3%2582%25B0%25E3%2582%25A4%25E3%2583%25B3%25E3%2581%2597%25E3%2581%259F%25E3%2583%25A6%25E3%2583%25BC%25E3%2582%25B6%25E3%2583%25BC%25E3%2581%258CGoogle%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E3%2581%25AE%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2590%25E3%2583%25BC%25E3%2581%258B%25E3%2583%2581%25E3%2582%25A7%25E3%2583%2583%25E3%2582%25AF%25E3%2581%2599%25E3%2582%258B%2528Python%252CSt...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%2584%25E3%2581%25B0%25E3%2582%2589%25E3%2581%258D%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNhODZhNDA5ZDMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:NCDC%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lXRjZXeUJCMTBrRDZNaV9Fa0tLQi13WFJSUC04eFlJbDV5eWljPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--H2hbmz1v--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%2520OAuth2%25E3%2581%25A7%25E3%2583%25AD%25E3%2582%25B0%25E3%2582%25A4%25E3%2583%25B3%25E3%2581%2597%25E3%2581%259F%25E3%2583%25A6%25E3%2583%25BC%25E3%2582%25B6%25E3%2583%25BC%25E3%2581%258CGoogle%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E3%2581%25AE%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2590%25E3%2583%25BC%25E3%2581%258B%25E3%2583%2581%25E3%2582%25A7%25E3%2583%2583%25E3%2582%25AF%25E3%2581%2599%25E3%2582%258B%2528Python%252CSt...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%2584%25E3%2581%25B0%25E3%2582%2589%25E3%2581%258D%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNhODZhNDA5ZDMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:NCDC%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lXRjZXeUJCMTBrRDZNaV9Fa0tLQi13WFJSUC04eFlJbDV5eWljPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/hosaka313/articles/a68ccb619cf34d",
+          "author": "hosaka313",
+          "description": "はじめに\n本記事ではGoogle Colaboratory上でGmailを送る方法を3種類扱います。\n最終的に至った結論はサービスアカウント認証かOAuth 2.0 クライアントIDが有力そうではあるがいずれも問題点あり、です。3種類の方法ともメール送信はできましたが、運用・保守まで考えると「これがベスト」という結論には達せずでした。\n「試行錯誤したけどダメだった系記事」であることを、最初におことわりしておきます。\n\n 要約\n\n本記事はGoogle WorkspaceでのGmail送付を扱います。\n下記の3つでGoogle ColaboratoryからGmailを送ります。\n\nサービ...",
+          "link": "https://zenn.dev/hosaka313/articles/a68ccb619cf34d",
+          "publishedOn": "2024-01-03T23:05:00.000Z",
+          "wordCount": 3222,
+          "title": "Google Colab上でGmailを送信してみる（サービスアカウント認証・パスワード認証・OAuth 2.0 クライアントID）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--3M8jzgJ2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%2520Colab%25E4%25B8%258A%25E3%2581%25A7Gmail%25E3%2582%2592%25E9%2580%2581%25E4%25BF%25A1%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25EF%25BC%2588%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%25E3%2582%25A2%25E3%2582%25AB%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%2588%25E8%25AA%258D%25E8%25A8%25BC%25E3%2583%25BB%25E3%2583%2591%25E3%2582%25B9%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%25E8%25AA%258D%25E8%25A8%25BC%25E3%2583%25BBOAuth%25202.0%2520...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hosaka313%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lvTjJRYzJRN1V1ZnM1X29EblNkWkt4OFNPSWUzOTBaQTRSTDVOPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--3M8jzgJ2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%2520Colab%25E4%25B8%258A%25E3%2581%25A7Gmail%25E3%2582%2592%25E9%2580%2581%25E4%25BF%25A1%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25EF%25BC%2588%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%25E3%2582%25A2%25E3%2582%25AB%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%2588%25E8%25AA%258D%25E8%25A8%25BC%25E3%2583%25BB%25E3%2583%2591%25E3%2582%25B9%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%25E8%25AA%258D%25E8%25A8%25BC%25E3%2583%25BBOAuth%25202.0%2520...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hosaka313%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lvTjJRYzJRN1V1ZnM1X29EblNkWkt4OFNPSWUzOTBaQTRSTDVOPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/mandenaren/articles/pdf_llm_for_buysell",
+          "author": "なりん",
+          "description": "はじめに\nChatGPTは自然な言葉のようになんでも教えてくれるツールですが、あくまでネット上に大規模に置いてある一般的な知識の回答を返します。\nそのため、最新の情報や独自の情報をこちらから教えて回答を返してもらうような仕組みが求められてきました。\n解の一つとして、PythonのLLMライブラリであるLangChainはベクトルストアによる検索戦略機能を提供しています。\nこの記事では、会社紹介のPDFをChatGPTに教えることを通して、使用感を見てみたいと思います。\n!\nOpenAIのAPIを利用するため、事前にOpenAIのアカウントを作成しAPI_KEYを発行する必要があります...",
+          "link": "https://zenn.dev/mandenaren/articles/pdf_llm_for_buysell",
+          "publishedOn": "2024-01-03T23:00:00.000Z",
+          "wordCount": 708,
+          "title": "ChatGPT x LangChainで会社紹介PDFを基にした回答を得る",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--Czn-c6OD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ChatGPT%2520x%2520LangChain%25E3%2581%25A7%25E4%25BC%259A%25E7%25A4%25BE%25E7%25B4%25B9%25E4%25BB%258BPDF%25E3%2582%2592%25E5%259F%25BA%25E3%2581%25AB%25E3%2581%2597%25E3%2581%259F%25E5%259B%259E%25E7%25AD%2594%25E3%2582%2592%25E5%25BE%2597%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AA%25E3%2582%258A%25E3%2582%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwODI0ZmRjNjIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Czn-c6OD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ChatGPT%2520x%2520LangChain%25E3%2581%25A7%25E4%25BC%259A%25E7%25A4%25BE%25E7%25B4%25B9%25E4%25BB%258BPDF%25E3%2582%2592%25E5%259F%25BA%25E3%2581%25AB%25E3%2581%2597%25E3%2581%259F%25E5%259B%259E%25E7%25AD%2594%25E3%2582%2592%25E5%25BE%2597%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AA%25E3%2582%258A%25E3%2582%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwODI0ZmRjNjIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/yu_yu/articles/402281ccb6a3f2",
+          "author": "zoyspace",
+          "description": "この記事では、Pythonを使用してLINE Botからメッセージを送信するコードを公開します。linebot.v3.messaging モジュールを活用し、簡潔かつ効率的にLINEメッセージを送るプログラムです、\nimport os\nimport linebot.v3.messaging as bot\nfrom dotenv import load_dotenv\nload_dotenv()\n\n# LINE_BOT_ACCESS_TOKENは、Messaging API設定のチャネルアクセストークン\nLINE_BOT_ACCESS_TOKEN = os.getenv('LINE_BOT_...",
+          "link": "https://zenn.dev/yu_yu/articles/402281ccb6a3f2",
+          "publishedOn": "2024-01-03T13:46:35.000Z",
+          "wordCount": 420,
+          "title": "PythonでLINE Messaging APIを使用する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--pSqrL5b2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7LINE%2520Messaging%2520API%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:zoyspace%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAzODA2MmI2ODMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--pSqrL5b2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7LINE%2520Messaging%2520API%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:zoyspace%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAzODA2MmI2ODMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/derwind/articles/dwd-matrix-product08",
+          "author": "derwind",
+          "description": "目的\n「Vidal の標準形」と呼ばれる MPS (Matrix Product State; 行列積状態) の一つの表示形式について、行列積状態について考える (6) — Vidal の標準形 で考察したが、今回再考察したい。\n現時点での問題点としては、\n\nQiskit Aer の実装を移植しただけであまりよく分かっていないこと\n内容的に 行列積状態について考える (3) で実装した TT_SVD と近そうだが、実装上の対称性がイマイチないこと\n\nがあり、これを解消したい。\n\n 実装\n必要なモジュールを import する。\nfrom __future__ import annot...",
+          "link": "https://zenn.dev/derwind/articles/dwd-matrix-product08",
+          "publishedOn": "2024-01-03T05:07:59.000Z",
+          "wordCount": 2730,
+          "title": "行列積状態について考える (8) — Vidal の標準形 その 2",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--eBfqYqde--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25A1%258C%25E5%2588%2597%25E7%25A9%258D%25E7%258A%25B6%25E6%2585%258B%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E8%2580%2583%25E3%2581%2588%25E3%2582%258B%2520%25288%2529%2520%25E2%2580%2594%2520Vidal%2520%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E5%25BD%25A2%2520%25E3%2581%259D%25E3%2581%25AE%25202%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:derwind%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--eBfqYqde--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25A1%258C%25E5%2588%2597%25E7%25A9%258D%25E7%258A%25B6%25E6%2585%258B%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E8%2580%2583%25E3%2581%2588%25E3%2582%258B%2520%25288%2529%2520%25E2%2580%2594%2520Vidal%2520%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E5%25BD%25A2%2520%25E3%2581%259D%25E3%2581%25AE%25202%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:derwind%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/tonokokko/articles/3b65c0c4a5408b",
+          "author": "とのこっこ",
+          "description": "タイトル通りです。\nPythonファイルとは言っていますが、ほかの言語のプログラムでもいけると思います。\n簡易Note\nプログラム欄への入力項目\n\nプログラム/スクリプト : pythonのexeファイルの絶対パス\n引数の追加 : 実行するpyファイルのファイル名\n開始 : 実行するpyファイルの親ディレクトリの絶対パス\n\n\n\n\n タスクスケジューラを開く\n\n\n 新しいタスクの作成\n\nタスクスケジューラ ライブラリを右クリック\n「基本タスクの作成」をクリック\n*タスクの作成だとより詳細な設定が可能\n*タスク作成後に編集もできるので深く考えずに選んでok\n\n\n\n\n タスク名の入力\n\n\n ト...",
+          "link": "https://zenn.dev/tonokokko/articles/3b65c0c4a5408b",
+          "publishedOn": "2024-01-03T04:05:59.000Z",
+          "wordCount": 207,
+          "title": "WindowsのタスクスケジューラでPythonファイルを定期実行する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--A-AmxIsK--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Windows%25E3%2581%25AE%25E3%2582%25BF%25E3%2582%25B9%25E3%2582%25AF%25E3%2582%25B9%25E3%2582%25B1%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25A9%25E3%2581%25A7Python%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E5%25AE%259A%25E6%259C%259F%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A8%25E3%2581%25AE%25E3%2581%2593%25E3%2581%25A3%25E3%2581%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMzMzkxNDI5MzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--A-AmxIsK--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Windows%25E3%2581%25AE%25E3%2582%25BF%25E3%2582%25B9%25E3%2582%25AF%25E3%2582%25B9%25E3%2582%25B1%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25A9%25E3%2581%25A7Python%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E5%25AE%259A%25E6%259C%259F%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A8%25E3%2581%25AE%25E3%2581%2593%25E3%2581%25A3%25E3%2581%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMzMzkxNDI5MzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/hosu/articles/965a11cb57edfe",
+          "author": "ホ・ヴィンチ",
+          "description": "機械学習をはじめるために、Pythonに入門しました。\nその際に参考にしたのが、東大 松尾研が一般公開している「人工知能・深層学習を学ぶためのロードマップ」。\nこのなかで紹介されていたPythonジャパンの「ゼロからのPython入門講座」が分かりやすい！\nPythonをこれから始める人にはぜひともオススメの教材なので、以下のnoteの記事ですこし紹介しました。\nhttps://note.com/hovinci/n/n971f7f8eb1bb\n今回の記事では、ぼくがC言語とC++言語を使っているので、それらではお目にかかれない、「Pythonの特徴」について、気づいたことをまとめます。\n...",
+          "link": "https://zenn.dev/hosu/articles/965a11cb57edfe",
+          "publishedOn": "2024-01-02T21:51:10.000Z",
+          "wordCount": 230,
+          "title": "「Python」の特徴（C、C++と比較して）：ゼロからのPython入門講座を体験して",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--7pAHmZTS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258CPython%25E3%2580%258D%25E3%2581%25AE%25E7%2589%25B9%25E5%25BE%25B4%25EF%25BC%2588C%25E3%2580%2581C%252B%252B%25E3%2581%25A8%25E6%25AF%2594%25E8%25BC%2583%25E3%2581%2597%25E3%2581%25A6%25EF%25BC%2589%25EF%25BC%259A%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589%25E3%2581%25AEPython%25E5%2585%25A5%25E9%2596%2580%25E8%25AC%259B%25E5%25BA%25A7%25E3%2582%2592%25E4%25BD%2593%25E9%25A8%2593%25E3%2581%2597%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%259B%25E3%2583%25BB%25E3%2583%25B4%25E3%2582%25A3%25E3%2583%25B3%25E3%2583%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc0MGU1MGU1NGUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--7pAHmZTS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258CPython%25E3%2580%258D%25E3%2581%25AE%25E7%2589%25B9%25E5%25BE%25B4%25EF%25BC%2588C%25E3%2580%2581C%252B%252B%25E3%2581%25A8%25E6%25AF%2594%25E8%25BC%2583%25E3%2581%2597%25E3%2581%25A6%25EF%25BC%2589%25EF%25BC%259A%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589%25E3%2581%25AEPython%25E5%2585%25A5%25E9%2596%2580%25E8%25AC%259B%25E5%25BA%25A7%25E3%2582%2592%25E4%25BD%2593%25E9%25A8%2593%25E3%2581%2597%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%259B%25E3%2583%25BB%25E3%2583%25B4%25E3%2582%25A3%25E3%2583%25B3%25E3%2583%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc0MGU1MGU1NGUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
           "id": "https://zenn.dev/riku_k/articles/4900bba6f4f7a4",
           "author": "Kid",
           "description": "はじめに\n初記事です！よろしくお願いします。\n今回、スタバで作業したいけど健康も守りたいという全ての人に向けて、スタバの商品の栄養成分量を比較できるWebサイトを作りました。Pythonでスクレイピングしたデータをd3.jsで可視化してReactに組み込むという流れで作ってます！\n健康オタク向けのスタバサイト\n👆このリンクからアクセスできます。\nスマホで開くと一番綺麗に見えます。\n（React書き疲れて発狂したので全画面サイズ対応は断念しました😇）\nこんな感じのUIになってます👇\n\n今回はReactとd3の勉強の一環でこの２つを合体させてみたかったので、あえてReactを使ってサイ...",
@@ -3590,186 +3695,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--KaXe5Zq6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B7%25E3%2583%259F%25E3%2583%25A5%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2581%25A7%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%25E3%2583%25A4%25E3%2583%25B3%25E3%2582%25B0%25E3%2581%25AE%25E5%25B9%25B2%25E6%25B8%2589%25E5%25AE%259F%25E9%25A8%2593%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E5%25AF%2585%25E5%25A4%25AA%25E9%2583%258E%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc3ZjA0N2I3MDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/d2c_mtech_blog/articles/282b99e903a032",
-          "author": "D2Cデータサイエンティスト名越",
-          "description": "はじめに\nこんにちは。D2Cデータサイエンティストの名越です。\nPythonでs3にある大規模なテーブルデータを多少の条件をつけて抽出する際どのように取得していますでしょうか？\nPandasを使ってデータ処理をする場合は大規模データだと重くなってしまうためできるだけ事前に処理をしたものを取り出したいですよね。\n私の所属している部署では awswrangler を用いてAthenaでデータ取得することができる環境が整っているため、私はそこまで深く考えることもなくシステム内ではこのやり方でデータを抽出することが多いです。\n本記事では既にある程度十分に速いawswranglerを用いた大規...",
-          "link": "https://zenn.dev/d2c_mtech_blog/articles/282b99e903a032",
-          "publishedOn": "2023-12-05T09:02:18.000Z",
-          "wordCount": 655,
-          "title": "awswrangler(Athena)でのデータ抽出をPolarsへ置き換えて高速化する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--K8Hlq6Mx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:awswrangler%2528Athena%2529%25E3%2581%25A7%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E6%258A%25BD%25E5%2587%25BA%25E3%2582%2592Polars%25E3%2581%25B8%25E7%25BD%25AE%25E3%2581%258D%25E6%258F%259B%25E3%2581%2588%25E3%2581%25A6%25E9%25AB%2598%25E9%2580%259F%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:D2C%2520m-tech%2Cx_220%2Cy_160/g_south_west%2Cl_text:notosansjp-medium.otf_34:D2C%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%25B5%25E3%2582%25A4%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2586%25E3%2582%25A3%25E3%2582%25B9%25E3%2583%2588%25E5%2590%258D%25E8%25B6%258A%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzJmZTIyZmYyMWQuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS1NLM2dsRllHSHotU3VmT0QtRDhTSWYtV0dLZ0VWYWFGVHBOT25rcGNTPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--K8Hlq6Mx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:awswrangler%2528Athena%2529%25E3%2581%25A7%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E6%258A%25BD%25E5%2587%25BA%25E3%2582%2592Polars%25E3%2581%25B8%25E7%25BD%25AE%25E3%2581%258D%25E6%258F%259B%25E3%2581%2588%25E3%2581%25A6%25E9%25AB%2598%25E9%2580%259F%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:D2C%2520m-tech%2Cx_220%2Cy_160/g_south_west%2Cl_text:notosansjp-medium.otf_34:D2C%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%25B5%25E3%2582%25A4%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2586%25E3%2582%25A3%25E3%2582%25B9%25E3%2583%2588%25E5%2590%258D%25E8%25B6%258A%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzJmZTIyZmYyMWQuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS1NLM2dsRllHSHotU3VmT0QtRDhTSWYtV0dLZ0VWYWFGVHBOT25rcGNTPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/kenshiroh/articles/72c95629dc8ad8",
-          "author": "kenshiroh",
-          "description": "OpenAIの大型のアップデートが2023/11/7に発表されましたね。\nGPT4-Turboがやはり目玉ではありますが、Assistant APIというのもβ版で公開されました。\n概要を読んでみると、langchainのAgentのようなものをOpenAIが公式に実装したという感じですね。\n周辺ツールとして作成されていたものを本家が作りに来るこのパターン、これまでにもよく見てきたパターンですがここでも始まってきましたね。\nplaygroundでもAPI経由でも使うことができるが、ここではAPI経由での使い方で試しながら、その特徴を見ていきましょう。\nまずはSDKをアップデートする。as...",
-          "link": "https://zenn.dev/kenshiroh/articles/72c95629dc8ad8",
-          "publishedOn": "2023-12-05T06:19:58.000Z",
-          "wordCount": 751,
-          "title": "OpenAIのAssistant API試してみた【基本編】",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--hM10MXNg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenAI%25E3%2581%25AEAssistant%2520API%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2590%25E5%259F%25BA%25E6%259C%25AC%25E7%25B7%25A8%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kenshiroh%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZmODkzMjQ3MDAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--hM10MXNg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenAI%25E3%2581%25AEAssistant%2520API%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25E3%2580%2590%25E5%259F%25BA%25E6%259C%25AC%25E7%25B7%25A8%25E3%2580%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kenshiroh%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZmODkzMjQ3MDAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/wanage/articles/8b8c890a47d477",
-          "author": "wanage",
-          "description": "命名規則\n\n\n\n対象\nルール\n例\n\n\n\n\nパッケージ\n全小文字。なるべく短く。アンダースコア非推奨。\ntqdm, requests ...\n\n\nモジュール\n全小文字。なるべく短く。アンダースコア可。\nsys, os,...\n\n\nクラス\n最初大文字 + 大文字区切り\nMyFavoriteClass\n\n\n例外\n最初大文字 + 大文字区切り\nMyFuckingError\n\n\n型変数\n最初大文字 + 大文字区切り\nMyFavoriteType\n\n\nメソッド\n全小文字 + アンダースコア区切り\nmy_favorite_method\n\n\n関数\n全小文字 + アンダースコア区切り\nmy_favor...",
-          "link": "https://zenn.dev/wanage/articles/8b8c890a47d477",
-          "publishedOn": "2023-12-05T04:42:29.000Z",
-          "wordCount": 177,
-          "title": "Python命名規則",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--MgOCQSQX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_66:Python%25E5%2591%25BD%25E5%2590%258D%25E8%25A6%258F%25E5%2589%2587%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:wanage%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FkNGQ1NzBiZjguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--MgOCQSQX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_66:Python%25E5%2591%25BD%25E5%2590%258D%25E8%25A6%258F%25E5%2589%2587%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:wanage%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FkNGQ1NzBiZjguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/kwaka1208/articles/a-stand-alone-python-environment",
-          "author": "Kenichi Wakabayashi",
-          "description": "概要\nこのページでは、限られた条件下にあるPCにPythonの動作環境を構築する手順を説明しています。対象はWindows PCのみとなります。\nまた、この記事ではディレクトリ（フォルダ）配置なども具体的に限定的に記述していますが、まったくの初心者でもここに書いてあるとおり進めれば環境を作れるようにするためのものです。ご自身の環境に合わせて適宜読み替えてください。\n\n コマンドラインでの操作\nPythonの実行環境の構築と自分で作ったPythonのプログラムの実行は、いずれも「コマンドライン」で行います。通常、Windowsではアプリの操作をマウスなどポインティングデバイスで行います...",
-          "link": "https://zenn.dev/kwaka1208/articles/a-stand-alone-python-environment",
-          "publishedOn": "2023-12-05T02:50:51.000Z",
-          "wordCount": 601,
-          "title": "管理者権限がなく、pipでモジュールインストールできないWindows PCにPython環境を構築する手順",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--E9VRnyEN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25AE%25A1%25E7%2590%2586%25E8%2580%2585%25E6%25A8%25A9%25E9%2599%2590%25E3%2581%258C%25E3%2581%25AA%25E3%2581%258F%25E3%2580%2581pip%25E3%2581%25A7%25E3%2583%25A2%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25AB%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25AA%25E3%2581%2584Windows%2520PC%25E3%2581%25ABPython%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%2599%25E3%2582%258B%25E6%2589%258B%25E9%25A0%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kenichi%2520Wakabay...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzg2YWI0ZTZiMTcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--E9VRnyEN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25AE%25A1%25E7%2590%2586%25E8%2580%2585%25E6%25A8%25A9%25E9%2599%2590%25E3%2581%258C%25E3%2581%25AA%25E3%2581%258F%25E3%2580%2581pip%25E3%2581%25A7%25E3%2583%25A2%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25AB%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25AA%25E3%2581%2584Windows%2520PC%25E3%2581%25ABPython%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%2599%25E3%2582%258B%25E6%2589%258B%25E9%25A0%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kenichi%2520Wakabay...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzg2YWI0ZTZiMTcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/lincwell_inc/articles/984997447266d1",
-          "author": "mani3",
-          "description": "はじめに\nAWS Lambda から Python を使って PostgreSQL に接続するときに、 psycopg2 を使うことが多いと思います。\nその場合、ZIP にパッケージングして Lambda にアップロードする必要があります。\n今までは、 Serverless Framework を使ったり、 lambci/docker-lambda を使ってローカルでパッケージングしていました。\n普段、 Terraform を使って Lambda などの環境を構築する際に、 ZIP ファイルを予めリポジトリに入れられれば管理が簡単ですが、ファイルが大きい場合デプロイ時に ZIP にパ...",
-          "link": "https://zenn.dev/lincwell_inc/articles/984997447266d1",
-          "publishedOn": "2023-12-05T00:24:07.000Z",
-          "wordCount": 1368,
-          "title": "AWS Lambda カスタムイメージを使って PostgreSQL に接続する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--doKkzvg---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AWS%2520Lambda%2520%25E3%2582%25AB%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25A0%25E3%2582%25A4%25E3%2583%25A1%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%2520PostgreSQL%2520%25E3%2581%25AB%25E6%258E%25A5%25E7%25B6%259A%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Linc%2527well%252C%2520inc.%2Cx_220%2Cy_160/g_south_west%2Cl_text:notosansjp-medium.otf_34:mani3%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdkNzA3MDZjNTUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hveTk1eE14OUNPNEY2SXNGNDc1VGh1Wk0xUG9hZHhzM3hVVDN3NWc9czI1MC1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--doKkzvg---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AWS%2520Lambda%2520%25E3%2582%25AB%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25A0%25E3%2582%25A4%25E3%2583%25A1%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%2520PostgreSQL%2520%25E3%2581%25AB%25E6%258E%25A5%25E7%25B6%259A%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Linc%2527well%252C%2520inc.%2Cx_220%2Cy_160/g_south_west%2Cl_text:notosansjp-medium.otf_34:mani3%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdkNzA3MDZjNTUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hveTk1eE14OUNPNEY2SXNGNDc1VGh1Wk0xUG9hZHhzM3hVVDN3NWc9czI1MC1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/dimebag29/articles/d29376aae38d97",
-          "author": "dimebag29",
-          "description": "概要\npynputライブラリを利用したキーボードのグローバルフックによって、XSOverlayの手首メニューの「前の曲」「再生/一時停止」「次の曲」キーが押されたことを検知し、自分のアプリでお好みの処理を実行。その後、メディアプレーヤーなどの他のアプリが動いてしまわないようにキー入力のメッセージを破棄します。\n手首メニューのメディアキーが押された時に情報を飛ばしてくれるような専用のAPIをXSOverlayが用意してくれているわけではありません。\n\nXSOverlayの手首メニューの各メディアキーの場所\n\n 環境\n\nWindows10 64bit\nPython 3.7.5\npynpu...",
-          "link": "https://zenn.dev/dimebag29/articles/d29376aae38d97",
-          "publishedOn": "2023-12-04T22:16:55.000Z",
-          "wordCount": 534,
-          "title": "XSOverlayの手首メニューのメディアキーを自分のアプリの制御に利用する方法",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--VYIYCu0O--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:XSOverlay%25E3%2581%25AE%25E6%2589%258B%25E9%25A6%2596%25E3%2583%25A1%25E3%2583%258B%25E3%2583%25A5%25E3%2583%25BC%25E3%2581%25AE%25E3%2583%25A1%25E3%2583%2587%25E3%2582%25A3%25E3%2582%25A2%25E3%2582%25AD%25E3%2583%25BC%25E3%2582%2592%25E8%2587%25AA%25E5%2588%2586%25E3%2581%25AE%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2581%25AE%25E5%2588%25B6%25E5%25BE%25A1%25E3%2581%25AB%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:dimebag29%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBiNGJmZjVlM2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--VYIYCu0O--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:XSOverlay%25E3%2581%25AE%25E6%2589%258B%25E9%25A6%2596%25E3%2583%25A1%25E3%2583%258B%25E3%2583%25A5%25E3%2583%25BC%25E3%2581%25AE%25E3%2583%25A1%25E3%2583%2587%25E3%2582%25A3%25E3%2582%25A2%25E3%2582%25AD%25E3%2583%25BC%25E3%2582%2592%25E8%2587%25AA%25E5%2588%2586%25E3%2581%25AE%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2581%25AE%25E5%2588%25B6%25E5%25BE%25A1%25E3%2581%25AB%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:dimebag29%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBiNGJmZjVlM2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/ytsakairi/articles/3c9ac78c755172",
-          "author": "sakairi-y",
-          "description": "!\nこの記事はAidemy Advent Calendar 2023の５日目の記事です。\n４日目はDynamicVizで次元削減から恣意性を除くでした！\n\n\n 概要\n自作関数を利用する際に、引数と戻り値の型チェックを行うことで、コードの安全性を高められます。\nPythonのデコレータとアノテーションを利用することで、簡単に複数関数へ型チェックを適用することができます。\n\n デコレータとは\nデコレータは関数やクラスをラップして、別の関数を返す関数のことです。ここでは関数デコレータについて話を進めていきます。\n既存の関数をラップすることにより、引数に指定した関数の前後で処理を追加することがで...",
-          "link": "https://zenn.dev/ytsakairi/articles/3c9ac78c755172",
-          "publishedOn": "2023-12-04T22:00:00.000Z",
-          "wordCount": 915,
-          "title": "PythonのDecoratorを利用した引数・戻り値の型チェック実装",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--lQuIevmD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AEDecorator%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E5%25BC%2595%25E6%2595%25B0%25E3%2583%25BB%25E6%2588%25BB%25E3%2582%258A%25E5%2580%25A4%25E3%2581%25AE%25E5%259E%258B%25E3%2583%2581%25E3%2582%25A7%25E3%2583%2583%25E3%2582%25AF%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sakairi-y%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FmZTdmZTM3YjEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--lQuIevmD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AEDecorator%25E3%2582%2592%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E5%25BC%2595%25E6%2595%25B0%25E3%2583%25BB%25E6%2588%25BB%25E3%2582%258A%25E5%2580%25A4%25E3%2581%25AE%25E5%259E%258B%25E3%2583%2581%25E3%2582%25A7%25E3%2583%2583%25E3%2582%25AF%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sakairi-y%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FmZTdmZTM3YjEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/stafes_blog/articles/7f96753fa0de75",
-          "author": "koonagi (kohei yamazaki)",
-          "description": "!\nこの記事は、スターフェスティバル Advent Calendar 2023の5日目です。\n\nこんにちは！   @koonagiです。\n2023年も変わらずインフラエンジニアとデータ基盤エンジニアを兼務しておりまして、RDSのアップデートしたり、Snowflake使ったデータ基盤作ったり色々楽しくやっておりますー。一年早かったなー。\n今日はゆるっとこれまで気になってたけど、調査できなかったOpenAI APIの仕様について調査したのでその結果を書いていきます！\n\n やったこと\nシステムにOpenAI APIを組み込むときに、OpenAIのJSON ModeやFunction Calli...",
-          "link": "https://zenn.dev/stafes_blog/articles/7f96753fa0de75",
-          "publishedOn": "2023-12-04T21:22:20.000Z",
-          "wordCount": 1539,
-          "title": "OpenAI APIのJSON ModeとFunction Callingの精度比較",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--wtf6Gkpx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenAI%2520API%25E3%2581%25AEJSON%2520Mode%25E3%2581%25A8Function%2520Calling%25E3%2581%25AE%25E7%25B2%25BE%25E5%25BA%25A6%25E6%25AF%2594%25E8%25BC%2583%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%2595%25E3%2582%25A7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/g_south_west%2Cl_text:notosansjp-medium.otf_34:koonagi%2520%2528kohei%2520...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk5ZjYyZGQwYWQuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ2YzBkODM0ZWMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--wtf6Gkpx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenAI%2520API%25E3%2581%25AEJSON%2520Mode%25E3%2581%25A8Function%2520Calling%25E3%2581%25AE%25E7%25B2%25BE%25E5%25BA%25A6%25E6%25AF%2594%25E8%25BC%2583%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%2595%25E3%2582%25A7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/g_south_west%2Cl_text:notosansjp-medium.otf_34:koonagi%2520%2528kohei%2520...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk5ZjYyZGQwYWQuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ2YzBkODM0ZWMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/saurusu_saurusu/articles/e84b3790b38983",
-          "author": "saurusu",
-          "description": "はじめに\nみなさんこんにちわ！ラジオ大好き情報系大学院生です！学部生の頃は深夜１時まで大学で友人とプログラミングに没頭して、ニッポン放送さんのオールナイトニッポンを聴きながら下宿先に帰る生活をしていたほど、プログラミングとラジオに全てを捧げた生活を送っていました。笑（詳細）\nそんな私の学生生活を支えてくれたラジオそしてラジオ業界の救世主となりうるシステムを開発しましたので、紹介したいと思います！\n\n ”ラジオ”の存在意義とは\n今年の夏、東京での就職活動の帰りに、人生で初めて電車で『有楽町駅』を通りかかり、ニッポン放送がある「有楽町」に自分がいることに感激してしまい、改札を出てニッポン...",
-          "link": "https://zenn.dev/saurusu_saurusu/articles/e84b3790b38983",
-          "publishedOn": "2023-12-04T19:23:57.000Z",
-          "wordCount": 371,
-          "title": "ラジオ復権大作戦~自動切り抜き動画制作システム~",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--kdyFbbJl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25A9%25E3%2582%25B8%25E3%2582%25AA%25E5%25BE%25A9%25E6%25A8%25A9%25E5%25A4%25A7%25E4%25BD%259C%25E6%2588%25A6%7E%25E8%2587%25AA%25E5%258B%2595%25E5%2588%2587%25E3%2582%258A%25E6%258A%259C%25E3%2581%258D%25E5%258B%2595%25E7%2594%25BB%25E5%2588%25B6%25E4%25BD%259C%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%7E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:saurusu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSTN6UENhMXRiazFEc3ZPSTlQZF9PUVpwYUJtOTRLU1A5VEZDX05OdGluPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--kdyFbbJl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25A9%25E3%2582%25B8%25E3%2582%25AA%25E5%25BE%25A9%25E6%25A8%25A9%25E5%25A4%25A7%25E4%25BD%259C%25E6%2588%25A6%7E%25E8%2587%25AA%25E5%258B%2595%25E5%2588%2587%25E3%2582%258A%25E6%258A%259C%25E3%2581%258D%25E5%258B%2595%25E7%2594%25BB%25E5%2588%25B6%25E4%25BD%259C%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%7E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:saurusu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSTN6UENhMXRiazFEc3ZPSTlQZF9PUVpwYUJtOTRLU1A5VEZDX05OdGluPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/mikiken/articles/encode-ir-signal",
-          "author": "mikiken",
-          "description": "この記事は、CAMPHOR- Advent Calendar 2023の5日目の記事です。\n\n はじめに\nこの記事は、以下の記事の続きです。\nhttps://zenn.dev/mikiken/articles/decode-ir-signal\n前回は、赤外線リモコンの信号をバイナリデータにデコードし、それをパースして以下のように16進数として表記する方法までを説明しました。\n23cb260100205800c64000000000100000a3\nこの記事では、エアコンのリモコン信号を解析した上で、エアコンの運転状態からリモコン信号を生成する方法について説明します。\n\n エアコンのリモコ...",
-          "link": "https://zenn.dev/mikiken/articles/encode-ir-signal",
-          "publishedOn": "2023-12-04T15:00:00.000Z",
-          "wordCount": 3731,
-          "title": "Pythonでエアコンのリモコン信号を解析し自在に操作できるようにする",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--natyNvoN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E3%2582%25A8%25E3%2582%25A2%25E3%2582%25B3%25E3%2583%25B3%25E3%2581%25AE%25E3%2583%25AA%25E3%2583%25A2%25E3%2582%25B3%25E3%2583%25B3%25E4%25BF%25A1%25E5%258F%25B7%25E3%2582%2592%25E8%25A7%25A3%25E6%259E%2590%25E3%2581%2597%25E8%2587%25AA%25E5%259C%25A8%25E3%2581%25AB%25E6%2593%258D%25E4%25BD%259C%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:mikiken%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MwNWE5NjgyMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--natyNvoN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E3%2582%25A8%25E3%2582%25A2%25E3%2582%25B3%25E3%2583%25B3%25E3%2581%25AE%25E3%2583%25AA%25E3%2583%25A2%25E3%2582%25B3%25E3%2583%25B3%25E4%25BF%25A1%25E5%258F%25B7%25E3%2582%2592%25E8%25A7%25A3%25E6%259E%2590%25E3%2581%2597%25E8%2587%25AA%25E5%259C%25A8%25E3%2581%25AB%25E6%2593%258D%25E4%25BD%259C%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:mikiken%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MwNWE5NjgyMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/willyang/articles/19f45c0af8b992",
-          "author": "willyang",
-          "description": "例外(Exception)とは\nPythonではプログラムの実行時に発生するエラーを「例外」と呼ぶ。例外に対処することを「例外処理」といい、Pythonではtry, except文に例外を発生させる可能性があるコードと、例外が発生した際に行う処理を記述していく。\n\n 例外処理\n\n 基本文法(try, except)\ntry:\n    発生しうる例外\nexcept:\n    例外をキャッチした際に処理\n\n 具体例\ntry:\n    f = open('python.txt', 'r')\n    content = f.readline()\n    print(content, end=...",
-          "link": "https://zenn.dev/willyang/articles/19f45c0af8b992",
-          "publishedOn": "2023-12-04T14:20:18.000Z",
-          "wordCount": 1007,
-          "title": "Python100本ノック#12 例外(Exception)処理",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--_H-SAo7J--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%252312%2520%25E4%25BE%258B%25E5%25A4%2596%2528Exception%2529%25E5%2587%25A6%25E7%2590%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:willyang%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS0hCZEpPZk5SREo4Sm91d1lhN2tOR1RibE1KN3VlazhxX1lpVm9FakNSPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--_H-SAo7J--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python100%25E6%259C%25AC%25E3%2583%258E%25E3%2583%2583%25E3%2582%25AF%252312%2520%25E4%25BE%258B%25E5%25A4%2596%2528Exception%2529%25E5%2587%25A6%25E7%2590%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:willyang%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jS0hCZEpPZk5SREo4Sm91d1lhN2tOR1RibE1KN3VlazhxX1lpVm9FakNSPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/nakashi94/articles/8ff1a7636bea7f",
-          "author": "nakashi94",
-          "description": "概要\nOpen-Interpreterを実行中に呼び出される再帰の上限を変更する\n\n 環境\nWindows 10 Home\nDocker 23.0.1-rd\nDocker Compose v2.16.0\npython 3.11.5\nDockerで作成したpython3.11.5を実行する環境で作業をすることを想定している。\n\n 解決されるエラー\nデフォルトではpythonが呼び出すことのできる再帰関数の上限が1000であるため、Open-Interpreterでコードを実行する際に再帰呼び出し回数が上限を超えると以下のエラーが出力される。\nRuntimeError: maximum ...",
-          "link": "https://zenn.dev/nakashi94/articles/8ff1a7636bea7f",
-          "publishedOn": "2023-12-04T13:32:02.000Z",
-          "wordCount": 289,
-          "title": "Open-Interpreterを実行中に呼び出される再帰の上限を変更する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--GNJhWHyS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Open-Interpreter%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E4%25B8%25AD%25E3%2581%25AB%25E5%2591%25BC%25E3%2581%25B3%25E5%2587%25BA%25E3%2581%2595%25E3%2582%258C%25E3%2582%258B%25E5%2586%258D%25E5%25B8%25B0%25E3%2581%25AE%25E4%25B8%258A%25E9%2599%2590%25E3%2582%2592%25E5%25A4%2589%25E6%259B%25B4%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nakashi94%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U3MjE3ZDBjNzguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--GNJhWHyS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Open-Interpreter%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E4%25B8%25AD%25E3%2581%25AB%25E5%2591%25BC%25E3%2581%25B3%25E5%2587%25BA%25E3%2581%2595%25E3%2582%258C%25E3%2582%258B%25E5%2586%258D%25E5%25B8%25B0%25E3%2581%25AE%25E4%25B8%258A%25E9%2599%2590%25E3%2582%2592%25E5%25A4%2589%25E6%259B%25B4%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nakashi94%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U3MjE3ZDBjNzguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
         }
       ]
     }
