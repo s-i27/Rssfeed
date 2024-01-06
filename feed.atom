@@ -2,10 +2,130 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-01-05T01:17:39.179Z</updated>
+    <updated>2024-01-06T01:17:04.961Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[ターミナルから Python を実行できなかった時の対処方法備忘録]]></title>
+        <id>https://zenn.dev/cazzenn/articles/955c92cff53091</id>
+        <link href="https://zenn.dev/cazzenn/articles/955c92cff53091"/>
+        <updated>2024-01-06T01:07:35.000Z</updated>
+        <summary type="html"><![CDATA[前提情報
+
+Windows11 を使用
+
+
+ 遭遇した問題
+
+python インストール後、ターミナルで py ファイルを実行しても「python」だけ返ってきてスクリプトを実行できない
+
+
+
+
+
+
+ やったこと
+
+インストールしていた python をアンインストール
+アプリ実行エイリアス画面で、pythonのインストーラ2つを「オフ」にする
+python を再インストール
+
+その際、「Add Python 〇.〇 to PATH」にチェックを入れる
+
+
+ターミナルで python -v でインストールを確認
+
+Python 3.12.1 のように返ってくれば OK
+コマンドを打つ...]]></summary>
+        <author>
+            <name>CazunariMuraho</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Streamlit] ローカル環境か否かで処理を分岐]]></title>
+        <id>https://zenn.dev/shimat/articles/0c00e3c83d8cf0</id>
+        <link href="https://zenn.dev/shimat/articles/0c00e3c83d8cf0"/>
+        <updated>2024-01-06T00:12:25.000Z</updated>
+        <summary type="html"><![CDATA[もっと良い方法求む！
+
+ 背景
+Streamlitによる開発では個人的に、ローカル環境でのデバッグ時とデプロイ先での本番動作時とで、処理を分岐したいシーンがよくあります。典型的には以下です。
+
+ローカルの開発環境では、データの微調整が多いので、キャッシュ (@st.cache_data) を無効にしたい
+デプロイ先であるCommunity Cloudでは、速度向上のためキャッシュを有効にしたい
+
+
+ 手法概要
+
+デコレータ (@st.cache_data) を効かせるかどうか条件分岐可能にする
+ローカル環境と他の環境をコード上で判定する
+
+雑な疑似コードとしては、こういうことがしたいわけ...]]></summary>
+        <author>
+            <name>shimat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPIの導入とサービス化]]></title>
+        <id>https://zenn.dev/kn64872/articles/2489cf66219b72</id>
+        <link href="https://zenn.dev/kn64872/articles/2489cf66219b72"/>
+        <updated>2024-01-05T10:05:00.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+PythonのFastAPIを利用することにしましたのでその基礎の勉強と、supervisorで常時起動化する方法までを実施しました。
+
+ FastAPIの導入
+次のコマンドでインストールします。
+pip install "fastapi[all]"
+pip install uvicorn
+
+ FastAPIの簡単なサンプル
+
+ テスト処理の作成
+
+パスやクエリは簡単に取得可能
+JSONの場合は型定義して取得する方法もある。
+
+
+test.py
+from fastapi import Request, FastAPI
+from typing import Any, Dict...]]></summary>
+        <author>
+            <name>O.Yabuki-213</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[コレスポンデンス分析（Python）]]></title>
+        <id>https://zenn.dev/ginchiyo/articles/33dfeb1f998cd0</id>
+        <link href="https://zenn.dev/ginchiyo/articles/33dfeb1f998cd0"/>
+        <updated>2024-01-05T06:51:30.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは。駆け出しデータサイエンティストの誾千代です。
+今日はコレスポンデンス分析を使っていきます。
+
+ コレスポンデンス分析とは何か
+インテージでは次のように紹介されています。
+
+「コレスポンデンス分析」とは、統計学上のデータ解析手法のひとつで、アンケート調査などのクロス集計結果を散布図にして見やすくする手法です。省略して「コレポン」と呼ばれることもあります。
+調査データはクロス集計表にすることが多いため、項目が多いと内容を把握しにくい場合があります。そうした際、項目間の関係性を視覚的に分かり易く表現するために、コレスポンデンス分析は頻繁に使われます。メディアや企画書などで見かけるこ...]]></summary>
+        <author>
+            <name>誾千代</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[REST API を用いたOmeka S への画像登録]]></title>
+        <id>https://zenn.dev/erikka_22/articles/4e1f3e566d7027</id>
+        <link href="https://zenn.dev/erikka_22/articles/4e1f3e566d7027"/>
+        <updated>2024-01-05T06:20:27.000Z</updated>
+        <summary type="html"><![CDATA[概要
+プロキシ環境下で、REST API を用いてOmeka S に画像ファイルを1件ずつPOSTして登録する処理を実装しました。
+Omeka S のREST APIを操作するクライアントとして、omeka_s_tools また omeka_s_tools2 がありますが、プロキシに阻まれて活用できませんでした。そのため、Pythonのrequestsライブラリを使ってAPIを叩く方法で実装しました。
+https://github.com/wragge/omeka_s_tools
+https://github.com/nakamura196/omeka_s_tools2
+ほぼ同様の内...]]></summary>
+        <author>
+            <name>erikka_22</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[WindowsのタスクスケジューラでPythonファイル実行失敗時に再試行したかった]]></title>
         <id>https://zenn.dev/tonokokko/articles/c0745e04760a16</id>
@@ -4639,153 +4759,6 @@ Poetry
   "runServices": [...]]></summary>
         <author>
             <name>Nakano as a Service</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[llama.cppを使ってMacのローカルPC内にLLMサーバを立てる]]></title>
-        <id>https://zenn.dev/michy/articles/46b275eb16b441</id>
-        <link href="https://zenn.dev/michy/articles/46b275eb16b441"/>
-        <updated>2023-12-07T12:16:29.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事はllama.cppを使ってMacのローカル環境にLLMサーバを立てるための手順を紹介しています。
-llama.cppのビルドが終わっている環境を前提としています。
-ビルド方法がわからない場合は、まずはこちらの記事を見てみてください。
-https://zenn.dev/michy/articles/d13d24e5f19c56
-
- LLMサーバを立てると何が良いのか？
-先の記事の通り、サーバを立てなくてもLLMの推論は可能ですが何度も繰り返し実行する場合はサーバを立てた方が圧倒的に処理が早くなります。
-LLMの推論は、モデルを一度メモリに読み込んでから推論を実行する...]]></summary>
-        <author>
-            <name>zaiwa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Double DQNで深層強化学習]]></title>
-        <id>https://zenn.dev/team411/articles/9f1db350845e98</id>
-        <link href="https://zenn.dev/team411/articles/9f1db350845e98"/>
-        <updated>2023-12-07T09:48:01.000Z</updated>
-        <summary type="html"><![CDATA[team411のSugiyamaです！
-team411は電通大の技術系サークルで、プロダクト開発、ソリューション開発などを行っております。
-１年生は研修、２〜３年生はマネジメント、４年〜M2年は研究知識の応用を目標にしています！
-今回は深層強化学習の１つ、Double DQNについて実装したので解説したいとおもいます。
-
- Double DQN
-
- Double DQNの概要
-元論文:Deep Reinforcement Learning with Double Q-learning
-https://arxiv.org/abs/1509.06461
-Double DQNとは従来のDQN(...]]></summary>
-        <author>
-            <name>Sugiyama</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[#M5Stack ATOM LiteでFire TVのバグを「「修正」」する]]></title>
-        <id>https://zenn.dev/muo/articles/940098aa9adbd4</id>
-        <link href="https://zenn.dev/muo/articles/940098aa9adbd4"/>
-        <updated>2023-12-06T21:54:16.000Z</updated>
-        <summary type="html"><![CDATA[本記事はM5Stack Advent Calendar 2023の7日目の記事です
-
- Fire TV Stickシリーズ 長年のバグ
-余ったPCモニターへFire TV Stickを挿してアマプラ端末化する際にどうしても許せないのがFire TVをスリープさせたときの挙動です
-Fire TV本体をスリープさせてもHDMI信号出力がオフにならないため、モニターの省電力機能が効かず黒画面をずっと表示しっぱなしになります
-これは有名な問題で、Amazon本家フォーラムでも2019年に立ったスレッドが未解決のまま放置されています
-キューブ型のFire TVではスリープ時にHDMI信号がオフにな...]]></summary>
-        <author>
-            <name>@muo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[行列積状態について考える (3)]]></title>
-        <id>https://zenn.dev/derwind/articles/dwd-matrix-product03</id>
-        <link href="https://zenn.dev/derwind/articles/dwd-matrix-product03"/>
-        <updated>2023-12-06T15:54:22.000Z</updated>
-        <summary type="html"><![CDATA[目的
-行列積状態 (Matrix Product State; MPS) について以前に書いた 行列積状態について考える (2) の続きとして、もっと一般のテンソルでの Tensor-Train 分解 (量子化学の分野などでの呼称は MPS) を考えたい。
-要するに SIAM J. Sci. Comput., 33(5), 2295–2317. (23 pages) Tensor-Train Decomposition, I. V. Oseledets の内容を実装したいということになる。
-
- TT-分解 (Tensor-Train 分解)
-一般に A(i_1,i_2, \cdots...]]></summary>
-        <author>
-            <name>derwind</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LINEでつくる 音声翻訳機(ほんやくコンニャク)]]></title>
-        <id>https://zenn.dev/ted_17/articles/7d476df997edcc</id>
-        <link href="https://zenn.dev/ted_17/articles/7d476df997edcc"/>
-        <updated>2023-12-06T15:24:43.000Z</updated>
-        <summary type="html"><![CDATA[はじめにのはじめに
-Zenn投稿テストもかねて、Qiitaから自分の記事をコピーしたものです。
-内容が古い(2022年2月)ことは、ご了承願います。
-
- はじめに
-AWS AIのサービスに、下記のようなものがある。
-
-音声をテキストに変換するtranscribe
-テキストを他言語翻訳するtranslate
-テキストを音声に変換するpolly
-
-これらを組み合わせれば、ほんやくコンニャクができるのではないか？
-ちなみに私はおみそ味を食べてみたい。
-ということでほんやくコンニャクのLINEBOTを作ってみた。
-基本的にはAWSサービスをぽちぽちと繋げていくだけで、LINE設定含め半日あれ...]]></summary>
-        <author>
-            <name>teddy</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pillowで画像をマスク画像に従ってクロップ]]></title>
-        <id>https://zenn.dev/fmfm_mdk/articles/pillow-crop-by-mask</id>
-        <link href="https://zenn.dev/fmfm_mdk/articles/pillow-crop-by-mask"/>
-        <updated>2023-12-06T15:17:00.000Z</updated>
-        <summary type="html"><![CDATA[四角形のアイコン画像の角を丸めたい，そんな時ありますよね．
-この辺とかこの辺とか参照したうえで，より良い方法を検討した結果を報告します．
-
- 解法
-画像を2枚用意します．一つがマスク (mask.png) ，一つはクロップする対象 (image.png) です．二つの高さと幅は一致している必要があります．
-import numpy as np
-from PIL import Image
-
-mask = Image.open( r"mask.png" )
-mask = np.array( mask )
-
-img = Image.open( r"image.png" )
-img = np.a...]]></summary>
-        <author>
-            <name>fmfm_games</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Jenkins+PythonでUnityの自動ビルド&自動デプロイ]]></title>
-        <id>https://zenn.dev/kd_gamegikenblg/articles/c8b89f317d9cee</id>
-        <link href="https://zenn.dev/kd_gamegikenblg/articles/c8b89f317d9cee"/>
-        <updated>2023-12-06T15:00:01.000Z</updated>
-        <summary type="html"><![CDATA[「神戸電子専門学校 ゲーム技研部 Advent Calendar 2023」7日目の記事です。
-https://qiita.com/advent-calendar/2023/kdgamegiken
-
- はじめに
-みなさんはUnityで開発している際に、頻繁にビルドをしているでしょうか?おそらく業務以外ではあまりしていないんじゃないかと思います。そしてアルファ/ベータテスト用に久々にビルドしてみるとビルドエラー/実行時エラーが出て修正作業に、、、なんてことの経験もあるのではないでしょうか。私はあります。(そしてビルドエラーの大半の原因はUnityEditorのusingだったり↓)
-
-私の...]]></summary>
-        <author>
-            <name>shirokuma1101</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[レシピサイトをクローリングして健康になった気になってみた]]></title>
-        <id>https://zenn.dev/simpleform/articles/20231207-07-crawling-recipes-with-scrapy</id>
-        <link href="https://zenn.dev/simpleform/articles/20231207-07-crawling-recipes-with-scrapy"/>
-        <updated>2023-12-06T14:44:37.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-エンジニアの @infinity0206 です。近年健康診断の数値が悪くなっており、そろそろ運動しないとやばそうです（しません）
-本記事は SimpleForm Advent Calendar 2023 の7日目です。今回は社内で法人データのwebクローリングにも活用されている Scrapy についてお話しします！
-
- 膨大なクローラの管理
-弊社では SimpleCheck という法人情報を調査することのできるSaaSを開発しています。このサービスの一番根幹とも言える部分が法人データの管理になります。
-web 上のデータ収集にはクローラを別途開発して運用しており、クローリン...]]></summary>
-        <author>
-            <name>シンプルフォーム Tech Blog</name>
         </author>
     </entry>
 </feed>
