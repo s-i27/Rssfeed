@@ -12,6 +12,111 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/tk_hamaguchi/articles/6a4da1834297e4",
+          "author": "tk_hamaguchi",
+          "description": "この記事はAzure Functions（Python版）をリファクタリングしてBluePrint対応するための実装メモです。\nAzure FunctionsはちょっとしたPythonAPIを動かすのにちょうど良いFaaS（Function as a Service）です。\nしかし毎回APIを作るために func init していたのでは、無尽蔵にリポジトリが増えて管理コストが上がってしまいます。\n今回はBluePrintを使って疎結合な形で複数API対応に向けたリファクタリングを行っていきます。\n過去に作成したAzure Functionsについては下記の通り。\n\n\n基本編\n\nAzur...",
+          "link": "https://zenn.dev/tk_hamaguchi/articles/6a4da1834297e4",
+          "publishedOn": "2024-01-08T15:11:15.000Z",
+          "wordCount": 3276,
+          "title": "Azure FunctionsでBluePrint対応を行う",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--2VvB9XRj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520Functions%25E3%2581%25A7BluePrint%25E5%25AF%25BE%25E5%25BF%259C%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tk_hamaguchi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lIb3g3cVdUTDcyQ25MTHFwOVA5Z2lYeW83SGtFdlZoMy11c09BWEE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--2VvB9XRj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520Functions%25E3%2581%25A7BluePrint%25E5%25AF%25BE%25E5%25BF%259C%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tk_hamaguchi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lIb3g3cVdUTDcyQ25MTHFwOVA5Z2lYeW83SGtFdlZoMy11c09BWEE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/yuto_mo/articles/71bcd199dd5da2",
+          "author": "yuu",
+          "description": "今回はデコレータについて解説します。\n\n 初めに\nデコレータとは、関数の動きを装飾する関数のことです。\n通常の関数の上に@をつけて使用します。\n\n デコレータ\nデコレータは関数を装飾するための機能です。\n複数の関数に同じ処理を追加することができます。\nまずはデコレータと同じ動きの関数を、デコレータを使用せずに定義します。\n文章を出力する関数の前後に、startとendを追加で出力するようにします。\n\nデコレータ不使用\n\n# デコレータになる関数\ndef start_end(func):\n    def add_start_end():\n        print('start')\n   ...",
+          "link": "https://zenn.dev/yuto_mo/articles/71bcd199dd5da2",
+          "publishedOn": "2024-01-08T11:41:28.000Z",
+          "wordCount": 659,
+          "title": "デコレータとは(関数の上の@)",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--c4MRHj5E--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2587%25E3%2582%25B3%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25A8%25E3%2581%25AF%2528%25E9%2596%25A2%25E6%2595%25B0%25E3%2581%25AE%25E4%25B8%258A%25E3%2581%25AE%2540%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0OTcwZWIzMmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--c4MRHj5E--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2587%25E3%2582%25B3%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25A8%25E3%2581%25AF%2528%25E9%2596%25A2%25E6%2595%25B0%25E3%2581%25AE%25E4%25B8%258A%25E3%2581%25AE%2540%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0OTcwZWIzMmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/toratti/articles/25acc38617cdf1",
+          "author": "とらっち",
+          "description": "大学院の時のデータサイエンス系の講義で書いたSQLiteのコードがGoogleDriveを漁っていたところ発掘されたので，それを復習がてら解き明かそうと思いました．\n講義で習ったSQLというかPythonのコードは殆ど同じですが，仮想のデータ部分は修正しております．\nこれで僕もあなたもsqlite使いです．嘘です．\n\n SQLiteとは\n\nサーバとしてではなくアプリケーションに組み込んで利用されるデータベースである\n\nとWikipediaにありました．\nMySQLとかとの大きな違いっぽいです．\n詳しくはWikipediaへ\nhttps://ja.wikipedia.org/wiki/SQ...",
+          "link": "https://zenn.dev/toratti/articles/25acc38617cdf1",
+          "publishedOn": "2024-01-08T11:22:00.000Z",
+          "wordCount": 688,
+          "title": "学生時代の残骸を掘り起こす[SQLite]",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--6wuuvkRs--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%25AD%25A6%25E7%2594%259F%25E6%2599%2582%25E4%25BB%25A3%25E3%2581%25AE%25E6%25AE%258B%25E9%25AA%25B8%25E3%2582%2592%25E6%258E%2598%25E3%2582%258A%25E8%25B5%25B7%25E3%2581%2593%25E3%2581%2599%255BSQLite%255D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A8%25E3%2582%2589%25E3%2581%25A3%25E3%2581%25A1%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I0OWE1ZTI0NjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--6wuuvkRs--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%25AD%25A6%25E7%2594%259F%25E6%2599%2582%25E4%25BB%25A3%25E3%2581%25AE%25E6%25AE%258B%25E9%25AA%25B8%25E3%2582%2592%25E6%258E%2598%25E3%2582%258A%25E8%25B5%25B7%25E3%2581%2593%25E3%2581%2599%255BSQLite%255D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A8%25E3%2582%2589%25E3%2581%25A3%25E3%2581%25A1%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I0OWE1ZTI0NjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/k41531/articles/e4e8eef79fd174",
+          "author": "kaisei",
+          "description": "この記事は以下の英語記事を元にしています。\nなお、元の記事は少し情報が古いため、最新の情報に合わせて書き換えています。\nhttps://extism.org/blog/calling-chat-gpt-from-a-plug-in\n1年ほど前にExtismについての記事を書きましたが、開発が活発でどんどんアップデートされています。\nhttps://zenn.dev/k41531/articles/3e935bd04968d6\nChatGPTを呼び出すプラグインをRustで作りながら、改めてExtismに入門する記事にしました。\n\n 準備\n必須ではないですが、extsim CLIという便利...",
+          "link": "https://zenn.dev/k41531/articles/e4e8eef79fd174",
+          "publishedOn": "2024-01-08T11:09:57.000Z",
+          "wordCount": 1628,
+          "title": "【Extism】プラグインシステムに入門する(with OpenAI API)",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--0pdU7HmM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Extism%25E3%2580%2591%25E3%2583%2597%25E3%2583%25A9%25E3%2582%25B0%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2581%25AB%25E5%2585%25A5%25E9%2596%2580%25E3%2581%2599%25E3%2582%258B%2528with%2520OpenAI%2520API%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kaisei%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q4ZTJhN2E2NDcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--0pdU7HmM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Extism%25E3%2580%2591%25E3%2583%2597%25E3%2583%25A9%25E3%2582%25B0%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25B7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%25A0%25E3%2581%25AB%25E5%2585%25A5%25E9%2596%2580%25E3%2581%2599%25E3%2582%258B%2528with%2520OpenAI%2520API%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kaisei%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q4ZTJhN2E2NDcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/junko_ai/articles/e0dee258a058f0",
+          "author": "junko",
+          "description": "機械学習を学びはじめ、pythonのコードを使っているのですが、最初「forループなどにでてくるアンダーバーって、何？」と、疑問に感じました。\n調べたことをまとめておきます。一言でいうと、下記は同じ動きをします。\nfor _, holiday in transferred_holidays.iterrows():\nfor index, holiday in transferred_holidays.iterrows():\nただし、アンダーバーで処理すると、インデックスや戻り値を利用できません。\nただ処理を行うだけであれば、アンダーバーでOKです。\nアンダーバーを使うことで、「インデックス...",
+          "link": "https://zenn.dev/junko_ai/articles/e0dee258a058f0",
+          "publishedOn": "2024-01-08T07:54:37.000Z",
+          "wordCount": 117,
+          "title": "_ for items: forループでアンダーバー（_）を使うのはなぜ？",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--WWjj9SLm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:_%2520for%2520items%253A%2520for%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E3%2581%25A7%25E3%2582%25A2%25E3%2583%25B3%25E3%2583%2580%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25EF%25BC%2588_%25EF%25BC%2589%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E3%2581%25AE%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%259C%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:junko%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyNTdjMjg4N2YuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--WWjj9SLm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:_%2520for%2520items%253A%2520for%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E3%2581%25A7%25E3%2582%25A2%25E3%2583%25B3%25E3%2583%2580%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25EF%25BC%2588_%25EF%25BC%2589%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E3%2581%25AE%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%259C%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:junko%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyNTdjMjg4N2YuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/junko_ai/articles/8856f468d82c12",
+          "author": "junko",
+          "description": "機械学習でリストに値を追加するときのメソッドについて、まとめます。\n\n Pandas\n機械学習等では、pandasを使って処理を行うことが多いです。この場合、concatを使います。\nappendを使うとエラーになります。 2022/1/22にリリースされたpandas 1.4.0から、appendメソッドは非推奨になりました。エラーメッセージは、下記のとおりです。\n\nAttributeError: module 'pandas' has no attribute 'append'\n\n\n concat の処理\nコード例は次のとおりです。\nimport pandas as pd\ndf1 =...",
+          "link": "https://zenn.dev/junko_ai/articles/8856f468d82c12",
+          "publishedOn": "2024-01-08T07:42:18.000Z",
+          "wordCount": 561,
+          "title": "機械学習でリストに値を追加時に使うメソッドについて： append, concat, extend, +",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--W6AbZV6A--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2581%25A7%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%25E3%2581%25AB%25E5%2580%25A4%25E3%2582%2592%25E8%25BF%25BD%25E5%258A%25A0%25E6%2599%2582%25E3%2581%25AB%25E4%25BD%25BF%25E3%2581%2586%25E3%2583%25A1%25E3%2582%25BD%25E3%2583%2583%25E3%2583%2589%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25EF%25BC%259A%2520append%252C%2520concat%252C%2520extend%252C%2520%252B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:junko%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyNTdjMjg4N2YuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--W6AbZV6A--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2581%25A7%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%25E3%2581%25AB%25E5%2580%25A4%25E3%2582%2592%25E8%25BF%25BD%25E5%258A%25A0%25E6%2599%2582%25E3%2581%25AB%25E4%25BD%25BF%25E3%2581%2586%25E3%2583%25A1%25E3%2582%25BD%25E3%2583%2583%25E3%2583%2589%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25EF%25BC%259A%2520append%252C%2520concat%252C%2520extend%252C%2520%252B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:junko%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyNTdjMjg4N2YuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/4ergfbv547uezdf/articles/d633ba8488e124",
+          "author": "bunnyhopper_isolated",
+          "description": "概要\nプロパティベーステストというものがあります。簡単に言えば仕様に定義された入力範囲に従ってランダムに値を大量に生成してその全件で狙った性質(Property)を満たすかテストするというものです。PythonにおいてはHypothesisライブラリで行なえます。HypythesisはpandasのDataFrame型も扱え、当記事ではあるケースを想定してその使用方法をまとめます。\n基本的なHypothesisの使い方は他の記事を参考にされて下さい。\n\n 環境\nUbuntu 20.04\nPython 3.12.0\nHypothesis及びDataFrameを扱うため以下が必要です。\n...",
+          "link": "https://zenn.dev/4ergfbv547uezdf/articles/d633ba8488e124",
+          "publishedOn": "2024-01-08T05:59:08.000Z",
+          "wordCount": 4024,
+          "title": "HypothesisでpandasのDataFrameを複雑に扱う",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--5sbUZoBs--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Hypothesis%25E3%2581%25A7pandas%25E3%2581%25AEDataFrame%25E3%2582%2592%25E8%25A4%2587%25E9%259B%2591%25E3%2581%25AB%25E6%2589%25B1%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:bunnyhopper_isolated%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNklBRDQ3Mm5reFc3Sl9jMmlHdDFZajNHMU1CSDFpU3JGTVVFVHI5UT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--5sbUZoBs--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Hypothesis%25E3%2581%25A7pandas%25E3%2581%25AEDataFrame%25E3%2582%2592%25E8%25A4%2587%25E9%259B%2591%25E3%2581%25AB%25E6%2589%25B1%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:bunnyhopper_isolated%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNklBRDQ3Mm5reFc3Sl9jMmlHdDFZajNHMU1CSDFpU3JGTVVFVHI5UT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
           "id": "https://zenn.dev/tk_hamaguchi/articles/db36aa9c92eff0",
           "author": "tk_hamaguchi",
           "description": "この記事はbehaveを使ってAzure Functions（Python版）でBDD（振る舞い駆動開発）を始めるためのメモです。\nAzure FunctionsはちょっとしたPythonAPIを動かすのにちょうど良いFaaS（Function as a Service）です。\n今回はインテグレーションテスト環境をbehaveを使って整えます。\nbehaveはBDD（振る舞い駆動開発）を行う上で有効なライブラリです。\n特徴としてはGherkinフォーマットで振る舞いを記述し、pythonで実行するコードを記述するため、仕様と実装を分けることができます。\nこれにより役割分担ができるだけでな...",
@@ -3410,201 +3515,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--d5OXJBR6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:tkinter%252Fcustomtkinter%25E3%2581%25A7Markdown%25E8%25A8%2598%25E6%25B3%2595%25E3%2581%25AE%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E8%25A1%25A8%25E7%25A4%25BA%25E3%2581%2599%25E3%2582%258B%25E3%2582%25A2%25E3%2582%25A4%25E3%2583%2587%25E3%2582%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%2520%2520%2520%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMzMjEzZTQyNDIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/johndoe/articles/4beabcd8c6ab8a",
-          "author": "John",
-          "description": "概要\nマルチテナントの連携ファイル取り込みetlに関して、\n異常データが入っている場合、その行ごとskipして保存できる分だけ保存する処理を\n汎用的にするには。\n\n 経緯\netl取込を行うにあたって、連携データの中には往々にして取り込めない異常データが存在する。\n最終的に数値がで保存するのに文字列型であったり、日付型で保存するのに-のような日付に変換できないようなデータが混じっている場合がマルチテナントでファイル取り込みを行う場合、様々なシステムからの連携ファイルを取り込むので存在する。\nマルチテナントのetl取り込みを共通のコードで汎用的に取り込めるようにしたのはまた別の話でやると...",
-          "link": "https://zenn.dev/johndoe/articles/4beabcd8c6ab8a",
-          "publishedOn": "2023-12-10T13:03:22.000Z",
-          "wordCount": 911,
-          "title": "pysparkで汎用的に取込対象外のデータ行をskipする",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--qz9d9Bqd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pyspark%25E3%2581%25A7%25E6%25B1%258E%25E7%2594%25A8%25E7%259A%2584%25E3%2581%25AB%25E5%258F%2596%25E8%25BE%25BC%25E5%25AF%25BE%25E8%25B1%25A1%25E5%25A4%2596%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E8%25A1%258C%25E3%2582%2592skip%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:John%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNjMGQ4N2M1ZTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--qz9d9Bqd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pyspark%25E3%2581%25A7%25E6%25B1%258E%25E7%2594%25A8%25E7%259A%2584%25E3%2581%25AB%25E5%258F%2596%25E8%25BE%25BC%25E5%25AF%25BE%25E8%25B1%25A1%25E5%25A4%2596%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E8%25A1%258C%25E3%2582%2592skip%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:John%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNjMGQ4N2M1ZTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/sasshi_i/articles/4cede72ad782c0",
-          "author": "Satoshi Ito",
-          "description": "はじめに\n今回の記事は機械学習と数理最適化 Advent Calendar 2023の11日目の記事です。\n機械学習のアルゴリズムとして入門書でもよく取り上げられるサポートベクトルマシンについて解説します。今回はデータが線形分離可能(ex.1つの直線でデータを2つに分けられる)なケースについて説明します。次回以降の記事で線形分離不可能なケースも解説していく予定です。\n\n サポートベクトルマシンとは\nサポートベクトルマシンは、機械学習アルゴリズムの1つで教師あり学習に該当するアルゴリズムです。サポートベクトルマシンでは、マージン最大化という考え方を基にデータを分離するための関数を定義し...",
-          "link": "https://zenn.dev/sasshi_i/articles/4cede72ad782c0",
-          "publishedOn": "2023-12-10T12:12:44.000Z",
-          "wordCount": 224,
-          "title": "[機械学習]サポートベクトルマシン(SVM)の気持ちを説明する(ハードマージン編)",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--IBopeIfa--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255B%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%255D%25E3%2582%25B5%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E3%2583%2599%25E3%2582%25AF%25E3%2583%2588%25E3%2583%25AB%25E3%2583%259E%25E3%2582%25B7%25E3%2583%25B3%2528SVM%2529%25E3%2581%25AE%25E6%25B0%2597%25E6%258C%2581%25E3%2581%25A1%25E3%2582%2592%25E8%25AA%25AC%25E6%2598%258E%25E3%2581%2599%25E3%2582%258B%2528%25E3%2583%258F%25E3%2583%25BC%25E3%2583%2589%25E3%2583%259E%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%25B3%25E7%25B7%25A8%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Satoshi%2520Ito%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvcy5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--IBopeIfa--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255B%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%255D%25E3%2582%25B5%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%25E3%2583%2599%25E3%2582%25AF%25E3%2583%2588%25E3%2583%25AB%25E3%2583%259E%25E3%2582%25B7%25E3%2583%25B3%2528SVM%2529%25E3%2581%25AE%25E6%25B0%2597%25E6%258C%2581%25E3%2581%25A1%25E3%2582%2592%25E8%25AA%25AC%25E6%2598%258E%25E3%2581%2599%25E3%2582%258B%2528%25E3%2583%258F%25E3%2583%25BC%25E3%2583%2589%25E3%2583%259E%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%25B3%25E7%25B7%25A8%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Satoshi%2520Ito%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvcy5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/stylishboob/articles/3ed2391ebe1042",
-          "author": "stylishboob",
-          "description": "kaggleのChild Mind Institutionというコンペに参加し、見事惨敗しました(257位/1877チーム)。\nコンペにちゃんと参加するのは初めてでしたが、それでもメダルを取れないと悔しいですね。\n次のコンペでは勝てるよう、他の方のSolutionを読んで勉強しようと思い、この記事にまとめておきます。\n\n どんなコンペであったか\nこのコンペの目標は、睡眠の開始と終了を検出することでした。\n手首に装着された加速度計データと日にちを訓練データとして使用して、人の睡眠状態を判断するモデルを開発します。\n\n どんなデータであったか\n与えられたデータはtrain_seriesとtr...",
-          "link": "https://zenn.dev/stylishboob/articles/3ed2391ebe1042",
-          "publishedOn": "2023-12-10T10:00:39.000Z",
-          "wordCount": 808,
-          "title": "Child Mind Instituteの気になったSolutionまとめと反省",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--GEjgUjdS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Child%2520Mind%2520Institute%25E3%2581%25AE%25E6%25B0%2597%25E3%2581%25AB%25E3%2581%25AA%25E3%2581%25A3%25E3%2581%259FSolution%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E3%2581%25A8%25E5%258F%258D%25E7%259C%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:stylishboob%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZENkbzFnejV0d244VWVlZkJmMGpYeGpJckM0cUlHMVZ6YldfZ1FZM3JlX0E9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--GEjgUjdS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Child%2520Mind%2520Institute%25E3%2581%25AE%25E6%25B0%2597%25E3%2581%25AB%25E3%2581%25AA%25E3%2581%25A3%25E3%2581%259FSolution%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E3%2581%25A8%25E5%258F%258D%25E7%259C%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:stylishboob%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZENkbzFnejV0d244VWVlZkJmMGpYeGpJckM0cUlHMVZ6YldfZ1FZM3JlX0E9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/suraud/articles/create-django-docker",
-          "author": "/UD",
-          "description": "概要\nDjango4.2 コンテナ環境構築に関する手順やメモ\n環境：windows11（wsl2+ubuntu）\nコンテナ構成：Django + MySQL\n\n ファイル構成(今回作成するもの)\n$ tree -aL 2 django-env/\ndjango-env/\n├── .env\n├── Dockerfile\n├── docker-compose.yml\n├── manage.py\n├── myblog\n│   ├── __init__.py\n│   ├── __pycache__\n│   ├── asgi.py\n│   ├── settings.py\n│   ├── urls...",
-          "link": "https://zenn.dev/suraud/articles/create-django-docker",
-          "publishedOn": "2023-12-10T06:10:43.000Z",
-          "wordCount": 812,
-          "title": "Django4.2 コンテナ環境構築",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--MdUpYJde--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django4.2%2520%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2586%25E3%2583%258A%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%252FUD%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzg0NzY3NjU1ODMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--MdUpYJde--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django4.2%2520%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2586%25E3%2583%258A%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%252FUD%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzg0NzY3NjU1ODMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/takuty/articles/b83c70c32820bb",
-          "author": "Takuty",
-          "description": "はじめに\nPython のプロジェクト環境構築する時はみなさんどうしていますか？\nPython のバージョンだったりプロジェクトの依存するパッケージなどできる限り簡潔に環境構築したいと思う方も多いと思います。\n私は pyenv ＋ poetry を使用しています。これでプロジェクトごとにバージョン切り替えや仮想環境が作成できるので複数プロジェクトを開発するには良いかと思っています\n今回は FastAPI を例に手順を記事にしていきたいと思います。\n\n 補足\nWindows でも環境構築可能ですが、今回は Mac での手順になります\n\n pyenv インストール\nHomebrew上にイ...",
-          "link": "https://zenn.dev/takuty/articles/b83c70c32820bb",
-          "publishedOn": "2023-12-10T03:29:00.000Z",
-          "wordCount": 825,
-          "title": "Pythonでpyenv+poetry+FastAPIな環境を作成する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--XPwNam8R--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7pyenv%252Bpoetry%252BFastAPI%25E3%2581%25AA%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Takuty%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JjYjE0OTVjMjQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--XPwNam8R--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7pyenv%252Bpoetry%252BFastAPI%25E3%2581%25AA%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Takuty%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JjYjE0OTVjMjQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/higumachan/articles/52b0080ed72a8d",
-          "author": "higumachan",
-          "description": "この記事はRust Advent Calendar 2023 シリーズ2と画像処理・画像解析 Advent Calendar 2023の10日目の記事です。\n\n rerunの紹介\nrerunとは、rerun.ioという会社が開発している、動画像の可視化を強みとした\n\n可視化UI\n専用のロギングライブラリ\n\nが一体となったOSSの可視化ツールになります。\nこちらは、公式のexampleからの引用になりますが\n\nのような画面を比較的簡単に作成することができます。\nRustで記述されている事による強みや特徴があり、恩恵に強くあやかれている言語だと思います。\n\n rerunの特徴\nrerunは開...",
-          "link": "https://zenn.dev/higumachan/articles/52b0080ed72a8d",
-          "publishedOn": "2023-12-10T02:29:45.000Z",
-          "wordCount": 1283,
-          "title": "Rust製の動画像可視化ツールRerunの紹介",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--TxMzjon_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Rust%25E8%25A3%25BD%25E3%2581%25AE%25E5%258B%2595%25E7%2594%25BB%25E5%2583%258F%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25ABRerun%25E3%2581%25AE%25E7%25B4%25B9%25E4%25BB%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:higumachan%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2h6aERNREQ5RmE1ZEpPaDRGUTNWellUb2xsaVRlSFdqMXpkQ0VBPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--TxMzjon_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Rust%25E8%25A3%25BD%25E3%2581%25AE%25E5%258B%2595%25E7%2594%25BB%25E5%2583%258F%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25ABRerun%25E3%2581%25AE%25E7%25B4%25B9%25E4%25BB%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:higumachan%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2h6aERNREQ5RmE1ZEpPaDRGUTNWellUb2xsaVRlSFdqMXpkQ0VBPXMyNTAtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/zgw426/articles/c5d4feed72be63",
-          "author": "suo",
-          "description": "はじめに\nBedrockで、コードの設計規則（記載規則）に従いCDKのコードを作成させてみました。今まで、設計規則は担当者が理解し、その規則に従いコードを作成していましたが、これをAIにやってもらえるかの検証です。\n\n 参考\n\nAnthropic Claude models\n\nhttps://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-claude.html\nプロンプトのパラメータに関する情報\n\n\nAmazon Bedrock テキストモデルのプロンプトテンプレートと例\n\nhttps://docs.aws...",
-          "link": "https://zenn.dev/zgw426/articles/c5d4feed72be63",
-          "publishedOn": "2023-12-10T02:06:28.000Z",
-          "wordCount": 673,
-          "title": "Amazon Bedrock実装⑥：設計した規則に従いコードを生成するか試してみる",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--yzSYG8uf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Amazon%2520Bedrock%25E5%25AE%259F%25E8%25A3%2585%25E2%2591%25A5%25EF%25BC%259A%25E8%25A8%25AD%25E8%25A8%2588%25E3%2581%2597%25E3%2581%259F%25E8%25A6%258F%25E5%2589%2587%25E3%2581%25AB%25E5%25BE%2593%25E3%2581%2584%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592%25E7%2594%259F%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%25E3%2581%258B%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:suo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc0OWU4NjQ5ZDcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--yzSYG8uf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Amazon%2520Bedrock%25E5%25AE%259F%25E8%25A3%2585%25E2%2591%25A5%25EF%25BC%259A%25E8%25A8%25AD%25E8%25A8%2588%25E3%2581%2597%25E3%2581%259F%25E8%25A6%258F%25E5%2589%2587%25E3%2581%25AB%25E5%25BE%2593%25E3%2581%2584%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592%25E7%2594%259F%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%25E3%2581%258B%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:suo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc0OWU4NjQ5ZDcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/magicmoment/articles/try-using-fireducks-202312",
-          "author": "Magic Moment Tech Blog",
-          "description": "この記事は Magic Moment Advent Calendar 2023 10 日目の記事です。\n\nMagic Moment Data チームというチームでプロダクトのデータを活用した機能の検討・開発をしている @nagomiso と言います。好きな物はお酒とラーメンで普段は 9% チューハイ[1] で喉の渇きを癒しています。\nさて Python でデータ加工や集計処理をするときに欠かせないライブラリと言えば pandas ですね。なんだかんだ Tabular Data を扱う時には欠かせないライブラリだと思います。\nそんな定番ライブラリを高速化するライブラリとして颯爽と現れたのが...",
-          "link": "https://zenn.dev/magicmoment/articles/try-using-fireducks-202312",
-          "publishedOn": "2023-12-09T23:30:00.000Z",
-          "wordCount": 798,
-          "title": "FireDucks を触ってみる 〜 Polars との比較を添えて〜",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--JhLENjyL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FireDucks%2520%25E3%2582%2592%25E8%25A7%25A6%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2520%25E3%2580%259C%2520Polars%2520%25E3%2581%25A8%25E3%2581%25AE%25E6%25AF%2594%25E8%25BC%2583%25E3%2582%2592%25E6%25B7%25BB%25E3%2581%2588%25E3%2581%25A6%25E3%2580%259C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Magic%2520Moment%2520Te...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzA4YjkwNjQ0ZWUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--JhLENjyL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FireDucks%2520%25E3%2582%2592%25E8%25A7%25A6%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2520%25E3%2580%259C%2520Polars%2520%25E3%2581%25A8%25E3%2581%25AE%25E6%25AF%2594%25E8%25BC%2583%25E3%2582%2592%25E6%25B7%25BB%25E3%2581%2588%25E3%2581%25A6%25E3%2580%259C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Magic%2520Moment%2520Te...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzA4YjkwNjQ0ZWUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/optimisuke/articles/d6dcb852e14c81",
-          "author": "Optimisuke",
-          "description": "はじめに\nLangChain を Python で動かしているソフトウェアエンジニアの方々に意見を聞いてみたいんですが、「LangChain やるなら Python より TypeScript の方がいんじゃね？」って思うことありません？ありますよね？・・・え？・・・・・・ない？？？・・・え？・・・あるでしょ？\nということで、LangChain の JS/TS 版の LangChain.js について書いていこうと思いますー。\n自分が Python の書き方よく分かってないってのが一番の理由だと思うんですが、LangChain 触ってると、TypeScript で書きたいなぁ、Typ...",
-          "link": "https://zenn.dev/optimisuke/articles/d6dcb852e14c81",
-          "publishedOn": "2023-12-09T16:24:50.000Z",
-          "wordCount": 4119,
-          "title": "LangChainやるならPythonよりTypeScriptの方がいんじゃね？",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--2WN6opb1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:LangChain%25E3%2582%2584%25E3%2582%258B%25E3%2581%25AA%25E3%2582%2589Python%25E3%2582%2588%25E3%2582%258ATypeScript%25E3%2581%25AE%25E6%2596%25B9%25E3%2581%258C%25E3%2581%2584%25E3%2582%2593%25E3%2581%2598%25E3%2582%2583%25E3%2581%25AD%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Optimisuke%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQzYjg5MWQ0NTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--2WN6opb1--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:LangChain%25E3%2582%2584%25E3%2582%258B%25E3%2581%25AA%25E3%2582%2589Python%25E3%2582%2588%25E3%2582%258ATypeScript%25E3%2581%25AE%25E6%2596%25B9%25E3%2581%258C%25E3%2581%2584%25E3%2582%2593%25E3%2581%2598%25E3%2582%2583%25E3%2581%25AD%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Optimisuke%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQzYjg5MWQ0NTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/redheadchloe/articles/ccb1e38e5d1085",
-          "author": "🦓",
-          "description": "はじめに\nFastAPIの学習でCRUD APIを作成してみました。\nFastAPI は、Python 3.8+ で API を構築するためのモダンで高速な Web フレームワークです。\nhttps://fastapi.tiangolo.com/\n\n 環境\nDocker Desktop\nPython 3.8+\nMongoDB\n\n tl;dr\n\n仮想環境を作成する\nDockerで環境構築する\nDBの設定を行う\nモデルを作成する\nエンドポイントを作成する\nCRUD操作を行う\nSwaggerUIを使って検証する\n\n\n fastapiのディレクトリ構造\n最低限の構造になりますが。\n. # ル...",
-          "link": "https://zenn.dev/redheadchloe/articles/ccb1e38e5d1085",
-          "publishedOn": "2023-12-09T16:05:16.000Z",
-          "wordCount": 2768,
-          "title": "FastAPIでCRUD APIエンドポイントを作成する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--mg0IKq3I--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%25E3%2581%25A7CRUD%2520API%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2589%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%2520%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U1M2NmNTI3NWMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--mg0IKq3I--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%25E3%2581%25A7CRUD%2520API%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2589%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2588%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%2520%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U1M2NmNTI3NWMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/yumcyawiz/articles/044a56a3c4e604",
-          "author": "yumcyawiz",
-          "description": "この記事は数理最適化 Advent Calendar 2023の10日目の記事です。\nモンスターハンターワールドというゲームの装備の組み合わせ最適化を整数計画法のソルバーを用いてチャレンジしてみたので、それについてまとめました。\n本記事で作成したオプティマイザーは以下でWebアプリという形で公開しているので、是非試してみてください。\nhttps://mhw-optimizer.streamlit.app/\n\n モンハンにおける装備選択問題\nモンハンでは非常に多くの種類の武器、防具、装飾品、護石が存在します。プレイヤーはこれらが作る無数の組み合わせの中から、狩りを有利に進めるために、自分に...",
-          "link": "https://zenn.dev/yumcyawiz/articles/044a56a3c4e604",
-          "publishedOn": "2023-12-09T15:17:55.000Z",
-          "wordCount": 3470,
-          "title": "モンハンの装備の選び方を数理最適化で考える",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--M0IQiRbz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25A2%25E3%2583%25B3%25E3%2583%258F%25E3%2583%25B3%25E3%2581%25AE%25E8%25A3%2585%25E5%2582%2599%25E3%2581%25AE%25E9%2581%25B8%25E3%2581%25B3%25E6%2596%25B9%25E3%2582%2592%25E6%2595%25B0%25E7%2590%2586%25E6%259C%2580%25E9%2581%25A9%25E5%258C%2596%25E3%2581%25A7%25E8%2580%2583%25E3%2581%2588%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yumcyawiz%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pOMHZpNGM1NktQbXA1UVFMbHFtZGZtX1duM2RtTy1KS1hXMVZleGhFPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--M0IQiRbz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25A2%25E3%2583%25B3%25E3%2583%258F%25E3%2583%25B3%25E3%2581%25AE%25E8%25A3%2585%25E5%2582%2599%25E3%2581%25AE%25E9%2581%25B8%25E3%2581%25B3%25E6%2596%25B9%25E3%2582%2592%25E6%2595%25B0%25E7%2590%2586%25E6%259C%2580%25E9%2581%25A9%25E5%258C%2596%25E3%2581%25A7%25E8%2580%2583%25E3%2581%2588%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yumcyawiz%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pOMHZpNGM1NktQbXA1UVFMbHFtZGZtX1duM2RtTy1KS1hXMVZleGhFPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/ardririy/articles/76e73d4d78042f",
-          "author": "ardririy",
-          "description": "この記事はProgate Path コミュニティ Advent Calendar 2023 12/10の記事です。\n\n 事の顛末\n友人と◯ver Watchというゲームで遊んでいた際に、遊んでいたうちの一人が面白いボイス[1]を発見してしまったために、それを連続で流すという遊びが始まりました。\nその友人はCapsLockに該当のキーコンフィグを割り当てていたためボイスを流すためには薬指を使う必要があるのですが、例えばQやAなどは多くの場合薬指で押すことになるため、ゲーム内の移動やスキル使用がままならなくなる、という問題が発生します。\nこの問題は、プログラムによって「CapsLockを押し...",
-          "link": "https://zenn.dev/ardririy/articles/76e73d4d78042f",
-          "publishedOn": "2023-12-09T15:00:00.000Z",
-          "wordCount": 195,
-          "title": "キーボード操作をPythonで自動化する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--rva5W-e8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AD%25E3%2583%25BC%25E3%2583%259C%25E3%2583%25BC%25E3%2583%2589%25E6%2593%258D%25E4%25BD%259C%25E3%2582%2592Python%25E3%2581%25A7%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ardririy%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzEwOGRlZmY0MjAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--rva5W-e8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AD%25E3%2583%25BC%25E3%2583%259C%25E3%2583%25BC%25E3%2583%2589%25E6%2593%258D%25E4%25BD%259C%25E3%2582%2592Python%25E3%2581%25A7%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ardririy%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzEwOGRlZmY0MjAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/stafes_blog/articles/49ad7c4f956006",
-          "author": "koonagi (kohei yamazaki)",
-          "description": "!\nこの記事は、スターフェスティバル Advent Calendar 2023の10日目です。\n\nこんにちは！   @koonagiです。\n振り返るとインフラやデータ基盤に関連するブログを今年は10本ほど書いてました。\nブログに書けてない学んだことが今年は他にもたくさんあった一年だったので、来年はもっとアウトプットしていきたし。\nさて、自分の今年の締めのブログとして内容としては、今年の自分の技術的な関心が強かったSnowflakeとChatGPTを組み合わせた内容にしようと思います。\n内容は薄め。\n\n できたもの\n以下のページを参考にして、SnowflakeのUDFを使って、SQLで算出...",
-          "link": "https://zenn.dev/stafes_blog/articles/49ad7c4f956006",
-          "publishedOn": "2023-12-09T15:00:00.000Z",
-          "wordCount": 972,
-          "title": "SnowflakeとChatGPTを組み合わせてワークシート上で自然言語からサンプルクエリを生成する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--iDj2ccyt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Snowflake%25E3%2581%25A8ChatGPT%25E3%2582%2592%25E7%25B5%2584%25E3%2581%25BF%25E5%2590%2588%25E3%2582%258F%25E3%2581%259B%25E3%2581%25A6%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2582%25B7%25E3%2583%25BC%25E3%2583%2588%25E4%25B8%258A%25E3%2581%25A7%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E3%2581%258B%25E3%2582%2589%25E3%2582%25B5%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AB%25E3%2582%25AF%25E3%2582%25A8%25E3%2583%25AA%25E3%2582%2592%25E7%2594%259F%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%2595%25E3%2582%25A7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/g_south_west%2Cl_text:notosansjp-medium.otf_34:koonagi%2520%2528kohei%2520...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk5ZjYyZGQwYWQuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ2YzBkODM0ZWMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--iDj2ccyt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Snowflake%25E3%2581%25A8ChatGPT%25E3%2582%2592%25E7%25B5%2584%25E3%2581%25BF%25E5%2590%2588%25E3%2582%258F%25E3%2581%259B%25E3%2581%25A6%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2582%25B7%25E3%2583%25BC%25E3%2583%2588%25E4%25B8%258A%25E3%2581%25A7%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E3%2581%258B%25E3%2582%2589%25E3%2582%25B5%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AB%25E3%2582%25AF%25E3%2582%25A8%25E3%2583%25AA%25E3%2582%2592%25E7%2594%259F%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%2595%25E3%2582%25A7%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/g_south_west%2Cl_text:notosansjp-medium.otf_34:koonagi%2520%2528kohei%2520...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk5ZjYyZGQwYWQuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ2YzBkODM0ZWMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
         }
       ]
     }
