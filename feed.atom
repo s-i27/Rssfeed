@@ -2,10 +2,230 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-01-09T01:19:14.281Z</updated>
+    <updated>2024-01-10T01:19:13.825Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[機械学習でよく使うPandasを使ったデータのフィルタリング]]></title>
+        <id>https://zenn.dev/junko_ai/articles/a24f3181d98d45</id>
+        <link href="https://zenn.dev/junko_ai/articles/a24f3181d98d45"/>
+        <updated>2024-01-10T00:53:49.000Z</updated>
+        <summary type="html"><![CDATA[Pandasは、Pythonのデータ分析において最も人気のあるライブラリの一つで、その強力なデータ操作機能を使って、効率的にデータをフィルタリングすることができます。
+機械学習でよく使う処理をまとめておきます。
+
+ 1. 特定の値に基づくフィルタリング
+特定の値や条件に一致する行のみを選択します。
+import pandas as pd
+filtered_df = df[df['column'] == value]
+たとえば下記のような日付とタイプをまとめたデータ【test_df】を使って処理を行うとします。
+
+タイプが"Work Day"のデータのみ取り出す場合は、次のようにします。
+...]]></summary>
+        <author>
+            <name>junko</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[vLLMで高速に大規模言語モデルの生成を行う]]></title>
+        <id>https://zenn.dev/masahiro_kaneko/articles/1c53da5903560c</id>
+        <link href="https://zenn.dev/masahiro_kaneko/articles/1c53da5903560c"/>
+        <updated>2024-01-09T17:26:12.000Z</updated>
+        <summary type="html"><![CDATA[概要
+vLLMはLLMの生成を高速に行うためのライブラリです。
+ここではLlama-2-7b-chat-hfをvLLMで簡単に使う方法を紹介します。
+vLLMの環境構築はここを参照してください。より詳細なコードはこちら。
+
+ 使い方
+from vllm import LLM, SamplingParams
+
+
+model_path = "meta-llama/Llama-2-7b-chat-hf"
+temperature = 1.0
+top_p = 1.0
+max_tokens = 128
+quantization = None
+    
+llm = LLM(
+    model=m...]]></summary>
+        <author>
+            <name>MasahiroKaneko</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AIChallenge入門ガイド(3)]]></title>
+        <id>https://zenn.dev/ttanaka3/articles/bff7086ef1d956</id>
+        <link href="https://zenn.dev/ttanaka3/articles/bff7086ef1d956"/>
+        <updated>2024-01-09T14:58:24.000Z</updated>
+        <summary type="html"><![CDATA[この記事の対象者
+この記事のシリーズはAI Challengeで環境構築は終わったけど次にどこから取り組んだらいいのかわからないという方に向けた記事です。AIChallengeそのものの概要からよくわからない方は以下の記事をご参考ください。
+https://zenn.dev/ttanaka3/articles/a66b6bfacf81a1
+この記事ではAIChallengeに登録が完了し、環境構築を終えて入門ガイド(1)、(2)を完了した方向けに記載しています。また、競技という観点でいうと入門ガイド(1) >>> (2) > (3)の順で走行スコアに影響がでて...]]></summary>
+        <author>
+            <name>tanaka3</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonを使って二次元分布を作る(cosの分布)]]></title>
+        <id>https://zenn.dev/taiki_astro/articles/0562e7ef63d98f</id>
+        <link href="https://zenn.dev/taiki_astro/articles/0562e7ef63d98f"/>
+        <updated>2024-01-09T11:03:04.000Z</updated>
+        <summary type="html"><![CDATA[数値シミュレーションで粒子位置の初期分布や注入位置の分布を作る必要が生じたので、その過程をまとめてみました。x方向とy方向が影響を及ぼし合う場合は難しいと思ったのでそれぞれ、独立した分布としてまずは作ってみます。今回はPyhonでやってきます。
+
+ 1.まずは簡単な1次元分布
+それぞれx方向、y方向影響しない分布にすることにしたので、１次元(x方向)でできれば同じことをy方向でやればいいってことなので、まずは、1次元をやりますー。
+
+ 1.1.ランダムの描画
+まずは、デフォルトの乱数を描画します。１００００個の乱数を生成して描画してみます。
+
+python
+## 使うライブラリ ##
+i...]]></summary>
+        <author>
+            <name>taikikusohamu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-330｜B - Minimize Abs 1]]></title>
+        <id>https://zenn.dev/hyperdb/articles/a20d5784c7dd89</id>
+        <link href="https://zenn.dev/hyperdb/articles/a20d5784c7dd89"/>
+        <updated>2024-01-09T08:46:07.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-330 B - Minimize Abs 1
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n, l, r = getIntMap()
+    a = getIntList()
+
+    b = []
+    for i in a:
+        x = i
+        if i < l:
+          ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-330｜A - Counting Passes]]></title>
+        <id>https://zenn.dev/hyperdb/articles/604afaf65568e5</id>
+        <link href="https://zenn.dev/hyperdb/articles/604afaf65568e5"/>
+        <updated>2024-01-09T08:46:06.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-330 A - Counting Passes
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def main():
+    n, l = getIntMap()
+    a = getIntList()
+
+    print(len([x for x in a if x >= l]))
+
+
+if __name__ == "__main__":
+ ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonでのForeachはPHPと違う:コードで違いを確認]]></title>
+        <id>https://zenn.dev/junko_ai/articles/8f6176fe40bf2b</id>
+        <link href="https://zenn.dev/junko_ai/articles/8f6176fe40bf2b"/>
+        <updated>2024-01-09T08:37:07.000Z</updated>
+        <summary type="html"><![CDATA[Pythonには、他の多くの言語に見られるforeachループに相当する専用の構文はありません。PHPに慣れていたわたしは、一瞬「え！」と思いました＾＾；
+ただ、forループを使用することで、foreachと同じ操作を行うことができます。
+両者のコードを比較します。
+
+ PythonにおけるForeach
+Pythonのforループは非常に柔軟で、コレクションの各要素に対して繰り返し処理を行うのに適しています。
+使用例
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+for key, value in my_dict.items():
+    print(f"Ke...]]></summary>
+        <author>
+            <name>junko</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[openpyxl でKeyError: 'Worksheet {cell} does not exist. が出たので、解決してきた]]></title>
+        <id>https://zenn.dev/enterrocken/articles/36f66628f41eb5</id>
+        <link href="https://zenn.dev/enterrocken/articles/36f66628f41eb5"/>
+        <updated>2024-01-09T07:04:51.000Z</updated>
+        <summary type="html"><![CDATA[1分で読めます
+
+ 背景
+PythonでExcel操作をしたい。openpyxlライブラリでエクセルファイルを読み込んで、セル名を指定したのに、KeyError: 'Worksheet {cell} does not exist. というエラーが出る。
+以下、実行スクリプトです。
+import openpyxl
+
+from openpyxl.workbook.workbook import Workbook
+
+
+def load_workbook(path: str) -> Workbook:
+    return openpyxl.load_workbook(path)
+
+
+wb...]]></summary>
+        <author>
+            <name>yuki.hirano</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gemini API 触ってみる]]></title>
+        <id>https://zenn.dev/open8/articles/tried-using-gemini</id>
+        <link href="https://zenn.dev/open8/articles/tried-using-gemini"/>
+        <updated>2024-01-09T07:03:13.000Z</updated>
+        <summary type="html"><![CDATA[株式会社オープンエイトで今年 9 月からエンジニアをしている山田 Y です！
+
+ 動機
+弊社では動画編集クラウドと銘打ってVideoBrainというサービスを展開しています。
+動画編集を中心に扱っているサービスなので、マルチモーダルに強みのある(らしい) Gemini はチェックしておこうと思いました。
+Google が公開した Gemini の紹介動画が以下になります。(結構編集の力を借りているようですが、、、)
+https://youtu.be/UIZAiXYceBI
+
+ とりあえず動かしてみる
+https://ai.google.dev/tutorials/python_quick...]]></summary>
+        <author>
+            <name>you_moon_shell</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[gcloud-aio-bigqueryでasync/awaitを使ってBigQueryのクエリを叩く]]></title>
+        <id>https://zenn.dev/nazo/articles/9a75cc18e9d6ca</id>
+        <link href="https://zenn.dev/nazo/articles/9a75cc18e9d6ca"/>
+        <updated>2024-01-09T03:00:00.000Z</updated>
+        <summary type="html"><![CDATA[PythonからBigQueryを叩くには公式の google-cloud-bigquery があるのですが、asyncioに対応していません。
+一部のライブラリではv2側でasyncioに対応しているのですが、BigQueryはv2でも対応していないように見えます。ちなみにv1はほとんどの実装でREST APIを叩いて、v2はほとんどの実装でRPC APIを叩いています（どちらも全部確認したわけではありません）。一部のライブラリでv2のほうを叩くとサーバーエラーが多発したこともあり、今のところなるべくv1でasyncioを使用したいです。
+GCPのPythonライブラリをasyncio...]]></summary>
+        <author>
+            <name>nazo</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Azure FunctionsでBluePrint対応を行う]]></title>
         <id>https://zenn.dev/tk_hamaguchi/articles/6a4da1834297e4</id>
@@ -4424,223 +4644,6 @@ OpenAI 提供する画像生成ができるモデルです。
 Open...]]></summary>
         <author>
             <name>Na</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[価格変動パターンの類似度を使用したデータバリデーション]]></title>
-        <id>https://zenn.dev/daidai_daitai/articles/20eef499ab86dd</id>
-        <link href="https://zenn.dev/daidai_daitai/articles/20eef499ab86dd"/>
-        <updated>2023-12-11T11:44:29.000Z</updated>
-        <summary type="html"><![CDATA[当記事は、マケデコ Advent Calendar 2023 10日目の記事になります。
-https://qiita.com/advent-calendar/2023/market-api
-
- はじめに
-みなさんデータのバリデーションはどの様にしていますか？
-バリデーションの方法は様々あり、その詳細に関しては私が書くまでもなく、世の中には情報があふれています。
-株などの価格時系列データをバリデーションする際にはどのようにしたらいいのでしょうか。
-こないだちょっとその事について思いついた方法があり、この記事を執筆するのに合わせて実装してみました。有用かどうかの検証は済ませていませんので、気...]]></summary>
-        <author>
-            <name>橙。</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pygameを使って球体を描画する]]></title>
-        <id>https://zenn.dev/yonamine/articles/8d400c60706672</id>
-        <link href="https://zenn.dev/yonamine/articles/8d400c60706672"/>
-        <updated>2023-12-11T11:12:36.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Pygameを使って画面に球体を描画する基本的なプログラムを作成します。
-このように描画されたら完成です。
-
-以下のステップに従って進めてください。
-
- ステップ1: モジュールのインポート
-まず、Pygameモジュールをインポートする必要があります。
-import pygame
-
-
-import pygame: これにより、Pygameライブラリがプログラム内で使用できるようになります。
-
-
- ステップ2: Pygameの初期化
-次に、Pygameを初期化します。
-pygame.init()
-
-
-pygame.init(): Pygameを使う前に、この関数を呼び出してP...]]></summary>
-        <author>
-            <name>与那嶺あきお</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[類似記事のグルーピングを ChatGPT と GNN でやってみた]]></title>
-        <id>https://zenn.dev/simpleform/articles/20231211-09-similar-articles</id>
-        <link href="https://zenn.dev/simpleform/articles/20231211-09-similar-articles"/>
-        <updated>2023-12-11T09:51:44.000Z</updated>
-        <summary type="html"><![CDATA[シンプルフォームのエンジニアの杉です。本記事は SimpleForm Advent Calendar 2023 の 11 日目の記事です。
-この記事ではニュースなどの文章に対して類似記事のグルーピングを ChatGPT と Graph Neural Network （ GNN ）を用いて試してみたことについて書かせていただきます。
-
- 背景
-世の中には多くのニュースが存在します。1 日のうちに作成される記事を全て読むということは難しいです。これらのニュースを要約やグルーピングすることができればより多くの記事を読むことが可能になります。
-本記事では ChatGPT と GNN を用いたニュ...]]></summary>
-        <author>
-            <name>シンプルフォーム Tech Blog</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ChatGPT+LangChain| Elasticsearch公式ドキュメントのQ&Aを作ってみる]]></title>
-        <id>https://zenn.dev/zozotech/articles/86543f2ad9a09e</id>
-        <link href="https://zenn.dev/zozotech/articles/86543f2ad9a09e"/>
-        <updated>2023-12-11T02:25:28.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事は、情報検索・検索技術 Advent Calendar 2023 の 11日目の記事です。
-本記事では、最新のElasticsearchの公式ドキュメントの内容を元にQ&Aを行うチャットボットを、LLMとLangChain、さらには、Elasticsearchのベクトル検索機能を使って作成したので、実現方法や利用した技術について紹介します。
-
-また、RAGを使ったWikipediaのQ&Aを作った話が、同アドベントカレンダーの4日目の記事で紹介されているので、気になる方はご参照ください。
-https://secon.dev/entry/2023/12...]]></summary>
-        <author>
-            <name>さっと</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ChatGPT+LangChain| Elasticsearch公式ドキュメントのQ&Aを作ってみる]]></title>
-        <id>https://zenn.dev/satto_sann/articles/86543f2ad9a09e</id>
-        <link href="https://zenn.dev/satto_sann/articles/86543f2ad9a09e"/>
-        <updated>2023-12-11T02:25:28.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事は、情報検索・検索技術 Advent Calendar 2023 の 11日目の記事です。
-本記事では、最新のElasticsearchの公式ドキュメントの内容を元にQ&Aを行うチャットボットを、LLMとLangChain、さらには、Elasticsearchのベクトル検索機能を使って作成したので、実現方法や利用した技術について紹介します。
-
-また、RAGを使ったWikipediaのQ&Aを作った話が、同アドベントカレンダーの4日目の記事で紹介されているので、気になる方はご参照ください。
-https://secon.dev/entry/2023/12...]]></summary>
-        <author>
-            <name>さっと</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[FastAPIでWebSocketに入門してみた]]></title>
-        <id>https://zenn.dev/knot/articles/dbce3e3a2f3f3a</id>
-        <link href="https://zenn.dev/knot/articles/dbce3e3a2f3f3a"/>
-        <updated>2023-12-11T02:22:13.000Z</updated>
-        <summary type="html"><![CDATA[CISTアドベントカレンダー11日目の記事です！
-https://qiita.com/advent-calendar/2023/cist
-FastAPIでWebSocketを触ってみたので備忘録的な感じで記事にします。
-
- WebSocketとは？
-
-https://learn.microsoft.com/ja-jp/azure/application-gateway/application-gateway-websocketより
-WebSocketとはクライアントとサーバーの間で双方向通信を行うためのプロトコルです。
-HTTP通信はリクエストとレスポンスの1セットのやりとりが終わると通...]]></summary>
-        <author>
-            <name>knot</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのお作法「pep8」とは]]></title>
-        <id>https://zenn.dev/oozeki/articles/python_about_pep8</id>
-        <link href="https://zenn.dev/oozeki/articles/python_about_pep8"/>
-        <updated>2023-12-10T15:17:50.000Z</updated>
-        <summary type="html"><![CDATA[プログラムのコーディングスタイルとは
-プログラムを正しく実行させるには、決められたルールの元、記載しなければいけません。
-ガイドラインpep8
-Pythonの場合、関数の宣言する場合はdefから宣言する事や、インデントを活用してプログラムのブロックを定義する等、様々な書き方のルールであるコーディングスタイルというのが決められています。
-Pythonのコーディングスタイルは公式にpep8というガイドラインが決められています。
-https://pep8-ja.readthedocs.io/ja/latest/
-本稿では、基本的なコード(ルール通りじゃないと実行されない)の記載方法は省略し...]]></summary>
-        <author>
-            <name>oozeki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python + FastAPIでオニオンアーキテクチャ（簡易版）]]></title>
-        <id>https://zenn.dev/keitakn/articles/python-fastapi-onion-architecture-simplified</id>
-        <link href="https://zenn.dev/keitakn/articles/python-fastapi-onion-architecture-simplified"/>
-        <updated>2023-12-10T15:12:06.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Python、FastAPIを用いてオニオンアーキテクチャ（簡易版）を実現するための解説記事です。
-
- 対象読者
-
-PythonやFastAPIを触ったことがある人
-オニオンアーキテクチャなどのソフトウェアアーキテクチャに興味がある人
-
-
- 筆者のバックグラウンド
-普段はTypeScript（Next.jsを主に利用）を用いたフロントエンド開発者です。
-以前はバックエンドエンジニアで主にGoを使ってAWS上でAPIの開発などを行なっていました。
-最近はLLMを用いたアプリケーション開発に関わっています。
-PythonやFastAPIの経験は浅いです。
-
- この記事を書こうと思っ...]]></summary>
-        <author>
-            <name>keitakn</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ChatGPTと対話してGPSデータシミュレーションを探索した話]]></title>
-        <id>https://zenn.dev/t_shunsuke/articles/af6309d6c51e89</id>
-        <link href="https://zenn.dev/t_shunsuke/articles/af6309d6c51e89"/>
-        <updated>2023-12-10T15:10:15.000Z</updated>
-        <summary type="html"><![CDATA[概要
-本稿の概要を以下に書きます。
-
-ChatGPTにより、ノーコードで歩行GPSシミュレーションデータを作成
-
-スキーマとサンプリング周期等の要件をプロンプトに指定することにより、テーブルデータを生成
-出力データを地図上にプロット
-
-
-Pythonを使う歩行GPSシミュレーションデータの作成方法をChatGPTと探索
-
-ノーコードでは限界がありそうだと分かった
-PythonによるシミュレーションデータをChatGPTと対話しながら作成
-出力データを地図上にプロット
-
-
-
-
- はじめに
-本稿はOptimind Advent Calendar 2023の11日目の記事です。
-ちょうど一...]]></summary>
-        <author>
-            <name>t_shunsuke</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Cloud Run に双方向通信アプリケーションをデプロイしてみよう]]></title>
-        <id>https://zenn.dev/google_cloud_jp/articles/26f99daf156914</id>
-        <link href="https://zenn.dev/google_cloud_jp/articles/26f99daf156914"/>
-        <updated>2023-12-10T15:00:01.000Z</updated>
-        <summary type="html"><![CDATA[tl;dr;
-
-Cloud Run で WebSocket を利用したアプリケーションを動かしてみた
-Google Cloud の話は半分くらいで、半分くらいはアプリケーションの実装の話です
-
-
- はじめに
-こんにちは、パートナーエンジニアの Shoです。
-この記事は Google Cloud Advent Calendar 2023 / 101 版の 12/11 の記事です。
-皆さん、Cloud Run を使っていますか？ Cloud Run を利用したサービスというと、ウェブサービスだったり、APIサーバだったりを思い浮かべる方が多いかもしれません。
-実は、 Cloud Run ...]]></summary>
-        <author>
-            <name>Sho / Sho Onuma</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[tkinter/customtkinterでMarkdown記法のファイルを表示するアイデア]]></title>
-        <id>https://zenn.dev/foxfoxfox/articles/be23e942cf3192</id>
-        <link href="https://zenn.dev/foxfoxfox/articles/be23e942cf3192"/>
-        <updated>2023-12-10T14:10:03.000Z</updated>
-        <summary type="html"><![CDATA[記事の要約
-pythonのtkinter/customtkinterでMarkdown形式のファイルを読み込みたいとき、それほど高機能でなくてもいい場合は自分でパーサーを書くのが一番シンプル。
-
- あらすじ
-
-現在私が趣味で作っているソフトはcustomtkinterでGUIを組んでいて、「使い方」タブがある
-使い方はソフトの機能追加に合わせて更新したい、かつ多言語対応もしたいのでできれば大本のファイルをMarkdownで記述して、それをcustomtkinterに描画したい
-しかし、Markdownをtkinterに読み込むライブラリは(検索した感じでは)なく、多くはHTMLに一度...]]></summary>
-        <author>
-            <name>🦊🦊🦊</name>
         </author>
     </entry>
 </feed>
