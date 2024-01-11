@@ -2,10 +2,266 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-01-10T01:19:13.825Z</updated>
+    <updated>2024-01-11T01:19:02.059Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[ベイズファクターでの群間比較の評価]]></title>
+        <id>https://zenn.dev/toma2/articles/465892c583eed9</id>
+        <link href="https://zenn.dev/toma2/articles/465892c583eed9"/>
+        <updated>2024-01-11T00:11:47.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+先日、ベイズ流の多重比較法はないかと調べていたとき、岡田（2013）に出会いました。この論文では、ベイズ統計による情報仮説の評価（Bayesian evaluation of informative hypothesis）の枠組みを利用して、群間比較を評価する方法を紹介しています。ベイズ流A/Bテストなどの2群間比較の評価を紹介した日本語の記事はネット上に複数存在しますが、3群以上の群間比較をコード付きで紹介しているものは見当たりませんでしたので、自身の理解の整理も兼ねてまとめました。
+この記事では、岡田（2013）とその参考文献であるHoijthink (2011) の内...]]></summary>
+        <author>
+            <name>toma2</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[mise（旧rtx） にアップデートしてちょっとハマった話]]></title>
+        <id>https://zenn.dev/u5k/articles/65d9e27b6f2571</id>
+        <link href="https://zenn.dev/u5k/articles/65d9e27b6f2571"/>
+        <updated>2024-01-10T13:47:17.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+
+mise とは
+Rust製asdf互換のバージョン管理ツールのrtxがリネームされたものです。
+
+基本的にリネームされただけっぽいです。
+初回起動時にrtxから移行の場合は自動でマイグレーションが実行されるようになっているので、ほとんどの場合は特別なことをしなくてもrtxからの移行でハマることはないと思います。
+
+ rtx からのアップデート方法
+筆者は、プライベートでmacOS、業務用としてUbuntu を使用していて、両方rtxを利用していましたので、それぞれ下記の方法でアップデートしました。
+
+macOS
+# rtxをHomebrewで入れていたので、下記のコマンド...]]></summary>
+        <author>
+            <name>U5K</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Docker + Python 3.8  + GDAL 3.4 の環境構築]]></title>
+        <id>https://zenn.dev/room_208/articles/42fcc39c1aa710</id>
+        <link href="https://zenn.dev/room_208/articles/42fcc39c1aa710"/>
+        <updated>2024-01-10T12:47:01.000Z</updated>
+        <summary type="html"><![CDATA[概要
+docker を用いて Python 3.8 + GDAL 3.4 の環境を作成する。
+
+ 環境
+
+Ubuntu 20.04.5 LTS
+Docker 20.10.18
+
+
+ 環境構築
+以下のDockerfileを準備する。nvcr.io/nvidia/pytorch:22.05-py3は、ubuntu+pythonの環境が欲しかったため適当に設定しています。
+
+Dockerfile
+FROM nvcr.io/nvidia/pytorch:22.05-py3
+
+ENV TZ=Asia/Tokyo
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/...]]></summary>
+        <author>
+            <name>room_208</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PyTorchで書籍「ゼロから作るDeep Learning」のTwoLayerNetを実装する]]></title>
+        <id>https://zenn.dev/moutend/articles/ad24861882d177</id>
+        <link href="https://zenn.dev/moutend/articles/ad24861882d177"/>
+        <updated>2024-01-10T11:34:36.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+書籍「ゼロから作るDeep Learning」を読み終えたので、次のステップとしてPyTorchの学習を進めています。まずは簡単な題材として、書籍の第4章で登場するTwoLayerNetをPyTorchで実装することにしました。
+この記事ではMacBook Proでモデルの訓練と推論を試します。小さなモデルであれば訓練が数十秒で完了することを実験します。
+
+ 環境
+記事の投稿にあたり、以下の環境で動作確認しました。
+
+MacBook Pro（2021年に発売されたM1 PRO搭載機）
+macOS 12.7.1 Monterey
+Anaconda 23.7.4
+Python ...]]></summary>
+        <author>
+            <name>Yoshiyuki Koyanagi</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonのジェネレータを可変長引数に渡すのはやめよう]]></title>
+        <id>https://zenn.dev/nakurei/articles/dont-pass-python-generator-as-args</id>
+        <link href="https://zenn.dev/nakurei/articles/dont-pass-python-generator-as-args"/>
+        <updated>2024-01-10T10:53:20.000Z</updated>
+        <summary type="html"><![CDATA[結論
+Pythonのジェネレータを可変長引数に渡すのはやめよう。最悪メモリ不足でプログラムがクラッシュしてしまう。
+
+ やってみよう
+!
+下記のコードはメモリ不足でプログラムをクラッシュさせる。自己責任で実行すること。
+
+たとえば、下記のように、値を1ずつカウントするジェネレータを生成する。
+ジェネレータを生成した時点や、next()関数を実行した時点では、メモリをほとんど消費しない。しかし、可変長引数にジェネレータを渡したところで、メモリ使用量が急増し、マシンがメモリ不足に陥ってしまう。
+def count_up_to():
+    """無限にカウントアップするジェネレーター""...]]></summary>
+        <author>
+            <name>NakuRei</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[POETとは？]]></title>
+        <id>https://zenn.dev/totopironote/articles/2e1d7ca73525dc</id>
+        <link href="https://zenn.dev/totopironote/articles/2e1d7ca73525dc"/>
+        <updated>2024-01-10T09:54:58.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+POET(Principal Orthogonal complEment Thresholding)について解説します。POETは”詩人”ではないので注意です。笑
+簡単に説明すると、高次元共分散行列の推定において疎な共分散行列分離させてその疎な共分散行列に対して閾値処理をすることで精度の高い推定をしています。
+
+ POET
+共分散行列\Sigma の推定を考える。
+まずデータ行列をX(d\times n行列)とする。dが次元数、nがデータ数である。このとき標本共分散行列はS = (X-\bar X )(X - \bar X)^T/(n-1)となる。Sの固有値を \hat\l...]]></summary>
+        <author>
+            <name>ととぴろnote</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonで型定義にNamedTupleを使うのはやめたほうが良さそう]]></title>
+        <id>https://zenn.dev/ncdc/articles/bacfc0304f9294</id>
+        <link href="https://zenn.dev/ncdc/articles/bacfc0304f9294"/>
+        <updated>2024-01-10T09:05:26.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+pythonでもある程度しっかり型定義をしたくてTypedDictやdataclassを調べていました。
+その過程で「NamedTupleでも行けるんじゃね？」と思ったのですが、ダメそうな挙動になったのでそのメモです。
+
+ TypedDictやdataclassによる型定義の概要
+pythonで型を定義したいとき、TypedDictやdataclassを使うと次のように書くことができます。この2つの違いは一旦おいておきますが、どちらを使ってもPythonで独自の型を定義して使うことができます。
+
+ TypedDict
+from typing import TypedDict...]]></summary>
+        <author>
+            <name>いばらき</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2023年にやったこと其の壱]]></title>
+        <id>https://zenn.dev/k_s_k/articles/9d653c0b83fb47</id>
+        <link href="https://zenn.dev/k_s_k/articles/9d653c0b83fb47"/>
+        <updated>2024-01-10T07:03:23.000Z</updated>
+        <summary type="html"><![CDATA[振り返ってみるとほぼ一年更新が途絶えていた。
+昨年は会社の業務改善に注力していたため、自己研鑽にはあまり注力できていなかった。業務改善に注力していたのは給料を上げてほしかったので、その実績作りのためであるが、実施したことの記録としてここに書く。
+
+ 開発環境の利用時間を Google Calendar に連動させた
+アイデアや仕組みはこちらをパクらせていただいている。
+https://tech.uzabase.com/entry/2023/02/21/135927
+Step Functions は GUI でお手軽にワークフローを作成できるので非常に便利だった。Google Calend...]]></summary>
+        <author>
+            <name>K-S-K</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-331｜B - Buy One Carton of Milk]]></title>
+        <id>https://zenn.dev/hyperdb/articles/9dbd014248e859</id>
+        <link href="https://zenn.dev/hyperdb/articles/9dbd014248e859"/>
+        <updated>2024-01-10T05:20:20.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-331 B - Buy One Carton of Milk
+
+
+
+ 提出結果
+import math
+import sys
+
+
+def getIntMap():
+    return map(int, input().split())
+
+
+def count_items(i, j, k):
+    return i * 6 + j * 8 + k * 12
+
+
+def main():
+    n, s, m, l = getIntMap()
+
+    p = sys.maxsize
+    for i in [x for x in range(math.ce...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-331｜A - Tomorrow]]></title>
+        <id>https://zenn.dev/hyperdb/articles/03b3005a5d2066</id>
+        <link href="https://zenn.dev/hyperdb/articles/03b3005a5d2066"/>
+        <updated>2024-01-10T05:20:19.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-331 A - Tomorrow
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    mm, dd = getIntMap()
+    y, m, d = getIntMap()
+
+    d += 1
+    if d > dd:
+        d = 1
+        m += 1
+        if m > mm:
+            m = 1
+            y += 1
+
+    print(y, m, d)
+...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PlotlyのインタラクティブグラフをZennで表示する]]></title>
+        <id>https://zenn.dev/kurusugawa/articles/intaractive_plotly_graph_in_zenn</id>
+        <link href="https://zenn.dev/kurusugawa/articles/intaractive_plotly_graph_in_zenn"/>
+        <updated>2024-01-10T05:03:57.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Plotly はマウスでぐりぐり動かせるインタラクティブなグラフを出力することができます。しかしこのグラフは HTML+JavaScript なので、このままでは Zenn の記事内には表示できません。動画化したり外部サイトに誘導してもよいのですが、できれば記事内で完結したいところです。そこで Zenn の コンテンツの埋め込み 機能を使って、グラフを埋め込む方法を試してみます。
+
+ 候補
+2024/01/08 現在、この用途に使えるサービスは下記の4つです。
+
+CodePen
+JSFiddle
+CodeSandbox
+StackBlitz
+
+
+ グラフ生成
+グラフは何でも...]]></summary>
+        <author>
+            <name>Kenji Hata</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[近似最近傍探索ライブラリVoyagerで類似単語検索を試す]]></title>
+        <id>https://zenn.dev/chimuichimu/articles/bab071c182784c</id>
+        <link href="https://zenn.dev/chimuichimu/articles/bab071c182784c"/>
+        <updated>2024-01-10T02:42:06.000Z</updated>
+        <summary type="html"><![CDATA[本記事について
+2023年10月にSpotifyが新たな近似最近傍探索ライブラリとして「Voyager」を発表した[1]。本記事ではVoyagerについて調べたことや、単語の類似検索をユースケースとした実装サンプル、Annoyとの性能比較の結果を備忘としてメモしておく。
+
+ 近似最近傍探索とは
+Voyagerの話に入る前に、近似最近傍探索について説明する。
+最近傍探索 (Nearest Neighbor Search)とは、あるベクトルのクエリが与えられたときに、そのクエリと「最も似ているベクトル」をベクトルの集合から見つける技術である。
+ナイーブな方法としては、クエリのベクトルと、...]]></summary>
+        <author>
+            <name>chimuichimu</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[機械学習でよく使うPandasを使ったデータのフィルタリング]]></title>
         <id>https://zenn.dev/junko_ai/articles/a24f3181d98d45</id>
@@ -4490,160 +4746,6 @@ from flask import Flask
 from werkzeug.except...]]></summary>
         <author>
             <name>素人の戯言</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[json 見やすくする]]></title>
-        <id>https://zenn.dev/newjackhack/articles/7ac21dc83035fe</id>
-        <link href="https://zenn.dev/newjackhack/articles/7ac21dc83035fe"/>
-        <updated>2023-12-12T12:44:59.000Z</updated>
-        <summary type="html"><![CDATA[test.txt
-{
-  "person": {
-    "name": "John Doe",
-    "age": 30,
-    "address": {
-      "city": "Example City",
-      "state": "Test State",
-      "zipcode": "12345"
-    },
-    "contacts": [
-      {
-        "type": "email",
-        "value": "john.doe@example.com"
-      },
-      {
-        "type":...]]></summary>
-        <author>
-            <name>New Jack Hack</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ALB / NLB のアクセスログを CloudWatch Logs に転送する（2023 年版）]]></title>
-        <id>https://zenn.dev/nh8939/articles/fcb8d8e92adbd3</id>
-        <link href="https://zenn.dev/nh8939/articles/fcb8d8e92adbd3"/>
-        <updated>2023-12-12T12:32:27.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-ALB / NLB のアクセスログは S3 にしか出力できません。そのため、ログを検索するには Athena など S3 に対応した分析ツールを使用する必要があります。
-Athena も非常に便利なツールですが、もっと手軽に CloudWatch Logs で閲覧したい場合は、S3 の Create Object イベントをトリガーに Lambda を実行してなんとかするパターンが一般的です。サンプルコードも GitHub などで見つけることができます。
-https://github.com/rupertbg/aws-load-balancer-logs-to-cloudw...]]></summary>
-        <author>
-            <name>NH#8939</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[rye add BeautifulSoupしてrye syncするとエラーが出る]]></title>
-        <id>https://zenn.dev/aiyoshida/articles/947d3751dfbb85</id>
-        <link href="https://zenn.dev/aiyoshida/articles/947d3751dfbb85"/>
-        <updated>2023-12-12T06:36:07.000Z</updated>
-        <summary type="html"><![CDATA[結論
-rye remove BeautifulSoup
-rye add beautifulsoup4
-rye sync
-以上。
-
- 経緯
-$ rye add BeautifulSoup
-$ rye sync
-Reusing already existing virtualenv
-Generating production lockfile: /（プロジェクトパス）/requirements.lock
-    error: subprocess-exited-with-error
-
-    × python setup.py egg_info did not run successfu...]]></summary>
-        <author>
-            <name>Ai.Yoshida</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SQLAlchemy flush超入門]]></title>
-        <id>https://zenn.dev/simpleform/articles/20231212-06-sqlalchemy-flush</id>
-        <link href="https://zenn.dev/simpleform/articles/20231212-06-sqlalchemy-flush"/>
-        <updated>2023-12-12T04:50:07.000Z</updated>
-        <summary type="html"><![CDATA[シンプルフォームの中仙道(@hinata17100) です。本記事は SimpleForm Advent Calendar 2023 の12日目の記事となっています。
-本記事ではPythonの中でよく利用されているORMの1つであるSQLAlchemyの「flush」についてご紹介します。
-
- flushとは
-flushとは、addとcommitの間というイメージをするとわかりやすいです。どういうことかというと、DB上に一時的に保存はされてはいるけどrollbackが可能な状態です。
-
- 動作の例
-文章ではわかりにくいと思うので実際に動作を見てみましょう。
-game.nameがvalor...]]></summary>
-        <author>
-            <name>シンプルフォーム Tech Blog</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AWS Lambda handler はどのように呼ばれるのか]]></title>
-        <id>https://zenn.dev/hkdord/articles/lambda-handler-deep-dive</id>
-        <link href="https://zenn.dev/hkdord/articles/lambda-handler-deep-dive"/>
-        <updated>2023-12-12T04:05:20.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事はAWS Lambda と Serverless Advent Calendar 2023 12 日目の記事です。
-AWS Lambda の handler 関数は Python の場合ドキュメントにあるように event と context という２つの引数を取ります。
-def handler_name(event, context): 
-    ...
-    return some_value
-一方で Go の場合 handler 関数はドキュメントにあるように context.Context と各呼び出し元のサービスに応じた event を引数に取る関数です...]]></summary>
-        <author>
-            <name>Hidekazu Karino</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonでIMAP接続に使われた暗号化バージョンをチェックする]]></title>
-        <id>https://zenn.dev/yktakaha4/articles/check_imap_tls_version_in_python</id>
-        <link href="https://zenn.dev/yktakaha4/articles/check_imap_tls_version_in_python"/>
-        <updated>2023-12-12T03:30:02.000Z</updated>
-        <summary type="html"><![CDATA[小ネタです🍣
-AWSにおいて、暗号化通信に用いられるプロトコルの最小バージョンが TLS 1.2 以上となることが2022年6月にアナウンスされていましたが、これはSDKなどが利用しているAPIエンドポイントを指しており、サービス内で独自にエンドポイントを定義するものについては一部が未対応の状態になっていました
-https://aws.amazon.com/jp/blogs/news/tls-1-2-required-for-aws-endpoints/
-例えば、マネージドのIMAPサービスであるWorkMailにおいては上記対応の期限が2023年12月であることを通知されていました
-こ...]]></summary>
-        <author>
-            <name>Yuuki Takahashi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[有限要素法による非時間依存3次元シュレディンガー方程式]]></title>
-        <id>https://zenn.dev/lao/articles/4b9d5332e719fa</id>
-        <link href="https://zenn.dev/lao/articles/4b9d5332e719fa"/>
-        <updated>2023-12-12T02:00:58.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-有限要素法による非時間依存1次元シュレディンガー方程式で1次元, 有限要素法による非時間依存2次元シュレディンガー方程式で2次元のシュレディンガー方程式を有限要素法を用いて解いたので, 今回は3次元のシュレディンガー方程式を解く.
-3次元のシュレディンガー方程式は
-
-\left(-\frac{\hbar^2}{2m}\nabla^2+V(x,\,y,\,z)\right)\phi(x,\,y,\,z)=E\phi(x,\,y,\,z)
-
-です（dV は体積分を表す.）. ただし, \displaystyle\nabla^2=\frac{\partial^2}{\partia...]]></summary>
-        <author>
-            <name>らお</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AIでどんなネタも寿司にする！寿司画像生成iOSアプリをつくった]]></title>
-        <id>https://zenn.dev/mesummery/articles/8c54128f0dfbe2</id>
-        <link href="https://zenn.dev/mesummery/articles/8c54128f0dfbe2"/>
-        <updated>2023-12-11T15:00:00.000Z</updated>
-        <summary type="html"><![CDATA[クソアプリアドベントカレンダー2023 12日めの記事です。
-
- お寿司が食べたい
-
- お寿司食べたいですよね？
-でもお寿司って高くないですか？
-ひと味ちがうお寿司を食べたいな〜なんて思ってお店を探すと、会員制だったりしてね。
-手軽にデリバリーで頼んでも、いつも混んでて届くまでちょっと時間がかかりません？
-・・・そんなお寿司民たちに朗報です！
-OpenAIの DALL·E と GPT をつかって、お寿司アプリをつくりました。
-
-🔗 Sushify
-OpenAI DALL·E と GPT とは...
-
- DALL·E
-OpenAI 提供する画像生成ができるモデルです。
-
- GPT
-Open...]]></summary>
-        <author>
-            <name>Na</name>
         </author>
     </entry>
 </feed>
