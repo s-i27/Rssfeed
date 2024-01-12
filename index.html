@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-11 datetime="2024-01-11T00:11:47.000Z">2024-01-11</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-11 datetime="2024-01-11T00:11:47.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-11 datetime="2024-01-11T13:35:26.000Z">2024-01-11</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-11 datetime="2024-01-11T13:35:26.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,336 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/derwind/articles/dwd-matrix-product09"
+                        open
+                      >
+                        <summary class="article-expander__title">行列積状態について考える (9) — 100 量子ビットのもつれ状態</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/derwind/articles/dwd-matrix-product09">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--I3X1SijL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25A1%258C%25E5%2588%2597%25E7%25A9%258D%25E7%258A%25B6%25E6%2585%258B%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E8%2580%2583%25E3%2581%2588%25E3%2582%258B%2520%25289%2529%2520%25E2%2580%2594%2520100%2520%25E9%2587%258F%25E5%25AD%2590%25E3%2583%2593%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AE%25E3%2582%2582%25E3%2581%25A4%25E3%2582%258C%25E7%258A%25B6%25E6%2585%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:derwind%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>目的
+行列積状態について考える (6) — Vidal の標準形 と 行列積状態について考える (8) — Vidal の標準形 その 2 で行列積状態 (MPS) の Vidal の標準形について書いた。今回はこれを用いて、100 量子ビットのもつれ状態を作成して、ちゃんとできたことを確認してみたい。
+
+ 実装
+必要なモジュールを import する。
+from __future__ import annotations
+import numpy as np
+from opt_einsum import contract
+
+from qiskit import QuantumCir...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;24
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/aikige/articles/copy-data-url-to-clipboard-by-python"
+                        open
+                      >
+                        <summary class="article-expander__title">[小ネタ] ファイルをdata URLの形式でクリップボードに保存するPythonスクリプト</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/aikige/articles/copy-data-url-to-clipboard-by-python">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--8OdllSDA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255B%25E5%25B0%258F%25E3%2583%258D%25E3%2582%25BF%255D%2520%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592data%2520URL%25E3%2581%25AE%25E5%25BD%25A2%25E5%25BC%258F%25E3%2581%25A7%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2583%25E3%2583%2597%25E3%2583%259C%25E3%2583%25BC%25E3%2583%2589%25E3%2581%25AB%25E4%25BF%259D%25E5%25AD%2598%25E3%2581%2599%25E3%2582%258BPython%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2597%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:aikige%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQxZTRlNGNjOGUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>Markdown でメモを取る際に、画像をメモに貼りたい場合には皆さんどのようにしていますか？
+画像を別途保管して、それを下記の例のように参照しても良いのですが、このやり方だとメモの可搬性が低くなります。
+
+example
+![note](path/to/some/image.png)
+
+この場合、画像を data URL の形式にして貼ってしまうのが意外に便利です[1]。
+
+example of data URL
+![note](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI1...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/taro98/articles/65c6af978c4132"
+                        open
+                      >
+                        <summary class="article-expander__title">リモートリポジトリにpythonの仮想環境を作る</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/taro98/articles/65c6af978c4132">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--j5ls3UU3--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25AA%25E3%2583%25A2%25E3%2583%25BC%25E3%2583%2588%25E3%2583%25AA%25E3%2583%259D%25E3%2582%25B8%25E3%2583%2588%25E3%2583%25AA%25E3%2581%25ABpython%25E3%2581%25AE%25E4%25BB%25AE%25E6%2583%25B3%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:taro.n98%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSW5PaURrZWV3ZFhmYkZHeGZ2ZWpQVXoyQUx4WW54cVZIbWQwYm14UmxCPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+githubでリモートリポジトリを作成し、venvでpythonの仮想環境を作る一連の流れをメモ。
+
+ githubでリモートリポジトリを作成
+① Newをクリック
+
+② Creqte a ner repositoryで以下の作業を行う
+・Repository nameを入力。
+・add a READMEにチェックを入れる。
+・add .gitignoreでpythonを選択。
+
+③ URLをコピーする
+Codeをクリックし、HTTPSのURLをコピーする。
+
+
+ ローカルリポジトリを作成
+① ターミナルに移動
+② cloneするディレクトリに移動
+③ 以下のコ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/room_208/articles/8b35f07b115c73"
+                        open
+                      >
+                        <summary class="article-expander__title">Docker + ESA SNAP Python で Sentinel-1 をオルソ幾何補正する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/room_208/articles/8b35f07b115c73">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--OInoCR1g--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Docker%2520%252B%2520ESA%2520SNAP%2520Python%2520%25E3%2581%25A7%2520Sentinel-1%2520%25E3%2582%2592%25E3%2582%25AA%25E3%2583%25AB%25E3%2582%25BD%25E5%25B9%25BE%25E4%25BD%2595%25E8%25A3%259C%25E6%25AD%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:room_208%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q2MmRkNTEzN2IuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+dockerを用いてESA SNAP Pythonの環境を作成し、Sentinel-1 GRDデータをオルソ幾何補正（Geometric Terrain Correction）する。
+
+ 環境
+
+Ubuntu 20.04.5 LTS
+Docker 20.10.18
+
+
+ 環境構築
+
+ docker build
+ESA SNAP 9 docker imagesを元に、以下のコマンドを実行して環境を構築する。このビルドは1-2時間かかる。ここで既存のmundialis/esa-snap:ubuntuのイメージを使用しない理由は、既存のイメージではNo valid orbit fil...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yanami85/articles/ebba336243add4"
+                        open
+                      >
+                        <summary class="article-expander__title">色々な確率分布をまとめていく</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yanami85/articles/ebba336243add4">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--auriq42o--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%2589%25B2%25E3%2580%2585%25E3%2581%25AA%25E7%25A2%25BA%25E7%258E%2587%25E5%2588%2586%25E5%25B8%2583%25E3%2582%2592%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E3%2581%25A6%25E3%2581%2584%25E3%2581%258F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kosaku%2520Noba%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsveS5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+統計検定にもよく出題される確率分布について、できる限り行間を狭くしながらまとめていく。
+基本的には統計検定2級で出題される確率分布の平均と分散の求め方を網羅しつつ、一部確率分布の構成方法にも言及した。
+今後も対応する確率分布を増やしていく予定。
+
+ 確率変数と確率
+
+ 確率変数(Random variable; r.v.)
+確率変数はプログラミングでの乱数に相当する。
+「確率分布Aに従う確率変数」は「確率分布Aに従って乱数を発生させた」、ということと同値。
+確率変数は一般的に大文字で与えられ(X_1, X_2, ...)、Xによる実現値は小文字xで書かれる。
+確率変数は離散...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;11
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/ryoooou/articles/affada72ad6241"
+                        open
+                      >
+                        <summary class="article-expander__title">openai apiのtext-embedding-ada-002でのRateLimitErrorの回避</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ryoooou/articles/affada72ad6241">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--6j46QcMV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:openai%2520api%25E3%2581%25AEtext-embedding-ada-002%25E3%2581%25A7%25E3%2581%25AERateLimitError%25E3%2581%25AE%25E5%259B%259E%25E9%2581%25BF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%25AA%25E3%2583%25A7%25E3%2582%25A6%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E1NjA1NTA3ODEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>text-embedding-ada-002で埋め込み表現を取得しようと、公式リファレンスのコードそのままに実行したところ、以下のエラーが出ました。
+https://platform.openai.com/docs/guides/embeddings/use-cases
+from openai import OpenAI
+client &#x3D; OpenAI()
+
+def get_embedding(text, model&#x3D;&quot;text-embedding-ada-002&quot;):
+   text &#x3D; text.replace(&quot;\n&quot;, &quot; &quot;)
+   return client.embeddin...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/seizans/articles/7de69f16c643ea"
+                        open
+                      >
+                        <summary class="article-expander__title">mypy の [import-untyped] や [import-not-found] への対応</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/seizans/articles/7de69f16c643ea">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--PgJtMb1K--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:mypy%2520%25E3%2581%25AE%2520%255Bimport-untyped%255D%2520%25E3%2582%2584%2520%255Bimport-not-found%255D%2520%25E3%2581%25B8%25E3%2581%25AE%25E5%25AF%25BE%25E5%25BF%259C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:seizans%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSkpaZmpzY3ljYklheHJFVjF0eGc2cWZLMnRQMko4aXNxQnEzQ1Zsald6Z1g0PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>mypy を実行する際、以下のようなエラーが出ることがある。
+error: Skipping analyzing &quot;gspread&quot;: module is installed, but missing library stubs or py.typed marker  [import-untyped]
+note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+See と言われている公式ドキュメントに対応は書いてある。
+エラーとしては、import しているモジュールに対応する typ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/ea1ca1742e5cae"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-332｜B - Glass and Mug</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/ea1ca1742e5cae">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ZrW1QFDr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-332%25EF%25BD%259CB%2520-%2520Glass%2520and%2520Mug%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-332 B - Glass and Mug
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    k, g, m &#x3D; getIntMap()
+
+    xg &#x3D; 0
+    xm &#x3D; 0
+
+    while k &gt; 0:
+        if xg &#x3D;&#x3D; g:
+            xg &#x3D; 0
+        elif xm &#x3D;&#x3D; 0:
+            xm &#x3D; m
+        else:
+            mv &#x3D; min...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/c58e9eb69a1eff"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-332｜A - Online Shopping</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/c58e9eb69a1eff">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--u2UyxLwk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-332%25EF%25BD%259CA%2520-%2520Online%2520Shopping%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-332 A - Online Shopping
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntListRow(N):
+    return [list(map(int, input().split())) for _ in range(N)]
+
+
+def main():
+    n, s, k &#x3D; getIntMap()
+    pq &#x3D; getIntListRow(n)
+    p &#x3D; sum([x * y for x, y in pq])
+
+    pr...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/halmet7000/articles/000fe097378382"
+                        open
+                      >
+                        <summary class="article-expander__title">材力の梁シミュレータを作る</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/halmet7000/articles/000fe097378382">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--b1OqQ3Gw--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259D%2590%25E5%258A%259B%25E3%2581%25AE%25E6%25A2%2581%25E3%2582%25B7%25E3%2583%259F%25E3%2583%25A5%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:HAL%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBkZmQzYmRmZTcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+材料力学の梁を学ぶ際、SFDやらBMDやら出てきて計算がミスりやすかったり、本当に合ってるか分からず進んだりした経験がありました。
+　全部積分してしまえば求まるはずなのに、面倒だと思っていたので、試しに片持ち梁の解析プログラムを作ってみました。
+　参考になれば幸いです。
+
+ シミュレーション概要
+BMDやSFD,たわみ角、たわみは以下のように、積分や微分方程式で対応付けできます。(初期条件や境界条件の扱いが大変ですが…)
+
+
+ 結果
+
+
+
+ プログラム
+pythonのsympy, matplotlibで作ってます
+
+to_bunpu_kazyu.py
+from sympy im...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -7699,270 +8029,6 @@ https:/...</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/cloud_ace/articles/35dd9dafc1f9bd"
-                        open
-                      >
-                        <summary class="article-expander__title">BigQuery を Pandas のように操作する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/cloud_ace/articles/35dd9dafc1f9bd">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--lmJGVupY--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:BigQuery%2520%25E3%2582%2592%2520Pandas%2520%25E3%2581%25AE%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E6%2593%258D%25E4%25BD%259C%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25A6%25E3%2583%2589%25E3%2582%25A8%25E3%2583%25BC%25E3%2582%25B9%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE2OGMwYmM4MTIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-こんにちは、クラウドエース Data/ML ディビジョン所属の坂田です。
-BigQuery 界隈のみなさん、「BigQuery DataFrames」という Python ライブラリをご存知でしょうか。
-BigQuery DataFrames は 2023 年 9 月に登場したライブラリで、BigQuery データを使ってデータ分析を行うことができる、Google 提供のライブラリです。
-BigQuery DataFrames は、2 つの機能に分かれています。
-
-
-Pandas ライクな操作・機能を提供する bigframes.pandas
-
-
-scikit-learn ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/pipon_tech_blog/articles/1d7b27134bc560"
-                        open
-                      >
-                        <summary class="article-expander__title">Kaggle：データサイエンスと機械学習の世界へのパスポート</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/pipon_tech_blog/articles/1d7b27134bc560">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s---SBr0jAp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Kaggle%25EF%25BC%259A%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%25B5%25E3%2582%25A4%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B9%25E3%2581%25A8%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2581%25AE%25E4%25B8%2596%25E7%2595%258C%25E3%2581%25B8%25E3%2581%25AE%25E3%2583%2591%25E3%2582%25B9%25E3%2583%259D%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25B1%25E3%2583%25AB%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNhZGY5NWJjZWYuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BEpipon%25E3%2581%25AE%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-データサイエンスと機械学習は、現代のテクノロジー界の最前線に位置しています。
-そこで第一歩目を踏み出そうとしても、「環境設定」がよくわからない…
-基本書を読んでも分かるようでわからない…
-色々と学んではいるけど、結局のところどう使えるのかがわからない…
-そういった悩みに応えつつ、この分野における技術的スキルの向上や新たなアイデアの探求を目指すなら、Kaggleはあなたの理想的な出発点となるでしょう。
-ここでは、Kaggleの概要からそのメリット、使用例、注意点までを詳しく解説します。
-
- Kaggleとは？
-Kaggleは、データサイエンスと機械学習に特化した世界最大級のオ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kwaka1208/books/pygame-programming"
-                        open
-                      >
-                        <summary class="article-expander__title">pygameでゲームを作ろう</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kwaka1208/books/pygame-programming">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://static.zenn.studio/images/logo-only-dark.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>pygameを使ったPythonプログラミング入門です</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kazuph/articles/c837435845cc1b"
-                        open
-                      >
-                        <summary class="article-expander__title">ddPn08/rvc-webui を今更ながら試す（API利用のみ）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kazuph/articles/c837435845cc1b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--8F2ivMPv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ddPn08%252Frvc-webui%2520%25E3%2582%2592%25E4%25BB%258A%25E6%259B%25B4%25E3%2581%25AA%25E3%2581%258C%25E3%2582%2589%25E8%25A9%25A6%25E3%2581%2599%25EF%25BC%2588API%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%25AE%25E3%2581%25BF%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kazuph%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFjNmY3ODBlZDYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>https://github.com/ddPn08/rvc-webui
-何かしらのRVCのモデル（pth）を持っているとします。
-僕は852話さんのBoothにいくつかあるのを買っています。
-https://meola.booth.pm/
-それでは、セットアップを開始しましょう。
-
- git clone
-今回はAPI経由で利用したいので、ddPn08さんのrvc-webuiにある server.py を利用します。
-中身を見るとわかりますがgradio経由でのAPIではなく素のflaskを使っているようです。
-git clone https://github.com/ddPn08/rvc...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2023-12-12 datetime="2023-12-12T23:10:44.000Z">2023-12-12</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2023-12-12 datetime="2023-12-12T23:10:44.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/takilog/articles/199f30c01111a8"
-                        open
-                      >
-                        <summary class="article-expander__title">緯度経度データの検索・処理をいつもやっている</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takilog/articles/199f30c01111a8">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Z7ntYVPy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25B7%25AF%25E5%25BA%25A6%25E7%25B5%258C%25E5%25BA%25A6%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E6%25A4%259C%25E7%25B4%25A2%25E3%2583%25BB%25E5%2587%25A6%25E7%2590%2586%25E3%2582%2592%25E3%2581%2584%25E3%2581%25A4%25E3%2582%2582%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259F%25E3%2581%258D%25E3%2582%258D%25E3%2581%2590%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzllMzkzOGE3OGUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>本記事は情報検索・検索技術 Advent Calendar 2023の13日目の記事です。
-最近Overtureのデータを触っていて、何回も同じ処理を書いていて頭がダメな感じなので、将来の自分のために処理をメモするために書いています。
-特にライブラリをチョロっと使うだけの簡単な処理を書きました。
-せっかくなので、これまでの細々とやっていた記事も宣伝しておきます。
-
-シェープファイル(shpファイル)をPython+Geopandasで扱った
-Overture Maps Foundationのデータを活用したい (3): Mapboxを用いたクラスタ可視化
-
-
- 設定
-どこかから処理してき...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;14
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/wsuzume/articles/67ce25adea10b4"
-                        open
-                      >
-                        <summary class="article-expander__title">Python で実行時型チェックをしよう：改良版</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/wsuzume/articles/67ce25adea10b4">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--cQxDGBoT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2520%25E3%2581%25A7%25E5%25AE%259F%25E8%25A1%258C%25E6%2599%2582%25E5%259E%258B%25E3%2583%2581%25E3%2582%25A7%25E3%2583%2583%25E3%2582%25AF%25E3%2582%2592%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%25EF%25BC%259A%25E6%2594%25B9%25E8%2589%25AF%25E7%2589%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Josh%2520Nobus%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc3NTk2ODI4YzguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-よく調べたら前回作ったやつよりもシンプルかつ強力なのができたので共有します。
-Python のバージョンは 3.10 以上にしてください。
-
- 参考文献
-
-inspect --- 活動中のオブジェクトの情報を取得する
-functools --- 高階関数と呼び出し可能オブジェクトの操作
-
-
- Install
-$ pip install nobus
-from nobus.typecheck import typecheck
-
- コピペ用
-ロクにメンテされていない個人開発のライブラリに抵抗がある人は以下のソースコードをコピペしてください。50行もなくとても素直で読めば分かると思...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/selllous/articles/transformers_pretrain_to_ft"
-                        open
-                      >
-                        <summary class="article-expander__title">大規模言語モデルを自作しよう！(Transformers+DeepSpeed+torch.compile+flash_attn2）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/selllous/articles/transformers_pretrain_to_ft">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--nw9GT1jB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%25A4%25A7%25E8%25A6%258F%25E6%25A8%25A1%25E8%25A8%2580%25E8%25AA%259E%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2582%2592%25E8%2587%25AA%25E4%25BD%259C%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%25EF%25BC%2581%2528Transformers%252BDeepSpeed%252Btorch.compile%252Bflas...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:celery%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2ZlYzAyMzM5ZDkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>本記事は、LLM Advent Calendar 2023 13日目の記事です。
-https://qiita.com/advent-calendar/2023/llm
-
- はじめに
-🤗 Transformersは、自然言語処理、マルチモーダル、音声処理、コンピュータビジョン分野の事前学習済モデルを簡単にダウンロードしトレーニングすることが可能なpythonライブラリです。このライブラリを使用し、大規模言語モデル（LLM）の事前学習済モデルをローカルPC上にダウンロードし、それを使用した言語生成や、要約・翻訳・質問応答などの個別のタスクへのファインチューニング、チャットAIへの組み込みなど...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;15
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/nondescript/articles/31517126cebb55"
-                        open
-                      >
-                        <summary class="article-expander__title">Flaskで全例外を共通関数で処理しつつ、デフォルトのInternal Server Errorページを表示</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nondescript/articles/31517126cebb55">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--_LzlzmOm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Flask%25E3%2581%25A7%25E5%2585%25A8%25E4%25BE%258B%25E5%25A4%2596%25E3%2582%2592%25E5%2585%25B1%25E9%2580%259A%25E9%2596%25A2%25E6%2595%25B0%25E3%2581%25A7%25E5%2587%25A6%25E7%2590%2586%25E3%2581%2597%25E3%2581%25A4%25E3%2581%25A4%25E3%2580%2581%25E3%2583%2587%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25AB%25E3%2583%2588%25E3%2581%25AEInternal%2520Server%2520Error%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%2592%25E8%25A1%25A8%25E7%25A4%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%25B4%25A0%25E4%25BA%25BA%25E3%2581%25AE%25E6%2588%25AF%25E8%25A8%2580%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVmYTVmOTBhM2EuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>TL;DR
-
-エラーがwerkzeug.exceptions.HTTPExceptionのサブクラスでないときにInternalServerError()を返却する
-
-
- 要求
-
-すべてのルーティングにおける全例外を、HTTPエラーとそれ以外のそれぞれでの共通関数で処理するか、あるいは両方の共通関数で処理したい
-例外をハンドリングした際は全てデフォルトのHTTPエラーフォーマットで返したい
-
-
- 実装例
-
-
-
- HTTPエラーとそれ以外のエラーで関数を分ける場合
-
-
-
-server_sep.py
-from flask import Flask
-from werkzeug.except...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -7970,8 +8036,8 @@ from werkzeug.except...</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/7482928439">
-        <time id="build-timestamp" datetime="2024-01-11T01:19:02.035Z">2024-01-11T01:19:02.035Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/7496643028">
+        <time id="build-timestamp" datetime="2024-01-12T01:19:22.696Z">2024-01-12T01:19:22.696Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

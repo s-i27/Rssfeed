@@ -2,10 +2,240 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-01-11T01:19:02.059Z</updated>
+    <updated>2024-01-12T01:19:22.728Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[行列積状態について考える (9) — 100 量子ビットのもつれ状態]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-matrix-product09</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-matrix-product09"/>
+        <updated>2024-01-11T13:35:26.000Z</updated>
+        <summary type="html"><![CDATA[目的
+行列積状態について考える (6) — Vidal の標準形 と 行列積状態について考える (8) — Vidal の標準形 その 2 で行列積状態 (MPS) の Vidal の標準形について書いた。今回はこれを用いて、100 量子ビットのもつれ状態を作成して、ちゃんとできたことを確認してみたい。
+
+ 実装
+必要なモジュールを import する。
+from __future__ import annotations
+import numpy as np
+from opt_einsum import contract
+
+from qiskit import QuantumCir...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[小ネタ] ファイルをdata URLの形式でクリップボードに保存するPythonスクリプト]]></title>
+        <id>https://zenn.dev/aikige/articles/copy-data-url-to-clipboard-by-python</id>
+        <link href="https://zenn.dev/aikige/articles/copy-data-url-to-clipboard-by-python"/>
+        <updated>2024-01-11T13:29:50.000Z</updated>
+        <summary type="html"><![CDATA[Markdown でメモを取る際に、画像をメモに貼りたい場合には皆さんどのようにしていますか？
+画像を別途保管して、それを下記の例のように参照しても良いのですが、このやり方だとメモの可搬性が低くなります。
+
+example
+![note](path/to/some/image.png)
+
+この場合、画像を data URL の形式にして貼ってしまうのが意外に便利です[1]。
+
+example of data URL
+![note](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI1...]]></summary>
+        <author>
+            <name>aikige</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[リモートリポジトリにpythonの仮想環境を作る]]></title>
+        <id>https://zenn.dev/taro98/articles/65c6af978c4132</id>
+        <link href="https://zenn.dev/taro98/articles/65c6af978c4132"/>
+        <updated>2024-01-11T13:19:22.000Z</updated>
+        <summary type="html"><![CDATA[概要
+githubでリモートリポジトリを作成し、venvでpythonの仮想環境を作る一連の流れをメモ。
+
+ githubでリモートリポジトリを作成
+① Newをクリック
+
+② Creqte a ner repositoryで以下の作業を行う
+・Repository nameを入力。
+・add a READMEにチェックを入れる。
+・add .gitignoreでpythonを選択。
+
+③ URLをコピーする
+<>Codeをクリックし、HTTPSのURLをコピーする。
+
+
+ ローカルリポジトリを作成
+① ターミナルに移動
+② cloneするディレクトリに移動
+③ 以下のコ...]]></summary>
+        <author>
+            <name>taro.n98</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Docker + ESA SNAP Python で Sentinel-1 をオルソ幾何補正する]]></title>
+        <id>https://zenn.dev/room_208/articles/8b35f07b115c73</id>
+        <link href="https://zenn.dev/room_208/articles/8b35f07b115c73"/>
+        <updated>2024-01-11T13:16:26.000Z</updated>
+        <summary type="html"><![CDATA[概要
+dockerを用いてESA SNAP Pythonの環境を作成し、Sentinel-1 GRDデータをオルソ幾何補正（Geometric Terrain Correction）する。
+
+ 環境
+
+Ubuntu 20.04.5 LTS
+Docker 20.10.18
+
+
+ 環境構築
+
+ docker build
+ESA SNAP 9 docker imagesを元に、以下のコマンドを実行して環境を構築する。このビルドは1-2時間かかる。ここで既存のmundialis/esa-snap:ubuntuのイメージを使用しない理由は、既存のイメージではNo valid orbit fil...]]></summary>
+        <author>
+            <name>room_208</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[色々な確率分布をまとめていく]]></title>
+        <id>https://zenn.dev/yanami85/articles/ebba336243add4</id>
+        <link href="https://zenn.dev/yanami85/articles/ebba336243add4"/>
+        <updated>2024-01-11T08:22:38.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+統計検定にもよく出題される確率分布について、できる限り行間を狭くしながらまとめていく。
+基本的には統計検定2級で出題される確率分布の平均と分散の求め方を網羅しつつ、一部確率分布の構成方法にも言及した。
+今後も対応する確率分布を増やしていく予定。
+
+ 確率変数と確率
+
+ 確率変数(Random variable; r.v.)
+確率変数はプログラミングでの乱数に相当する。
+「確率分布Aに従う確率変数」は「確率分布Aに従って乱数を発生させた」、ということと同値。
+確率変数は一般的に大文字で与えられ(X_1, X_2, ...)、Xによる実現値は小文字xで書かれる。
+確率変数は離散...]]></summary>
+        <author>
+            <name>Kosaku Noba</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[openai apiのtext-embedding-ada-002でのRateLimitErrorの回避]]></title>
+        <id>https://zenn.dev/ryoooou/articles/affada72ad6241</id>
+        <link href="https://zenn.dev/ryoooou/articles/affada72ad6241"/>
+        <updated>2024-01-11T08:20:15.000Z</updated>
+        <summary type="html"><![CDATA[text-embedding-ada-002で埋め込み表現を取得しようと、公式リファレンスのコードそのままに実行したところ、以下のエラーが出ました。
+https://platform.openai.com/docs/guides/embeddings/use-cases
+from openai import OpenAI
+client = OpenAI()
+
+def get_embedding(text, model="text-embedding-ada-002"):
+   text = text.replace("\n", " ")
+   return client.embeddin...]]></summary>
+        <author>
+            <name>リョウ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[mypy の [import-untyped] や [import-not-found] への対応]]></title>
+        <id>https://zenn.dev/seizans/articles/7de69f16c643ea</id>
+        <link href="https://zenn.dev/seizans/articles/7de69f16c643ea"/>
+        <updated>2024-01-11T05:46:18.000Z</updated>
+        <summary type="html"><![CDATA[mypy を実行する際、以下のようなエラーが出ることがある。
+error: Skipping analyzing "gspread": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+See と言われている公式ドキュメントに対応は書いてある。
+エラーとしては、import しているモジュールに対応する typ...]]></summary>
+        <author>
+            <name>seizans</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-332｜B - Glass and Mug]]></title>
+        <id>https://zenn.dev/hyperdb/articles/ea1ca1742e5cae</id>
+        <link href="https://zenn.dev/hyperdb/articles/ea1ca1742e5cae"/>
+        <updated>2024-01-11T04:47:43.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-332 B - Glass and Mug
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    k, g, m = getIntMap()
+
+    xg = 0
+    xm = 0
+
+    while k > 0:
+        if xg == g:
+            xg = 0
+        elif xm == 0:
+            xm = m
+        else:
+            mv = min...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-332｜A - Online Shopping]]></title>
+        <id>https://zenn.dev/hyperdb/articles/c58e9eb69a1eff</id>
+        <link href="https://zenn.dev/hyperdb/articles/c58e9eb69a1eff"/>
+        <updated>2024-01-11T04:47:42.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-332 A - Online Shopping
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def getIntListRow(N):
+    return [list(map(int, input().split())) for _ in range(N)]
+
+
+def main():
+    n, s, k = getIntMap()
+    pq = getIntListRow(n)
+    p = sum([x * y for x, y in pq])
+
+    pr...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[材力の梁シミュレータを作る]]></title>
+        <id>https://zenn.dev/halmet7000/articles/000fe097378382</id>
+        <link href="https://zenn.dev/halmet7000/articles/000fe097378382"/>
+        <updated>2024-01-11T03:14:13.000Z</updated>
+        <summary type="html"><![CDATA[概要
+材料力学の梁を学ぶ際、SFDやらBMDやら出てきて計算がミスりやすかったり、本当に合ってるか分からず進んだりした経験がありました。
+　全部積分してしまえば求まるはずなのに、面倒だと思っていたので、試しに片持ち梁の解析プログラムを作ってみました。
+　参考になれば幸いです。
+
+ シミュレーション概要
+BMDやSFD,たわみ角、たわみは以下のように、積分や微分方程式で対応付けできます。(初期条件や境界条件の扱いが大変ですが…)
+
+
+ 結果
+
+
+
+ プログラム
+pythonのsympy, matplotlibで作ってます
+
+to_bunpu_kazyu.py
+from sympy im...]]></summary>
+        <author>
+            <name>HAL</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ベイズファクターでの群間比較の評価]]></title>
         <id>https://zenn.dev/toma2/articles/465892c583eed9</id>
@@ -4588,164 +4818,6 @@ https://akkiesoft.hatenablog.jp/entry/20231012/1697120720
 https:/...]]></summary>
         <author>
             <name>黒ヰ樹</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[BigQuery を Pandas のように操作する]]></title>
-        <id>https://zenn.dev/cloud_ace/articles/35dd9dafc1f9bd</id>
-        <link href="https://zenn.dev/cloud_ace/articles/35dd9dafc1f9bd"/>
-        <updated>2023-12-13T10:10:19.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-こんにちは、クラウドエース Data/ML ディビジョン所属の坂田です。
-BigQuery 界隈のみなさん、「BigQuery DataFrames」という Python ライブラリをご存知でしょうか。
-BigQuery DataFrames は 2023 年 9 月に登場したライブラリで、BigQuery データを使ってデータ分析を行うことができる、Google 提供のライブラリです。
-BigQuery DataFrames は、2 つの機能に分かれています。
-
-
-Pandas ライクな操作・機能を提供する bigframes.pandas
-
-
-scikit-learn ...]]></summary>
-        <author>
-            <name>クラウドエース株式会社</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Kaggle：データサイエンスと機械学習の世界へのパスポート]]></title>
-        <id>https://zenn.dev/pipon_tech_blog/articles/1d7b27134bc560</id>
-        <link href="https://zenn.dev/pipon_tech_blog/articles/1d7b27134bc560"/>
-        <updated>2023-12-13T03:16:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-データサイエンスと機械学習は、現代のテクノロジー界の最前線に位置しています。
-そこで第一歩目を踏み出そうとしても、「環境設定」がよくわからない…
-基本書を読んでも分かるようでわからない…
-色々と学んではいるけど、結局のところどう使えるのかがわからない…
-そういった悩みに応えつつ、この分野における技術的スキルの向上や新たなアイデアの探求を目指すなら、Kaggleはあなたの理想的な出発点となるでしょう。
-ここでは、Kaggleの概要からそのメリット、使用例、注意点までを詳しく解説します。
-
- Kaggleとは？
-Kaggleは、データサイエンスと機械学習に特化した世界最大級のオ...]]></summary>
-        <author>
-            <name>マイケル</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pygameでゲームを作ろう]]></title>
-        <id>https://zenn.dev/kwaka1208/books/pygame-programming</id>
-        <link href="https://zenn.dev/kwaka1208/books/pygame-programming"/>
-        <updated>2023-12-13T02:51:41.000Z</updated>
-        <summary type="html"><![CDATA[pygameを使ったPythonプログラミング入門です]]></summary>
-        <author>
-            <name>Kenichi Wakabayashi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ddPn08/rvc-webui を今更ながら試す（API利用のみ）]]></title>
-        <id>https://zenn.dev/kazuph/articles/c837435845cc1b</id>
-        <link href="https://zenn.dev/kazuph/articles/c837435845cc1b"/>
-        <updated>2023-12-13T02:15:25.000Z</updated>
-        <summary type="html"><![CDATA[https://github.com/ddPn08/rvc-webui
-何かしらのRVCのモデル（pth）を持っているとします。
-僕は852話さんのBoothにいくつかあるのを買っています。
-https://meola.booth.pm/
-それでは、セットアップを開始しましょう。
-
- git clone
-今回はAPI経由で利用したいので、ddPn08さんのrvc-webuiにある server.py を利用します。
-中身を見るとわかりますがgradio経由でのAPIではなく素のflaskを使っているようです。
-git clone https://github.com/ddPn08/rvc...]]></summary>
-        <author>
-            <name>kazuph</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[緯度経度データの検索・処理をいつもやっている]]></title>
-        <id>https://zenn.dev/takilog/articles/199f30c01111a8</id>
-        <link href="https://zenn.dev/takilog/articles/199f30c01111a8"/>
-        <updated>2023-12-12T23:10:44.000Z</updated>
-        <summary type="html"><![CDATA[本記事は情報検索・検索技術 Advent Calendar 2023の13日目の記事です。
-最近Overtureのデータを触っていて、何回も同じ処理を書いていて頭がダメな感じなので、将来の自分のために処理をメモするために書いています。
-特にライブラリをチョロっと使うだけの簡単な処理を書きました。
-せっかくなので、これまでの細々とやっていた記事も宣伝しておきます。
-
-シェープファイル(shpファイル)をPython+Geopandasで扱った
-Overture Maps Foundationのデータを活用したい (3): Mapboxを用いたクラスタ可視化
-
-
- 設定
-どこかから処理してき...]]></summary>
-        <author>
-            <name>たきろぐ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Python で実行時型チェックをしよう：改良版]]></title>
-        <id>https://zenn.dev/wsuzume/articles/67ce25adea10b4</id>
-        <link href="https://zenn.dev/wsuzume/articles/67ce25adea10b4"/>
-        <updated>2023-12-12T17:28:32.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-よく調べたら前回作ったやつよりもシンプルかつ強力なのができたので共有します。
-Python のバージョンは 3.10 以上にしてください。
-
- 参考文献
-
-inspect --- 活動中のオブジェクトの情報を取得する
-functools --- 高階関数と呼び出し可能オブジェクトの操作
-
-
- Install
-$ pip install nobus
-from nobus.typecheck import typecheck
-
- コピペ用
-ロクにメンテされていない個人開発のライブラリに抵抗がある人は以下のソースコードをコピペしてください。50行もなくとても素直で読めば分かると思...]]></summary>
-        <author>
-            <name>Josh Nobus</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[大規模言語モデルを自作しよう！(Transformers+DeepSpeed+torch.compile+flash_attn2）]]></title>
-        <id>https://zenn.dev/selllous/articles/transformers_pretrain_to_ft</id>
-        <link href="https://zenn.dev/selllous/articles/transformers_pretrain_to_ft"/>
-        <updated>2023-12-12T16:43:47.000Z</updated>
-        <summary type="html"><![CDATA[本記事は、LLM Advent Calendar 2023 13日目の記事です。
-https://qiita.com/advent-calendar/2023/llm
-
- はじめに
-🤗 Transformersは、自然言語処理、マルチモーダル、音声処理、コンピュータビジョン分野の事前学習済モデルを簡単にダウンロードしトレーニングすることが可能なpythonライブラリです。このライブラリを使用し、大規模言語モデル（LLM）の事前学習済モデルをローカルPC上にダウンロードし、それを使用した言語生成や、要約・翻訳・質問応答などの個別のタスクへのファインチューニング、チャットAIへの組み込みなど...]]></summary>
-        <author>
-            <name>celery</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Flaskで全例外を共通関数で処理しつつ、デフォルトのInternal Server Errorページを表示]]></title>
-        <id>https://zenn.dev/nondescript/articles/31517126cebb55</id>
-        <link href="https://zenn.dev/nondescript/articles/31517126cebb55"/>
-        <updated>2023-12-12T15:42:53.000Z</updated>
-        <summary type="html"><![CDATA[TL;DR
-
-エラーがwerkzeug.exceptions.HTTPExceptionのサブクラスでないときにInternalServerError()を返却する
-
-
- 要求
-
-すべてのルーティングにおける全例外を、HTTPエラーとそれ以外のそれぞれでの共通関数で処理するか、あるいは両方の共通関数で処理したい
-例外をハンドリングした際は全てデフォルトのHTTPエラーフォーマットで返したい
-
-
- 実装例
-
-
-
- HTTPエラーとそれ以外のエラーで関数を分ける場合
-
-
-
-server_sep.py
-from flask import Flask
-from werkzeug.except...]]></summary>
-        <author>
-            <name>素人の戯言</name>
         </author>
     </entry>
 </feed>
