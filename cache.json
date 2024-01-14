@@ -12,6 +12,66 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/camay119/articles/0dbbcdae095644",
+          "author": "Camay119",
+          "description": "これは何？\nSnowpark Container Serviceを使ってMLflowのサーバーを立ち上げたので、必要な手順や落とし穴の備忘録を残しておきます。\nとりあえず立ち上げただけなので、外部からアクセスしたりなどはできません。\n\n そもそも\n\n Snowpark Container Service(SPCS)って？\nSnowflake上のリソースを使って、フルマネージドでコンテナを動かせるサービスです。\n2024/1/11 現在パブリックプレビューの機能となっており、AWSの特定のリージョンとAzureで利用可能です。\n詳しくは公式ドキュメントを参照ください。\n公式のチュートリ...",
+          "link": "https://zenn.dev/camay119/articles/0dbbcdae095644",
+          "publishedOn": "2024-01-13T14:54:59.000Z",
+          "wordCount": 1862,
+          "title": "Snowpark Container ServiceでMLflowサーバーを立ち上げる",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--LUeftYP2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Snowpark%2520Container%2520Service%25E3%2581%25A7MLflow%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2582%2592%25E7%25AB%258B%25E3%2581%25A1%25E4%25B8%258A%25E3%2581%2592%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Camay119%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTF9NMy1ZclJLX041RDBGM2g1clUyLXhEWmhFN1hMQm1XZWoxOGRKMFlxPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--LUeftYP2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Snowpark%2520Container%2520Service%25E3%2581%25A7MLflow%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2582%2592%25E7%25AB%258B%25E3%2581%25A1%25E4%25B8%258A%25E3%2581%2592%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Camay119%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTF9NMy1ZclJLX041RDBGM2g1clUyLXhEWmhFN1hMQm1XZWoxOGRKMFlxPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/room_208/articles/65cadd1d06c2fe",
+          "author": "room_208",
+          "description": "概要\nPySTACを用いてSentinel-1のデータを検索し、Boto3またはAWS CLIを用いてAWSからデータをダウンロードする。\n\n 環境\n\nUbuntu 20.04.5 LTS\nDocker 20.10.18\nQGIS 3.10.4\n\n\n 環境構築\n以下のDockerfileを準備する。\n\nDockerfile\nFROM python:3.9\n\nRUN curl \"https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip\" -o \"awscliv2.zip\" && \\\n    unzip awscli...",
+          "link": "https://zenn.dev/room_208/articles/65cadd1d06c2fe",
+          "publishedOn": "2024-01-13T12:26:23.000Z",
+          "wordCount": 1563,
+          "title": "PySTAC を使って Sentinel-1 のデータを AWS からダウンロードする",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--2pvtB-n7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PySTAC%2520%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%2520Sentinel-1%2520%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%2520AWS%2520%25E3%2581%258B%25E3%2582%2589%25E3%2583%2580%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%2589%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:room_208%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q2MmRkNTEzN2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--2pvtB-n7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PySTAC%2520%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%2520Sentinel-1%2520%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%2520AWS%2520%25E3%2581%258B%25E3%2582%2589%25E3%2583%2580%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%2589%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:room_208%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q2MmRkNTEzN2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/saitoxu/articles/20240113-testable",
+          "author": "Yosuke Saito",
+          "description": "以前チームでmockの必要なテストの書き方について軽くディスカッションしたときに、テストを書きやすくするために実装の段階で「実行と準備を分ける」と良いよねと思ったので、そのときのメモです。\n\n 背景: 他のモジュールに依存するクラスの実装\n他のモジュールへの依存があるクラスを実装するときに、テストコードを含めてどう書くかで、以下の2つの方針がありました。\n\n 方針1: テスト対象のメソッド内で依存モジュールを直接呼び出す\nこの場合、pytest-mockなどを使って依存モジュールのmockを作成してテストを書きます。\nfrom utils import multiply  # 2つの整数...",
+          "link": "https://zenn.dev/saitoxu/articles/20240113-testable",
+          "publishedOn": "2024-01-13T03:42:21.000Z",
+          "wordCount": 585,
+          "title": "実行と準備を分けてテストを書きやすくする",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--KcTGUADe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%25A8%25E6%25BA%2596%25E5%2582%2599%25E3%2582%2592%25E5%2588%2586%25E3%2581%2591%25E3%2581%25A6%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E6%259B%25B8%25E3%2581%258D%25E3%2582%2584%25E3%2581%2599%25E3%2581%258F%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yosuke%2520Saito%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M3ZTU0Y2M0ZTAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--KcTGUADe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%25A8%25E6%25BA%2596%25E5%2582%2599%25E3%2582%2592%25E5%2588%2586%25E3%2581%2591%25E3%2581%25A6%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E6%259B%25B8%25E3%2581%258D%25E3%2582%2584%25E3%2581%2599%25E3%2581%258F%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yosuke%2520Saito%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M3ZTU0Y2M0ZTAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/nowa0402/articles/385f647fba73b8",
+          "author": "nowa",
+          "description": "TL;DR\npolarsでマルチプロセス化する時はspawnを指定すること\n\n マルチプロセス化したら動かなくなった\npolarsでマルチプロセス化を行う処理を書いたところ\nMacOSは動くが、Linuxは動かなくなる事象が発生しました。\n使用したCSVはこの通りです。\n\nsample.csv\ncode,name,age\n0001,hoge,20\n0002,fuga,10\n0003,piyo,32\n0004,foo,15\n0005,bar,60\n\n今回作成したソースコードは\nCSV1列目のcodeに合致する箇所を個別に取得する処理です。\n\nmain.py\nfrom concurren...",
+          "link": "https://zenn.dev/nowa0402/articles/385f647fba73b8",
+          "publishedOn": "2024-01-13T02:28:37.000Z",
+          "wordCount": 1474,
+          "title": "polarsのマルチプロセス化はコンテキスト(spawn)を指定しよう",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--_5CDa5n0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:polars%25E3%2581%25AE%25E3%2583%259E%25E3%2583%25AB%25E3%2583%2581%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25BB%25E3%2582%25B9%25E5%258C%2596%25E3%2581%25AF%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%2528spawn%2529%25E3%2582%2592%25E6%258C%2587%25E5%25AE%259A%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nowa%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBlY2U3N2Y2YWEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--_5CDa5n0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:polars%25E3%2581%25AE%25E3%2583%259E%25E3%2583%25AB%25E3%2583%2581%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25BB%25E3%2582%25B9%25E5%258C%2596%25E3%2581%25AF%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2586%25E3%2582%25AD%25E3%2582%25B9%25E3%2583%2588%2528spawn%2529%25E3%2582%2592%25E6%258C%2587%25E5%25AE%259A%25E3%2581%2597%25E3%2582%2588%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nowa%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBlY2U3N2Y2YWEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
           "id": "https://zenn.dev/takeyan/articles/c586aa2cbc2253",
           "author": "takerin",
           "description": "以前から作ると言っていたブラウザを開発したので機能の一部を説明します。\n説明するのは広告、トラッカーブロック機能の実装とYouTubeを埋め込んで視聴する機能（埋め込みされた動画は広告が表示されない）です。\n（タブの追加とかリロード機能の実装とかは多くのサイトが説明してるので今回はしない予定です。）\n～広告ブロック機能の説明～\n特定のURLから広告とトラッカーのリストを非同期に取得し、ブロックするためのルールを設定するコードです\nコードは以下の通りです。\nclass AdblockX:\n    def __init__(self, page, adBlocker):\n        se...",
@@ -3340,126 +3400,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--GB3klft6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:LINQ%2520-%253E%2520Python%2520%25E3%2583%2581%25E3%2583%25BC%25E3%2583%2588%25E3%2582%25B7%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:shimat%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMxOTgyYTAyNDEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/kazuph/articles/1a67d696f5d68d",
-          "author": "kazuph",
-          "description": "ざっくりこんな感じになります。V100で620msecで生成できます。\n\n\n Setup\n!pip install -U diffusers transformers scipy ftfy accelerate\n\n LoRA modelのロード\n今回はsafetensorsをダウンロードします。これはLoraとして指定すると数ステップで画像が生成できるようになります。\n!wget  -O LCM-LoRA.safetensors \"https://civitai.com/api/download/models/225222?type=Model&format=SafeTensor...",
-          "link": "https://zenn.dev/kazuph/articles/1a67d696f5d68d",
-          "publishedOn": "2023-12-15T01:55:12.000Z",
-          "wordCount": 501,
-          "title": "WebUIではなく素のDiffusersでLora（safetensors）もLCMもやる",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s---r9_6_h_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:WebUI%25E3%2581%25A7%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%258F%25E7%25B4%25A0%25E3%2581%25AEDiffusers%25E3%2581%25A7Lora%25EF%25BC%2588safetensors%25EF%25BC%2589%25E3%2582%2582LCM%25E3%2582%2582%25E3%2582%2584%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kazuph%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFjNmY3ODBlZDYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s---r9_6_h_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:WebUI%25E3%2581%25A7%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%258F%25E7%25B4%25A0%25E3%2581%25AEDiffusers%25E3%2581%25A7Lora%25EF%25BC%2588safetensors%25EF%25BC%2589%25E3%2582%2582LCM%25E3%2582%2582%25E3%2582%2584%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kazuph%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFjNmY3ODBlZDYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/shu223/articles/coremltools_pytorch",
-          "author": "Shuichi Tsutsumi",
-          "description": "coremltools 4.0からはコンバーターが大きく刷新され、PyTorchモデルがONNXを経由することなく直接Core MLモデルに変換できるようになった。\nhttps://qiita.com/shu223/items/6ddfbedb4fdfb2059a11\ncoremltoolsをM1 Mac上に環境構築する手順についてはこちらに書いた。\nhttps://note.com/shu223/n/n95af3b29d89e\n本記事では現行の最新バージョンでPyTorchモデルをCore MLモデルに変換する実装について書く。\n!\n本記事は2022年8月に noteのマガジン に書い...",
-          "link": "https://zenn.dev/shu223/articles/coremltools_pytorch",
-          "publishedOn": "2023-12-14T21:13:14.000Z",
-          "wordCount": 1521,
-          "title": "coremltoolsでPyTorchモデルをCore MLモデルに変換する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--7Ck3R3TM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:coremltools%25E3%2581%25A7PyTorch%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2582%2592Core%2520ML%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shuichi%2520Tsutsumi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pHcm5LNC1XQ2l0MVBwSUFqSTFFODhnLXRFZUd6UmRfVkcwNlZwRmc9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--7Ck3R3TM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:coremltools%25E3%2581%25A7PyTorch%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2582%2592Core%2520ML%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Shuichi%2520Tsutsumi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pHcm5LNC1XQ2l0MVBwSUFqSTFFODhnLXRFZUd6UmRfVkcwNlZwRmc9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/karunru/articles/7ff503d8ef7480",
-          "author": "やまぴー",
-          "description": "はじめに\nこの記事は Kaggle Advent Calendar 2023 15日目の記事です\n皆さん，GPUメモリ足りてますか！？\nkaggleをやっているとどうしてもGPUメモリが足りなくてout_of_memoryを見る機会が多いと思います\n本記事では，RAMをGPUメモリとして扱い，cuDFとpytorchでGPUメモリ足りない問題を解決する方法をご紹介します\n\n RAPIDS Memory Manager (RMM)\nRAPIDS Memory Manager (RMM) とは，cuDFなどが有名なNVIDIAが開発しているライブラリ郡RAPIDS[1]のうちの一つで，G...",
-          "link": "https://zenn.dev/karunru/articles/7ff503d8ef7480",
-          "publishedOn": "2023-12-14T15:34:12.000Z",
-          "wordCount": 410,
-          "title": "RAPIDS RMMでRAMをGPUメモリとして使う",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--8NHLVrwl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:RAPIDS%2520RMM%25E3%2581%25A7RAM%25E3%2582%2592GPU%25E3%2583%25A1%25E3%2583%25A2%25E3%2583%25AA%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25A6%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2584%25E3%2581%25BE%25E3%2581%25B4%25E3%2583%25BC%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvay5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--8NHLVrwl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:RAPIDS%2520RMM%25E3%2581%25A7RAM%25E3%2582%2592GPU%25E3%2583%25A1%25E3%2583%25A2%25E3%2583%25AA%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25A6%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2584%25E3%2581%25BE%25E3%2581%25B4%25E3%2583%25BC%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvay5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/jun784/articles/bc88e972e2a86d",
-          "author": "Jun Kawasaki",
-          "description": "datetimeをglobalで定義してはいけない。\nlambda_handler以下に定義\nfrom datetime import datetime, timezone, timedelta\n\n# このように定義するとlambdaのインスタンスの実行時間によって値が変わらない\nnow_jst = datetime.now(jst)\n\n# 代わりにlambdaタイプをつける\nnow_jst = lambda: datetime.now(jst)\n    \n# UNIXタイムスタンプをミリ秒単位で取得\nunix_timestamp_ms = int(now_jst.timestamp()...",
-          "link": "https://zenn.dev/jun784/articles/bc88e972e2a86d",
-          "publishedOn": "2023-12-14T15:21:35.000Z",
-          "wordCount": 155,
-          "title": "Lambdaでdatetimeを定義するとき",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--f_Ltg8TO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Lambda%25E3%2581%25A7datetime%25E3%2582%2592%25E5%25AE%259A%25E7%25BE%25A9%25E3%2581%2599%25E3%2582%258B%25E3%2581%25A8%25E3%2581%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Jun%2520Kawasaki%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2djcFAtXzBjNXY0VjA4dzBvSWxMMjNCdmpJMTRrUTBmUWVEUi1SZUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--f_Ltg8TO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Lambda%25E3%2581%25A7datetime%25E3%2582%2592%25E5%25AE%259A%25E7%25BE%25A9%25E3%2581%2599%25E3%2582%258B%25E3%2581%25A8%25E3%2581%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Jun%2520Kawasaki%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2djcFAtXzBjNXY0VjA4dzBvSWxMMjNCdmpJMTRrUTBmUWVEUi1SZUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/keitakn/articles/accelerate-planetscale-test-code",
-          "author": "keitakn",
-          "description": "概要\nPlanetScale APIを使ってDBテストを高速化したので、その時にやった具体的な手法を記載した記事になります。\n\n 対象読者\n下記の通りです。\n\nテストコードを書いたことがある人\nPlanetScaleを使ったことがある人\nテストコードの実行速度に関して問題意識を持っている人\n\nサンプルコードはPythonとpytestを使っていますが、この記事の内容は他言語のテストコードでも応用できるかと思います。\n\n 筆者のバックグラウンド\n普段はTypeScript（Next.jsを主に利用）を用いたフロントエンド開発者です。\n以前はバックエンドエンジニアで主にGoを使ってAWS...",
-          "link": "https://zenn.dev/keitakn/articles/accelerate-planetscale-test-code",
-          "publishedOn": "2023-12-14T15:03:23.000Z",
-          "wordCount": 1364,
-          "title": "PlanetScale APIを使ってDBテストを高速化した",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--tHP7u7YX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PlanetScale%2520API%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6DB%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E9%25AB%2598%25E9%2580%259F%25E5%258C%2596%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:keitakn%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I4YWRiOTY3ZDIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--tHP7u7YX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PlanetScale%2520API%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6DB%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E9%25AB%2598%25E9%2580%259F%25E5%258C%2596%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:keitakn%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I4YWRiOTY3ZDIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/kura103/articles/bd65ce70a2b595",
-          "author": "kura103",
-          "description": "ハッピバースデートゥミ〜〜〜♪ハッピバースデートゥミ〜〜〜♪、ハッピバースデーディアわたし〜♪\nハッピバースデートゥミ〜〜〜♪\nくら＠ちゅらデータ（43）です。\nこの投稿はちゅらデータアドベントカレンダー2023の15日目の記事です。\nOBSで人と背景をクロマキー合成するときに背景を単色にする必要があるんですが大変なんでどうにかしたいなーって話です。\n\n はじめに\nオンラインミーティングだとmeetやzoomの機能で綺麗に人と背景を合成してくれて散らかった部屋を晒さなくて済むんですが、OBSで合成する時が困るんですよね。\nOBSのインプットの時点で背景を単色にできればスムーズに合成できる...",
-          "link": "https://zenn.dev/kura103/articles/bd65ce70a2b595",
-          "publishedOn": "2023-12-14T15:00:01.000Z",
-          "wordCount": 1909,
-          "title": "ブルーバックとか使わずにクロマキー合成する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--okVH-NqI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2581%25A8%25E3%2581%258B%25E4%25BD%25BF%25E3%2582%258F%25E3%2581%259A%25E3%2581%25AB%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%259E%25E3%2582%25AD%25E3%2583%25BC%25E5%2590%2588%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kura103%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y29IWlpwRDZtbVd0NUVadGtaNVhDMldRMWFkTi1ROHhzWkw5ZE5qTjdGMFE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--okVH-NqI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2581%25A8%25E3%2581%258B%25E4%25BD%25BF%25E3%2582%258F%25E3%2581%259A%25E3%2581%25AB%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%259E%25E3%2582%25AD%25E3%2583%25BC%25E5%2590%2588%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kura103%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y29IWlpwRDZtbVd0NUVadGtaNVhDMldRMWFkTi1ROHhzWkw5ZE5qTjdGMFE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/pomcho555/articles/8e42f0a4ce39eb",
-          "author": "pomcho555",
-          "description": "はじめに\nご存知の通り大LLM時代なわけで、つよつよな方からアフィリ記事までこぞってどうやってLLMで良い出力を得るかまとめております。そしてそのテクニックがプロンプトエンジニアリングとして体系化されつつあります。ただし、エンプラでLLMを真面目に使おうとすると、プロンプトの管理やLLMごとの管理、レスポンスタイムの計測など様々な評価を継続的にやる必要があります。従来のデータサイエンスでも結局評価や計測が後々重要になったきたことを考えると必然かもしれませんが、そこらへんをまとめた日本語の記事がなかったので、アドベントカレンダーというチャンスを使ってまとめてみます!\nそのなわけで、この...",
-          "link": "https://zenn.dev/pomcho555/articles/8e42f0a4ce39eb",
-          "publishedOn": "2023-12-14T14:09:48.000Z",
-          "wordCount": 1710,
-          "title": "LLM・プロンプトの評価・テストフレームワークについてまとめてみた",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--mdoZZ3sQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:LLM%25E3%2583%25BB%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2597%25E3%2583%2588%25E3%2581%25AE%25E8%25A9%2595%25E4%25BE%25A1%25E3%2583%25BB%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2583%2595%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%25A0%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:pomcho555%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVmNTUwZWFlY2MuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--mdoZZ3sQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:LLM%25E3%2583%25BB%25E3%2583%2597%25E3%2583%25AD%25E3%2583%25B3%25E3%2583%2597%25E3%2583%2588%25E3%2581%25AE%25E8%25A9%2595%25E4%25BE%25A1%25E3%2583%25BB%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E3%2583%2595%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%25A0%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:pomcho555%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVmNTUwZWFlY2MuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/daidai_daitai/articles/6018ca73367744",
-          "author": "橙。",
-          "description": "はじめに\nGIS関連の業務を行う際に、どの様にデータを扱っていますか?\nローカル環境でGISに関する計算などを行う場合は、\"QGIS\" や \"ArcGIS Pro\" などのデスクトップアプリが有名で、私自身も \"ArcGIS Pro\" を使用しています。\nGISエンジニアであればともかく、そうでない方はGISを補助的に利用するだけでガッツリ使うという方も少ないかもしれません。もちろんそれでも問題はないのですが、どの様なデータになっているのかを理解していると、活用の幅も広がるかもしれません。\nこのTutorialはPythonでGISデータを扱う事に焦点を当てて進めていきます。Part...",
-          "link": "https://zenn.dev/daidai_daitai/articles/6018ca73367744",
-          "publishedOn": "2023-12-14T14:01:42.000Z",
-          "wordCount": 1592,
-          "title": "GIS × Python Tutorial Session1~ 座標データの中身 ~",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--dV8rmEtt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GIS%2520%25C3%2597%2520Python%2520Tutorial%2520Session1%7E%2520%25E5%25BA%25A7%25E6%25A8%2599%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E4%25B8%25AD%25E8%25BA%25AB%2520%7E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%25A9%2599%25E3%2580%2582%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MjJMLWoxUDdDS1dHZWJjbmh0YUxmV3BGRGNSTnBDQnZZTGYxYUpqQT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--dV8rmEtt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GIS%2520%25C3%2597%2520Python%2520Tutorial%2520Session1%7E%2520%25E5%25BA%25A7%25E6%25A8%2599%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E4%25B8%25AD%25E8%25BA%25AB%2520%7E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%25A9%2599%25E3%2580%2582%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MjJMLWoxUDdDS1dHZWJjbmh0YUxmV3BGRGNSTnBDQnZZTGYxYUpqQT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
         }
       ]
     }

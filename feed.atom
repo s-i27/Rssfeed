@@ -2,10 +2,104 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-01-13T01:18:05.797Z</updated>
+    <updated>2024-01-14T01:24:33.755Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Snowpark Container ServiceでMLflowサーバーを立ち上げる]]></title>
+        <id>https://zenn.dev/camay119/articles/0dbbcdae095644</id>
+        <link href="https://zenn.dev/camay119/articles/0dbbcdae095644"/>
+        <updated>2024-01-13T14:54:59.000Z</updated>
+        <summary type="html"><![CDATA[これは何？
+Snowpark Container Serviceを使ってMLflowのサーバーを立ち上げたので、必要な手順や落とし穴の備忘録を残しておきます。
+とりあえず立ち上げただけなので、外部からアクセスしたりなどはできません。
+
+ そもそも
+
+ Snowpark Container Service(SPCS)って？
+Snowflake上のリソースを使って、フルマネージドでコンテナを動かせるサービスです。
+2024/1/11 現在パブリックプレビューの機能となっており、AWSの特定のリージョンとAzureで利用可能です。
+詳しくは公式ドキュメントを参照ください。
+公式のチュートリ...]]></summary>
+        <author>
+            <name>Camay119</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PySTAC を使って Sentinel-1 のデータを AWS からダウンロードする]]></title>
+        <id>https://zenn.dev/room_208/articles/65cadd1d06c2fe</id>
+        <link href="https://zenn.dev/room_208/articles/65cadd1d06c2fe"/>
+        <updated>2024-01-13T12:26:23.000Z</updated>
+        <summary type="html"><![CDATA[概要
+PySTACを用いてSentinel-1のデータを検索し、Boto3またはAWS CLIを用いてAWSからデータをダウンロードする。
+
+ 環境
+
+Ubuntu 20.04.5 LTS
+Docker 20.10.18
+QGIS 3.10.4
+
+
+ 環境構築
+以下のDockerfileを準備する。
+
+Dockerfile
+FROM python:3.9
+
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+    unzip awscli...]]></summary>
+        <author>
+            <name>room_208</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[実行と準備を分けてテストを書きやすくする]]></title>
+        <id>https://zenn.dev/saitoxu/articles/20240113-testable</id>
+        <link href="https://zenn.dev/saitoxu/articles/20240113-testable"/>
+        <updated>2024-01-13T03:42:21.000Z</updated>
+        <summary type="html"><![CDATA[以前チームでmockの必要なテストの書き方について軽くディスカッションしたときに、テストを書きやすくするために実装の段階で「実行と準備を分ける」と良いよねと思ったので、そのときのメモです。
+
+ 背景: 他のモジュールに依存するクラスの実装
+他のモジュールへの依存があるクラスを実装するときに、テストコードを含めてどう書くかで、以下の2つの方針がありました。
+
+ 方針1: テスト対象のメソッド内で依存モジュールを直接呼び出す
+この場合、pytest-mockなどを使って依存モジュールのmockを作成してテストを書きます。
+from utils import multiply  # 2つの整数...]]></summary>
+        <author>
+            <name>Yosuke Saito</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[polarsのマルチプロセス化はコンテキスト(spawn)を指定しよう]]></title>
+        <id>https://zenn.dev/nowa0402/articles/385f647fba73b8</id>
+        <link href="https://zenn.dev/nowa0402/articles/385f647fba73b8"/>
+        <updated>2024-01-13T02:28:37.000Z</updated>
+        <summary type="html"><![CDATA[TL;DR
+polarsでマルチプロセス化する時はspawnを指定すること
+
+ マルチプロセス化したら動かなくなった
+polarsでマルチプロセス化を行う処理を書いたところ
+MacOSは動くが、Linuxは動かなくなる事象が発生しました。
+使用したCSVはこの通りです。
+
+sample.csv
+code,name,age
+0001,hoge,20
+0002,fuga,10
+0003,piyo,32
+0004,foo,15
+0005,bar,60
+
+今回作成したソースコードは
+CSV1列目のcodeに合致する箇所を個別に取得する処理です。
+
+main.py
+from concurren...]]></summary>
+        <author>
+            <name>nowa</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[python(PyQt6)でブラウザ作った話]]></title>
         <id>https://zenn.dev/takeyan/articles/c586aa2cbc2253</id>
@@ -4498,146 +4592,6 @@ Python 3.12.0
 Pythonにつ...]]></summary>
         <author>
             <name>shimat</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[WebUIではなく素のDiffusersでLora（safetensors）もLCMもやる]]></title>
-        <id>https://zenn.dev/kazuph/articles/1a67d696f5d68d</id>
-        <link href="https://zenn.dev/kazuph/articles/1a67d696f5d68d"/>
-        <updated>2023-12-15T01:55:12.000Z</updated>
-        <summary type="html"><![CDATA[ざっくりこんな感じになります。V100で620msecで生成できます。
-
-
- Setup
-!pip install -U diffusers transformers scipy ftfy accelerate
-
- LoRA modelのロード
-今回はsafetensorsをダウンロードします。これはLoraとして指定すると数ステップで画像が生成できるようになります。
-!wget  -O LCM-LoRA.safetensors "https://civitai.com/api/download/models/225222?type=Model&format=SafeTensor...]]></summary>
-        <author>
-            <name>kazuph</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[coremltoolsでPyTorchモデルをCore MLモデルに変換する]]></title>
-        <id>https://zenn.dev/shu223/articles/coremltools_pytorch</id>
-        <link href="https://zenn.dev/shu223/articles/coremltools_pytorch"/>
-        <updated>2023-12-14T21:13:14.000Z</updated>
-        <summary type="html"><![CDATA[coremltools 4.0からはコンバーターが大きく刷新され、PyTorchモデルがONNXを経由することなく直接Core MLモデルに変換できるようになった。
-https://qiita.com/shu223/items/6ddfbedb4fdfb2059a11
-coremltoolsをM1 Mac上に環境構築する手順についてはこちらに書いた。
-https://note.com/shu223/n/n95af3b29d89e
-本記事では現行の最新バージョンでPyTorchモデルをCore MLモデルに変換する実装について書く。
-!
-本記事は2022年8月に noteのマガジン に書い...]]></summary>
-        <author>
-            <name>Shuichi Tsutsumi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RAPIDS RMMでRAMをGPUメモリとして使う]]></title>
-        <id>https://zenn.dev/karunru/articles/7ff503d8ef7480</id>
-        <link href="https://zenn.dev/karunru/articles/7ff503d8ef7480"/>
-        <updated>2023-12-14T15:34:12.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事は Kaggle Advent Calendar 2023 15日目の記事です
-皆さん，GPUメモリ足りてますか！？
-kaggleをやっているとどうしてもGPUメモリが足りなくてout_of_memoryを見る機会が多いと思います
-本記事では，RAMをGPUメモリとして扱い，cuDFとpytorchでGPUメモリ足りない問題を解決する方法をご紹介します
-
- RAPIDS Memory Manager (RMM)
-RAPIDS Memory Manager (RMM) とは，cuDFなどが有名なNVIDIAが開発しているライブラリ郡RAPIDS[1]のうちの一つで，G...]]></summary>
-        <author>
-            <name>やまぴー</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Lambdaでdatetimeを定義するとき]]></title>
-        <id>https://zenn.dev/jun784/articles/bc88e972e2a86d</id>
-        <link href="https://zenn.dev/jun784/articles/bc88e972e2a86d"/>
-        <updated>2023-12-14T15:21:35.000Z</updated>
-        <summary type="html"><![CDATA[datetimeをglobalで定義してはいけない。
-lambda_handler以下に定義
-from datetime import datetime, timezone, timedelta
-
-# このように定義するとlambdaのインスタンスの実行時間によって値が変わらない
-now_jst = datetime.now(jst)
-
-# 代わりにlambdaタイプをつける
-now_jst = lambda: datetime.now(jst)
-    
-# UNIXタイムスタンプをミリ秒単位で取得
-unix_timestamp_ms = int(now_jst.timestamp()...]]></summary>
-        <author>
-            <name>Jun Kawasaki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PlanetScale APIを使ってDBテストを高速化した]]></title>
-        <id>https://zenn.dev/keitakn/articles/accelerate-planetscale-test-code</id>
-        <link href="https://zenn.dev/keitakn/articles/accelerate-planetscale-test-code"/>
-        <updated>2023-12-14T15:03:23.000Z</updated>
-        <summary type="html"><![CDATA[概要
-PlanetScale APIを使ってDBテストを高速化したので、その時にやった具体的な手法を記載した記事になります。
-
- 対象読者
-下記の通りです。
-
-テストコードを書いたことがある人
-PlanetScaleを使ったことがある人
-テストコードの実行速度に関して問題意識を持っている人
-
-サンプルコードはPythonとpytestを使っていますが、この記事の内容は他言語のテストコードでも応用できるかと思います。
-
- 筆者のバックグラウンド
-普段はTypeScript（Next.jsを主に利用）を用いたフロントエンド開発者です。
-以前はバックエンドエンジニアで主にGoを使ってAWS...]]></summary>
-        <author>
-            <name>keitakn</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ブルーバックとか使わずにクロマキー合成する]]></title>
-        <id>https://zenn.dev/kura103/articles/bd65ce70a2b595</id>
-        <link href="https://zenn.dev/kura103/articles/bd65ce70a2b595"/>
-        <updated>2023-12-14T15:00:01.000Z</updated>
-        <summary type="html"><![CDATA[ハッピバースデートゥミ〜〜〜♪ハッピバースデートゥミ〜〜〜♪、ハッピバースデーディアわたし〜♪
-ハッピバースデートゥミ〜〜〜♪
-くら＠ちゅらデータ（43）です。
-この投稿はちゅらデータアドベントカレンダー2023の15日目の記事です。
-OBSで人と背景をクロマキー合成するときに背景を単色にする必要があるんですが大変なんでどうにかしたいなーって話です。
-
- はじめに
-オンラインミーティングだとmeetやzoomの機能で綺麗に人と背景を合成してくれて散らかった部屋を晒さなくて済むんですが、OBSで合成する時が困るんですよね。
-OBSのインプットの時点で背景を単色にできればスムーズに合成できる...]]></summary>
-        <author>
-            <name>kura103</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LLM・プロンプトの評価・テストフレームワークについてまとめてみた]]></title>
-        <id>https://zenn.dev/pomcho555/articles/8e42f0a4ce39eb</id>
-        <link href="https://zenn.dev/pomcho555/articles/8e42f0a4ce39eb"/>
-        <updated>2023-12-14T14:09:48.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-ご存知の通り大LLM時代なわけで、つよつよな方からアフィリ記事までこぞってどうやってLLMで良い出力を得るかまとめております。そしてそのテクニックがプロンプトエンジニアリングとして体系化されつつあります。ただし、エンプラでLLMを真面目に使おうとすると、プロンプトの管理やLLMごとの管理、レスポンスタイムの計測など様々な評価を継続的にやる必要があります。従来のデータサイエンスでも結局評価や計測が後々重要になったきたことを考えると必然かもしれませんが、そこらへんをまとめた日本語の記事がなかったので、アドベントカレンダーというチャンスを使ってまとめてみます!
-そのなわけで、この...]]></summary>
-        <author>
-            <name>pomcho555</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GIS × Python Tutorial Session1~ 座標データの中身 ~]]></title>
-        <id>https://zenn.dev/daidai_daitai/articles/6018ca73367744</id>
-        <link href="https://zenn.dev/daidai_daitai/articles/6018ca73367744"/>
-        <updated>2023-12-14T14:01:42.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-GIS関連の業務を行う際に、どの様にデータを扱っていますか?
-ローカル環境でGISに関する計算などを行う場合は、"QGIS" や "ArcGIS Pro" などのデスクトップアプリが有名で、私自身も "ArcGIS Pro" を使用しています。
-GISエンジニアであればともかく、そうでない方はGISを補助的に利用するだけでガッツリ使うという方も少ないかもしれません。もちろんそれでも問題はないのですが、どの様なデータになっているのかを理解していると、活用の幅も広がるかもしれません。
-このTutorialはPythonでGISデータを扱う事に焦点を当てて進めていきます。Part...]]></summary>
-        <author>
-            <name>橙。</name>
         </author>
     </entry>
 </feed>
