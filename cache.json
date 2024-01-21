@@ -12,6 +12,66 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/apo_zenn/articles/5e08aca8f385a4",
+          "author": "apo_zenn",
+          "description": "手順\n\n画像読み込み\nz方向に足し合わせ\n書き出し\n\n\n コード\n3D画像(tiff形式など)の読み込みはskimageが便利です．pipで簡単にインストールできます．\n書き出しも簡単です．\n\ntest.py\nfrom skimage import io\nimport numpy as np\n\nimage = io.imread(\"test.tif\") #画像読み込み\nimage = np.sum(image, axis=0)# Max Projection\nio.imsave(\"Max Projection.tif\", image)# 画像書き出し\n\nz方向への足し合わせはnump...",
+          "link": "https://zenn.dev/apo_zenn/articles/5e08aca8f385a4",
+          "publishedOn": "2024-01-21T00:43:53.000Z",
+          "wordCount": 180,
+          "title": "pythonで3D画像の最大輝度投影 (Max Intensity Projection)を行う",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--2Fyz42zW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A73D%25E7%2594%25BB%25E5%2583%258F%25E3%2581%25AE%25E6%259C%2580%25E5%25A4%25A7%25E8%25BC%259D%25E5%25BA%25A6%25E6%258A%2595%25E5%25BD%25B1%2520%2528Max%2520Intensity%2520Projection%2529%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:apo_zenn%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzcyMWY3NGQ1ZmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--2Fyz42zW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25A73D%25E7%2594%25BB%25E5%2583%258F%25E3%2581%25AE%25E6%259C%2580%25E5%25A4%25A7%25E8%25BC%259D%25E5%25BA%25A6%25E6%258A%2595%25E5%25BD%25B1%2520%2528Max%2520Intensity%2520Projection%2529%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:apo_zenn%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzcyMWY3NGQ1ZmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/microsoft/articles/20240119_azure_batch",
+          "author": "kazuyan",
+          "description": "はじめに\nAzure Batch は、Azure 上で大規模な並列処理を行うためのサービスです。\nAzure Batch を利用することで、コンピューティングノード（仮想マシン）での処理を自動的にスケジュールしたり、タスクの実行状況を監視したりできます。\nただ、Azure Batch に関する日本語の情報はあまり多くないため、なかなか手を出しにくいという方も多いのではないでしょうか。\n今回は、Azure Batch を利用して物体検出モデル (YOLOv8) を動かしてみたので、その手順を共有したいと思います。\nhttps://learn.microsoft.com/ja-jp/az...",
+          "link": "https://zenn.dev/microsoft/articles/20240119_azure_batch",
+          "publishedOn": "2024-01-20T12:46:19.000Z",
+          "wordCount": 2410,
+          "title": "Azure Batch で物体検出モデル (YOLOv8) を動かしてみる",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--A7-YJKxd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520Batch%2520%25E3%2581%25A7%25E7%2589%25A9%25E4%25BD%2593%25E6%25A4%259C%25E5%2587%25BA%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%2520%2528YOLOv8%2529%2520%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:kazuyan%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cxbnRHSDJHMnZoU3RSank3cFlUTVlXTER5X1hEYmFRMEk3SEpESWc9czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--A7-YJKxd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520Batch%2520%25E3%2581%25A7%25E7%2589%25A9%25E4%25BD%2593%25E6%25A4%259C%25E5%2587%25BA%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%2520%2528YOLOv8%2529%2520%25E3%2582%2592%25E5%258B%2595%25E3%2581%258B%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:kazuyan%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MzZDNiN2I3OGYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Microsoft%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cxbnRHSDJHMnZoU3RSank3cFlUTVlXTER5X1hEYmFRMEk3SEpESWc9czk2LWM=%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/joo_hashi/articles/8c30ef3781ff8c",
+          "author": "JboyHashimoto",
+          "description": "🌓ユングの心理学で考えられたものらしい?\n検索してたら、YUMEMIさんのサイトに辿り着いた?\nhttps://notion.yumemi.co.jp/シャドーについて\nなんかまた技術の話からズレたネタと思われそうですが後でします笑\n\n シャドーなるものはどうやってできるのか?\n昔から色々な人を見てきたけど、外食産業で働いていたときもITの仕事についてもそれぽい人を見たことがある。\n\n 🌔特徴はどんな感じか?\nわかりやすいサイトから引用した文章だとこんな感じ:\n\n一方で、小さい頃から「だらしない自分、弱い自分、頼りない自分」というものを自分が否定しながら生きてきた場合に、その否定して...",
+          "link": "https://zenn.dev/joo_hashi/articles/8c30ef3781ff8c",
+          "publishedOn": "2024-01-20T12:14:06.000Z",
+          "wordCount": 251,
+          "title": "シャドーなるものを見たことがある",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--3pWEUWnc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B7%25E3%2583%25A3%25E3%2583%2589%25E3%2583%25BC%25E3%2581%25AA%25E3%2582%258B%25E3%2582%2582%25E3%2581%25AE%25E3%2582%2592%25E8%25A6%258B%25E3%2581%259F%25E3%2581%2593%25E3%2581%25A8%25E3%2581%258C%25E3%2581%2582%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:JboyHashimoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNjOTBiY2M0M2YuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--3pWEUWnc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25B7%25E3%2583%25A3%25E3%2583%2589%25E3%2583%25BC%25E3%2581%25AA%25E3%2582%258B%25E3%2582%2582%25E3%2581%25AE%25E3%2582%2592%25E8%25A6%258B%25E3%2581%259F%25E3%2581%2593%25E3%2581%25A8%25E3%2581%258C%25E3%2581%2582%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:JboyHashimoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNjOTBiY2M0M2YuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/khun_aa/articles/6a9277e18a667a",
+          "author": "Takuto Onikubo",
+          "description": "経緯\n\nクラウド上の計算機サーバで機械学習モデルをhugging faceからダウンロードしようとした。\n公式ではgit-lfsを使うように書いてあったが、リモート環境でsudoが使えなかったためインストールできない。\nそこでpythonのhuggingface_hubを使ってダウンロードした。\n\n\n 方法\n\n以下のコードをpythonで実行\n\nimport huggingface_hub\n \nmodel_id = \"stabilityai/stable-diffusion-2-1-base\"  # レポジトリ名\nlocal_dir = \"models\"  # 保存先フォルダ名\nhu...",
+          "link": "https://zenn.dev/khun_aa/articles/6a9277e18a667a",
+          "publishedOn": "2024-01-20T10:56:22.000Z",
+          "wordCount": 157,
+          "title": "git-lfsを使わずにhugging faceのレポジトリをダウンロードする",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--_ayfzT0J--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:git-lfs%25E3%2582%2592%25E4%25BD%25BF%25E3%2582%258F%25E3%2581%259A%25E3%2581%25ABhugging%2520face%25E3%2581%25AE%25E3%2583%25AC%25E3%2583%259D%25E3%2582%25B8%25E3%2583%2588%25E3%2583%25AA%25E3%2582%2592%25E3%2583%2580%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%2589%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Takuto%2520Onikubo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Y5Njc1OGJkZTMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--_ayfzT0J--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:git-lfs%25E3%2582%2592%25E4%25BD%25BF%25E3%2582%258F%25E3%2581%259A%25E3%2581%25ABhugging%2520face%25E3%2581%25AE%25E3%2583%25AC%25E3%2583%259D%25E3%2582%25B8%25E3%2583%2588%25E3%2583%25AA%25E3%2582%2592%25E3%2583%2580%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%2589%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Takuto%2520Onikubo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Y5Njc1OGJkZTMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
           "id": "https://zenn.dev/ahoxa/articles/534768300cda5c",
           "author": "Ahoxa",
           "description": "はじめに\nこんにちは！当記事をご覧くださりありがとうございます！\nこの記事はProgateで学んだGoの知識をアウトプットする場としてまとめたものです。\nPythonやRubyなど比較的簡単な言語の基礎知識を学んでいることを前提とし、比較演算子や文字の連結、四則演算などについては概ねどの言語でも同じなので省略しています。\nまた、筆者がPython畑出身ですのでPythonから見たGoの感想をところどころ述べています。\n指摘などございましたら是非コメントお願いいたします。\nでは、始めていきましょう！！\n\n Hello,Worldからif,elseまで\nここではほかの言語でも共通である文...",
@@ -2785,111 +2845,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--nH0EWbjG--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_66:Erg%25E9%2596%258B%25E7%2599%25BA%25E9%2580%25B2%25E6%258D%25972023%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:shiba%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2g0WVFyaVliOXdBdEtlTUJXZjd1REJ5d2Q3UnJCYW5TSmlQYkRGPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/foxfoxfox/articles/401229bb3e4fa9",
-          "author": "🦊🦊🦊",
-          "description": "記事の要約\npythonにおいて、GUIのウィンドウタイトルバーの色を変更したい場合、タイトルバーを一旦非表示にして、それぞれのボタンを1から実装する手法がよく出てくる。\nこれはウィンドウの移動などもコーディングしなければならず、色を変えたいだけなのに面倒。\nDwmSetWindowAttribute 関数を使えばWindows11なら対処できるよ\n\n あらすじ\n\nwindows11のpythonでタイトルバーの色だけ変えたい\nはじめはroot.overrideredirect(1)で実装していたが、不安定な挙動が多い\nDwmSetWindowAttributeで解決\n\n\n サンプル...",
-          "link": "https://zenn.dev/foxfoxfox/articles/401229bb3e4fa9",
-          "publishedOn": "2023-12-22T11:58:33.000Z",
-          "wordCount": 254,
-          "title": "pythonのGUIライブラリを介さずウィンドウタイトルバーの色を変える方法 in Win11",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--bsnqjynM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25AEGUI%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2582%2592%25E4%25BB%258B%25E3%2581%2595%25E3%2581%259A%25E3%2582%25A6%25E3%2582%25A3%25E3%2583%25B3%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25AB%25E3%2583%2590%25E3%2583%25BC%25E3%2581%25AE%25E8%2589%25B2%25E3%2582%2592%25E5%25A4%2589%25E3%2581%2588%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2520in%2520Win11%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%2520%2520%2520%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMzMjEzZTQyNDIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--bsnqjynM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:python%25E3%2581%25AEGUI%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2582%2592%25E4%25BB%258B%25E3%2581%2595%25E3%2581%259A%25E3%2582%25A6%25E3%2582%25A3%25E3%2583%25B3%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%2588%25E3%2583%25AB%25E3%2583%2590%25E3%2583%25BC%25E3%2581%25AE%25E8%2589%25B2%25E3%2582%2592%25E5%25A4%2589%25E3%2581%2588%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2520in%2520Win11%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%2520%2520%2520%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMzMjEzZTQyNDIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/allllllllez/articles/a00d3c816913fe",
-          "author": "あれ",
-          "description": "はじめに\n\nちゅらデータ Advent Calendar 2023 13日目の記事です。\n私は親会社にてデータエンジニアをやっている、いわゆるちゅらデータのゆかいな仲間たちの一人でございます。\n!\n本記事の内容は全体的にジョークです。怒らないで！サイクロプスを打たないで！\n\n\n それでも！守りたい概要があるんだ！！\ndbt の seed コマンドを SEED 仕様にしてみました。\n\n\n\n グゥレイト！背景だぜ！\n\n またガンダムの話がしたいのか、あんた達は！\n皆様、ガンダムはお好きですか？\n好きな作品は何ですか？お気に入りのキャラクターは誰ですか？？乗ってみたいモビルスーツ/モビル...",
-          "link": "https://zenn.dev/allllllllez/articles/a00d3c816913fe",
-          "publishedOn": "2023-12-22T11:00:44.000Z",
-          "wordCount": 311,
-          "title": "機動戦士ガンダムSEED 新作公開を記念して dbt seed で遊ぶ",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--nDZpP6bf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%25A9%259F%25E5%258B%2595%25E6%2588%25A6%25E5%25A3%25AB%25E3%2582%25AC%25E3%2583%25B3%25E3%2583%2580%25E3%2583%25A0SEED%2520%25E6%2596%25B0%25E4%25BD%259C%25E5%2585%25AC%25E9%2596%258B%25E3%2582%2592%25E8%25A8%2598%25E5%25BF%25B5%25E3%2581%2597%25E3%2581%25A6%2520dbt%2520seed%2520%25E3%2581%25A7%25E9%2581%258A%25E3%2581%25B6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2582%258C%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2o2cGk0Mmg4SlhjS1JrTmxnUjNhTlJ6MnlianBTOG1SUmFzN1F6NFE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--nDZpP6bf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%25A9%259F%25E5%258B%2595%25E6%2588%25A6%25E5%25A3%25AB%25E3%2582%25AC%25E3%2583%25B3%25E3%2583%2580%25E3%2583%25A0SEED%2520%25E6%2596%25B0%25E4%25BD%259C%25E5%2585%25AC%25E9%2596%258B%25E3%2582%2592%25E8%25A8%2598%25E5%25BF%25B5%25E3%2581%2597%25E3%2581%25A6%2520dbt%2520seed%2520%25E3%2581%25A7%25E9%2581%258A%25E3%2581%25B6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2582%258C%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2o2cGk0Mmg4SlhjS1JrTmxnUjNhTlJ6MnlianBTOG1SUmFzN1F6NFE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/tk_resilie/articles/fasapi_multi_swagger",
-          "author": "米谷 昂(Python/FastAPIプロフェッショナル)",
-          "description": "概要\nFastAPIを使うことでSwagger UIを自動的に生成することができ、APIのドキュメント化や検証に非常に有用ですが、既定では1つのSwagger UIに全てのWebAPIが羅列されるため、規模が大きくなるにつれて、管理が辛くなることが想定されます。\n実用案件でFastAPIを使用する場合、APIの数は数百件になることも珍しくないため、機能、ドメイン毎などで別のSwagger UIに分割して管理できた方が幸せになれます。\n本記事では、この機能ドメイン等の単位でSwagger UIを分割して管理する方法を紹介します。\nなお本記事のソースコードのリンクを含んだ内容を以下のSa...",
-          "link": "https://zenn.dev/tk_resilie/articles/fasapi_multi_swagger",
-          "publishedOn": "2023-12-22T09:36:05.000Z",
-          "wordCount": 1623,
-          "title": "FastAPIでSwagger UIを機能、ドメインなどで別々の画面に分割して管理しやすくする",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--kcQiBF2d--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%25E3%2581%25A7Swagger%2520UI%25E3%2582%2592%25E6%25A9%259F%25E8%2583%25BD%25E3%2580%2581%25E3%2583%2589%25E3%2583%25A1%25E3%2582%25A4%25E3%2583%25B3%25E3%2581%25AA%25E3%2581%25A9%25E3%2581%25A7%25E5%2588%25A5%25E3%2580%2585%25E3%2581%25AE%25E7%2594%25BB%25E9%259D%25A2%25E3%2581%25AB%25E5%2588%2586%25E5%2589%25B2%25E3%2581%2597%25E3%2581%25A6%25E7%25AE%25A1%25E7%2590%2586%25E3%2581%2597%25E3%2582%2584%25E3%2581%2599%25E3%2581%258F%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%25B1%25B3%25E8%25B0%25B7%2520%25E6%2598%2582%2528Python%252FFastAP...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzExMzNhYjJkZjUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--kcQiBF2d--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%25E3%2581%25A7Swagger%2520UI%25E3%2582%2592%25E6%25A9%259F%25E8%2583%25BD%25E3%2580%2581%25E3%2583%2589%25E3%2583%25A1%25E3%2582%25A4%25E3%2583%25B3%25E3%2581%25AA%25E3%2581%25A9%25E3%2581%25A7%25E5%2588%25A5%25E3%2580%2585%25E3%2581%25AE%25E7%2594%25BB%25E9%259D%25A2%25E3%2581%25AB%25E5%2588%2586%25E5%2589%25B2%25E3%2581%2597%25E3%2581%25A6%25E7%25AE%25A1%25E7%2590%2586%25E3%2581%2597%25E3%2582%2584%25E3%2581%2599%25E3%2581%258F%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%25B1%25B3%25E8%25B0%25B7%2520%25E6%2598%2582%2528Python%252FFastAP...%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzExMzNhYjJkZjUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/collabostyle/articles/f4b00f81151632",
-          "author": "山とコード",
-          "description": "Amazon S3 Express One Zone について\nAmazon S3 Express One Zone については、JAWS-UG 名古屋 2023年 AWS re:Inventの復習 - JAWS-UG名古屋 | Doorkeeper の LT 登壇資料でざっくり説明したので、以下をご確認ください！\n\n\n Lambda からアップロード・ダウンロード速度を計測する\nAWS Lambda からアクセスする速度を time を使って簡易計測してみました！\n\n 最新の boto3 を追加する\nまず、Boto3 のバージョンを確認してみます。\nimport boto3\n\nde...",
-          "link": "https://zenn.dev/collabostyle/articles/f4b00f81151632",
-          "publishedOn": "2023-12-22T04:42:37.000Z",
-          "wordCount": 2400,
-          "title": "AWS Lambda と Python Boto3 を使って Amazon S3 Express One Zone の性能比較をしてみた",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--Qx4S6IeE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AWS%2520Lambda%2520%25E3%2581%25A8%2520Python%2520Boto3%2520%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%2520Amazon%2520S3%2520Express%2520One%2520Zone...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E5%25B1%25B1%25E3%2581%25A8%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MxOTFmZDljMTIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25B3%25E3%2583%25A9%25E3%2583%259C%25E3%2582%25B9%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%25AB%2520Developers%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMxZWExODEyMWMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Qx4S6IeE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:AWS%2520Lambda%2520%25E3%2581%25A8%2520Python%2520Boto3%2520%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%2520Amazon%2520S3%2520Express%2520One%2520Zone...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E5%25B1%25B1%25E3%2581%25A8%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2MxOTFmZDljMTIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25B3%25E3%2583%25A9%25E3%2583%259C%25E3%2582%25B9%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%25AB%2520Developers%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMxZWExODEyMWMuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/jij_inc/articles/5387626bf92f85",
-          "author": "pagliacci",
-          "description": "はじめに\nこの記事はJij Inc. Advent Calendar 2023の22日目の記事です。\n株式会社Jijの鈴木です。\nこの記事では、3体相互作用を持つ全結合イジング模型を古典モンテカルロ法を用いて数値的に解析します。以前に書いた記事で、3体相互作用を含む一般の高次相互作用を持つ全結合イジング模型に対して解析的なアプローチを行い、1次相転移を起こすことが分かりました。つまりこのモデルの性質はある程度分かっているわけですが、この記事ではそのことを数値的に検証します。\n\n モデル\n3体相互作用を持つ全結合イジング模型は以下で定義されます。\n\nE_{p=3}=-\\frac{2}{...",
-          "link": "https://zenn.dev/jij_inc/articles/5387626bf92f85",
-          "publishedOn": "2023-12-22T02:58:04.000Z",
-          "wordCount": 2750,
-          "title": "モンテカルロ法による3体相互作用を持つ全結合イジング模型の解析",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--OzxNw64K--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25A2%25E3%2583%25B3%25E3%2583%2586%25E3%2582%25AB%25E3%2583%25AB%25E3%2583%25AD%25E6%25B3%2595%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B3%25E4%25BD%2593%25E7%259B%25B8%25E4%25BA%2592%25E4%25BD%259C%25E7%2594%25A8%25E3%2582%2592%25E6%258C%2581%25E3%2581%25A4%25E5%2585%25A8%25E7%25B5%2590%25E5%2590%2588%25E3%2582%25A4%25E3%2582%25B8%25E3%2583%25B3%25E3%2582%25B0%25E6%25A8%25A1%25E5%259E%258B%25E3%2581%25AE%25E8%25A7%25A3%25E6%259E%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:pagliacci%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I0ZjhjYjkwMmYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Jij%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSmtqWk1UcVh1eDJvcGF3OXp5blRnbklhZG9qY1J4VVFFYTg4RDJLQWJfLTJ3PXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--OzxNw64K--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%25A2%25E3%2583%25B3%25E3%2583%2586%25E3%2582%25AB%25E3%2583%25AB%25E3%2583%25AD%25E6%25B3%2595%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B3%25E4%25BD%2593%25E7%259B%25B8%25E4%25BA%2592%25E4%25BD%259C%25E7%2594%25A8%25E3%2582%2592%25E6%258C%2581%25E3%2581%25A4%25E5%2585%25A8%25E7%25B5%2590%25E5%2590%2588%25E3%2582%25A4%25E3%2582%25B8%25E3%2583%25B3%25E3%2582%25B0%25E6%25A8%25A1%25E5%259E%258B%25E3%2581%25AE%25E8%25A7%25A3%25E6%259E%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:pagliacci%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I0ZjhjYjkwMmYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Jij%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSmtqWk1UcVh1eDJvcGF3OXp5blRnbklhZG9qY1J4VVFFYTg4RDJLQWJfLTJ3PXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/kyama0321/articles/a93649c74600be",
-          "author": "yamakatz",
-          "description": "1. はじめに\nサイバーエージェント AI Labのやまかつ(@kyama0321)です。AI Labでは、AudioチームのResearch Scientistとして、ヒトの聴覚特性に基づく音声情報処理の研究をしています。\n本記事は、日本音響学会 学生・若手フォーラム Advent Calendar 2023の22日目の記事になります。引越しが無事に終わった（？）ので、やっと書く気になりました。\nタイトルから既におわかりのように、　本記事は日本音響学会誌2010年66巻10号に掲載された\"はじめての聴覚フィルタ(やさしい解説)[1]\"の導入部分を、Pythonで学べるようにしたも...",
-          "link": "https://zenn.dev/kyama0321/articles/a93649c74600be",
-          "publishedOn": "2023-12-21T15:00:00.000Z",
-          "wordCount": 4836,
-          "title": "Pythonで学ぶはじめての聴覚フィルタ（やさしい？解説）",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--99fBNef_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E5%25AD%25A6%25E3%2581%25B6%25E3%2581%25AF%25E3%2581%2598%25E3%2582%2581%25E3%2581%25A6%25E3%2581%25AE%25E8%2581%25B4%25E8%25A6%259A%25E3%2583%2595%25E3%2582%25A3%25E3%2583%25AB%25E3%2582%25BF%25EF%25BC%2588%25E3%2582%2584%25E3%2581%2595%25E3%2581%2597%25E3%2581%2584%25EF%25BC%259F%25E8%25A7%25A3%25E8%25AA%25AC%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yamakatz%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNU05Z2lmUk81VW5JSk81bnJmV0Y5ZHpSM3lWR0k2MXAwNjdKNmc4QT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--99fBNef_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E5%25AD%25A6%25E3%2581%25B6%25E3%2581%25AF%25E3%2581%2598%25E3%2582%2581%25E3%2581%25A6%25E3%2581%25AE%25E8%2581%25B4%25E8%25A6%259A%25E3%2583%2595%25E3%2582%25A3%25E3%2583%25AB%25E3%2582%25BF%25EF%25BC%2588%25E3%2582%2584%25E3%2581%2595%25E3%2581%2597%25E3%2581%2584%25EF%25BC%259F%25E8%25A7%25A3%25E8%25AA%25AC%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yamakatz%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNU05Z2lmUk81VW5JSk81bnJmV0Y5ZHpSM3lWR0k2MXAwNjdKNmc4QT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/daidai_daitai/articles/d0fc874ef21c20",
-          "author": "橙。",
-          "description": "はじめに\nこの記事は「GIS × Python Tutorial」の関連記事です。\n先日投稿したSession3を補完する記事を書きました。\n自分でもデータを扱う際にshapely.geometryを分解して使用する事は結構あります。\nなので今回はgeometryを渡すと分解して返してくれる関数を作成します。\n面倒なので例外処理などは入れていません。解説も面倒なので書きませんが使用方法だけは書いていきます。\n\n Import\nfrom typing import Any\nfrom typing import List\nfrom typing import Tuple\n\nimport ...",
-          "link": "https://zenn.dev/daidai_daitai/articles/d0fc874ef21c20",
-          "publishedOn": "2023-12-21T13:37:35.000Z",
-          "wordCount": 3163,
-          "title": "GIS × Python Tutorial Session3.1 ~ geometry分解~",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--qaph2QtN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GIS%2520%25C3%2597%2520Python%2520Tutorial%2520Session3.1%2520%7E%2520geometry%25E5%2588%2586%25E8%25A7%25A3%7E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%25A9%2599%25E3%2580%2582%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MjJMLWoxUDdDS1dHZWJjbmh0YUxmV3BGRGNSTnBDQnZZTGYxYUpqQT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--qaph2QtN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GIS%2520%25C3%2597%2520Python%2520Tutorial%2520Session3.1%2520%7E%2520geometry%25E5%2588%2586%25E8%25A7%25A3%7E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%25A9%2599%25E3%2580%2582%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MjJMLWoxUDdDS1dHZWJjbmh0YUxmV3BGRGNSTnBDQnZZTGYxYUpqQT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
         }
       ]
     }
