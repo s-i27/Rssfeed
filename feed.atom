@@ -2,10 +2,158 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-01-28T01:18:04.624Z</updated>
+    <updated>2024-01-29T01:13:42.594Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[ローカルLLM向けのGUIアプリを作成した 2【会話編】]]></title>
+        <id>https://zenn.dev/topo/articles/5ddedb7ea81130</id>
+        <link href="https://zenn.dev/topo/articles/5ddedb7ea81130"/>
+        <updated>2024-01-28T14:29:50.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+
+
+simple-text-generative-AIというローカルLLM（Large Langage Model）の初心者向けGUIアプリを作成しました。
+ローカルLLMとの基本的な会話やファインチューニングを誰でも行えるようにすることを目指しています。
+この記事では、前回の記事の続きで、simple-text-generative-AIによるローカルLLMとの会話までの使い方を説明します。
+
+
+ 前回の記事
+この記事では、simple-text-generative-AIの概要と導入方法をまとめています。
+https://zenn.dev/topo/articles/7...]]></summary>
+        <author>
+            <name>ToPo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rustの勉強]]></title>
+        <id>https://zenn.dev/iwatagumi/articles/0db12ddd2374be</id>
+        <link href="https://zenn.dev/iwatagumi/articles/0db12ddd2374be"/>
+        <updated>2024-01-28T10:00:05.000Z</updated>
+        <summary type="html"><![CDATA[Rustの勉強1日目
+は〜？と思ったところのメモ
+
+ 文字列の違い
+pythonの場合
+text1 = "Hello"
+text2 = text1
+print(text1)
+print(text2)
+Rustの場合
+fn main(){
+let s1 = String::from("Hello");
+let s2 = s1;
+println!("{}", s1)
+println!("{}", s2)
+}
+この方法ではエラーになります...
+正しくは
+fn main() {
+    let x = "Hello";
+    let y = x;
+    println!("{}", x);...]]></summary>
+        <author>
+            <name>kirigaya</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[requirements.txtのちょっとしたテクニック]]></title>
+        <id>https://zenn.dev/shiro_toy_box/articles/1df3fc4658d1dd</id>
+        <link href="https://zenn.dev/shiro_toy_box/articles/1df3fc4658d1dd"/>
+        <updated>2024-01-28T08:18:05.000Z</updated>
+        <summary type="html"><![CDATA[pythonの環境を共有する際にrequirements.txtを使ったやり方にtorchを含む場合
+そのまま自分の環境をpip freeze > requirements.txtすると
+torch==2.1.2+cu118のようにバージョンとそれ以外のものが含まれたものが記述されます。
+このままインストールするとエラーが出てしまいます。
+それを回避するために出力したrequirements.txtを編集します。
+出力したrequirements.txtにはほかにもライブラリが含まれますが省いています。
+
+requirements.txt　編集前
+torch==2.1.2+cu11...]]></summary>
+        <author>
+            <name>しろ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C++からPythonを操る黒魔術]]></title>
+        <id>https://zenn.dev/husty/articles/2a08fdde40aab3</id>
+        <link href="https://zenn.dev/husty/articles/2a08fdde40aab3"/>
+        <updated>2024-01-28T06:17:41.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+突然ですが、C++からPythonを使いたいことはありませんか？
+たとえば組み込み系のモジュール開発やPoCで部分的にAIを使ってみたいとき。深層学習のフレームワークによってはC言語のAPIを提供していたり、ONNXなどモデル自体が多言語対応のものもありますが、そうやって、なんとかしてPythonを避けていませんか？
+PythonからCのモジュールを呼び出すのはよくあるけれど、その逆はできないと思っていませんか？
+これ実は、公式なやり方でできます。
+https://docs.python.org/3/extending/embedding.html
+こちらのページ内のサンプ...]]></summary>
+        <author>
+            <name>Takumi Yamashita</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Python] ChannelAccessToken v2.1 で LINE BOTを作る]]></title>
+        <id>https://zenn.dev/killinsun/articles/d7caf4c5334e96</id>
+        <link href="https://zenn.dev/killinsun/articles/d7caf4c5334e96"/>
+        <updated>2024-01-28T05:14:13.000Z</updated>
+        <summary type="html"><![CDATA[LINE Messasging API を活用して LINE Bot を作るとき、ネットでドキュメントや作例をみると「チャネルアクセストークン（長期）」と「チャネルシークレット」を使って構築する例が多くあります。
+私も今までその構成で BOT を開発していたのですが、今は 「ChannelAccessToken v2.1」なるものがあり、現在の推奨として公式ドキュメントに案内されています。
+ただ、公式ドキュメントや公式SDKの情報だけだと初学者にはハマりどころや情報不足感も否めないため、備忘録として私なりの管理方法を記載します。
+
+ 前提
+
+LINE Developers Console...]]></summary>
+        <author>
+            <name>首無しキリン</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Certbot用ACMEサーバーをFlaskで偽装し、DNS-01で自己証明書を取得]]></title>
+        <id>https://zenn.dev/nondescript/articles/cabb2a25be14ec</id>
+        <link href="https://zenn.dev/nondescript/articles/cabb2a25be14ec"/>
+        <updated>2024-01-28T04:18:23.000Z</updated>
+        <summary type="html"><![CDATA[概要
+
+レート制限のあるステージングhttps://acme-staging-v02.api.letsencrypt.orgや本番https://acme-v02.api.letsencrypt.org/directoryを実際に使わずに無制限でLet's Encryptの証明書を疑似的に自己証明書で取得するローカル検証環境
+hosts修正とFlaskサーバー起動の簡易操作のみで、step-ca、step-cli不使用
+
+
+ TL;DR
+
+ダミーのレスポンス処理をFlask(SSL)で実装
+
+
+ 事前準備
+前提：Docker版Certbot(certbot/certbot:amd64...]]></summary>
+        <author>
+            <name>素人の戯言</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[prefect をローカルで動かすための構成要素を理解する]]></title>
+        <id>https://zenn.dev/massu_devix/articles/a016774865d647</id>
+        <link href="https://zenn.dev/massu_devix/articles/a016774865d647"/>
+        <updated>2024-01-28T04:07:14.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+prefect の構成要素について理解します。
+ここでの構成要素とは、prefect をローカル環境で動かすための要素を指します。
+（そのため、SaaS である prefect cloud については言及しません。）
+この記事では、以下の要素について説明しています。
+
+prefect-server
+database
+
+
+ prefect とは
+prefect とは、手軽にデータ処理 pipeline を構築することができるワークフロー管理ツールです。
+https://docs.prefect.io/latest/
+
+ prefect のインストール
+公式ドキュメントを参照し...]]></summary>
+        <author>
+            <name>mas_dx</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[FastAPIアプリケーション〜環境設定からログイン処理まで〜]]></title>
         <id>https://zenn.dev/keita_f/articles/4493e3cfd76aec</id>
@@ -3790,71 +3938,6 @@ QAOA の実験を Qiskit で遊んでみる (21) — QAOA でお絵描き で行
 この結果が真の時、QAOA の計算については、cuTensorNet を含めたテン...]]></summary>
         <author>
             <name>derwind</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[実践的な視点から学ぶ: Pytestを使った自動テストの効率的な書き方]]></title>
-        <id>https://zenn.dev/masayan1126/books/d273a6586f3f05</id>
-        <link href="https://zenn.dev/masayan1126/books/d273a6586f3f05"/>
-        <updated>2023-12-30T09:33:12.000Z</updated>
-        <summary type="html"><![CDATA[本記事では、pytestでPythonの単体テストを行う際に最低限押さえておきたいポイントについて紹介しています。本気でpytestで自動テストを書きたいと方向けに、単なるチュートリアルではなく、実用的な観点での説明をしています。ぜひ参考にしてみてください]]></summary>
-        <author>
-            <name>masayan1126</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Playwright for Python でWebスクレイピングを試してみた！導入と使い方まとめ]]></title>
-        <id>https://zenn.dev/aiq_dev/articles/b13a88fe4a7bc7</id>
-        <link href="https://zenn.dev/aiq_dev/articles/b13a88fe4a7bc7"/>
-        <updated>2023-12-30T06:29:17.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは、AIQ株式会社のフロントエンドエンジニアのまさぴょんです！
-今回は、Playwright for Python でWebスクレイピングを試してみたので、導入と使い方について、解説します。
-
- Playwright for Pythonとは？
-Playwrightは、エンドツーエンド(E2E)のテストのニーズに対応するために、Microsoftによって、作成されたライブラリです。
-E2Eテストのためのツールとして開発されましたが、Webスクレイピングに使用にも適しています。
-Playwrightには、次のような特徴があります。
-!
-
-Playwrightは、Chromium, ...]]></summary>
-        <author>
-            <name>まさぴょん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pandas DataFrameで、条件に合う列の前後の列を取りたいとき]]></title>
-        <id>https://zenn.dev/masatoyamamoto/articles/ede23603ea1f4b</id>
-        <link href="https://zenn.dev/masatoyamamoto/articles/ede23603ea1f4b"/>
-        <updated>2023-12-30T03:24:10.000Z</updated>
-        <summary type="html"><![CDATA[金融時系列データを使用しているときによくあるのが、収益率の異常値を見つけて、その前後の価格を確認したいとき。
-まずは条件に合う列を抜き出すが、前後が取れない。
-df[df["ret"]>100]
-そこで、indexに変換してから一つ足し引きしてやる
-indices = df[df["ret"]>100].index
-df.loc[indices-1,:]]]></summary>
-        <author>
-            <name>Masato Max Yamamoto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[対話的にChat Completions APIにテストコードを書いてもらう]]></title>
-        <id>https://zenn.dev/fusic/articles/c93efa06148a7c</id>
-        <link href="https://zenn.dev/fusic/articles/c93efa06148a7c"/>
-        <updated>2023-12-29T16:06:05.000Z</updated>
-        <summary type="html"><![CDATA[導入
-Fusic Advent Calendar 2023の11日目を担当します@seike460です!
-信じられないくらい遅れました！ごめんなさい！
-OpenAI流行ってますね。
-テストコードはOpenAIに任せると精度が高いという話を聞いたので、
-テストコードを書いてもらおうと思います。
-opt-outを気にしなくて良いChat Completions APIに、
-CLIで読み込んだファイルを投げてサクッとテストコード書いてもらいます。
-そもそもこれじゃテストコード書きづらいよ！って状態の時もあると思うので、
-テストコードがかけるようにリファクタリングも行います。
-
- 要素の解説...]]></summary>
-        <author>
-            <name>seike460</name>
         </author>
     </entry>
 </feed>
