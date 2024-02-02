@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-31 datetime="2024-01-31T13:27:57.000Z">2024-01-31</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-31 datetime="2024-01-31T13:27:57.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-02 datetime="2024-02-02T00:51:11.000Z">2024-02-02</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-02 datetime="2024-02-02T00:51:11.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,321 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/iwatagumi/articles/14787c4ccec626"
+                        open
+                      >
+                        <summary class="article-expander__title">JinjaでSQLを動的生成する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/iwatagumi/articles/14787c4ccec626">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--GNxnRoGI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Jinja%25E3%2581%25A7SQL%25E3%2582%2592%25E5%258B%2595%25E7%259A%2584%25E7%2594%259F%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:kirigaya%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U1MjI0YmNkMDYuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E5%25B2%25A9%25E7%2594%25B0%25E7%25B5%2584%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JmNGYxNzkwNDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>みなさんこんにちは！kirigayaです。
+みなさんJinja使ってますか？
+どうでもいい話ですが最初は神社とは知らずジンジャーと呼んでいました。
+今回はpythonコードの中で柔軟にSQLを生成する記事です。
+動的生成のイメージとしてはクエリの中に変数を埋め込んで変数を変えるだけで
+クエリの内容を変える感じです。
+使える場面としては決まったクエリ内でフィルター条件だけ変えたいと言った場面です。
+環境はColabノートブックを使います。
+DBはdukdbを使います。ノートブック上にすぐ構築できて色々便利です。
+1セルずつ実行していきましょう。
+初期セットアップ
+!pip install ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/awtnb/articles/7ec2de7a4fb742"
+                        open
+                      >
+                        <summary class="article-expander__title">SKKを意識したkeyhac設計</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/awtnb/articles/7ec2de7a4fb742">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--1KfRI7H7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:SKK%25E3%2582%2592%25E6%2584%258F%25E8%25AD%2598%25E3%2581%2597%25E3%2581%259Fkeyhac%25E8%25A8%25AD%25E8%25A8%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:AWtnb%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E2MTdhZTAxZjQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>SKK（CorvusSKK）を使い始めました。keyhacと組み合わせることでさらに快適な日本語入力ライフを送れるようになったので備忘録です。
+最新状況：
+https://github.com/AWtnb/keyhac
+以前に書いたkeyhacの紹介記事：
+https://zenn.dev/awtnb/books/adf6c5162a9f08
+
+詳細は上記のリポジトリや紹介記事を見ていただければと思いますが、keyhacは基本的に configure 関数の中に処理を書いていきます。
+以下のコードはすべてこの関数内に記述していきます（インデントを省略しているのでコピペ時にはご注意ください...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;10
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-01 datetime="2024-02-01T18:13:11.000Z">2024-02-01</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-01 datetime="2024-02-01T18:13:11.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/safubuki/articles/turtle-20240128-stable-ext"
+                        open
+                      >
+                        <summary class="article-expander__title">【Stable Diffusion】WebUI拡張機能開発！作り方からIndexリスト登録まで</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/safubuki/articles/turtle-20240128-stable-ext">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--0ze0bBUf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Stable%2520Diffusion%25E3%2580%2591WebUI%25E6%258B%25A1%25E5%25BC%25B5%25E6%25A9%259F%25E8%2583%25BD%25E9%2596%258B%25E7%2599%25BA%25EF%25BC%2581%25E4%25BD%259C%25E3%2582%258A%25E6%2596%25B9%25E3%2581%258B%25E3%2582%2589Index%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%25E7%2599%25BB%25E9%258C%25B2%25E3%2581%25BE%25E3%2581%25A7%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%2588%25E3%2583%25AB%25E3%2583%25B4%25E3%2582%25A3%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25B8%25E3%2583%25BB%25E3%2582%2586%25E3%2581%2586%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VjOThkZDlhOWIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>画像生成AIは、掛け算の組み合わせ（例えば、亀×犬や花×亀など）から、想像もできないようなものを生み出し驚かされます。画像生成AIには様々なツールがありますが、今回は扱うStable Diffusion WebUI（以下、WebUI）は、自分のPCに環境を作ることができます。そして、他の人が作成した拡張機能を自由に組み合わせて、自分の好きなようにカスタマイズすることができます。
+私は拡張機能を便利に利用していましたが、自分でも作ってみたいと思い、2024年正月に挑戦してみました！
+さらに、WebUIには、Indexリストから欲しい拡張機能を探して、簡単にインストールできる仕組みがあります...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/slopetech/articles/b4d5b89d5a7480"
+                        open
+                      >
+                        <summary class="article-expander__title">Pythonのmultiprocessingで子プロセスの異常終了を検知したい時の対処方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/slopetech/articles/b4d5b89d5a7480">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Fm4eJhZt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AEmultiprocessing%25E3%2581%25A7%25E5%25AD%2590%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25BB%25E3%2582%25B9%25E3%2581%25AE%25E7%2595%25B0%25E5%25B8%25B8%25E7%25B5%2582%25E4%25BA%2586%25E3%2582%2592%25E6%25A4%259C%25E7%259F%25A5%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%25E6%2599%2582%25E3%2581%25AE%25E5%25AF%25BE%25E5%2587%25A6%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hedgeek%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VlNDg4MzVhYmMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>問題
+multiprocessingライブラリで並列化処理を実施している際、子プロセスが異常停止する（OOM KillerなどにKillされるなど）と、親プロセスがハングアップしてしまう問題があります。
+これはCPythonのIssueでも報告されており、対処方法が日本語記事にはあまり見当たらなかったので備忘録として記載しておきます。
+再現コードとして、下記を用意しました。実行してみると、親プロセスが子プロセスの異常終了を検知できず応答なしの状態になることが確認できます。
+import multiprocessing
+import sys
+
+
+def worker_fn(dummy:...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/bonsai_engineer/articles/878bf88da5b1bb"
+                        open
+                      >
+                        <summary class="article-expander__title">JavaScriptでC言語のプログラムを実行する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/bonsai_engineer/articles/878bf88da5b1bb">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--f8tuHN6Y--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:JavaScript%25E3%2581%25A7C%25E8%25A8%2580%25E8%25AA%259E%25E3%2581%25AE%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%25A0%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%259B%2586%25E6%25A0%25BD%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E2NDI2MGJiNjkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>最近はlinuxやハードウェアやネットワークなど低レイヤの勉強をしています。プログラムはどの言語でも最終的に機械語で実行されており、なら他の言語のプログラムも実行できるではと思い、調べてみました。そうするとJavaScriptでC言語が実行できたのでやり方を共有します。
+
+ 環境
+
+
+ 1.C言語のプログラムを準備
+C言語の簡単なプログラムを準備します。適当な引数を受け取りそれを標準出力で吐くようなものにしました。
+
+main.c
+const { exec } &#x3D; require(&#x27;child_process&#x27;);
+
+const argValue &#x3D; &#x27;tttttt aa aaaa&#x27;;
+...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/atsushi570/articles/293516d4abd6e3"
+                        open
+                      >
+                        <summary class="article-expander__title">M1 MacBook でCPUとGPU(MPS)のどちらが早く文章をベクトル化できるか</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/atsushi570/articles/293516d4abd6e3">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--FmaSHHl0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:M1%2520MacBook%2520%25E3%2581%25A7CPU%25E3%2581%25A8GPU%2528MPS%2529%25E3%2581%25AE%25E3%2581%25A9%25E3%2581%25A1%25E3%2582%2589%25E3%2581%258C%25E6%2597%25A9%25E3%2581%258F%25E6%2596%2587%25E7%25AB%25A0%25E3%2582%2592%25E3%2583%2599%25E3%2582%25AF%25E3%2583%2588%25E3%2583%25AB%25E5%258C%2596%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2581%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:atsushi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKekxXNzkyOVNhaF8wV1NBb0k5azdja1FOQ2FFanEyUHdyOXlySWs9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>概要
+MacBookで文章をベクトル化するときに、CPUとGPUのどちらが早く処理できるかあたり評価を行った。
+文章が短いときはCPUが早い。
+ただし、モデルにもよって異なるので用途によって検討必要。
+
+ 環境
+
+
+
+item
+spec
+
+
+
+
+pc
+M1 MacBook
+
+
+OS
+14.2.1
+
+
+python
+3.11.5
+
+
+torch
+2.1.2
+
+
+transformers
+4.37.2
+
+
+model
+intfloat/multilingual-e5-small
+
+
+
+
+ コード（の一部）
+# トークナイズするテキスト
+        texts &#x3D; [ ここの文字列は評...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-31 datetime="2024-01-31T17:46:34.000Z">2024-01-31</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-31 datetime="2024-01-31T17:46:34.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tnakabeppu/articles/d45cefc1ae3e67"
+                        open
+                      >
+                        <summary class="article-expander__title">PyTorch Custom Loss with NumPy</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tnakabeppu/articles/d45cefc1ae3e67">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Cw2utRAY--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_72:PyTorch%2520Custom%2520Loss%2520with%2520NumPy%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nakabeppu%2540kikagaku%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSldnbFZOU2FyNXFDZnlxYTd5VW05R21WOFVFc1BicEdrQkw0WkM4bHdTWVE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>PyTorchでカスタマイズした目的（損失）関数を設定したい
+
+ 1.はじめに
+ディープラーニングの実装において、PyTorch はその柔軟性と効率性で広く利用されています。特に、カスタム損失関数を用いることで、特定の問題に合わせた最適化が可能になります。しかし、このプロセスには、 Numpy との相互作用に関連する一つの重要な落とし穴があります。本記事では、PyTorch の自動微分エンジンと Numpy を用いたカスタム損失関数の作成における問題点とその解決策について解説します。
+
+ 2.理論
+
+ 2-1.PyTorch の自動微分エンジンの基礎
+PyTorch の最大の特徴の一...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/toratti/articles/e3668ee484e5df"
+                        open
+                      >
+                        <summary class="article-expander__title">pysnmpの話</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/toratti/articles/e3668ee484e5df">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--bRdoRnUr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:pysnmp%25E3%2581%25AE%25E8%25A9%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A8%25E3%2582%2589%25E3%2581%25A3%25E3%2581%25A1%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I0OWE1ZTI0NjkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>SNMP周りをちゃんと()整理し，pysnmpというライブラリについて使ってみました．この記事書き始めたのは2023の年末だったけどpysnmpの実験が間に合ってなくて…
+さらにTerraformしてたから尚更…
+軽くこんなライブラリ使ってみたよって話にしようと思ったらかなり長くなってしまいました．
+不備がありそうなので修正予定です．
+
+ SNMPとは
+TCP/IPネットワーク上でネットワーク管理するためのプロトコルでUDP上で動作するらしいです．
+Simple Network Management Protocolを略してSNMP．
+登場人物は，SNMPマネージャーとSNMPエージェン...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -6366,168 +6681,6 @@ LINE_BOT_ACCESS_TOKEN &#x3D; os.getenv(&#x27;LINE_BOT_...</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/derwind/articles/dwd-matrix-product08"
-                        open
-                      >
-                        <summary class="article-expander__title">行列積状態について考える (8) — Vidal の標準形 その 2</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/derwind/articles/dwd-matrix-product08">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--eBfqYqde--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25A1%258C%25E5%2588%2597%25E7%25A9%258D%25E7%258A%25B6%25E6%2585%258B%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E8%2580%2583%25E3%2581%2588%25E3%2582%258B%2520%25288%2529%2520%25E2%2580%2594%2520Vidal%2520%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E5%25BD%25A2%2520%25E3%2581%259D%25E3%2581%25AE%25202%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:derwind%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>目的
-「Vidal の標準形」と呼ばれる MPS (Matrix Product State; 行列積状態) の一つの表示形式について、行列積状態について考える (6) — Vidal の標準形 で考察したが、今回再考察したい。
-現時点での問題点としては、
-
-Qiskit Aer の実装を移植しただけであまりよく分かっていないこと
-内容的に 行列積状態について考える (3) で実装した TT_SVD と近そうだが、実装上の対称性がイマイチないこと
-
-があり、これを解消したい。
-
- 実装
-必要なモジュールを import する。
-from __future__ import annot...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;9
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/tonokokko/articles/3b65c0c4a5408b"
-                        open
-                      >
-                        <summary class="article-expander__title">WindowsのタスクスケジューラでPythonファイルを定期実行する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tonokokko/articles/3b65c0c4a5408b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--A-AmxIsK--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Windows%25E3%2581%25AE%25E3%2582%25BF%25E3%2582%25B9%25E3%2582%25AF%25E3%2582%25B9%25E3%2582%25B1%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25A9%25E3%2581%25A7Python%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E5%25AE%259A%25E6%259C%259F%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A8%25E3%2581%25AE%25E3%2581%2593%25E3%2581%25A3%25E3%2581%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMzMzkxNDI5MzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>タイトル通りです。
-Pythonファイルとは言っていますが、ほかの言語のプログラムでもいけると思います。
-簡易Note
-プログラム欄への入力項目
-
-プログラム/スクリプト : pythonのexeファイルの絶対パス
-引数の追加 : 実行するpyファイルのファイル名
-開始 : 実行するpyファイルの親ディレクトリの絶対パス
-
-
-
-
- タスクスケジューラを開く
-
-
- 新しいタスクの作成
-
-タスクスケジューラ ライブラリを右クリック
-「基本タスクの作成」をクリック
-*タスクの作成だとより詳細な設定が可能
-*タスク作成後に編集もできるので深く考えずに選んでok
-
-
-
-
- タスク名の入力
-
-
- ト...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-02 datetime="2024-01-02T21:51:10.000Z">2024-01-02</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-02 datetime="2024-01-02T21:51:10.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hosu/articles/965a11cb57edfe"
-                        open
-                      >
-                        <summary class="article-expander__title">「Python」の特徴（C、C++と比較して）：ゼロからのPython入門講座を体験して</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hosu/articles/965a11cb57edfe">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--7pAHmZTS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%258CPython%25E3%2580%258D%25E3%2581%25AE%25E7%2589%25B9%25E5%25BE%25B4%25EF%25BC%2588C%25E3%2580%2581C%252B%252B%25E3%2581%25A8%25E6%25AF%2594%25E8%25BC%2583%25E3%2581%2597%25E3%2581%25A6%25EF%25BC%2589%25EF%25BC%259A%25E3%2582%25BC%25E3%2583%25AD%25E3%2581%258B%25E3%2582%2589%25E3%2581%25AEPython%25E5%2585%25A5%25E9%2596%2580%25E8%25AC%259B%25E5%25BA%25A7%25E3%2582%2592%25E4%25BD%2593%25E9%25A8%2593%25E3%2581%2597%25E3%2581%25A6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2583%259B%25E3%2583%25BB%25E3%2583%25B4%25E3%2582%25A3%25E3%2583%25B3%25E3%2583%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzc0MGU1MGU1NGUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>機械学習をはじめるために、Pythonに入門しました。
-その際に参考にしたのが、東大 松尾研が一般公開している「人工知能・深層学習を学ぶためのロードマップ」。
-このなかで紹介されていたPythonジャパンの「ゼロからのPython入門講座」が分かりやすい！
-Pythonをこれから始める人にはぜひともオススメの教材なので、以下のnoteの記事ですこし紹介しました。
-https://note.com/hovinci/n/n971f7f8eb1bb
-今回の記事では、ぼくがC言語とC++言語を使っているので、それらではお目にかかれない、「Pythonの特徴」について、気づいたことをまとめます。
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/riku_k/articles/4900bba6f4f7a4"
-                        open
-                      >
-                        <summary class="article-expander__title">Reactとd3で健康オタクのためのスタバサイトを作ってみた！</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/riku_k/articles/4900bba6f4f7a4">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--QPk9nJNT--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:React%25E3%2581%25A8d3%25E3%2581%25A7%25E5%2581%25A5%25E5%25BA%25B7%25E3%2582%25AA%25E3%2582%25BF%25E3%2582%25AF%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%2590%25E3%2582%25B5%25E3%2582%25A4%25E3%2583%2588%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%25EF%25BC%2581%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kid%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzU5YzRmMGUxYjguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-初記事です！よろしくお願いします。
-今回、スタバで作業したいけど健康も守りたいという全ての人に向けて、スタバの商品の栄養成分量を比較できるWebサイトを作りました。Pythonでスクレイピングしたデータをd3.jsで可視化してReactに組み込むという流れで作ってます！
-健康オタク向けのスタバサイト
-👆このリンクからアクセスできます。
-スマホで開くと一番綺麗に見えます。
-（React書き疲れて発狂したので全画面サイズ対応は断念しました😇）
-こんな感じのUIになってます👇
-
-今回はReactとd3の勉強の一環でこの２つを合体させてみたかったので、あえてReactを使ってサイ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -6535,8 +6688,8 @@ https://note.com/hovinci/n/n971f7f8eb1bb
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/7734760209">
-        <time id="build-timestamp" datetime="2024-02-01T01:17:14.298Z">2024-02-01T01:17:14.298Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/7749950186">
+        <time id="build-timestamp" datetime="2024-02-02T01:13:03.479Z">2024-02-02T01:13:03.479Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
