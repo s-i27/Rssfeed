@@ -2,10 +2,135 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-02-02T01:13:03.501Z</updated>
+    <updated>2024-02-03T01:11:39.569Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Django + daphne + channels構成のWebsocketサーバーで502エラー]]></title>
+        <id>https://zenn.dev/t0mmy/articles/internal_server_error_by_websocket</id>
+        <link href="https://zenn.dev/t0mmy/articles/internal_server_error_by_websocket"/>
+        <updated>2024-02-03T00:36:23.000Z</updated>
+        <summary type="html"><![CDATA[概要
+Django + Dapahne + Channlels 構成の Websokcet サーバーにて、502エラーが発生する事態に遭遇しました。
+原因や解決策を、調べた範囲で書いていきます。
+
+ 結論
+サーバー側に、実質的な Websocket 接続上限が存在していた。
+上限を超えてWebsocket接続を試みた結果、接続時に502エラーが発生した。
+Websocketの上限は、マシンの CPU コア数に依存する模様。
+また、環境変数で上限を設定することもできる。
+
+ 構成
+
+
+ 遭遇した問題
+ある日、WebsocketクライアントからWebsocket接続を試みたところ、エラー...]]></summary>
+        <author>
+            <name>t0mmy</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[python初心者] 仮想環境venvのことを調べました]]></title>
+        <id>https://zenn.dev/shomtsm/articles/6110fac57d3f40</id>
+        <link href="https://zenn.dev/shomtsm/articles/6110fac57d3f40"/>
+        <updated>2024-02-03T00:25:42.000Z</updated>
+        <summary type="html"><![CDATA[venvとは
+pythonで仮想環境を作るためのモジュール
+Python3.3以降で標準ライブラリの一部になった
+
+ なぜ仮想環境必要か
+仮想環境は、プロジェクトごとに異なるパッケージやパッケージバージョンを管理するために使用される。
+システム全体のPythonインストールを変更せずに、プロジェクト固有の依存関係を維持することができる。
+javascript/node.jsのpackage.jsonがあって、インストールして関連パッケージがnode_modulesに格納されると同じイメージ
+
+ 仮想環境基本コマンド
+前提としてPythonがシステムにインストールされていること
+つまり...]]></summary>
+        <author>
+            <name>松嶋松</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Lambda・Aurora Postgres・PostGISで地理情報APIを構築]]></title>
+        <id>https://zenn.dev/sekochan/articles/b76fde0c53f7dd</id>
+        <link href="https://zenn.dev/sekochan/articles/b76fde0c53f7dd"/>
+        <updated>2024-02-02T14:55:27.000Z</updated>
+        <summary type="html"><![CDATA[やりたいこと
+
+APIGateway, lambdaでAPIを作成
+lambdaからAurora Postgresに接続
+Aurora PostgresでPost GISを使用
+住所を送ると、DBに登録したlocationを近い順にtop10を返す
+
+1. は終わっているので2. 3. 4.をやります。
+
+ AuroraとAurora Serverlessの違い
+・主な違いはRDS Proxyに対応したこと
+RDS Proxyはコネクションをプールさせておくことで同時接続数などの問題を回避できる。
+参考：
+https://acro-engineer.hatenablog.com/en...]]></summary>
+        <author>
+            <name>sekochan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python便利メモ]]></title>
+        <id>https://zenn.dev/nishimoto/articles/11b1953caaf832</id>
+        <link href="https://zenn.dev/nishimoto/articles/11b1953caaf832"/>
+        <updated>2024-02-02T12:31:19.000Z</updated>
+        <summary type="html"><![CDATA[Python全般
+
+ Pythonで並列処理
+# func: function, 並列化したい処理
+# args_list: list, 入力とするもののリスト
+
+from tqdm.notebook import tqdm
+from multiprocessing import Pool, cpu_count
+with Pool(cpu_count()) as p:
+    result_list = list(tqdm(p.imap(func, args_list), total=len(args_list)))
+
+ pythonでfull pathからfilenameを取得する...]]></summary>
+        <author>
+            <name>nishimoto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ChatGPTのhtmlページをマークダウンに変換するプログラムをChatGPT自身に書いてもらう]]></title>
+        <id>https://zenn.dev/meboo/articles/0bda616ec521ab</id>
+        <link href="https://zenn.dev/meboo/articles/0bda616ec521ab"/>
+        <updated>2024-02-02T06:14:12.000Z</updated>
+        <summary type="html"><![CDATA[※このページの主要部分は作成したpythonコードを用いて出力したのものです。
+※作成するにあたりChatGPTとの会話をまず記載します。
+※ChatGPTに書いてもらったコードを自分で微修正して完成させたものを本ページの最後に掲載しています。
+
+ あなたの発言
+※「要素とストーリー構造.html」というファイルをアップロード。これはChatGPTとの会話ページをCtrl+Sで保存したものです。
+ファイルアップロードしたものはChatGPTのページをHTMLとして保存したファイルとなります。
+・このような構造のHTMLを読み込んで、以下の変換を行うpythonスクリプトを書いてください。...]]></summary>
+        <author>
+            <name>meboo</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GradioでCSSを使う方法]]></title>
+        <id>https://zenn.dev/00/articles/gradio-with-css</id>
+        <link href="https://zenn.dev/00/articles/gradio-with-css"/>
+        <updated>2024-02-02T02:18:13.000Z</updated>
+        <summary type="html"><![CDATA[最近仕事で、 Gradioベースのアプリケーションの見た目をデザイナーのデザインしたものに寄せる作業が発生して、Gradioに無理やりCSSを当てるということをやってました。
+本記事では、Gradioサイトに乗っているInterfaceのサンプルを使いますが、Blockでも全く同じことが可能です。
+import gradio as gr
+
+def greet(name):
+    return "Hello " + name + "!"
+
+demo = gr.Interface(fn=greet, inputs="text", outputs="text")
+demo.launch()
+...]]></summary>
+        <author>
+            <name>koji</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[JinjaでSQLを動的生成する]]></title>
         <id>https://zenn.dev/iwatagumi/articles/14787c4ccec626</id>
@@ -3856,128 +3981,6 @@ https://github.com/nakamura196/omeka_s_tools2
 下は実装例です。(m...]]></summary>
         <author>
             <name>とのこっこ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonとSeleniumでSBI証券の配当金履歴を自動取得する方法]]></title>
-        <id>https://zenn.dev/tomodo_ysys/articles/sbi-dividend-selenium</id>
-        <link href="https://zenn.dev/tomodo_ysys/articles/sbi-dividend-selenium"/>
-        <updated>2024-01-04T12:47:49.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-本記事ではwindows上でpython seleniumを使用してSBI証券の口座にログイン、配当金履歴を取得するpythonコードについて解説します。
-コードは生成AIが書いてくれる時代ですが、認証を挟むサイトのRPAは出力させにくいタイプと思うため本記事を残します。
-
- きっかけ
-2024年になり新NISAが始まりました。私は高配当銘柄によく投資しているため配当金をもらう機会が多く、新NISAでさらに増えることと思います。
-しかし、配当金がもらえると配当金込みの損益が知りたくなります。ただ、配当金込みで損益管理できるサービスはあまりありません。自前で資産管理アプリをつ...]]></summary>
-        <author>
-            <name>ともど@SIerエンジニア</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Google OAuth2でログインしたユーザーがGoogleグループのメンバーかチェックする(Python,Streamlit)]]></title>
-        <id>https://zenn.dev/ncdc/articles/4971474595b6a8</id>
-        <link href="https://zenn.dev/ncdc/articles/4971474595b6a8"/>
-        <updated>2024-01-04T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Python(というかStreamlit)で作ったアプリに認証をつけたく、Google OAuth2で認証をつけました。認証機能の実装はyag_aysさんの記事を参考にしたので、そちらを参照いただければと思います。
-https://zenn.dev/yag_ays/articles/ac982910770010
-さて、Google OAuth2で認証した場合、単純な設定で許可できるユーザーは以下のいずれかになります。
-
-Googleのユーザーだったら誰でもOK
-自分の組織のユーザーのみOK
-
-後者の組織の制限で十分な場合もあると思いますが、今回はより利用者を絞りたかったので...]]></summary>
-        <author>
-            <name>いばらき</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Google Colab上でGmailを送信してみる（サービスアカウント認証・パスワード認証・OAuth 2.0 クライアントID）]]></title>
-        <id>https://zenn.dev/ptna/articles/a68ccb619cf34d</id>
-        <link href="https://zenn.dev/ptna/articles/a68ccb619cf34d"/>
-        <updated>2024-01-03T23:05:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-本記事ではGoogle Colaboratory上でGmailを送る方法を3種類扱います。
-最終的に至った結論はサービスアカウント認証かOAuth 2.0 クライアントIDが有力そうではあるがいずれも問題点あり、です。3種類の方法ともメール送信はできましたが、運用・保守まで考えると「これがベスト」という結論には達せずでした。
-「試行錯誤したけどダメだった系記事」であることを、最初におことわりしておきます。
-
- 要約
-
-本記事はGoogle WorkspaceでのGmail送付を扱います。
-下記の3つでGoogle ColaboratoryからGmailを送ります。
-
-サービ...]]></summary>
-        <author>
-            <name>hosaka313</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Google Colab上でGmailを送信してみる（サービスアカウント認証・パスワード認証・OAuth 2.0 クライアントID）]]></title>
-        <id>https://zenn.dev/hosaka313/articles/a68ccb619cf34d</id>
-        <link href="https://zenn.dev/hosaka313/articles/a68ccb619cf34d"/>
-        <updated>2024-01-03T23:05:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-本記事ではGoogle Colaboratory上でGmailを送る方法を3種類扱います。
-最終的に至った結論はサービスアカウント認証かOAuth 2.0 クライアントIDが有力そうではあるがいずれも問題点あり、です。3種類の方法ともメール送信はできましたが、運用・保守まで考えると「これがベスト」という結論には達せずでした。
-「試行錯誤したけどダメだった系記事」であることを、最初におことわりしておきます。
-
- 要約
-
-本記事はGoogle WorkspaceでのGmail送付を扱います。
-下記の3つでGoogle ColaboratoryからGmailを送ります。
-
-サービ...]]></summary>
-        <author>
-            <name>hosaka313</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ChatGPT x LangChainで会社紹介PDFを基にした回答を得る]]></title>
-        <id>https://zenn.dev/mandenaren/articles/pdf_llm_for_buysell</id>
-        <link href="https://zenn.dev/mandenaren/articles/pdf_llm_for_buysell"/>
-        <updated>2024-01-03T23:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-ChatGPTは自然な言葉のようになんでも教えてくれるツールですが、あくまでネット上に大規模に置いてある一般的な知識の回答を返します。
-そのため、最新の情報や独自の情報をこちらから教えて回答を返してもらうような仕組みが求められてきました。
-解の一つとして、PythonのLLMライブラリであるLangChainはベクトルストアによる検索戦略機能を提供しています。
-この記事では、会社紹介のPDFをChatGPTに教えることを通して、使用感を見てみたいと思います。
-!
-OpenAIのAPIを利用するため、事前にOpenAIのアカウントを作成しAPI_KEYを発行する必要があります...]]></summary>
-        <author>
-            <name>なりん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Azure Functions（Python版）の試験をpytestで行う]]></title>
-        <id>https://zenn.dev/tk_hamaguchi/articles/799a438d664547</id>
-        <link href="https://zenn.dev/tk_hamaguchi/articles/799a438d664547"/>
-        <updated>2024-01-03T15:00:00.000Z</updated>
-        <summary type="html"><![CDATA[この記事はAzure Functions（Python版）の試験をpytestで行うためのメモです。
-Azure FunctionsはちょっとしたPythonAPIを動かすのにちょうど良いFaaS（Function as a Service）です。
-ここでは、前回作成したAzure Functionsに対してテストを書いて実行してみます。
-もしこの記事から読まれた場合は、前回記事の『1. Azure FunctionsでHTTPトリガーの関数アプリを実装する』を完了しておくと、スムーズに入れると思います。
-今回の作業ディレクトリは、下記になります。
-~/devel/sandbox_azu...]]></summary>
-        <author>
-            <name>tk_hamaguchi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonでLINE Messaging APIを使用する]]></title>
-        <id>https://zenn.dev/yu_yu/articles/402281ccb6a3f2</id>
-        <link href="https://zenn.dev/yu_yu/articles/402281ccb6a3f2"/>
-        <updated>2024-01-03T13:46:35.000Z</updated>
-        <summary type="html"><![CDATA[この記事では、Pythonを使用してLINE Botからメッセージを送信するコードを公開します。linebot.v3.messaging モジュールを活用し、簡潔かつ効率的にLINEメッセージを送るプログラムです、
-import os
-import linebot.v3.messaging as bot
-from dotenv import load_dotenv
-load_dotenv()
-
-# LINE_BOT_ACCESS_TOKENは、Messaging API設定のチャネルアクセストークン
-LINE_BOT_ACCESS_TOKEN = os.getenv('LINE_BOT_...]]></summary>
-        <author>
-            <name>zoyspace</name>
         </author>
     </entry>
 </feed>

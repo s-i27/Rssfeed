@@ -12,6 +12,96 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/t0mmy/articles/internal_server_error_by_websocket",
+          "author": "t0mmy",
+          "description": "概要\nDjango + Dapahne + Channlels 構成の Websokcet サーバーにて、502エラーが発生する事態に遭遇しました。\n原因や解決策を、調べた範囲で書いていきます。\n\n 結論\nサーバー側に、実質的な Websocket 接続上限が存在していた。\n上限を超えてWebsocket接続を試みた結果、接続時に502エラーが発生した。\nWebsocketの上限は、マシンの CPU コア数に依存する模様。\nまた、環境変数で上限を設定することもできる。\n\n 構成\n\n\n 遭遇した問題\nある日、WebsocketクライアントからWebsocket接続を試みたところ、エラー...",
+          "link": "https://zenn.dev/t0mmy/articles/internal_server_error_by_websocket",
+          "publishedOn": "2024-02-03T00:36:23.000Z",
+          "wordCount": 439,
+          "title": "Django + daphne + channels構成のWebsocketサーバーで502エラー",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--AIs9Y-oy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%2520%252B%2520daphne%2520%252B%2520channels%25E6%25A7%258B%25E6%2588%2590%25E3%2581%25AEWebsocket%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2581%25A7502%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:t0mmy%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cwOV9uUGFwUktkM1E4VnVoc25fY0pSZTEzZmtPZTBseFpEbTNhNGc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--AIs9Y-oy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%2520%252B%2520daphne%2520%252B%2520channels%25E6%25A7%258B%25E6%2588%2590%25E3%2581%25AEWebsocket%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2581%25A7502%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:t0mmy%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2cwOV9uUGFwUktkM1E4VnVoc25fY0pSZTEzZmtPZTBseFpEbTNhNGc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/shomtsm/articles/6110fac57d3f40",
+          "author": "松嶋松",
+          "description": "venvとは\npythonで仮想環境を作るためのモジュール\nPython3.3以降で標準ライブラリの一部になった\n\n なぜ仮想環境必要か\n仮想環境は、プロジェクトごとに異なるパッケージやパッケージバージョンを管理するために使用される。\nシステム全体のPythonインストールを変更せずに、プロジェクト固有の依存関係を維持することができる。\njavascript/node.jsのpackage.jsonがあって、インストールして関連パッケージがnode_modulesに格納されると同じイメージ\n\n 仮想環境基本コマンド\n前提としてPythonがシステムにインストールされていること\nつまり...",
+          "link": "https://zenn.dev/shomtsm/articles/6110fac57d3f40",
+          "publishedOn": "2024-02-03T00:25:42.000Z",
+          "wordCount": 797,
+          "title": "[python初心者] 仮想環境venvのことを調べました",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--ZpKlBolJ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255Bpython%25E5%2588%259D%25E5%25BF%2583%25E8%2580%2585%255D%2520%25E4%25BB%25AE%25E6%2583%25B3%25E7%2592%25B0%25E5%25A2%2583venv%25E3%2581%25AE%25E3%2581%2593%25E3%2581%25A8%25E3%2582%2592%25E8%25AA%25BF%25E3%2581%25B9%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%259D%25BE%25E5%25B6%258B%25E6%259D%25BE%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZlM2NkZGY0NmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--ZpKlBolJ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255Bpython%25E5%2588%259D%25E5%25BF%2583%25E8%2580%2585%255D%2520%25E4%25BB%25AE%25E6%2583%25B3%25E7%2592%25B0%25E5%25A2%2583venv%25E3%2581%25AE%25E3%2581%2593%25E3%2581%25A8%25E3%2582%2592%25E8%25AA%25BF%25E3%2581%25B9%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E6%259D%25BE%25E5%25B6%258B%25E6%259D%25BE%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZlM2NkZGY0NmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/sekochan/articles/b76fde0c53f7dd",
+          "author": "sekochan",
+          "description": "やりたいこと\n\nAPIGateway, lambdaでAPIを作成\nlambdaからAurora Postgresに接続\nAurora PostgresでPost GISを使用\n住所を送ると、DBに登録したlocationを近い順にtop10を返す\n\n1. は終わっているので2. 3. 4.をやります。\n\n AuroraとAurora Serverlessの違い\n・主な違いはRDS Proxyに対応したこと\nRDS Proxyはコネクションをプールさせておくことで同時接続数などの問題を回避できる。\n参考：\nhttps://acro-engineer.hatenablog.com/en...",
+          "link": "https://zenn.dev/sekochan/articles/b76fde0c53f7dd",
+          "publishedOn": "2024-02-02T14:55:27.000Z",
+          "wordCount": 618,
+          "title": "Lambda・Aurora Postgres・PostGISで地理情報APIを構築",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--pCTZGiuN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Lambda%25E3%2583%25BBAurora%2520Postgres%25E3%2583%25BBPostGIS%25E3%2581%25A7%25E5%259C%25B0%25E7%2590%2586%25E6%2583%2585%25E5%25A0%25B1API%25E3%2582%2592%25E6%25A7%258B%25E7%25AF%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sekochan%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSVBxaUFjNERyaWZ0YkZMd0o0YVQzb3V0NEtIUmJVZk5fX21yNUp0alJMMHc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--pCTZGiuN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Lambda%25E3%2583%25BBAurora%2520Postgres%25E3%2583%25BBPostGIS%25E3%2581%25A7%25E5%259C%25B0%25E7%2590%2586%25E6%2583%2585%25E5%25A0%25B1API%25E3%2582%2592%25E6%25A7%258B%25E7%25AF%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sekochan%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSVBxaUFjNERyaWZ0YkZMd0o0YVQzb3V0NEtIUmJVZk5fX21yNUp0alJMMHc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/nishimoto/articles/11b1953caaf832",
+          "author": "nishimoto",
+          "description": "Python全般\n\n Pythonで並列処理\n# func: function, 並列化したい処理\n# args_list: list, 入力とするもののリスト\n\nfrom tqdm.notebook import tqdm\nfrom multiprocessing import Pool, cpu_count\nwith Pool(cpu_count()) as p:\n    result_list = list(tqdm(p.imap(func, args_list), total=len(args_list)))\n\n pythonでfull pathからfilenameを取得する...",
+          "link": "https://zenn.dev/nishimoto/articles/11b1953caaf832",
+          "publishedOn": "2024-02-02T12:31:19.000Z",
+          "wordCount": 690,
+          "title": "Python便利メモ",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--WvpeX0iS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_66:Python%25E4%25BE%25BF%25E5%2588%25A9%25E3%2583%25A1%25E3%2583%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nishimoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjZWNmNDMwYWMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--WvpeX0iS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_66:Python%25E4%25BE%25BF%25E5%2588%25A9%25E3%2583%25A1%25E3%2583%25A2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nishimoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjZWNmNDMwYWMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/meboo/articles/0bda616ec521ab",
+          "author": "meboo",
+          "description": "※このページの主要部分は作成したpythonコードを用いて出力したのものです。\n※作成するにあたりChatGPTとの会話をまず記載します。\n※ChatGPTに書いてもらったコードを自分で微修正して完成させたものを本ページの最後に掲載しています。\n\n あなたの発言\n※「要素とストーリー構造.html」というファイルをアップロード。これはChatGPTとの会話ページをCtrl+Sで保存したものです。\nファイルアップロードしたものはChatGPTのページをHTMLとして保存したファイルとなります。\n・このような構造のHTMLを読み込んで、以下の変換を行うpythonスクリプトを書いてください。...",
+          "link": "https://zenn.dev/meboo/articles/0bda616ec521ab",
+          "publishedOn": "2024-02-02T06:14:12.000Z",
+          "wordCount": 955,
+          "title": "ChatGPTのhtmlページをマークダウンに変換するプログラムをChatGPT自身に書いてもらう",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--NCsL7Lcm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ChatGPT%25E3%2581%25AEhtml%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%2592%25E3%2583%259E%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%2580%25E3%2582%25A6%25E3%2583%25B3%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%25A0%25E3%2582%2592ChatGPT%25E8%2587%25AA%25E8%25BA%25AB%25E3%2581%25AB%25E6%259B%25B8%25E3%2581%2584%25E3%2581%25A6%25E3%2582%2582%25E3%2582%2589%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:meboo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hwVUEzU2ZiLWZrbG5BbUhwRDBhbzlsbUJhN3QzNzNYWUZiQXdxV0JBPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--NCsL7Lcm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ChatGPT%25E3%2581%25AEhtml%25E3%2583%259A%25E3%2583%25BC%25E3%2582%25B8%25E3%2582%2592%25E3%2583%259E%25E3%2583%25BC%25E3%2582%25AF%25E3%2583%2580%25E3%2582%25A6%25E3%2583%25B3%25E3%2581%25AB%25E5%25A4%2589%25E6%258F%259B%25E3%2581%2599%25E3%2582%258B%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%25A0%25E3%2582%2592ChatGPT%25E8%2587%25AA%25E8%25BA%25AB%25E3%2581%25AB%25E6%259B%25B8%25E3%2581%2584%25E3%2581%25A6%25E3%2582%2582%25E3%2582%2589%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:meboo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hwVUEzU2ZiLWZrbG5BbUhwRDBhbzlsbUJhN3QzNzNYWUZiQXdxV0JBPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/00/articles/gradio-with-css",
+          "author": "koji",
+          "description": "最近仕事で、 Gradioベースのアプリケーションの見た目をデザイナーのデザインしたものに寄せる作業が発生して、Gradioに無理やりCSSを当てるということをやってました。\n本記事では、Gradioサイトに乗っているInterfaceのサンプルを使いますが、Blockでも全く同じことが可能です。\nimport gradio as gr\n\ndef greet(name):\n    return \"Hello \" + name + \"!\"\n\ndemo = gr.Interface(fn=greet, inputs=\"text\", outputs=\"text\")\ndemo.launch()\n...",
+          "link": "https://zenn.dev/00/articles/gradio-with-css",
+          "publishedOn": "2024-02-02T02:18:13.000Z",
+          "wordCount": 618,
+          "title": "GradioでCSSを使う方法",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--8t4hDInE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Gradio%25E3%2581%25A7CSS%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:koji%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FlOGI2NmE3YjAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--8t4hDInE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Gradio%25E3%2581%25A7CSS%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:koji%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FlOGI2NmE3YjAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
           "id": "https://zenn.dev/iwatagumi/articles/14787c4ccec626",
           "author": "kirigaya",
           "description": "みなさんこんにちは！kirigayaです。\nみなさんJinja使ってますか？\nどうでもいい話ですが最初は神社とは知らずジンジャーと呼んでいました。\n今回はpythonコードの中で柔軟にSQLを生成する記事です。\n動的生成のイメージとしてはクエリの中に変数を埋め込んで変数を変えるだけで\nクエリの内容を変える感じです。\n使える場面としては決まったクエリ内でフィルター条件だけ変えたいと言った場面です。\n環境はColabノートブックを使います。\nDBはdukdbを使います。ノートブック上にすぐ構築できて色々便利です。\n1セルずつ実行していきましょう。\n初期セットアップ\n!pip install ...",
@@ -2675,111 +2765,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--h_gtg50C--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Windows%25E3%2581%25AE%25E3%2582%25BF%25E3%2582%25B9%25E3%2582%25AF%25E3%2582%25B9%25E3%2582%25B1%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25A9%25E3%2581%25A7Python%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E5%25AE%259F%25E8%25A1%258C%25E5%25A4%25B1%25E6%2595%2597%25E6%2599%2582%25E3%2581%25AB%25E5%2586%258D%25E8%25A9%25A6%25E8%25A1%258C%25E3%2581%2597%25E3%2581%259F%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A8%25E3%2581%25AE%25E3%2581%2593%25E3%2581%25A3%25E3%2581%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMzMzkxNDI5MzQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/tomodo_ysys/articles/sbi-dividend-selenium",
-          "author": "ともど@SIerエンジニア",
-          "description": "はじめに\n本記事ではwindows上でpython seleniumを使用してSBI証券の口座にログイン、配当金履歴を取得するpythonコードについて解説します。\nコードは生成AIが書いてくれる時代ですが、認証を挟むサイトのRPAは出力させにくいタイプと思うため本記事を残します。\n\n きっかけ\n2024年になり新NISAが始まりました。私は高配当銘柄によく投資しているため配当金をもらう機会が多く、新NISAでさらに増えることと思います。\nしかし、配当金がもらえると配当金込みの損益が知りたくなります。ただ、配当金込みで損益管理できるサービスはあまりありません。自前で資産管理アプリをつ...",
-          "link": "https://zenn.dev/tomodo_ysys/articles/sbi-dividend-selenium",
-          "publishedOn": "2024-01-04T12:47:49.000Z",
-          "wordCount": 4337,
-          "title": "PythonとSeleniumでSBI証券の配当金履歴を自動取得する方法",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--OqbVWasz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A8Selenium%25E3%2581%25A7SBI%25E8%25A8%25BC%25E5%2588%25B8%25E3%2581%25AE%25E9%2585%258D%25E5%25BD%2593%25E9%2587%2591%25E5%25B1%25A5%25E6%25AD%25B4%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A8%25E3%2582%2582%25E3%2581%25A9%2540SIer%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VjOWQ0NjYyMmQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--OqbVWasz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A8Selenium%25E3%2581%25A7SBI%25E8%25A8%25BC%25E5%2588%25B8%25E3%2581%25AE%25E9%2585%258D%25E5%25BD%2593%25E9%2587%2591%25E5%25B1%25A5%25E6%25AD%25B4%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25A8%25E3%2582%2582%25E3%2581%25A9%2540SIer%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2VjOWQ0NjYyMmQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/ncdc/articles/4971474595b6a8",
-          "author": "いばらき",
-          "description": "はじめに\nPython(というかStreamlit)で作ったアプリに認証をつけたく、Google OAuth2で認証をつけました。認証機能の実装はyag_aysさんの記事を参考にしたので、そちらを参照いただければと思います。\nhttps://zenn.dev/yag_ays/articles/ac982910770010\nさて、Google OAuth2で認証した場合、単純な設定で許可できるユーザーは以下のいずれかになります。\n\nGoogleのユーザーだったら誰でもOK\n自分の組織のユーザーのみOK\n\n後者の組織の制限で十分な場合もあると思いますが、今回はより利用者を絞りたかったので...",
-          "link": "https://zenn.dev/ncdc/articles/4971474595b6a8",
-          "publishedOn": "2024-01-04T00:00:00.000Z",
-          "wordCount": 737,
-          "title": "Google OAuth2でログインしたユーザーがGoogleグループのメンバーかチェックする(Python,Streamlit)",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--H2hbmz1v--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%2520OAuth2%25E3%2581%25A7%25E3%2583%25AD%25E3%2582%25B0%25E3%2582%25A4%25E3%2583%25B3%25E3%2581%2597%25E3%2581%259F%25E3%2583%25A6%25E3%2583%25BC%25E3%2582%25B6%25E3%2583%25BC%25E3%2581%258CGoogle%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E3%2581%25AE%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2590%25E3%2583%25BC%25E3%2581%258B%25E3%2583%2581%25E3%2582%25A7%25E3%2583%2583%25E3%2582%25AF%25E3%2581%2599%25E3%2582%258B%2528Python%252CSt...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%2584%25E3%2581%25B0%25E3%2582%2589%25E3%2581%258D%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNhODZhNDA5ZDMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:NCDC%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lXRjZXeUJCMTBrRDZNaV9Fa0tLQi13WFJSUC04eFlJbDV5eWljPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--H2hbmz1v--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%2520OAuth2%25E3%2581%25A7%25E3%2583%25AD%25E3%2582%25B0%25E3%2582%25A4%25E3%2583%25B3%25E3%2581%2597%25E3%2581%259F%25E3%2583%25A6%25E3%2583%25BC%25E3%2582%25B6%25E3%2583%25BC%25E3%2581%258CGoogle%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2597%25E3%2581%25AE%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2590%25E3%2583%25BC%25E3%2581%258B%25E3%2583%2581%25E3%2582%25A7%25E3%2583%2583%25E3%2582%25AF%25E3%2581%2599%25E3%2582%258B%2528Python%252CSt...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%2584%25E3%2581%25B0%25E3%2582%2589%25E3%2581%258D%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNhODZhNDA5ZDMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:NCDC%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lXRjZXeUJCMTBrRDZNaV9Fa0tLQi13WFJSUC04eFlJbDV5eWljPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/ptna/articles/a68ccb619cf34d",
-          "author": "hosaka313",
-          "description": "はじめに\n本記事ではGoogle Colaboratory上でGmailを送る方法を3種類扱います。\n最終的に至った結論はサービスアカウント認証かOAuth 2.0 クライアントIDが有力そうではあるがいずれも問題点あり、です。3種類の方法ともメール送信はできましたが、運用・保守まで考えると「これがベスト」という結論には達せずでした。\n「試行錯誤したけどダメだった系記事」であることを、最初におことわりしておきます。\n\n 要約\n\n本記事はGoogle WorkspaceでのGmail送付を扱います。\n下記の3つでGoogle ColaboratoryからGmailを送ります。\n\nサービ...",
-          "link": "https://zenn.dev/ptna/articles/a68ccb619cf34d",
-          "publishedOn": "2024-01-03T23:05:00.000Z",
-          "wordCount": 3231,
-          "title": "Google Colab上でGmailを送信してみる（サービスアカウント認証・パスワード認証・OAuth 2.0 クライアントID）",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--QIFIr4Ir--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%2520Colab%25E4%25B8%258A%25E3%2581%25A7Gmail%25E3%2582%2592%25E9%2580%2581%25E4%25BF%25A1%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25EF%25BC%2588%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%25E3%2582%25A2%25E3%2582%25AB%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%2588%25E8%25AA%258D%25E8%25A8%25BC%25E3%2583%25BB%25E3%2583%2591%25E3%2582%25B9%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%25E8%25AA%258D%25E8%25A8%25BC%25E3%2583%25BBOAuth%25202.0%2520...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:hosaka313%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjNDZkNWFmNTAuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E5%2585%25A8%25E6%2597%25A5%25E6%259C%25AC%25E3%2583%2594%25E3%2582%25A2%25E3%2583%258E%25E6%258C%2587%25E5%25B0%258E%25E8%2580%2585%25E5%258D%2594%25E4%25BC%259A%25EF%25BC%2588%25E3%2583%2594%25E3%2583%2586%25E3%2582%25A3%25E3%2583%258A%25EF%25BC%2589%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lvTjJRYzJRN1V1ZnM1X29EblNkWkt4OFNPSWUzOTBaQTRSTDVOPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--QIFIr4Ir--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%2520Colab%25E4%25B8%258A%25E3%2581%25A7Gmail%25E3%2582%2592%25E9%2580%2581%25E4%25BF%25A1%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25EF%25BC%2588%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%25E3%2582%25A2%25E3%2582%25AB%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%2588%25E8%25AA%258D%25E8%25A8%25BC%25E3%2583%25BB%25E3%2583%2591%25E3%2582%25B9%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%25E8%25AA%258D%25E8%25A8%25BC%25E3%2583%25BBOAuth%25202.0%2520...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:hosaka313%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjNDZkNWFmNTAuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E5%2585%25A8%25E6%2597%25A5%25E6%259C%25AC%25E3%2583%2594%25E3%2582%25A2%25E3%2583%258E%25E6%258C%2587%25E5%25B0%258E%25E8%2580%2585%25E5%258D%2594%25E4%25BC%259A%25EF%25BC%2588%25E3%2583%2594%25E3%2583%2586%25E3%2582%25A3%25E3%2583%258A%25EF%25BC%2589%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lvTjJRYzJRN1V1ZnM1X29EblNkWkt4OFNPSWUzOTBaQTRSTDVOPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/hosaka313/articles/a68ccb619cf34d",
-          "author": "hosaka313",
-          "description": "はじめに\n本記事ではGoogle Colaboratory上でGmailを送る方法を3種類扱います。\n最終的に至った結論はサービスアカウント認証かOAuth 2.0 クライアントIDが有力そうではあるがいずれも問題点あり、です。3種類の方法ともメール送信はできましたが、運用・保守まで考えると「これがベスト」という結論には達せずでした。\n「試行錯誤したけどダメだった系記事」であることを、最初におことわりしておきます。\n\n 要約\n\n本記事はGoogle WorkspaceでのGmail送付を扱います。\n下記の3つでGoogle ColaboratoryからGmailを送ります。\n\nサービ...",
-          "link": "https://zenn.dev/hosaka313/articles/a68ccb619cf34d",
-          "publishedOn": "2024-01-03T23:05:00.000Z",
-          "wordCount": 3222,
-          "title": "Google Colab上でGmailを送信してみる（サービスアカウント認証・パスワード認証・OAuth 2.0 クライアントID）",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--3M8jzgJ2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%2520Colab%25E4%25B8%258A%25E3%2581%25A7Gmail%25E3%2582%2592%25E9%2580%2581%25E4%25BF%25A1%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25EF%25BC%2588%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%25E3%2582%25A2%25E3%2582%25AB%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%2588%25E8%25AA%258D%25E8%25A8%25BC%25E3%2583%25BB%25E3%2583%2591%25E3%2582%25B9%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%25E8%25AA%258D%25E8%25A8%25BC%25E3%2583%25BBOAuth%25202.0%2520...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hosaka313%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lvTjJRYzJRN1V1ZnM1X29EblNkWkt4OFNPSWUzOTBaQTRSTDVOPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--3M8jzgJ2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Google%2520Colab%25E4%25B8%258A%25E3%2581%25A7Gmail%25E3%2582%2592%25E9%2580%2581%25E4%25BF%25A1%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%25EF%25BC%2588%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2593%25E3%2582%25B9%25E3%2582%25A2%25E3%2582%25AB%25E3%2582%25A6%25E3%2583%25B3%25E3%2583%2588%25E8%25AA%258D%25E8%25A8%25BC%25E3%2583%25BB%25E3%2583%2591%25E3%2582%25B9%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%25E8%25AA%258D%25E8%25A8%25BC%25E3%2583%25BBOAuth%25202.0%2520...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hosaka313%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lvTjJRYzJRN1V1ZnM1X29EblNkWkt4OFNPSWUzOTBaQTRSTDVOPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/mandenaren/articles/pdf_llm_for_buysell",
-          "author": "なりん",
-          "description": "はじめに\nChatGPTは自然な言葉のようになんでも教えてくれるツールですが、あくまでネット上に大規模に置いてある一般的な知識の回答を返します。\nそのため、最新の情報や独自の情報をこちらから教えて回答を返してもらうような仕組みが求められてきました。\n解の一つとして、PythonのLLMライブラリであるLangChainはベクトルストアによる検索戦略機能を提供しています。\nこの記事では、会社紹介のPDFをChatGPTに教えることを通して、使用感を見てみたいと思います。\n!\nOpenAIのAPIを利用するため、事前にOpenAIのアカウントを作成しAPI_KEYを発行する必要があります...",
-          "link": "https://zenn.dev/mandenaren/articles/pdf_llm_for_buysell",
-          "publishedOn": "2024-01-03T23:00:00.000Z",
-          "wordCount": 708,
-          "title": "ChatGPT x LangChainで会社紹介PDFを基にした回答を得る",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--Czn-c6OD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ChatGPT%2520x%2520LangChain%25E3%2581%25A7%25E4%25BC%259A%25E7%25A4%25BE%25E7%25B4%25B9%25E4%25BB%258BPDF%25E3%2582%2592%25E5%259F%25BA%25E3%2581%25AB%25E3%2581%2597%25E3%2581%259F%25E5%259B%259E%25E7%25AD%2594%25E3%2582%2592%25E5%25BE%2597%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AA%25E3%2582%258A%25E3%2582%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwODI0ZmRjNjIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Czn-c6OD--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ChatGPT%2520x%2520LangChain%25E3%2581%25A7%25E4%25BC%259A%25E7%25A4%25BE%25E7%25B4%25B9%25E4%25BB%258BPDF%25E3%2582%2592%25E5%259F%25BA%25E3%2581%25AB%25E3%2581%2597%25E3%2581%259F%25E5%259B%259E%25E7%25AD%2594%25E3%2582%2592%25E5%25BE%2597%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AA%25E3%2582%258A%25E3%2582%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAwODI0ZmRjNjIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/tk_hamaguchi/articles/799a438d664547",
-          "author": "tk_hamaguchi",
-          "description": "この記事はAzure Functions（Python版）の試験をpytestで行うためのメモです。\nAzure FunctionsはちょっとしたPythonAPIを動かすのにちょうど良いFaaS（Function as a Service）です。\nここでは、前回作成したAzure Functionsに対してテストを書いて実行してみます。\nもしこの記事から読まれた場合は、前回記事の『1. Azure FunctionsでHTTPトリガーの関数アプリを実装する』を完了しておくと、スムーズに入れると思います。\n今回の作業ディレクトリは、下記になります。\n~/devel/sandbox_azu...",
-          "link": "https://zenn.dev/tk_hamaguchi/articles/799a438d664547",
-          "publishedOn": "2024-01-03T15:00:00.000Z",
-          "wordCount": 6945,
-          "title": "Azure Functions（Python版）の試験をpytestで行う",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--UsUwxvcL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520Functions%25EF%25BC%2588Python%25E7%2589%2588%25EF%25BC%2589%25E3%2581%25AE%25E8%25A9%25A6%25E9%25A8%2593%25E3%2582%2592pytest%25E3%2581%25A7%25E8%25A1%258C%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tk_hamaguchi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lIb3g3cVdUTDcyQ25MTHFwOVA5Z2lYeW83SGtFdlZoMy11c09BWEE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--UsUwxvcL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520Functions%25EF%25BC%2588Python%25E7%2589%2588%25EF%25BC%2589%25E3%2581%25AE%25E8%25A9%25A6%25E9%25A8%2593%25E3%2582%2592pytest%25E3%2581%25A7%25E8%25A1%258C%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tk_hamaguchi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lIb3g3cVdUTDcyQ25MTHFwOVA5Z2lYeW83SGtFdlZoMy11c09BWEE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/yu_yu/articles/402281ccb6a3f2",
-          "author": "zoyspace",
-          "description": "この記事では、Pythonを使用してLINE Botからメッセージを送信するコードを公開します。linebot.v3.messaging モジュールを活用し、簡潔かつ効率的にLINEメッセージを送るプログラムです、\nimport os\nimport linebot.v3.messaging as bot\nfrom dotenv import load_dotenv\nload_dotenv()\n\n# LINE_BOT_ACCESS_TOKENは、Messaging API設定のチャネルアクセストークン\nLINE_BOT_ACCESS_TOKEN = os.getenv('LINE_BOT_...",
-          "link": "https://zenn.dev/yu_yu/articles/402281ccb6a3f2",
-          "publishedOn": "2024-01-03T13:46:35.000Z",
-          "wordCount": 420,
-          "title": "PythonでLINE Messaging APIを使用する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--pSqrL5b2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7LINE%2520Messaging%2520API%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:zoyspace%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAzODA2MmI2ODMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--pSqrL5b2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7LINE%2520Messaging%2520API%25E3%2582%2592%25E4%25BD%25BF%25E7%2594%25A8%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:zoyspace%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAzODA2MmI2ODMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
         }
       ]
     }
