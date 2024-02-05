@@ -2,10 +2,317 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-02-04T01:17:56.131Z</updated>
+    <updated>2024-02-05T01:15:24.573Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Windows PCとWindows上のIoT Edgeモジュール間でファイル共有を行う]]></title>
+        <id>https://zenn.dev/headwaters/articles/f3540383b4bf24</id>
+        <link href="https://zenn.dev/headwaters/articles/f3540383b4bf24"/>
+        <updated>2024-02-05T00:01:08.000Z</updated>
+        <summary type="html"><![CDATA[ゴール：Windows PCに配置したファイルをWindows上のIoT Edgeモジュールから閲覧および編集ができる
+Raspberry Piに入れた自作IoT Edgeモジュールを用いて、Raspberry Piに配置したファイルをIoT Edgeモジュールから閲覧や編集ができるようにしました。
+そのモジュールをWindows PCに入れて実行することになり、ファイル共有処理も使用する必要が出ました。
+本記事はその共有の方法についてまとめています。
+
+ 説明すること
+
+ゴールを達成するためのIoT Edgeモジュールのデプロイ設定
+Windowsの共有フォルダおよびその中に入れる...]]></summary>
+        <author>
+            <name>Shuichiro Sakata</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Snowflake]UDFでユーザー管理のキャッシュ領域がほしい]]></title>
+        <id>https://zenn.dev/efx/articles/d9671363c6d257</id>
+        <link href="https://zenn.dev/efx/articles/d9671363c6d257"/>
+        <updated>2024-02-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[/tmpと /dev/shmが使えた。
+Snowpark Optimized Warehouseに新たなユースケースを見出したかもしれない。
+
+ なぜほしいか？
+ファイルパスで非構造化ファイルを受け取るライブラリはよくある。
+例えば、画像処理ライブラリのPillowはImage.open(image_path)のようにファイルパスを受け取る。他にも、MLモデルや動画ファイルをファイルパスとして渡すことはよくあると思う。
+ただ、UDFからほとんどの領域は書き込み権限がない。
+PermissionError: [Errno 1] Operation not permitted
+
+ 結論
+冒頭...]]></summary>
+        <author>
+            <name>Kentaro Maeda</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[workerdのpyodide統合を試す]]></title>
+        <id>https://zenn.dev/laiso/articles/cfc7277d92b7f3</id>
+        <link href="https://zenn.dev/laiso/articles/cfc7277d92b7f3"/>
+        <updated>2024-02-04T13:16:51.000Z</updated>
+        <summary type="html"><![CDATA[昨年末ぐらいからworkerdのPyodide統合の開発が活発になっている
+search results: repo:cloudflare/workerd  pyodide
+PyodideはWasmを使ってPythonインタプリターをブラウザ上で実行する環境で、これがリリースされるとRustサポートのようにCloudflare WorkersにPythonで書いたコードを直接デプロイできるようになると思われる
+https://developers.cloudflare.com/workers/runtime-apis/webassembly/rust/
+cloudflare/python...]]></summary>
+        <author>
+            <name>laiso</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[scrapyでプレスのPDFファイルを収集してLLMで要約する]]></title>
+        <id>https://zenn.dev/khisa/articles/397b1d9e289352</id>
+        <link href="https://zenn.dev/khisa/articles/397b1d9e289352"/>
+        <updated>2024-02-04T13:15:16.000Z</updated>
+        <summary type="html"><![CDATA[PythonのスクレイピングフレームワークScrapyを利用して、プレスなどのPDFファイルを収集、LLM（OpenAI API）でサマリを作成し、結果をデータベースに格納するという一連の流れを実現してみました。Scrapy、OpenAI APIともごく基本的な使い方しかしていませんが、あっという間に自動収集するプログラムが作成できましたので紹介します。
+
+ Scrapyで収集したPDFファイルの内容をLLMに読み込ませてサマリーを作成
+今回やりたいことは以下のとおりです。
+
+Scrapyで特定のWebサイトの最新情報（今回はプレスリリースのタイトル、日付、PDFファイルなど）を取得する...]]></summary>
+        <author>
+            <name>ひさ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Python] APIで返した日本語が文字化けしたときの対処法]]></title>
+        <id>https://zenn.dev/kotopasi/articles/ee03e9f3343ad6</id>
+        <link href="https://zenn.dev/kotopasi/articles/ee03e9f3343ad6"/>
+        <updated>2024-02-04T09:56:55.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Pythonで実装した関数をFlaskのAPIで返したら日本語だけ文字化けしたときの対処法を載せます
+
+ 動作環境
+
+mac macOS 14.2.1
+Python 3.9
+
+
+ 手順
+以下のコードを追加します
+from flask import Flask
+
+app=Flask(__name__)
++ app.json.ensure_ascii = False
+flaskライブラリのjsonifyで解決できるという記事が多かったのですが、Flaskのバージョンが2.3.2 以上の場合､Flaskの設定ファイルから文字コードの設定を変更する必要があるみたいです。
+
+ おわり...]]></summary>
+        <author>
+            <name>あまたつ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Python] バックエンド側でCORSを許可する設定]]></title>
+        <id>https://zenn.dev/kotopasi/articles/10b9d575b563c7</id>
+        <link href="https://zenn.dev/kotopasi/articles/10b9d575b563c7"/>
+        <updated>2024-02-04T09:54:34.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+技育CAMPキャラバン@東京ハッカソンでフロントバック間のAPIの繋ぎ込みに苦戦しましたが、バックエンド側でCORSを許可することで解決しました
+
+ 動作環境
+
+mac macOS 14.2.1
+Python 3.9
+
+
+ 手順
+CORSライブラリをimportして設定するだけです
+from flask import Flask
++ from flask_cors import CORS
+
+app=Flask(__name__)
++ CORS(app)
+
+ おわりに
+CORSの理解浅いので勉強しなきゃ...
+
+ 参考]]></summary>
+        <author>
+            <name>あまたつ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[FastAPIのGetメソッドパラメータをBaseModelで受け取れるようにしてみる]]></title>
+        <id>https://zenn.dev/takuty/articles/5a94628bd87179</id>
+        <link href="https://zenn.dev/takuty/articles/5a94628bd87179"/>
+        <updated>2024-02-04T08:36:12.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+FastAPI で API 開発をしていて Get メソッドを叩く時にhttp://lcalhost:8080/items?name=Aのようにクエリパラメータに対応した Get メソッドはよく出でくると思います
+ただ、検索ページの API のようにクエリパラメータが５個 10 個と必要になった時にどうしていますか
+メソッドの引数に５個 10 個と指定するのはあまりに不自然だと思いましたので現状これが良さそうだなというのをこちらに記載していきたい思います
+
+ 前提
+商品のリストを Get メソッドで検索する、という想定です
+検索項目としては
+
+商品の ID
+商品名
+商品値段...]]></summary>
+        <author>
+            <name>Takuty</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[prefect の deployment について理解する]]></title>
+        <id>https://zenn.dev/massu_devix/articles/8184386de66394</id>
+        <link href="https://zenn.dev/massu_devix/articles/8184386de66394"/>
+        <updated>2024-02-04T07:58:50.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+prefect の構成要素のうち、 deployment について理解します。
+また説明の中で、関連要素である flow や task についても触れます。
+前回は prefect の基本要素について触れました。
+https://zenn.dev/massu_devix/articles/a016774865d647
+
+ deployment とは
+deployment とは、 prefect に登録した flow を リモートで実行可能なエンティティ に昇華させるオブジェクトです。
+flow とは prefect におけるワークフローとしての起動単位です。 flow を起...]]></summary>
+        <author>
+            <name>mas_dx</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[numpyで特異値分解]]></title>
+        <id>https://zenn.dev/sawarae/articles/27d848a17fe7fc</id>
+        <link href="https://zenn.dev/sawarae/articles/27d848a17fe7fc"/>
+        <updated>2024-02-04T07:00:16.000Z</updated>
+        <summary type="html"><![CDATA[「Pythonによる数値計算入門」で最小二乗法の例をnumpy.linalg.solveで解く例があったので、それのsvd版を書いておきます。
+import numpy as np
+
+# y = 2x + 3に誤差を加えたデータ
+# 数値はPythonによる数値計算入門より
+
+N = 5
+X = np.zeros(N)
+Y = np.zeros(N)
+Z = np.zeros(N)
+
+X[0] = 0.0; Y[0] = 3.00
+X[1] = 1.0; Y[1] = 4.51
+X[2] = 2.0; Y[2] = 7.54
+X[3] = 3.0; Y[3] = 8.43
+X[4] = ...]]></summary>
+        <author>
+            <name>sawara</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[どうしてもneovimでjupyterlabしたいんや]]></title>
+        <id>https://zenn.dev/afk2777/articles/zenn-nvim-jupyter</id>
+        <link href="https://zenn.dev/afk2777/articles/zenn-nvim-jupyter"/>
+        <updated>2024-02-04T06:39:07.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+はじめまして、makioです。
+仮想通貨自動売買プログラムの開発をしています。
+データ分析の勉強がてらkaggleに入門しようとブラウザやらvscodeでjupyterを操作していましたが、「vimでやりてぇー」という気持ちが抑えきれずneovim上でjuypterをやる方法を模索しました。
+調べた結果、nevim上で以下のようなことができるようになりました。
+
+juypter notebook(*.ipynb)を開くと自動でpythonファイルとして開く。
+保存時にipynbに編集内容を反映する。
+「#%%」で囲われた箇所を一つのセルとしてコードを実行できる。
+nvimの...]]></summary>
+        <author>
+            <name>makio</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Python】Lambdaで外部APIを使う]]></title>
+        <id>https://zenn.dev/sekochan/articles/721fb53c99f753</id>
+        <link href="https://zenn.dev/sekochan/articles/721fb53c99f753"/>
+        <updated>2024-02-04T02:41:52.000Z</updated>
+        <summary type="html"><![CDATA[requestsは別途installしてimportする必要があるのでurllib3を使う
+例
+import json
+import urllib3
+from urllib3 import PoolManager
+
+def req():
+
+    url = f"https://sample.com"
+    
+    http = urllib3.PoolManager()
+    response = http.request('GET', url)
+    decoded_data = response.data.decode('utf-8')
+    json_data = js...]]></summary>
+        <author>
+            <name>sekochan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Flask] 引数を取って動的なAPIを作成する]]></title>
+        <id>https://zenn.dev/kotopasi/articles/cab921a085775e</id>
+        <link href="https://zenn.dev/kotopasi/articles/cab921a085775e"/>
+        <updated>2024-02-04T02:01:39.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+技育CAMPキャラバンハッカソンで音楽マッチングアプリを作成したときにFlaskでAPIを作成したときの備忘録です
+
+ 動作環境
+
+macOS 14.2.1
+
+
+ 手順
+
+ ルーティングURLに引数をとる
+From flask import Flask
+
+app=Flask(__name__)
+@app.route('/hello/<string:name>')
+def hello(name):
+    return {"hello":name}
+これで/hello/以降に入れた文字列がnameに代入されて返ってくる
+http://localhost:5000/...]]></summary>
+        <author>
+            <name>あまたつ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Python]Spotify APIで楽曲の情報を取得する]]></title>
+        <id>https://zenn.dev/kotopasi/articles/7dc6a1478a5060</id>
+        <link href="https://zenn.dev/kotopasi/articles/7dc6a1478a5060"/>
+        <updated>2024-02-04T01:43:21.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+技育CAMPキャラバンハッカソンで音楽マッチングアプリを作成したときにSpotifyAPIで遊んでみた備忘録です
+
+ 動作環境
+
+macOS 14.2.1
+
+
+ 目標
+
+SpotifyAPIを利用できるようにする
+曲情報を取得する
+
+
+ 手順
+
+ SpotifyAPIを利用できるようにする
+APIダッシュボードからログインしたあと以下を入力することでclientIDとsecretKeyを取得する
+
+
+ 曲情報を取得する
+PythonでSpotify APIを使うために、spotipyライブラリを使う
+import spotipy
+from spotipy.oauth2 im...]]></summary>
+        <author>
+            <name>あまたつ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PythonにおけるSemanticKernelのPlannerの種類を整理する]]></title>
+        <id>https://zenn.dev/nomhiro/articles/sk-plan-type</id>
+        <link href="https://zenn.dev/nomhiro/articles/sk-plan-type"/>
+        <updated>2024-02-03T13:18:09.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+SemanticKernelをまだまだ使いこなせてませんが、AOAIのドーナツ本を読む中で、Plannerの種類がいくつかあることを知りました。そのため、Plannerの種類を整理してみます。
+ここではPythonで使えるPlannerを試します。
+C#版ではいくつかPlannerに変更があったようなので、そちらについては別途調査します。Migrating from the Sequential and Stepwise planners to the new Handlebars and Stepwise planner
+
+ そもそもSemanticKernelとは
+Se...]]></summary>
+        <author>
+            <name>しろくま</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【2024年2月】エンジニアなら読むべき技術書まとめ]]></title>
         <id>https://zenn.dev/yottabyte/articles/74b20c15ca48d3</id>
@@ -3762,214 +4069,6 @@ https://genji.dl.itc.u-tokyo.ac.jp/
 ht...]]></summary>
         <author>
             <name>nakamura196</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[k-meansをライブラリを使わずに実装する]]></title>
-        <id>https://zenn.dev/sasshi_i/articles/048daca095df7a</id>
-        <link href="https://zenn.dev/sasshi_i/articles/048daca095df7a"/>
-        <updated>2024-01-06T13:09:20.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-k-meansは教師なし学習に該当し、与えられたデータを任意の数のグループに分ける手法です。
-本記事ではk-meansのアルゴリズムについて解説します。
-
- k-meansとは？
-k-meansは与えられたデータをk個のグループに分けるクラスタリングの手法です。k-meansではデータの類似度に基づいてグループ分けを行います。類似度はクラスタの中心(後述)とデータの距離が近ければ類似度が高いと判定します。具体的なアルゴリズムは次の章で説明します。
-
- k-meansのアルゴリズム
-k-meansのアルゴリズムの手順は下記の通り:
-
-
-初期化: クラスタの中心となるk個の点(...]]></summary>
-        <author>
-            <name>Satoshi Ito</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【RDKit】MolsToGridImage()で複数行のlegendを大きく表示する]]></title>
-        <id>https://zenn.dev/tyszw/articles/79aad2f806913a</id>
-        <link href="https://zenn.dev/tyszw/articles/79aad2f806913a"/>
-        <updated>2024-01-06T12:59:17.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-RDKitで複数の分子構造を描画する方法の一つとして、rdkit.Chem.Draw.MolsToGridImage()があります。
-MolsToGridImage()では分子構造とセットでlegendを表示させることができますが、legendを複数行にした場合、デフォルトの設定ではlegendのフォントサイズが小さくなってしまいます。
-本記事では、MolsToGridImage()でのlegend(を複数行にした場合)のフォントサイズを調整する方法を紹介します。
-
- 環境・ライブラリ
-
-python: 3.12
-rdkit: 2023.09.3
-
-
- スクリプト
-以下のス...]]></summary>
-        <author>
-            <name>yoshizawa</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[jq の HTML 版を作った]]></title>
-        <id>https://zenn.dev/atodekangae/articles/d6df30539b6214</id>
-        <link href="https://zenn.dev/atodekangae/articles/d6df30539b6214"/>
-        <updated>2024-01-06T12:27:03.000Z</updated>
-        <summary type="html"><![CDATA[jq というコマンドラインツールがあり、JSON のフィルタや加工に非常に便利だが、似たようなものが HTML にも欲しかったので作った。heqというツールで、github 上に公開してある。この記事ではその使い方を紹介する。
-
- インストール
-PyPI に公開してあるので以下でインストールできる。
-pip install heq
-
- コンセプト
-「jq の HTML 版」とは表現したが、jq の制御構造や諸々の関数を全部再実装する利点はあまりない。HTML を JSON の形に落とし込めればそのあとは jq に pipe していかようにも加工できるので、HTML から短い記述で JSO...]]></summary>
-        <author>
-            <name>atodekangae</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C API で Python 拡張モジュールをつくる]]></title>
-        <id>https://zenn.dev/sankantsu/articles/b7f04329ec730c</id>
-        <link href="https://zenn.dev/sankantsu/articles/b7f04329ec730c"/>
-        <updated>2024-01-06T09:56:20.000Z</updated>
-        <summary type="html"><![CDATA[概要
-CPython は Python インタプリタの拡張を記述するための C API を備えていて、C言語で Python の拡張モジュールを書くことができます。身近なところでは、numpy のような C で書かれたライブラリなどもこれにあたります。
-この記事ではそのような Python の拡張モジュールを C API を使って記述するための方法をごく簡単なサンプルを使って説明します。
-C API の知識は拡張モジュールを書くための基礎となるのに加えて、CPython の内部で用いられているデータ構造に触れることになるので CPython インタプリタ実装を読むにあたっての入り口に...]]></summary>
-        <author>
-            <name>sankantsu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SpotipyによるSpotify API入門]]></title>
-        <id>https://zenn.dev/masamichi2004/articles/8024e7753da7a6</id>
-        <link href="https://zenn.dev/masamichi2004/articles/8024e7753da7a6"/>
-        <updated>2024-01-06T08:41:51.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは、学生エンジニアのMasamichiです。最近KPOPにハマっています。LE SSERAFIMの宮脇咲良が可愛すぎます。
-さて、今回は音楽系のAPIで定番のSpotify APIをPythonのライブラリであるSpotipyを使って叩く方法を爆速で紹介します。
-
- Spotify APIのSet Up
-
- アプリを作成
-Spotify for Developersへいき[Login > Dashboard]からCreate Appを選択して以下のように新規アプリを作成します。
-Redirect URIはとりあえず何らかのURLを入れておけばOKです。特にアプリとの関係あり...]]></summary>
-        <author>
-            <name>Masamichi Kanakubo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Seleniumを使って、電話番号から会社名を特定する方法・Google検索して情報を取得する方法(Webスクレイピング)]]></title>
-        <id>https://zenn.dev/aiq_dev/articles/9f37b6445ecf3c</id>
-        <link href="https://zenn.dev/aiq_dev/articles/9f37b6445ecf3c"/>
-        <updated>2024-01-06T07:54:32.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは、AIQ株式会社のフロントエンドエンジニアのまさぴょんです！
-今回は、Seleniumを使って、電話番号から会社名を特定する方法や、Google検索して情報を取得する方法について、解説します。
-
- Seleniumとは？
-Seleniumは、主にWebアプリケーションのブラウザ操作を自動化するためのフレームワークです。
-ブラウザでの操作を自動化するスクリプトを作成することができるため、テスト自動化やWebスクレイピングに使用されます。
-Seleniumの特徴をまとめると次のような内容になります。
-
-オープンソース: Selenium はオープンソースのテストフレームワークで、無...]]></summary>
-        <author>
-            <name>まさぴょん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[最低賃金を出してくれるAPIをノリで作った]]></title>
-        <id>https://zenn.dev/lru/articles/minimum_wage_api_with_vercel</id>
-        <link href="https://zenn.dev/lru/articles/minimum_wage_api_with_vercel"/>
-        <updated>2024-01-06T06:45:51.000Z</updated>
-        <summary type="html"><![CDATA[TL;DR
-https://minimum-wage-api.vercel.app/docs
-https://github.com/LruLab/minimum-wage-api
-これを勢いで作った話.
-
- 始まり
-「求人出すときとか, 既に出してる求人更新するときに最低賃金を毎回確認するの面倒じゃない?」という話がふわふわと聞こえてきました.
-そもそもこのご時世に最低賃金レベルで正規雇用の求人を出すなというのはさておき, 確かに毎回確認するのは単純に手間です.
-じゃあ早い話, 自動チェッカーを作ればいいじゃない, と言いたいところですが厚労省は API を出してくれていないので自動...]]></summary>
-        <author>
-            <name>Lru</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MongoDB＋Unique Indexによるユニークなユーザ管理]]></title>
-        <id>https://zenn.dev/masamichi2004/articles/3357b83dc00101</id>
-        <link href="https://zenn.dev/masamichi2004/articles/3357b83dc00101"/>
-        <updated>2024-01-06T04:38:03.000Z</updated>
-        <summary type="html"><![CDATA[はい、学生エンジニアのMasamichiです。最近YouTubeで「溝部ひかる」にハマってます。この人の動画を見るためだけにTikTokを入れようか検討してます。
-さて、ユーザをデータベースで管理する上で、同じユーザが重複することはあまり好ましくない場合が多いです。そこで今回はMongoDBのUnique Indexというものを使ってユーザが２回目以降に登録の操作を行った場合に、代わりにログインの処理を行うという実装をしてみます。
-
- 全体像
-
- 技術スタック
-使用した技術は以下のとおりです。
-
-
-Python: 使用言語
-FastAPI: バックエンドフレームワーク
-
-GraphQL ...]]></summary>
-        <author>
-            <name>Masamichi Kanakubo</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ターミナルから Python を実行できなかった時の対処方法備忘録]]></title>
-        <id>https://zenn.dev/cazzenn/articles/955c92cff53091</id>
-        <link href="https://zenn.dev/cazzenn/articles/955c92cff53091"/>
-        <updated>2024-01-06T01:07:35.000Z</updated>
-        <summary type="html"><![CDATA[前提情報
-
-Windows11 を使用
-
-
- 遭遇した問題
-
-python インストール後、ターミナルで py ファイルを実行しても「python」だけ返ってきてスクリプトを実行できない
-
-
-
-
-
-
- やったこと
-
-インストールしていた python をアンインストール
-アプリ実行エイリアス画面で、pythonのインストーラ2つを「オフ」にする
-python を再インストール
-
-その際、「Add Python 〇.〇 to PATH」にチェックを入れる
-
-
-ターミナルで python -v でインストールを確認
-
-Python 3.12.1 のように返ってくれば OK
-コマンドを打つ...]]></summary>
-        <author>
-            <name>CazunariMuraho</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Streamlit] ローカル環境か否かで処理を分岐]]></title>
-        <id>https://zenn.dev/shimat/articles/0c00e3c83d8cf0</id>
-        <link href="https://zenn.dev/shimat/articles/0c00e3c83d8cf0"/>
-        <updated>2024-01-06T00:12:25.000Z</updated>
-        <summary type="html"><![CDATA[もっと良い方法求む！
-
- 背景
-Streamlitによる開発では個人的に、ローカル環境でのデバッグ時とデプロイ先での本番動作時とで、処理を分岐したいシーンがよくあります。典型的には以下です。
-
-ローカルの開発環境では、データの微調整が多いので、キャッシュ (@st.cache_data) を無効にしたい
-デプロイ先であるCommunity Cloudでは、速度向上のためキャッシュを有効にしたい
-
-
- 手法概要
-
-デコレータ (@st.cache_data) を効かせるかどうか条件分岐可能にする
-ローカル環境と他の環境をコード上で判定する
-
-雑な疑似コードとしては、こういうことがしたいわけ...]]></summary>
-        <author>
-            <name>shimat</name>
         </author>
     </entry>
 </feed>

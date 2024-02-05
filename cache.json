@@ -12,6 +12,216 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/headwaters/articles/f3540383b4bf24",
+          "author": "Shuichiro Sakata",
+          "description": "ゴール：Windows PCに配置したファイルをWindows上のIoT Edgeモジュールから閲覧および編集ができる\nRaspberry Piに入れた自作IoT Edgeモジュールを用いて、Raspberry Piに配置したファイルをIoT Edgeモジュールから閲覧や編集ができるようにしました。\nそのモジュールをWindows PCに入れて実行することになり、ファイル共有処理も使用する必要が出ました。\n本記事はその共有の方法についてまとめています。\n\n 説明すること\n\nゴールを達成するためのIoT Edgeモジュールのデプロイ設定\nWindowsの共有フォルダおよびその中に入れる...",
+          "link": "https://zenn.dev/headwaters/articles/f3540383b4bf24",
+          "publishedOn": "2024-02-05T00:01:08.000Z",
+          "wordCount": 1018,
+          "title": "Windows PCとWindows上のIoT Edgeモジュール間でファイル共有を行う",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--7NGuVTgC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Windows%2520PC%25E3%2581%25A8Windows%25E4%25B8%258A%25E3%2581%25AEIoT%2520Edge%25E3%2583%25A2%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25AB%25E9%2596%2593%25E3%2581%25A7%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E5%2585%25B1%25E6%259C%2589%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Shuichiro%2520Sakata%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRiYmQ1ZTMxYzQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--7NGuVTgC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Windows%2520PC%25E3%2581%25A8Windows%25E4%25B8%258A%25E3%2581%25AEIoT%2520Edge%25E3%2583%25A2%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25AB%25E9%2596%2593%25E3%2581%25A7%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E5%2585%25B1%25E6%259C%2589%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Shuichiro%2520Sakata%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRiYmQ1ZTMxYzQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/efx/articles/d9671363c6d257",
+          "author": "Kentaro Maeda",
+          "description": "/tmpと /dev/shmが使えた。\nSnowpark Optimized Warehouseに新たなユースケースを見出したかもしれない。\n\n なぜほしいか？\nファイルパスで非構造化ファイルを受け取るライブラリはよくある。\n例えば、画像処理ライブラリのPillowはImage.open(image_path)のようにファイルパスを受け取る。他にも、MLモデルや動画ファイルをファイルパスとして渡すことはよくあると思う。\nただ、UDFからほとんどの領域は書き込み権限がない。\nPermissionError: [Errno 1] Operation not permitted\n\n 結論\n冒頭...",
+          "link": "https://zenn.dev/efx/articles/d9671363c6d257",
+          "publishedOn": "2024-02-05T00:00:00.000Z",
+          "wordCount": 600,
+          "title": "[Snowflake]UDFでユーザー管理のキャッシュ領域がほしい",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--w40MgufQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BSnowflake%255DUDF%25E3%2581%25A7%25E3%2583%25A6%25E3%2583%25BC%25E3%2582%25B6%25E3%2583%25BC%25E7%25AE%25A1%25E7%2590%2586%25E3%2581%25AE%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E9%25A0%2598%25E5%259F%259F%25E3%2581%258C%25E3%2581%25BB%25E3%2581%2597%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kentaro%2520Maeda%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FjYTJlMzdkM2QuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--w40MgufQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BSnowflake%255DUDF%25E3%2581%25A7%25E3%2583%25A6%25E3%2583%25BC%25E3%2582%25B6%25E3%2583%25BC%25E7%25AE%25A1%25E7%2590%2586%25E3%2581%25AE%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E9%25A0%2598%25E5%259F%259F%25E3%2581%258C%25E3%2581%25BB%25E3%2581%2597%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kentaro%2520Maeda%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FjYTJlMzdkM2QuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/laiso/articles/cfc7277d92b7f3",
+          "author": "laiso",
+          "description": "昨年末ぐらいからworkerdのPyodide統合の開発が活発になっている\nsearch results: repo:cloudflare/workerd  pyodide\nPyodideはWasmを使ってPythonインタプリターをブラウザ上で実行する環境で、これがリリースされるとRustサポートのようにCloudflare WorkersにPythonで書いたコードを直接デプロイできるようになると思われる\nhttps://developers.cloudflare.com/workers/runtime-apis/webassembly/rust/\ncloudflare/python...",
+          "link": "https://zenn.dev/laiso/articles/cfc7277d92b7f3",
+          "publishedOn": "2024-02-04T13:16:51.000Z",
+          "wordCount": 336,
+          "title": "workerdのpyodide統合を試す",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--ngtLQYWM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:workerd%25E3%2581%25AEpyodide%25E7%25B5%25B1%25E5%2590%2588%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:laiso%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4Nzc0MDcyMDcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--ngtLQYWM--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:workerd%25E3%2581%25AEpyodide%25E7%25B5%25B1%25E5%2590%2588%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:laiso%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM4Nzc0MDcyMDcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/khisa/articles/397b1d9e289352",
+          "author": "ひさ",
+          "description": "PythonのスクレイピングフレームワークScrapyを利用して、プレスなどのPDFファイルを収集、LLM（OpenAI API）でサマリを作成し、結果をデータベースに格納するという一連の流れを実現してみました。Scrapy、OpenAI APIともごく基本的な使い方しかしていませんが、あっという間に自動収集するプログラムが作成できましたので紹介します。\n\n Scrapyで収集したPDFファイルの内容をLLMに読み込ませてサマリーを作成\n今回やりたいことは以下のとおりです。\n\nScrapyで特定のWebサイトの最新情報（今回はプレスリリースのタイトル、日付、PDFファイルなど）を取得する...",
+          "link": "https://zenn.dev/khisa/articles/397b1d9e289352",
+          "publishedOn": "2024-02-04T13:15:16.000Z",
+          "wordCount": 3424,
+          "title": "scrapyでプレスのPDFファイルを収集してLLMで要約する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--aqGdVlDj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:scrapy%25E3%2581%25A7%25E3%2583%2597%25E3%2583%25AC%25E3%2582%25B9%25E3%2581%25AEPDF%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E5%258F%258E%25E9%259B%2586%25E3%2581%2597%25E3%2581%25A6LLM%25E3%2581%25A7%25E8%25A6%2581%25E7%25B4%2584%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B2%25E3%2581%2595%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTHFKaUVHa1VQMkc5WGpIeHlTa3p4bld3Z3JNcHFhT19hUFVKcWEyQ2YxWUZFPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--aqGdVlDj--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:scrapy%25E3%2581%25A7%25E3%2583%2597%25E3%2583%25AC%25E3%2582%25B9%25E3%2581%25AEPDF%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E3%2582%2592%25E5%258F%258E%25E9%259B%2586%25E3%2581%2597%25E3%2581%25A6LLM%25E3%2581%25A7%25E8%25A6%2581%25E7%25B4%2584%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25B2%25E3%2581%2595%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTHFKaUVHa1VQMkc5WGpIeHlTa3p4bld3Z3JNcHFhT19hUFVKcWEyQ2YxWUZFPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/kotopasi/articles/ee03e9f3343ad6",
+          "author": "あまたつ",
+          "description": "はじめに\nPythonで実装した関数をFlaskのAPIで返したら日本語だけ文字化けしたときの対処法を載せます\n\n 動作環境\n\nmac macOS 14.2.1\nPython 3.9\n\n\n 手順\n以下のコードを追加します\nfrom flask import Flask\n\napp=Flask(__name__)\n+ app.json.ensure_ascii = False\nflaskライブラリのjsonifyで解決できるという記事が多かったのですが、Flaskのバージョンが2.3.2 以上の場合､Flaskの設定ファイルから文字コードの設定を変更する必要があるみたいです。\n\n おわり...",
+          "link": "https://zenn.dev/kotopasi/articles/ee03e9f3343ad6",
+          "publishedOn": "2024-02-04T09:56:55.000Z",
+          "wordCount": 131,
+          "title": "[Python] APIで返した日本語が文字化けしたときの対処法",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--H0XHUDxv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BPython%255D%2520API%25E3%2581%25A7%25E8%25BF%2594%25E3%2581%2597%25E3%2581%259F%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E3%2581%258C%25E6%2596%2587%25E5%25AD%2597%25E5%258C%2596%25E3%2581%2591%25E3%2581%2597%25E3%2581%259F%25E3%2581%25A8%25E3%2581%258D%25E3%2581%25AE%25E5%25AF%25BE%25E5%2587%25A6%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2581%25BE%25E3%2581%259F%25E3%2581%25A4%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FmOWU0NjBmZDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--H0XHUDxv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BPython%255D%2520API%25E3%2581%25A7%25E8%25BF%2594%25E3%2581%2597%25E3%2581%259F%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E3%2581%258C%25E6%2596%2587%25E5%25AD%2597%25E5%258C%2596%25E3%2581%2591%25E3%2581%2597%25E3%2581%259F%25E3%2581%25A8%25E3%2581%258D%25E3%2581%25AE%25E5%25AF%25BE%25E5%2587%25A6%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2581%25BE%25E3%2581%259F%25E3%2581%25A4%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FmOWU0NjBmZDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/kotopasi/articles/10b9d575b563c7",
+          "author": "あまたつ",
+          "description": "はじめに\n技育CAMPキャラバン@東京ハッカソンでフロントバック間のAPIの繋ぎ込みに苦戦しましたが、バックエンド側でCORSを許可することで解決しました\n\n 動作環境\n\nmac macOS 14.2.1\nPython 3.9\n\n\n 手順\nCORSライブラリをimportして設定するだけです\nfrom flask import Flask\n+ from flask_cors import CORS\n\napp=Flask(__name__)\n+ CORS(app)\n\n おわりに\nCORSの理解浅いので勉強しなきゃ...\n\n 参考",
+          "link": "https://zenn.dev/kotopasi/articles/10b9d575b563c7",
+          "publishedOn": "2024-02-04T09:54:34.000Z",
+          "wordCount": 140,
+          "title": "[Python] バックエンド側でCORSを許可する設定",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--x6q4bsnQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BPython%255D%2520%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2589%25E5%2581%25B4%25E3%2581%25A7CORS%25E3%2582%2592%25E8%25A8%25B1%25E5%258F%25AF%25E3%2581%2599%25E3%2582%258B%25E8%25A8%25AD%25E5%25AE%259A%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2581%25BE%25E3%2581%259F%25E3%2581%25A4%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FmOWU0NjBmZDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--x6q4bsnQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BPython%255D%2520%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2582%25A8%25E3%2583%25B3%25E3%2583%2589%25E5%2581%25B4%25E3%2581%25A7CORS%25E3%2582%2592%25E8%25A8%25B1%25E5%258F%25AF%25E3%2581%2599%25E3%2582%258B%25E8%25A8%25AD%25E5%25AE%259A%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2581%25BE%25E3%2581%259F%25E3%2581%25A4%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FmOWU0NjBmZDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/takuty/articles/5a94628bd87179",
+          "author": "Takuty",
+          "description": "はじめに\nFastAPI で API 開発をしていて Get メソッドを叩く時にhttp://lcalhost:8080/items?name=Aのようにクエリパラメータに対応した Get メソッドはよく出でくると思います\nただ、検索ページの API のようにクエリパラメータが５個 10 個と必要になった時にどうしていますか\nメソッドの引数に５個 10 個と指定するのはあまりに不自然だと思いましたので現状これが良さそうだなというのをこちらに記載していきたい思います\n\n 前提\n商品のリストを Get メソッドで検索する、という想定です\n検索項目としては\n\n商品の ID\n商品名\n商品値段...",
+          "link": "https://zenn.dev/takuty/articles/5a94628bd87179",
+          "publishedOn": "2024-02-04T08:36:12.000Z",
+          "wordCount": 1447,
+          "title": "FastAPIのGetメソッドパラメータをBaseModelで受け取れるようにしてみる",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--iAO-z2JX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%25E3%2581%25AEGet%25E3%2583%25A1%25E3%2582%25BD%25E3%2583%2583%25E3%2583%2589%25E3%2583%2591%25E3%2583%25A9%25E3%2583%25A1%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592BaseModel%25E3%2581%25A7%25E5%258F%2597%25E3%2581%2591%25E5%258F%2596%25E3%2582%258C%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Takuty%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JjYjE0OTVjMjQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--iAO-z2JX--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%25E3%2581%25AEGet%25E3%2583%25A1%25E3%2582%25BD%25E3%2583%2583%25E3%2583%2589%25E3%2583%2591%25E3%2583%25A9%25E3%2583%25A1%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592BaseModel%25E3%2581%25A7%25E5%258F%2597%25E3%2581%2591%25E5%258F%2596%25E3%2582%258C%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Takuty%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JjYjE0OTVjMjQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/massu_devix/articles/8184386de66394",
+          "author": "mas_dx",
+          "description": "はじめに\nprefect の構成要素のうち、 deployment について理解します。\nまた説明の中で、関連要素である flow や task についても触れます。\n前回は prefect の基本要素について触れました。\nhttps://zenn.dev/massu_devix/articles/a016774865d647\n\n deployment とは\ndeployment とは、 prefect に登録した flow を リモートで実行可能なエンティティ に昇華させるオブジェクトです。\nflow とは prefect におけるワークフローとしての起動単位です。 flow を起...",
+          "link": "https://zenn.dev/massu_devix/articles/8184386de66394",
+          "publishedOn": "2024-02-04T07:58:50.000Z",
+          "wordCount": 805,
+          "title": "prefect の deployment について理解する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--_F2rSuHC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:prefect%2520%25E3%2581%25AE%2520deployment%2520%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:mas_dx%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUxMDc1MzMyYmEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--_F2rSuHC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:prefect%2520%25E3%2581%25AE%2520deployment%2520%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:mas_dx%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUxMDc1MzMyYmEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/sawarae/articles/27d848a17fe7fc",
+          "author": "sawara",
+          "description": "「Pythonによる数値計算入門」で最小二乗法の例をnumpy.linalg.solveで解く例があったので、それのsvd版を書いておきます。\nimport numpy as np\n\n# y = 2x + 3に誤差を加えたデータ\n# 数値はPythonによる数値計算入門より\n\nN = 5\nX = np.zeros(N)\nY = np.zeros(N)\nZ = np.zeros(N)\n\nX[0] = 0.0; Y[0] = 3.00\nX[1] = 1.0; Y[1] = 4.51\nX[2] = 2.0; Y[2] = 7.54\nX[3] = 3.0; Y[3] = 8.43\nX[4] = ...",
+          "link": "https://zenn.dev/sawarae/articles/27d848a17fe7fc",
+          "publishedOn": "2024-02-04T07:00:16.000Z",
+          "wordCount": 642,
+          "title": "numpyで特異値分解",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--FWHAfPoW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:numpy%25E3%2581%25A7%25E7%2589%25B9%25E7%2595%25B0%25E5%2580%25A4%25E5%2588%2586%25E8%25A7%25A3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sawara%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y3Zya1d3WGwybERvWGo2X3NDNEt4am5xa2R2c1dfSV9pc1Rpci09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--FWHAfPoW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:numpy%25E3%2581%25A7%25E7%2589%25B9%25E7%2595%25B0%25E5%2580%25A4%25E5%2588%2586%25E8%25A7%25A3%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sawara%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y3Zya1d3WGwybERvWGo2X3NDNEt4am5xa2R2c1dfSV9pc1Rpci09czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/afk2777/articles/zenn-nvim-jupyter",
+          "author": "makio",
+          "description": "はじめに\nはじめまして、makioです。\n仮想通貨自動売買プログラムの開発をしています。\nデータ分析の勉強がてらkaggleに入門しようとブラウザやらvscodeでjupyterを操作していましたが、「vimでやりてぇー」という気持ちが抑えきれずneovim上でjuypterをやる方法を模索しました。\n調べた結果、nevim上で以下のようなことができるようになりました。\n\njuypter notebook(*.ipynb)を開くと自動でpythonファイルとして開く。\n保存時にipynbに編集内容を反映する。\n「#%%」で囲われた箇所を一つのセルとしてコードを実行できる。\nnvimの...",
+          "link": "https://zenn.dev/afk2777/articles/zenn-nvim-jupyter",
+          "publishedOn": "2024-02-04T06:39:07.000Z",
+          "wordCount": 453,
+          "title": "どうしてもneovimでjupyterlabしたいんや",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--fcdKsGCx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%25A9%25E3%2581%2586%25E3%2581%2597%25E3%2581%25A6%25E3%2582%2582neovim%25E3%2581%25A7jupyterlab%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%25E3%2582%2593%25E3%2582%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:makio%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzU5NjE4NjhmNjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--fcdKsGCx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%25A9%25E3%2581%2586%25E3%2581%2597%25E3%2581%25A6%25E3%2582%2582neovim%25E3%2581%25A7jupyterlab%25E3%2581%2597%25E3%2581%259F%25E3%2581%2584%25E3%2582%2593%25E3%2582%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:makio%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzU5NjE4NjhmNjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/sekochan/articles/721fb53c99f753",
+          "author": "sekochan",
+          "description": "requestsは別途installしてimportする必要があるのでurllib3を使う\n例\nimport json\nimport urllib3\nfrom urllib3 import PoolManager\n\ndef req():\n\n    url = f\"https://sample.com\"\n    \n    http = urllib3.PoolManager()\n    response = http.request('GET', url)\n    decoded_data = response.data.decode('utf-8')\n    json_data = js...",
+          "link": "https://zenn.dev/sekochan/articles/721fb53c99f753",
+          "publishedOn": "2024-02-04T02:41:52.000Z",
+          "wordCount": 104,
+          "title": "【Python】Lambdaで外部APIを使う",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--qIX3u4it--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591Lambda%25E3%2581%25A7%25E5%25A4%2596%25E9%2583%25A8API%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sekochan%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSVBxaUFjNERyaWZ0YkZMd0o0YVQzb3V0NEtIUmJVZk5fX21yNUp0alJMMHc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--qIX3u4it--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591Lambda%25E3%2581%25A7%25E5%25A4%2596%25E9%2583%25A8API%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sekochan%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSVBxaUFjNERyaWZ0YkZMd0o0YVQzb3V0NEtIUmJVZk5fX21yNUp0alJMMHc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/kotopasi/articles/cab921a085775e",
+          "author": "あまたつ",
+          "description": "はじめに\n技育CAMPキャラバンハッカソンで音楽マッチングアプリを作成したときにFlaskでAPIを作成したときの備忘録です\n\n 動作環境\n\nmacOS 14.2.1\n\n\n 手順\n\n ルーティングURLに引数をとる\nFrom flask import Flask\n\napp=Flask(__name__)\n@app.route('/hello/<string:name>')\ndef hello(name):\n    return {\"hello\":name}\nこれで/hello/以降に入れた文字列がnameに代入されて返ってくる\nhttp://localhost:5000/...",
+          "link": "https://zenn.dev/kotopasi/articles/cab921a085775e",
+          "publishedOn": "2024-02-04T02:01:39.000Z",
+          "wordCount": 164,
+          "title": "[Flask] 引数を取って動的なAPIを作成する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--diHFOgR7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BFlask%255D%2520%25E5%25BC%2595%25E6%2595%25B0%25E3%2582%2592%25E5%258F%2596%25E3%2581%25A3%25E3%2581%25A6%25E5%258B%2595%25E7%259A%2584%25E3%2581%25AAAPI%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2581%25BE%25E3%2581%259F%25E3%2581%25A4%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FmOWU0NjBmZDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--diHFOgR7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BFlask%255D%2520%25E5%25BC%2595%25E6%2595%25B0%25E3%2582%2592%25E5%258F%2596%25E3%2581%25A3%25E3%2581%25A6%25E5%258B%2595%25E7%259A%2584%25E3%2581%25AAAPI%25E3%2582%2592%25E4%25BD%259C%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2581%25BE%25E3%2581%259F%25E3%2581%25A4%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FmOWU0NjBmZDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/kotopasi/articles/7dc6a1478a5060",
+          "author": "あまたつ",
+          "description": "はじめに\n技育CAMPキャラバンハッカソンで音楽マッチングアプリを作成したときにSpotifyAPIで遊んでみた備忘録です\n\n 動作環境\n\nmacOS 14.2.1\n\n\n 目標\n\nSpotifyAPIを利用できるようにする\n曲情報を取得する\n\n\n 手順\n\n SpotifyAPIを利用できるようにする\nAPIダッシュボードからログインしたあと以下を入力することでclientIDとsecretKeyを取得する\n\n\n 曲情報を取得する\nPythonでSpotify APIを使うために、spotipyライブラリを使う\nimport spotipy\nfrom spotipy.oauth2 im...",
+          "link": "https://zenn.dev/kotopasi/articles/7dc6a1478a5060",
+          "publishedOn": "2024-02-04T01:43:21.000Z",
+          "wordCount": 416,
+          "title": "[Python]Spotify APIで楽曲の情報を取得する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--8_bcBRMI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BPython%255DSpotify%2520API%25E3%2581%25A7%25E6%25A5%25BD%25E6%259B%25B2%25E3%2581%25AE%25E6%2583%2585%25E5%25A0%25B1%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2581%25BE%25E3%2581%259F%25E3%2581%25A4%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FmOWU0NjBmZDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--8_bcBRMI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BPython%255DSpotify%2520API%25E3%2581%25A7%25E6%25A5%25BD%25E6%259B%25B2%25E3%2581%25AE%25E6%2583%2585%25E5%25A0%25B1%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2582%25E3%2581%25BE%25E3%2581%259F%25E3%2581%25A4%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FmOWU0NjBmZDUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/nomhiro/articles/sk-plan-type",
+          "author": "しろくま",
+          "description": "はじめに\nSemanticKernelをまだまだ使いこなせてませんが、AOAIのドーナツ本を読む中で、Plannerの種類がいくつかあることを知りました。そのため、Plannerの種類を整理してみます。\nここではPythonで使えるPlannerを試します。\nC#版ではいくつかPlannerに変更があったようなので、そちらについては別途調査します。Migrating from the Sequential and Stepwise planners to the new Handlebars and Stepwise planner\n\n そもそもSemanticKernelとは\nSe...",
+          "link": "https://zenn.dev/nomhiro/articles/sk-plan-type",
+          "publishedOn": "2024-02-03T13:18:09.000Z",
+          "wordCount": 2141,
+          "title": "PythonにおけるSemanticKernelのPlannerの種類を整理する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--L_w2EZqL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2591%25E3%2582%258BSemanticKernel%25E3%2581%25AEPlanner%25E3%2581%25AE%25E7%25A8%25AE%25E9%25A1%259E%25E3%2582%2592%25E6%2595%25B4%25E7%2590%2586%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2582%258D%25E3%2581%258F%25E3%2581%25BE%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0YmFmOGY4OTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--L_w2EZqL--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2591%25E3%2582%258BSemanticKernel%25E3%2581%25AEPlanner%25E3%2581%25AE%25E7%25A8%25AE%25E9%25A1%259E%25E3%2582%2592%25E6%2595%25B4%25E7%2590%2586%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2582%258D%25E3%2581%258F%25E3%2581%25BE%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0YmFmOGY4OTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
           "id": "https://zenn.dev/yottabyte/articles/74b20c15ca48d3",
           "author": "Raio｜高校生エンジニア",
           "description": "生成AI時代を勝ち抜く事業・組織のつくり方\n\n\n生成AI時代のビジネス・サービスづくりの教科書。\n生成AIをいかに活用して新たな価値を生むか、成功のフレームワークを大公開！\nOpenAIの対話型AI「ChatGPT」をはじめとした生成AIは、もはや一過性のブームではない。\nとはいえ、\n「使ってみたけれど思ったほど仕事に役立たない」「どう活用すべきか分からない」\n「ビジネスに本当に生かせるのか疑問」など、\n懐疑的な声もあふれている。\n本書は、そんな疑いや疑問を払拭するための指南書だ。\nそれも、経営層や事業リーダー、サービスづくりに携わる方たちが真に求めている知識やノウハウを提供すること...",
@@ -2615,156 +2825,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--cghZUVTV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2587%25E3%2582%25B8%25E3%2582%25BF%25E3%2583%25AB%25E6%25BA%2590%25E6%25B0%258F%25E7%2589%25A9%25E8%25AA%259E%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2591%25E3%2582%258B%25E6%25A0%25A1%25E7%2595%25B0%25E6%25BA%2590%25E6%25B0%258F%25E7%2589%25A9%25E8%25AA%259E%25E3%2581%25A8%25E7%258F%25BE%25E4%25BB%25A3%25E8%25AA%259E%25E8%25A8%25B3%25E3%2581%25AE%25E5%25AF%25BE%25E5%25BF%259C%25E3%2581%25A5%25E3%2581%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nakamura196%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pkd3BpX1gzTWIzV3VqTnVnV2tPTlJlU3VsNFNTN1BNMWlPQm9LRm5JPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/sasshi_i/articles/048daca095df7a",
-          "author": "Satoshi Ito",
-          "description": "はじめに\nk-meansは教師なし学習に該当し、与えられたデータを任意の数のグループに分ける手法です。\n本記事ではk-meansのアルゴリズムについて解説します。\n\n k-meansとは？\nk-meansは与えられたデータをk個のグループに分けるクラスタリングの手法です。k-meansではデータの類似度に基づいてグループ分けを行います。類似度はクラスタの中心(後述)とデータの距離が近ければ類似度が高いと判定します。具体的なアルゴリズムは次の章で説明します。\n\n k-meansのアルゴリズム\nk-meansのアルゴリズムの手順は下記の通り:\n\n\n初期化: クラスタの中心となるk個の点(...",
-          "link": "https://zenn.dev/sasshi_i/articles/048daca095df7a",
-          "publishedOn": "2024-01-06T13:09:20.000Z",
-          "wordCount": 1020,
-          "title": "k-meansをライブラリを使わずに実装する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--F9G6-nvr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:k-means%25E3%2582%2592%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2582%2592%25E4%25BD%25BF%25E3%2582%258F%25E3%2581%259A%25E3%2581%25AB%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Satoshi%2520Ito%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvcy5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--F9G6-nvr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:k-means%25E3%2582%2592%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2582%2592%25E4%25BD%25BF%25E3%2582%258F%25E3%2581%259A%25E3%2581%25AB%25E5%25AE%259F%25E8%25A3%2585%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Satoshi%2520Ito%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2Rhcmsvcy5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/tyszw/articles/79aad2f806913a",
-          "author": "yoshizawa",
-          "description": "はじめに\nRDKitで複数の分子構造を描画する方法の一つとして、rdkit.Chem.Draw.MolsToGridImage()があります。\nMolsToGridImage()では分子構造とセットでlegendを表示させることができますが、legendを複数行にした場合、デフォルトの設定ではlegendのフォントサイズが小さくなってしまいます。\n本記事では、MolsToGridImage()でのlegend(を複数行にした場合)のフォントサイズを調整する方法を紹介します。\n\n 環境・ライブラリ\n\npython: 3.12\nrdkit: 2023.09.3\n\n\n スクリプト\n以下のス...",
-          "link": "https://zenn.dev/tyszw/articles/79aad2f806913a",
-          "publishedOn": "2024-01-06T12:59:17.000Z",
-          "wordCount": 674,
-          "title": "【RDKit】MolsToGridImage()で複数行のlegendを大きく表示する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--aFKYv7Vu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590RDKit%25E3%2580%2591MolsToGridImage%2528%2529%25E3%2581%25A7%25E8%25A4%2587%25E6%2595%25B0%25E8%25A1%258C%25E3%2581%25AElegend%25E3%2582%2592%25E5%25A4%25A7%25E3%2581%258D%25E3%2581%258F%25E8%25A1%25A8%25E7%25A4%25BA%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yoshizawa%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZlNTBiOWIyMzYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--aFKYv7Vu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590RDKit%25E3%2580%2591MolsToGridImage%2528%2529%25E3%2581%25A7%25E8%25A4%2587%25E6%2595%25B0%25E8%25A1%258C%25E3%2581%25AElegend%25E3%2582%2592%25E5%25A4%25A7%25E3%2581%258D%25E3%2581%258F%25E8%25A1%25A8%25E7%25A4%25BA%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yoshizawa%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZlNTBiOWIyMzYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/atodekangae/articles/d6df30539b6214",
-          "author": "atodekangae",
-          "description": "jq というコマンドラインツールがあり、JSON のフィルタや加工に非常に便利だが、似たようなものが HTML にも欲しかったので作った。heqというツールで、github 上に公開してある。この記事ではその使い方を紹介する。\n\n インストール\nPyPI に公開してあるので以下でインストールできる。\npip install heq\n\n コンセプト\n「jq の HTML 版」とは表現したが、jq の制御構造や諸々の関数を全部再実装する利点はあまりない。HTML を JSON の形に落とし込めればそのあとは jq に pipe していかようにも加工できるので、HTML から短い記述で JSO...",
-          "link": "https://zenn.dev/atodekangae/articles/d6df30539b6214",
-          "publishedOn": "2024-01-06T12:27:03.000Z",
-          "wordCount": 953,
-          "title": "jq の HTML 版を作った",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--9xwbrIzn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:jq%2520%25E3%2581%25AE%2520HTML%2520%25E7%2589%2588%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:atodekangae%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvYS5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--9xwbrIzn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:jq%2520%25E3%2581%25AE%2520HTML%2520%25E7%2589%2588%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:atodekangae%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvYS5wbmc=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/sankantsu/articles/b7f04329ec730c",
-          "author": "sankantsu",
-          "description": "概要\nCPython は Python インタプリタの拡張を記述するための C API を備えていて、C言語で Python の拡張モジュールを書くことができます。身近なところでは、numpy のような C で書かれたライブラリなどもこれにあたります。\nこの記事ではそのような Python の拡張モジュールを C API を使って記述するための方法をごく簡単なサンプルを使って説明します。\nC API の知識は拡張モジュールを書くための基礎となるのに加えて、CPython の内部で用いられているデータ構造に触れることになるので CPython インタプリタ実装を読むにあたっての入り口に...",
-          "link": "https://zenn.dev/sankantsu/articles/b7f04329ec730c",
-          "publishedOn": "2024-01-06T09:56:20.000Z",
-          "wordCount": 3144,
-          "title": "C API で Python 拡張モジュールをつくる",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--DCzMaPQP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:C%2520API%2520%25E3%2581%25A7%2520Python%2520%25E6%258B%25A1%25E5%25BC%25B5%25E3%2583%25A2%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25AB%25E3%2582%2592%25E3%2581%25A4%25E3%2581%258F%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sankantsu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRmOTc0Nzk2ODEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--DCzMaPQP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:C%2520API%2520%25E3%2581%25A7%2520Python%2520%25E6%258B%25A1%25E5%25BC%25B5%25E3%2583%25A2%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25AB%25E3%2582%2592%25E3%2581%25A4%25E3%2581%258F%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:sankantsu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRmOTc0Nzk2ODEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/masamichi2004/articles/8024e7753da7a6",
-          "author": "Masamichi Kanakubo",
-          "description": "こんにちは、学生エンジニアのMasamichiです。最近KPOPにハマっています。LE SSERAFIMの宮脇咲良が可愛すぎます。\nさて、今回は音楽系のAPIで定番のSpotify APIをPythonのライブラリであるSpotipyを使って叩く方法を爆速で紹介します。\n\n Spotify APIのSet Up\n\n アプリを作成\nSpotify for Developersへいき[Login > Dashboard]からCreate Appを選択して以下のように新規アプリを作成します。\nRedirect URIはとりあえず何らかのURLを入れておけばOKです。特にアプリとの関係あり...",
-          "link": "https://zenn.dev/masamichi2004/articles/8024e7753da7a6",
-          "publishedOn": "2024-01-06T08:41:51.000Z",
-          "wordCount": 1784,
-          "title": "SpotipyによるSpotify API入門",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--Qt4f1oNq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Spotipy%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258BSpotify%2520API%25E5%2585%25A5%25E9%2596%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Masamichi%2520Kanakubo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M5MTFkMjk2OTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Qt4f1oNq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Spotipy%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258BSpotify%2520API%25E5%2585%25A5%25E9%2596%2580%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Masamichi%2520Kanakubo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M5MTFkMjk2OTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/aiq_dev/articles/9f37b6445ecf3c",
-          "author": "まさぴょん",
-          "description": "こんにちは、AIQ株式会社のフロントエンドエンジニアのまさぴょんです！\n今回は、Seleniumを使って、電話番号から会社名を特定する方法や、Google検索して情報を取得する方法について、解説します。\n\n Seleniumとは？\nSeleniumは、主にWebアプリケーションのブラウザ操作を自動化するためのフレームワークです。\nブラウザでの操作を自動化するスクリプトを作成することができるため、テスト自動化やWebスクレイピングに使用されます。\nSeleniumの特徴をまとめると次のような内容になります。\n\nオープンソース: Selenium はオープンソースのテストフレームワークで、無...",
-          "link": "https://zenn.dev/aiq_dev/articles/9f37b6445ecf3c",
-          "publishedOn": "2024-01-06T07:54:32.000Z",
-          "wordCount": 1736,
-          "title": "Seleniumを使って、電話番号から会社名を特定する方法・Google検索して情報を取得する方法(Webスクレイピング)",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--Jk-E0rnf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Selenium%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2580%2581%25E9%259B%25BB%25E8%25A9%25B1%25E7%2595%25AA%25E5%258F%25B7%25E3%2581%258B%25E3%2582%2589%25E4%25BC%259A%25E7%25A4%25BE%25E5%2590%258D%25E3%2582%2592%25E7%2589%25B9%25E5%25AE%259A%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%25E3%2583%25BBGoogle%25E6%25A4%259C%25E7%25B4%25A2%25E3%2581%2597%25E3%2581%25A6%25E6%2583%2585%25E5%25A0%25B1%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2528Web%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AC%25E3%2582%25A4...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%25BE%25E3%2581%2595%25E3%2581%25B4%25E3%2582%2587%25E3%2582%2593%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q5MzZmYTU3YzAuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:AIQ%2520Tech%2520Blog%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hZWDhyNWVCOGNkZmExeVRBNmhEMWF4bkFpYnJRUXpCd01EbXhIdVFRPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Jk-E0rnf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Selenium%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E3%2580%2581%25E9%259B%25BB%25E8%25A9%25B1%25E7%2595%25AA%25E5%258F%25B7%25E3%2581%258B%25E3%2582%2589%25E4%25BC%259A%25E7%25A4%25BE%25E5%2590%258D%25E3%2582%2592%25E7%2589%25B9%25E5%25AE%259A%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%25E3%2583%25BBGoogle%25E6%25A4%259C%25E7%25B4%25A2%25E3%2581%2597%25E3%2581%25A6%25E6%2583%2585%25E5%25A0%25B1%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2528Web%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AC%25E3%2582%25A4...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2581%25BE%25E3%2581%2595%25E3%2581%25B4%25E3%2582%2587%25E3%2582%2593%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q5MzZmYTU3YzAuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:AIQ%2520Tech%2520Blog%2520%2528%25E6%259C%2589%25E5%25BF%2597%2529%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hZWDhyNWVCOGNkZmExeVRBNmhEMWF4bkFpYnJRUXpCd01EbXhIdVFRPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/lru/articles/minimum_wage_api_with_vercel",
-          "author": "Lru",
-          "description": "TL;DR\nhttps://minimum-wage-api.vercel.app/docs\nhttps://github.com/LruLab/minimum-wage-api\nこれを勢いで作った話.\n\n 始まり\n「求人出すときとか, 既に出してる求人更新するときに最低賃金を毎回確認するの面倒じゃない?」という話がふわふわと聞こえてきました.\nそもそもこのご時世に最低賃金レベルで正規雇用の求人を出すなというのはさておき, 確かに毎回確認するのは単純に手間です.\nじゃあ早い話, 自動チェッカーを作ればいいじゃない, と言いたいところですが厚労省は API を出してくれていないので自動...",
-          "link": "https://zenn.dev/lru/articles/minimum_wage_api_with_vercel",
-          "publishedOn": "2024-01-06T06:45:51.000Z",
-          "wordCount": 642,
-          "title": "最低賃金を出してくれるAPIをノリで作った",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--bzIi7_xh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259C%2580%25E4%25BD%258E%25E8%25B3%2583%25E9%2587%2591%25E3%2582%2592%25E5%2587%25BA%25E3%2581%2597%25E3%2581%25A6%25E3%2581%258F%25E3%2582%258C%25E3%2582%258BAPI%25E3%2582%2592%25E3%2583%258E%25E3%2583%25AA%25E3%2581%25A7%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Lru%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JiMTUzMjFlYjYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--bzIi7_xh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259C%2580%25E4%25BD%258E%25E8%25B3%2583%25E9%2587%2591%25E3%2582%2592%25E5%2587%25BA%25E3%2581%2597%25E3%2581%25A6%25E3%2581%258F%25E3%2582%258C%25E3%2582%258BAPI%25E3%2582%2592%25E3%2583%258E%25E3%2583%25AA%25E3%2581%25A7%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Lru%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JiMTUzMjFlYjYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/masamichi2004/articles/3357b83dc00101",
-          "author": "Masamichi Kanakubo",
-          "description": "はい、学生エンジニアのMasamichiです。最近YouTubeで「溝部ひかる」にハマってます。この人の動画を見るためだけにTikTokを入れようか検討してます。\nさて、ユーザをデータベースで管理する上で、同じユーザが重複することはあまり好ましくない場合が多いです。そこで今回はMongoDBのUnique Indexというものを使ってユーザが２回目以降に登録の操作を行った場合に、代わりにログインの処理を行うという実装をしてみます。\n\n 全体像\n\n 技術スタック\n使用した技術は以下のとおりです。\n\n\nPython: 使用言語\nFastAPI: バックエンドフレームワーク\n\nGraphQL ...",
-          "link": "https://zenn.dev/masamichi2004/articles/3357b83dc00101",
-          "publishedOn": "2024-01-06T04:38:03.000Z",
-          "wordCount": 640,
-          "title": "MongoDB＋Unique Indexによるユニークなユーザ管理",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--mTtfmik4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:MongoDB%25EF%25BC%258BUnique%2520Index%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E3%2583%25A6%25E3%2583%258B%25E3%2583%25BC%25E3%2582%25AF%25E3%2581%25AA%25E3%2583%25A6%25E3%2583%25BC%25E3%2582%25B6%25E7%25AE%25A1%25E7%2590%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Masamichi%2520Kanakubo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M5MTFkMjk2OTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--mTtfmik4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:MongoDB%25EF%25BC%258BUnique%2520Index%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E3%2583%25A6%25E3%2583%258B%25E3%2583%25BC%25E3%2582%25AF%25E3%2581%25AA%25E3%2583%25A6%25E3%2583%25BC%25E3%2582%25B6%25E7%25AE%25A1%25E7%2590%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Masamichi%2520Kanakubo%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M5MTFkMjk2OTUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/cazzenn/articles/955c92cff53091",
-          "author": "CazunariMuraho",
-          "description": "前提情報\n\nWindows11 を使用\n\n\n 遭遇した問題\n\npython インストール後、ターミナルで py ファイルを実行しても「python」だけ返ってきてスクリプトを実行できない\n\n\n\n\n\n\n やったこと\n\nインストールしていた python をアンインストール\nアプリ実行エイリアス画面で、pythonのインストーラ2つを「オフ」にする\npython を再インストール\n\nその際、「Add Python 〇.〇 to PATH」にチェックを入れる\n\n\nターミナルで python -v でインストールを確認\n\nPython 3.12.1 のように返ってくれば OK\nコマンドを打つ...",
-          "link": "https://zenn.dev/cazzenn/articles/955c92cff53091",
-          "publishedOn": "2024-01-06T01:07:35.000Z",
-          "wordCount": 151,
-          "title": "ターミナルから Python を実行できなかった時の対処方法備忘録",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--PnOSgg8Y--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%259F%25E3%2583%258A%25E3%2583%25AB%25E3%2581%258B%25E3%2582%2589%2520Python%2520%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25AA%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E6%2599%2582%25E3%2581%25AE%25E5%25AF%25BE%25E5%2587%25A6%25E6%2596%25B9%25E6%25B3%2595%25E5%2582%2599%25E5%25BF%2598%25E9%258C%25B2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:CazunariMuraho%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2ZiYmZjZmU3NjAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--PnOSgg8Y--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%259F%25E3%2583%258A%25E3%2583%25AB%25E3%2581%258B%25E3%2582%2589%2520Python%2520%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%25A7%25E3%2581%258D%25E3%2581%25AA%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%25E6%2599%2582%25E3%2581%25AE%25E5%25AF%25BE%25E5%2587%25A6%25E6%2596%25B9%25E6%25B3%2595%25E5%2582%2599%25E5%25BF%2598%25E9%258C%25B2%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:CazunariMuraho%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2ZiYmZjZmU3NjAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/shimat/articles/0c00e3c83d8cf0",
-          "author": "shimat",
-          "description": "もっと良い方法求む！\n\n 背景\nStreamlitによる開発では個人的に、ローカル環境でのデバッグ時とデプロイ先での本番動作時とで、処理を分岐したいシーンがよくあります。典型的には以下です。\n\nローカルの開発環境では、データの微調整が多いので、キャッシュ (@st.cache_data) を無効にしたい\nデプロイ先であるCommunity Cloudでは、速度向上のためキャッシュを有効にしたい\n\n\n 手法概要\n\nデコレータ (@st.cache_data) を効かせるかどうか条件分岐可能にする\nローカル環境と他の環境をコード上で判定する\n\n雑な疑似コードとしては、こういうことがしたいわけ...",
-          "link": "https://zenn.dev/shimat/articles/0c00e3c83d8cf0",
-          "publishedOn": "2024-01-06T00:12:25.000Z",
-          "wordCount": 785,
-          "title": "[Streamlit] ローカル環境か否かで処理を分岐",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--QNrXYx9s--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BStreamlit%255D%2520%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%258B%25E5%2590%25A6%25E3%2581%258B%25E3%2581%25A7%25E5%2587%25A6%25E7%2590%2586%25E3%2582%2592%25E5%2588%2586%25E5%25B2%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:shimat%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMxOTgyYTAyNDEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--QNrXYx9s--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BStreamlit%255D%2520%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E7%2592%25B0%25E5%25A2%2583%25E3%2581%258B%25E5%2590%25A6%25E3%2581%258B%25E3%2581%25A7%25E5%2587%25A6%25E7%2590%2586%25E3%2582%2592%25E5%2588%2586%25E5%25B2%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:shimat%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMxOTgyYTAyNDEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
         }
       ]
     }
