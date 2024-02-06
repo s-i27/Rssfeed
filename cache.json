@@ -12,6 +12,126 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/overflow_offers/articles/prefect-is-perfect",
+          "author": "bibio",
+          "description": "はじめに\nおはこんばんちは。\nOffers と、Offers MGR を運営している株式会社 overflow のバックエンドエンジニアばばです。\nWeb サービスを開発している皆様であれば、高度なデータ処理の大変さ・つらさを味わったことはあるかと思います。\nたとえば\n\nグラフ用データを作成するには、API からデータ取得が終わった後に、DWH で集計して、その後バッチ処理かけてごにょごにょ\n想定してたよりデータ量が多くて、許容時間内に処理が終わらないー\nあの API 、 Rate Limit 厳しいからから並列数制御しないといつまでたっても取得がおわらない・・・\n\nなど、悩みはつき...",
+          "link": "https://zenn.dev/overflow_offers/articles/prefect-is-perfect",
+          "publishedOn": "2024-02-06T00:00:00.000Z",
+          "wordCount": 5040,
+          "title": "Prefectでプロダクトデータ処理基盤のDXを向上させようとしているはなし | Offers Tech Blog",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--tyD463oA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Prefect%25E3%2581%25A7%25E3%2583%2597%25E3%2583%25AD%25E3%2583%2580%25E3%2582%25AF%25E3%2583%2588%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2587%25A6%25E7%2590%2586%25E5%259F%25BA%25E7%259B%25A4%25E3%2581%25AEDX%25E3%2582%2592%25E5%2590%2591%25E4%25B8%258A%25E3%2581%2595%25E3%2581%259B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%2597%2520%257C%2520Offers%2520Tech%2520Blog%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:bibio%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY4M2UwNWE5MjAuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Offers%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzlhYjg3MTk1ZjguanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--tyD463oA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Prefect%25E3%2581%25A7%25E3%2583%2597%25E3%2583%25AD%25E3%2583%2580%25E3%2582%25AF%25E3%2583%2588%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2587%25A6%25E7%2590%2586%25E5%259F%25BA%25E7%259B%25A4%25E3%2581%25AEDX%25E3%2582%2592%25E5%2590%2591%25E4%25B8%258A%25E3%2581%2595%25E3%2581%259B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25A6%25E3%2581%2584%25E3%2582%258B%25E3%2581%25AF%25E3%2581%25AA%25E3%2581%2597%2520%257C%2520Offers%2520Tech%2520Blog%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:bibio%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY4M2UwNWE5MjAuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Offers%2520Tech%2520Blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzlhYjg3MTk1ZjguanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/tasiten/articles/80cd7994087011",
+          "author": "tasiten",
+          "description": "目的\n去年の11月頃にOpenAIからカスタマイズ可能なChatGPTである，「GPTs」が発表された．特定の処理だけをさせるものを作ることができる．これはChatGPT Plusユーザーなら無料で作成・使用が出来る．\nまた何か開発する際などには技術的メモを残すものだが，それを時間が経って見返すときになかなか見つからないときがある．\nそこで今回は今までWeb上にメモしたドキュメントをPDF化してそれをGPTに学習させることで，対話形式で技術的メモを引き出せるようにする．\nちなみにデータサイズが小さいという理由で，一度htmlファイルを学習させたがhtmlのコードが多く学習されたため，...",
+          "link": "https://zenn.dev/tasiten/articles/80cd7994087011",
+          "publishedOn": "2024-02-05T18:51:23.000Z",
+          "wordCount": 678,
+          "title": "技術メモPDFから学習させるGPTの作り方",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--NrtQk8CP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%258A%2580%25E8%25A1%2593%25E3%2583%25A1%25E3%2583%25A2PDF%25E3%2581%258B%25E3%2582%2589%25E5%25AD%25A6%25E7%25BF%2592%25E3%2581%2595%25E3%2581%259B%25E3%2582%258BGPT%25E3%2581%25AE%25E4%25BD%259C%25E3%2582%258A%25E6%2596%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tasiten%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyYzQwMzJlNWMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--NrtQk8CP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%258A%2580%25E8%25A1%2593%25E3%2583%25A1%25E3%2583%25A2PDF%25E3%2581%258B%25E3%2582%2589%25E5%25AD%25A6%25E7%25BF%2592%25E3%2581%2595%25E3%2581%259B%25E3%2582%258BGPT%25E3%2581%25AE%25E4%25BD%259C%25E3%2582%258A%25E6%2596%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tasiten%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyYzQwMzJlNWMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/nondescript/articles/abbfd1f6a7ac93",
+          "author": "素人の戯言",
+          "description": "TL;DR\n\nNextcloudサーバー上でコマンドocc talk:bot:installで作成する\nWebhook→トークへのレスポンス\n\nレスポンス先\n\nNextCloudのURL/ocs/v2.php/apps/spreed/api/v1/bot/{トークID}/message\n\n\nヘッダ\n\n\nX-Nextcloud-Talk-Bot-Random：任意の64桁16進文字列\n\nX-Nextcloud-Talk-Bot-Signature：X-Nextcloud-Talk-Bot-Randomと返信メッセージのバイト列をBot作成時のシークレットを用いてHMACで暗号化した16...",
+          "link": "https://zenn.dev/nondescript/articles/abbfd1f6a7ac93",
+          "publishedOn": "2024-02-05T15:32:12.000Z",
+          "wordCount": 1001,
+          "title": "Nextcloud Talkのチャットボットを仕様通りに構築する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--v4oaR0ea--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Nextcloud%2520Talk%25E3%2581%25AE%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E3%2582%2592%25E4%25BB%2595%25E6%25A7%2598%25E9%2580%259A%25E3%2582%258A%25E3%2581%25AB%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%25B4%25A0%25E4%25BA%25BA%25E3%2581%25AE%25E6%2588%25AF%25E8%25A8%2580%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVmYTVmOTBhM2EuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--v4oaR0ea--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Nextcloud%2520Talk%25E3%2581%25AE%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E3%2582%2592%25E4%25BB%2595%25E6%25A7%2598%25E9%2580%259A%25E3%2582%258A%25E3%2581%25AB%25E6%25A7%258B%25E7%25AF%2589%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%25B4%25A0%25E4%25BA%25BA%25E3%2581%25AE%25E6%2588%25AF%25E8%25A8%2580%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVmYTVmOTBhM2EuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/nishimoto/articles/9b29f8257b436a",
+          "author": "nishimoto",
+          "description": "SentenceTransformer上でContrieverを使えるようにしたよ！\nFacebookの作成したContrieverをSentenceTransformerで使えるようにしました！リポジトリは以下です。\nhttps://huggingface.co/nishimoto/contriever-sentencetransformer\nREADMEに記載がありますが、以下のようにSentenceTransformerライブラリ上でContrieverを使用することができます。\n# !pip install -U sentence-transformers\n\nfrom sen...",
+          "link": "https://zenn.dev/nishimoto/articles/9b29f8257b436a",
+          "publishedOn": "2024-02-05T11:14:19.000Z",
+          "wordCount": 280,
+          "title": "TransformerモデルをSentenceTransformersで使えるようにするには",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--W4YKvc25--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Transformer%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2582%2592SentenceTransformers%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%2588%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25E3%2581%25AB%25E3%2581%25AF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nishimoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjZWNmNDMwYWMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--W4YKvc25--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Transformer%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E3%2582%2592SentenceTransformers%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%2588%25E3%2582%258B%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25E3%2581%25AB%25E3%2581%25AF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nishimoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjZWNmNDMwYWMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/takeyan/articles/ae1c6f81be6559",
+          "author": "takerin",
+          "description": "pyside6＋αを使ったpythonスクリプトをexeファイルにする際にcx＿freezeを使ったが幾つかハマった所があったので忘備録として残します。\npip install cx_Freeze\nを実行してcx＿freezeをインストールしsetup.pyを作る。\nfrom cx_Freeze import setup, Executable\nimport sys\n\n# Dependencies are automatically detected, but some might need fine-tuning\nbuild_exe_options = {\"packages\": [\"o...",
+          "link": "https://zenn.dev/takeyan/articles/ae1c6f81be6559",
+          "publishedOn": "2024-02-05T08:15:37.000Z",
+          "wordCount": 710,
+          "title": "cx＿freezeでハマったところ",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--aaN5Yehl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:cx%25EF%25BC%25BFfreeze%25E3%2581%25A7%25E3%2583%258F%25E3%2583%259E%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25A8%25E3%2581%2593%25E3%2582%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takerin%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MmM0WjNXZmhEZnNGS2hsVU1pVmhnQXEyNzA0Nl95YmlTV19rQ0E9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--aaN5Yehl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:cx%25EF%25BC%25BFfreeze%25E3%2581%25A7%25E3%2583%258F%25E3%2583%259E%25E3%2581%25A3%25E3%2581%259F%25E3%2581%25A8%25E3%2581%2593%25E3%2582%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:takerin%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MmM0WjNXZmhEZnNGS2hsVU1pVmhnQXEyNzA0Nl95YmlTV19rQ0E9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/emoclew/books/3087b7cff69946",
+          "author": "emoclew",
+          "description": "WindowsでDocker、WSL2、Git、VS Codeをインストールしてpythonの開発環境を整えるための手順をまとめた本",
+          "link": "https://zenn.dev/emoclew/books/3087b7cff69946",
+          "publishedOn": "2024-02-05T07:33:15.000Z",
+          "wordCount": 100,
+          "title": "Windowsでのpython開発環境構築 with Docker, WSL2, Git and VS Code",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--xQVlh8-f--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci84NTI1OWE2NDQ4LmpwZWc=%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg",
+            "length": "0",
+            "type": "image/jpeg"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--xQVlh8-f--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci84NTI1OWE2NDQ4LmpwZWc=%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg"
+        },
+        {
+          "id": "https://zenn.dev/ymd65536/articles/vertexai_gemini_llm",
+          "author": "Kento.Yamada",
+          "description": "はじめに\nこの記事ではVertexAIとLangChainを使ってLLMから応答を得る方法を探ってみました。\n参考資料\n\ngoogle_vertex_ai_palm\nRetrieval indexing\nlangchain.indexes.vectorstore.VectorstoreIndexCreator\nVertex AI PaLM APIとLangChainで容易になった生成AIアプリケーションの構築\nquestion_answering_documents_langchain_matching_engine.ipynb\nVectorStoreIndexWrapper\nrec...",
+          "link": "https://zenn.dev/ymd65536/articles/vertexai_gemini_llm",
+          "publishedOn": "2024-02-05T02:14:11.000Z",
+          "wordCount": 2642,
+          "title": "VertexAIとLangChain サンプルコード集",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--Czm9H5NH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:VertexAI%25E3%2581%25A8LangChain%2520%25E3%2582%25B5%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AB%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E9%259B%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kento.Yamada%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E3NjI2OTlhYjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Czm9H5NH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:VertexAI%25E3%2581%25A8LangChain%2520%25E3%2582%25B5%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AB%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%25E9%259B%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Kento.Yamada%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E3NjI2OTlhYjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/keitakn/articles/tools-with-function-calling",
+          "author": "keitakn",
+          "description": "概要\nOpenAI Python library を使ってFunction callingの並列実行に対応した実装を紹介する記事です。\nユーザーへの返答はStreamingで返答します。\n私は最近LLMを使ったアプリケーション開発案件に関わっていますが、BtoB・BtoCに関わらずユーザー体験の観点からStreaming対応が必要になることが多いです。\nその為、この記事のサンプルコードは実際のプロダクトにも応用できると思います。\n\n 対象読者\nOpenAIを使ったアプリケーション開発の概要を理解している方が対象となります。\n\n 筆者のバックグラウンド\n普段はTypeScript（Ne...",
+          "link": "https://zenn.dev/keitakn/articles/tools-with-function-calling",
+          "publishedOn": "2024-02-05T02:06:04.000Z",
+          "wordCount": 5295,
+          "title": "OpenAI Streaming + Function callingの並列実行に対応する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--N3WVmowm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenAI%2520Streaming%2520%252B%2520Function%2520calling%25E3%2581%25AE%25E4%25B8%25A6%25E5%2588%2597%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%25AB%25E5%25AF%25BE%25E5%25BF%259C%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:keitakn%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I4YWRiOTY3ZDIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--N3WVmowm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenAI%2520Streaming%2520%252B%2520Function%2520calling%25E3%2581%25AE%25E4%25B8%25A6%25E5%2588%2597%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%25AB%25E5%25AF%25BE%25E5%25BF%259C%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:keitakn%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I4YWRiOTY3ZDIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
           "id": "https://zenn.dev/headwaters/articles/f3540383b4bf24",
           "author": "Shuichiro Sakata",
           "description": "ゴール：Windows PCに配置したファイルをWindows上のIoT Edgeモジュールから閲覧および編集ができる\nRaspberry Piに入れた自作IoT Edgeモジュールを用いて、Raspberry Piに配置したファイルをIoT Edgeモジュールから閲覧や編集ができるようにしました。\nそのモジュールをWindows PCに入れて実行することになり、ファイル共有処理も使用する必要が出ました。\n本記事はその共有の方法についてまとめています。\n\n 説明すること\n\nゴールを達成するためのIoT Edgeモジュールのデプロイ設定\nWindowsの共有フォルダおよびその中に入れる...",
@@ -25,6 +145,21 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--7NGuVTgC--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Windows%2520PC%25E3%2581%25A8Windows%25E4%25B8%258A%25E3%2581%25AEIoT%2520Edge%25E3%2583%25A2%25E3%2582%25B8%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25AB%25E9%2596%2593%25E3%2581%25A7%25E3%2583%2595%25E3%2582%25A1%25E3%2582%25A4%25E3%2583%25AB%25E5%2585%25B1%25E6%259C%2589%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Shuichiro%2520Sakata%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRiYmQ1ZTMxYzQuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/dataheroes/articles/d9671363c6d257",
+          "author": "Kentaro Maeda",
+          "description": "/tmpと /dev/shmが使えた。\nSnowpark Optimized Warehouseに新たなユースケースを見出したかもしれない。\n\n なぜほしいか？\nファイルパスで非構造化ファイルを受け取るライブラリはよくある。\n例えば、画像処理ライブラリのPillowはImage.open(image_path)のようにファイルパスを受け取る。他にも、MLモデルや動画ファイルをファイルパスとして渡すことはよくあると思う。\nただ、UDFからほとんどの領域は書き込み権限がない。\nPermissionError: [Errno 1] Operation not permitted\n\n 結論\n冒頭...",
+          "link": "https://zenn.dev/dataheroes/articles/d9671363c6d257",
+          "publishedOn": "2024-02-05T00:00:00.000Z",
+          "wordCount": 623,
+          "title": "[Snowflake]UDFでユーザー管理のキャッシュ領域がほしい",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--f00Wsz-D--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BSnowflake%255DUDF%25E3%2581%25A7%25E3%2583%25A6%25E3%2583%25BC%25E3%2582%25B6%25E3%2583%25BC%25E7%25AE%25A1%25E7%2590%2586%25E3%2581%25AE%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E9%25A0%2598%25E5%259F%259F%25E3%2581%258C%25E3%2581%25BB%25E3%2581%2597%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kentaro%2520Maeda%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUxNDFkYTVlNTUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Snowflake%2520Data%2520Heroes%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FjYTJlMzdkM2QuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--f00Wsz-D--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BSnowflake%255DUDF%25E3%2581%25A7%25E3%2583%25A6%25E3%2583%25BC%25E3%2582%25B6%25E3%2583%25BC%25E7%25AE%25A1%25E7%2590%2586%25E3%2581%25AE%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E9%25A0%2598%25E5%259F%259F%25E3%2581%258C%25E3%2581%25BB%25E3%2581%2597%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kentaro%2520Maeda%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUxNDFkYTVlNTUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Snowflake%2520Data%2520Heroes%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FjYTJlMzdkM2QuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
         },
         {
           "id": "https://zenn.dev/efx/articles/d9671363c6d257",
@@ -2705,126 +2840,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--q1ZCARVd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:logging%25E3%2581%25AE%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25AA%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E9%25A0%2588%25E8%2597%25A4%25E3%2583%258A%25E3%2583%258E%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2UyMWQ1ZGVlYmIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/nishimoto/articles/1331db61b541bc",
-          "author": "nishimoto",
-          "description": "テンプレ\n最近、テーブルデータはkerasで回すことが増えてきたのでオレオレテンプレを作っておく。Titanicデータで学習を回しています。\nソースコードは以下にもあります。\nhttps://www.kaggle.com/code/nishimoto/titanic-ja-keras-example/\nimport numpy as np\nimport pandas as pd\nimport scipy.stats as st\nfrom sklearn.model_selection import StratifiedKFold\n\n# keras関係\nimport tensorflo...",
-          "link": "https://zenn.dev/nishimoto/articles/1331db61b541bc",
-          "publishedOn": "2024-01-07T12:52:52.000Z",
-          "wordCount": 1698,
-          "title": "オレオレKerasテンプレート",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--F4ekaPv2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AA%25E3%2583%25AC%25E3%2582%25AA%25E3%2583%25ACKeras%25E3%2583%2586%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nishimoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjZWNmNDMwYWMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--F4ekaPv2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25AA%25E3%2583%25AC%25E3%2582%25AA%25E3%2583%25ACKeras%25E3%2583%2586%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nishimoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjZWNmNDMwYWMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/temori/articles/b37e4ab94a355b",
-          "author": "temori",
-          "description": "はじめに\n去年の１１月にMetaからSeamlessM4Tのv2がリリースされました。\nhttps://ai.meta.com/blog/seamless-communication/\n少し前の話ですが、SeamlessM4Tを使った音声認識、翻訳機能をWEB上に実装したデモを作ってみたのでその時の話をしたいと思います。\n\n モチベーション\n普段はWEBのバックエンドをメインで開発していますが、社内で本業外でラボ的な活動があり、その発表に何かインパクトのある成果物を発表できないか？と考えたのがきっかけです。\n業務ではLLMとの接点は薄いのですが、これを機に触ってみようかと思いました。...",
-          "link": "https://zenn.dev/temori/articles/b37e4ab94a355b",
-          "publishedOn": "2024-01-07T10:00:00.000Z",
-          "wordCount": 5570,
-          "title": "SeamlessM4Tでほんやくコンニャクを実現できた...のか？",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--Nuwb8O11--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:SeamlessM4T%25E3%2581%25A7%25E3%2581%25BB%25E3%2582%2593%25E3%2582%2584%25E3%2581%258F%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%258B%25E3%2583%25A3%25E3%2582%25AF%25E3%2582%2592%25E5%25AE%259F%25E7%258F%25BE%25E3%2581%25A7%25E3%2581%258D%25E3%2581%259F...%25E3%2581%25AE%25E3%2581%258B%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:temori%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZGZVc2Nza2VadXBDemUtczZWVm8zMzhPV0kwaDNjTlJpMVdMX3p0U3FUUUU4PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Nuwb8O11--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:SeamlessM4T%25E3%2581%25A7%25E3%2581%25BB%25E3%2582%2593%25E3%2582%2584%25E3%2581%258F%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%258B%25E3%2583%25A3%25E3%2582%25AF%25E3%2582%2592%25E5%25AE%259F%25E7%258F%25BE%25E3%2581%25A7%25E3%2581%258D%25E3%2581%259F...%25E3%2581%25AE%25E3%2581%258B%25EF%25BC%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:temori%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZGZVc2Nza2VadXBDemUtczZWVm8zMzhPV0kwaDNjTlJpMVdMX3p0U3FUUUU4PXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/hitoe_kami/articles/001-articles-reddit-monitoring",
-          "author": "MiyukiP",
-          "description": "TL;DR\n\n\nRedditのアニメチャンネルで日次で盛り上がったアニメを監視します\nCloud Run Jobsを日次で起動させます\n以下のようにGoogleSheetに日次でアニメのスレッドが書き込まれていきます\n\n\n\n\n はじめに\n皆さんアニメは好きですか？\n私は三度の飯より好きです！\nアニメ好きを長いことやっているとアニメを観るだけでは飽き足らず、アニメの感想を共有したり、クール内でどのアニメが人気なのかを監視したくなります。\nということで、本稿ではRedditという世界最大の掲示板アプリのアニメチャンネルの盛り上がりを日次監視していきます。\n\n 概観（手順）\n今回作成するG...",
-          "link": "https://zenn.dev/hitoe_kami/articles/001-articles-reddit-monitoring",
-          "publishedOn": "2024-01-07T07:41:32.000Z",
-          "wordCount": 3715,
-          "title": "今日からはじめるアニメ監視",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--aV4DDXOy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BB%258A%25E6%2597%25A5%25E3%2581%258B%25E3%2582%2589%25E3%2581%25AF%25E3%2581%2598%25E3%2582%2581%25E3%2582%258B%25E3%2582%25A2%25E3%2583%258B%25E3%2583%25A1%25E7%259B%25A3%25E8%25A6%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:MiyukiP%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYxZjQ5NDZmOGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--aV4DDXOy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BB%258A%25E6%2597%25A5%25E3%2581%258B%25E3%2582%2589%25E3%2581%25AF%25E3%2581%2598%25E3%2582%2581%25E3%2582%258B%25E3%2582%25A2%25E3%2583%258B%25E3%2583%25A1%25E7%259B%25A3%25E8%25A6%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:MiyukiP%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYxZjQ5NDZmOGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/termoshtt/articles/pyodide-wasm-wheel",
-          "author": "termoshtt",
-          "description": "PyodideはCPythonをEmscriptenを用いてWebAssemblyにコンパイルしたもので、Pythonの（一部を除く）標準ライブラリを含むPythonの実行環境をブラウザや他のWebAssembly実行環境上で動かすことが出来ます。JupyterLiteはさらにブラウザのWeb WorkerとしてPyodideを動かしこれをJupyter kernelとすることで、ブラウザのみでJupyterを動かすためのプロジェクトです。\nしかしPythonの利点は多くのビルド済みの高速なネイティブ実装が適切にパッケージングされPyPIに存在していて、それを簡単にインストールできること...",
-          "link": "https://zenn.dev/termoshtt/articles/pyodide-wasm-wheel",
-          "publishedOn": "2024-01-07T07:20:49.000Z",
-          "wordCount": 667,
-          "title": "pyodide-buildでwasm-based wheelを作りJupyterLiteで使う",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--_xH_C93E--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pyodide-build%25E3%2581%25A7wasm-based%2520wheel%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258AJupyterLite%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:termoshtt%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lfdUM4LVBtaVF5cjN4UjBLdWMzN2t3ZDF2cGlsaUZWV25MbzhDS1E9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--_xH_C93E--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:pyodide-build%25E3%2581%25A7wasm-based%2520wheel%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258AJupyterLite%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:termoshtt%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lfdUM4LVBtaVF5cjN4UjBLdWMzN2t3ZDF2cGlsaUZWV25MbzhDS1E9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/num/articles/matplotlib-japanese",
-          "author": "num",
-          "description": "課題で図を作成する際にラベル等に日本語を使いたい時によく使う。\n\n 方法\njapanize_matplotlibをimportする。\npip installでまずインストールする必要がある。\n\n!pip install japanize-matplotlib\n\nimport matplotlib.pyplot as plt\nimport japanize_matplotlib",
-          "link": "https://zenn.dev/num/articles/matplotlib-japanese",
-          "publishedOn": "2024-01-07T06:09:46.000Z",
-          "wordCount": 88,
-          "title": "matplotlibで日本語を使う方法(Colab)",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--a1WVKVfq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:matplotlib%25E3%2581%25A7%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E6%2596%25B9%25E6%25B3%2595%2528Colab%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:num%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY4ODI4YTFjYjIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--a1WVKVfq--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:matplotlib%25E3%2581%25A7%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E6%2596%25B9%25E6%25B3%2595%2528Colab%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:num%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzY4ODI4YTFjYjIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/omizunomitaro/articles/833b13d8a2b1cc",
-          "author": "おみずのみ太郎",
-          "description": "✅目的\n\npythonと各種ライブラリを使用して株式投資のストラテジの立て方について紹介します。\nまた、古くからおこなわれているテクニカル指標を使ってのアルゴリズムトレードの実現方法について解説します。\nストラテジを立てる過程、バックテストについては実際にGoogle Colaboratoryで実施し手法を公開しています。\nテクニカル指標を用いたストラテジで2022年1月~12月と2023年1月~12月にかけてS＆P500を売買した場合どのような結果になるかバックテストを実施します。\nテクニカル分析による売買戦略が特定の期間や条件下では力を発揮するが、未来予測ができるわけではないこと...",
-          "link": "https://zenn.dev/omizunomitaro/articles/833b13d8a2b1cc",
-          "publishedOn": "2024-01-07T02:47:59.000Z",
-          "wordCount": 618,
-          "title": "【株式投資】Pythonを用いたテクニカル分析とバックテスト",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--MDZ-77Cp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E6%25A0%25AA%25E5%25BC%258F%25E6%258A%2595%25E8%25B3%2587%25E3%2580%2591Python%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E3%2583%2586%25E3%2582%25AF%25E3%2583%258B%25E3%2582%25AB%25E3%2583%25AB%25E5%2588%2586%25E6%259E%2590%25E3%2581%25A8%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%258A%25E3%2581%25BF%25E3%2581%259A%25E3%2581%25AE%25E3%2581%25BF%25E5%25A4%25AA%25E9%2583%258E%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE2ZjhjMTA2ODUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--MDZ-77Cp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E6%25A0%25AA%25E5%25BC%258F%25E6%258A%2595%25E8%25B3%2587%25E3%2580%2591Python%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E3%2583%2586%25E3%2582%25AF%25E3%2583%258B%25E3%2582%25AB%25E3%2583%25AB%25E5%2588%2586%25E6%259E%2590%25E3%2581%25A8%25E3%2583%2590%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%258A%25E3%2581%25BF%25E3%2581%259A%25E3%2581%25AE%25E3%2581%25BF%25E5%25A4%25AA%25E9%2583%258E%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE2ZjhjMTA2ODUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/tyszw/articles/matplotlib_custom",
-          "author": "yoshizawa",
-          "description": "はじめに\n本記事では、matplotlibで作成したグラフをどう調整するかについて、折れ線グラフを例にご紹介します。今回は基本的な調整（文字の大きさや目盛りの間隔など）を行い、下図の右側のplotを作成します。\n\n\n 環境\n\npython: 3.12.0\nmatplotlib: 3.8.2\nnumpy: 1.26.3\n\n\n スクリプト\n\n ライブラリのimport\nimport matplotlib as mpl\nimport matplotlib.pyplot as plt\n%matplotlib inline\nimport numpy as np\n\n データの準備\nplotに使用...",
-          "link": "https://zenn.dev/tyszw/articles/matplotlib_custom",
-          "publishedOn": "2024-01-07T01:35:39.000Z",
-          "wordCount": 892,
-          "title": "【matplotlib】plotをサクッとカスタムする",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--8sj90Um7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590matplotlib%25E3%2580%2591plot%25E3%2582%2592%25E3%2582%25B5%25E3%2582%25AF%25E3%2583%2583%25E3%2581%25A8%25E3%2582%25AB%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25A0%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yoshizawa%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZlNTBiOWIyMzYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--8sj90Um7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590matplotlib%25E3%2580%2591plot%25E3%2582%2592%25E3%2582%25B5%25E3%2582%25AF%25E3%2583%2583%25E3%2581%25A8%25E3%2582%25AB%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25A0%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yoshizawa%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZlNTBiOWIyMzYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/nakamura196/articles/0074e153b870fb",
-          "author": "nakamura196",
-          "description": "概要\n「デジタル源氏物語」は『源氏物語』に関する様々な関連データを収集・作成し、それらを結びつけることで、『源氏物語』研究はもちろん、古典籍を利用した教育・研究活動の一助となる環境の提案を目指したサイトです。\nhttps://genji.dl.itc.u-tokyo.ac.jp/\n本サイトが提供する機能の一つとして、「校異源氏物語と現代語訳の対応づけ」があります。以下のように、「校異源氏物語」と青空文庫で公開されている与謝野晶子訳の対応箇所がハイライト表示されます。\n\nこの記事では、上記の機能を実現するための手順について説明します。\n\n データ\n以下のようなデータを作成します。\nht...",
-          "link": "https://zenn.dev/nakamura196/articles/0074e153b870fb",
-          "publishedOn": "2024-01-07T01:14:41.000Z",
-          "wordCount": 1461,
-          "title": "デジタル源氏物語における校異源氏物語と現代語訳の対応づけ",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--cghZUVTV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2587%25E3%2582%25B8%25E3%2582%25BF%25E3%2583%25AB%25E6%25BA%2590%25E6%25B0%258F%25E7%2589%25A9%25E8%25AA%259E%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2591%25E3%2582%258B%25E6%25A0%25A1%25E7%2595%25B0%25E6%25BA%2590%25E6%25B0%258F%25E7%2589%25A9%25E8%25AA%259E%25E3%2581%25A8%25E7%258F%25BE%25E4%25BB%25A3%25E8%25AA%259E%25E8%25A8%25B3%25E3%2581%25AE%25E5%25AF%25BE%25E5%25BF%259C%25E3%2581%25A5%25E3%2581%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nakamura196%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pkd3BpX1gzTWIzV3VqTnVnV2tPTlJlU3VsNFNTN1BNMWlPQm9LRm5JPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--cghZUVTV--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2587%25E3%2582%25B8%25E3%2582%25BF%25E3%2583%25AB%25E6%25BA%2590%25E6%25B0%258F%25E7%2589%25A9%25E8%25AA%259E%25E3%2581%25AB%25E3%2581%258A%25E3%2581%2591%25E3%2582%258B%25E6%25A0%25A1%25E7%2595%25B0%25E6%25BA%2590%25E6%25B0%258F%25E7%2589%25A9%25E8%25AA%259E%25E3%2581%25A8%25E7%258F%25BE%25E4%25BB%25A3%25E8%25AA%259E%25E8%25A8%25B3%25E3%2581%25AE%25E5%25AF%25BE%25E5%25BF%259C%25E3%2581%25A5%25E3%2581%2591%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:nakamura196%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pkd3BpX1gzTWIzV3VqTnVnV2tPTlJlU3VsNFNTN1BNMWlPQm9LRm5JPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
         }
       ]
     }
