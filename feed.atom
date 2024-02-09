@@ -2,10 +2,61 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-02-08T01:11:52.557Z</updated>
+    <updated>2024-02-09T01:11:57.535Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[機械翻訳APIコンテナの実装]]></title>
+        <id>https://zenn.dev/emoclew/articles/bdc0cb017a0ccf</id>
+        <link href="https://zenn.dev/emoclew/articles/bdc0cb017a0ccf"/>
+        <updated>2024-02-08T23:51:42.000Z</updated>
+        <summary type="html"><![CDATA[動機
+ローカルで動くLLMがほしいなと思って、いろいろと調べていました。
+しかし、軽量のLLMは日本語が怪しくなるという話をよく聞きます
+そこで、一度機械翻訳を間に入れて、
+日本語指示 → 機械翻訳 → 英語指示 → LLM→英語結果 → 機械翻訳 → 日本語結果
+としたいと思います。
+（実際に、機械翻訳を入れたときの性能がどうなるかは要検証です）
+機械翻訳について調べてみると、気軽に使えるAPIでは、DeepLもしくはGoogle Translateが最も性能が良いようです。時点で、MicrosoftのTranslate。
+また、LLMを使った機械翻訳も研究されているようですが、D...]]></summary>
+        <author>
+            <name>emoclew</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonで無料でTwitterのBotを作る方法]]></title>
+        <id>https://zenn.dev/d60/articles/1e0419b3a4d0c7</id>
+        <link href="https://zenn.dev/d60/articles/1e0419b3a4d0c7"/>
+        <updated>2024-02-08T06:11:17.000Z</updated>
+        <summary type="html"><![CDATA[Pythonで無料でTwitterのBotを作る方法！！
+
+
+ この記事の概要
+無料で、APIキーなしでツイッターAPIを利用できるPythonのライブラリ「Twikit」を紹介します。
+
+ Twikitとは
+Twikitは、スクレイピングを利用して、ツイートの投稿、ツイートの検索、ユーザーのツイートの取得、トレンドの取得などができるPythonのライブラリです。
+これを使えば、一定時間毎にツイートを投稿するボットを作ったりすることができます。
+https://github.com/d60/twikit
+
+ このライブラリの特徴
+このライブラリの最大の特徴は、APIキー不要かつ無料で...]]></summary>
+        <author>
+            <name>d88</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[deptryでpyprojectをお掃除する]]></title>
+        <id>https://zenn.dev/saorio/articles/330892959959cf</id>
+        <link href="https://zenn.dev/saorio/articles/330892959959cf"/>
+        <updated>2024-02-08T05:00:47.000Z</updated>
+        <summary type="html"><![CDATA[pyprojectのいらないライブラリを簡単に見つけられる deptryが便利。
+pyproject.tomlがあるディレクトリでdeptry .を実行すると不要なライブラリや設定ミスを確認できる。CIに入れて定期的に確認するのが良さそう。]]></summary>
+        <author>
+            <name>saorio</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ARマーカーで動画内の特定の画面を切り出す]]></title>
         <id>https://zenn.dev/hartree_fock/articles/8cc22fe15cc995</id>
@@ -3627,287 +3678,6 @@ macOS
 # rtxをHomebrewで入れていたので、下記のコマンド...]]></summary>
         <author>
             <name>U5K</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Docker + Python 3.8  + GDAL 3.4 の環境構築]]></title>
-        <id>https://zenn.dev/room_208/articles/42fcc39c1aa710</id>
-        <link href="https://zenn.dev/room_208/articles/42fcc39c1aa710"/>
-        <updated>2024-01-10T12:47:01.000Z</updated>
-        <summary type="html"><![CDATA[概要
-docker を用いて Python 3.8 + GDAL 3.4 の環境を作成する。
-
- 環境
-
-Ubuntu 20.04.5 LTS
-Docker 20.10.18
-
-
- 環境構築
-以下のDockerfileを準備する。nvcr.io/nvidia/pytorch:22.05-py3は、ubuntu+pythonの環境が欲しかったため適当に設定しています。
-
-Dockerfile
-FROM nvcr.io/nvidia/pytorch:22.05-py3
-
-ENV TZ=Asia/Tokyo
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/...]]></summary>
-        <author>
-            <name>room_208</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyTorchで書籍「ゼロから作るDeep Learning」のTwoLayerNetを実装する]]></title>
-        <id>https://zenn.dev/moutend/articles/ad24861882d177</id>
-        <link href="https://zenn.dev/moutend/articles/ad24861882d177"/>
-        <updated>2024-01-10T11:34:36.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-書籍「ゼロから作るDeep Learning」を読み終えたので、次のステップとしてPyTorchの学習を進めています。まずは簡単な題材として、書籍の第4章で登場するTwoLayerNetをPyTorchで実装することにしました。
-この記事ではMacBook Proでモデルの訓練と推論を試します。小さなモデルであれば訓練が数十秒で完了することを実験します。
-
- 環境
-記事の投稿にあたり、以下の環境で動作確認しました。
-
-MacBook Pro（2021年に発売されたM1 PRO搭載機）
-macOS 12.7.1 Monterey
-Anaconda 23.7.4
-Python ...]]></summary>
-        <author>
-            <name>Yoshiyuki Koyanagi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのジェネレータを可変長引数に渡すのはやめよう]]></title>
-        <id>https://zenn.dev/nakurei/articles/dont-pass-python-generator-as-args</id>
-        <link href="https://zenn.dev/nakurei/articles/dont-pass-python-generator-as-args"/>
-        <updated>2024-01-10T10:53:20.000Z</updated>
-        <summary type="html"><![CDATA[結論
-Pythonのジェネレータを可変長引数に渡すのはやめよう。最悪メモリ不足でプログラムがクラッシュしてしまう。
-
- やってみよう
-!
-下記のコードはメモリ不足でプログラムをクラッシュさせる。自己責任で実行すること。
-
-たとえば、下記のように、値を1ずつカウントするジェネレータを生成する。
-ジェネレータを生成した時点や、next()関数を実行した時点では、メモリをほとんど消費しない。しかし、可変長引数にジェネレータを渡したところで、メモリ使用量が急増し、マシンがメモリ不足に陥ってしまう。
-def count_up_to():
-    """無限にカウントアップするジェネレーター""...]]></summary>
-        <author>
-            <name>NakuRei</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[POETとは？]]></title>
-        <id>https://zenn.dev/totopironote/articles/2e1d7ca73525dc</id>
-        <link href="https://zenn.dev/totopironote/articles/2e1d7ca73525dc"/>
-        <updated>2024-01-10T09:54:58.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-POET(Principal Orthogonal complEment Thresholding)について解説します。POETは”詩人”ではないので注意です。笑
-簡単に説明すると、高次元共分散行列の推定において疎な共分散行列分離させてその疎な共分散行列に対して閾値処理をすることで精度の高い推定をしています。
-
- POET
-共分散行列\Sigma の推定を考える。
-まずデータ行列をX(d\times n行列)とする。dが次元数、nがデータ数である。このとき標本共分散行列はS = (X-\bar X )(X - \bar X)^T/(n-1)となる。Sの固有値を \hat\l...]]></summary>
-        <author>
-            <name>ととぴろnote</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonで型定義にNamedTupleを使うのはやめたほうが良さそう]]></title>
-        <id>https://zenn.dev/ncdc/articles/bacfc0304f9294</id>
-        <link href="https://zenn.dev/ncdc/articles/bacfc0304f9294"/>
-        <updated>2024-01-10T09:05:26.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-pythonでもある程度しっかり型定義をしたくてTypedDictやdataclassを調べていました。
-その過程で「NamedTupleでも行けるんじゃね？」と思ったのですが、ダメそうな挙動になったのでそのメモです。
-
- TypedDictやdataclassによる型定義の概要
-pythonで型を定義したいとき、TypedDictやdataclassを使うと次のように書くことができます。この2つの違いは一旦おいておきますが、どちらを使ってもPythonで独自の型を定義して使うことができます。
-
- TypedDict
-from typing import TypedDict...]]></summary>
-        <author>
-            <name>いばらき</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2023年にやったこと其の壱]]></title>
-        <id>https://zenn.dev/k_s_k/articles/9d653c0b83fb47</id>
-        <link href="https://zenn.dev/k_s_k/articles/9d653c0b83fb47"/>
-        <updated>2024-01-10T07:03:23.000Z</updated>
-        <summary type="html"><![CDATA[振り返ってみるとほぼ一年更新が途絶えていた。
-昨年は会社の業務改善に注力していたため、自己研鑽にはあまり注力できていなかった。業務改善に注力していたのは給料を上げてほしかったので、その実績作りのためであるが、実施したことの記録としてここに書く。
-
- 開発環境の利用時間を Google Calendar に連動させた
-アイデアや仕組みはこちらをパクらせていただいている。
-https://tech.uzabase.com/entry/2023/02/21/135927
-Step Functions は GUI でお手軽にワークフローを作成できるので非常に便利だった。Google Calend...]]></summary>
-        <author>
-            <name>K-S-K</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-331｜B - Buy One Carton of Milk]]></title>
-        <id>https://zenn.dev/hyperdb/articles/9dbd014248e859</id>
-        <link href="https://zenn.dev/hyperdb/articles/9dbd014248e859"/>
-        <updated>2024-01-10T05:20:20.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-331 B - Buy One Carton of Milk
-
-
-
- 提出結果
-import math
-import sys
-
-
-def getIntMap():
-    return map(int, input().split())
-
-
-def count_items(i, j, k):
-    return i * 6 + j * 8 + k * 12
-
-
-def main():
-    n, s, m, l = getIntMap()
-
-    p = sys.maxsize
-    for i in [x for x in range(math.ce...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[［AtCoder］ABC-331｜A - Tomorrow]]></title>
-        <id>https://zenn.dev/hyperdb/articles/03b3005a5d2066</id>
-        <link href="https://zenn.dev/hyperdb/articles/03b3005a5d2066"/>
-        <updated>2024-01-10T05:20:19.000Z</updated>
-        <summary type="html"><![CDATA[設問ページ
-
-🔗ABC-331 A - Tomorrow
-
-
-
- 提出結果
-def getIntMap():
-    return map(int, input().split())
-
-
-def main():
-    mm, dd = getIntMap()
-    y, m, d = getIntMap()
-
-    d += 1
-    if d > dd:
-        d = 1
-        m += 1
-        if m > mm:
-            m = 1
-            y += 1
-
-    print(y, m, d)
-...]]></summary>
-        <author>
-            <name>はいぱぁ</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PlotlyのインタラクティブグラフをZennで表示する]]></title>
-        <id>https://zenn.dev/kurusugawa/articles/intaractive_plotly_graph_in_zenn</id>
-        <link href="https://zenn.dev/kurusugawa/articles/intaractive_plotly_graph_in_zenn"/>
-        <updated>2024-01-10T05:03:57.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Plotly はマウスでぐりぐり動かせるインタラクティブなグラフを出力することができます。しかしこのグラフは HTML+JavaScript なので、このままでは Zenn の記事内には表示できません。動画化したり外部サイトに誘導してもよいのですが、できれば記事内で完結したいところです。そこで Zenn の コンテンツの埋め込み 機能を使って、グラフを埋め込む方法を試してみます。
-
- 候補
-2024/01/08 現在、この用途に使えるサービスは下記の4つです。
-
-CodePen
-JSFiddle
-CodeSandbox
-StackBlitz
-
-
- グラフ生成
-グラフは何でも...]]></summary>
-        <author>
-            <name>Kenji Hata</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[近似最近傍探索ライブラリVoyagerで類似単語検索を試す]]></title>
-        <id>https://zenn.dev/chimuichimu/articles/bab071c182784c</id>
-        <link href="https://zenn.dev/chimuichimu/articles/bab071c182784c"/>
-        <updated>2024-01-10T02:42:06.000Z</updated>
-        <summary type="html"><![CDATA[本記事について
-2023年10月にSpotifyが新たな近似最近傍探索ライブラリとして「Voyager」を発表した[1]。本記事ではVoyagerについて調べたことや、単語の類似検索をユースケースとした実装サンプル、Annoyとの性能比較の結果を備忘としてメモしておく。
-
- 近似最近傍探索とは
-Voyagerの話に入る前に、近似最近傍探索について説明する。
-最近傍探索 (Nearest Neighbor Search)とは、あるベクトルのクエリが与えられたときに、そのクエリと「最も似ているベクトル」をベクトルの集合から見つける技術である。
-ナイーブな方法としては、クエリのベクトルと、...]]></summary>
-        <author>
-            <name>chimuichimu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[機械学習でよく使うPandasを使ったデータのフィルタリング]]></title>
-        <id>https://zenn.dev/junko_ai/articles/a24f3181d98d45</id>
-        <link href="https://zenn.dev/junko_ai/articles/a24f3181d98d45"/>
-        <updated>2024-01-10T00:53:49.000Z</updated>
-        <summary type="html"><![CDATA[Pandasは、Pythonのデータ分析において最も人気のあるライブラリの一つで、その強力なデータ操作機能を使って、効率的にデータをフィルタリングすることができます。
-機械学習でよく使う処理をまとめておきます。
-
- 1. 特定の値に基づくフィルタリング
-特定の値や条件に一致する行のみを選択します。
-import pandas as pd
-filtered_df = df[df['column'] == value]
-たとえば下記のような日付とタイプをまとめたデータ【test_df】を使って処理を行うとします。
-
-タイプが"Work Day"のデータのみ取り出す場合は、次のようにします。
-...]]></summary>
-        <author>
-            <name>junko</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[vLLMで高速に大規模言語モデルの生成を行う]]></title>
-        <id>https://zenn.dev/masahiro_kaneko/articles/1c53da5903560c</id>
-        <link href="https://zenn.dev/masahiro_kaneko/articles/1c53da5903560c"/>
-        <updated>2024-01-09T17:26:12.000Z</updated>
-        <summary type="html"><![CDATA[概要
-vLLMはLLMの生成を高速に行うためのライブラリです。
-ここではLlama-2-7b-chat-hfをvLLMで簡単に使う方法を紹介します。
-vLLMの環境構築はここを参照してください。より詳細なコードはこちら。
-
- 使い方
-from vllm import LLM, SamplingParams
-
-
-model_path = "meta-llama/Llama-2-7b-chat-hf"
-temperature = 1.0
-top_p = 1.0
-max_tokens = 128
-quantization = None
-    
-llm = LLM(
-    model=m...]]></summary>
-        <author>
-            <name>MasahiroKaneko</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AIChallenge入門ガイド(3)]]></title>
-        <id>https://zenn.dev/ttanaka3/articles/bff7086ef1d956</id>
-        <link href="https://zenn.dev/ttanaka3/articles/bff7086ef1d956"/>
-        <updated>2024-01-09T14:58:24.000Z</updated>
-        <summary type="html"><![CDATA[この記事の対象者
-この記事のシリーズはAI Challengeで環境構築は終わったけど次にどこから取り組んだらいいのかわからないという方に向けた記事です。AIChallengeそのものの概要からよくわからない方は以下の記事をご参考ください。
-https://zenn.dev/ttanaka3/articles/a66b6bfacf81a1
-この記事ではAIChallengeに登録が完了し、環境構築を終えて入門ガイド(1)、(2)を完了した方向けに記載しています。また、競技という観点でいうと入門ガイド(1) >>> (2) > (3)の順で走行スコアに影響がでて...]]></summary>
-        <author>
-            <name>tanaka3</name>
         </author>
     </entry>
 </feed>
