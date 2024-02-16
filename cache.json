@@ -12,6 +12,81 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/dimebag29/articles/61811779c3a13b",
+          "author": "dimebag29",
+          "description": "概要\nメッシュの各ポリゴンの各頂点の\n　・頂点座標値\n　・各Shapekeyに登録されている頂点座標値\n　・UV座標値\n　・頂点カラー\nを取得する方法を紹介します\n今回は例としてデフォルトキューブを使って情報を取得してみます\n\n 環境\n\nBlender 3.3\n\n\n Pythonスクリプトと実行方法\n\nBlenderを開き、デフォルトキューブを消さずに「ウィンドウ」タブの「システムコンソール切り替え」をクリックし、スクリプトの実行結果やエラーが見えるようにする\n「Sclipting」タブの「＋新規」ボタンをクリックして以下のPythonスクリプトを貼り付け、「▶」ボタンをクリックし、...",
+          "link": "https://zenn.dev/dimebag29/articles/61811779c3a13b",
+          "publishedOn": "2024-02-15T13:56:12.000Z",
+          "wordCount": 932,
+          "title": "Blender Pythonでメッシュの各ポリゴンの各頂点の頂点座標値、Shapekeyごとの頂点座標値、UV座標値、頂点カラーを取得する",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--l6n3K4BR--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Blender%2520Python%25E3%2581%25A7%25E3%2583%25A1%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E3%2581%25AE%25E5%2590%2584%25E3%2583%259D%25E3%2583%25AA%25E3%2582%25B4%25E3%2583%25B3%25E3%2581%25AE%25E5%2590%2584%25E9%25A0%2582%25E7%2582%25B9%25E3%2581%25AE%25E9%25A0%2582%25E7%2582%25B9%25E5%25BA%25A7%25E6%25A8%2599%25E5%2580%25A4%25E3%2580%2581Shapekey%25E3%2581%2594%25E3%2581%25A8%25E3%2581%25AE%25E9%25A0%2582%25E7%2582%25B9%25E5%25BA%25A7%25E6%25A8%2599%25E5%2580%25A4%25E3%2580%2581UV%25E5%25BA%25A7%25E6%25A8%2599...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:dimebag29%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBiNGJmZjVlM2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--l6n3K4BR--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Blender%2520Python%25E3%2581%25A7%25E3%2583%25A1%25E3%2583%2583%25E3%2582%25B7%25E3%2583%25A5%25E3%2581%25AE%25E5%2590%2584%25E3%2583%259D%25E3%2583%25AA%25E3%2582%25B4%25E3%2583%25B3%25E3%2581%25AE%25E5%2590%2584%25E9%25A0%2582%25E7%2582%25B9%25E3%2581%25AE%25E9%25A0%2582%25E7%2582%25B9%25E5%25BA%25A7%25E6%25A8%2599%25E5%2580%25A4%25E3%2580%2581Shapekey%25E3%2581%2594%25E3%2581%25A8%25E3%2581%25AE%25E9%25A0%2582%25E7%2582%25B9%25E5%25BA%25A7%25E6%25A8%2599%25E5%2580%25A4%25E3%2580%2581UV%25E5%25BA%25A7%25E6%25A8%2599...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:dimebag29%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBiNGJmZjVlM2IuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/satumahayato010/articles/0f3cf817b85115",
+          "author": "satumahayato010",
+          "description": "SELECT\nテーブル名: products\nカラム: id, name, price, created_at\n-- 全ての商品を取得する\nSELECT * FROM products;\n\n-- 商品の名前と価格だけを取得する\nSELECT name, price FROM products;\n# 全ての商品を取得する\nProduct.objects.all()\n\n# 商品の名前と価格だけを取得する \nproducts = Product.objects.only('name', 'price')\n\n SELECTを使用するときの注意点\n\nインデックスを適切に設定していない場合、大量...",
+          "link": "https://zenn.dev/satumahayato010/articles/0f3cf817b85115",
+          "publishedOn": "2024-02-15T12:48:12.000Z",
+          "wordCount": 3667,
+          "title": "Django ORM クエリセット",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--fe-pIPLO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%2520ORM%2520%25E3%2582%25AF%25E3%2582%25A8%25E3%2583%25AA%25E3%2582%25BB%25E3%2583%2583%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:satumahayato010%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2QxYjUwM2MwMGQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--fe-pIPLO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%2520ORM%2520%25E3%2582%25AF%25E3%2582%25A8%25E3%2583%25AA%25E3%2582%25BB%25E3%2583%2583%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:satumahayato010%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2QxYjUwM2MwMGQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/ivry/articles/e0e2049cc484c6",
+          "author": "kose_atsuya",
+          "description": "はじめに\n電話自動応答サービスIVRyでエンジニアをしている小瀬です。\nhttps://ivry.jp/\n普段はバックエンドの開発がメインですが、今回はプロダクト開発ではなく、社内業務で利用する便利なリマインダーを作成した経験についてブログに書きたいと思います。\n\n 2023年のアドカレは50ブログ\n2023年のIVRyのアドカレは、紅組と白組に分かれてPV数で競う紅白戦を実施しました。\nそのため、IVRy全体で25 x 2 = 50件のブログを投稿しました。\nhttps://x.com/IVRy_jp/status/1730521537294520802?s=20\nこの進捗管理を人...",
+          "link": "https://zenn.dev/ivry/articles/e0e2049cc484c6",
+          "publishedOn": "2024-02-15T06:47:12.000Z",
+          "wordCount": 1610,
+          "title": "アドベントカレンダーや会社ブログの進捗管理を自動化",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--_WW2H0OK--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25A2%25E3%2583%2589%25E3%2583%2599%25E3%2583%25B3%25E3%2583%2588%25E3%2582%25AB%25E3%2583%25AC%25E3%2583%25B3%25E3%2583%2580%25E3%2583%25BC%25E3%2582%2584%25E4%25BC%259A%25E7%25A4%25BE%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%25E3%2581%25AE%25E9%2580%25B2%25E6%258D%2597%25E7%25AE%25A1%25E7%2590%2586%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:kose_atsuya%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRkNzAyZWM1ODIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:IVRy%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYyMDFiNzhiMzYuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--_WW2H0OK--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2582%25A2%25E3%2583%2589%25E3%2583%2599%25E3%2583%25B3%25E3%2583%2588%25E3%2582%25AB%25E3%2583%25AC%25E3%2583%25B3%25E3%2583%2580%25E3%2583%25BC%25E3%2582%2584%25E4%25BC%259A%25E7%25A4%25BE%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%25E3%2581%25AE%25E9%2580%25B2%25E6%258D%2597%25E7%25AE%25A1%25E7%2590%2586%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:kose_atsuya%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRkNzAyZWM1ODIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:IVRy%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzYyMDFiNzhiMzYuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/derwind/articles/dwd-matrix-product10",
+          "author": "derwind",
+          "description": "目的\n行列積状態について考える (9) — 100 量子ビットのもつれ状態 で大量の量子ビットの行列積状態 (MPS) のもつれ状態を見た。\nテンソルネットワーク計算で量子状態を求める場合、係数である波動関数ごとに計算する必要があり、すべての波動関数を計算しようとすると (量子ビット数について) 指数関数的な計算量になる。\nところがハミルトニアンの期待値計算の場合、実はたった 1 つの波動関数を求めれば良いので MPS の恩恵を得ることができる。今回はこれを見たい。\n\nQiskit Aer\ncuTensorNet\n自前実装\n\nの 3 パターン実装して確認してみたい。\n\n 期待値計算\n...",
+          "link": "https://zenn.dev/derwind/articles/dwd-matrix-product10",
+          "publishedOn": "2024-02-14T18:08:43.000Z",
+          "wordCount": 6477,
+          "title": "行列積状態について考える (10) — 50 量子ビットの期待値計算",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--KbUuPKZh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25A1%258C%25E5%2588%2597%25E7%25A9%258D%25E7%258A%25B6%25E6%2585%258B%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E8%2580%2583%25E3%2581%2588%25E3%2582%258B%2520%252810%2529%2520%25E2%2580%2594%252050%2520%25E9%2587%258F%25E5%25AD%2590%25E3%2583%2593%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AE%25E6%259C%259F%25E5%25BE%2585%25E5%2580%25A4%25E8%25A8%2588%25E7%25AE%2597%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:derwind%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--KbUuPKZh--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25A1%258C%25E5%2588%2597%25E7%25A9%258D%25E7%258A%25B6%25E6%2585%258B%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E8%2580%2583%25E3%2581%2588%25E3%2582%258B%2520%252810%2529%2520%25E2%2580%2594%252050%2520%25E9%2587%258F%25E5%25AD%2590%25E3%2583%2593%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AE%25E6%259C%259F%25E5%25BE%2585%25E5%2580%25A4%25E8%25A8%2588%25E7%25AE%2597%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:derwind%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFiNjBiZDcwMDMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/0msys/articles/34a380d0af1269",
+          "author": "0msys",
+          "description": "はじめに\n前から存在は知っていたものの、なんか難しそうなので手を出してなかったPyGWalkerを試してみました。\nここにPyGWalkerの紹介と、デモコードがあるので、これを動かしてみます。\nhttps://docs.kanaries.net/ja/pygwalker/use-pygwalker-with-streamlit\n例によって、以前作ったStreamlitのテンプレートを使用します。\n\n 依存関係のインストール\npandas, streamlit, pygwalkerをインストールするように書かれていますが、pandasはstreamlitに含まれているので、pygwa...",
+          "link": "https://zenn.dev/0msys/articles/34a380d0af1269",
+          "publishedOn": "2024-02-14T15:45:34.000Z",
+          "wordCount": 986,
+          "title": "StreamlitでPyGWalkerを試してみる",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--4jpNXD8i--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Streamlit%25E3%2581%25A7PyGWalker%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:0msys%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3MDZmMDc5MzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--4jpNXD8i--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Streamlit%25E3%2581%25A7PyGWalker%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:0msys%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzI3MDZmMDc5MzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
           "id": "https://zenn.dev/microsoft/articles/533488db14e442",
           "author": "ryohtaka",
           "description": "はじめに\nOpenAI DevDay にて本家 OpenAI の β 版機能として発表された Assistant API が Azure OpenAI Service (AOAI) でも Assistant API (プレビュー) として利用可能になりました。そこで、自分自身の理解や言語化も兼ねて情報をまとめました。\nなお、本記事は AOAI の基本的な部分をある程度理解できている開発者を想定して書かれています。\n\n Assistant API\n\n Assistant API とは何か\nAssistant API は 開発者による独自のアシスタント (Microsoft 的な表現をす...",
@@ -205,6 +280,21 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--NBzFc4-U--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GoCV%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E8%2587%25AA%25E5%258B%2595%25E3%2581%25A7%25E3%2583%258A%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AC%25E3%2582%2592%25E8%25A7%25A3%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hamao%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQ1MGMyYzE1MmIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/team_delta/articles/kaggle_article_1",
+          "author": "reochiyo",
+          "description": "はじめに\nどうも、都内の大学で情報系の学科を専攻している千代丸と申します。\nこの記事はKaggleに参加して機械学習を勉強しよう！というものの超入門記事になっています。\n私は普段から機械学習や生成AIなどの文献を読み漁っており、ハンズオン形式でもっと深く理解したいという思いから最近Kaggleに参加しました。\n\n この記事を読んで欲しい人\n\n「Kaggle」もしくは「機械学習」という言葉を聞いたことがある人・興味がある人\nAI系、データサイエンスに興味がある人\n機械学習、データサイエンスなどを始めたいが何から始めればいいかわからない人\n\n\n Kaggleって何？\nKaggle（呼び方...",
+          "link": "https://zenn.dev/team_delta/articles/kaggle_article_1",
+          "publishedOn": "2024-02-12T16:00:14.000Z",
+          "wordCount": 208,
+          "title": "【Kaggle】Kaggleで学習する機械学習",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--oj2L2OQk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Kaggle%25E3%2580%2591Kaggle%25E3%2581%25A7%25E5%25AD%25A6%25E7%25BF%2592%25E3%2581%2599%25E3%2582%258B%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:reochiyo%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzJiZjRiYjM4NGIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:DELTA%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSVpvZ25XNnJPckxBU1owZXd2Si1rY29qS0JVa1BMTzl1T0ctbDNMRVZzPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--oj2L2OQk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Kaggle%25E3%2580%2591Kaggle%25E3%2581%25A7%25E5%25AD%25A6%25E7%25BF%2592%25E3%2581%2599%25E3%2582%258B%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:reochiyo%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzJiZjRiYjM4NGIuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:DELTA%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSVpvZ25XNnJPckxBU1owZXd2Si1rY29qS0JVa1BMTzl1T0ctbDNMRVZzPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
         },
         {
           "id": "https://zenn.dev/reochiyo/articles/kaggle_article_1",
@@ -2780,51 +2870,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s---j1amBFx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7Win32%2520API%2520%25E2%2591%25A0%25EF%25BC%2588%25E3%2582%25A6%25E3%2582%25A3%25E3%2583%25B3%25E3%2583%2589%25E3%2582%25A6%25E3%2581%25AE%25E4%25BD%259C%25E6%2588%2590%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hatemoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3MDIyOTY0MjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/kubomi/articles/214a2ced7f2562",
-          "author": "kubomi",
-          "description": "Pythonを使用しようとした際に zsh: command not found: python というエラーに直面したので、この問題の原因と解決策を簡単に記録します。\n\n 原因\nこのエラーは、主に以下の理由で発生します：\n\nPythonがインストールされていない\nPythonがシステムのPATHに含まれていない\nPythonコマンドが異なる名前でインストールされている（例えばpython3）\n\n\n 解決策\n\n Pythonのインストールを確認\nまず、Pythonがシステムにインストールされているかを確認しましょう。ターミナルで以下のコマンドを実行します：\npython3 --versi...",
-          "link": "https://zenn.dev/kubomi/articles/214a2ced7f2562",
-          "publishedOn": "2024-01-17T07:58:31.000Z",
-          "wordCount": 223,
-          "title": "zsh: command not found: pythonを解決する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--snQQn6f6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:zsh%253A%2520command%2520not%2520found%253A%2520python%25E3%2582%2592%25E8%25A7%25A3%25E6%25B1%25BA%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kubomi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSXdTd0d5V2FJMXkzOGx5N1QwX3lnMjJCSUpiVm9lWWsyTHBDUHd3QUx0b05fbj1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--snQQn6f6--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:zsh%253A%2520command%2520not%2520found%253A%2520python%25E3%2582%2592%25E8%25A7%25A3%25E6%25B1%25BA%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:kubomi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSXdTd0d5V2FJMXkzOGx5N1QwX3lnMjJCSUpiVm9lWWsyTHBDUHd3QUx0b05fbj1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/bonsai_engineer/articles/409678cf22382a",
-          "author": "盆栽エンジニア",
-          "description": "感情分析の実装方法\n感情分析は、自然言語処理技術を使用して、与えられたテキストから感情や感情のニュアンスを抽出するタスクです。この記事では、Pythonを使用して感情分析を実装する基本的な手順を説明します。\n\n 必要なライブラリのインストール\n最初に、感情分析に使用するライブラリをインストールします。以下のコマンドでNLTKとTextBlobをインストールします。\npip3 install nltk\npip3 install textblob\n\n NLTKのデータセットのダウンロード\n次に、データセットをダウンロードします。\n\ndownload.py\nimport nltk\nnltk...",
-          "link": "https://zenn.dev/bonsai_engineer/articles/409678cf22382a",
-          "publishedOn": "2024-01-17T02:35:24.000Z",
-          "wordCount": 683,
-          "title": "自然言語処理（NLP）技術を用いた感情分析の実装",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--Dc2CbuCF--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25EF%25BC%2588NLP%25EF%25BC%2589%25E6%258A%2580%25E8%25A1%2593%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E6%2584%259F%25E6%2583%2585%25E5%2588%2586%25E6%259E%2590%25E3%2581%25AE%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%259B%2586%25E6%25A0%25BD%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E2NDI2MGJiNjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Dc2CbuCF--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%2587%25AA%25E7%2584%25B6%25E8%25A8%2580%25E8%25AA%259E%25E5%2587%25A6%25E7%2590%2586%25EF%25BC%2588NLP%25EF%25BC%2589%25E6%258A%2580%25E8%25A1%2593%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E6%2584%259F%25E6%2583%2585%25E5%2588%2586%25E6%259E%2590%25E3%2581%25AE%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%259B%2586%25E6%25A0%25BD%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E2NDI2MGJiNjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/junko_ai/articles/33ab68f0dcebc8",
-          "author": "junko",
-          "description": "Pythonを使った日付関連のデータ処理を行う際に、ちょこちょこ使うコードをまとめました。エラー解決などに役立ちます。\npandasライブラリを使用するため、最初に下記を加えてからコードをいれていきます。\nimport pandas as pd\nサンプルデータとして train_df データフレームを使用し、日付情報は date カラムに格納されていると仮定します。\n\n データ型確認\nデータフレーム内の各カラムのデータ型を確認します。\ntrain_df.dtypes\n\n カラム確認\nデータフレーム内のカラム名のリストを取得します。\ntrain_df.columns\n\n データフレームの概...",
-          "link": "https://zenn.dev/junko_ai/articles/33ab68f0dcebc8",
-          "publishedOn": "2024-01-17T02:28:07.000Z",
-          "wordCount": 329,
-          "title": "Pythonで日付関連の処理を行う時に、重宝するコード",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--egjm_NGi--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E6%2597%25A5%25E4%25BB%2598%25E9%2596%25A2%25E9%2580%25A3%25E3%2581%25AE%25E5%2587%25A6%25E7%2590%2586%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%25E6%2599%2582%25E3%2581%25AB%25E3%2580%2581%25E9%2587%258D%25E5%25AE%259D%25E3%2581%2599%25E3%2582%258B%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:junko%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyNTdjMjg4N2YuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--egjm_NGi--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E6%2597%25A5%25E4%25BB%2598%25E9%2596%25A2%25E9%2580%25A3%25E3%2581%25AE%25E5%2587%25A6%25E7%2590%2586%25E3%2582%2592%25E8%25A1%258C%25E3%2581%2586%25E6%2599%2582%25E3%2581%25AB%25E3%2580%2581%25E9%2587%258D%25E5%25AE%259D%25E3%2581%2599%25E3%2582%258B%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:junko%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyNTdjMjg4N2YuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
         }
       ]
     }
