@@ -22,6 +22,197 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-16 datetime="2024-02-16T13:11:20.000Z">2024-02-16</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-16 datetime="2024-02-16T13:11:20.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nondescript/articles/7db2e3ff673acc"
+                        open
+                      >
+                        <summary class="article-expander__title">CodeBuildのローカルビルド環境変数展開: eval不使用版</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nondescript/articles/7db2e3ff673acc">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--LbJhRgkA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:CodeBuild%25E3%2581%25AE%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E3%2583%2593%25E3%2583%25AB%25E3%2583%2589%25E7%2592%25B0%25E5%25A2%2583%25E5%25A4%2589%25E6%2595%25B0%25E5%25B1%2595%25E9%2596%258B%253A%2520eval%25E4%25B8%258D%25E4%25BD%25BF%25E7%2594%25A8%25E7%2589%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%25B4%25A0%25E4%25BA%25BA%25E3%2581%25AE%25E6%2588%25AF%25E8%25A8%2580%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVmYTVmOTBhM2EuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>下記記事の続き: eval不使用版
+
+
+ TL;DR
+
+環境変数ファイルをマウント&amp;読み込みさせたコンテナを起動し、キーと値のペアをbase64エンコード
+local_build.shでbase64デコードした環境変数をファイルに書き出してcustomer-specific.ymlへ追記する
+
+
+ イメージ図
+
+
+ 事前準備
+
+
+環境変数エンコード環境作成
+
+エンコードスクリプト
+
+
+parse_envs.py
+import os
+from base64 import b64encode
+from pathlib import Path
+
+envs: dict[str, str]...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;6
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/headwaters/articles/698404424f3b16"
+                        open
+                      >
+                        <summary class="article-expander__title">Azure SQL Databaseへのアクセスが稀に500エラーとなるので原因調査</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/headwaters/articles/698404424f3b16">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Jrmik5bW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520SQL%2520Database%25E3%2581%25B8%25E3%2581%25AE%25E3%2582%25A2%25E3%2582%25AF%25E3%2582%25BB%25E3%2582%25B9%25E3%2581%258C%25E7%25A8%2580%25E3%2581%25AB500%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E3%2581%25A8%25E3%2581%25AA%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25A7%25E5%258E%259F%25E5%259B%25A0%25E8%25AA%25BF%25E6%259F%25BB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:ikebowsan%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUyNTM1ZTc4OGYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>環境
+・App Service（FastAPI製のアプリケーション）
+・SQL Database
+
+ 通信・認証方法
+通信...プライベートエンドポイントとVPN接続からのみのアクセス
+認証...ODBCドライバーを使ったAAD認証
+
+ 発生したエラー
+以下のエラーが稀に発生します。
+タイミングとしては、最後にAPIリクエストをしてからだいぶ時間が経った後にAPIリクエストをすると発生するようです。
+
+(pyodbc.OperationalError) (&#x27;08S01&#x27;, &#x27;[08S01] [Microsoft][ODBC Driver 18 for SQL Server]TCP P...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/buenotheebiten/articles/573c64d9019359"
+                        open
+                      >
+                        <summary class="article-expander__title">LangChainでいろんなLLMを試す（GPT・Claude・Gemini・Mistral）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/buenotheebiten/articles/573c64d9019359">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--n8FzGRUa--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:LangChain%25E3%2581%25A7%25E3%2581%2584%25E3%2582%258D%25E3%2582%2593%25E3%2581%25AALLM%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2599%25EF%25BC%2588GPT%25E3%2583%25BBClaude%25E3%2583%25BBGemini%25E3%2583%25BBMistral%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2588%25E3%2581%25B3%25E3%2581%25A6%25E3%2582%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSmsxNTdHd0N1cnllbWI1dnp5OGNKQkh6cTRTZ0JnOE9yempFREp5UG56ZUE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>LangChainでは様々なLLMがサポートされています。
+それぞれ呼び出すための最低限のコードをまとめてみました。
+
+ モデル別の料金比較（早見表）
+
+
+
+Model
+Input(1K tokens)
+Output(1K tokens)
+Context window
+比較
+
+
+
+
+gpt-4-0125-preview
+1.5円
+4.5円
+128,000 tokens
+100
+
+
+gpt-3.5-turbo-0125
+0.075円
+0.225円
+16,000 tokens
+5
+
+
+claude-2.1
+1.2円
+3.6円
+200,000 tokens
+80
+
+
+claude-2.0
+1....</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/buenotheebiten/articles/028bf065b05b40"
+                        open
+                      >
+                        <summary class="article-expander__title">【検証】GPTで長文の要約をするなら？（MapReduce・MapRerank・Refine）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/buenotheebiten/articles/028bf065b05b40">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--fK1whUng--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E6%25A4%259C%25E8%25A8%25BC%25E3%2580%2591GPT%25E3%2581%25A7%25E9%2595%25B7%25E6%2596%2587%25E3%2581%25AE%25E8%25A6%2581%25E7%25B4%2584%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%25E3%2581%25AA%25E3%2582%2589%25EF%25BC%259F%25EF%25BC%2588MapReduce%25E3%2583%25BBMapRerank%25E3%2583%25BBRefine%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2588%25E3%2581%25B3%25E3%2581%25A6%25E3%2582%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSmsxNTdHd0N1cnllbWI1dnp5OGNKQkh6cTRTZ0JnOE9yempFREp5UG56ZUE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>今回は、長文をGPTで要約する方法として「MapReduce」「MapRerank」「Refine」の3つを見かけたので、それぞれの「精度」や「費用」、「応答スピード」を簡単に検証して調べてみたメモです。
+（注: 今回の評価はChatGPTでしているので主観的な評価は含まれていません。また各プロンプトが細かく作れていなかったり、全体的にざっくりとした検証です。）
+
+ 📝 検証内容
+
+「URLから要約を作成する手法」でどれが優れているのかを検証します。
+特に今回は、長文テキストを分割した後の要約&amp;結合処理(Combine)部分の違いが気になったので、そこを中心に行います。
+
+ ① ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;18
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-15 datetime="2024-02-15T13:56:12.000Z">2024-02-15</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-15 datetime="2024-02-15T13:56:12.000Z"></time>
           </button>
@@ -6513,232 +6704,10 @@ Chat GPTは結構なんでも出来るのですが、結果をいくつかに分
             </li>
         </ul>
       </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-18 datetime="2024-01-18T11:28:10.000Z">2024-01-18</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-18 datetime="2024-01-18T11:28:10.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/aay/articles/96a5f0dab25d0b"
-                        open
-                      >
-                        <summary class="article-expander__title">listとarrayの違い</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/aay/articles/96a5f0dab25d0b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--UvcixSLu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_66:list%25E3%2581%25A8array%25E3%2581%25AE%25E9%2581%2595%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ayaka%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I0N2JhMzQyODAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-機械学習を学習していると、データ処理のフェーズにおいてlistとarrayの扱いに躓いた。そこで、本記事ではlistとarrayの特徴をまとめ、それぞれの違いとlist-&gt;array、array-&gt;listの変換についてもまとめていこうと思う。
-
- list
-Pythonの標準のリスト。
-
- リスト内の要素は型の違うデータを混在することができる。
-a &#x3D; [1, 2, 3, 4, 5]
-b &#x3D; [1, 3.141592, &#x27;apple&#x27;]
-
-print(a) # [1, 2, 3, 4, 5]
-print(b) # [1, 3.141592, &#x27;apple&#x27;]
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hatemoto/articles/c3fae865e257ab"
-                        open
-                      >
-                        <summary class="article-expander__title">Slackボット① エコーボット</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hatemoto/articles/c3fae865e257ab">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--a72j6Q_A--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Slack%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E2%2591%25A0%2520%25E3%2582%25A8%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hatemoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3MDIyOTY0MjkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-エコーボットの作成
-環境構築
-
- 開発環境
-
-WSL(Ubuntu)
-Python 3.10.12
-
-
- トークンの設定
-AppトークンとBotトークンは，ボットの設定をしている時にメモしたものを使用する．
-APP_TOKEN &#x3D; &quot;xapp-x-xxxxxxxxxx-xxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;
-BOT_TOKEN &#x3D; &quot;xoxb-xxxxxxxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx&quot;
-
- イベントが発生したときに受け取る情報
-イベントが発生したときにサーバーか...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hatemoto/articles/ce321ede465877"
-                        open
-                      >
-                        <summary class="article-expander__title">Slackボット ⓪ 環境構築</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hatemoto/articles/ce321ede465877">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--GjNBb_Ut--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Slack%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%2520%25E2%2593%25AA%2520%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hatemoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3MDIyOTY0MjkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-Slackボットを作成するための環境構築．
-
- 開発環境
-
-WSL
-Python 3.10.12
-
-
- Slackボットの設定
-
- ボットの作成
-
-Slackを開く
-ボットを追加したいワークスペースを開く
-「設定と管理」 &gt; 「アプリを管理する」
-右上の「ビルド」
-「Create New App」 &gt; 「From scratch」を選択
-
-
-「App Name」にアプリの名前，「Pick a workspace to develop your app in:」からボットを追加したいワークスペースを選択し，「Create App」をクリック
-
-
-
-
- スコープの設...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/dataheroes/articles/0f04ead21013a3"
-                        open
-                      >
-                        <summary class="article-expander__title">[Snowflake] SELECT LENGTH(&#x27;🙆‍♀️&#x27;)&#x3D; 4 ←???</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/dataheroes/articles/0f04ead21013a3">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Oc0Veo4R--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BSnowflake%255D%2520SELECT%2520LENGTH%2528%2527%2520%2527%2529%253D%25204%2520%25E2%2586%2590%253F%253F%253F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kentaro%2520Maeda%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUxNDFkYTVlNTUuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Snowflake%2520Data%2520Heroes%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FjYTJlMzdkM2QuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>問題
-LENGTH関数は一部の絵文字や外国語(書記素クラスタ)を正しくカウントできない。
-
-絵文字だけならともかく、フランス語や韓国語などのメジャーな言語でも問題は発生する。
-
- 解決策
-正確性が必要な場合、PythonなどのUDFでカウントする必要がある。
-以下のように正しく文字列をカウントするUDFを作る。
-CREATE OR REPLACE FUNCTION COUNT_GC(s varchar)
-returns number
-language python
-runtime_version &#x3D; 3.11
-packages &#x3D; (&#x27;pyicu&#x27;)
-handler &#x3D; &#x27;count...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/hatemoto/articles/09dd1a87ff4aa0"
-                        open
-                      >
-                        <summary class="article-expander__title">PythonでWin32 API ①（ウィンドウの作成）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hatemoto/articles/09dd1a87ff4aa0">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s---j1amBFx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7Win32%2520API%2520%25E2%2591%25A0%25EF%25BC%2588%25E3%2582%25A6%25E3%2582%25A3%25E3%2583%25B3%25E3%2583%2589%25E3%2582%25A6%25E3%2581%25AE%25E4%25BD%259C%25E6%2588%2590%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hatemoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3MDIyOTY0MjkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-PythonでWin32 APIを扱う．
-基本的はウィンドウの作成を行う．
-
- 開発環境
-
-Windows10 Home
-PyCharm
-Python3.11
-
-
- 定数の定義
-
- win_const.py
-WHITE_BRUSH &#x3D; 0
-BLACK_BRUSH &#x3D; 2
-
-CS_HREDRAW &#x3D; 0x0002
-CS_VREDRAW &#x3D; 0x0001
-
-CW_USEDEFAULT &#x3D; 0x80000000
-
-IDC_ARROW &#x3D; 32512
-
-WS_OVERLAPPEDWINDOW &#x3D; 0x00CF0000
-
-WM_DESTROY &#x3D; 0x0002
-
-SW_SHOWDEF...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/7924567890">
-        <time id="build-timestamp" datetime="2024-02-16T01:12:47.607Z">2024-02-16T01:12:47.607Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/7938220868">
+        <time id="build-timestamp" datetime="2024-02-17T01:12:35.315Z">2024-02-17T01:12:35.315Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>

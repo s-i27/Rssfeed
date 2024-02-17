@@ -12,6 +12,66 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/nondescript/articles/7db2e3ff673acc",
+          "author": "素人の戯言",
+          "description": "下記記事の続き: eval不使用版\n\n\n TL;DR\n\n環境変数ファイルをマウント&読み込みさせたコンテナを起動し、キーと値のペアをbase64エンコード\nlocal_build.shでbase64デコードした環境変数をファイルに書き出してcustomer-specific.ymlへ追記する\n\n\n イメージ図\n\n\n 事前準備\n\n\n環境変数エンコード環境作成\n\nエンコードスクリプト\n\n\nparse_envs.py\nimport os\nfrom base64 import b64encode\nfrom pathlib import Path\n\nenvs: dict[str, str]...",
+          "link": "https://zenn.dev/nondescript/articles/7db2e3ff673acc",
+          "publishedOn": "2024-02-16T13:11:20.000Z",
+          "wordCount": 1674,
+          "title": "CodeBuildのローカルビルド環境変数展開: eval不使用版",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--LbJhRgkA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:CodeBuild%25E3%2581%25AE%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E3%2583%2593%25E3%2583%25AB%25E3%2583%2589%25E7%2592%25B0%25E5%25A2%2583%25E5%25A4%2589%25E6%2595%25B0%25E5%25B1%2595%25E9%2596%258B%253A%2520eval%25E4%25B8%258D%25E4%25BD%25BF%25E7%2594%25A8%25E7%2589%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%25B4%25A0%25E4%25BA%25BA%25E3%2581%25AE%25E6%2588%25AF%25E8%25A8%2580%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVmYTVmOTBhM2EuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--LbJhRgkA--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:CodeBuild%25E3%2581%25AE%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E3%2583%2593%25E3%2583%25AB%25E3%2583%2589%25E7%2592%25B0%25E5%25A2%2583%25E5%25A4%2589%25E6%2595%25B0%25E5%25B1%2595%25E9%2596%258B%253A%2520eval%25E4%25B8%258D%25E4%25BD%25BF%25E7%2594%25A8%25E7%2589%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%25B4%25A0%25E4%25BA%25BA%25E3%2581%25AE%25E6%2588%25AF%25E8%25A8%2580%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVmYTVmOTBhM2EuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/headwaters/articles/698404424f3b16",
+          "author": "ikebowsan",
+          "description": "環境\n・App Service（FastAPI製のアプリケーション）\n・SQL Database\n\n 通信・認証方法\n通信...プライベートエンドポイントとVPN接続からのみのアクセス\n認証...ODBCドライバーを使ったAAD認証\n\n 発生したエラー\n以下のエラーが稀に発生します。\nタイミングとしては、最後にAPIリクエストをしてからだいぶ時間が経った後にAPIリクエストをすると発生するようです。\n\n(pyodbc.OperationalError) ('08S01', '[08S01] [Microsoft][ODBC Driver 18 for SQL Server]TCP P...",
+          "link": "https://zenn.dev/headwaters/articles/698404424f3b16",
+          "publishedOn": "2024-02-16T08:30:55.000Z",
+          "wordCount": 293,
+          "title": "Azure SQL Databaseへのアクセスが稀に500エラーとなるので原因調査",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--Jrmik5bW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520SQL%2520Database%25E3%2581%25B8%25E3%2581%25AE%25E3%2582%25A2%25E3%2582%25AF%25E3%2582%25BB%25E3%2582%25B9%25E3%2581%258C%25E7%25A8%2580%25E3%2581%25AB500%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E3%2581%25A8%25E3%2581%25AA%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25A7%25E5%258E%259F%25E5%259B%25A0%25E8%25AA%25BF%25E6%259F%25BB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:ikebowsan%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUyNTM1ZTc4OGYuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Jrmik5bW--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Azure%2520SQL%2520Database%25E3%2581%25B8%25E3%2581%25AE%25E3%2582%25A2%25E3%2582%25AF%25E3%2582%25BB%25E3%2582%25B9%25E3%2581%258C%25E7%25A8%2580%25E3%2581%25AB500%25E3%2582%25A8%25E3%2583%25A9%25E3%2583%25BC%25E3%2581%25A8%25E3%2581%25AA%25E3%2582%258B%25E3%2581%25AE%25E3%2581%25A7%25E5%258E%259F%25E5%259B%25A0%25E8%25AA%25BF%25E6%259F%25BB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:ikebowsan%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUyNTM1ZTc4OGYuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/buenotheebiten/articles/573c64d9019359",
+          "author": "えびてん",
+          "description": "LangChainでは様々なLLMがサポートされています。\nそれぞれ呼び出すための最低限のコードをまとめてみました。\n\n モデル別の料金比較（早見表）\n\n\n\nModel\nInput(1K tokens)\nOutput(1K tokens)\nContext window\n比較\n\n\n\n\ngpt-4-0125-preview\n1.5円\n4.5円\n128,000 tokens\n100\n\n\ngpt-3.5-turbo-0125\n0.075円\n0.225円\n16,000 tokens\n5\n\n\nclaude-2.1\n1.2円\n3.6円\n200,000 tokens\n80\n\n\nclaude-2.0\n1....",
+          "link": "https://zenn.dev/buenotheebiten/articles/573c64d9019359",
+          "publishedOn": "2024-02-16T04:37:22.000Z",
+          "wordCount": 1250,
+          "title": "LangChainでいろんなLLMを試す（GPT・Claude・Gemini・Mistral）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--n8FzGRUa--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:LangChain%25E3%2581%25A7%25E3%2581%2584%25E3%2582%258D%25E3%2582%2593%25E3%2581%25AALLM%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2599%25EF%25BC%2588GPT%25E3%2583%25BBClaude%25E3%2583%25BBGemini%25E3%2583%25BBMistral%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2588%25E3%2581%25B3%25E3%2581%25A6%25E3%2582%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSmsxNTdHd0N1cnllbWI1dnp5OGNKQkh6cTRTZ0JnOE9yempFREp5UG56ZUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--n8FzGRUa--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:LangChain%25E3%2581%25A7%25E3%2581%2584%25E3%2582%258D%25E3%2582%2593%25E3%2581%25AALLM%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2599%25EF%25BC%2588GPT%25E3%2583%25BBClaude%25E3%2583%25BBGemini%25E3%2583%25BBMistral%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2588%25E3%2581%25B3%25E3%2581%25A6%25E3%2582%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSmsxNTdHd0N1cnllbWI1dnp5OGNKQkh6cTRTZ0JnOE9yempFREp5UG56ZUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/buenotheebiten/articles/028bf065b05b40",
+          "author": "えびてん",
+          "description": "今回は、長文をGPTで要約する方法として「MapReduce」「MapRerank」「Refine」の3つを見かけたので、それぞれの「精度」や「費用」、「応答スピード」を簡単に検証して調べてみたメモです。\n（注: 今回の評価はChatGPTでしているので主観的な評価は含まれていません。また各プロンプトが細かく作れていなかったり、全体的にざっくりとした検証です。）\n\n 📝 検証内容\n\n「URLから要約を作成する手法」でどれが優れているのかを検証します。\n特に今回は、長文テキストを分割した後の要約&結合処理(Combine)部分の違いが気になったので、そこを中心に行います。\n\n ① ...",
+          "link": "https://zenn.dev/buenotheebiten/articles/028bf065b05b40",
+          "publishedOn": "2024-02-16T00:53:06.000Z",
+          "wordCount": 5432,
+          "title": "【検証】GPTで長文の要約をするなら？（MapReduce・MapRerank・Refine）",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--fK1whUng--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E6%25A4%259C%25E8%25A8%25BC%25E3%2580%2591GPT%25E3%2581%25A7%25E9%2595%25B7%25E6%2596%2587%25E3%2581%25AE%25E8%25A6%2581%25E7%25B4%2584%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%25E3%2581%25AA%25E3%2582%2589%25EF%25BC%259F%25EF%25BC%2588MapReduce%25E3%2583%25BBMapRerank%25E3%2583%25BBRefine%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2588%25E3%2581%25B3%25E3%2581%25A6%25E3%2582%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSmsxNTdHd0N1cnllbWI1dnp5OGNKQkh6cTRTZ0JnOE9yempFREp5UG56ZUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--fK1whUng--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590%25E6%25A4%259C%25E8%25A8%25BC%25E3%2580%2591GPT%25E3%2581%25A7%25E9%2595%25B7%25E6%2596%2587%25E3%2581%25AE%25E8%25A6%2581%25E7%25B4%2584%25E3%2582%2592%25E3%2581%2599%25E3%2582%258B%25E3%2581%25AA%25E3%2582%2589%25EF%25BC%259F%25EF%25BC%2588MapReduce%25E3%2583%25BBMapRerank%25E3%2583%25BBRefine%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2588%25E3%2581%25B3%25E3%2581%25A6%25E3%2582%2593%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSmsxNTdHd0N1cnllbWI1dnp5OGNKQkh6cTRTZ0JnOE9yempFREp5UG56ZUE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
           "id": "https://zenn.dev/dimebag29/articles/61811779c3a13b",
           "author": "dimebag29",
           "description": "概要\nメッシュの各ポリゴンの各頂点の\n　・頂点座標値\n　・各Shapekeyに登録されている頂点座標値\n　・UV座標値\n　・頂点カラー\nを取得する方法を紹介します\n今回は例としてデフォルトキューブを使って情報を取得してみます\n\n 環境\n\nBlender 3.3\n\n\n Pythonスクリプトと実行方法\n\nBlenderを開き、デフォルトキューブを消さずに「ウィンドウ」タブの「システムコンソール切り替え」をクリックし、スクリプトの実行結果やエラーが見えるようにする\n「Sclipting」タブの「＋新規」ボタンをクリックして以下のPythonスクリプトを貼り付け、「▶」ボタンをクリックし、...",
@@ -2795,81 +2855,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--XWbIYKuQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Chat%2520GPT%2520API%25E3%2581%25AB%25E3%2581%25A6JSON%25E3%2581%25A7%25E7%25B5%2590%25E6%259E%259C%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hashito%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFmMmRhOTE0MGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/aay/articles/96a5f0dab25d0b",
-          "author": "ayaka",
-          "description": "はじめに\n機械学習を学習していると、データ処理のフェーズにおいてlistとarrayの扱いに躓いた。そこで、本記事ではlistとarrayの特徴をまとめ、それぞれの違いとlist->array、array->listの変換についてもまとめていこうと思う。\n\n list\nPythonの標準のリスト。\n\n リスト内の要素は型の違うデータを混在することができる。\na = [1, 2, 3, 4, 5]\nb = [1, 3.141592, 'apple']\n\nprint(a) # [1, 2, 3, 4, 5]\nprint(b) # [1, 3.141592, 'apple']\n...",
-          "link": "https://zenn.dev/aay/articles/96a5f0dab25d0b",
-          "publishedOn": "2024-01-18T11:28:10.000Z",
-          "wordCount": 604,
-          "title": "listとarrayの違い",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--UvcixSLu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_66:list%25E3%2581%25A8array%25E3%2581%25AE%25E9%2581%2595%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ayaka%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I0N2JhMzQyODAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--UvcixSLu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_66:list%25E3%2581%25A8array%25E3%2581%25AE%25E9%2581%2595%25E3%2581%2584%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ayaka%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2I0N2JhMzQyODAuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/hatemoto/articles/c3fae865e257ab",
-          "author": "hatemoto",
-          "description": "はじめに\nエコーボットの作成\n環境構築\n\n 開発環境\n\nWSL(Ubuntu)\nPython 3.10.12\n\n\n トークンの設定\nAppトークンとBotトークンは，ボットの設定をしている時にメモしたものを使用する．\nAPP_TOKEN = \"xapp-x-xxxxxxxxxx-xxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\nBOT_TOKEN = \"xoxb-xxxxxxxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx\"\n\n イベントが発生したときに受け取る情報\nイベントが発生したときにサーバーか...",
-          "link": "https://zenn.dev/hatemoto/articles/c3fae865e257ab",
-          "publishedOn": "2024-01-18T09:03:33.000Z",
-          "wordCount": 487,
-          "title": "Slackボット① エコーボット",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--a72j6Q_A--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Slack%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E2%2591%25A0%2520%25E3%2582%25A8%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hatemoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3MDIyOTY0MjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--a72j6Q_A--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Slack%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%25E2%2591%25A0%2520%25E3%2582%25A8%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hatemoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3MDIyOTY0MjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/hatemoto/articles/ce321ede465877",
-          "author": "hatemoto",
-          "description": "はじめに\nSlackボットを作成するための環境構築．\n\n 開発環境\n\nWSL\nPython 3.10.12\n\n\n Slackボットの設定\n\n ボットの作成\n\nSlackを開く\nボットを追加したいワークスペースを開く\n「設定と管理」 > 「アプリを管理する」\n右上の「ビルド」\n「Create New App」 > 「From scratch」を選択\n\n\n「App Name」にアプリの名前，「Pick a workspace to develop your app in:」からボットを追加したいワークスペースを選択し，「Create App」をクリック\n\n\n\n\n スコープの設...",
-          "link": "https://zenn.dev/hatemoto/articles/ce321ede465877",
-          "publishedOn": "2024-01-18T08:26:12.000Z",
-          "wordCount": 345,
-          "title": "Slackボット ⓪ 環境構築",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--GjNBb_Ut--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Slack%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%2520%25E2%2593%25AA%2520%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hatemoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3MDIyOTY0MjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--GjNBb_Ut--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Slack%25E3%2583%259C%25E3%2583%2583%25E3%2583%2588%2520%25E2%2593%25AA%2520%25E7%2592%25B0%25E5%25A2%2583%25E6%25A7%258B%25E7%25AF%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hatemoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3MDIyOTY0MjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/dataheroes/articles/0f04ead21013a3",
-          "author": "Kentaro Maeda",
-          "description": "問題\nLENGTH関数は一部の絵文字や外国語(書記素クラスタ)を正しくカウントできない。\n\n絵文字だけならともかく、フランス語や韓国語などのメジャーな言語でも問題は発生する。\n\n 解決策\n正確性が必要な場合、PythonなどのUDFでカウントする必要がある。\n以下のように正しく文字列をカウントするUDFを作る。\nCREATE OR REPLACE FUNCTION COUNT_GC(s varchar)\nreturns number\nlanguage python\nruntime_version = 3.11\npackages = ('pyicu')\nhandler = 'count...",
-          "link": "https://zenn.dev/dataheroes/articles/0f04ead21013a3",
-          "publishedOn": "2024-01-18T08:21:26.000Z",
-          "wordCount": 366,
-          "title": "[Snowflake] SELECT LENGTH('🙆‍♀️')= 4 ←???",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--Oc0Veo4R--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BSnowflake%255D%2520SELECT%2520LENGTH%2528%2527%2520%2527%2529%253D%25204%2520%25E2%2586%2590%253F%253F%253F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kentaro%2520Maeda%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUxNDFkYTVlNTUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Snowflake%2520Data%2520Heroes%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FjYTJlMzdkM2QuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--Oc0Veo4R--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BSnowflake%255D%2520SELECT%2520LENGTH%2528%2527%2520%2527%2529%253D%25204%2520%25E2%2586%2590%253F%253F%253F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kentaro%2520Maeda%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUxNDFkYTVlNTUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Snowflake%2520Data%2520Heroes%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FjYTJlMzdkM2QuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/hatemoto/articles/09dd1a87ff4aa0",
-          "author": "hatemoto",
-          "description": "はじめに\nPythonでWin32 APIを扱う．\n基本的はウィンドウの作成を行う．\n\n 開発環境\n\nWindows10 Home\nPyCharm\nPython3.11\n\n\n 定数の定義\n\n win_const.py\nWHITE_BRUSH = 0\nBLACK_BRUSH = 2\n\nCS_HREDRAW = 0x0002\nCS_VREDRAW = 0x0001\n\nCW_USEDEFAULT = 0x80000000\n\nIDC_ARROW = 32512\n\nWS_OVERLAPPEDWINDOW = 0x00CF0000\n\nWM_DESTROY = 0x0002\n\nSW_SHOWDEF...",
-          "link": "https://zenn.dev/hatemoto/articles/09dd1a87ff4aa0",
-          "publishedOn": "2024-01-18T03:34:10.000Z",
-          "wordCount": 1111,
-          "title": "PythonでWin32 API ①（ウィンドウの作成）",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s---j1amBFx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7Win32%2520API%2520%25E2%2591%25A0%25EF%25BC%2588%25E3%2582%25A6%25E3%2582%25A3%25E3%2583%25B3%25E3%2583%2589%25E3%2582%25A6%25E3%2581%25AE%25E4%25BD%259C%25E6%2588%2590%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hatemoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3MDIyOTY0MjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s---j1amBFx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7Win32%2520API%2520%25E2%2591%25A0%25EF%25BC%2588%25E3%2582%25A6%25E3%2582%25A3%25E3%2583%25B3%25E3%2583%2589%25E3%2582%25A6%25E3%2581%25AE%25E4%25BD%259C%25E6%2588%2590%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:hatemoto%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3MDIyOTY0MjkuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
         }
       ]
     }

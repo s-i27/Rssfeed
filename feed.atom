@@ -2,10 +2,133 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-02-16T01:12:47.629Z</updated>
+    <updated>2024-02-17T01:12:35.338Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[CodeBuildのローカルビルド環境変数展開: eval不使用版]]></title>
+        <id>https://zenn.dev/nondescript/articles/7db2e3ff673acc</id>
+        <link href="https://zenn.dev/nondescript/articles/7db2e3ff673acc"/>
+        <updated>2024-02-16T13:11:20.000Z</updated>
+        <summary type="html"><![CDATA[下記記事の続き: eval不使用版
+
+
+ TL;DR
+
+環境変数ファイルをマウント&読み込みさせたコンテナを起動し、キーと値のペアをbase64エンコード
+local_build.shでbase64デコードした環境変数をファイルに書き出してcustomer-specific.ymlへ追記する
+
+
+ イメージ図
+
+
+ 事前準備
+
+
+環境変数エンコード環境作成
+
+エンコードスクリプト
+
+
+parse_envs.py
+import os
+from base64 import b64encode
+from pathlib import Path
+
+envs: dict[str, str]...]]></summary>
+        <author>
+            <name>素人の戯言</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Azure SQL Databaseへのアクセスが稀に500エラーとなるので原因調査]]></title>
+        <id>https://zenn.dev/headwaters/articles/698404424f3b16</id>
+        <link href="https://zenn.dev/headwaters/articles/698404424f3b16"/>
+        <updated>2024-02-16T08:30:55.000Z</updated>
+        <summary type="html"><![CDATA[環境
+・App Service（FastAPI製のアプリケーション）
+・SQL Database
+
+ 通信・認証方法
+通信...プライベートエンドポイントとVPN接続からのみのアクセス
+認証...ODBCドライバーを使ったAAD認証
+
+ 発生したエラー
+以下のエラーが稀に発生します。
+タイミングとしては、最後にAPIリクエストをしてからだいぶ時間が経った後にAPIリクエストをすると発生するようです。
+
+(pyodbc.OperationalError) ('08S01', '[08S01] [Microsoft][ODBC Driver 18 for SQL Server]TCP P...]]></summary>
+        <author>
+            <name>ikebowsan</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LangChainでいろんなLLMを試す（GPT・Claude・Gemini・Mistral）]]></title>
+        <id>https://zenn.dev/buenotheebiten/articles/573c64d9019359</id>
+        <link href="https://zenn.dev/buenotheebiten/articles/573c64d9019359"/>
+        <updated>2024-02-16T04:37:22.000Z</updated>
+        <summary type="html"><![CDATA[LangChainでは様々なLLMがサポートされています。
+それぞれ呼び出すための最低限のコードをまとめてみました。
+
+ モデル別の料金比較（早見表）
+
+
+
+Model
+Input(1K tokens)
+Output(1K tokens)
+Context window
+比較
+
+
+
+
+gpt-4-0125-preview
+1.5円
+4.5円
+128,000 tokens
+100
+
+
+gpt-3.5-turbo-0125
+0.075円
+0.225円
+16,000 tokens
+5
+
+
+claude-2.1
+1.2円
+3.6円
+200,000 tokens
+80
+
+
+claude-2.0
+1....]]></summary>
+        <author>
+            <name>えびてん</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【検証】GPTで長文の要約をするなら？（MapReduce・MapRerank・Refine）]]></title>
+        <id>https://zenn.dev/buenotheebiten/articles/028bf065b05b40</id>
+        <link href="https://zenn.dev/buenotheebiten/articles/028bf065b05b40"/>
+        <updated>2024-02-16T00:53:06.000Z</updated>
+        <summary type="html"><![CDATA[今回は、長文をGPTで要約する方法として「MapReduce」「MapRerank」「Refine」の3つを見かけたので、それぞれの「精度」や「費用」、「応答スピード」を簡単に検証して調べてみたメモです。
+（注: 今回の評価はChatGPTでしているので主観的な評価は含まれていません。また各プロンプトが細かく作れていなかったり、全体的にざっくりとした検証です。）
+
+ 📝 検証内容
+
+「URLから要約を作成する手法」でどれが優れているのかを検証します。
+特に今回は、長文テキストを分割した後の要約&結合処理(Combine)部分の違いが気になったので、そこを中心に行います。
+
+ ① ...]]></summary>
+        <author>
+            <name>えびてん</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Blender Pythonでメッシュの各ポリゴンの各頂点の頂点座標値、Shapekeyごとの頂点座標値、UV座標値、頂点カラーを取得する]]></title>
         <id>https://zenn.dev/dimebag29/articles/61811779c3a13b</id>
@@ -3893,150 +4016,6 @@ messagesをimportすることで、メッセージフレームワークを使用
 Chat GPTは結構なんでも出来るのですが、結果をいくつかに分けて]]></summary>
         <author>
             <name>hashito</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[listとarrayの違い]]></title>
-        <id>https://zenn.dev/aay/articles/96a5f0dab25d0b</id>
-        <link href="https://zenn.dev/aay/articles/96a5f0dab25d0b"/>
-        <updated>2024-01-18T11:28:10.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-機械学習を学習していると、データ処理のフェーズにおいてlistとarrayの扱いに躓いた。そこで、本記事ではlistとarrayの特徴をまとめ、それぞれの違いとlist->array、array->listの変換についてもまとめていこうと思う。
-
- list
-Pythonの標準のリスト。
-
- リスト内の要素は型の違うデータを混在することができる。
-a = [1, 2, 3, 4, 5]
-b = [1, 3.141592, 'apple']
-
-print(a) # [1, 2, 3, 4, 5]
-print(b) # [1, 3.141592, 'apple']
-...]]></summary>
-        <author>
-            <name>ayaka</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Slackボット① エコーボット]]></title>
-        <id>https://zenn.dev/hatemoto/articles/c3fae865e257ab</id>
-        <link href="https://zenn.dev/hatemoto/articles/c3fae865e257ab"/>
-        <updated>2024-01-18T09:03:33.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-エコーボットの作成
-環境構築
-
- 開発環境
-
-WSL(Ubuntu)
-Python 3.10.12
-
-
- トークンの設定
-AppトークンとBotトークンは，ボットの設定をしている時にメモしたものを使用する．
-APP_TOKEN = "xapp-x-xxxxxxxxxx-xxxxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-BOT_TOKEN = "xoxb-xxxxxxxxxxxxxxx-xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx"
-
- イベントが発生したときに受け取る情報
-イベントが発生したときにサーバーか...]]></summary>
-        <author>
-            <name>hatemoto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Slackボット ⓪ 環境構築]]></title>
-        <id>https://zenn.dev/hatemoto/articles/ce321ede465877</id>
-        <link href="https://zenn.dev/hatemoto/articles/ce321ede465877"/>
-        <updated>2024-01-18T08:26:12.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Slackボットを作成するための環境構築．
-
- 開発環境
-
-WSL
-Python 3.10.12
-
-
- Slackボットの設定
-
- ボットの作成
-
-Slackを開く
-ボットを追加したいワークスペースを開く
-「設定と管理」 > 「アプリを管理する」
-右上の「ビルド」
-「Create New App」 > 「From scratch」を選択
-
-
-「App Name」にアプリの名前，「Pick a workspace to develop your app in:」からボットを追加したいワークスペースを選択し，「Create App」をクリック
-
-
-
-
- スコープの設...]]></summary>
-        <author>
-            <name>hatemoto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[Snowflake] SELECT LENGTH('🙆‍♀️')= 4 ←???]]></title>
-        <id>https://zenn.dev/dataheroes/articles/0f04ead21013a3</id>
-        <link href="https://zenn.dev/dataheroes/articles/0f04ead21013a3"/>
-        <updated>2024-01-18T08:21:26.000Z</updated>
-        <summary type="html"><![CDATA[問題
-LENGTH関数は一部の絵文字や外国語(書記素クラスタ)を正しくカウントできない。
-
-絵文字だけならともかく、フランス語や韓国語などのメジャーな言語でも問題は発生する。
-
- 解決策
-正確性が必要な場合、PythonなどのUDFでカウントする必要がある。
-以下のように正しく文字列をカウントするUDFを作る。
-CREATE OR REPLACE FUNCTION COUNT_GC(s varchar)
-returns number
-language python
-runtime_version = 3.11
-packages = ('pyicu')
-handler = 'count...]]></summary>
-        <author>
-            <name>Kentaro Maeda</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PythonでWin32 API ①（ウィンドウの作成）]]></title>
-        <id>https://zenn.dev/hatemoto/articles/09dd1a87ff4aa0</id>
-        <link href="https://zenn.dev/hatemoto/articles/09dd1a87ff4aa0"/>
-        <updated>2024-01-18T03:34:10.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-PythonでWin32 APIを扱う．
-基本的はウィンドウの作成を行う．
-
- 開発環境
-
-Windows10 Home
-PyCharm
-Python3.11
-
-
- 定数の定義
-
- win_const.py
-WHITE_BRUSH = 0
-BLACK_BRUSH = 2
-
-CS_HREDRAW = 0x0002
-CS_VREDRAW = 0x0001
-
-CW_USEDEFAULT = 0x80000000
-
-IDC_ARROW = 32512
-
-WS_OVERLAPPEDWINDOW = 0x00CF0000
-
-WM_DESTROY = 0x0002
-
-SW_SHOWDEF...]]></summary>
-        <author>
-            <name>hatemoto</name>
         </author>
     </entry>
 </feed>
