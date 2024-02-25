@@ -2,10 +2,118 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-02-24T01:10:02.204Z</updated>
+    <updated>2024-02-25T01:17:02.758Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[classmethodを使った代替コンストラクタ]]></title>
+        <id>https://zenn.dev/yosemat/articles/1ba7bc3d426953</id>
+        <link href="https://zenn.dev/yosemat/articles/1ba7bc3d426953"/>
+        <updated>2024-02-24T18:58:13.000Z</updated>
+        <summary type="html"><![CDATA[クラスメソッドを使って長すぎる__init__にお別れを告げる
+こんばんはYosematです。
+TypeHintとPydanticの狂信者でこれまでにもdataclassを捨ててpydanticに乗り換えるなどでTypeSafeなクラスであるdataclassやpydanticのすばらしさをご紹介しています。
+今日はこれらと相性のいいクラスメソッドによる代替コンストラクタについてご説明します。
+
+ 複雑な初期化ロジックを書きたい
+「dataclassやpydanticは__init__を自動で作っちゃうけど、俺はもっと複雑な初期化ロジックを使いたいんだが...」という人もいるでしょう...]]></summary>
+        <author>
+            <name>Yosemat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[langchain + RAGで手元の資料（新たな情報）をllmに読み込ませる]]></title>
+        <id>https://zenn.dev/yumefuku/articles/llm-langchain-rag</id>
+        <link href="https://zenn.dev/yumefuku/articles/llm-langchain-rag"/>
+        <updated>2024-02-24T18:49:21.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+
+ RAG（検索拡張生成）について
+huggingfaceなどからllmをダウンロードしてそのままチャットに利用した際、参照する情報はそのllmの学習当時のものとなります。（当たり前ですが）学習していない会社の社内資料や個人用PCのローカルなテキストなどはllmの知識にありません。
+このような存在しない情報をllmに与える（参照させる）手法がRAGです。
+ファインチューニングという手法もありますが、そちらはllmに再学習を行わせる手法です。ファインチューニングでは、llm自体に学習させることで知識を追加しますが、RAGの場合は用意したデータベースから検索することで、追加の情...]]></summary>
+        <author>
+            <name>ゆめふく</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【実践】エンジニアの基礎教養-アルゴリズムを学べる本]]></title>
+        <id>https://zenn.dev/mandenaren/books/algorithm-study</id>
+        <link href="https://zenn.dev/mandenaren/books/algorithm-study"/>
+        <updated>2024-02-24T15:07:07.000Z</updated>
+        <summary type="html"><![CDATA[筆者は新卒エンジニア時代に社内でアルゴリズム勉強会を主催していました。
+ その内容を本形式に書き起こしたものになります。
+
+【この本の特徴】
+ 📗問題演習形式でアルゴリズムの基礎が身に付く構成となっています。
+ 📗分かりにくい概念は丁寧に図解で解説しています。
+ 📗基礎的なアルゴリズムがどのように世の中に役立っているのかを言及しています。
+
+アルゴリズムに関して、皆さんの理解を深めるお手伝いができれば幸いです。]]></summary>
+        <author>
+            <name>なりん</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonでマルチスレッド処理]]></title>
+        <id>https://zenn.dev/unico417/articles/py_threadpoolexecutor_introduction</id>
+        <link href="https://zenn.dev/unico417/articles/py_threadpoolexecutor_introduction"/>
+        <updated>2024-02-24T13:42:59.000Z</updated>
+        <summary type="html"><![CDATA[Pythonでマルチスレッド処理をするには、ThreadPoolExecutorというクラスを使います。
+このライブラリは、Python3.2以降でビルトインで使えます。
+from concurrent.futures import ThreadPoolExecutor
+ThreadPoolExecutorはスレッドプールというだけあって、処理を溜めこむプールを持っているイメージです。
+そのプールにある処理を順番に行っていきます。
+
+ 最小構成のプログラム
+簡単に、ただ処理をするならこれだけです。
+from concurrent.futures import ThreadPoolExec...]]></summary>
+        <author>
+            <name>Unico417</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazon Connectで着信した電話番号をGoogle Maps APIで場所特定する]]></title>
+        <id>https://zenn.dev/nyancat/articles/20240224-amazon-connect-google-places-api</id>
+        <link href="https://zenn.dev/nyancat/articles/20240224-amazon-connect-google-places-api"/>
+        <updated>2024-02-24T11:05:40.000Z</updated>
+        <summary type="html"><![CDATA[はじめに: Google Maps PlatformのPlaces API
+電話番号をGoogle検索すると、その電話番号に当てはまるGoogle Mapの施設や場所が表示されることがありますよね。それと同じことをAPIでできないか？と調べたら、Google Maps PlatformのPlaces APIの Text Search で実現できると分かったので使ってみました。
+https://developers.google.com/maps/documentation/places/web-service/text-search?hl=ja
+
+「+1 + 514-670-8700...]]></summary>
+        <author>
+            <name>nyancat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【LangChain】ParentDocumentRetrieverのデータを永続化する方法]]></title>
+        <id>https://zenn.dev/koujimachi2023/articles/7a113a32473166</id>
+        <link href="https://zenn.dev/koujimachi2023/articles/7a113a32473166"/>
+        <updated>2024-02-24T07:34:19.000Z</updated>
+        <summary type="html"><![CDATA[概要
+ParentDocumentRetrieverのデータを永続化するのにハマったので、備忘録として残します。
+結論から言うと、こちら のページの内容を以下のように書き換えれば行けそうです
+
+retriver構築時
+
+InMemoryByteStoreをLocalFileStore + create_kv_docstoreに置き換える。
+vectorstoreもsave_loacalでローカルに保存する。
+
+
+retriver使用時
+
+ローカルに保存したstoreとvectorstoreを使用してParentDocumentRetrieverを再構築する。
+
+
+
+
+ Retriev...]]></summary>
+        <author>
+            <name>おいしい</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Micorsoftのguidanceをgpt-3.5-turboで試してみた]]></title>
         <id>https://zenn.dev/nari007/articles/f298f28ff239be</id>
@@ -4212,82 +4320,6 @@ Python の import 文は、プログラムの実行中に他のモジュール�
 Python の import ...]]></summary>
         <author>
             <name>sankantsu</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GitHub CodespacesでPoetryによるPython開発環境を作る]]></title>
-        <id>https://zenn.dev/kakerun/articles/491aeef26c56b8</id>
-        <link href="https://zenn.dev/kakerun/articles/491aeef26c56b8"/>
-        <updated>2024-01-26T12:00:16.000Z</updated>
-        <summary type="html"><![CDATA[今更ながらCodespacesを使って、PoetryによるPythonの開発環境を作ったりしてみました。
-
- 準備
-
- リポジトリを作成
-まずはGitHubでリポジトリを作成しましょう。
-今回は空のリポジトリから作っていきます。
-記事内ではリポジトリ名をtutorialとします。
-別名にする場合は適宜置き換えてください。
-また、まったく空のリポジトリではCodespacesを使用できないので、リポジトリ作成時にADD a README fileにチェックを入れておきましょう（initial commitさえできれば良いので何でも良い）
-
-READMEを追加
-
- 環境設定
-
- Codesp...]]></summary>
-        <author>
-            <name>かけるん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【VSCode】Pythonのバージョン切り替え]]></title>
-        <id>https://zenn.dev/lily_jenny/articles/7411b6b0a73c7b</id>
-        <link href="https://zenn.dev/lily_jenny/articles/7411b6b0a73c7b"/>
-        <updated>2024-01-26T04:18:27.000Z</updated>
-        <summary type="html"><![CDATA[1.VSCodeの画面の一番下のステータスバーの右側に現在設定されているPythonのバージョンが表示されています。（下図 右下の赤枠)
-
-2.画面右下のPythonのバージョンをクリックすると、コマンドパレットに「インタープリターの選択」と表示され、VSCodeが認識しているインストールされているPythonのバージョンの一覧が表示されます。（下図 右下の赤枠）
-一覧から変更したいバージョンをクリックします。
-
-3.この例では、バージョンを3.9.6を選択したので、ステータスバーの表示が3.9.6に変更されました。
-
-無事に、Pythonのバージョンを変更することが出来ました。]]></summary>
-        <author>
-            <name>HAJIME-TOKYO</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】気象庁の降水量データを整形して、地図上にバーグラフを表示してみた【Streamlit】]]></title>
-        <id>https://zenn.dev/labcode/articles/97a7410a0698f9</id>
-        <link href="https://zenn.dev/labcode/articles/97a7410a0698f9"/>
-        <updated>2024-01-25T23:42:31.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-バーグラフを描画したい、折れ線グラフを描画したい、、etc と思ったときに、それぞれのグラフを描画しやすい形に生データを整形したデータ（ファイル）が必要になります。
-そんなときに、自分で自由にデータ整形ができるとデータ解析の幅が広がりますし、自分が表現したいようにグラフを描画することができるようになります。
-今回は、マップ上にバーグラフを表示するために必要なデータファイルの整形の方法と、Streamlitを使って整形したデータを地図上にプロットする方法をご紹介します！
-動作検証済み環境
-macOS Monterey(12.4), python3.7.10
-
- データ整形の目...]]></summary>
-        <author>
-            <name>LabCode（ラボコード）</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[scikit-learn の PCA で GPU を活用する]]></title>
-        <id>https://zenn.dev/derwind/articles/dwd-sklearn-pca</id>
-        <link href="https://zenn.dev/derwind/articles/dwd-sklearn-pca"/>
-        <updated>2024-01-25T16:01:23.000Z</updated>
-        <summary type="html"><![CDATA[目的
-Scikit-learnが実験的にGPU対応していたので調査してみた！ という良記事があって、一部分 scikit-learn で GPU を活用できるようなので PCA (主成分分析) を試してみたい。
-
- どのくらい対応している？
-11.1. Array API support (experimental) を見ると LinearDiscriminantAnalysis 以外にも decomposition.PCA もいけそうなので、今回はこれを Google Colab 上の T4 で試す。
-
- 実装
-まずは、従来通りに CPU で試して、次に PyTorch の Ten...]]></summary>
-        <author>
-            <name>derwind</name>
         </author>
     </entry>
 </feed>
