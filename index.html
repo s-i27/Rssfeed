@@ -22,6 +22,279 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-26 datetime="2024-02-26T22:02:50.000Z">2024-02-26</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-26 datetime="2024-02-26T22:02:50.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/inunekousapon/articles/9a8e4fee1286dc"
+                        open
+                      >
+                        <summary class="article-expander__title">S3のadd_event_notificationのハマりポイント</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/inunekousapon/articles/9a8e4fee1286dc">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--rtV5slp_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:S3%25E3%2581%25AEadd_event_notification%25E3%2581%25AE%25E3%2583%258F%25E3%2583%259E%25E3%2582%258A%25E3%2583%259D%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:inunekousapion%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2daTnVpb2JLdS1YWVpLeWR5UFYxZHN0ZnRwTkN4T0t6YmVVdjdOQ2c9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>CDKでS3のPubObjectイベントをLambdaで受け取ろうとCDKを書いた時にいくつかハマりポイントがありました。ハマりポイントの紹介とその対応方法を残しておきます。
+
+ 環境
+確認したバージョンは下記です。
+
+Python3.9以上
+aws-cdk-lib&#x3D;2.128.0
+
+
+ 1. サンプルコードに書かれている通りに書いても動かない
+まずは書いてみます。ちなみにこのコードは正しくないです。
+import aws_cdk as cdk
+from aws_cdk import aws_lambda
+from aws_cdk import aws_s3_notifications
+...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nari007/articles/900290ed31c7be"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】Langchainを簡単に試してみた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nari007/articles/900290ed31c7be">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--0WWpZiEO--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591Langchain%25E3%2582%2592%25E7%25B0%25A1%25E5%258D%2598%25E3%2581%25AB%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Nari%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdmODhiYWFmNTguanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+gpt-3.5-turboを使ってLangchainを試してみました。
+はじめてのLangchainという感じで、推奨されているLCELを使った基本的な内容となります。
+
+ 参考ドキュメント
+公式ドキュメント
+https://python.langchain.com/docs/get_started/quickstart
+LCEL
+https://python.langchain.com/docs/expression_language/
+
+ 試してみる
+必要なものをインストール
+python -V
+Python 3.9.18
+
+pip install langchain
+...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/tabetai/articles/2fa0a862ec6881"
+                        open
+                      >
+                        <summary class="article-expander__title">とりまやってみるAHC 〜Algo灰色による初AHC参加記〜（AHC030）</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tabetai/articles/2fa0a862ec6881">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--fNNewYXY--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2581%25A8%25E3%2582%258A%25E3%2581%25BE%25E3%2582%2584%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258BAHC%2520%25E3%2580%259CAlgo%25E7%2581%25B0%25E8%2589%25B2%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E5%2588%259DAHC%25E5%258F%2582%25E5%258A%25A0%25E8%25A8%2598%25E3%2580%259C%25EF%25BC%2588AHC030%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tabetai%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSnR1RWw0aUZLQTJmTUFBc2lJSndfQmdCODBId1Y0ZF8xSERnS0xqNjlOPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+はじめましてtabetaiです。大学院（M1）で機械学習の研究をしています。
+
+タイトルの通り、数理最適化や競プロはからっきしなのですが、今回AHC030で初めてAHCに参加してみたのでつらつらと参加記を書いてみます。なお、解法についての説明はあまりに貧弱で冗長ですが、そこが主眼ではないということで見逃してください。以降精進します。
+
+ 記事の目的
+この記事を読んでくれた方が、初AHC参加ハードルを下げるきっかけになればなと思っています。
+「典型手法とか知らなくても、気楽にAHC始められる＆そこそこ楽しめるんだ！」と思っていただけたら何よりです。
+（競プロ始めたての自分が布...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/keison8864/articles/0e9cac8eefdf0b"
+                        open
+                      >
+                        <summary class="article-expander__title">PythonとTensorFlowでAIを学ぶ</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/keison8864/articles/0e9cac8eefdf0b">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--e9trVO4v--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A8TensorFlow%25E3%2581%25A7AI%25E3%2582%2592%25E5%25AD%25A6%25E3%2581%25B6%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:keison%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E2YjQwZWI1YWMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+PythonとTensorflowを使ってAIを学びます。この記事では、ニューラルネットワークの基本的な概念を理解し、実装できることを目指します。Pythonは、その読みやすい構文と豊富なライブラリで、AIの分野で人気があります。TensorFlowはオープンソースの深層学習ライブラリで、機械学習モデルの開発とトレーニングに広く用いられています。サンプルコードはこちらにありますので、理論と照らし合わせながらご活用ください。この記事ではコードには触れません。
+
+ 用語整理
+
+ AI（人工知能）
+コンピューターが、人間のようになにかを考えてなにかをすることです。幅広い概念です。...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;9
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hiroysato/articles/f20a55d682f3a4"
+                        open
+                      >
+                        <summary class="article-expander__title">Open3Dの視点のあれこれ(ViewControl編)</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hiroysato/articles/f20a55d682f3a4">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Gk3aUkGR--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Open3D%25E3%2581%25AE%25E8%25A6%2596%25E7%2582%25B9%25E3%2581%25AE%25E3%2581%2582%25E3%2582%258C%25E3%2581%2593%25E3%2582%258C%2528ViewControl%25E7%25B7%25A8%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Hiroyuki%2520Sato%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly96ZW5uLWRldi5naXRodWIuaW8vZGVmYXVsdC1hdmF0YXJzL2RhcmsvaC5wbmc&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>1. はじめに
+「詳解　３次元点群処理 Pythonによる基礎アルゴリズムの実装」というとても良い本があるが、この本を読む前にいくつか必要だった前提知識
+Open3Dを使っている人との情報交換用で間違っていることが書いてあったら是非教えていただけると助かります。
+
+
+詳解　３次元点群処理 Pythonによる基礎アルゴリズムの実装
+著：金崎　朝子　著：秋月　秀一　著：千葉　直也
+
+
+ 2. 基礎知識
+
+ 2.1 Open3Dは右手系、左手系
+
+Open3Dは右手系
+デフォルトでは、X(赤/水平)、Y(緑/高さ)、Z(青/奥行き)となる。Zが高さになっているので注意する。
+
+
+ 2.2 ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/todoker_blog/articles/c616fe424fb671"
+                        open
+                      >
+                        <summary class="article-expander__title">Powertools for AWS (Python) を用いた S3 Trigger のカスタマイズ方法</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/todoker_blog/articles/c616fe424fb671">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--nYeQYvZ0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Powertools%2520for%2520AWS%2520%2528Python%2529%2520%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%2520S3%2520Trigger%2520%25E3%2581%25AE%25E3%2582%25AB%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25BA%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E5%25B1%25B1%25E6%259C%25AC%25E9%259A%25BC%25E6%25B1%25B0%2520%257C%2520Hayata%2520Yama...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzJjNTA2ODRhYWEuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2588%25E3%2583%2589%25E3%2582%25B1%25E3%2583%25BC%25E3%2583%25AB%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3NzU4ZDVkOWMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>こんにちは。hayata-yamamoto です。
+今回は、Powertools for AWS (Python) を用いて、S3 のイベントトリガーで動く Lambda 関数の提供方法を紹介します。私が思うに、Lambda と S3 はファイルアップロード時に何か処理を非同期で動かしたい時にとても便利で、多くの利用事例があるイメージです。これから、何か実装しようと思ってる方の参考になれば嬉しいです
+
+ S3 と Lambda の統合はどのようなもの？
+公式によりますと、
+
+Amazon Simple Storage Service からのイベント通知は、Lambda を使用して処理する...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hir0_728/articles/eee4d51551da38"
+                        open
+                      >
+                        <summary class="article-expander__title">M3Macに開発環境を用意する - Part1</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hir0_728/articles/eee4d51551da38">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ZGEAWgVe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:M3Mac%25E3%2581%25AB%25E9%2596%258B%25E7%2599%25BA%25E7%2592%25B0%25E5%25A2%2583%25E3%2582%2592%25E7%2594%25A8%25E6%2584%258F%25E3%2581%2599%25E3%2582%258B%2520-%2520Part1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:HIR0%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQxNjQ1MmNkOTQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+以前、MacbookPro M3Proを購入し、環境構築をした際に手順をZennのスクラップとしてまとめていたが、改めてちゃんと記事としてまとめ直すことにした。
+
+ Homebrewのインストール
+Macを使うのであればパッケージマネージャーであるHomebrewは欠かせないので、一番最初にインストールしてしまう。AppleSiliconとIntelで手順が若干異なるそうなので、注意してね。
+公式サイト
+# インストールコマンド
+$ /bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/i...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/secondselection/articles/ga4_api_sample"
+                        open
+                      >
+                        <summary class="article-expander__title">GA4のデータを収集して、issueに貯めてみた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/secondselection/articles/ga4_api_sample">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--3o4WPycy--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GA4%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E5%258F%258E%25E9%259B%2586%25E3%2581%2597%25E3%2581%25A6%25E3%2580%2581issue%25E3%2581%25AB%25E8%25B2%25AF%25E3%2582%2581%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:u_hijiri%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzljNTA3MDMwNTguanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2582%25BB%25E3%2582%25AB%25E3%2583%25B3%25E3%2583%2589%25E3%2582%25BB%25E3%2583%25AC%25E3%2582%25AF%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZHJ6RHVTRnZUS2pDQ2U2aGxtdC1TbnprX1dIYzhjV1JJWlhxQk1lMUNCalE9czk2LWM&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+この記事はGA4の集計データをGitLabのissueに貯めて（保存して）みたというやってみた記事です。
+きっかけは「探索レポートで2か月前までしか参照できない」のため、どこかに貯めたいなと思ったことがきっかけです。
+※ 記事を書くために調べて初めて知りました。
+https://inhouse-plus.jp/marketing/data-retention
+最終的に作ってみたものとしては、以下のような流れでデータを保管します。
+
+GitLabのCIで毎日スクリプト（Python）を実行する
+GA4 Data APIでデータを取得し、Issueに集計結果を保存する
+
+
+ 下...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-25 datetime="2024-02-25T14:10:53.000Z">2024-02-25</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-25 datetime="2024-02-25T14:10:53.000Z"></time>
           </button>
@@ -7041,284 +7314,6 @@ https://zenn.dev/topo/articles/7...</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/iwatagumi/articles/0db12ddd2374be"
-                        open
-                      >
-                        <summary class="article-expander__title">Rustの勉強</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/iwatagumi/articles/0db12ddd2374be">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--BlkLnpQv--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_72:Rust%25E3%2581%25AE%25E5%258B%2589%25E5%25BC%25B7%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:kirigaya%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U1MjI0YmNkMDYuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E5%25B2%25A9%25E7%2594%25B0%25E7%25B5%2584%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2JmNGYxNzkwNDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Rustの勉強1日目
-は〜？と思ったところのメモ
-
- 文字列の違い
-pythonの場合
-text1 &#x3D; &quot;Hello&quot;
-text2 &#x3D; text1
-print(text1)
-print(text2)
-Rustの場合
-fn main(){
-let s1 &#x3D; String::from(&quot;Hello&quot;);
-let s2 &#x3D; s1;
-println!(&quot;{}&quot;, s1)
-println!(&quot;{}&quot;, s2)
-}
-この方法ではエラーになります...
-正しくは
-fn main() {
-    let x &#x3D; &quot;Hello&quot;;
-    let y &#x3D; x;
-    println!(&quot;{}&quot;, x);...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/shiro_toy_box/articles/1df3fc4658d1dd"
-                        open
-                      >
-                        <summary class="article-expander__title">requirements.txtのちょっとしたテクニック</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shiro_toy_box/articles/1df3fc4658d1dd">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--j1lBbxNZ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:requirements.txt%25E3%2581%25AE%25E3%2581%25A1%25E3%2582%2587%25E3%2581%25A3%25E3%2581%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2583%2586%25E3%2582%25AF%25E3%2583%258B%25E3%2583%2583%25E3%2582%25AF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2597%25E3%2582%258D%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2EyNzY5NDdhMzAuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>pythonの環境を共有する際にrequirements.txtを使ったやり方にtorchを含む場合
-そのまま自分の環境をpip freeze &gt; requirements.txtすると
-torch&#x3D;&#x3D;2.1.2+cu118のようにバージョンとそれ以外のものが含まれたものが記述されます。
-このままインストールするとエラーが出てしまいます。
-それを回避するために出力したrequirements.txtを編集します。
-出力したrequirements.txtにはほかにもライブラリが含まれますが省いています。
-
-requirements.txt　編集前
-torch&#x3D;&#x3D;2.1.2+cu11...</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/husty/articles/2a08fdde40aab3"
-                        open
-                      >
-                        <summary class="article-expander__title">C++からPythonを操る黒魔術</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/husty/articles/2a08fdde40aab3">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--UuTqCJQk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:C%252B%252B%25E3%2581%258B%25E3%2582%2589Python%25E3%2582%2592%25E6%2593%258D%25E3%2582%258B%25E9%25BB%2592%25E9%25AD%2594%25E8%25A1%2593%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Takumi%2520Yamashita%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4YTc2d2ZGdzdianFISFJDR3BZMDlnOElELUM1dzZfSGN3WkVXbzdZZz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-突然ですが、C++からPythonを使いたいことはありませんか？
-たとえば組み込み系のモジュール開発やPoCで部分的にAIを使ってみたいとき。深層学習のフレームワークによってはC言語のAPIを提供していたり、ONNXなどモデル自体が多言語対応のものもありますが、そうやって、なんとかしてPythonを避けていませんか？
-PythonからCのモジュールを呼び出すのはよくあるけれど、その逆はできないと思っていませんか？
-これ実は、公式なやり方でできます。
-https://docs.python.org/3/extending/embedding.html
-こちらのページ内のサンプ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/killinsun/articles/d7caf4c5334e96"
-                        open
-                      >
-                        <summary class="article-expander__title">[Python] ChannelAccessToken v2.1 で LINE BOTを作る</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/killinsun/articles/d7caf4c5334e96">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--8pkcwt7T--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BPython%255D%2520ChannelAccessToken%2520v2.1%2520%25E3%2581%25A7%2520LINE%2520BOT%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E9%25A6%2596%25E7%2584%25A1%25E3%2581%2597%25E3%2582%25AD%25E3%2583%25AA%25E3%2583%25B3%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2RmYTM3MDU1NGEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>LINE Messasging API を活用して LINE Bot を作るとき、ネットでドキュメントや作例をみると「チャネルアクセストークン（長期）」と「チャネルシークレット」を使って構築する例が多くあります。
-私も今までその構成で BOT を開発していたのですが、今は 「ChannelAccessToken v2.1」なるものがあり、現在の推奨として公式ドキュメントに案内されています。
-ただ、公式ドキュメントや公式SDKの情報だけだと初学者にはハマりどころや情報不足感も否めないため、備忘録として私なりの管理方法を記載します。
-
- 前提
-
-LINE Developers Console...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;7
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/nondescript/articles/cabb2a25be14ec"
-                        open
-                      >
-                        <summary class="article-expander__title">Certbot用ACMEサーバーをFlaskで偽装し、DNS-01で自己証明書を取得</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nondescript/articles/cabb2a25be14ec">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--kiOuOTru--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Certbot%25E7%2594%25A8ACME%25E3%2582%25B5%25E3%2583%25BC%25E3%2583%2590%25E3%2583%25BC%25E3%2582%2592Flask%25E3%2581%25A7%25E5%2581%25BD%25E8%25A3%2585%25E3%2581%2597%25E3%2580%2581DNS-01%25E3%2581%25A7%25E8%2587%25AA%25E5%25B7%25B1%25E8%25A8%25BC%25E6%2598%258E%25E6%259B%25B8%25E3%2582%2592%25E5%258F%2596%25E5%25BE%2597%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E7%25B4%25A0%25E4%25BA%25BA%25E3%2581%25AE%25E6%2588%25AF%25E8%25A8%2580%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzVmYTVmOTBhM2EuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>概要
-
-レート制限のあるステージングhttps://acme-staging-v02.api.letsencrypt.orgや本番https://acme-v02.api.letsencrypt.org/directoryを実際に使わずに無制限でLet&#x27;s Encryptの証明書を疑似的に自己証明書で取得するローカル検証環境
-hosts修正とFlaskサーバー起動の簡易操作のみで、step-ca、step-cli不使用
-
-
- TL;DR
-
-ダミーのレスポンス処理をFlask(SSL)で実装
-
-
- 事前準備
-前提：Docker版Certbot(certbot/certbot:amd64...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;12
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/massu_devix/articles/a016774865d647"
-                        open
-                      >
-                        <summary class="article-expander__title">prefect をローカルで動かすための構成要素を理解する</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/massu_devix/articles/a016774865d647">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--mmhe74_---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:prefect%2520%25E3%2582%2592%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25AB%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258B%25E3%2581%2599%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E6%25A7%258B%25E6%2588%2590%25E8%25A6%2581%25E7%25B4%25A0%25E3%2582%2592%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:mas_dx%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUxMDc1MzMyYmEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-prefect の構成要素について理解します。
-ここでの構成要素とは、prefect をローカル環境で動かすための要素を指します。
-（そのため、SaaS である prefect cloud については言及しません。）
-この記事では、以下の要素について説明しています。
-
-prefect-server
-database
-
-
- prefect とは
-prefect とは、手軽にデータ処理 pipeline を構築することができるワークフロー管理ツールです。
-https://docs.prefect.io/latest/
-
- prefect のインストール
-公式ドキュメントを参照し...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-01-27 datetime="2024-01-27T23:30:00.000Z">2024-01-27</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-01-27 datetime="2024-01-27T23:30:00.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/keita_f/articles/4493e3cfd76aec"
-                        open
-                      >
-                        <summary class="article-expander__title">FastAPIアプリケーション〜環境設定からログイン処理まで〜</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/keita_f/articles/4493e3cfd76aec">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--yQvYZxl4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:FastAPI%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2580%259C%25E7%2592%25B0%25E5%25A2%2583%25E8%25A8%25AD%25E5%25AE%259A%25E3%2581%258B%25E3%2582%2589%25E3%2583%25AD%25E3%2582%25B0%25E3%2582%25A4%25E3%2583%25B3%25E5%2587%25A6%25E7%2590%2586%25E3%2581%25BE%25E3%2581%25A7%25E3%2580%259C%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:KITFJN%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdjNDYxZWNjNTIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>開発環境の設定(docker)
-dockerの設定をしていきます。
-
-backend/Dockerfile
-FROM python:latest
-WORKDIR /backend
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONBUFFERED 1
-
-# pipを使ってpoetryをインストール
-RUN pip install poetry
-
-# poetryの定義ファイルをコピー (存在する場合)
-COPY pyproject.toml* poetry.lock* ./
-
-# poetryでライブラリをインストール (pyproject.tomlが既...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;37
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/takilog/articles/575c58ed6b57de"
-                        open
-                      >
-                        <summary class="article-expander__title">Mapbox Directions APIを使って一周する経路を作る</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/takilog/articles/575c58ed6b57de">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--fyj2MOnd--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Mapbox%2520Directions%2520API%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%25E4%25B8%2580%25E5%2591%25A8%25E3%2581%2599%25E3%2582%258B%25E7%25B5%258C%25E8%25B7%25AF%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259F%25E3%2581%258D%25E3%2582%258D%25E3%2581%2590%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzllMzkzOGE3OGUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>背景
-趣味でジョギング (実態はジョギングとは言えない速度…) をやるのですが、ある地点からスタートして戻ってくるコースを考える必要があります。普段は固定のコースを走るのですが、たまには別のルートを行かないと飽きてしまいます。なので、スタートを固定して、いくつか候補が欲しくなります。このような巡回ルート探しを手伝ってくれるアプリはいろいろ世の中にあり、例えば「Trail Router」などがあります。
-https://trailrouter.com/
-この記事は、似た計算をやってみようと思って書きました。
-
- 考えたこと
-実装した計算の考え方を先に説明します。
-
- 周回ルートの設定
-...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -7326,8 +7321,8 @@ https://trailrouter.com/
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/8042241747">
-        <time id="build-timestamp" datetime="2024-02-26T01:14:33.992Z">2024-02-26T01:14:33.992Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/8058039808">
+        <time id="build-timestamp" datetime="2024-02-27T01:11:54.082Z">2024-02-27T01:11:54.082Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
