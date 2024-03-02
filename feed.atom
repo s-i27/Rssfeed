@@ -2,10 +2,156 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-03-01T01:18:26.470Z</updated>
+    <updated>2024-03-02T01:10:45.031Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[OpenAI Python SDK v1.0がめちゃくちゃ使いやすくなってた]]></title>
+        <id>https://zenn.dev/yosemat/articles/da8a633d93bbaf</id>
+        <link href="https://zenn.dev/yosemat/articles/da8a633d93bbaf"/>
+        <updated>2024-03-01T14:35:09.000Z</updated>
+        <summary type="html"><![CDATA[ハイライト
+
+インスタンス化されたクライアントの利用を推奨するようになった
+Async/Azure専用のクライアントが追加された
+レスポンス（出力）がPydantic Modelになった
+リクエストパラメータ（入力）がTypedDictになった
+
+
+ インスタンス化されたクライアントの利用を推奨するようになった
+これまではopenaiモジュールに定義されていたopenai.ChatCompletion.create関数をよんでいたところがインスタンス化されたOpenAIオブジェクトのchat.completions.createメソッドを呼ぶ仕様になりました。
+これまで
+import...]]></summary>
+        <author>
+            <name>Yosemat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【pyinstaller】tesseract-ocrを同封して、１つのexeファイルを作成する方法]]></title>
+        <id>https://zenn.dev/yk5322/articles/017aa5f5e2c825</id>
+        <link href="https://zenn.dev/yk5322/articles/017aa5f5e2c825"/>
+        <updated>2024-03-01T13:16:07.000Z</updated>
+        <summary type="html"><![CDATA[概要
+tesseractで文字認識するpythonプログラムを１つのexeファイル化する際につまづいたので、
+その解決方法について紹介します。
+
+ 先に結論！
+pyinstaller実行後に作成されるspecファイルに、下記記述を追加します。
+specファイルで再度pyinstaller実行すれば、Tesseractを含んだexeファイルが作成できます。
+
+main.spec
+binaries=[(r'C:\Program Files\Tesseract-OCR', r'tesseract')],
+datas=[(r'C:\Program Files\Tesseract-OCR\te...]]></summary>
+        <author>
+            <name>yosuke</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Amazonエンジニアが選ぶ技術書35選まとめ]]></title>
+        <id>https://zenn.dev/yottabyte/articles/5724d108de02ad</id>
+        <link href="https://zenn.dev/yottabyte/articles/5724d108de02ad"/>
+        <updated>2024-03-01T11:00:00.000Z</updated>
+        <summary type="html"><![CDATA[リーダブルコード ―より良いコードを書くためのシンプルで実践的なテクニック
+
+
+「美しいコードを見ると感動する。優れたコードは見た瞬間に何をしているかが伝わってくる。そういうコードは使うのが楽しいし、
+自分のコードもそうあるべきだと思わせてくれる。本書の目的は、君のコードを良くすることだ」(本書「はじめに」より)。
+コードは理解しやすくなければならない。本書はこの原則を日々のコーディングの様々な場面に当てはめる方法を紹介します。
+名前の付け方、コメントの書き方など表面上の改善について。コードを動かすための制御フロー、論理式、変数などループとロジックについて。
+またコードを再構成するた...]]></summary>
+        <author>
+            <name>Raio｜高校生エンジニア</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[ X / Twitter ] 自分の全ツイートを一括で削除手順]]></title>
+        <id>https://zenn.dev/shomtsm/articles/52864a4b7b5eec</id>
+        <link href="https://zenn.dev/shomtsm/articles/52864a4b7b5eec"/>
+        <updated>2024-03-01T10:51:56.000Z</updated>
+        <summary type="html"><![CDATA[前提
+
+一括削除したいツイートは自分のツイートであること
+アカウントのアーカイブを取得してしておくこと(データバックアップの意味も)
+pythonを動かせる環境であること
+
+twitter apiの仕様変更で、いままでの一括削除ルーツは基本使えなくなった。
+でも自分のツイッターアカウントの全投稿を一括で削除したい。
+公式ヘルプには「ツイートを一括削除することはできません。複数のツイートを削除する場合は、1つずつ手動で削除してください」とあるが、手動で全ツイート削除する作業は不毛で楽しくない
+というわけでAPIで一括削除する方法を模索してできたのでメモっておきます。
+流れは、自分の全ツ...]]></summary>
+        <author>
+            <name>松嶋松</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[CORS]FastAPIで許可するOriginを正規表現で設定する]]></title>
+        <id>https://zenn.dev/purratto/articles/bfe6f551ad56da</id>
+        <link href="https://zenn.dev/purratto/articles/bfe6f551ad56da"/>
+        <updated>2024-03-01T08:23:33.000Z</updated>
+        <summary type="html"><![CDATA[from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+# CORSの設定
+app.add_middleware(
+    CORSMiddleware,
+    # 許可するOriginを正規表現で設定
+    allow_origin_regex="https://.*\.example\.org",
+    allow_credentials=True,
+    allow_methods=["GET"],
+    allow_headers=[...]]></summary>
+        <author>
+            <name>purratto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[oh-my-posh でPythonのvenv promptが正しく表示されない]]></title>
+        <id>https://zenn.dev/enven/articles/oh-my-posh-python-venv</id>
+        <link href="https://zenn.dev/enven/articles/oh-my-posh-python-venv"/>
+        <updated>2024-03-01T01:52:27.000Z</updated>
+        <summary type="html"><![CDATA[環境
+
+WSL2 Ubuntu22.04.03
+GNU bash, version 5.1.16(1)-release (x86_64-pc-linux-gnu)
+oh-my-posh 12.29.0
+
+
+ 背景
+
+pythonでvenvやuvを使って.venvフォルダに仮想環境を作成する
+
+. .venv/bin/activateして仮想環境を有効化するとoh-my-poshがプロンプトに仮想環境名とPythonのバージョンを表示してくれる
+
+https://ohmyposh.dev/docs/segments/python
+設定どおりに書くと以下のような感じ
+
+ theme.om...]]></summary>
+        <author>
+            <name>えんぶん</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoft Fabricを使ってZennの投稿状況を可視化できるBIを作成する]]></title>
+        <id>https://zenn.dev/headwaters/articles/c69811c3ed54c0</id>
+        <link href="https://zenn.dev/headwaters/articles/c69811c3ed54c0"/>
+        <updated>2024-03-01T01:49:26.000Z</updated>
+        <summary type="html"><![CDATA[やりたいこと
+今年から全社的に取り組んでいるZennでのテック記事投稿の状況を可視化できるようにしたいです。
+
+ Microsoft Fabricとは？
+データ分析を円滑に行うための統合サービスです。
+データ統合やデータエンジニアリング・データサイエンスからビジネスインテリジェンスまで、さまざまな環境が提供されています。
+
+ ZennにはAPIがあるっぽい
+RSS以外にAPIもあるとのこと。
+ただ、publication単位でのAPIはないっぽいので、ユーザー管理は別途ハードコーディングでやるしかないのと、各ユーザーごとにAPIを叩く必要があります。
+https://zenn.dev...]]></summary>
+        <author>
+            <name>ikebowsan</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【Python】LangChainのLangSmithを試してみた]]></title>
         <id>https://zenn.dev/nari007/articles/e1531d3b9370cb</id>
@@ -3977,146 +4123,6 @@ https://zenn.dev/awtnb/books/adf6c5162a9f08
 さらに、WebUIには、Indexリストから欲しい拡張機能を探して、簡単にインストールできる仕組みがあります...]]></summary>
         <author>
             <name>タートルヴィレッジ・ゆう</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのmultiprocessingで子プロセスの異常終了を検知したい時の対処方法]]></title>
-        <id>https://zenn.dev/slopetech/articles/b4d5b89d5a7480</id>
-        <link href="https://zenn.dev/slopetech/articles/b4d5b89d5a7480"/>
-        <updated>2024-02-01T10:34:42.000Z</updated>
-        <summary type="html"><![CDATA[問題
-multiprocessingライブラリで並列化処理を実施している際、子プロセスが異常停止する（OOM KillerなどにKillされるなど）と、親プロセスがハングアップしてしまう問題があります。
-これはCPythonのIssueでも報告されており、対処方法が日本語記事にはあまり見当たらなかったので備忘録として記載しておきます。
-再現コードとして、下記を用意しました。実行してみると、親プロセスが子プロセスの異常終了を検知できず応答なしの状態になることが確認できます。
-import multiprocessing
-import sys
-
-
-def worker_fn(dummy:...]]></summary>
-        <author>
-            <name>hedgeek</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[JavaScriptでC言語のプログラムを実行する]]></title>
-        <id>https://zenn.dev/bonsai_engineer/articles/878bf88da5b1bb</id>
-        <link href="https://zenn.dev/bonsai_engineer/articles/878bf88da5b1bb"/>
-        <updated>2024-02-01T08:28:08.000Z</updated>
-        <summary type="html"><![CDATA[最近はlinuxやハードウェアやネットワークなど低レイヤの勉強をしています。プログラムはどの言語でも最終的に機械語で実行されており、なら他の言語のプログラムも実行できるではと思い、調べてみました。そうするとJavaScriptでC言語が実行できたのでやり方を共有します。
-
- 環境
-
-
- 1.C言語のプログラムを準備
-C言語の簡単なプログラムを準備します。適当な引数を受け取りそれを標準出力で吐くようなものにしました。
-
-main.c
-const { exec } = require('child_process');
-
-const argValue = 'tttttt aa aaaa';
-...]]></summary>
-        <author>
-            <name>盆栽エンジニア</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[M1 MacBook でCPUとGPU(MPS)のどちらが早く文章をベクトル化できるか]]></title>
-        <id>https://zenn.dev/atsushi570/articles/293516d4abd6e3</id>
-        <link href="https://zenn.dev/atsushi570/articles/293516d4abd6e3"/>
-        <updated>2024-02-01T05:00:21.000Z</updated>
-        <summary type="html"><![CDATA[概要
-MacBookで文章をベクトル化するときに、CPUとGPUのどちらが早く処理できるかあたり評価を行った。
-文章が短いときはCPUが早い。
-ただし、モデルにもよって異なるので用途によって検討必要。
-
- 環境
-
-
-
-item
-spec
-
-
-
-
-pc
-M1 MacBook
-
-
-OS
-14.2.1
-
-
-python
-3.11.5
-
-
-torch
-2.1.2
-
-
-transformers
-4.37.2
-
-
-model
-intfloat/multilingual-e5-small
-
-
-
-
- コード（の一部）
-# トークナイズするテキスト
-        texts = [ ここの文字列は評...]]></summary>
-        <author>
-            <name>atsushi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[PyTorch Custom Loss with NumPy]]></title>
-        <id>https://zenn.dev/tnakabeppu/articles/d45cefc1ae3e67</id>
-        <link href="https://zenn.dev/tnakabeppu/articles/d45cefc1ae3e67"/>
-        <updated>2024-01-31T17:46:34.000Z</updated>
-        <summary type="html"><![CDATA[PyTorchでカスタマイズした目的（損失）関数を設定したい
-
- 1.はじめに
-ディープラーニングの実装において、PyTorch はその柔軟性と効率性で広く利用されています。特に、カスタム損失関数を用いることで、特定の問題に合わせた最適化が可能になります。しかし、このプロセスには、 Numpy との相互作用に関連する一つの重要な落とし穴があります。本記事では、PyTorch の自動微分エンジンと Numpy を用いたカスタム損失関数の作成における問題点とその解決策について解説します。
-
- 2.理論
-
- 2-1.PyTorch の自動微分エンジンの基礎
-PyTorch の最大の特徴の一...]]></summary>
-        <author>
-            <name>nakabeppu@kikagaku</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[pysnmpの話]]></title>
-        <id>https://zenn.dev/toratti/articles/e3668ee484e5df</id>
-        <link href="https://zenn.dev/toratti/articles/e3668ee484e5df"/>
-        <updated>2024-01-31T15:51:00.000Z</updated>
-        <summary type="html"><![CDATA[SNMP周りをちゃんと()整理し，pysnmpというライブラリについて使ってみました．この記事書き始めたのは2023の年末だったけどpysnmpの実験が間に合ってなくて…
-さらにTerraformしてたから尚更…
-軽くこんなライブラリ使ってみたよって話にしようと思ったらかなり長くなってしまいました．
-不備がありそうなので修正予定です．
-
- SNMPとは
-TCP/IPネットワーク上でネットワーク管理するためのプロトコルでUDP上で動作するらしいです．
-Simple Network Management Protocolを略してSNMP．
-登場人物は，SNMPマネージャーとSNMPエージェン...]]></summary>
-        <author>
-            <name>とらっち</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[動的型付け言語の限界と静的型付け言語の真価]]></title>
-        <id>https://zenn.dev/tonbi_attack/articles/0835a5ea9203f1</id>
-        <link href="https://zenn.dev/tonbi_attack/articles/0835a5ea9203f1"/>
-        <updated>2024-01-31T13:27:57.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-動的型付け言語はその柔軟性で知られていますが、この柔軟性が時には代償を伴います。一方で、静的型付け言語はその厳格さにより多くのメリットを提供します。FastAPI と Pydantic を使用することで、Python のような動的型付け言語でも型の安全性を部分的に享受できるようになりました。しかし、この体験はまた、静的型付け言語におけるエディタの補助や型システムの堅牢さがいかに価値あるものかを痛感させられました。型ヒントとデータバリデーションを通じて得られた疑似的な型安全性は、静的型付け言語の持つ本質的な型安全性とエディタのサポートには及びません。この経験から、静的型付け言...]]></summary>
-        <author>
-            <name>tonbiattack</name>
         </author>
     </entry>
 </feed>
