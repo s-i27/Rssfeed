@@ -2,10 +2,200 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-03-03T01:16:10.167Z</updated>
+    <updated>2024-03-04T01:13:20.470Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[PyCloneの紹介と使い方]]></title>
+        <id>https://zenn.dev/naoki0103/articles/introducing-pyclone</id>
+        <link href="https://zenn.dev/naoki0103/articles/introducing-pyclone"/>
+        <updated>2024-03-03T18:00:38.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+PyCloneは、my-python-templateを効率的に利用するために私が作成したコマンドラインユーティリティです。このツールを使用すると、プロジェクトのクローン、セットアップ、GitHubへの初期バージョンのコミットを素早く行うことができます。my-python-templateに関するZennの記事はこちらをご覧ください。
+
+ セットアップ
+PyCloneを使用するためには、まずpyclone関数をシェルの設定ファイルにコピーする必要があります。Bashユーザーの場合は.bashrc、ZSHユーザーの場合は.zshrcとなります。
+関数の宣言は以下のようになりま...]]></summary>
+        <author>
+            <name>Naoki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonプロジェクトのためのテンプレート: my-python-templateの紹介]]></title>
+        <id>https://zenn.dev/naoki0103/articles/my-python-template</id>
+        <link href="https://zenn.dev/naoki0103/articles/my-python-template"/>
+        <updated>2024-03-03T17:50:02.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Pythonプロジェクトを始める際には、プロジェクトの構造や依存関係の管理、コードの品質を保つためのツールなど、設定すべき項目が多くあります。そこで今回は、これらの設定を一元化したPythonプロジェクトのテンプレート、my-python-templateを作成しました。こちらについて今回は紹介いたします。
+
+ my-python-templateの内容
+このテンプレートには以下のファイルとフォルダが含まれています。
+
+
+pyproject.toml: プロジェクトの設定と依存関係を管理するためのファイルです。
+
+.pre-commit-config.yaml: pre-c...]]></summary>
+        <author>
+            <name>Naoki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Docker]Flaskのサーバーにローカル接続できないとき]]></title>
+        <id>https://zenn.dev/kotopasi/articles/9165dd128d9b0c</id>
+        <link href="https://zenn.dev/kotopasi/articles/9165dd128d9b0c"/>
+        <updated>2024-03-03T12:17:07.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+ネットワーク周りの理解が浅いなぁ…と実感しました
+
+ 動作環境
+
+Docker 24.0.7
+
+Pythonイメージ python:3.9-slim
+
+Flask 2.3.3
+
+
+
+ 手順
+以下のPythonコードを実行したいとき
+from flask import Flask
+
+app=Flask(__app__)
+
+@app.route('/')
+def hello():
+	return ("<p>hello, world!<p>")
+docker-compose.yml
+version: '3'
+
+services:
+  server:
+   ...]]></summary>
+        <author>
+            <name>あまたつ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Python].envから環境変数を読み込む]]></title>
+        <id>https://zenn.dev/kotopasi/articles/174bde362d0267</id>
+        <link href="https://zenn.dev/kotopasi/articles/174bde362d0267"/>
+        <updated>2024-03-03T12:17:07.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+.envファイルに設定した環境変数を読み込むときの備忘録です
+
+ 動作環境
+
+Docker 24.0.7
+
+Pythonイメージ python:3.9-slim
+
+Flask 2.3.3
+
+
+
+ 手順
+
+ルートディレクトリに.envファイルを作成する
+
+requirements.txtにpython-dotenvを追加してモジュールをインストール
+
+OPENAI_API_KEY="XXXXXXX"
+
+読み込みたいファイルで以下を書く
+
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+OPENAI_KEY=os...]]></summary>
+        <author>
+            <name>あまたつ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[KaggleのNLPコンペで初手に使える可視化 〜BERTopicを用いた文書クラスタリングと可視化〜]]></title>
+        <id>https://zenn.dev/nishimoto/articles/74fddcb5c67960</id>
+        <link href="https://zenn.dev/nishimoto/articles/74fddcb5c67960"/>
+        <updated>2024-03-03T10:29:37.000Z</updated>
+        <summary type="html"><![CDATA[BERTopic は、Transformersを用いて文書のトピックモデリングを行うためのPythonライブラリです。本記事では、自分がKaggleコンペの初手EDAによく使うコードをまとめました。
+
+
+ 入出力のイメージ
+入力： 文章のリスト
+（例：["I am sure some bashers of Pens fans ...", "My brother is in the market for a high-performance video card that supports VESA local bus with 1-2MB RAM.  Does anyone hav......]]></summary>
+        <author>
+            <name>nishimoto</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[prefect の work-pool / worker について理解する]]></title>
+        <id>https://zenn.dev/massu_devix/articles/905d6172687f5e</id>
+        <link href="https://zenn.dev/massu_devix/articles/905d6172687f5e"/>
+        <updated>2024-03-03T09:27:46.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+prefect の構成要素のうち、work-pool / worker について理解します。
+
+ work-pool
+work-pool は、prefect の work flow を適切なインフラにデプロイするための架け橋となるコンポーネントです。work-pool には様々なタイプを指定できますが、例えば docker のタイプを持つ work-pool を作成した場合、その work-pool から実行された work flow は後述する worker を通して docker コンテナのインフラで起動することになります。
+他にも、単一のプロセスとして work fl...]]></summary>
+        <author>
+            <name>mas_dx</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python でpip installができない 　command not found: pip]]></title>
+        <id>https://zenn.dev/shimouta/articles/c81de05cafe6d2</id>
+        <link href="https://zenn.dev/shimouta/articles/c81de05cafe6d2"/>
+        <updated>2024-03-03T07:52:16.000Z</updated>
+        <summary type="html"><![CDATA[「ChatGPTAPI×Pythonで始める対話型AI実践入門」でOpenAIのAPIを用いた実装の学習をしています。
+OpenAIのライブラリをインストールするときの備忘録です。
+https://book.impress.co.jp/books/1123101013
+
+ やりたいこと
+OpenAIのライブラリをインストールしたい。
+
+ 環境
+
+チップ：M1
+OS：Ventura　13.2.1
+
+python3は公式サイトからインストール済みです。
+% python3 --version
+Python 3.12.2
+
+ pip install openai を実行できない
+python3...]]></summary>
+        <author>
+            <name>Sho</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【型アノテーション】Pythonの矢印は何者か]]></title>
+        <id>https://zenn.dev/nii/articles/what-is-python-annotations</id>
+        <link href="https://zenn.dev/nii/articles/what-is-python-annotations"/>
+        <updated>2024-03-03T00:17:44.000Z</updated>
+        <summary type="html"><![CDATA[この記事は何
+Pythonのコードを読んでいたら急に矢印(->)が現れてびっくりした人向けの記事です。
+備忘録でもあります。
+
+ TL;DR
+Pythonでの -> 表記は型アノテーションを表しています。
+変数や関数の引数や戻り値の型のヒントを定義できます。
+型を定義するのではなくあくまで型のヒントを記述しているだけ、というところがポイントです。
+これに違反していても実行時にエラーにならないことに注意してください。
+
+ 実際に触ってみる
+2つの値を足すだけの簡単な関数を定義してみましょう。
+def Addition(x, y):
+    return x + y
+これらを...]]></summary>
+        <author>
+            <name>nii</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【2024年3月】エンジニアなら読むべき技術書TOP5]]></title>
         <id>https://zenn.dev/yottabyte/articles/c91b2b16820467</id>
@@ -4059,142 +4249,6 @@ C#版ではいくつかPlannerに変更があったようなので、そちら�
 Se...]]></summary>
         <author>
             <name>しろくま</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【2024年2月】エンジニアなら読むべき技術書まとめ]]></title>
-        <id>https://zenn.dev/yottabyte/articles/74b20c15ca48d3</id>
-        <link href="https://zenn.dev/yottabyte/articles/74b20c15ca48d3"/>
-        <updated>2024-02-03T10:56:12.000Z</updated>
-        <summary type="html"><![CDATA[生成AI時代を勝ち抜く事業・組織のつくり方
-
-
-生成AI時代のビジネス・サービスづくりの教科書。
-生成AIをいかに活用して新たな価値を生むか、成功のフレームワークを大公開！
-OpenAIの対話型AI「ChatGPT」をはじめとした生成AIは、もはや一過性のブームではない。
-とはいえ、
-「使ってみたけれど思ったほど仕事に役立たない」「どう活用すべきか分からない」
-「ビジネスに本当に生かせるのか疑問」など、
-懐疑的な声もあふれている。
-本書は、そんな疑いや疑問を払拭するための指南書だ。
-それも、経営層や事業リーダー、サービスづくりに携わる方たちが真に求めている知識やノウハウを提供すること...]]></summary>
-        <author>
-            <name>Raio｜高校生エンジニア</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【BTYDモデル】阿部(2020)の解説]]></title>
-        <id>https://zenn.dev/joanofarc/articles/abe_2020_description</id>
-        <link href="https://zenn.dev/joanofarc/articles/abe_2020_description"/>
-        <updated>2024-02-03T07:27:17.000Z</updated>
-        <summary type="html"><![CDATA[0. この記事の趣旨
-この記事では BTYD モデルの一種として提案された 周期的な購買行動に対応した顧客の 生涯価値の導出と顧客維持介入戦略への応用(阿部 2020) について、その数理構造を解説することを目的としています。一応 python を用いた推定の実装についても触れるつもりではありますが、私は数値最適化や計算の高速化については十分な知見がないので、ご利用の際はご注意ください。ソースコードは以下にあります。
-https://github.com/BlackJack2021/Zenn_abe_2020_description
-
- 1. モデルの概要
-本章では、以下の 2 点に...]]></summary>
-        <author>
-            <name>JoanOfArc</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Tableauダッシュボードのサイズをオブジェクト無視で変更する]]></title>
-        <id>https://zenn.dev/t_katsumoto/articles/8073607afd0dc0</id>
-        <link href="https://zenn.dev/t_katsumoto/articles/8073607afd0dc0"/>
-        <updated>2024-02-03T06:08:07.000Z</updated>
-        <summary type="html"><![CDATA[つまりどういう事か。Tableauでダッシュボードの全体サイズを変えると各オブジェクトの位置や大きさまで変わってしまうが、いやいや、サイズだけ変えたいから！オブジェクトそのままでいいから！という時にどうするかというお話である。
-勿論、変わって欲しい時もある。しかし、そうでない時もある・・固定サイズで浮動オブジェクトも色々配置して作り込んでいる時などは特にそうだろう。もう少しだけ幅足して、ここにこれが置ければ。。なんて事があったとしても、サイズを変えると全てのオブジェクトの位置や大きさが変わってしまうものだから、サイズ変更前のワークブックのコピーを開いて、そこにある元のオブジェクトの情報を...]]></summary>
-        <author>
-            <name>Katsumoto Takashi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[dlt(data load tool)を試す。[Harlequin SQL IDE]]]></title>
-        <id>https://zenn.dev/yuichi_dev/articles/d601ebab84b7ac</id>
-        <link href="https://zenn.dev/yuichi_dev/articles/d601ebab84b7ac"/>
-        <updated>2024-02-03T04:46:01.000Z</updated>
-        <summary type="html"><![CDATA[dlt(data load tool)とは
-Python のオープンソース ライブラリで、おもに多様なデータソースからデータ基盤にデータを転送するときに利用する。embulkあたりが競合かなSaaSだとfivetranやtroccoあたりが競合かなという理解。
-
-https://dlthub.com/
-
- コネクタ
-データ転送元としては、ほどんどのDBが対応しており、広告系だとGAとかFBがあり今後の拡充に期待
-https://dlthub.com/docs/dlt-ecosystem/verified-sources/
-
- セットアップ
-dltをインストール
-pip install...]]></summary>
-        <author>
-            <name>Yuichi</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Django + daphne + channels構成のWebsocketサーバーで502エラー]]></title>
-        <id>https://zenn.dev/t0mmy/articles/internal_server_error_by_websocket</id>
-        <link href="https://zenn.dev/t0mmy/articles/internal_server_error_by_websocket"/>
-        <updated>2024-02-03T00:36:23.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Django + Dapahne + Channlels 構成の Websokcet サーバーにて、502エラーが発生する事態に遭遇しました。
-原因や解決策を、調べた範囲で書いていきます。
-
- 結論
-サーバー側に、実質的な Websocket 接続上限が存在していた。
-上限を超えてWebsocket接続を試みた結果、接続時に502エラーが発生した。
-Websocketの上限は、マシンの CPU コア数に依存する模様。
-また、環境変数で上限を設定することもできる。
-
- 構成
-
-
- 遭遇した問題
-ある日、WebsocketクライアントからWebsocket接続を試みたところ、エラー...]]></summary>
-        <author>
-            <name>t0mmy</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[python初心者] 仮想環境venvのことを調べました]]></title>
-        <id>https://zenn.dev/shomtsm/articles/6110fac57d3f40</id>
-        <link href="https://zenn.dev/shomtsm/articles/6110fac57d3f40"/>
-        <updated>2024-02-03T00:25:42.000Z</updated>
-        <summary type="html"><![CDATA[venvとは
-pythonで仮想環境を作るためのモジュール
-Python3.3以降で標準ライブラリの一部になった
-
- なぜ仮想環境必要か
-仮想環境は、プロジェクトごとに異なるパッケージやパッケージバージョンを管理するために使用される。
-システム全体のPythonインストールを変更せずに、プロジェクト固有の依存関係を維持することができる。
-javascript/node.jsのpackage.jsonがあって、インストールして関連パッケージがnode_modulesに格納されると同じイメージ
-
- 仮想環境基本コマンド
-前提としてPythonがシステムにインストールされていること
-つまり...]]></summary>
-        <author>
-            <name>松嶋松</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Lambda・Aurora Postgres・PostGISで地理情報APIを構築]]></title>
-        <id>https://zenn.dev/sekochan/articles/b76fde0c53f7dd</id>
-        <link href="https://zenn.dev/sekochan/articles/b76fde0c53f7dd"/>
-        <updated>2024-02-02T14:55:27.000Z</updated>
-        <summary type="html"><![CDATA[やりたいこと
-
-APIGateway, lambdaでAPIを作成
-lambdaからAurora Postgresに接続
-Aurora PostgresでPost GISを使用
-住所を送ると、DBに登録したlocationを近い順にtop10を返す
-
-1. は終わっているので2. 3. 4.をやります。
-
- AuroraとAurora Serverlessの違い
-・主な違いはRDS Proxyに対応したこと
-RDS Proxyはコネクションをプールさせておくことで同時接続数などの問題を回避できる。
-参考：
-https://acro-engineer.hatenablog.com/en...]]></summary>
-        <author>
-            <name>sekochan</name>
         </author>
     </entry>
 </feed>
