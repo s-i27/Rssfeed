@@ -2,10 +2,189 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-03-06T01:13:00.836Z</updated>
+    <updated>2024-03-07T01:00:10.336Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[#2 学び【今年中にKaggleでメダルを取る男】]]></title>
+        <id>https://zenn.dev/louloutech/articles/40d0672e49cb4c</id>
+        <link href="https://zenn.dev/louloutech/articles/40d0672e49cb4c"/>
+        <updated>2024-03-06T14:45:55.000Z</updated>
+        <summary type="html"><![CDATA[「PythonではじめるKaggleスタートブック」で出てきたコードでわからなかったところを思考整理がてらここに記述していきます。
+
+ concat
+以下のconcatがよくわからない。
+data = pd.concat([train, test], sort=False)
+→trainとtestのdfを連結する
+こちらの記事が参考になりそうです：https://qiita.com/greenteabiscuit/items/1c950d94d8f9156ace10
+
+ fillna
+以下のコードのinplace=TrueがFalseになっているとどうなるのか、気になったので調べてみまし...]]></summary>
+        <author>
+            <name>louloutech</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[機械学習モデル作成  Step1  データの種類]]></title>
+        <id>https://zenn.dev/yuto_mo/articles/9ad1f71db062ec</id>
+        <link href="https://zenn.dev/yuto_mo/articles/9ad1f71db062ec"/>
+        <updated>2024-03-06T14:13:47.000Z</updated>
+        <summary type="html"><![CDATA[このシリーズでは、機械学習モデルを作成するまでの流れを解説していきます。
+それでは始めましょう！
+
+ Step1 データの種類
+最初のステップは、モデルの学習に使用するデータの理解です。データの質は、機械学習モデルの精度に最も影響を及ぼす要素の一つです。
+初めに一般的に利用されるデータの保存形式について考えましょう。
+
+ 1.1 テキストデータ
+
+テキスト(.txt)
+一般的なテキストデータです。自然言語処理のタスクでよく利用されます。# .txt
+こんにちは。私はジョンです
+
+
+CSV(.csv)
+カンマで区切られたテキストデータです。一番上の行が列名の表となります。人間にも読みやすい...]]></summary>
+        <author>
+            <name>yuu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[行列積状態について考える (11) — NumPy を使わずに 50 量子ビットのもつれ状態を計算]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-matrix-product11</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-matrix-product11"/>
+        <updated>2024-03-06T13:06:13.000Z</updated>
+        <summary type="html"><![CDATA[目的
+行列積状態について考える (9) — 100 量子ビットのもつれ状態 で大量の量子ビットの行列積状態 (MPS) のもつれ状態を見た。このような量子ビット数の MPS シミュレーションにおいて、NumPy もどきを作る (1) で作った自作品で NumPy を置き換えたらどれくらいパフォーマンスに影響が出るのであろう？という、どうでも良いことの検証をしてみる。
+とは言え、今回は非常につまらない実装の詳細によって 50 量子ビットで確認する。縮約計算用のインデックスを 50 個までしか使えないという実装上の制限を作ってしまったためで、拡張してもどうせ滅多に使わないからとりあえずは...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[NumPy もどきを作る (1)]]></title>
+        <id>https://zenn.dev/derwind/articles/dwd-mynumpy-01</id>
+        <link href="https://zenn.dev/derwind/articles/dwd-mynumpy-01"/>
+        <updated>2024-03-06T12:35:40.000Z</updated>
+        <summary type="html"><![CDATA[目的
+去年作っていた NumPy もどきがある程度動くようになったので備忘録を残しておく。
+
+何となく NumPy っぽく使えること
+縮約計算 (einsum) が使えること
+データ構造の中心は多次元リスト (int, float, complex)
+
+程度が目的で、NumPy を触りながら動きの雰囲気を合わせていった。細かいインターフェイスを知りたい場合は NumPy reference なども参考にした。
+リポジトリ: https://github.com/derwind/mynumpy
+
+ 実装内容
+実装は 2 段階のゴールからなる。
+
+縮約計算 (einsum) が使える
+基...]]></summary>
+        <author>
+            <name>derwind</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[FastAPI][SQLAlchemy] BackgroundTasks を使う際は Depends せず新規コネクションにしときなさい]]></title>
+        <id>https://zenn.dev/killinsun/articles/5b70111c926140</id>
+        <link href="https://zenn.dev/killinsun/articles/5b70111c926140"/>
+        <updated>2024-03-06T10:11:16.000Z</updated>
+        <summary type="html"><![CDATA[結論
+タイトル通りですが、FastAPI の BackgroundTasks を使っている場合は、ContextManager などを活用して、以下のように新規コネクションを確保しましょう
+url = f"mysql+pymysql://{config.mysql_user}:{config.mysql_password}@{config.mysql_host}:{config.mysql_port}/{config.mysql_db}?charset=utf8mb4"
+
+
+engine = create_engine(url, pool_recycle=40, pool_size=...]]></summary>
+        <author>
+            <name>首無しキリン</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-333｜B - Pentagon]]></title>
+        <id>https://zenn.dev/hyperdb/articles/9af6f240dae2f7</id>
+        <link href="https://zenn.dev/hyperdb/articles/9af6f240dae2f7"/>
+        <updated>2024-03-06T08:53:32.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-333 B - Pentagon
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def distance(p1, p2):
+    v1 = ord(p1)
+    v2 = ord(p2)
+
+    v = v1 - v2 if v1 >= v2 else v2 - v1
+
+    return min(v, 5 - v)
+
+
+def main():
+    s1, s2 = list(getString())
+    t1, t2 = list(getString())
+
+    print('Yes'...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-333｜A - Three Threes]]></title>
+        <id>https://zenn.dev/hyperdb/articles/22ce9960b5e20b</id>
+        <link href="https://zenn.dev/hyperdb/articles/22ce9960b5e20b"/>
+        <updated>2024-03-06T08:53:32.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-333 A - Three Threes
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    n = getInt()
+
+    print(('%d' % n) * n)
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microsoft PurviewをPythonから操作する]]></title>
+        <id>https://zenn.dev/yyteam/articles/purview_sdk_entity</id>
+        <link href="https://zenn.dev/yyteam/articles/purview_sdk_entity"/>
+        <updated>2024-03-06T03:01:08.000Z</updated>
+        <summary type="html"><![CDATA[Microsoft Purviewとは?
+
+Purviewはいわゆるデータガバナンスを行うためのソリューションで、データの民主化を実現します。
+Purviewを使用すれば、企業内のどこにどのようなデータがあるかがわかります。
+
+Purviewの主な機能は以下になります。
+
+
+データ資産全体の管理：オンプレミス、マルチクラウド、サービスとしてのソフトウェア (SaaS) のデータ管理とガバナンスに役立つ統合データガバナンスソリューションです。
+
+自動化されたデータの検出：データ環境全体の最新のマップを作成するための自動化されたデータの検出機能があります。
+
+エンドツーエンドのデータ系列...]]></summary>
+        <author>
+            <name>yyteam</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[local.settings.jsonをAzureFunctionsやWebAppsの構成設定Jsonに変換したい！]]></title>
         <id>https://zenn.dev/nomhiro/articles/convert_from_localsettings_to_functionsettings</id>
@@ -4012,115 +4191,6 @@ https://pytorch.org/get-started/pytorch-2.0/#technology-overview
 model = AutoM...]]></summary>
         <author>
             <name>kaeru39</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SPCS(Snowpark Container Services)でコンテナをお試し移管してみた]]></title>
-        <id>https://zenn.dev/deask/articles/97d71c0c86d312</id>
-        <link href="https://zenn.dev/deask/articles/97d71c0c86d312"/>
-        <updated>2024-02-06T09:49:01.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-SPCSが遂に東京リージョンでもPuPrされましたね。
-Available regions
-これをきっかけに、SPCSのチュートリアルを行ったり自前のコンテナをSPCSに移管したりしてみました。
-今回は、SPCSや移管をどう行ったかについて書いていきます。
-
- 想定読者
-SPCSについてまだよくわからない人
-SPCSにコンテナを移管する例が知りたい人
-
- SPCSについて
-
- SPCSとは
-SPCS(Snowpark Container Services)とは、Snowflakeが提供するフルマネージドコンテナサービスです。
-SPCSはSnowflakeと統合されており、以...]]></summary>
-        <author>
-            <name>deask</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[VscodeにおけるFlaskのデバッガ設定【備忘録】]]></title>
-        <id>https://zenn.dev/straydog/articles/4783ed8b29573b</id>
-        <link href="https://zenn.dev/straydog/articles/4783ed8b29573b"/>
-        <updated>2024-02-06T01:30:14.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-ほったらかしてた備忘録。F5 押した際にデバッグが走るようにする設定する。
-
- 内容
-「.vscode」フォルダ直下の「launch.json」ファイルに以下のような内容を設定する。
-なければ作成してください。
-
-launch.json
-{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Python: flask", // 任意の名前
-      "type": "python",
-      "request": "launch",
-      "module": "flask",
-   ...]]></summary>
-        <author>
-            <name>stray dog</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Prefectでプロダクトデータ処理基盤のDXを向上させようとしているはなし | Offers Tech Blog]]></title>
-        <id>https://zenn.dev/overflow_offers/articles/prefect-is-perfect</id>
-        <link href="https://zenn.dev/overflow_offers/articles/prefect-is-perfect"/>
-        <updated>2024-02-06T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-おはこんばんちは。
-Offers と、Offers MGR を運営している株式会社 overflow のバックエンドエンジニアばばです。
-Web サービスを開発している皆様であれば、高度なデータ処理の大変さ・つらさを味わったことはあるかと思います。
-たとえば
-
-グラフ用データを作成するには、API からデータ取得が終わった後に、DWH で集計して、その後バッチ処理かけてごにょごにょ
-想定してたよりデータ量が多くて、許容時間内に処理が終わらないー
-あの API 、 Rate Limit 厳しいからから並列数制御しないといつまでたっても取得がおわらない・・・
-
-など、悩みはつき...]]></summary>
-        <author>
-            <name>bibio</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[技術メモPDFから学習させるGPTの作り方]]></title>
-        <id>https://zenn.dev/tasiten/articles/80cd7994087011</id>
-        <link href="https://zenn.dev/tasiten/articles/80cd7994087011"/>
-        <updated>2024-02-05T18:51:23.000Z</updated>
-        <summary type="html"><![CDATA[目的
-去年の11月頃にOpenAIからカスタマイズ可能なChatGPTである，「GPTs」が発表された．特定の処理だけをさせるものを作ることができる．これはChatGPT Plusユーザーなら無料で作成・使用が出来る．
-また何か開発する際などには技術的メモを残すものだが，それを時間が経って見返すときになかなか見つからないときがある．
-そこで今回は今までWeb上にメモしたドキュメントをPDF化してそれをGPTに学習させることで，対話形式で技術的メモを引き出せるようにする．
-ちなみにデータサイズが小さいという理由で，一度htmlファイルを学習させたがhtmlのコードが多く学習されたため，...]]></summary>
-        <author>
-            <name>tasiten</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Nextcloud Talkのチャットボットを仕様通りに構築する]]></title>
-        <id>https://zenn.dev/nondescript/articles/abbfd1f6a7ac93</id>
-        <link href="https://zenn.dev/nondescript/articles/abbfd1f6a7ac93"/>
-        <updated>2024-02-05T15:32:12.000Z</updated>
-        <summary type="html"><![CDATA[TL;DR
-
-Nextcloudサーバー上でコマンドocc talk:bot:installで作成する
-Webhook→トークへのレスポンス
-
-レスポンス先
-
-NextCloudのURL/ocs/v2.php/apps/spreed/api/v1/bot/{トークID}/message
-
-
-ヘッダ
-
-
-X-Nextcloud-Talk-Bot-Random：任意の64桁16進文字列
-
-X-Nextcloud-Talk-Bot-Signature：X-Nextcloud-Talk-Bot-Randomと返信メッセージのバイト列をBot作成時のシークレットを用いてHMACで暗号化した16...]]></summary>
-        <author>
-            <name>素人の戯言</name>
         </author>
     </entry>
 </feed>
