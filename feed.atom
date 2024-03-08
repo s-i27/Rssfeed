@@ -2,10 +2,217 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-03-07T01:00:10.336Z</updated>
+    <updated>2024-03-08T01:12:38.293Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Pythonの制御構文]]></title>
+        <id>https://zenn.dev/crudfifth/articles/b1cc334ddfd329</id>
+        <link href="https://zenn.dev/crudfifth/articles/b1cc334ddfd329"/>
+        <updated>2024-03-07T20:01:10.000Z</updated>
+        <summary type="html"><![CDATA[no contents.]]></summary>
+        <author>
+            <name>CRUD5th-高橋綱弥-</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Moviepyを使って6トラックのループ動画を生成するツールを作ってみた]]></title>
+        <id>https://zenn.dev/clevercure/articles/6a6d8a167ca2b4</id>
+        <link href="https://zenn.dev/clevercure/articles/6a6d8a167ca2b4"/>
+        <updated>2024-03-07T18:05:09.000Z</updated>
+        <summary type="html"><![CDATA[6TracksLoopVideoGenerater
+https://github.com/CleverCure/6TracksLoopVideoGenerater
+Flaskとsqliteを使用しています。
+PythonのライブラリMoviepyを使用し動画を6トラックのループに分割し、一つのループ動画を生成するツール。
+単純に映像と音のループを楽しめる短い動画を生成するツールです。
+細かいことは割愛させていただくので、質問などがあればリポジトリのREADMEに記載されているメールアドレスに連絡をお願いします。
+処理が重くなるためスペックが低いサーバーだと動画が生成されるまで時間がか...]]></summary>
+        <author>
+            <name>Clever Cure</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Django]ModelFormを動的に生成しdictの内容をバリデートして保存する]]></title>
+        <id>https://zenn.dev/nyo3q1/articles/django-model-form-dynamic-create</id>
+        <link href="https://zenn.dev/nyo3q1/articles/django-model-form-dynamic-create"/>
+        <updated>2024-03-07T14:33:19.000Z</updated>
+        <summary type="html"><![CDATA[BlogというModelがあるとして、こんな感じに書くと任意のフィールドを更新できる👊
+from django.forms.models import modelform_factory
+
+
+def update(instance: Blog, data: dict) -> None:
+    # fields=list(data.keys()) で検証したいフィールドを指定
+    BlogForm = modelform_factory(Blog, fields=list(data.keys()))
+    blog_form = BlogForm(data=data, ins...]]></summary>
+        <author>
+            <name>nyo3q1</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[機械学習モデル作成  step2  データのロード]]></title>
+        <id>https://zenn.dev/yuto_mo/articles/bc5793e91f1292</id>
+        <link href="https://zenn.dev/yuto_mo/articles/bc5793e91f1292"/>
+        <updated>2024-03-07T14:24:33.000Z</updated>
+        <summary type="html"><![CDATA[2. データのロード
+各種形式で保存されたデータは、プログラム上にロードしてから処理されます。
+データのロードはpythonの組み込み関数や、さまざまなライブラリでサポートされています。
+以下に、それぞれのファイル形式に対応するロード方法を紹介します。
+
+ 2.1 テキスト(.txt)
+pythonの組み込み関数'open()'で読み込むことができます。
+with open('file.txt', 'r') as file:
+    content = file.read()
+
+ 2.2 CSV(.csv)
+pandasライブラリの'read_csv()'を利用して読み込むことができ...]]></summary>
+        <author>
+            <name>yuu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Django]FKのModelChoiceFieldの選択肢がObjectになる]]></title>
+        <id>https://zenn.dev/ronna/articles/7d13a89fd0838c</id>
+        <link href="https://zenn.dev/ronna/articles/7d13a89fd0838c"/>
+        <updated>2024-03-07T11:37:04.000Z</updated>
+        <summary type="html"><![CDATA[概要
+ChoiceFieldの項目をDBから取得する場合にテンプレート側で選択肢がオブジェクトになる件の対応方法を紹介。
+
+ 環境
+Python 3.12.2
+Django 5.0.2
+
+ 現象
+テンプレート(html)を表示すると、選択肢がオブジェクトになる。
+例：MyRelatedClass Object(1)
+
+ 対応方法
+ModelChoiceFieldをオーバーライドして、label_form_instanceでobjectではなくobject.nameをreturnするよう変更
+# forms.py
+class CustomModelChoiceField(forms.M...]]></summary>
+        <author>
+            <name>ronna</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-334｜A - Christmas Present]]></title>
+        <id>https://zenn.dev/hyperdb/articles/c256d51f792d9b</id>
+        <link href="https://zenn.dev/hyperdb/articles/c256d51f792d9b"/>
+        <updated>2024-03-07T10:28:57.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-334 A - Christmas Present
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    b, g = getIntMap()
+
+    print('Bat' if b > g else 'Glove')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-334｜B - Christmas Trees]]></title>
+        <id>https://zenn.dev/hyperdb/articles/48696a29e9087f</id>
+        <link href="https://zenn.dev/hyperdb/articles/48696a29e9087f"/>
+        <updated>2024-03-07T10:28:57.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-334 B - Christmas Trees
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, m, l, r = getIntMap()
+
+    al = abs(l - a) // m
+    ar = abs(r - a) // m
+
+    ml = abs(l - a) % m
+    mr = abs(r - a) % m
+
+    if l <= a <= r:
+        print(ar + al + 1)...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Slack の CLI と無料サンドボックス環境でサクサク快適開発]]></title>
+        <id>https://zenn.dev/seratch/articles/2871491988a4bc</id>
+        <link href="https://zenn.dev/seratch/articles/2871491988a4bc"/>
+        <updated>2024-03-07T08:46:27.000Z</updated>
+        <summary type="html"><![CDATA[こんにちは、Slack の公式 SDK 開発と日本の Developer Relations を担当している瀬良 (@seratch) と申します 👋
+
+ サンドボックス環境が使えるようになりました
+米国時間 3/6 にサンフランシスコで開催された TrailblazerDX にて、Slack の新しい開発者向けサポート機能が発表されました。
+https://slack.com/intl/ja-jp/blog/developers/developer-program-launch-jp
+Bolt for Python / JavaScript でのカスタムファンクションなどのトピックもあ...]]></summary>
+        <author>
+            <name>Kazuhiro Sera</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[小学校区と中学校区のGMLデータを市区町村別のKMLファイルに変換]]></title>
+        <id>https://zenn.dev/kaorumori/articles/42afe83d7632d5</id>
+        <link href="https://zenn.dev/kaorumori/articles/42afe83d7632d5"/>
+        <updated>2024-03-07T08:22:55.000Z</updated>
+        <summary type="html"><![CDATA[このプログラムは国土数値情報ダウンロードサイトで公開されている小学校区と中学校区のGMLデータを市区町村別のKMLファイルに変換します。2010年度は小学校区のみ、2013年度は中学校区のみ、2016年度は小学校区と中学校区のデータがあります。
+
+ 2010年
+
+ 小学校区
+import os
+import json
+import xml.etree.ElementTree as ET
+import numpy as np
+
+prefectures = json.load(open('prefectures.json', 'r'))
+
+if not os.path.exists('out...]]></summary>
+        <author>
+            <name>kaorumori</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Django]FKのModelChoiceFieldでのValidationエラーの回避法]]></title>
+        <id>https://zenn.dev/ronna/articles/1e0837a578e514</id>
+        <link href="https://zenn.dev/ronna/articles/1e0837a578e514"/>
+        <updated>2024-03-06T23:37:01.000Z</updated>
+        <summary type="html"><![CDATA[概要
+DjangoのModelにてForeignKeyを設定している項目のデータベース登録において発生するバリデーションエラーの対応方法を紹介。
+
+ 環境
+Python 3.12.2
+Django 5.0.2
+
+ エラーメッセージ
+Select a valid choice. That choice is not one of the available choices.
+
+ 原因
+Forms.pyの下記コードにて、Objects.none()としているため、バリデーションにて選択肢の候補が取得できず、画面上でどの選択肢を選んでも有効でない判定となっていた。
+# Forms.py
+M...]]></summary>
+        <author>
+            <name>ronna</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[#2 学び【今年中にKaggleでメダルを取る男】]]></title>
         <id>https://zenn.dev/louloutech/articles/40d0672e49cb4c</id>
@@ -4116,81 +4323,6 @@ GitHubに公開してます。
 さらに手書き...]]></summary>
         <author>
             <name>Torachi0401</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[実務でPandasとMatplotlibを使う時がやっと来た]]></title>
-        <id>https://zenn.dev/kyonaka/articles/d6b66d8f9ae934</id>
-        <link href="https://zenn.dev/kyonaka/articles/d6b66d8f9ae934"/>
-        <updated>2024-02-07T05:58:28.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-AWS エンジニアになる前は Python を独学で学び、Pandas や Matplotlib などデータ分析に関わるライブラリを触ってきました。
-実務で使うことはあるのかと思っていましたが、ようやく学んだことを活かせる時が来たので記事にしようと思います。
-
- どんな業務で扱うことになったのか？
-AWS エンジニア(インフラ担当)として、『AWS リソースの使用状況を月次で報告する』 という月一の定例業務が発生することになりました。
-EC2 インスタンスの 1 ヶ月の CPU やメモリの使用率などの推移を見て、今後のキャパシティプランニングに役立てる目的のためです。
-私が...]]></summary>
-        <author>
-            <name>Kyonaka@AWSエンジニア</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Segmentation Models Pytorch の BackBone をカスタムする方法]]></title>
-        <id>https://zenn.dev/syu_tan/articles/c56919106e3682</id>
-        <link href="https://zenn.dev/syu_tan/articles/c56919106e3682"/>
-        <updated>2024-02-07T05:27:56.000Z</updated>
-        <summary type="html"><![CDATA[Segmentation Models Pytorch の バックボーン(Backbone) を設定したいように変更する時の方法と注意点
-
- はじめに
-https://pytorch.org/
-ディープラーニングのための自動微分をしてくれる PyTroch において、セグメンテーションのタスクのモデルを簡単に提供してくれるのが Segmentation Models Pytorchです。
-
-モデル作成の初学者から Kaggle などのコンペ、業務でも仕様できるくらい便利なライブラリーです。
-https://smp.readthedocs.io/en/latest/
-もう既にバックボーンと...]]></summary>
-        <author>
-            <name>emmyeil</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[List操作のデバッグを効率化するラッパークラス活用法]]></title>
-        <id>https://zenn.dev/tonbi_attack/articles/a1f581d8becd1b</id>
-        <link href="https://zenn.dev/tonbi_attack/articles/a1f581d8becd1b"/>
-        <updated>2024-02-06T15:33:23.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Java や Python など、多くのプログラミング言語で List やその他のコレクション型のデータ構造は頻繁に使用されます。これらのコレクションにオブジェクトを追加する際、特に複雑なアプリケーションや可読性の非常に低いコードでは、デバッグが難しくなることがあります。特に、List のオブジェクトクラスなどが多用されている場合、問題の追跡と解決はより複雑になります。このような状況を解決するための有効なデバッグ方法の一つが、List の Add メソッドなどのメソッドをラップしてブレークポイントで捕まえるテクニックです。
-
- 方法の概要
-この方法では、既存の List に...]]></summary>
-        <author>
-            <name>tonbiattack</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ローカルLLMの推論速度を高速化する5つの手法と比較評価]]></title>
-        <id>https://zenn.dev/kaeru39/articles/1ea73bfa40c7df</id>
-        <link href="https://zenn.dev/kaeru39/articles/1ea73bfa40c7df"/>
-        <updated>2024-02-06T14:35:32.000Z</updated>
-        <summary type="html"><![CDATA[目的
-ローカルLLMの推論速度を改善する手法がいくつか報告されています。
-今回は実際に報告されている5つの手法を実装して推論速度がどの程度改善するか確認します。
-
- 推論処理の高速化手法
-
- 1. torch.compile
-
-計算グラフを構築
-各演算をCPUやGPUのデバイスに特化した細かい命令に分解
-与えられた入力に対して上記の命令を呼び出して演算を効率化
-
-https://pytorch.org/get-started/pytorch-2.0/#technology-overview
-
- 実装
-モデルを読み込んだ直後にtorch.compileを追加
-model = AutoM...]]></summary>
-        <author>
-            <name>kaeru39</name>
         </author>
     </entry>
 </feed>
