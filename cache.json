@@ -12,6 +12,186 @@
       "siteUrl": "https://zenn.dev/topics/python",
       "articles": [
         {
+          "id": "https://zenn.dev/yuto_mo/articles/7172e31f820efd",
+          "author": "yuu",
+          "description": "機械学習モデル作成のStep5です。前回はロードしたデータを確認する方法について扱いました。\n続いて今回はデータの前処理を解説します。\n\n 5 データの前処理\nロードしたデータを学習に使用する前に、前処理を行う必要があります。前処理とは、データをモデルが学習しやすいように加工することです。\n欠損値処理や正規化、データ拡張など多岐に渡ります。\n今回はこれら前処理について、一般的に処理を行う順番に沿って解説しています。\n\n 5.0 データのロード\n学習に使用するデータをロードします。\n\n 5.1 欠損値処理\n欠損値の置換、削除、または回帰補完、多重補完などを行います。\nここでは簡単な置換と削...",
+          "link": "https://zenn.dev/yuto_mo/articles/7172e31f820efd",
+          "publishedOn": "2024-03-11T14:50:49.000Z",
+          "wordCount": 8849,
+          "title": "[機械学習モデル作成] Step5 データの前処理",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--5RH3WOju--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255B%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E4%25BD%259C%25E6%2588%2590%255D%2520Step5%2520%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E5%2589%258D%25E5%2587%25A6%25E7%2590%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0OTcwZWIzMmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--5RH3WOju--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255B%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%25E4%25BD%259C%25E6%2588%2590%255D%2520Step5%2520%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AE%25E5%2589%258D%25E5%2587%25A6%25E7%2590%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0OTcwZWIzMmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/yosemat/articles/39c36d0ed88a7c",
+          "author": "Yosemat",
+          "description": "先に結論\nimport asyncio\n\nclass AsyncResource:\n    def __init__(self, concurrency: int = 10):\n        self.semaphore = asyncio.Semaphore(concurrency)\n\n    async def task(self):\n        async with self.semaphore:  # 11個目以降のタスクはここでブロックされる\n            print(\"Hello\")\n            await self.call_api()\n  ...",
+          "link": "https://zenn.dev/yosemat/articles/39c36d0ed88a7c",
+          "publishedOn": "2024-03-11T12:17:04.000Z",
+          "wordCount": 1176,
+          "title": "Semaphoreを使ってPythonの非同期処理の平行処理数をコントロールする",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--ONjnVbLB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Semaphore%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6Python%25E3%2581%25AE%25E9%259D%259E%25E5%2590%258C%25E6%259C%259F%25E5%2587%25A6%25E7%2590%2586%25E3%2581%25AE%25E5%25B9%25B3%25E8%25A1%258C%25E5%2587%25A6%25E7%2590%2586%25E6%2595%25B0%25E3%2582%2592%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2588%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yosemat%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dVaVhYRVhTU21HemprLTZCNjRhM0FpbmdGSjlmUzdGSElCck5RPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--ONjnVbLB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Semaphore%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6Python%25E3%2581%25AE%25E9%259D%259E%25E5%2590%258C%25E6%259C%259F%25E5%2587%25A6%25E7%2590%2586%25E3%2581%25AE%25E5%25B9%25B3%25E8%25A1%258C%25E5%2587%25A6%25E7%2590%2586%25E6%2595%25B0%25E3%2582%2592%25E3%2582%25B3%25E3%2583%25B3%25E3%2583%2588%25E3%2583%25AD%25E3%2583%25BC%25E3%2583%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yosemat%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dVaVhYRVhTU21HemprLTZCNjRhM0FpbmdGSjlmUzdGSElCck5RPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/satsuk/articles/785f07616aeb38",
+          "author": "Mats",
+          "description": "はじめに\n最近はインターネット上で情報収集するのが簡単になっています。しかし読んだ記事をどう整理するかは案外難しいものです。そこで今回は、Notionで管理している読書リストを、PythonのStreamlitとNotion APIを使って視覚化する方法をご紹介します。これを使えば、読んだ記事を一目で振り返ることができ、さらにどんなジャンルに偏っているかなど、自分の読書傾向も分析できるようになります。\n\n\n 必要なもの\n\nStreamlit: Webアプリをサクッと作れるPythonのライブラリです。\nPandas\nWordCloud, Matplotlib, Plotly: データ...",
+          "link": "https://zenn.dev/satsuk/articles/785f07616aeb38",
+          "publishedOn": "2024-03-11T10:38:24.000Z",
+          "wordCount": 1601,
+          "title": "Notion × Streamlitで読書リストを視覚化するアプリ",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--9X_WwOJg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Notion%2520%25C3%2597%2520Streamlit%25E3%2581%25A7%25E8%25AA%25AD%25E6%259B%25B8%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E8%25A6%2596%25E8%25A6%259A%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Mats%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlZDhmYzcyMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--9X_WwOJg--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Notion%2520%25C3%2597%2520Streamlit%25E3%2581%25A7%25E8%25AA%25AD%25E6%259B%25B8%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%25E3%2582%2592%25E8%25A6%2596%25E8%25A6%259A%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Mats%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlZDhmYzcyMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/satsuk/articles/44ab5481c7c03c",
+          "author": "Mats",
+          "description": "はじめに\n特許データは、技術進歩のバロメーターとして、また競合調査や市場分析の貴重な情報源として利用されます。本記事では、米国特許商標庁（USPTO）の公開データをPythonを使ってダウンロードし、特許のトレンドを分析する方法をご紹介します。\n\n データの取得\n以下のページから特許に関わるデータをダウンロードします。今回はg_patent(特許データ)を使います。\nhttps://patentsview.org/download/data-download-tables\n\n データの前処理\n先ほどダウンロードしたg_patent.tsv.zipを任意のディレクトリに移動して以下のコ...",
+          "link": "https://zenn.dev/satsuk/articles/44ab5481c7c03c",
+          "publishedOn": "2024-03-11T10:36:17.000Z",
+          "wordCount": 920,
+          "title": "米国特許商標庁PatentsViewを用いた特許データのpythonによる取得,分析",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--j-actQFk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25B1%25B3%25E5%259B%25BD%25E7%2589%25B9%25E8%25A8%25B1%25E5%2595%2586%25E6%25A8%2599%25E5%25BA%2581PatentsView%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E7%2589%25B9%25E8%25A8%25B1%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AEpython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E5%258F%2596%25E5%25BE%2597%252C%25E5%2588%2586%25E6%259E%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Mats%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlZDhmYzcyMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--j-actQFk--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%25B1%25B3%25E5%259B%25BD%25E7%2589%25B9%25E8%25A8%25B1%25E5%2595%2586%25E6%25A8%2599%25E5%25BA%2581PatentsView%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E7%2589%25B9%25E8%25A8%25B1%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2581%25AEpython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E5%258F%2596%25E5%25BE%2597%252C%25E5%2588%2586%25E6%259E%2590%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Mats%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlZDhmYzcyMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/satsuk/articles/e19c5f56b2f783",
+          "author": "Mats",
+          "description": "はじめに\nプロジェクト初期の要件定義や提案書の作成は、時には面倒に感じるものですよね。でも、StreamlitとNotion API、そしてOpenAIのapiを使えば、このプロセスをずっとスムーズに、そして楽しくできるかもしれません。今日はそんなツールを使って、「AI要件ガイド🤖」を作ってみます。\n\n まずはツール紹介から\n\nStreamlit: ブラウザ上で動くアプリケーションを、Pythonのスクリプトだけでサクッと作れます。\nNotion API: Notionとのやりとりをプログラムからでもできるようになります。\nOpenAI: AIを使って、テキスト生成などができるように...",
+          "link": "https://zenn.dev/satsuk/articles/e19c5f56b2f783",
+          "publishedOn": "2024-03-11T10:32:34.000Z",
+          "wordCount": 6056,
+          "title": "OpenAI api× Notion api × Streamlitを使った要件定義アプリ",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--wm_ZkP4o--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenAI%2520api%25C3%2597%2520Notion%2520api%2520%25C3%2597%2520Streamlit%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E8%25A6%2581%25E4%25BB%25B6%25E5%25AE%259A%25E7%25BE%25A9%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Mats%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlZDhmYzcyMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--wm_ZkP4o--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:OpenAI%2520api%25C3%2597%2520Notion%2520api%2520%25C3%2597%2520Streamlit%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E8%25A6%2581%25E4%25BB%25B6%25E5%25AE%259A%25E7%25BE%25A9%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Mats%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlZDhmYzcyMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/satsuk/articles/6207bd26142c24",
+          "author": "Mats",
+          "description": "はじめに\n今回は、ReactとDjangoを組み合わせて、リアルタイムチャット機能を持つWebアプリケーションの開発過程を共有します! このアプリはプロダクトの資料に合わせてAIがチャット形式で自動でインタビューをしてくれるものとなっています。手軽に生活者の意見を聞きたい時に活用したいと思い開発しました。この記事では機能の概要のみを説明するため、詳細なコードにご興味のある方はコメントいただければ幸いです！\n\n\n プロジェクトの概要\nこのチャットアプリケーションは、ユーザーがリアルタイムでメッセージを交換できる機能を提供します。Reactを使用してインタラクティブなユーザーインターフェ...",
+          "link": "https://zenn.dev/satsuk/articles/6207bd26142c24",
+          "publishedOn": "2024-03-11T10:29:32.000Z",
+          "wordCount": 150,
+          "title": "React × Django × OpenAI apiを活用したチャットアプリケーション開発",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--arzd0vW_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:React%2520%25C3%2597%2520Django%2520%25C3%2597%2520OpenAI%2520api%25E3%2582%2592%25E6%25B4%25BB%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E9%2596%258B%25E7%2599%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Mats%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlZDhmYzcyMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--arzd0vW_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:React%2520%25C3%2597%2520Django%2520%25C3%2597%2520OpenAI%2520api%25E3%2582%2592%25E6%25B4%25BB%25E7%2594%25A8%25E3%2581%2597%25E3%2581%259F%25E3%2583%2581%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2588%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E9%2596%258B%25E7%2599%25BA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Mats%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlZDhmYzcyMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/satsuk/articles/377ff5e25b2c4e",
+          "author": "Mats",
+          "description": "はじめに\nインタビューは、プロダクト開発や市場調査において重要な役割を果たしますが、その準備と分析には時間がかかります。そこで、AIを活用して、このプロセスを簡単で効率的なものに変えるアプリケーションを開発しました。このアプリケーションでは、ユーザーの要件に基づいたインタビューフローを自動生成し、実際のインタビュー中はAIが対話を導き、リアルタイムで重要なデータを収集。そして、インタビューが終わると、直感的に理解できるダッシュボードで結果を分析し、深い洞察を得ることができます。フロントエンドはReact,バックエンドはDjango(一部Node.js),Zoom SDKでオンラインビ...",
+          "link": "https://zenn.dev/satsuk/articles/377ff5e25b2c4e",
+          "publishedOn": "2024-03-11T10:28:06.000Z",
+          "wordCount": 173,
+          "title": "React × Django × OpenAI api × Zoom SDKを使ったオンラインインタビューアプリ",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--28MlyZ3w--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:React%2520%25C3%2597%2520Django%2520%25C3%2597%2520OpenAI%2520api%2520%25C3%2597%2520Zoom%2520SDK%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E3%2582%25AA%25E3%2583%25B3%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%2593%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Mats%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlZDhmYzcyMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--28MlyZ3w--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:React%2520%25C3%2597%2520Django%2520%25C3%2597%2520OpenAI%2520api%2520%25C3%2597%2520Zoom%2520SDK%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E3%2582%25AA%25E3%2583%25B3%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%2593%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Mats%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlZDhmYzcyMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/nari007/articles/eafa1e26b74522",
+          "author": "Nari",
+          "description": "はじめに\nユーザーの入力に対して関数を使用する回数と順序をモデル自体に決定させて実行させる場合には、Agentが便利です。下記のサンプルコードを使い、LangSmithでトレースした結果も確認してみます。\nhttps://python.langchain.com/docs/use_cases/tool_use/quickstart#agents\nLangSmithの使い方はこの記事を参照してください。\nhttps://zenn.dev/nari007/articles/e1531d3b9370cb\n\n サンプルコード\n※ envファイルにOPENAI_API_KEYの値を設定していま...",
+          "link": "https://zenn.dev/nari007/articles/eafa1e26b74522",
+          "publishedOn": "2024-03-11T10:24:47.000Z",
+          "wordCount": 438,
+          "title": "【Python】LangChainのAgentで複数の関数を使う",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--tNh95oQe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591LangChain%25E3%2581%25AEAgent%25E3%2581%25A7%25E8%25A4%2587%25E6%2595%25B0%25E3%2581%25AE%25E9%2596%25A2%25E6%2595%25B0%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Nari%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdmODhiYWFmNTguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--tNh95oQe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591LangChain%25E3%2581%25AEAgent%25E3%2581%25A7%25E8%25A4%2587%25E6%2595%25B0%25E3%2581%25AE%25E9%2596%25A2%25E6%2595%25B0%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Nari%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdmODhiYWFmNTguanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/satsuk/articles/38011cb7fd3c9c",
+          "author": "Mats",
+          "description": "はじめに\nスタートアップエコシステムは複雑で、多くのプレイヤーが絡み合っています。スタートアップにとっての資金調達は、その成長の鍵を握る一大イベントですが、どの投資家がどの企業に関わっているかを把握することは一筋縄ではいきません。そこで、この記事では、Pythonを活用して、Crunchbaseデータを基にスタートアップと投資家の関係を視覚化する方法をご紹介します。\n\n データセットの準備(Crunchbase Proプランが必要です)\nまず、Crunchbaseから取得したデータセットを用意します。このデータには、スタートアップの名前とトップ5の投資家がリスト化されています。以下の...",
+          "link": "https://zenn.dev/satsuk/articles/38011cb7fd3c9c",
+          "publishedOn": "2024-03-11T10:23:35.000Z",
+          "wordCount": 731,
+          "title": "Crunchbaseデータを用いたスタートアップと投資家のネットワーク可視化",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--4Gq_ebHQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Crunchbase%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%2588%25E3%2582%25A2%25E3%2583%2583%25E3%2583%2597%25E3%2581%25A8%25E6%258A%2595%25E8%25B3%2587%25E5%25AE%25B6%25E3%2581%25AE%25E3%2583%258D%25E3%2583%2583%25E3%2583%2588%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Mats%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlZDhmYzcyMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--4Gq_ebHQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Crunchbase%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%2588%25E3%2582%25A2%25E3%2583%2583%25E3%2583%2597%25E3%2581%25A8%25E6%258A%2595%25E8%25B3%2587%25E5%25AE%25B6%25E3%2581%25AE%25E3%2583%258D%25E3%2583%2583%25E3%2583%2588%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E5%258F%25AF%25E8%25A6%2596%25E5%258C%2596%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Mats%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzRlZDhmYzcyMzcuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/merosu_radio/articles/192fa106a324f6",
+          "author": "merosu_radio",
+          "description": "この記事について\nGNN（Graph Neural Network）の概要について調査を行い、サンプルコードを作成しました。\nまずはGNNの概要を説明し、その後GNNの学習イメージやサンプルコードを紹介します。\nより詳細なGNNに関する情報は↓レビューが参考になります。\nhttps://arxiv.org/ftp/arxiv/papers/1812/1812.08434.pdf\n\n GNNとは？\nGNNはデータがグラフ形式で表現される場合に適用することができる深層学習のフレームワークです。グラフGはノード（点）Vとエッジ（線）Eで構成され、数式的にはG = (V, E)で表されます。...",
+          "link": "https://zenn.dev/merosu_radio/articles/192fa106a324f6",
+          "publishedOn": "2024-03-11T05:10:26.000Z",
+          "wordCount": 812,
+          "title": "GNN（Graph Neural Network）のガイダンス",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--2B6EMeAe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GNN%25EF%25BC%2588Graph%2520Neural%2520Network%25EF%25BC%2589%25E3%2581%25AE%25E3%2582%25AC%25E3%2582%25A4%25E3%2583%2580%25E3%2583%25B3%25E3%2582%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:merosu_radio%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFjMGU2MGFkYzMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--2B6EMeAe--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GNN%25EF%25BC%2588Graph%2520Neural%2520Network%25EF%25BC%2589%25E3%2581%25AE%25E3%2582%25AC%25E3%2582%25A4%25E3%2583%2580%25E3%2583%25B3%25E3%2582%25B9%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:merosu_radio%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzFjMGU2MGFkYzMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/tokyotech_lm/articles/3f71df3cd2e589",
+          "author": "Kazuki Fujii",
+          "description": "はじめに\n東京工業大学 横田研究室の藤井です。\n本日(2024/03/11)Mistral-7B-v0.1から約 100B Token継続事前学習を行ったSwallow-MSをリリースさせて頂きました。\n本モデルの開発は、産総研、東京工業大学 岡崎研究室、横田研究室の合同プロジェクトにて行われました。公式プロジェクトページはこちらです。\nhttps://tokyotech-llm.github.io/swallow-mistral\nSwallow-MS は高い日本語能力を示すSwallow-7Bを上回り、7Bモデルでありながら、Swallow-13Bに迫る日本語性能を示しました。\nリ...",
+          "link": "https://zenn.dev/tokyotech_lm/articles/3f71df3cd2e589",
+          "publishedOn": "2024-03-11T02:00:00.000Z",
+          "wordCount": 1196,
+          "title": "Swallow-MS: Mistral日本語継続事前学習モデル",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--v_ETLo79--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Swallow-MS%253A%2520Mistral%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E7%25B6%2599%25E7%25B6%259A%25E4%25BA%258B%25E5%2589%258D%25E5%25AD%25A6%25E7%25BF%2592%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kazuki%2520Fujii%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzkxNzBlMjEyODYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:tokyotech-llm%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NiYTAwZDNmYWIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--v_ETLo79--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Swallow-MS%253A%2520Mistral%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E7%25B6%2599%25E7%25B6%259A%25E4%25BA%258B%25E5%2589%258D%25E5%25AD%25A6%25E7%25BF%2592%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kazuki%2520Fujii%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzkxNzBlMjEyODYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:tokyotech-llm%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NiYTAwZDNmYWIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
+          "id": "https://zenn.dev/tokyotech_lm/articles/5f4211b9ed3197",
+          "author": "Kazuki Fujii",
+          "description": "はじめに\n東京工業大学 横田研究室の藤井です。\n本日(2024/03/11)Mixtral-8x7B-Instruct-v0.1から日本語継続事前学習を行ったSwallow-MX-8x7b-NVE-v0.1をリリースさせて頂きました。\n本モデルの開発は、産総研、東京工業大学 岡崎研究室、横田研究室の合同プロジェクトにて行われました。公式プロジェクトページはこちらです。\nhttps://tokyotech-llm.github.io/swallow-mistral\nSwallow-MX はMoE(Mixture of Expert)モデルの継続事前学習モデルであり、Denseモデルにお...",
+          "link": "https://zenn.dev/tokyotech_lm/articles/5f4211b9ed3197",
+          "publishedOn": "2024-03-11T02:00:00.000Z",
+          "wordCount": 1015,
+          "title": "Swallow-MX: Mixtral日本語継続事前学習MoEモデル",
+          "enclosure": {
+            "url": "https://res.cloudinary.com/zenn/image/upload/s--2ATd8Fj7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Swallow-MX%253A%2520Mixtral%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E7%25B6%2599%25E7%25B6%259A%25E4%25BA%258B%25E5%2589%258D%25E5%25AD%25A6%25E7%25BF%2592MoE%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kazuki%2520Fujii%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzkxNzBlMjEyODYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:tokyotech-llm%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NiYTAwZDNmYWIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+            "length": "0",
+            "type": "image/png"
+          },
+          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--2ATd8Fj7--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Swallow-MX%253A%2520Mixtral%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E7%25B6%2599%25E7%25B6%259A%25E4%25BA%258B%25E5%2589%258D%25E5%25AD%25A6%25E7%25BF%2592MoE%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kazuki%2520Fujii%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzkxNzBlMjEyODYuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:tokyotech-llm%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NiYTAwZDNmYWIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png"
+        },
+        {
           "id": "https://zenn.dev/kurusugawa/articles/introduce_jsonargparse",
           "author": "Kenji Hata",
           "description": "はじめに\n本記事では、Python スクリプトに CLI を追加するツール jsonargparse を紹介します。\njsonargparse は関数やクラスの型ヒントや docstring などを利用して CLI を構築するツールで、同種のツールと比べて、デコレータなどの「CLI のためのコード」をほとんど必要としないという特長があります。これにより、Python の基礎さえ分かっていればスムーズに扱える、学習コストが極めて低いツールとなっています。\nこのタイプのツールの草分け的存在に Python Fire がありますが、jsonargparse もそれに インスパイアされた ツ...",
@@ -3080,96 +3260,6 @@
             "type": "image/png"
           },
           "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--8B1SIQmi--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2587%25E3%2582%25B6%25E3%2582%25A4%25E3%2583%25B3%25E3%2581%25A7%25E4%25BD%25BF%25E3%2581%2588%25E3%2581%259D%25E3%2581%2586%25E3%2581%25AA%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%2597%25E3%2583%2588%25E3%2582%2592Python%25E3%2581%25A7%25E6%259B%25B8%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:calloc134%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzM0MGU4NGU1YjEuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/keita_f/articles/6e1323fe023fa1",
-          "author": "KITFJN",
-          "description": "前回、FastAPIとSQLmoelを使用して、webアプリケーションを作成しました。\nhttps://zenn.dev/keita_f/articles/4493e3cfd76aec\nこのアプリケーションに、別のモデルを追加して、さらに、二つのデータベースに関連性を持たせます。\n\n BaseUserModelの設定変更\n前回作成したBaseUserModelを少し変更します。\n\nbackend/v1/model/user_model.py\n class BaseUserModel(BaseUser, table = True):\n   id: Optional[int] = Field...",
-          "link": "https://zenn.dev/keita_f/articles/6e1323fe023fa1",
-          "publishedOn": "2024-02-11T12:54:06.000Z",
-          "wordCount": 3391,
-          "title": "Alembicでマイグレーション（FastAPI+SQLModel）",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--1GjkTA-g--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Alembic%25E3%2581%25A7%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25B0%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25EF%25BC%2588FastAPI%252BSQLModel%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:KITFJN%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdjNDYxZWNjNTIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--1GjkTA-g--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Alembic%25E3%2581%25A7%25E3%2583%259E%25E3%2582%25A4%25E3%2582%25B0%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25EF%25BC%2588FastAPI%252BSQLModel%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:KITFJN%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdjNDYxZWNjNTIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/abaoaqu/articles/61634dcd4fd378",
-          "author": "abaoaqu",
-          "description": "概要\nCloud Functions(python) から別プロジェクトの Artifact Registry に格納されている python パッケージをインストールする手順を記載します。\n\n 対象読者\n\nGoogle Cloud のサービスをコンソールまたはCLIで構築した経験のある方\nPython の開発環境を構築した経験のある方\n\n\n 環境\n\n ローカル端末\n\nOS: macOS Sonoma 14.1\nチップ: Apple M3 Max\nGoogle Cloud SDK: 463.0.0\nPythonパッケージ\n\npip: 24.0\nsetuptools: 69.0.3\nw...",
-          "link": "https://zenn.dev/abaoaqu/articles/61634dcd4fd378",
-          "publishedOn": "2024-02-11T12:09:16.000Z",
-          "wordCount": 1357,
-          "title": "Cloud Functions から別プロジェクトの Artifact Registry にあるpythonパッケージを使用する",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--PH8oa2dr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloud%2520Functions%2520%25E3%2581%258B%25E3%2582%2589%25E5%2588%25A5%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E3%2581%25AE%2520Artifact%2520Registry%2520%25E3%2581%25AB%25E3%2581%2582%25E3%2582%258Bpython%25E3%2583%2591%25E3%2583%2583%25E3%2582%25B1...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:abaoaqu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGFRdVhsdnNfcDNNbXdFNTNkREpCZG1hT3M1bVlncHR0bTh5M0Iyc2lGZWc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--PH8oa2dr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Cloud%2520Functions%2520%25E3%2581%258B%25E3%2582%2589%25E5%2588%25A5%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E3%2581%25AE%2520Artifact%2520Registry%2520%25E3%2581%25AB%25E3%2581%2582%25E3%2582%258Bpython%25E3%2583%2591%25E3%2583%2583%25E3%2582%25B1...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:abaoaqu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGFRdVhsdnNfcDNNbXdFNTNkREpCZG1hT3M1bVlncHR0bTh5M0Iyc2lGZWc9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/nyaru_tech/articles/4f51343b263cf2",
-          "author": "にゃる～技術があれば覆水すら盆に返る～",
-          "description": "概要\nPythonのプロジェクトを管理する際に、必要なライブラリや依存関係を管理するのは重要です。pipreqsは、Pythonプロジェクトの依存関係を自動的に検出し、requirements.txtファイルを生成するツールです。この記事では、pipreqsの使い方を紹介します。\n\n 本文\n最初に、pipreqsをインストールする必要があります。ターミナルまたはコマンドプロンプトを開き、次のコマンドを実行します。\n\nbash\npip install pipreqs\n\npipreqsを使用して、Pythonプロジェクトのディレクトリ内のファイルから依存関係を検出し、requiremen...",
-          "link": "https://zenn.dev/nyaru_tech/articles/4f51343b263cf2",
-          "publishedOn": "2024-02-11T10:25:15.000Z",
-          "wordCount": 115,
-          "title": "３分でわかるpipreqsでrequirements.txtを自動的に生成する方法",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--BnuVFP4D--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%2593%25E5%2588%2586%25E3%2581%25A7%25E3%2582%258F%25E3%2581%258B%25E3%2582%258Bpipreqs%25E3%2581%25A7requirements.txt%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E7%259A%2584%25E3%2581%25AB%25E7%2594%259F%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AB%25E3%2582%2583%25E3%2582%258B%25EF%25BD%259E%25E6%258A%2580%25E8%25A1%2593%25E3%2581%258C%25E3%2581%2582%25E3%2582%258C%25E3%2581%25B0%25E8%25A6%2586%25E6%25B0%25B4%25E3%2581%2599%25E3%2582%2589%25E7%259B%2586%25E3%2581%25AB%25E8%25BF%2594%25E3%2582%258B%25EF%25BD%259E%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2IzMTEwY2JhOGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--BnuVFP4D--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%2593%25E5%2588%2586%25E3%2581%25A7%25E3%2582%258F%25E3%2581%258B%25E3%2582%258Bpipreqs%25E3%2581%25A7requirements.txt%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E7%259A%2584%25E3%2581%25AB%25E7%2594%259F%25E6%2588%2590%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AB%25E3%2582%2583%25E3%2582%258B%25EF%25BD%259E%25E6%258A%2580%25E8%25A1%2593%25E3%2581%258C%25E3%2581%2582%25E3%2582%258C%25E3%2581%25B0%25E8%25A6%2586%25E6%25B0%25B4%25E3%2581%2599%25E3%2582%2589%25E7%259B%2586%25E3%2581%25AB%25E8%25BF%2594%25E3%2582%258B%25EF%25BD%259E%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2IzMTEwY2JhOGMuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/svertkatter/articles/d7941f95b52385",
-          "author": "svertkatter",
-          "description": "こんにちは。TouchDesignerでLINEに通知を送りたいですよね。\n特にWebSocketを使用してネットワークが切れていないかなと不安になっている中、通知してくれたほうが助かります。\n調べていく中で、Slackを利用した通知方法などはありますが、LINEでしている人はいなかったと思うので、この記事でそのやり方を説明しようと思います。\n\n 前提条件\nまず前提をお話します。この記事を書いてる人間、つまり私はド素人です。プログラミングを生業にしている訳ではありません。ご了承ください。\n\n\nTouchDesigner\n\nバージョン：2022.35320\n\n\n\nPython\n\n3.9.5...",
-          "link": "https://zenn.dev/svertkatter/articles/d7941f95b52385",
-          "publishedOn": "2024-02-11T08:19:01.000Z",
-          "wordCount": 462,
-          "title": "TouchDesignerでLINEに通知を送る方法",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--arxl-xS5--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:TouchDesigner%25E3%2581%25A7LINE%25E3%2581%25AB%25E9%2580%259A%25E7%259F%25A5%25E3%2582%2592%25E9%2580%2581%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:svertkatter%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNkNWI3MjMzOWIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--arxl-xS5--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:TouchDesigner%25E3%2581%25A7LINE%25E3%2581%25AB%25E9%2580%259A%25E7%259F%25A5%25E3%2582%2592%25E9%2580%2581%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:svertkatter%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNkNWI3MjMzOWIuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/yuto_mo/articles/29682f6b0c402c",
-          "author": "yuu",
-          "description": "今回はpythonの@propertyについて軽く解説します。\n\n ＠propertyとは\n@propertyは、クラスのインスタンス変数を簡潔に呼び出せるようにする組み込みのデコレータです。\nデコレータは、装飾される関数を引数として取り、新しい関数を返す高階関数ですが、@propertyはその関数における特殊メソッドをオーバーライドし、関数の呼び出し方によって返す関数を変更します。\n言葉で表すと非常に難解なので、例を見ていきましょう。\n\n 例\nclass Person:\n    def __init__(self, name):\n        self._name = name\n\n ...",
-          "link": "https://zenn.dev/yuto_mo/articles/29682f6b0c402c",
-          "publishedOn": "2024-02-11T06:48:26.000Z",
-          "wordCount": 997,
-          "title": "@propertyとは",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--n_YxXzIQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:%2540property%25E3%2581%25A8%25E3%2581%25AF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0OTcwZWIzMmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--n_YxXzIQ--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:%2540property%25E3%2581%25A8%25E3%2581%25AF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0OTcwZWIzMmUuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
-        },
-        {
-          "id": "https://zenn.dev/nakurei/articles/forcing-keywords-as-arguments-in-python",
-          "author": "NakuRei",
-          "description": "これはなに\nPythonの関数で、利用時にキーワードによる指定を強制できると知ったのでまとめたメモ。\n\n この記事が役立つ人\n\nすでにPythonの基本的な知識を持っている人で\n\n関数呼び出し時にキーワード指定を強制したい人\nコードの可読性や保守性を向上させたい人\n\n\n\n\n 本記事の要約\nPython関数の引数の定義で、*の後に引数を定義すると、利用者にキーワードによる指定を強制できる。この引数はキーワード専用引数（Keyword-Only Arguments）と呼ばれる。下記の例では、is_upperをキーワード専用引数として定義している。\n\n関数定義\n# `*`の後に定義した引数...",
-          "link": "https://zenn.dev/nakurei/articles/forcing-keywords-as-arguments-in-python",
-          "publishedOn": "2024-02-11T00:00:00.000Z",
-          "wordCount": 1270,
-          "title": "Pythonで引数にキーワードを強制する方法",
-          "enclosure": {
-            "url": "https://res.cloudinary.com/zenn/image/upload/s--1RfMWK8S--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E5%25BC%2595%25E6%2595%25B0%25E3%2581%25AB%25E3%2582%25AD%25E3%2583%25BC%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592%25E5%25BC%25B7%25E5%2588%25B6%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:NakuRei%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQwZjNjZmQ5ZGQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-            "length": "0",
-            "type": "image/png"
-          },
-          "imageUrl": "https://res.cloudinary.com/zenn/image/upload/s--1RfMWK8S--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E5%25BC%2595%25E6%2595%25B0%25E3%2581%25AB%25E3%2582%25AD%25E3%2583%25BC%25E3%2583%25AF%25E3%2583%25BC%25E3%2583%2589%25E3%2582%2592%25E5%25BC%25B7%25E5%2588%25B6%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:NakuRei%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQwZjNjZmQ5ZGQuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png"
         }
       ]
     }
