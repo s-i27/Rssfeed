@@ -2,10 +2,85 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-03-14T01:12:33.953Z</updated>
+    <updated>2024-03-15T01:13:30.050Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-338｜B - Frequency]]></title>
+        <id>https://zenn.dev/hyperdb/articles/b75c8539451eec</id>
+        <link href="https://zenn.dev/hyperdb/articles/b75c8539451eec"/>
+        <updated>2024-03-14T09:57:00.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-338 B - Frequency
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = getString()
+    d = {}
+    max_v = 0
+    for c in s:
+        d.setdefault(c, 0)
+        d[c] += 1
+        max_v = max(max_v, d[c])
+
+    filter_d = dict(filter(lambda item: item[1] == max_v, d.items(...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-338｜A - Capitalized?]]></title>
+        <id>https://zenn.dev/hyperdb/articles/231f47c328cb57</id>
+        <link href="https://zenn.dev/hyperdb/articles/231f47c328cb57"/>
+        <updated>2024-03-14T09:56:59.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-338 A - Capitalized?
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = getString()
+    t = s.capitalize()
+
+    print('Yes' if s == t else 'No')
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windowsマシン に llama-cpp-python を入れても BLAS not found でGPUが使ってもらえない]]></title>
+        <id>https://zenn.dev/hellohazime/articles/ccd01c2df0b5c3</id>
+        <link href="https://zenn.dev/hellohazime/articles/ccd01c2df0b5c3"/>
+        <updated>2024-03-14T09:30:00.000Z</updated>
+        <summary type="html"><![CDATA[!pip install llama-cpp-python  --force-reinstall --upgrade --no-cache-dir -vv -C cmake.args="-DLLAMA_BLAS=ON;-DLLAMA_BLAS_VENDOR=OpenBLAS"
+
+＜中略＞
+
+  -- Could NOT find BLAS (missing: BLAS_LIBRARIES)
+  CMake Warning at vendor/llama.cpp/CMakeLists.txt:339 (message):
+    BLAS not found, please refer t...]]></summary>
+        <author>
+            <name>hellohazime</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Stable Diffusionのデスクトップアプリを作る]]></title>
         <id>https://zenn.dev/singularity/articles/stable-diffusion-mac-app</id>
@@ -4314,136 +4389,6 @@ https://docs.kanaries.net/ja/pygwalker/use-pygwalker-with-streamlit
 pandas, streamlit, pygwalkerをインストールするように書かれていますが、pandasはstreamlitに含まれているので、pygwa...]]></summary>
         <author>
             <name>0msys</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Azure OpenAI Service の Assistant API を理解する]]></title>
-        <id>https://zenn.dev/microsoft/articles/533488db14e442</id>
-        <link href="https://zenn.dev/microsoft/articles/533488db14e442"/>
-        <updated>2024-02-14T08:03:10.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-OpenAI DevDay にて本家 OpenAI の β 版機能として発表された Assistant API が Azure OpenAI Service (AOAI) でも Assistant API (プレビュー) として利用可能になりました。そこで、自分自身の理解や言語化も兼ねて情報をまとめました。
-なお、本記事は AOAI の基本的な部分をある程度理解できている開発者を想定して書かれています。
-
- Assistant API
-
- Assistant API とは何か
-Assistant API は 開発者による独自のアシスタント (Microsoft 的な表現をす...]]></summary>
-        <author>
-            <name>ryohtaka</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ローカルLLMを翻訳apiを通して日本語化]]></title>
-        <id>https://zenn.dev/emoclew/articles/1671555576f77f</id>
-        <link href="https://zenn.dev/emoclew/articles/1671555576f77f"/>
-        <updated>2024-02-14T07:32:47.000Z</updated>
-        <summary type="html"><![CDATA[前回ローカルLLM APIサーバーを建てました
-https://zenn.dev/emoclew/articles/9dfa7fdん948a18b
-性能的にはphi-2が良さそうなのですが、日本語の入出力に対応していませんでした
-そこで、前に立てた翻訳APIサーバーを間に噛ませることで、日本語対応を目指します
-(そもそも、翻訳はかなり難しいタスクらしく、LLMのみの翻訳でGoogle翻訳やDeepLを超えることは、現状では無理みたいです。
-ですから、日本語対応しているLLMであっても、英語で入出力をして、間に翻訳機を噛ませたほうが、性能は上がると思います)
-
- プログラム
-前回建てたLL...]]></summary>
-        <author>
-            <name>emoclew</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CPUのみのローカルLLMサーバー構築(llama.cpp)]]></title>
-        <id>https://zenn.dev/emoclew/articles/9dfa7fd948a18b</id>
-        <link href="https://zenn.dev/emoclew/articles/9dfa7fd948a18b"/>
-        <updated>2024-02-14T04:03:40.000Z</updated>
-        <summary type="html"><![CDATA[LLM(大規模言語モデル)を使って作業がしたい
-でも、Chat GPTやGeminiはお金がかかるから使いたくない
-そうだ、ローカルにLLMを建てよう
-という考えから、LLMのローカルAPIサーバー構築を始めます。
-ただ、実際に計画してみると、自分の使っているサーバーのスペック不足が否めません
-現在使っているマシンのスペックは
-
-CPU : i7-5950X
-Memory : 48GB
-
-と、時代遅れの遺物です。性能的にはi5-10400とかryzen 5 3500などの数世代前のミドルレンジと同程度です。しかし、予算など存在しないので、なんとかこのマシンで動くLLMサーバーを作ります
-...]]></summary>
-        <author>
-            <name>emoclew</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GPT等のトークン制限内で長文テキストを処理する方法]]></title>
-        <id>https://zenn.dev/buenotheebiten/articles/4ba927d896b9e1</id>
-        <link href="https://zenn.dev/buenotheebiten/articles/4ba927d896b9e1"/>
-        <updated>2024-02-14T02:39:46.000Z</updated>
-        <summary type="html"><![CDATA[GPTのAPIなどで要約をしたりQ&Aに対応したりする時で、例えば論文などを参照したい場合にトークン上限に達してしまって処理できないことがあります。
-そんな時の対処法として調べているといくつかの方法があったのでメモ。
-
- 1） RAG: 長文データから関連性の高いデータを取得して参照&生成する
-
-
-長文データをベクトル化し、ベクトルデータベースに保存する
-タスク（質問）の内容でベクトル検索し、データベースから類似情報を取得
-「取得した情報（コンテキスト）+入力タスク」でLLMのテキスト生成を行う
-
-
- 2） 長文データを要約して参照&生成する
-RAGとは異なり、長...]]></summary>
-        <author>
-            <name>えびてん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【LangChain】HTMLHeaderTextSplitterのLimitations（制限）のメモ]]></title>
-        <id>https://zenn.dev/buenotheebiten/articles/f2cf21b6ff6080</id>
-        <link href="https://zenn.dev/buenotheebiten/articles/f2cf21b6ff6080"/>
-        <updated>2024-02-14T02:33:18.000Z</updated>
-        <summary type="html"><![CDATA[HTMLデータの加工でHTMLHeaderTextSplitterを使っている際に、ドキュメントにLimitationsが書かれていたので、その読解メモです。
-（この記事はChatGPTとの会話を編集して記載しています。）
-
-
- Limitations
-There can be quite a bit of structural variation from one HTML document to another, and while HTMLHeaderTextSplitter will attempt to attach all “relevant” headers to any ...]]></summary>
-        <author>
-            <name>えびてん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【中級者向け】Pythonで学ぶ偏微分方程式の数値シミュレーション]]></title>
-        <id>https://zenn.dev/labcode/books/1acc4991f8f8b8</id>
-        <link href="https://zenn.dev/labcode/books/1acc4991f8f8b8"/>
-        <updated>2024-02-13T16:17:32.000Z</updated>
-        <summary type="html"><![CDATA[📰 概要
-本書は、Pythonを用いた偏微分方程式の数値シミュレーションを学べる技術書です。
-
-偏微分方程式の理論を解説する書籍は数多く存在しますが、実際の実装にフォーカスした書籍はそれほど多くありません。
-本書では、偏微分方程式の数値計算理論を始点とし、実装方法に至るまでを具体的に解説していきます。
-
-実装に関しては、計算に関してだけではなく、グラフやアニメーションの作成方法、計算ログの取り方についても、コード例を交えて詳細に説明しています。
-
-理論から実装までの全過程を一貫して学びたい方に最適な一冊です。
-
-まえがきと第1章は無料で公開しておりますので、ぜひご一読ください。
-
-👍 本書でできるようになること
-主に以下の四つのことができるようになります。
-
-・ 偏微分方程式から差分方程式を導けるようになる
-・ 差分方程式をプログラムに落とし込み、計算できるようになる
-・ 計算結果をグラフやアニメーションを使って可視化できるようになる
-・ 計算結果をログとして出力できるようになる
-
-💰 販売価格
-期間限定で ¥2,500→¥1,000 (60% OFF!!)で販売しております！
-
-📰 アップデート情報
-2024/02/14：技術書初版がリリースされました。
-
-本技術書は随時アップデートされていきます。
-一度購入された方はアップデートされたとしても追加料金は発生しませんのでご安心ください。]]></summary>
-        <author>
-            <name>LabCode（ラボコード）</name>
         </author>
     </entry>
 </feed>
