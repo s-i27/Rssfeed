@@ -2,10 +2,48 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-03-16T01:11:33.742Z</updated>
+    <updated>2024-03-17T01:17:20.043Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[[機械学習モデル作成] Step8 モデル構築と学習]]></title>
+        <id>https://zenn.dev/yuto_mo/articles/68f662f8cc0bb0</id>
+        <link href="https://zenn.dev/yuto_mo/articles/68f662f8cc0bb0"/>
+        <updated>2024-03-16T11:03:06.000Z</updated>
+        <summary type="html"><![CDATA[機械学習モデル作成のStep8です。前回はデータローダーを扱いました。
+今回は機械学習モデルの構築を解説します。
+
+ モデル構築と学習
+kaggle HMSコンペの脳波データを使用した機械学習モデルの構築について解説します。
+
+学習率設定
+モデル構築
+モデル学習
+モデル評価
+
+の流れで説明しています。
+コンペ開催中、外部のみで知見の共有を行うことは禁止されているため、解説はkaggleのNotebookに上げています。
+https://www.kaggle.com/code/moyuto/chris-s-preprocessing-explanation-for-myself
+※前回のN...]]></summary>
+        <author>
+            <name>yuu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PyAirbyteで始める簡単Data Injest Pipeline]]></title>
+        <id>https://zenn.dev/kashira/articles/1770daabc39de2</id>
+        <link href="https://zenn.dev/kashira/articles/1770daabc39de2"/>
+        <updated>2024-03-16T04:43:22.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+PyAirbyteがリリースされました。(2024/03/16時点ではBeta版なのでご注意を)
+https://airbyte.com/blog/announcing-pyairbyte
+PyAirbyteはExtractのコネクタ部分をPythonのライブラリとして提供してPandasに格納するという機能を提供しているらしい。
+つまり、BigQueryのクライアントと合わせればExtractとLoadの部分を過疎結合にしつつ、スケジューラーでPythonを呼び出すだけのシンプルなData Injest Pipelineを作ることが可能なのでは！？ということで検証します。...]]></summary>
+        <author>
+            <name>kashira</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[機械学習モデル作成] Step7 データローダー]]></title>
         <id>https://zenn.dev/yuto_mo/articles/bdae4f2c3fd977</id>
@@ -4401,156 +4439,6 @@ for x, y in zip(a, b):
 しかし、異なる長さのイテラブルに対するzip関数の処理は、サイレントエラーにつながる可能性がある。zip関数は、警告なしにもっとも短いイテラブルに対して処理を終了してしまう。そのため、ソフトウェア開発においてバグを...]]></summary>
         <author>
             <name>NakuRei</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CodeBuildのローカルビルド環境変数展開: eval不使用版]]></title>
-        <id>https://zenn.dev/nondescript/articles/7db2e3ff673acc</id>
-        <link href="https://zenn.dev/nondescript/articles/7db2e3ff673acc"/>
-        <updated>2024-02-16T13:11:20.000Z</updated>
-        <summary type="html"><![CDATA[下記記事の続き: eval不使用版
-
-
- TL;DR
-
-環境変数ファイルをマウント&読み込みさせたコンテナを起動し、キーと値のペアをbase64エンコード
-local_build.shでbase64デコードした環境変数をファイルに書き出してcustomer-specific.ymlへ追記する
-
-
- イメージ図
-
-
- 事前準備
-
-
-環境変数エンコード環境作成
-
-エンコードスクリプト
-
-
-parse_envs.py
-import os
-from base64 import b64encode
-from pathlib import Path
-
-envs: dict[str, str]...]]></summary>
-        <author>
-            <name>素人の戯言</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Azure SQL Databaseへのアクセスが稀に500エラーとなるので原因調査]]></title>
-        <id>https://zenn.dev/headwaters/articles/698404424f3b16</id>
-        <link href="https://zenn.dev/headwaters/articles/698404424f3b16"/>
-        <updated>2024-02-16T08:30:55.000Z</updated>
-        <summary type="html"><![CDATA[環境
-・App Service（FastAPI製のアプリケーション）
-・SQL Database
-
- 通信・認証方法
-通信...プライベートエンドポイントとVPN接続からのみのアクセス
-認証...ODBCドライバーを使ったAAD認証
-
- 発生したエラー
-以下のエラーが稀に発生します。
-タイミングとしては、最後にAPIリクエストをしてからだいぶ時間が経った後にAPIリクエストをすると発生するようです。
-
-(pyodbc.OperationalError) ('08S01', '[08S01] [Microsoft][ODBC Driver 18 for SQL Server]TCP P...]]></summary>
-        <author>
-            <name>ikebowsan</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[LangChainでいろんなLLMを試す（GPT・Claude・Gemini・Mistral）]]></title>
-        <id>https://zenn.dev/buenotheebiten/articles/573c64d9019359</id>
-        <link href="https://zenn.dev/buenotheebiten/articles/573c64d9019359"/>
-        <updated>2024-02-16T04:37:22.000Z</updated>
-        <summary type="html"><![CDATA[LangChainでは様々なLLMがサポートされています。
-それぞれ呼び出すための最低限のコードをまとめてみました。
-
- モデル別の料金比較（早見表）
-
-
-
-Model
-Input(1K tokens)
-Output(1K tokens)
-Context window
-比較
-
-
-
-
-gpt-4-0125-preview
-1.5円
-4.5円
-128,000 tokens
-100
-
-
-gpt-3.5-turbo-0125
-0.075円
-0.225円
-16,000 tokens
-5
-
-
-claude-2.1
-1.2円
-3.6円
-200,000 tokens
-80
-
-
-claude-2.0
-1....]]></summary>
-        <author>
-            <name>えびてん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【検証】GPTで長文の要約をするなら？（MapReduce・MapRerank・Refine）]]></title>
-        <id>https://zenn.dev/buenotheebiten/articles/028bf065b05b40</id>
-        <link href="https://zenn.dev/buenotheebiten/articles/028bf065b05b40"/>
-        <updated>2024-02-16T00:53:06.000Z</updated>
-        <summary type="html"><![CDATA[今回は、長文をGPTで要約する方法として「MapReduce」「MapRerank」「Refine」の3つを見かけたので、それぞれの「精度」や「費用」、「応答スピード」を簡単に検証して調べてみたメモです。
-（注: 今回の評価はChatGPTでしているので主観的な評価は含まれていません。また各プロンプトが細かく作れていなかったり、全体的にざっくりとした検証です。）
-
- 📝 検証内容
-
-「URLから要約を作成する手法」でどれが優れているのかを検証します。
-特に今回は、長文テキストを分割した後の要約&結合処理(Combine)部分の違いが気になったので、そこを中心に行います。
-
- ① ...]]></summary>
-        <author>
-            <name>えびてん</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Blender Pythonでメッシュの各ポリゴンの各頂点の頂点座標値、Shapekeyごとの頂点座標値、UV座標値、頂点カラーを取得する]]></title>
-        <id>https://zenn.dev/dimebag29/articles/61811779c3a13b</id>
-        <link href="https://zenn.dev/dimebag29/articles/61811779c3a13b"/>
-        <updated>2024-02-15T13:56:12.000Z</updated>
-        <summary type="html"><![CDATA[概要
-メッシュの各ポリゴンの各頂点の
-　・頂点座標値
-　・各Shapekeyに登録されている頂点座標値
-　・UV座標値
-　・頂点カラー
-を取得する方法を紹介します
-今回は例としてデフォルトキューブを使って情報を取得してみます
-
- 環境
-
-Blender 3.3
-
-
- Pythonスクリプトと実行方法
-
-Blenderを開き、デフォルトキューブを消さずに「ウィンドウ」タブの「システムコンソール切り替え」をクリックし、スクリプトの実行結果やエラーが見えるようにする
-「Sclipting」タブの「＋新規」ボタンをクリックして以下のPythonスクリプトを貼り付け、「▶」ボタンをクリックし、...]]></summary>
-        <author>
-            <name>dimebag29</name>
         </author>
     </entry>
 </feed>
