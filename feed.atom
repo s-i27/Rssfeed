@@ -2,10 +2,190 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-03-17T01:17:20.043Z</updated>
+    <updated>2024-03-18T01:13:52.918Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[OpenAIのRateLimitErrorに向き合う]]></title>
+        <id>https://zenn.dev/yosemat/articles/6f83b3a258f710</id>
+        <link href="https://zenn.dev/yosemat/articles/6f83b3a258f710"/>
+        <updated>2024-03-17T09:56:11.000Z</updated>
+        <summary type="html"><![CDATA[結論：RateLimit終了まで待機するコンテクストマネージャーを作った
+
+ 使い方
+async with ratelimiter:
+    response = await self.client.chat.completions.create(
+        messages=msgs,
+        model="gpt4-vision-preview",
+    )
+return response
+
+ 内部実装
+class RateLimiter:
+    """period_seconds秒あたりfrequency回のリクエストまで投げられる非同期リクエストコンテクスト...]]></summary>
+        <author>
+            <name>Yosemat</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ポアロと学ぶ関数]]></title>
+        <id>https://zenn.dev/lytton/articles/ce9d75877a3c12</id>
+        <link href="https://zenn.dev/lytton/articles/ce9d75877a3c12"/>
+        <updated>2024-03-17T08:36:21.000Z</updated>
+        <summary type="html"><![CDATA[関数の不思議
+ある朝、ポアロが食堂に入ると、ヘイスティングスが難しい顔をしていた。
+「おはよう、ポアロ。実は昨晩から関数について考えているんだが、なかなか腑に落ちないんだ」
+ポアロは友人の隣に座ると、コーヒーを一口すすった。
+「ふむ、関数とは不思議なものだからね。私に説明させてくれ」
+
+ 関数の役割
+ポアロはナプキンで口元を拭うと、話し始めた。
+「そもそも関数というのは、特定の処理をまとめたプログラムのことだ。Google検索を思い浮かべてごらん」
+def google_search(keyword):
+    # 検索処理
+    return search_result
+「キーワ...]]></summary>
+        <author>
+            <name>リットン</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[動画のキーワードがある画面の、スクリーンショットを撮るためのプログラム作ってみた]]></title>
+        <id>https://zenn.dev/yuu7751/articles/44898ab2b9ea72</id>
+        <link href="https://zenn.dev/yuu7751/articles/44898ab2b9ea72"/>
+        <updated>2024-03-17T06:37:03.000Z</updated>
+        <summary type="html"><![CDATA[背景
+知り合いから飛ばせない動画で、一定時間だけ表れるキーワードを抽出したいという要望があって
+最近動画コンテンツが優秀になってきて色々利用しています。
+ただ、おそらく動画内にある特定の情報を欲しいがために回すことがそこそこあったので、せっかくなら自動で取れないかな〜と思って作りました。
+利用方法はまた別途記事にしたいと思います。
+仕事柄APIを前提としたrequestとかは馴染みがあったので、そうではない画面から何か情報を得るという手法は、勉強になりました。
+せっかくなので、gitにリポジトリ上げて、記事にしてみようと思った次第です。
+
+ 注意点
+めっちゃスクリーンショット撮るので...]]></summary>
+        <author>
+            <name>yu-min</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[3/10~3/16で技術的にやったこと]]></title>
+        <id>https://zenn.dev/zi_matsu/articles/fb5a33df8d03c0</id>
+        <link href="https://zenn.dev/zi_matsu/articles/fb5a33df8d03c0"/>
+        <updated>2024-03-17T03:41:44.000Z</updated>
+        <summary type="html"><![CDATA[履歴(ログ)を出力するための仕組みとして以下の方法があるらしい
+!
+ログを取得予約してバッチなどバックグラウンドでファイルを生成し、ダウンロード可能になったら通知してダウンロードしてもらうっていうやり方
+
+やっぱり一回の処理でまとめてダウンロードしようとするとどうしてもログ系の処理だと重たくなりがち。
+だから、肝心な処理はバッチにやらせておいて、作成できたらダウンロードできますよーって通知してあげるやり方ね。
+バッチは非同期でやらせておけばいいからasyncioでとかでやってそれをthreadsでloopさせてあげれば、いいかなって思う。キューで開始を知らせて、そしたら処理を開始する...]]></summary>
+        <author>
+            <name>Matsuzaki</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[機械学習モデル作成シリーズ  Step9  提出用ファイル作成]]></title>
+        <id>https://zenn.dev/yuto_mo/articles/46b9a35e9ccceb</id>
+        <link href="https://zenn.dev/yuto_mo/articles/46b9a35e9ccceb"/>
+        <updated>2024-03-17T02:54:06.000Z</updated>
+        <summary type="html"><![CDATA[機械学習モデル作成のStep9です。今回が最終回になります。
+前回は機械学習モデルの構築を扱いました。
+今回はtest用データへのモデル適用と、提出用ファイルの作成について解説します。
+
+ test用データへのモデル適用と提出用ファイル作成
+kaggle HMSコンペの脳波データを使用して、test用データへのモデル適用と、提出用ファイルの作成について解説します。
+
+testデータ取得
+eegからスペクトログラム生成
+testデータに対して予測
+提出用ファイルの作成
+
+の流れで説明しています。
+コンペ開催中、外部のみで知見の共有を行うことは禁止されているため、解説はkaggleのNote...]]></summary>
+        <author>
+            <name>yuu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[モジュール、パッケージ、ライブラリ。python3の場合]]></title>
+        <id>https://zenn.dev/karamawanu/articles/e756923e82541c</id>
+        <link href="https://zenn.dev/karamawanu/articles/e756923e82541c"/>
+        <updated>2024-03-17T02:15:35.000Z</updated>
+        <summary type="html"><![CDATA[python3では、モジュール、パッケージ、ライブラリがそれぞれ用語として登場する。
+
+ モジュール
+用語集には次のように書いてある。
+https://docs.python.org/ja/3/glossary.html#term-module
+
+Python コードの組織単位としてはたらくオブジェクトです。モジュールは任意の Python オブジェクトを含む名前空間を持ちます。モジュールは importing の処理によって Python に読み込まれます。
+
+一般的には、import で読み込めるファイル群 と言うべきか。＜それって小生の感想ですよ＞
+例えば単に
+import hog...]]></summary>
+        <author>
+            <name>karamawanu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PanderaでPolarsのデータバリデーションを試す]]></title>
+        <id>https://zenn.dev/chimuichimu/articles/a5c5f8c2febace</id>
+        <link href="https://zenn.dev/chimuichimu/articles/a5c5f8c2febace"/>
+        <updated>2024-03-17T01:56:38.000Z</updated>
+        <summary type="html"><![CDATA[この記事は何？
+データバリデーションライブラリのPanderaがPolarsのサポートを開始したので、早速それを試してみるもの。基本的なバリデーションのやり方を確認した上で、実行速度への影響を簡単な実験で確認した。
+なお2024/3/16現時点では本機能はベータ版という状態であるため、今後なんらかの大きな変更が発生する可能性がある。最新の情報を得たい場合は、公式のリリースやドキュメントを参照してほしい。
+
+Beta release 0.19.0b0: Polars integration
+Data Validation with Polars
+
+
+ 前提
+
+ Panderaとは？
+P...]]></summary>
+        <author>
+            <name>chimuichimu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Low Performance PDF Parserのことはじめ。LLMとUnstructuredでPDFをパースする。]]></title>
+        <id>https://zenn.dev/yamada_quantum/articles/17aff55dedbaf1</id>
+        <link href="https://zenn.dev/yamada_quantum/articles/17aff55dedbaf1"/>
+        <updated>2024-03-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[TL;DR
+
+本文抽出は、PDFパーサーでパースしたやつをLLMにさらに綺麗にしてもらう。
+画像とテーブルは、Unstructuredを使って、OCRベースでを抜き出す
+PDFをRAGが使いやすいようにできるけど遅い！だから使い所は予めドキュメントを準備するケース
+GPT3.5だと本文抽出微妙な部分もあるので、Haikuの方がいいかも(GUIからは圧倒的にHaikuでの抽出はうまくできてた)
+
+
+ はじめに
+PDFをRAGで利用する際、単にPDFパーサーにかけてパースするだけでは、本文以外のフッターやヘッダー、図のキャプションなどさまざまなものが混入してしまうことがあります。これによ...]]></summary>
+        <author>
+            <name>やまぐち</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[pythonで仮想環境を構築し、Stable Diffusionを利用する（pythonが複数verある場合のSDインストール方法）]]></title>
+        <id>https://zenn.dev/takahashi_s/articles/e2b7945aba1077</id>
+        <link href="https://zenn.dev/takahashi_s/articles/e2b7945aba1077"/>
+        <updated>2024-03-16T16:48:30.000Z</updated>
+        <summary type="html"><![CDATA[概要
+stable diffusionをローカル環境で使用する場合、pythonのバージョン3.10.6をインストールする必要があります。
+この際、既に最新版のpython(3.12.)をインストールしている方に対して「ver3.10.6を再インストールしてください」と紹介しているサイトがありますが、バージョンを指定して仮想環境を作れば既存のpythonを削除する必要はないので、その方法を紹介します。
+
+ Stable Diffusionインストール方法
+stable diffusionのインストールが終わっている方は飛ばしてください。
+
+ 1.Gitのインストール
+https://...]]></summary>
+        <author>
+            <name>takahashi s</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[機械学習モデル作成] Step8 モデル構築と学習]]></title>
         <id>https://zenn.dev/yuto_mo/articles/68f662f8cc0bb0</id>
@@ -4276,169 +4456,6 @@ https://catboost.ai/en...]]></summary>
 私はこれに少しずつストレスがたまって...]]></summary>
         <author>
             <name>hato</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[jupyter notebookのpdbメモ]]></title>
-        <id>https://zenn.dev/hijikix/articles/38b34114241743</id>
-        <link href="https://zenn.dev/hijikix/articles/38b34114241743"/>
-        <updated>2024-02-17T13:09:26.000Z</updated>
-        <summary type="html"><![CDATA[概要
-jupyter notebookでpdbを使ってデバッグするときのtips
-
- 例外が発生したあとにデバッグ開始
-%debug
-
- 例外が発生したときに自動でデバッグ開始
-%pdb on
-
- 指定のコードに到達したときにデバッグ開始
-import pdb;pdb.set_trace()
-
- cheat sheet
-https://kapeli.com/cheat_sheets/Python_Debugger.docset/Contents/Resources/Documents/index
-
- ライブラリ内の特定の行にブレイクポイントを貼る
-transformersのLlama...]]></summary>
-        <author>
-            <name>Daisuke Hashimoto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Blender Pythonでテクスチャを頂点カラーにベイクする]]></title>
-        <id>https://zenn.dev/dimebag29/articles/6bb9d378cdb4c9</id>
-        <link href="https://zenn.dev/dimebag29/articles/6bb9d378cdb4c9"/>
-        <updated>2024-02-17T10:43:55.000Z</updated>
-        <summary type="html"><![CDATA[概要
-Blender内のPythonを利用して、メッシュの各頂点のUV座標からテクスチャの色を取得し、頂点カラーにベイクする方法を紹介します
-Unity(VRChat)でメッシュを利用する場合、頂点カラーにはsRGB色空間ではなくLinear色空間の色をベイクする必要があることに注意してください
-
- 環境
-
-Blender 3.3
-
-
- Pythonスクリプト
-import bpy
-
-
-# UV座標からテクスチャの色を返す関数
-def tex2D(TexBufferList, UvPos):
-    # 参考 https://blender.stackexchange.com/que...]]></summary>
-        <author>
-            <name>dimebag29</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【Python】VSCode拡張機能で自信をもってコーディングする方法！]]></title>
-        <id>https://zenn.dev/safubuki/articles/turtle-20240215-pymind</id>
-        <link href="https://zenn.dev/safubuki/articles/turtle-20240215-pymind"/>
-        <updated>2024-02-17T10:03:33.000Z</updated>
-        <summary type="html"><![CDATA[プログラミングで、自分の書いたコードに自信が持てないことってありませんか？
-他人にコードを見せることが恥ずかしくて嫌だという経験、あるのではないでしょうか。
-私も以前はそうでした。
-コードが汚いと思われたり、能力が低いと思われたりするのではないかと不安になり、また自らの内面をさらけ出すようで何とも恥ずかしいものでした。
-しかし、プログラミング能力向上にとって、コードを他人に見せてフィードバックを受けることは大切です。
-そこで試していただきたいのが、VSCodeエディタと拡張機能を使う方法です。コードのエラーチェック、整形、補完などを拡張機能によって自動でできるので、読みやすさや品質を高め...]]></summary>
-        <author>
-            <name>タートルヴィレッジ・ゆう</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[標準ライブラリのxmlrpc.serverを使ってみる]]></title>
-        <id>https://zenn.dev/coffee_break/articles/047a35d5161919</id>
-        <link href="https://zenn.dev/coffee_break/articles/047a35d5161919"/>
-        <updated>2024-02-17T09:26:30.000Z</updated>
-        <summary type="html"><![CDATA[https://docs.python.org/ja/3/library/xmlrpc.server.html
-
- サーバを立てるコード
-import logging
-from xmlrpc.server import SimpleXMLRPCServer
-from xmlrpc.server import SimpleXMLRPCRequestHandler
-
-logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
-logger = logging.getLogger(__name__)
-...]]></summary>
-        <author>
-            <name>t</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AI の力でファイル形式を判定する Google 製の「Magika」を試してみる]]></title>
-        <id>https://zenn.dev/kou_pg_0131/articles/magika-introduction</id>
-        <link href="https://zenn.dev/kou_pg_0131/articles/magika-introduction"/>
-        <updated>2024-02-17T09:00:00.000Z</updated>
-        <summary type="html"><![CDATA[面白そうだったので試しに使ってみました。
-https://github.com/google/magika
-https://gigazine.net/news/20240216-google-magika-ai-file-type-identification/
-
-検証したバージョン
-
-Magika の使い方
-
-インストール
-CLI として使う
-Python ライブラリとして使う
-JavaScript ライブラリとして使う
-Magika がサポートしているファイル形式
-
-
-まとめ
-
-
- 検証したバージョン
-
-Magika v0.5.0
-
-
- Magika の使い方
-
- インストール
-pi...]]></summary>
-        <author>
-            <name>koki</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AtCoder Eco Manager : 提出データ管理をより緑に]]></title>
-        <id>https://zenn.dev/mkazu2023/articles/c1dafbaa370759</id>
-        <link href="https://zenn.dev/mkazu2023/articles/c1dafbaa370759"/>
-        <updated>2024-02-17T07:05:40.000Z</updated>
-        <summary type="html"><![CDATA[AtCoder Eco Manager : 提出データ管理をより緑に
-
- 背景
-AtCoderは世界中のエンジニアが技術を競い合い、スキルを磨くための競技プログラミングプラットフォームです。
-多くの参加者が問題を解くためにコードを提出していますが、提出コードを効率的に管理することは参加者にとって一つの課題となっています。
-サーバへの頻繁なアクセスはサーバーへの不必要な負荷とデータ転送量の増加に繋がる可能性があります。
-
- 目的
-AtCoder Eco Managerはサーバへの頻繁なアクセスを減らし、提出データの効率的な管理を実現します。
-
- 機能概要
-
-最新のAC（Accept）提...]]></summary>
-        <author>
-            <name>shortcut</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Pythonのzip関数の罠を回避する]]></title>
-        <id>https://zenn.dev/nakurei/articles/avoiding-python-zip-function-trap</id>
-        <link href="https://zenn.dev/nakurei/articles/avoiding-python-zip-function-trap"/>
-        <updated>2024-02-17T02:40:48.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-Pythonのzip関数は、複数のイテラブルを並列に反復処理するための強力なツールである。たとえば、複数のリストを同時にループさせる処理を、簡潔で読みやすく書ける。
-a = [1, 2, 3]
-b = ["a", "b", "c"]
-for x, y in zip(a, b):
-    print(x, y)
-このコードは、次を出力する。
-1 a
-2 b
-3 c
-しかし、異なる長さのイテラブルに対するzip関数の処理は、サイレントエラーにつながる可能性がある。zip関数は、警告なしにもっとも短いイテラブルに対して処理を終了してしまう。そのため、ソフトウェア開発においてバグを...]]></summary>
-        <author>
-            <name>NakuRei</name>
         </author>
     </entry>
 </feed>
