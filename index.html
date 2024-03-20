@@ -22,6 +22,301 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-19 datetime="2024-03-19T16:21:03.000Z">2024-03-19</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-19 datetime="2024-03-19T16:21:03.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yuichi_dev/articles/c712f142f6f548"
+                        open
+                      >
+                        <summary class="article-expander__title">StreamlitとTableauライクなPyGWalkerを試す</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yuichi_dev/articles/c712f142f6f548">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--c0-SPmd8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Streamlit%25E3%2581%25A8Tableau%25E3%2583%25A9%25E3%2582%25A4%25E3%2582%25AF%25E3%2581%25AAPyGWalker%25E3%2582%2592%25E8%25A9%25A6%25E3%2581%2599%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yuichi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZiMmI0ZGExMjUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+
+データ界隈でよく名前を聞くStreamlitと
+TableauライクなPyGWalker（Tableauって高いっすよね）が良さげなんで試す
+
+ 環境構築
+
+ 新規プロジェクト作成
+mkdir streamlit_pygwalker_project  # ディレクトリを作成
+cd streamlit_pygwalker_project # プロジェクトフォルダに入る
+python -m venv .venv  #.venvという仮想環境を作成
+source .venv/bin/activate  #仮想環境の有効化
+pip install --upgrade pip # ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yuto_mo/articles/1b2fdde0bf9d79"
+                        open
+                      >
+                        <summary class="article-expander__title">フーリエ変換を理解する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yuto_mo/articles/1b2fdde0bf9d79">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--6_6Y0KQE--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2595%25E3%2583%25BC%25E3%2583%25AA%25E3%2582%25A8%25E5%25A4%2589%25E6%258F%259B%25E3%2582%2592%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0OTcwZWIzMmUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>フーリエ変換の解説。フーリエ変換は周波数解析を行うための手法である。
+
+ 1. フーリエ変換
+結論
+フーリエ変換とは複雑な関数や現象を、三角関数に分解する手法である。
+これにより各周波数でデータが分割され、解釈性を高めることができる。
+また非周期関数に対してフーリエ級数展開を行う際の主要な操作である。
+
+ 1.1 フーリエ級数展開
+&quot;非周期関数へのフーリエ級数展開&quot; をフーリエ変換と呼ぶ。(厳密には少し異なる。後述)
+まずはフーリエ級数展開から説明するが、先に「1.9 フーリエ変換」から読み進めても良い。
+・フーリエ級数展開
+関数f(x)の特性が知りたいとき、より基本的な関数系\{\va...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/be895f336153a6"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-341｜B - Foreign Exchange</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/be895f336153a6">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--O5aNCaEm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-341%25EF%25BD%259CB%2520-%2520Foreign%2520Exchange%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-341 B - Foreign Exchange
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def getIntListRow(N):
+    return [list(map(int, input().split())) for _ in range(N)]
+
+
+def main():
+    n &#x3D; getInt()
+    a &#x3D; [0] + getIntList()
+   ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/4cc4dfd7ddac33"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-340｜B - Append</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/4cc4dfd7ddac33">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--6Pq3V6e4--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-340%25EF%25BD%259CB%2520-%2520Append%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-340 B - Append
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntListRow(N):
+    return [list(map(int, input().split())) for _ in range(N)]
+
+
+def main():
+    n &#x3D; getInt()
+    q &#x3D; getIntListRow(n)
+
+    buf &#x3D; []
+
+    for i, j in q:
+        if i &#x3D;&#x3D; 1:
+            buf.append(j)...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/43f1561b305a4b"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-340｜A - Arithmetic Progression</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/43f1561b305a4b">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--OK2FX57L--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-340%25EF%25BD%259CA%2520-%2520Arithmetic%2520Progression%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-340 A - Arithmetic Progression
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b, d &#x3D; getIntMap()
+
+    buf &#x3D; []
+    for i in range(a, b + 1, d):
+        buf.append(str(i))
+
+    print(&quot; &quot;.join(buf))
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/hyperdb/articles/28a1d2fa99d56e"
+                        open
+                      >
+                        <summary class="article-expander__title">［AtCoder］ABC-341｜A - Print 341</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/hyperdb/articles/28a1d2fa99d56e">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--dNnJtNzi--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25EF%25BC%25BBAtCoder%25EF%25BC%25BDABC-341%25EF%25BD%259CA%2520-%2520Print%2520341%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%25AF%25E3%2581%2584%25E3%2581%25B1%25E3%2581%2581%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBhODJkODgwMzQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>設問ページ
+
+🔗ABC-341 A - Print 341
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def main():
+    n &#x3D; getInt()
+
+    print(&#x27;10&#x27; * n + &#x27;1&#x27;)
+
+
+if __name__ &#x3D;&#x3D; &quot;__main__&quot;:
+    main()</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/muit_techblog/articles/33a61a23919100"
+                        open
+                      >
+                        <summary class="article-expander__title">【Streamlit】社内ChatGPTに聞きながら稼働統計分析アプリを作ってみた</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/muit_techblog/articles/33a61a23919100">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--cOoS01Kr--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Streamlit%25E3%2580%2591%25E7%25A4%25BE%25E5%2586%2585ChatGPT%25E3%2581%25AB%25E8%2581%259E%25E3%2581%258D%25E3%2581%25AA%25E3%2581%258C%25E3%2582%2589%25E7%25A8%25BC%25E5%2583%258D%25E7%25B5%25B1%25E8%25A8%2588%25E5%2588%2586%25E6%259E%2590%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E5%25B0%258F%25E6%259E%2597%25E8%25AB%2592%25E7%25A5%2590%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzIxZGYyYTRkNjIuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E4%25B8%2589%25E8%258F%25B1UFJ%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2595%25E3%2582%25A9%25E3%2583%25A1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2583%2586%25E3%2582%25AF%25E3%2583%258E%25E3%2583%25AD%25E3%2582%25B8%25E3%2583%25BC%25E3%2583%2586...%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSktSaXVLMVFSZlFhN0g4Q1R1ejN4WEVaU1A4a1dDbVdJeG1TaEhvVzMwPXM5Ni1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>こんにちは。三菱UFJインフォメーションテクノロジーの小林と申します。
+今回は、社内ChatGPTに聞きながらサーバ（Linux）のCPU/MEM分析アプリを作ってみました。
+
+ はじめに
+StreamlitというPythonのWebフレームワークがとても便利なので使ってみます。
+
+ 結論
+
+（今更ですが）ChatGPTは便利
+Streamlitを利用すると簡単にWeb分析アプリが作れる
+
+
+ 最終的なソースコード
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+
+# ファイルアップロード
+up...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
             <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-18 datetime="2024-03-18T16:10:38.000Z">2024-03-18</time>
             <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-18 datetime="2024-03-18T16:10:38.000Z"></time>
           </button>
@@ -6958,280 +7253,6 @@ CMAKE_ARGS&#x3D;&quot;-DLLAM...</span>
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/gesonanko/articles/417d43669cf2af"
-                        open
-                      >
-                        <summary class="article-expander__title">設定管理ツール Hydra で内部構造ごと書き換える。</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/gesonanko/articles/417d43669cf2af">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--E2iLMKYn--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E8%25A8%25AD%25E5%25AE%259A%25E7%25AE%25A1%25E7%2590%2586%25E3%2583%2584%25E3%2583%25BC%25E3%2583%25AB%2520Hydra%2520%25E3%2581%25A7%25E5%2586%2585%25E9%2583%25A8%25E6%25A7%258B%25E9%2580%25A0%25E3%2581%2594%25E3%2581%25A8%25E6%259B%25B8%25E3%2581%258D%25E6%258F%259B%25E3%2581%2588%25E3%2582%258B%25E3%2580%2582%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:GesonAnko%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0Y0hwQmdOV1BQUlluS3djcUZuQU16VmVsVko2WU85Tkp1OURCV1A1Q3FfQW5RPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-本記事は 機械学習の領域で主にハイパーパラメータの管理に用いられるツールである、Hydraについて解説する。Hydraは単にハイパーパラメータを階層的に記述できるというだけでなく、より複雑に、クラス・処理構造そのものを、ソースファイルを新たに追加することなく変更したい、という要望に応える。
-本記事の対象読者はある程度Pythonやシステム設計に精通した者とする。モジュールシステム、クラス、デコレータなどの概念を理解していることが前提である。
-さらに本記事は 機械学習のハイパーパラメータの管理だけでなく、システムそのものを コンフィギュレーション することに興味がある読者も対...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/commmune/articles/19296b87231ea8"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonの非同期処理の基礎とOpenAI APIへ並列リクエストする実践例</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/commmune/articles/19296b87231ea8">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--L7aPZCs5--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AE%25E9%259D%259E%25E5%2590%258C%25E6%259C%259F%25E5%2587%25A6%25E7%2590%2586%25E3%2581%25AE%25E5%259F%25BA%25E7%25A4%258E%25E3%2581%25A8OpenAI%2520API%25E3%2581%25B8%25E4%25B8%25A6%25E5%2588%2597%25E3%2583%25AA%25E3%2582%25AF%25E3%2582%25A8%25E3%2582%25B9%25E3%2583%2588%25E3%2581%2599%25E3%2582%258B%25E5%25AE%259F%25E8%25B7%25B5%25E4%25BE%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:zerebom%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E3OWZiNGQ4NjIuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2582%25B3%25E3%2583%259F%25E3%2583%25A5%25E3%2583%25BC%25E3%2583%25B3%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUwN2FmMmVhNDMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>こんにちは、commmuneでデータサイエンティストをしているひぐです。
-人間が苦手なマルチタスクをLLMに任せたら、効果的に処理してくれるのではないか?というモチベーションのもと、Pythonの非同期処理を使って並列かつストリーミングでChatGPTの回答を出力するアプリを作りました🤖
-例えば下記は、ある課題を入力すると、深さ・広さ・構造・時間軸という異なる観点で解像度を上げてくれるアプリケーションです。
-
-アプリに関する登壇資料↓
-https://speakerdeck.com/zerebom/async-call-llm
-このアプリ作成にあたってPythonの非同期処理を勉強したと...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/kotoba_tech/articles/f15b2495d44c4f"
-                        open
-                      >
-                        <summary class="article-expander__title">Kotomamba: mamba-2.8B 学習知見</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/kotoba_tech/articles/f15b2495d44c4f">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--i8AUqbP5--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Kotomamba%253A%2520mamba-2.8B%2520%25E5%25AD%25A6%25E7%25BF%2592%25E7%259F%25A5%25E8%25A6%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Kazuki%2520Fujii%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2E2ZGQwZTkyOTQuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:Kotoba%2520Technologies%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2NiYTAwZDNmYWIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-Kotoba Technologiesでインターンをしている東京工業大学 B4 横田研究室の藤井(@okoge_kaz)です。
-Kotoba TechnologiesはNLPと分散並列学習に関する技術を用いて、日本及び非英語圏におけるLLMやマルチモーダルモデルの実運用に向けた研究開発を行っています。
-本日(2024/2/19) 2つのmambaモデルをリリースさせて頂きました。
-1つは、from scratchから日本語と英語のコーパスにて学習を行ったkotomamba-2.8B-v1.0、もう１つはstate-spaces/mamba-2.8b-slimpjから日本語と...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;3
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/todoker_blog/articles/217da602e2cff3"
-                        open
-                      >
-                        <summary class="article-expander__title">Powertools for AWS (Python) を用いた DynamoDB Streams Trigger のカスタマイズ方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/todoker_blog/articles/217da602e2cff3">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--UUpy9PVB--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Powertools%2520for%2520AWS%2520%2528Python%2529%2520%25E3%2582%2592%25E7%2594%25A8%25E3%2581%2584%25E3%2581%259F%2520DynamoDB%2520Streams%2520Trigger...%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E5%25B1%25B1%25E6%259C%25AC%25E9%259A%25BC%25E6%25B1%25B0%2520%257C%2520Hayata%2520Yama...%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzJjNTA2ODRhYWEuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2588%25E3%2583%2589%25E3%2582%25B1%25E3%2583%25BC%25E3%2583%25AB%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzE3NzU4ZDVkOWMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>こんにちは。hayata-yamamoto です。
-今回は、Powertools for AWS (Python) を用いて、DynamoDB Streams で動く Lambda 関数を実装する方法を共有します。直近、ゼロETL統合が発表されたばかりの部分ですが、自前でハンドラを書きたいケースはおそらくまだまだ多いはずです。まずは、ゼロ統合ETLでシンプルに解決できるかを考えた後に、もしそれでも実装が必要なら本記事を参考にしてみてくださいませ！
-https://aws.amazon.com/jp/blogs/news/amazon-dynamodb-zero-etl-integrati...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/zenkigen_tech/articles/e1f8c90b7a7a8b"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonで高速なグラフネットワーク計算: グラフライブラリの比較実験とrustworkxの紹介</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/zenkigen_tech/articles/e1f8c90b7a7a8b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--nBc5WA2o--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E9%25AB%2598%25E9%2580%259F%25E3%2581%25AA%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%2595%25E3%2583%258D%25E3%2583%2583%25E3%2583%2588%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%25E8%25A8%2588%25E7%25AE%2597%253A%2520%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%2595%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2581%25AE%25E6%25AF%2594%25E8%25BC%2583%25E5%25AE%259F%25E9%25A8%2593%25E3%2581%25A8rustworkx%25E3%2581%25AE%25E7%25B4%25B9%25E4%25BB%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:redtea%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzNhNzk4YmFjMTcuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:ZENKIGEN%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzIzM2I4MmRkNzEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>TL;DR
-
-NetworkXはよく知られたPythonのネットワーク分析ライブラリだが、遅い
-
-実験の結果、Rustで実装されたrustworkxが速く、さらにNetworkXからの置き換えやすさの観点で優れている
-NetworkXからrustworkxに置き換えたい人はここから読んでください
-
-rustworkxの公式ドキュメントは以下です。
-https://www.rustworkx.org/#
-
- はじめに
-こんにちは。ZENKIGENデータサイエンスチーム所属の廣田です。原籍はオムロンソーシアルソリューションズ株式会社 技術創造センタですが、社外出向でZENKIGENに所属...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;8
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/secondselection/articles/gitlab_todos"
-                        open
-                      >
-                        <summary class="article-expander__title">GitLabでTODO登録を自動化してみた</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/secondselection/articles/gitlab_todos">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--W6wg9eju--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:GitLab%25E3%2581%25A7TODO%25E7%2599%25BB%25E9%258C%25B2%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:u_hijiri%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzljNTA3MDMwNTguanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2582%25BB%25E3%2582%25AB%25E3%2583%25B3%25E3%2583%2589%25E3%2582%25BB%25E3%2583%25AC%25E3%2582%25AF%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZHJ6RHVTRnZUS2pDQ2U2aGxtdC1TbnprX1dIYzhjV1JJWlhxQk1lMUNCalE9czk2LWM&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-皆さんは、TODO管理を&quot;Google Keep&quot;などのツールで実施されているのではないでしょうか。
-また、実施すべきタスク（月次処理など）をチームメンバー全員に登録するのは大変です。
-今回は普段使っているGitLabを使ったチームや部署のTODO管理を実施する方法を記事にしました。
-ポイントとしては、以下の2つになります。
-
-「定義用のIssue」を1つ立てることでメンバー全員にTODOを登録するところを自動化
-毎朝、リマインダーをチャット（Google Chat）に投稿する
-
-
- 下準備
-
- Issueのテンプレートを用意する
-「タスク定義用」のissueテンプレートは...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/gorori/articles/shift-auto-generate"
-                        open
-                      >
-                        <summary class="article-expander__title">数理最適化で看護師のシフト（勤務表）を自動生成してみた</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/gorori/articles/shift-auto-generate">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--YyEKL71d--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%2595%25B0%25E7%2590%2586%25E6%259C%2580%25E9%2581%25A9%25E5%258C%2596%25E3%2581%25A7%25E7%259C%258B%25E8%25AD%25B7%25E5%25B8%25AB%25E3%2581%25AE%25E3%2582%25B7%25E3%2583%2595%25E3%2583%2588%25EF%25BC%2588%25E5%258B%25A4%25E5%258B%2599%25E8%25A1%25A8%25EF%25BC%2589%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E7%2594%259F%25E6%2588%2590%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Maron%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzMwYWE1OWE3MWMuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>最近、看護師のシフト（勤務表）の自動生成について調査したので、その内容を少しご紹介しようと思います。
-Colab で実装したので、リンク貼っておきます。
-https://colab.research.google.com/drive/1W04EwTSQqtMtJKlK7GTXNadsLZulwcTI?usp&#x3D;sharing
-
- シフト作成って思っているより難しい
-シフトの作成は職員のシフト希望やスキル、労務規定など考慮しないといけないことが多く、実はかなり複雑です。
-看護師のシフト（勤務表）作成をピックしたナーススケジューリング問題というテーマが存在するぐらいです。
-参考
-https:/...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-18 datetime="2024-02-18T22:13:38.000Z">2024-02-18</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-18 datetime="2024-02-18T22:13:38.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/y_u_k_i/books/6dc2cefe59ddde"
-                        open
-                      >
-                        <summary class="article-expander__title">ローカルでSentencepieceを使ってトークナイザーを作成し、BERTを事前学習させ、JGLUEで性能評価するまで</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/y_u_k_i/books/6dc2cefe59ddde">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--73deL-o---/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci9mYmMzNjMxOGQxLmpwZWc&#x3D;%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>日本語のBERTを作ろうと思ったとき、文献が微妙に古かったり、Google Colaboratory環境上での解説だったりと、学部生やつよつよPC所持AI入門者にはやや辛い環境だと思います。そこで、4年生の1年間で得た知識を本にしました。これだけでスタートラインはだいぶ変わります。環境構築をなるべく細かく記載するので、ぜひ読んでください。</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/ttaichicchi/articles/54727aeb9b401b"
-                        open
-                      >
-                        <summary class="article-expander__title">【FDUA】第2回 金融データ活用チャレンジ参加記（15th solution）</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ttaichicchi/articles/54727aeb9b401b">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--fc0tz7gz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590FDUA%25E3%2580%2591%25E7%25AC%25AC2%25E5%259B%259E%2520%25E9%2587%2591%25E8%259E%258D%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E6%25B4%25BB%25E7%2594%25A8%25E3%2583%2581%25E3%2583%25A3%25E3%2583%25AC%25E3%2583%25B3%25E3%2582%25B8%25E5%258F%2582%25E5%258A%25A0%25E8%25A8%2598%25EF%25BC%258815th%2520solution%25EF%25BC%2589%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%259F%25E3%2581%2584%25E3%2581%25A1%25E3%2581%25A3%25E3%2581%25A1%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTENEZDBFY0ZrcEd2S1hoR2xqZGw2NUFMc3lfRGdNWHJIUVNadFhBR3ZmLTNZPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-https://signate.jp/competitions/1325
-開催期間：2024/1/18 18:00 ～ 2024/2/15 23:59
-第2回 金融データ活用チャレンジに参加し、最終結果15位になりました。
-解法とコンペ開催中の流れを振り返りながら感じたことをまとめていきます。
-
-
- 15th解法
-CV: 0.687
-Public: 0.6889767
-Private: 0.6869111
-
- サマリ
-
-
- 1. 特徴量エンジニアリング + 線形モデル/GBDT/NN
-
- 特徴量エンジニアリング
-最終的に各モデルに入力した特徴量は以下のものです。
-
-
-カテゴ...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;4
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -7239,8 +7260,8 @@ Private: 0.6869111
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/8335981182">
-        <time id="build-timestamp" datetime="2024-03-19T01:13:32.899Z">2024-03-19T01:13:32.899Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/8352377211">
+        <time id="build-timestamp" datetime="2024-03-20T01:12:58.800Z">2024-03-20T01:12:58.800Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
