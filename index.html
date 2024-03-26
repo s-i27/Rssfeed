@@ -22,8 +22,8 @@
             data-action="toggle-accordions"
             title="Click to toggle the day, Ctrl + click to toggle all."
           >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-24 datetime="2024-03-24T16:39:15.000Z">2024-03-24</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-24 datetime="2024-03-24T16:39:15.000Z"></time>
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-25 datetime="2024-03-25T14:49:02.000Z">2024-03-25</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-25 datetime="2024-03-25T14:49:02.000Z"></time>
           </button>
         </h2>
         <ul class="sources card">
@@ -38,6 +38,349 @@
                   <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
                 </h3>
                 <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/straydog/articles/e2b116187965dc"
+                        open
+                      >
+                        <summary class="article-expander__title">BASEの購入メールをDiscordに上手いこと通知する[Pipedream][パレード米]</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/straydog/articles/e2b116187965dc">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--t1VUrJRc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:BASE%25E3%2581%25AE%25E8%25B3%25BC%25E5%2585%25A5%25E3%2583%25A1%25E3%2583%25BC%25E3%2583%25AB%25E3%2582%2592Discord%25E3%2581%25AB%25E4%25B8%258A%25E6%2589%258B%25E3%2581%2584%25E3%2581%2593%25E3%2581%25A8%25E9%2580%259A%25E7%259F%25A5%25E3%2581%2599%25E3%2582%258B%255BPipedream%255D%255B%25E3%2583%2591%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%2589%25E7%25B1%25B3%255D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:stray%2520dog%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzBjYzhmZDAzMGYuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+以前より付き合いのある和田農園さんは、BASE にて Vtuber さんとのコラボ商品「パレード米」を販売しています。その作業フローの中で、購入履歴をそれぞれの Vtuber さんに Discord を用いて連絡していたものを自動化した際の記録です。以下は、パレード米販売ページです。興味があれば。
+
+BASE では、登録のある Email アドレスに対してメールは通知されますが、その他チャットツールに通知する機能がささっと探した感じ見当たりませんでした。また、Vtuber さんに連絡する際に、購入者の情報を削って連絡をする必要があり、意外と時間がかかるという課題がありました...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/keita_f/articles/6ce5cc265d3f1f"
+                        open
+                      >
+                        <summary class="article-expander__title">DjangoのCustomUserの設定</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/keita_f/articles/6ce5cc265d3f1f">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ZhmaCBnp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Django%25E3%2581%25AECustomUser%25E3%2581%25AE%25E8%25A8%25AD%25E5%25AE%259A%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:KITFJN%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdjNDYxZWNjNTIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>アプリケーションの立ち上げ
+まずは、以下のコマンドでアプリケーションを作成します。
+今回はCustomUserの設定をしていきます。
+docker compose run backend python manage.py startapp accounts
+!
+
+backendの部分は、自分が設定したdockerのコンテナ名にしてください
+accountsの部分は、自分が設定したいアプリケーション名にしてください
+
+
+
+ CustomUserモデルの作成
+コード全体は以下のように設定しました。
+CustomUserの設定は様々だと思いますし、開発するアプリケーションによって欲しい設定...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;8
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/yuto_mo/articles/c2197b9897fefd"
+                        open
+                      >
+                        <summary class="article-expander__title">TimesNet解説まとめ -時系列予測モデル-</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yuto_mo/articles/c2197b9897fefd">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--oYUPmPZz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:TimesNet%25E8%25A7%25A3%25E8%25AA%25AC%25E3%2581%25BE%25E3%2581%25A8%25E3%2582%2581%2520-%25E6%2599%2582%25E7%25B3%25BB%25E5%2588%2597%25E4%25BA%2588%25E6%25B8%25AC%25E3%2583%25A2%25E3%2583%2587%25E3%2583%25AB-%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuu%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2Q0OTcwZWIzMmUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>今回は時系列予測モデルのTimesNetを解説します。
+原論文:TimesNet: Temporal 2D-Variation Modeling for General Time Series Analysis 
+この記事は、TimesNet: The Latest Advance in Time Series Forecastingを参考に記述しています。英語が読める方はこちらを確認して下さい。
+
+ 1. TimesNet
+
+ 1.1 概論
+機械学習による時系列予測モデルは、2020年のN-BEATS、2022年のN-HiTS、2023年3月のPatchTSTのように新しいモデルが発表...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;4
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/naganoshunta/articles/bayesian-ab-testing-for-continuous-kpis"
+                        open
+                      >
+                        <summary class="article-expander__title">ビジネス判断のためのベイジアンABテスト—KPIが連続変数のとき</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/naganoshunta/articles/bayesian-ab-testing-for-continuous-kpis">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--7J6bhoMS--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2593%25E3%2582%25B8%25E3%2583%258D%25E3%2582%25B9%25E5%2588%25A4%25E6%2596%25AD%25E3%2581%25AE%25E3%2581%259F%25E3%2582%2581%25E3%2581%25AE%25E3%2583%2599%25E3%2582%25A4%25E3%2582%25B8%25E3%2582%25A2%25E3%2583%25B3AB%25E3%2583%2586%25E3%2582%25B9%25E3%2583%2588%25E2%2580%2594KPI%25E3%2581%258C%25E9%2580%25A3%25E7%25B6%259A%25E5%25A4%2589%25E6%2595%25B0%25E3%2581%25AE%25E3%2581%25A8%25E3%2581%258D%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Nagano%2520Shunta%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1MHRkOGt4ZF9JRWZ6dTlIVWJOdzBqNmQ0U0FMZlRicXlSMTRqT3daZlE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>分析環境
+本記事では、下記の環境で分析を実行していきます。
+
+
+
+
+バージョン
+
+
+
+
+macOS
+14.1
+
+
+xcode-selectC++コンパイラ
+version 2403
+
+
+Python
+3.11.4
+
+
+CmdStan
+2.34.1
+
+
+cmdstanpy
+1.2.1
+
+
+
+CmdStanやcmdstanpyの導入方法は、cmdstanpyの公式ドキュメントのInstallationページを参照してください。また、CmdStanを利用する場合、Stan言語をコンパイルするためのC++コンパイラが必要になる点にご留意ください。
+
+ 問題設定
+あなたはネット通販事業を行う企...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;7
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/normidar/articles/d300c78e8692ff"
+                        open
+                      >
+                        <summary class="article-expander__title">VSCodeでJupyter Notebookを使う方がいい理由</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/normidar/articles/d300c78e8692ff">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--JEHmPrXt--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:VSCode%25E3%2581%25A7Jupyter%2520Notebook%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%2586%25E6%2596%25B9%25E3%2581%258C%25E3%2581%2584%25E3%2581%2584%25E7%2590%2586%25E7%2594%25B1%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:normidar%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2IxMGZjMDYzYzcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>はじめに
+Jupyter Notebookはデータ分析や機械学習の分野でよく使われるツールですが、VSCodeでJupyter Notebookを使う方がいい理由を紹介します。
+
+ Jupyter Notebookとは
+Jupyter Notebookは、プログラムの実行結果を記録しながら、コードを書いたり実行したりできるツールです。PythonやRなどのプログラミング言語に対応しています。
+
+ 自分が最初の時のやり方
+最近はAIモデルの開発を任されました、最初はPyCharmを使っていましたが、段々コードが多くなってめちゃくちゃになりました、何がめちゃくちゃかというと、コードが長く...</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/keita_f/articles/9103d15944599d"
+                        open
+                      >
+                        <summary class="article-expander__title">Djangoのsettings.py</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/keita_f/articles/9103d15944599d">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--y8iRQvZl--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_76:Django%25E3%2581%25AEsettings.py%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:KITFJN%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzdjNDYxZWNjNTIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>この記事は前回の続きの記事です。
+前回の記事はこちら。
+https://zenn.dev/keita_f/articles/b71e612d76f754
+
+ 前提
+!
+これから各設定は、あくまで「勉強中の私が設定するとしたら」という前提ですので、他の記事を参考にしたり、AIに聞いたりしながらみなさんの最適解を見つけてください。
+
+
+ settings.pyを編集する
+前回の記事では、すでにトップ画面が日本語表示になっていましたが、このような設定のほか、プロジェクトの設定に必要な設定をしていきます。
+
+ 環境変数を読み込む
+今回は、データベースにPostgresQLを使用します。
+データベ...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;5
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/ogwk/articles/ppb240325project"
+                        open
+                      >
+                        <summary class="article-expander__title">プロジェクト作成～【連載】実況パズルプログラミング</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ogwk/articles/ppb240325project">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--2axBNXfP--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E4%25BD%259C%25E6%2588%2590%25EF%25BD%259E%25E3%2580%2590%25E9%2580%25A3%25E8%25BC%2589%25E3%2580%2591%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2582%25BA%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:OGAWA%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSnhYT0hlMGxLRXoyS3dBWVpCODFYcXdIRUFpRWZWWXhNc2w0SGRJNDhaUVE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>&gt;
+
+
+
+
+実況パズルプログラミングの連載第3回目です。 パズルアプリケーションを作成しながら、作成過程で思ったこと、考えたこと、検討したことなどをブログ風に書いていきます。
+今回はプロジェクトのディレクトリ作成からです。
+
+ プロジェクト構成を決める
+今までJavaのプロジェクトでは最低以下の3つのディレクトリを作成していました。
+
+src
+doc
+test
+
+さて今回はPythonで開発するのでPythonの流儀に従うのが良さそうです。 さっそく「Python ディレクトリ構成」でGoogle検索します...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;1
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/ogwk/articles/ppb000000contents"
+                        open
+                      >
+                        <summary class="article-expander__title">目次～【連載】実況パズルプログラミング</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ogwk/articles/ppb000000contents">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--tWmwAgsz--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E7%259B%25AE%25E6%25AC%25A1%25EF%25BD%259E%25E3%2580%2590%25E9%2580%25A3%25E8%25BC%2589%25E3%2580%2591%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2582%25BA%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:OGAWA%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSnhYT0hlMGxLRXoyS3dBWVpCODFYcXdIRUFpRWZWWXhNc2w0SGRJNDhaUVE9czk2LWM&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>実況パズルプログラミングの目次です。
+パズルアプリケーションを作成しながら、作成過程で思ったこと、考えたこと、検討したことなどをブログ風に書いていく連載記事です。
+
+
+実況パズルプログラミング連載開始
+プロジェクト始動～【連載】実況パズルプログラミング
+プロジェクト作成～【連載】実況パズルプログラミング</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                </section>
+              </section>
+            </li>
+        </ul>
+      </section>
+      <section class="daily-content js-toggle-accordions-scope">
+        <h2 class="daily-heading">
+          <button
+            class="daily-heading-toggle"
+            data-action="toggle-accordions"
+            title="Click to toggle the day, Ctrl + click to toggle all."
+          >
+            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-03-24 datetime="2024-03-24T23:23:31.000Z">2024-03-24</time>
+            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-03-24 datetime="2024-03-24T23:23:31.000Z"></time>
+          </button>
+        </h2>
+        <ul class="sources card">
+            <li class="card__section">
+              <section class="js-toggle-accordions-scope">
+                <h3 class="source-heading">
+                  <button
+                    class="source-heading__name"
+                    data-action="toggle-accordions"
+                    title="Click to toggle the source, Ctrl + click to toggle all."
+                  >Zennの「Python」のフィード</button>
+                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
+                </h3>
+                <section class="articles-per-source">
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/ndjndj/articles/f1bc8375052684"
+                        open
+                      >
+                        <summary class="article-expander__title">【Python】JSON 形式のデータを辞書型のオブジェクトとして利用する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ndjndj/articles/f1bc8375052684">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--Nonyl6J_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Python%25E3%2580%2591JSON%2520%25E5%25BD%25A2%25E5%25BC%258F%25E3%2581%25AE%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E8%25BE%259E%25E6%259B%25B8%25E5%259E%258B%25E3%2581%25AE%25E3%2582%25AA%25E3%2583%2596%25E3%2582%25B8%25E3%2582%25A7%25E3%2582%25AF%25E3%2583%2588%25E3%2581%25A8%25E3%2581%2597%25E3%2581%25A6%25E5%2588%25A9%25E7%2594%25A8%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ndj%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FmOGFkYjRiMGEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>※この記事はQiitaの本記事にて投稿した記事に加筆・修正し、移行した記事です。
+
+ JSON 形式のデータは辞書型のオブジェクトとして利用できる
+拡張子が.jsonのファイルや、WebAPI を叩いて得られた JSON 形式のデータは
+Python 上において、辞書型のオブジェクトとして利用することができます。
+
+ 要約
+
+Python において、JSON 形式のデータは辞書型のオブジェクトとして利用ができる。
+
+jsonモジュールを利用する。
+ファイルの読み込みは json.load() を利用する。
+文字列の読み込みは json.loads() を利用する。
+書き込みには json...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;2
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
+                    <article>
+                      <details
+                        class="article-expander"
+                        data-action="toggle-native-accordion"
+                        data-accordion-key="https://zenn.dev/nakurei/articles/understanding-python-generators"
+                        open
+                      >
+                        <summary class="article-expander__title">Pythonのジェネレータを理解する</summary>
+                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nakurei/articles/understanding-python-generators">
+                          <div class="article-summary-box-inner media-object">
+                              <img src="https://res.cloudinary.com/zenn/image/upload/s--tdBoRWju--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25AE%25E3%2582%25B8%25E3%2582%25A7%25E3%2583%258D%25E3%2583%25AC%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592%25E7%2590%2586%25E8%25A7%25A3%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:NakuRei%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzQwZjNjZmQ5ZGQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
+                            <span class="media-object__text">
+                              <span>これはなに
+Pythonのジェネレータを理解するための記事。
+
+ ジェネレータとは
+Pythonにおけるジェネレータとは、「次のデータが必要になったら、そのときにデータをつくる仕組み」である。ジェネレータが呼び出されると、関数が実行されて値を返し、関数は一時停止する。次に呼び出されると、一時停止した箇所から再開される。
+比喩を使うと、ジェネレータとは、頭から1ページずつ本を読むようなものである。
+ふつう、本というものは最初から最後まですべてのページが手元にある。そのため、好きなときに好きなページを開けるし、好きなページを何度も読める。しかし、本が非常に分厚いと、置く場所がなくなるし、...</span>
+                                &ensp;<span class="article-reading-time">(&hairsp;3
+                                  min&hairsp;)</span>
+                            </span>
+                          </div>
+                        </a>
+                      </details>
+                    </article>
                     <article>
                       <details
                         class="article-expander"
@@ -7577,400 +7920,6 @@ AIPscan was developed to provide a more in-depth reporting solution for Archivem
                         </a>
                       </details>
                     </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/shimakaze_soft/articles/dfff44831193c8"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonでデザインパターンを学ぼう (Facade)</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/shimakaze_soft/articles/dfff44831193c8">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--XF_1jqw8--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E3%2583%2587%25E3%2582%25B6%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2591%25E3%2582%25BF%25E3%2583%25BC%25E3%2583%25B3%25E3%2582%2592%25E5%25AD%25A6%25E3%2581%25BC%25E3%2581%2586%2520%2528Facade%2529%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:shimakaze_soft%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzk2ZjllYjE0ZWEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Pythonを用いてのGoFの定義した23個のデザインパターンの一つであるFacadeパターンの実装方法について解説します。
-Facadeパターンは、「構造に関するデザインパターン」に分類されます。
-複雑なシステムに対する簡単なインターフェースを提供します。
-このパターンの目的は、システムの複雑さを隠蔽し、クライアントがより簡単にシステムを利用できるようにすることです。
-
- Facadeパターンとは？
-Facadeパターンでは、複数のサブシステムを統合して一つの統一されたインターフェースを提供するFacade(ファサード)クラスを設けます。
-クライアントはこのFacadeクラスを通じて、...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/tamagoyaki/articles/7761183901c0eb"
-                        open
-                      >
-                        <summary class="article-expander__title">Python(Flask)からSwitchBotAPIを叩いてみる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/tamagoyaki/articles/7761183901c0eb">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--oxXhvLOU--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%2528Flask%2529%25E3%2581%258B%25E3%2582%2589SwitchBotAPI%25E3%2582%2592%25E5%258F%25A9%25E3%2581%2584%25E3%2581%25A6%25E3%2581%25BF%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:tamagoyaki%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2lKUnNhakdnRTZmZkU2UkRhbVBFWHYxclpKX3hzLWJ2MUpoUDhLPXMyNTAtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>1. 環境想定
-
-macOS Sonoma 14.3.1
-Python 3.12.1
-pipenv version 2023.12.0
-SwitchBotAPI 1.1
-
-
- 2. 事前準備
-
- Python
-
-下記のコマンドを実行する。
-
-pip install --upgrade pip
-pip install pipenv
-pipenv install flask flask-restful requests python-dotenv
-
- SwitchBot
-
-SwitchBotアプリをインストールする
-
-iOS
-Android
-
-
-アプリを起動してSwitchBotアカウン...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;6
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/umikaze/articles/06ea1c96682ef0"
-                        open
-                      >
-                        <summary class="article-expander__title">[Next.js + Fastapi]Next.jsからfetchでデータをfastapiに送る方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/umikaze/articles/06ea1c96682ef0">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--ob0_1mPb--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%255BNext.js%2520%252B%2520Fastapi%255DNext.js%25E3%2581%258B%25E3%2582%2589fetch%25E3%2581%25A7%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E3%2582%2592fastapi%25E3%2581%25AB%25E9%2580%2581%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2581%2586%25E3%2581%25BF%25E3%2581%258B%25E3%2581%259C%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzA4MTJhNDY0MGIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>このコードにたどり着くまで2日かかってしまったので…
-
- 注意
-Next.js App Routerの方を使っています。
-Pages Routerではないので注意してください。
-
- コード例
-Nextjs側
-
-page.tsx
-  async function sendMessage(formData: FormData) {
-    &quot;use server&quot;;
-    const json &#x3D; JSON.stringify(Object.fromEntries(formData));
-    await fetch(&quot;http://127.0.0.1:8000/receive-json...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/nyasocom/articles/3cbc18ed2db288"
-                        open
-                      >
-                        <summary class="article-expander__title">ツェラーの公式を使ったタイムスタンプ</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/nyasocom/articles/3cbc18ed2db288">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--zGpBVHoY--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2583%2584%25E3%2582%25A7%25E3%2583%25A9%25E3%2583%25BC%25E3%2581%25AE%25E5%2585%25AC%25E5%25BC%258F%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E3%2582%25BF%25E3%2582%25A4%25E3%2583%25A0%25E3%2582%25B9%25E3%2582%25BF%25E3%2583%25B3%25E3%2583%2597%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:T.K%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUxM2U4OGIzZTcuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>./go_straight/unit/timestamp.py
-
-# ...
-
-        if year % 4 &#x3D;&#x3D; 0 and year % 100 !&#x3D; 0 or year % 400 &#x3D;&#x3D; 0:
-            if month &#x3D;&#x3D; 2:
-                calc &#x3D; ((365 * year + year / 4 - year / 100 + year / 400 +
-                         (306 * (month + 1)) / 10 + day) - 426) % 7
-            elif mont...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mac709/articles/848fdbf9db6919"
-                        open
-                      >
-                        <summary class="article-expander__title">Python+Selenium+Edgeでブラウザ操作を自動化してみた</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mac709/articles/848fdbf9db6919">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--mRpXBmiH--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%252BSelenium%252BEdge%25E3%2581%25A7%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25A6%25E3%2582%25B6%25E6%2593%258D%25E4%25BD%259C%25E3%2582%2592%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E3%2581%2597%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:daichi%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2IxYmU3M2FkNmEuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-PythonでWebブラウザ操作を自動化するために、Seleniumを利用したので紹介します。
-
- 動作環境
-
-Python : 3.10.2
-Selenium : 3.141.0
-
-
- プロジェクト構成
-project
-|-edgedriver
-| |-msedgedriver.exe
-|
-|-selenium.py
-
- Seleniumをインストール
-
-terminal
-$ pip install selenium&#x3D;&#x3D;3.141.0
-
-
- Edge用のドライバーをインストール
-WebDriverをインストール
-https://developer.microsoft.co...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/cti1650/articles/5e6c7bd15d7fbe"
-                        open
-                      >
-                        <summary class="article-expander__title">CGIとFastCGIでPythonフレームワーク(FastAPI, Flask)を実行する方法</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/cti1650/articles/5e6c7bd15d7fbe">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--2dy-MRAm--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:CGI%25E3%2581%25A8FastCGI%25E3%2581%25A7Python%25E3%2583%2595%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%25A0%25E3%2583%25AF%25E3%2583%25BC%25E3%2582%25AF%2528FastAPI%252C%2520Flask%2529%25E3%2582%2592%25E5%25AE%259F%25E8%25A1%258C%25E3%2581%2599%25E3%2582%258B%25E6%2596%25B9%25E6%25B3%2595%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:cti1650%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U0MDIyNWNhNmUuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-本記事では、CGI（Common Gateway Interface）とFastCGI（Fast Common Gateway Interface）を使用してPythonフレームワーク（FastAPIやFlask）を実行する方法について解説します。CGIやFastCGIはWebサーバーと外部プログラムとの間で情報をやり取りするための仕組みであり、Pythonフレームワークをこれらのインターフェースを介して実行することで、Webアプリケーションを動作させることができます。
-
- 想定読者
-スケールを想定しない個人開発などの小規模な開発の簡易的なデプロイ先としてレンタルサーバー(...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;2
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/headwaters/articles/27f65c33cabd3c"
-                        open
-                      >
-                        <summary class="article-expander__title">【Microsoft Fabric】NotebookのData Wranglerを触ってみた</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/headwaters/articles/27f65c33cabd3c">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s---4T5RcpI--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E3%2580%2590Microsoft%2520Fabric%25E3%2580%2591Notebook%25E3%2581%25AEData%2520Wrangler%25E3%2582%2592%25E8%25A7%25A6%25E3%2581%25A3%25E3%2581%25A6%25E3%2581%25BF%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:t.yuto%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzZjNGExY2UxMDYuanBlZw&#x3D;&#x3D;%2Cr_20%2Cw_90%2Cx_92%2Cy_102/g_south_west%2Ch_34%2Cl_default:og-publication-pro-mark-xcosax%2Cw_34%2Cx_217%2Cy_158/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E3%2583%2598%25E3%2583%2583%25E3%2583%2589%25E3%2582%25A6%25E3%2582%25A9%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%2586%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%2Cx_255%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAxZjM0OGE2NDQuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-FabricのNotebookを触ってみました。
-適当にいじって遊んでいたらData Wranglerの機能を見つけたのでご紹介します。
-ちなみにWranglerとは「口論者」「数学の学位試験の一級合格者」「カウボーイ」という意味があるようです。
-Data Wranglerとはデータを扱える一級者てきな意味合いなのでしょうか…
-
- 前提
-こちらの記事を参考にNotebookで適当なテストデータを作成しています。
-10個前後のデータがあれば大丈夫です。
-https://zenn.dev/headwaters/articles/6c08f8ba1f8e47
-https://ze...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                </section>
-              </section>
-            </li>
-        </ul>
-      </section>
-      <section class="daily-content js-toggle-accordions-scope">
-        <h2 class="daily-heading">
-          <button
-            class="daily-heading-toggle"
-            data-action="toggle-accordions"
-            title="Click to toggle the day, Ctrl + click to toggle all."
-          >
-            <time class="daily-heading-toggle__weekday js-offset-weekday" data-offset-date=2024-02-24 datetime="2024-02-24T22:41:55.000Z">2024-02-24</time>
-            <time class="daily-heading-toggle__date js-offset-date" data-offset-date=2024-02-24 datetime="2024-02-24T22:41:55.000Z"></time>
-          </button>
-        </h2>
-        <ul class="sources card">
-            <li class="card__section">
-              <section class="js-toggle-accordions-scope">
-                <h3 class="source-heading">
-                  <button
-                    class="source-heading__name"
-                    data-action="toggle-accordions"
-                    title="Click to toggle the source, Ctrl + click to toggle all."
-                  >Zennの「Python」のフィード</button>
-                  <a class="source-heading__link" href="https://zenn.dev/topics/python">Open</a>
-                </h3>
-                <section class="articles-per-source">
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/ziaensochan/articles/8e59973360ab4d"
-                        open
-                      >
-                        <summary class="article-expander__title">PyInstallerでexe化するときにトロイの木馬認定されないようにする</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/ziaensochan/articles/8e59973360ab4d">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--QVTqvjGp--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:PyInstaller%25E3%2581%25A7exe%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%25E3%2581%25A8%25E3%2581%258D%25E3%2581%25AB%25E3%2583%2588%25E3%2583%25AD%25E3%2582%25A4%25E3%2581%25AE%25E6%259C%25A8%25E9%25A6%25AC%25E8%25AA%258D%25E5%25AE%259A%25E3%2581%2595%25E3%2582%258C%25E3%2581%25AA%25E3%2581%2584%25E3%2582%2588%25E3%2581%2586%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:ziaenso_%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzIwYWFhNTlkYTkuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>ち、違います!!
-お前の作ったそのソフト、トロイの木馬だろ!!ってあらぬ疑いをかけられ秒で消される悲劇が起きたのでそれの修正です。
-あと配布したときに「あそこの開発者はウイルスばら撒いてる」って言われたら嫌じゃん？
-
- 解決策
-調べたところ、bootloaderっていうのが悪さしてるらしいのでそれを自前でビルドすればいいらしい。
-
- ソースをクローン
-git clone https://github.com/pyinstaller/pyinstaller.git
-
- MinGWを入れる
-https://github.com/niXman/mingw-builds-binaries/r...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;1
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yosemat/articles/1ba7bc3d426953"
-                        open
-                      >
-                        <summary class="article-expander__title">classmethodを使った代替コンストラクタ</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yosemat/articles/1ba7bc3d426953">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--YVBdOb-F--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:classmethod%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E4%25BB%25A3%25E6%259B%25BF%25E3%2582%25B3%25E3%2583%25B3%25E3%2582%25B9%25E3%2583%2588%25E3%2583%25A9%25E3%2582%25AF%25E3%2582%25BF%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Yosemat%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2dVaVhYRVhTU21HemprLTZCNjRhM0FpbmdGSjlmUzdGSElCck5RPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>クラスメソッドを使って長すぎる__init__にお別れを告げる
-こんばんはYosematです。
-TypeHintとPydanticの狂信者でこれまでにもdataclassを捨ててpydanticに乗り換えるなどでTypeSafeなクラスであるdataclassやpydanticのすばらしさをご紹介しています。
-今日はこれらと相性のいいクラスメソッドによる代替コンストラクタについてご説明します。
-
- 複雑な初期化ロジックを書きたい
-「dataclassやpydanticは__init__を自動で作っちゃうけど、俺はもっと複雑な初期化ロジックを使いたいんだが...」という人もいるでしょう...</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/yumefuku/articles/llm-langchain-rag"
-                        open
-                      >
-                        <summary class="article-expander__title">langchain + RAGで手元の資料（新たな情報）をllmに読み込ませる</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/yumefuku/articles/llm-langchain-rag">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--yl65pQ7x--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:langchain%2520%252B%2520RAG%25E3%2581%25A7%25E6%2589%258B%25E5%2585%2583%25E3%2581%25AE%25E8%25B3%2587%25E6%2596%2599%25EF%25BC%2588%25E6%2596%25B0%25E3%2581%259F%25E3%2581%25AA%25E6%2583%2585%25E5%25A0%25B1%25EF%25BC%2589%25E3%2582%2592llm%25E3%2581%25AB%25E8%25AA%25AD%25E3%2581%25BF%25E8%25BE%25BC%25E3%2581%25BE%25E3%2581%259B%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:%25E3%2582%2586%25E3%2582%2581%25E3%2581%25B5%25E3%2581%258F%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2FlZmI4YjZmMjIuanBlZw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>はじめに
-
- RAG（検索拡張生成）について
-huggingfaceなどからllmをダウンロードしてそのままチャットに利用した際、参照する情報はそのllmの学習当時のものとなります。（当たり前ですが）学習していない会社の社内資料や個人用PCのローカルなテキストなどはllmの知識にありません。
-このような存在しない情報をllmに与える（参照させる）手法がRAGです。
-ファインチューニングという手法もありますが、そちらはllmに再学習を行わせる手法です。ファインチューニングでは、llm自体に学習させることで知識を追加しますが、RAGの場合は用意したデータベースから検索することで、追加の情...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;10
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/mandenaren/books/algorithm-study"
-                        open
-                      >
-                        <summary class="article-expander__title">【実践】エンジニアの基礎教養-アルゴリズムを学べる本</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/mandenaren/books/algorithm-study">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--bl4eCI5K--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci9lZTUxOGM4Y2Q1LnBuZw&#x3D;&#x3D;%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>筆者は新卒エンジニア時代に社内でアルゴリズム勉強会を主催していました。
- その内容を本形式に書き起こしたものになります。
-
-【この本の特徴】
- 📗問題演習形式でアルゴリズムの基礎が身に付く構成となっています。
- 📗分かりにくい概念は丁寧に図解で解説しています。
- 📗基礎的なアルゴリズムがどのように世の中に役立っているのかを言及しています。
-
-アルゴリズムに関して、皆さんの理解を深めるお手伝いができれば幸いです。</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
-                    <article>
-                      <details
-                        class="article-expander"
-                        data-action="toggle-native-accordion"
-                        data-accordion-key="https://zenn.dev/unico417/articles/py_threadpoolexecutor_introduction"
-                        open
-                      >
-                        <summary class="article-expander__title">Pythonでマルチスレッド処理</summary>
-                        <a class="article-summary-link article-summary-box-outer" href="https://zenn.dev/unico417/articles/py_threadpoolexecutor_introduction">
-                          <div class="article-summary-box-inner media-object">
-                              <img src="https://res.cloudinary.com/zenn/image/upload/s--qa1_2aW2--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Python%25E3%2581%25A7%25E3%2583%259E%25E3%2583%25AB%25E3%2583%2581%25E3%2582%25B9%25E3%2583%25AC%25E3%2583%2583%25E3%2583%2589%25E5%2587%25A6%25E7%2590%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Unico417%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUVkRlRwNVlGQ1puQS1mVDVCVzJpel9KeGR6OUFEUVFDN3JuVkZ4UHQyZlBjdz1zOTYtYw&#x3D;&#x3D;%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png" loading="lazy" class="media-object__media article-image" />
-                            <span class="media-object__text">
-                              <span>Pythonでマルチスレッド処理をするには、ThreadPoolExecutorというクラスを使います。
-このライブラリは、Python3.2以降でビルトインで使えます。
-from concurrent.futures import ThreadPoolExecutor
-ThreadPoolExecutorはスレッドプールというだけあって、処理を溜めこむプールを持っているイメージです。
-そのプールにある処理を順番に行っていきます。
-
- 最小構成のプログラム
-簡単に、ただ処理をするならこれだけです。
-from concurrent.futures import ThreadPoolExec...</span>
-                                &ensp;<span class="article-reading-time">(&hairsp;5
-                                  min&hairsp;)</span>
-                            </span>
-                          </div>
-                        </a>
-                      </details>
-                    </article>
                 </section>
               </section>
             </li>
@@ -7978,8 +7927,8 @@ from concurrent.futures import ThreadPoolExec...</span>
       </section>
 
     <footer>
-      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/8413627085">
-        <time id="build-timestamp" datetime="2024-03-25T01:15:13.946Z">2024-03-25T01:15:13.946Z</time>
+      <a class="footer-link" href="https://github.com/s-i27/Rssfeed/actions/runs/8429298508">
+        <time id="build-timestamp" datetime="2024-03-26T01:13:07.145Z">2024-03-26T01:13:07.145Z</time>
       </a>
       <a class="footer-link" href="https://github.com/osmoscraft/osmosfeed">osmosfeed 1.15.1</a>
     </footer>
