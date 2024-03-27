@@ -2,10 +2,285 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://s-i27.github.io/Rssfeed/index.html</id>
     <title>osmos::feed</title>
-    <updated>2024-03-26T01:13:07.168Z</updated>
+    <updated>2024-03-27T01:13:01.966Z</updated>
     <generator>osmosfeed 1.15.1</generator>
     <link rel="alternate" href="https://s-i27.github.io/Rssfeed/index.html"/>
     <link rel="self" href="https://s-i27.github.io/Rssfeed/feed.atom"/>
+    <entry>
+        <title type="html"><![CDATA[Django Ninjaでアプリケーションを作成]]></title>
+        <id>https://zenn.dev/keita_f/articles/c8ddbe7fe10ef8</id>
+        <link href="https://zenn.dev/keita_f/articles/c8ddbe7fe10ef8"/>
+        <updated>2024-03-26T14:39:11.000Z</updated>
+        <summary type="html"><![CDATA[アプリケーションの立ち上げ
+今回は、プレスリリース用のシステムを作成します。
+docker compose run backend python manage.py startapp press_sys
+
+ アプリケーションの登録
+プロジェクトのsettings.pyにアプリケーションを登録します。
+
+backend/project/settings.py
+INSTALLED_APPS = [
+    'accounts.apps.AccountsConfig', # add
+    'django.contrib.admin',
+    'django.contrib.auth',...]]></summary>
+        <author>
+            <name>KITFJN</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Albumentations データ拡張ライブラリ 使い方解説]]></title>
+        <id>https://zenn.dev/yuto_mo/articles/266cad53af37db</id>
+        <link href="https://zenn.dev/yuto_mo/articles/266cad53af37db"/>
+        <updated>2024-03-26T14:29:55.000Z</updated>
+        <summary type="html"><![CDATA[今回はAlbumentationsの使い方について解説します。
+
+ 1. Albumentations
+
+ 1.1 Albumentationsとは
+Albumentationsは機械学習分野で人気の、画像データ拡張ライブラリです。
+主にコンピュータビジョン分野でよく利用されます。
+データ拡張とは、学習用データに様々な処理を行い、データの種類や数を増やすことです。これにより、より汎用的なモデルを作る事ができます。
+
+ 1.2 使用法
+簡単な使用法を説明します。
+1.2.1 Import
+各種ライブラリをインポートします。
+# import
+import matplotlib.pyplot...]]></summary>
+        <author>
+            <name>yuu</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[メールアドレスのリストのクリーニングに使えるコード]]></title>
+        <id>https://zenn.dev/masaru21/articles/2b953ade0e51db</id>
+        <link href="https://zenn.dev/masaru21/articles/2b953ade0e51db"/>
+        <updated>2024-03-26T14:22:45.000Z</updated>
+        <summary type="html"><![CDATA[メール配信で使うメールアドレスのリストを、クリーニングする仕事の依頼を受けました。
+それで、簡易のクリーニングができるプログラムを作ってみました。
+
+ クリーニング内容
+
+重複しているメールアドレス
+タイプミスのようなドメイン名
+特定のメールアドレスの＠の前の部分
+
+
+ Pythonの仮想環境で使います
+Pythonの仮想環境で、使います。
+下記のrequirements.txtの内容で、仮想環境にインストールするものは再構築できます。
+私は、WLSの環境で、Ubuntu22.04を使って作りました。
+contourpy==1.2.0
+cycler==0.12.1
+et-xmlfile=...]]></summary>
+        <author>
+            <name>lonely_creator_m</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Raspberry Pi OSのPython仮想環境内でgpiozeroを使うには]]></title>
+        <id>https://zenn.dev/tanny/articles/ce010edd69d56a</id>
+        <link href="https://zenn.dev/tanny/articles/ce010edd69d56a"/>
+        <updated>2024-03-26T14:09:48.000Z</updated>
+        <summary type="html"><![CDATA[結論
+Raspberry Pi OSのPython仮想環境内でgpiozeroを使う場合、venvの--system-site-packagesオプションを使うとうまくいきます。
+$ mkdir testenv        
+$ cd testenv 
+$ python -m venv .env --system-site-packages
+$ source .env/bin/activate
+（以降、仮想環境内でgpiozeroを使える）
+※ 正確には、システムのPythonにインストールされているパッケージはすべて使える状態になります。
+このコマンドを実行した環境は以下の通りで...]]></summary>
+        <author>
+            <name>Tanny</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[よそのJupyterHubで自分用のpythonカーネルを使う]]></title>
+        <id>https://zenn.dev/helmenov/articles/own_pykernel_on_jupyterlab</id>
+        <link href="https://zenn.dev/helmenov/articles/own_pykernel_on_jupyterlab"/>
+        <updated>2024-03-26T14:08:11.000Z</updated>
+        <summary type="html"><![CDATA[スーパーユーザでないサーバの JupyterHub で，Notebook（.ipynb）を開くと普通はシステム側で定義したカーネル（Python環境であるpython kernel）が利用される．
+※「環境」とは python パスと site-packages パスの組み合わせ
+例えば，一般ユーザの身分で，pip なんちゃら で新たにパッケージを導入したとしても，その導入先(ユーザの site-packages )には新たにパッケージが置かれるが，jupyter のシステムカーネルは別モノなので反映されていない．
+Notebookで import するには !pip なんちゃら という...]]></summary>
+        <author>
+            <name>helmenov</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pythonのキャッシュ機能（functools.cache）を使ってみた]]></title>
+        <id>https://zenn.dev/judenfly/articles/judenfly-20240401</id>
+        <link href="https://zenn.dev/judenfly/articles/judenfly-20240401"/>
+        <updated>2024-03-26T13:04:14.000Z</updated>
+        <summary type="html"><![CDATA[functools.cacheの概要
+functoolsとは関数を操作するためのPythonの標準モジュールです。
+functools.cacheはPython 3.9から導入され、デコレータ[1]として機能します。
+functools.cacheを使用することで、関数の引数と戻り値をキャッシュし、再度同一の引数で関数を呼び出すとすぐに戻り値を得ることができます。
+ちなみに、functools.cacheはfunctools.lru_cache(maxsize=None)[2]と同等です。
+
+ 階乗の計算でfunctools.cacheの挙動を確認してみた
+functools.cac...]]></summary>
+        <author>
+            <name>充電フライ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-343｜B - Adjacency Matrix]]></title>
+        <id>https://zenn.dev/hyperdb/articles/73b80b3c39fdde</id>
+        <link href="https://zenn.dev/hyperdb/articles/73b80b3c39fdde"/>
+        <updated>2024-03-26T10:24:07.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-343 B - Adjacency Matrix
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntListRow(N):
+    return [list(map(int, input().split())) for _ in range(N)]
+
+
+def main():
+    n = getInt()
+    a = getIntListRow(n)
+
+    for j in range(n):
+        k = []
+        for i in range(n):
+  ...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-343｜A - Wrong Answer]]></title>
+        <id>https://zenn.dev/hyperdb/articles/636a8121f9bfc5</id>
+        <link href="https://zenn.dev/hyperdb/articles/636a8121f9bfc5"/>
+        <updated>2024-03-26T10:24:07.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-343 A - Wrong Answer
+
+
+
+ 提出結果
+def getIntMap():
+    return map(int, input().split())
+
+
+def main():
+    a, b = getIntMap()
+    for i in range(10):
+        if i == a + b:
+            continue
+        print(i)
+        break
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-342｜B - Which is ahead?]]></title>
+        <id>https://zenn.dev/hyperdb/articles/ca74b06adf060e</id>
+        <link href="https://zenn.dev/hyperdb/articles/ca74b06adf060e"/>
+        <updated>2024-03-26T04:59:24.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-342 B - Which is ahead?
+
+
+
+ 提出結果
+def getInt():
+    return int(input())
+
+
+def getIntList():
+    return list(map(int, input().split()))
+
+
+def getIntListRow(N):
+    return [list(map(int, input().split())) for _ in range(N)]
+
+
+def main():
+    n = getInt()
+    p = getIntList()
+    q = ge...]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[［AtCoder］ABC-342｜A - Yay!]]></title>
+        <id>https://zenn.dev/hyperdb/articles/b3969312283d6d</id>
+        <link href="https://zenn.dev/hyperdb/articles/b3969312283d6d"/>
+        <updated>2024-03-26T04:59:23.000Z</updated>
+        <summary type="html"><![CDATA[設問ページ
+
+🔗ABC-342 A - Yay!
+
+
+
+ 提出結果
+def getString():
+    return input()
+
+
+def main():
+    s = list(getString())
+
+    for c in set(s):
+        if s.count(c) == 1:
+            print(s.index(c) + 1)
+            break
+
+
+if __name__ == "__main__":
+    main()]]></summary>
+        <author>
+            <name>はいぱぁ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RAG Fusionを試してみる]]></title>
+        <id>https://zenn.dev/khisa/articles/ab79ad0a92a117</id>
+        <link href="https://zenn.dev/khisa/articles/ab79ad0a92a117"/>
+        <updated>2024-03-26T03:09:49.000Z</updated>
+        <summary type="html"><![CDATA[RAG(Retrieval-Augmented Generation)の拡張手法がいろいろと提案されていますが、お手軽に試すことができて、LLMの処理時間やコストと性能のバランスが良さそうな RAG Fusion を試してみました。ユーザからの入力クエリを元に類似したクエリを生成AIに複数生成させ、それぞれのクエリでベクトル検索を実施、得られたチャンクをリランキングして、上位のチャンクのみを最終的なコンテキストとする手法です。
+
+ RAG Fusion とは？
+RAG Fusion は、入力クエリに関連するクエリを複数生成し、それぞれでベクトル検索を実施、得られたチャンクをリランキングし...]]></summary>
+        <author>
+            <name>ひさ</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AutoGenでエージェント同士のグループチャットを試してみた]]></title>
+        <id>https://zenn.dev/nari007/articles/2f86f9828f0949</id>
+        <link href="https://zenn.dev/nari007/articles/2f86f9828f0949"/>
+        <updated>2024-03-25T19:26:34.000Z</updated>
+        <summary type="html"><![CDATA[はじめに
+Micorsoftが公開しているAutoGenを使って、前回はエージェント同士のチャットを試しましたが、
+今回は会話パターンの公式チュートリアルを参考に、いくつかの制御なども考慮したグループチャットを実験してみました。
+なお、今回はLangSmithのトレース機能も使ってみました。
+LangSmithの設定などの説明は省略しますので、かわりに下記の記事を参考にしてみてください。
+前回の記事はこちら
+https://zenn.dev/nari007/articles/232c1b4d9bdb10
+https://zenn.dev/nari007/articles/e1531d...]]></summary>
+        <author>
+            <name>Nari</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[BASEの購入メールをDiscordに上手いこと通知する[Pipedream][パレード米]]]></title>
         <id>https://zenn.dev/straydog/articles/e2b116187965dc</id>
@@ -40,6 +315,28 @@ accountsの部分は、自分が設定したいアプリケーション名にし
 CustomUserの設定は様々だと思いますし、開発するアプリケーションによって欲しい設定...]]></summary>
         <author>
             <name>KITFJN</name>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DjangoでTailwind CSSを利用する with Docker]]></title>
+        <id>https://zenn.dev/naf/articles/9149d915037b24</id>
+        <link href="https://zenn.dev/naf/articles/9149d915037b24"/>
+        <updated>2024-03-25T13:40:37.000Z</updated>
+        <summary type="html"><![CDATA[目的
+DjangoでTailwind CSSを利用できるようにしたい．
+django-tailwindというライブラリを利用すれば簡単にできそうだが，ライブラリを使わずにやりたかったため，今回は使用していない．
+
+ 環境構築
+今回はDocker環境内にDjangoを用意し、その中でTailwind CSSを設定する．
+また，開発はVisual Studio Codeを利用し，リモートコンテナから開発を行う．
+まずはDockerのコンテナを構築する．pythonのイメージにnode.jsをインストールする．
+
+Dockerfile
+# ベースイメージ
+FROM python:3.12
+...]]></summary>
+        <author>
+            <name>naf</name>
         </author>
     </entry>
     <entry>
@@ -4705,123 +5002,6 @@ PythonとTensorflowを使ってAIを学びます。この記事では、ニュ�
 コンピューターが、人間のようになにかを考えてなにかをすることです。幅広い概念です。...]]></summary>
         <author>
             <name>keison</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Open3Dの視点のあれこれ(ViewControl編)]]></title>
-        <id>https://zenn.dev/hiroysato/articles/f20a55d682f3a4</id>
-        <link href="https://zenn.dev/hiroysato/articles/f20a55d682f3a4"/>
-        <updated>2024-02-26T12:49:18.000Z</updated>
-        <summary type="html"><![CDATA[1. はじめに
-「詳解　３次元点群処理 Pythonによる基礎アルゴリズムの実装」というとても良い本があるが、この本を読む前にいくつか必要だった前提知識
-Open3Dを使っている人との情報交換用で間違っていることが書いてあったら是非教えていただけると助かります。
-
-
-詳解　３次元点群処理 Pythonによる基礎アルゴリズムの実装
-著：金崎　朝子　著：秋月　秀一　著：千葉　直也
-
-
- 2. 基礎知識
-
- 2.1 Open3Dは右手系、左手系
-
-Open3Dは右手系
-デフォルトでは、X(赤/水平)、Y(緑/高さ)、Z(青/奥行き)となる。Zが高さになっているので注意する。
-
-
- 2.2 ...]]></summary>
-        <author>
-            <name>Hiroyuki Sato</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Powertools for AWS (Python) を用いた S3 Trigger のカスタマイズ方法]]></title>
-        <id>https://zenn.dev/todoker_blog/articles/c616fe424fb671</id>
-        <link href="https://zenn.dev/todoker_blog/articles/c616fe424fb671"/>
-        <updated>2024-02-26T01:54:00.000Z</updated>
-        <summary type="html"><![CDATA[こんにちは。hayata-yamamoto です。
-今回は、Powertools for AWS (Python) を用いて、S3 のイベントトリガーで動く Lambda 関数の提供方法を紹介します。私が思うに、Lambda と S3 はファイルアップロード時に何か処理を非同期で動かしたい時にとても便利で、多くの利用事例があるイメージです。これから、何か実装しようと思ってる方の参考になれば嬉しいです
-
- S3 と Lambda の統合はどのようなもの？
-公式によりますと、
-
-Amazon Simple Storage Service からのイベント通知は、Lambda を使用して処理する...]]></summary>
-        <author>
-            <name>山本隼汰 | Hayata Yamamoto</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[M3Macに開発環境を用意する - Part1]]></title>
-        <id>https://zenn.dev/hir0_728/articles/eee4d51551da38</id>
-        <link href="https://zenn.dev/hir0_728/articles/eee4d51551da38"/>
-        <updated>2024-02-26T00:15:29.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-以前、MacbookPro M3Proを購入し、環境構築をした際に手順をZennのスクラップとしてまとめていたが、改めてちゃんと記事としてまとめ直すことにした。
-
- Homebrewのインストール
-Macを使うのであればパッケージマネージャーであるHomebrewは欠かせないので、一番最初にインストールしてしまう。AppleSiliconとIntelで手順が若干異なるそうなので、注意してね。
-公式サイト
-# インストールコマンド
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/i...]]></summary>
-        <author>
-            <name>HIR0</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[GA4のデータを収集して、issueに貯めてみた]]></title>
-        <id>https://zenn.dev/secondselection/articles/ga4_api_sample</id>
-        <link href="https://zenn.dev/secondselection/articles/ga4_api_sample"/>
-        <updated>2024-02-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[はじめに
-この記事はGA4の集計データをGitLabのissueに貯めて（保存して）みたというやってみた記事です。
-きっかけは「探索レポートで2か月前までしか参照できない」のため、どこかに貯めたいなと思ったことがきっかけです。
-※ 記事を書くために調べて初めて知りました。
-https://inhouse-plus.jp/marketing/data-retention
-最終的に作ってみたものとしては、以下のような流れでデータを保管します。
-
-GitLabのCIで毎日スクリプト（Python）を実行する
-GA4 Data APIでデータを取得し、Issueに集計結果を保存する
-
-
- 下...]]></summary>
-        <author>
-            <name>u_hijiri</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[マイクラ鯖の情報を取得できるwebAPIを作った]]></title>
-        <id>https://zenn.dev/ziaensochan/articles/fed5fd4d1e0b0a</id>
-        <link href="https://zenn.dev/ziaensochan/articles/fed5fd4d1e0b0a"/>
-        <updated>2024-02-25T14:10:53.000Z</updated>
-        <summary type="html"><![CDATA[開発経緯
-Pythonでapiってどうやって作るんだろうってなったので試しに作ってみただけです。
-阿波連さんを見てたら一瞬で開発終わった。
-
- 作ったもの
-curl https://mcapi.ziaenso.me/status?address=<サーバーアドレス>&port=<ポート>
-で呼び出せます。
-address=でアドレス又はIPを指定します。これは必須。
-port=でポートを指定します。25565番の場合は必要ないです。
-jsonで帰ってきます。
-ハイピクセルでやってみるよ。あとcurlだとjsonが見にくいのでブラウザでやりました。
-ht...]]></summary>
-        <author>
-            <name>ziaenso_</name>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AIPscanを試す]]></title>
-        <id>https://zenn.dev/nakamura196/articles/2917442dd6b9f5</id>
-        <link href="https://zenn.dev/nakamura196/articles/2917442dd6b9f5"/>
-        <updated>2024-02-25T13:52:35.000Z</updated>
-        <summary type="html"><![CDATA[概要
-以下のツールを試します。
-https://github.com/artefactual-labs/AIPscan
-本ツールは以下のように説明されています。
-
-AIPscan was developed to provide a more in-depth reporting solution for Archivematica users. It crawls METS files from AIPs in the Archivematica Storage Service to generate tabular and visual reports about reposit...]]></summary>
-        <author>
-            <name>nakamura196</name>
         </author>
     </entry>
 </feed>
